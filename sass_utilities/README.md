@@ -19,7 +19,6 @@ Richiede la definizione delle variabili `$columns-rule` e `$column-gap`.
 @import '__path_to__/node_modules/front-end-utilities/sass_utilities/_px2rem.scss';
 @import '__path_to__/node_modules/front-end-utilities/sass_utilities/_str_replace.scss'; // nb: è già inclusa in _svg_uri.scss
 @import '__path_to__/node_modules/front-end-utilities/sass_utilities/_svg_uri.scss';
-@import '__path_to__/node_modules/front-end-utilities/sass_utilities/_utilities.scss';
 @import '__path_to__/node_modules/front-end-utilities/sass_utilities/_color_utilities.scss';
 @import '__path_to__/node_modules/front-end-utilities/sass_utilities/_map_deep_get.scss';
 @import '__path_to__/node_modules/front-end-utilities/sass_utilities/_type_checking.scss';
