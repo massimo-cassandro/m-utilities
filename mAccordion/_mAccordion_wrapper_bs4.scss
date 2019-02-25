@@ -1,0 +1,29 @@
+/*
+  mAccordion_wrapper v. 1.0
+  Massimo Cassandro 2016-2017
+*/
+// caso in cui l'accordion è racchiuso in un wrapper esterno per gestire il titolo
+.mAccordion-wrapper {
+  margin: 1rem 0 2rem;
+  border:1px solid $mAccordion-wrapper-border-color;
+  border-radius: $mAccordion-border-radius;
+
+  h2 {
+    display: block;
+    padding:$mAccordion-padding;
+    border-radius: $mAccordion-border-radius $mAccordion-border-radius 0 0;
+    margin:0;
+
+    font-size:1.5rem;
+    line-height: 1;
+    font-family: $mAccordion-wrapper-h2-font-family;
+    font-weight: bold;
+
+  }
+
+  .mAccordion {
+    margin: 0;
+    border:none;
+  }
+
+}

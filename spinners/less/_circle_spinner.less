@@ -1,0 +1,92 @@
+// from http://codepen.io/jakealbaugh/pen/JddVPv
+@svg-radius: 50;
+@stroke-width: 4;
+@radius: @svg-radius - @stroke-width / 2;
+@diameter: @radius * 2;
+@pi: 3.14159265359;
+@circumference: @pi * @diameter;
+@revolution: 2000ms;
+@color-steps: 4;
+@stroke-color: #fff;
+
+/*
+richiede la presenza di questo svg:
+
+<div class="circle_spinner_wrapper">
+	<svg class="circle_spinner" width="200" height="200">
+	  <circle cx="100" cy="100" r="50" />
+	</svg>
+</div>
+Il wrapper è opzionale e serve solo a centrare l'svg
+
+*/
+
+.circle_spinner_wrapper {
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+
+.circle_spinner {
+  margin: 0 auto;
+  display: block;
+  animation: svg-rotate @revolution * @color-steps linear infinite;
+
+
+	circle {
+	  fill: transparent;
+	  stroke: @stroke-color; // overridden in animation
+	  stroke-width: @stroke-width;
+	  stroke-linecap: round;
+	  stroke-dasharray: 0, @circumference;
+	  animation:
+	    stroke-dash  @revolution linear infinite,
+	    stroke-width @revolution linear infinite,
+	    stroke-color @revolution * @color-steps steps(@color-steps) infinite;
+	}
+}
+
+// slowly rotating the whole svg
+@keyframes svg-rotate {
+  to { transform: rotate(360deg); }
+}
+
+// animating the stroke width
+@keyframes stroke-width {
+  // fade-ish feels
+  0%, 100% { stroke-width: 0; }
+  // throttle til circle is almost complete
+  45%, 55% { stroke-width: @stroke-width / 2; }
+  // pump it up
+  50%      { stroke-width: @stroke-width; }
+}
+
+// offsetting and lengthening the stroke dash
+@keyframes stroke-dash {
+  0%   { // draw circle
+    stroke-dasharray: 0, @circumference;
+    stroke-dashoffset: 0;
+  }
+  50% { // complete circle
+    stroke-dasharray: @circumference, 0;
+    stroke-dashoffset: 0;
+  }
+  100% { // undraw circle
+    stroke-dasharray: @circumference, @circumference;
+    stroke-dashoffset: -@circumference;
+  }
+}
+
+// stepped color animation
+@keyframes stroke-color {
+
+	from { stroke: @stroke-color; }
+	to   { stroke: @blu; }
+
+/*
+	from { opacity: 1; }
+	to   { opacity: 0; }
+*/
+
+}

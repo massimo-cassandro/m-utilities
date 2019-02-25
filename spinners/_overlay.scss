@@ -1,0 +1,21 @@
+/*
+codekit import:
+@import 'componenti/spinners/_overlay';
+
+*/
+
+.page_overlay, .div_overlay {
+	background-color: rgba(0,0,0,.8);
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    z-index: 999999;
+}
+.page_overlay {
+	position:fixed;
+}
+
+.div_overlay {
+	position:absolute;
+}

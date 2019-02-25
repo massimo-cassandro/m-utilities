@@ -1,0 +1,46 @@
+//http://codepen.io/alanshortis/pen/eJLVXr
+/*
+	markup:
+	<div class="basic_spinner"></div>
+
+*/
+
+// necessario impostare i colori @basic_spinner-base-color e @basic_spinner-top-color nel progetto
+
+
+@base-line-height: 1.2rem;
+@spin-duration: 1s;
+
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.basic_spinner {
+    border-radius: 50%;
+    width: @base-line-height;
+    height: @base-line-height;
+    border: .15rem solid @basic_spinner-base-color;
+    border-top-color: @basic_spinner-top-color;
+    animation: spin @spin-duration infinite linear;
+    display: inline-block;
+
+    &.medium {
+	    width: @base-line-height * 2;
+		height: @base-line-height * 2;
+		border-width: .20rem;
+    }
+
+    &.big {
+	    width: @base-line-height * 3;
+		height: @base-line-height * 3;
+		border-width: .25rem;
+    }
+}

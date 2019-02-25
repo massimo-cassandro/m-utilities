@@ -1,0 +1,18 @@
+/*
+  Datatables config v. 2
+  Massimo Cassandro 2017
+*/
+
+
+$datatable_head_border_color    : #000 !default;
+$datatable_active_sorting_color : #c00 !default;
+
+@import '_scss/_datatable_vars.scss';
+@import '_scss/_creaDatatable.scss';
+@import '_scss/_datatable_processing.scss';
+@import '_scss/_datatatable_controls_bs4.scss';
+@import '_scss/_datatatable_table_bs4.scss';
+@import '_scss/_datatatable_sorting_bs4.scss';
+@import '_scss/_datatatable_paging_bs4.scss';
+@import '_scss/_datatables_classes.scss';
+@import '_scss/_datatatable_responsive.scss';

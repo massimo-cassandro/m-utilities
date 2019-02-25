@@ -1,0 +1,16 @@
+// classi di supporto per i componenti
+
+// utilizzata da datatable
+.euro {
+	&::before {
+		font-size:70%;
+		content: '\20AC';
+		margin-right:.2rem;
+		color:#ccc;
+	}
+}
+
+// number_format
+.decimali { // la classe decimali è impostata da JSutil.number_format
+  font-size:85%;
+}

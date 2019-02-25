@@ -1,0 +1,75 @@
+/*
+	<div class="preloader_wrapper">
+		<div class="spinner_cerchio_quadrato"></div>
+	</div>
+*/
+
+// necessario definire queste due variabile nel file principale del progetto
+//@spinner-cerchio_quadrato-colore1: #036;
+//@spinner-cerchio_quadrato-colore2: #c00;
+
+.preloader_wrapper {
+    position:relative;
+    margin:0 auto;
+    height: 100%;
+    width:100%;
+    overflow: hidden;
+
+    .preloader1, .spinner_cerchio_quadrato { // preloader1 conservato per compatibilità. Non usare
+        display: block;
+        position:relative;
+        top: 50%;
+        left: 50%;
+        //transform: translate(-50%, -50%);
+        margin-left:-2em;
+        margin-top:-1em;
+
+        &:before{
+            width:2em;
+            height:2em;
+            border-radius:0;
+            content:'';
+            position:absolute;
+            background:@spinner-cerchio_quadrato-colore1;
+            animation: preloader_cerchio_quadrato_before 1.5s infinite ease-in-out;
+        }
+
+        &:after{
+            width:2em;
+            height:2em;
+            border-radius:0;
+            content:'';
+            position:absolute;
+            background:@spinner-cerchio_quadrato-colore2;
+            left:2em;
+            animation: preloader_cerchio_quadrato_after 1.5s infinite ease-in-out;
+        }
+    }
+}
+
+@keyframes preloader_cerchio_quadrato_before {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(4em) scale(1.2) rotate(260deg);
+        background:@spinner-cerchio_quadrato-colore2;
+        border-radius:2em;
+    }
+    100% {
+        transform: translateX(0) rotate(0);
+    }
+}
+@keyframes preloader_cerchio_quadrato_after {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-4em) scale(1.2) rotate(-260deg);
+        background:@spinner-cerchio_quadrato-colore1;
+        border-radius:2em;
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
