@@ -264,9 +264,9 @@
                 }
               } // end if item.dtRender.filter
 
-              Mustache.parse(item.dtRender.tpl, ['[[', ']]']);
+              Mustache.parse(item.dtRender.tpl);
               row.sf_base_url = item.dtRender.sf_base_url || null;
-              return Mustache.render(item.dtRender.tpl, row);
+              return Mustache.render(item.dtRender.tpl, row, {}, ['[[', ']]']);
             };
             break;
 

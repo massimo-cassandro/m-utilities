@@ -44,26 +44,32 @@ Per *creaDatatable* e *autoDatatable* è inoltre necessario che siano presenti:
 
 * [Mustache.js](http://github.com/janl/mustache.js)
 * [Moment.js](https://momentjs.com/)
-* il modulo `JSutils.number_format` (nei componenti)
+* Lo script `JSutils.number_format`
 
 ### Esempio di installazione:
 
 #### JS
 ```javascript
-/* exported datatable_setup */
 
-// datatable
-@codekit-append '__path_to__/node_modules/datatables/media/js/jquery.dataTables.js';
+@codekit-append quiet '../../node_modules/datatables.net/js/jquery.dataTables.js'
+@codekit-append quiet '../../node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js'
 
-// estensione Bootstrap 4
-@codekit-append '__path_to__/node_modules/datatables/media/js/dataTables.bootstrap4.js';
+// estensioni (facoltative)
+--codekit-append quiet '../../node_modules/datatables.net-responsive/js/dataTables.responsive.js';
+--codekit-append quiet '../../node_modules/datatables.net-responsive-bs4/js/responsive.bootstrap4.js'
 
-// estensione responsive
-@codekit-append '__path_to__/node_modules/datatables-responsive/js/dataTables.responsive.js';
-@codekit-append '__path_to__/node_modules/datatables-responsive/js/responsive.bootstrap4.js';
+--codekit-append quiet '../../node_modules/datatables.net-fixedheader/js/dataTables.fixedHeader.js'
+--codekit-append quiet '../../node_modules/datatables.net-fixedheader-bs4/js/fixedHeader.bootstrap4.js'
 
-//creaDatatable e configurazione per bootstrap 4 (nei componenti)
-@codekit-append 'componenti/datatables/_datatable_bs4.js';
+--codekit-append quiet '../../node_modules/datatables.net-rowreorder/js/dataTables.rowReorder.js'
+--codekit-append '../../node_modules/datatables.net-rowreorder-bs4/js/rowReorder.bootstrap4.js'
+
+//config
+@codekit-append '../../node_modules/front-end-utilities/datatables/_js/_datatables_config_base.js'
+@codekit-append '../../node_modules/front-end-utilities/datatables/_js/_datatables_config_bs4.js'
+@codekit-append '../../node_modules/front-end-utilities/datatables/_js/_datatable_crea_dt.js'
+
+
 
 var datatable_setup = {
 
@@ -117,23 +123,17 @@ var datatable_setup = {
 
 ```
 
-#### SCSS
+#### SCSS (bs4)
 
-Per il css, è possibile importare uno tra i due temi:
-
-```scss
-@import '__path_to__/node_modules/front-end-utilities/datatables/_datatables_std.js'; // tema di default
-```
-
-oppure:
+Configurazione scss:
 
 ```scss
-@import '__path_to__/node_modules/front-end-utilities/datatables/_datatables_bs4.js'; // tema per bootstrap 4
-```
 
-o ancora, importare i singoli file, sostituendo quelli da personalizzare con scss ad hoc:
+$datatable_responsive_border_color  : #ccc;
+$datatable_head_border_color        : #000; //colore del bordo inferiore degli elementi th
+$datatable_active_sorting_color     : #000  // colore della freccia che mostra l'ordinamento nella colonna selezionata
 
-```scss
+
 @import '__path_to__/node_modules/front-end-utilities/datatables/_scss/_datatable_vars.scss';
 @import '__path_to__/node_modules/front-end-utilities/datatables/_scss/_datatable_vars.scss';
 @import '__path_to__/node_modules/front-end-utilities/datatables/_scss/_creaDatatable.scss';
@@ -144,32 +144,22 @@ o ancora, importare i singoli file, sostituendo quelli da personalizzare con scs
 @import '__path_to__/node_modules/front-end-utilities/datatables/_scss/_datatatable_paging_bs4.scss';
 @import '__path_to__/node_modules/front-end-utilities/datatables/_scss/_datatables_classes.scss';
 @import '__path_to__/node_modules/front-end-utilities/datatables/_scss/_datatatable_responsive.scss';
+
+// datatable
+//@import '__path_to__/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css';
+
+// datatable responsive (facoltativa)
+@import '__path_to__/node_modules/datatables.net-responsive-bs4/css/responsive.bootstrap4';
+
+//fixed header (facoltativa)
+//@import '__path_to__/node_modules/datatables.net-fixedheader-bs4/css/fixedHeader.bootstrap4';
+
+// rowreorder (facoltativa)
+@import '__path_to__/node_modules/datatables.net-rowreorder-bs4/css/rowReorder.bootstrap4';
 ```
 
-È inoltre necessario aggiungere i css delle singole estensioni datatable, come datatable responsive:
 
-```scss
-@import '__path_to__/node_modules/datatables-responsive/css/responsive.bootstrap4.scss';
-```
-
-Qualunque sia la soluzione scelta, è necessario anche impostare alcune variabili scss:
-
-```
-$datatable_head_border_color    : #000;
-$datatable_active_sorting_color : #c00;
-```
-* `$datatable_head_border_color`: colore del bordo inferiore degli elementi `th`
-* `$datatable_active_sorting_color`: colore della freccia che mostra l'ordinamento nella colonna selezionata
-
-
-Come ulteriore alternativa, è possibile utilizzare direttamente i fogli stile contenuti nella distribuzione datatable:
-
-```scss
-@import '__path_to__/node_modules/datatables/media/css/dataTables.bootstrap4';
-
-// datatable responsive
-@import '__path_to__/node_modules/datatables-responsive/css/responsive.bootstrap4.scss';
-```
+## Uso
 
 Il plugin restituisce un'istanza DataTable in base ai parametri impostati:
 
