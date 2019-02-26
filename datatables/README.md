@@ -17,11 +17,11 @@ Negli attributi *data* andranno inserite le informazioni relative al JSON sorgen
 
 Includere nell'ordine:
 
-* datatables → `jquery.dataTables.js`
-* datatables → `dataTables.bootstrap4.js` (o altro framework)
-* componenti → `_datatables_config_base.js` (riscrittura defaults)
-* componenti → `_datatables_config_bs4` (personalizzazione config bootstrap 4)
-* componenti → `_datatable_crea_dt.js` (plugin creaDatatable)
+* datatables          → `jquery.dataTables.js`
+* datatables          → `dataTables.bootstrap4.js` (o altro framework)
+* front-end-utilities → `_datatables_config_base.js` (riscrittura defaults)
+* front-end-utilities → `_datatables_config_bs4` (personalizzazione config bootstrap 4)
+* front-end-utilities → `_datatable_crea_dt.js` (plugin creaDatatable)
 
 
 L'implementazione datatable richiede la configurazione della variabile globale `datatable_setup`.

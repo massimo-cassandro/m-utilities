@@ -22,7 +22,7 @@ Richiede la definizione delle variabili `$columns-rule` e `$column-gap`.
 @import '__path_to__/node_modules/front-end-utilities/sass_utilities/_color_utilities.scss';
 @import '__path_to__/node_modules/front-end-utilities/sass_utilities/_map_deep_get.scss';
 @import '__path_to__/node_modules/front-end-utilities/sass_utilities/_type_checking.scss';
-@import '__path_to__/node_modules/front-end-utilities/sass_utilities/_min_max_fix_.scss';
+@import '__path_to__/node_modules/front-end-utilities/sass_utilities/_min_max_fix.scss';
 ```
 ### Colonne
 ```scss
