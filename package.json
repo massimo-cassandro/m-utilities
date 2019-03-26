@@ -10,7 +10,7 @@
     "url": "git+https://github.com/massimo-cassandro/front-end-utilities.git"
   },
   "author": "Massimo Cassandro",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/massimo-cassandro/front-end-utilities/issues"
   },
