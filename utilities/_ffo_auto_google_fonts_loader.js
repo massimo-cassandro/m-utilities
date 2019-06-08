@@ -1,20 +1,23 @@
 /* global FontFaceObserver, Cookies */
+/*
+  Font face observer
+  automatic loader for google fonts only (single link tag)
+
+*/
 (() => {
 
-//TODO caso font non google
+  // google font -> es: https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700|Roboto:400&display=swap
+  let google_fonts_array=document.querySelector('link[href^="https://fonts.googleapis.com"][rel="stylesheet"]');
 
-  // google font -> es: Roboto+Condensed|Roboto:400,400i,700,700i
-  let font_array=document.querySelector('link[href^="https://fonts.googleapis.com"][rel="stylesheet"]');
+  if(google_fonts_array) {
 
-  if(font_array) {
-
-    font_array = font_array.getAttribute('href').split('?family=')[1]
+    google_fonts_array = google_fonts_array.getAttribute('href').split('?family=')[1].split('&')[0]
       .replace(/\+/g, ' ')
       .split('|');
 
     let font_observers=[];
 
-    font_array.forEach((item) => {
+    google_fonts_array.forEach((item) => {
       let font_parts = item.split(':'),
       font,
       font_name = font_parts[0];
@@ -46,30 +49,30 @@
       }
     });
 
-    let html = $(document.documentElement),
+    let html = document.documentElement,
       font_cookie=false;
 
-    html.addClass('fonts-loading'); // inserito direttamente nel codice della pagina
+    html.classList.add('fonts-loading');
 
-    if (Cookies.get('fontsloaded') === font_array.join('|')) {
-      html.removeClass('fonts-loading');
-      html.addClass('fonts-loaded');
+    if (Cookies.get('fontsloaded') === google_fonts_array.join('|')) {
+      html.classList.remove('fonts-loading');
+      html.classList.add('fonts-loaded');
       font_cookie = true;
     }
 
     Promise.all(font_observers).then(function () {
 
-      Cookies.set('fontsloaded', font_array.join('|'), { expires: 1 });
+      Cookies.set('fontsloaded', google_fonts_array.join('|'), { expires: 1 });
 
-      html.removeClass('fonts-loading');
-      html.addClass('fonts-loaded');
+      html.classList.remove('fonts-loading');
+      html.classList.add('fonts-loaded');
     }).catch(function () {
       if (!font_cookie) {
 
         Cookies.remove('fontsloaded');
 
-        html.removeClass('fonts-loading');
-        html.addClass('fonts-failed');
+        html.classList.remove('fonts-loading');
+        html.classList.add('fonts-failed');
         alert("Si è verificato un errore del server. " +
           "Prova a ricaricare la pagina; " +
           "se l'errore persiste, riprova tra qualche minuto");
