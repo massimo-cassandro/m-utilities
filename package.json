@@ -1,7 +1,7 @@
 {
   "name": "front-end-utilities",
-  "version": "2.0.1",
-  "description": "Front-end development Utilities",
+  "version": "2.1.1",
+  "description": "Collection of Front-end development Utilities",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
