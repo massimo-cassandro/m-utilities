@@ -1,18 +1,18 @@
 {
-  "name": "front-end-utilities",
-  "version": "2.1.1",
+  "name": "m-utilities",
+  "version": "1.1.1",
   "description": "Collection of Front-end development Utilities",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/massimo-cassandro/front-end-utilities.git"
+    "url": "git+https://github.com/massimo-cassandro/m-utilities.git"
   },
   "author": "Massimo Cassandro",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/massimo-cassandro/front-end-utilities/issues"
+    "url": "https://github.com/massimo-cassandro/m-utilities/issues"
   },
-  "homepage": "https://github.com/massimo-cassandro/front-end-utilities#readme"
+  "homepage": "https://github.com/massimo-cassandro/m-utilities#readme"
 }
