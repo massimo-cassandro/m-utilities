@@ -19,33 +19,33 @@
 
     google_fonts_array.forEach((item) => {
       let font_parts = item.split(':'),
-      font,
-      font_name = font_parts[0];
+        font,
+        font_name = font_parts[0];
 
       if(font_parts.length === 1 ) {
         font = new FontFaceObserver(font_name);
         font_observers.push(font.load());
       } else {
         font_parts[1].split(',')
-        .map( item => {
-          return item.trim();
-        })
-        .forEach( item => {
-          let font_prop = {};
+          .map( item => {
+            return item.trim();
+          })
+          .forEach( item => {
+            let font_prop = {};
 
-          if(item.indexOf('i') !== -1) {
-            let w = item.substr(0, item.length - 1);
-            font_prop = {
-              weight : isNaN(w) ? w : +w,
-              style  : 'italic'
-            };
-          } else {
-            font_prop = {weight : isNaN(item) ? item : +item };
-          }
+            if(item.indexOf('i') !== -1) {
+              let w = item.substr(0, item.length - 1);
+              font_prop = {
+                weight : isNaN(w) ? w : +w,
+                style  : 'italic'
+              };
+            } else {
+              font_prop = {weight : isNaN(item) ? item : +item };
+            }
 
-          font = new FontFaceObserver(font_name, font_prop);
-          font_observers.push(font.load());
-        });
+            font = new FontFaceObserver(font_name, font_prop);
+            font_observers.push(font.load());
+          });
       }
     });
 
@@ -73,9 +73,9 @@
 
         html.classList.remove('fonts-loading');
         html.classList.add('fonts-failed');
-        alert("Si è verificato un errore del server. " +
-          "Prova a ricaricare la pagina; " +
-          "se l'errore persiste, riprova tra qualche minuto");
+        alert('Si è verificato un errore del server. ' +
+          'Prova a ricaricare la pagina; ' +
+          'se l\'errore persiste, riprova tra qualche minuto');
       }
     });
   }

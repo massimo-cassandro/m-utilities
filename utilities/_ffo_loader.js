@@ -8,23 +8,23 @@
 (() => {
 
   const html = document.documentElement,
-  font_observers = [
-    new FontFaceObserver('Lavanderia Sturdy'),
-    new FontFaceObserver('Roboto Condensed', {
-      weight: 400
-    }),
-    new FontFaceObserver('Roboto Condensed', {
-      weight: 400,
-      style: 'italic'
-    }),
-    new FontFaceObserver('Roboto Condensed', {
-      weight: 700
-    }),
-    new FontFaceObserver('Roboto Condensed', {
-      weight: 700,
-      style: 'italic'
-    })
-  ];
+    font_observers = [
+      new FontFaceObserver('Lavanderia Sturdy'),
+      new FontFaceObserver('Roboto Condensed', {
+        weight: 400
+      }),
+      new FontFaceObserver('Roboto Condensed', {
+        weight: 400,
+        style: 'italic'
+      }),
+      new FontFaceObserver('Roboto Condensed', {
+        weight: 700
+      }),
+      new FontFaceObserver('Roboto Condensed', {
+        weight: 700,
+        style: 'italic'
+      })
+    ];
 
   let font_cookie=false;
 
@@ -50,9 +50,9 @@
 
       html.classList.remove('fonts-loading');
       html.classList.add('fonts-failed');
-      alert("Si è verificato un errore del server. " +
-        "Prova a ricaricare la pagina; " +
-        "se l'errore persiste, riprova tra qualche minuto");
+      alert('Si è verificato un errore del server. ' +
+        'Prova a ricaricare la pagina; ' +
+        'se l\'errore persiste, riprova tra qualche minuto');
     }
   });
 
