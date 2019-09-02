@@ -77,6 +77,39 @@
 		"sI": 0,
 		"sU": 0
 		},
+	"/JS-utilities-2/js/__JSutils_init.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/JS-utilities-2/js/__JSutils_init-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/JS-utilities-2/js/_getQueryVariables.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/JS-utilities-2/js/_getQueryVariables-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/JS-utilities-2/JSutils.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/JS-utilities-2/JSutils-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/JSutils/_js_utility.OLD.js": {
 		"bF": 0,
 		"ft": 64,
@@ -463,6 +496,14 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"/select2/README.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/select2/README.html",
+		"oF": 0
 		},
 	"/select2/README.md": {
 		"cB": 0,
@@ -1185,9 +1226,9 @@
 			"flagValue": -1
 			}
 		},
-	"esLintConfigFileHandlingType": 0,
-	"esLintECMAVersion": 7,
-	"esLintEnvironmentsMask": 1,
+	"esLintConfigFileHandlingType": 1,
+	"esLintECMAVersion": 0,
+	"esLintEnvironmentsMask": 8209,
 	"esLintRules": {
 		"accessor-pairs": {
 			"active": 0,
@@ -2679,7 +2720,7 @@
 		"strictUnits": 0
 		},
 	"languageDefaultsMARKDOWN": {
-		"autoOutputAction": 0,
+		"autoOutputAction": 1,
 		"autoOutputPathFilenamePattern": "*.html",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+
+<p>#select2</p>
+
+<p>[TOC]</p>
+
+<p>Select 2 è utilizzato per produrre elementi autocomplete dinamici.</p>
+
+<p><strong>Sito ufficiale:</strong>
+<a href="https://select2.org/">https://select2.org/</a>
+<a href="https://github.com/select2/select2-bootstrap-theme">https://github.com/select2/select2-bootstrap-theme</a></p>
+
+<h2 id="installazione">Installazione</h2>
+
+<h3 id="js">JS</h3>
+
+<p>Includere nel proprio progetti i file della distribuzione select 2 e il modulo di personalizzazione:</p>
+
+<pre><code class="javascript">@codekit-append '__path_to__/node_modules/m-utilities/select2/dist/js/select2.full.js';
+#codekit-append '__path_to__/node_modules/m-utilities/select2/dist/js/i18n/it.js';
+@codekit-append '__path_to__/node_modules/m-utilities/front-end-utilities/select2/_select2.js';
+</code></pre>
+
+<blockquote>
+<p>NB: questa installazione utilizza ed estende il tema “Bootstrap” di select2</p>
+</blockquote>
+
+<h3 id="css">CSS</h3>
+
+<p>Includere i file della distribuzione select2 e il file di personalizzazione per bootstrap 4 e impostare le variabili necessarie</p>
+
+<pre><code class="scss">// !select2
+$s2bs-border-radius-base                : $border-radius;
+$s2bs-border-radius-large               : $border-radius-lg;
+$s2bs-border-radius-small               : $border-radius-sm;
+$s2bs-btn-default-bg                    : map-get($theme-colors, secondary);
+$s2bs-btn-default-border                : darken(map-get($theme-colors, secondary), 20);
+$s2bs-btn-default-color                 : $black;
+$s2bs-caret-width-base                  : .3rem; //$caret-width;
+$s2bs-caret-width-large                 : .3rem; //$caret-width;
+$s2bs-cursor-disabled                   : not-allowed; //$cursor-disabled;
+$s2bs-dropdown-header-color             : $dropdown-header-color;
+$s2bs-dropdown-link-active-bg           : map-get($theme-colors, primary); // $dropdown-link-active-bg;
+$s2bs-dropdown-link-active-color        : $dropdown-link-active-color;
+$s2bs-dropdown-link-disabled-color      : $dropdown-link-disabled-color;
+$s2bs-dropdown-link-hover-bg            : $dropdown-link-hover-bg;
+$s2bs-dropdown-link-hover-color         : $dropdown-link-hover-color;
+$s2bs-font-size-base                    : $font-size-base;
+$s2bs-font-size-large                   : $font-size-lg;
+$s2bs-font-size-small                   : $font-size-sm;
+$s2bs-padding-base-horizontal           : $btn-padding-x;
+$s2bs-padding-large-horizontal          : $btn-padding-x-lg;
+$s2bs-padding-small-horizontal          : $btn-padding-x-sm;
+$s2bs-padding-base-vertical             : $btn-padding-y;
+$s2bs-padding-large-vertical            : $btn-padding-y-lg;
+$s2bs-padding-small-vertical            : $btn-padding-y-lg;
+$s2bs-line-height-base                  : $line-height-base;
+$s2bs-line-height-large                 : $line-height-lg;
+$s2bs-line-height-small                 : $line-height-sm;
+$s2bs-input-bg                          : $input-bg;
+$s2bs-input-bg-disabled                 : $input-disabled-bg;
+$s2bs-input-color                       : $input-color;
+$s2bs-input-color-placeholder           : $input-placeholder-color;
+$s2bs-input-border                      : $input-border-color;
+$s2bs-input-border-focus                : $input-focus-border-color;
+$s2bs-input-border-radius               : $input-border-radius;
+$s2bs-input-height-base                 : $input-height;
+$s2bs-input-height-large                : $input-height-lg;
+$s2bs-input-height-small                : $input-height-sm;
+
+// Theme-specific variables
+// -------------------------
+
+$s2bs-dropdown-arrow-color              : $s2bs-input-color-placeholder;
+$s2bs-dropdown-box-shadow               : 0 6px 12px rgba(0,0,0,.175);
+$s2bs-dropdown-box-shadow-above         : 0px -6px 12px rgba(0,0,0,.175);
+$s2bs-clear-selection-color             : $s2bs-dropdown-arrow-color;
+$s2bs-clear-selection-hover-color       : $s2bs-btn-default-color;
+$s2bs-remove-choice-color               : $s2bs-input-color-placeholder;
+$s2bs-remove-choice-hover-color         : $s2bs-btn-default-color;
+$s2bs-selection-choice-border-radius    : $border-radius;
+$s2bs-dropdown-header-padding-vertical  : $s2bs-padding-base-vertical;
+$s2bs-dropdown-header-font-size         : $s2bs-font-size-small;
+
+// conversione variabili bs3 → bs4
+$screen-sm-min: map-get($grid-breakpoints, sm);
+$state-warning-text: darken(map-get($theme-colors, warning), 10);
+$state-danger-text: darken(map-get($theme-colors, danger), 10);
+$state-success-text: darken(map-get($theme-colors, success), 10);
+
+@import '__PATH_TO_BOWER_COMPONENTS__/select2/dist/css/select2';
+@import '__PATH_TO_BOWER_COMPONENTS__/select2-bootstrap-theme/src/select2-bootstrap.scss';
+
+// personalizzazioni:
+$s2bs4-message-color: #666;
+@import '__path_to__/node_modules/front-end-utilities/select2/_select2_bs4.scss';
+</code></pre>
+
+<h2 id="utilizzodelcomponenteselect2">Utilizzo del componente select2</h2>
+
+<p>Scopo del componente select2 è quello di permettere la configurazione di un elemento di un form utilizzando solo attributi <em>data</em> senza la necessità di aggiungere codice JS specifico.</p>
+
+<p>L&#8217;attivazione dell&#8217;autocomplete select2 viene applicato ai select tramite la classe <code>s2</code>.</p>
+
+<p>All&#8217;elemento select vanno inoltre aggiunti questi attributi data:</p>
+
+<ul>
+<li><code>s2_json</code>: url del controller che produce il json</li>
+<li><code>s2_text</code>: array di nomi campo del file json da utilizzare come <em>text</em> degli options. Questo parametro può essere omesso nel caso si utilizzino funzioni <code>templateResult</code> e <code>templateSelection</code> personalizzate.</li>
+<li><code>s2_id</code>: campo del json da utilizzare come value degli options (default <code>id</code>) (attualmente non attivo <strong>DA IMPLEMENTARE</strong>)</li>
+</ul>
+
+<p>I json devono avere una struttura di questo tipo:</p>
+
+<pre><code class="json">[
+	{
+		&quot;id&quot;         : 123,
+		&quot;text_field&quot; : &quot;label&quot;
+	}
+]
+</code></pre>
+
+<blockquote>
+<p>NB: <strong>per problemi di conflitto con select2 non utilizzare elementi con nome campo <code>text</code></strong> se sono presenti più campi testo da concatenare.</p>
+</blockquote>
+
+<p><strong>Esempio di utilizzo</strong></p>
+
+<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
+	&lt;label for=&quot;s2_test&quot;&gt;Select2&lt;/label&gt;
+	&lt;select id=&quot;s2_test&quot; class=&quot;s2 form-control&quot; 
+   		data-s2_json=&quot;/path/to/json&quot; 
+   		data-s2_text=&quot;citta&quot;&gt;
+   	&lt;/select&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3 id="attributidata">Attributi <code>data</code></h3>
+
+<p>Un elemento select2 può essere configurato utilizzato diversi attributo <code>data</code>:</p>
+
+<ul>
+<li><strong>s2_json</strong>: [obbligatorio] url del json sorgente dei dati</li>
+<li><strong>s2_text</strong>: [facoltativo, <em>può essere omesso solo se è presente il parametro <code>template-result</code></em>] elemento del json da utilizzare come etichetta del record. Può essere una stringa (es.: <code>text_field</code>) o un array (<code>[&quot;text_field1&quot;, &quot;text_field2&quot;, ...]</code>) in questo caso l&#8217;etichetta sraà costruita concatenando gli elementi con <code>-</code>. Un&#8217;ulteriore opzione è offerta dalla possibilità di utilizzare un funzione di rendering ad hoc (vedi <a href="https://select2.org/dropdown#templating">https://select2.org/dropdown#templating</a>) da indicare nel parametro <code>template-result</code>.</li>
+</ul>
+
+<h3 id="parametriselect2">Parametri select2</h3>
+
+<p>Questi parametri sono specifici di select2 e possono essere inviati all&#8217;applicazione tramite attributi data o tranite script:</p>
+
+<ul>
+<li><strong>template-result</strong>: [facoltativo] funzione da utilizzare per il rendering dei risultati della ricerca (vedi <em>s2_text</em>)</li>
+<li><strong>template-selection</strong> [facoltativo] funzione da utilizzare per il rendering della selezione effettuata. Se non è presente viene impostato uguale al risultato della ricerca</li>
+<li><strong>escape-markup</strong>: [facoltativo] funzione utilizzata per eliminare il markup dai risultati o dalla selezione, se necessario. L&#8217;impostazione di default non esegue alcuna modifica</li>
+<li><strong>minimum-input-length</strong>: [facoltativo] lunghezza minima della stringa perché sia avviata la ricerca (default: <code>3</code>)</li>
+<li><strong>placeholder</strong>: [facoltativo] stringa da utilizzare come placeholder dell&#8217;autocomplete (default: <code>Clic per selezionare</code>)</li>
+</ul>
+
+<p>Per gli altri parametri select2, far riferimento alla documentazione ufficiale.</p>
+
+<h3 id="gestionedeiparametridiricerca">Gestione dei parametri di ricerca</h3>
+
+<p>L&#8217;url del json sorgente dei dati viene costruito in base al parametro di ricerca inserito dall&#8217;utente e ad alcuni parametri:</p>
+
+<ul>
+<li><strong>s2_query_mode</strong>: [facoltativo] <code>path</code> (default) o <code>query_string</code>. Nel primo caso, il termine di ricerca, preceduto da uno slash, viene aggiunto in coda all&#8217;url del json, nel secondo caso viene accodato come una query string classica:
+
+<ul>
+<li><em>path parameter</em> → <code>/path/to/json/stringa_ricerca</code></li>
+<li><em>query string</em> → <code>/path/to/json?q=stringa_ricerca</code></li>
+</ul></li>
+<li><strong>s2_query_params</strong>: [facoltativo] json di elementi <em>chiave=valore</em> da aggiungere all&#8217;url del json come query string.</li>
+</ul>
+
+<p>Esempio dell&#8217;url ottenuto con <em>s2_query_mode=&#8216;path&#8217;</em> e <em>s2_query_params =&#8216;{&#8220;var1&#8221;: &#8220;val1&#8221;, &#8220;var2&#8221;: &#8220;val2&#8221;}&#8217;</em>:</p>
+
+<pre><code>/path/to/json/stringa_ricerca?var1=val1&amp;var2=val2
+</code></pre>
+
+<h2 id="jsonpredefiniti">JSON predefiniti</h2>
+
+<p>Per rendere ancora più rapido l&#8217;utilizzo di select2, è possibile impostare delle funzionalità standard tramite alcuni elementi chiave, che richiamano select2 assegnandogli alcuni parametri predefiniti.</p>
+
+<p>In questo modo, è possibile limitare la configurazione degli elementi select ad un unico parametro <code>data</code>, permettendo così una più rapida implementazione e manutenzione.</p>
+
+<p>È possibile, ad esempio, impostare una modalità <em>province</em> che predisponga tutti i parametri per la costruzione di un autocomplete delle province d&#8217;Italia.</p>
+
+<p><strong>Esempio</strong></p>
+
+<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
+	&lt;label for=&quot;s2_test&quot;&gt;Province&lt;/label&gt;
+	&lt;select id=&quot;s2_test&quot; data-s2=&quot;province&quot; class=&quot;form-control&quot;&gt;
+   	&lt;/select&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Notare come in questo caso non siano più necessari né la classe <code>s2</code> né i vari elementi <code>data</code>.</p>
+
+<p>Nel javascript si utilizza la funzione globale <code>mUtilities.set_select2_options</code> definita in <code>__path_to__/node_modules/front-end-utilities/select2/_select2.js</code>:</p>
+
+<pre><code class="javascript">// impostazioni predefinite per select2
+(function() {
+	&quot;use strict&quot;;
+	
+	$('[data-s2]').each( function() {
+
+		var _this = $(this),
+			s2_options = {};
+
+		switch ( _this.data('s2') ) {
+			case 'province':
+            	s2_options = {
+            		's2_json': '/url/controller/province',
+            		's2_text': ['sigla', 'descrizione']
+				};
+				break;
+			// ...
+		}
+		
+    	_this.select2( mUtilities.set_select2_options( s2_opts ) );
+	});
+
+})();
+
+</code></pre>
+
+</body>
+</html>
+

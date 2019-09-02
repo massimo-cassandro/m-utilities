@@ -10,7 +10,7 @@ Includere il file js dalla distribuzione:
 @codekit-append '__path_to__/node_modules/bootstrap-multiselect/dist/js/bootstrap-multiselect.js';
 ```
 
-E allo stesso modo, il file css con l'aggiunta del modulo di adattamento per BS4 dai componenti, personalizzando, se necessario, le variabili relative
+E allo stesso modo, il file css con l'aggiunta del modulo di adattamento per BS4, personalizzando, se necessario, le variabili relative
 
 ```scss
 @import '__path_to__/node_modules/bootstrap-multiselect/dist/css/bootstrap-multiselect';

@@ -7,14 +7,14 @@ Per l'inclusione in un progetto è necessario includere il modulo base e i modul
 ```
 /* 
 
-@codekit-append 'componenti/JSutils/_JSutils.js';
+@codekit-append 'path/to/node_modules/m-utilities/JSutils/_JSutils.js';
 
-@codekit-append 'componenti/JSutils/moduli/_jsu_escapeHTML.js';
-@codekit-append 'componenti/JSutils/moduli/_jsu_number_format.js';
-@codekit-append 'componenti/JSutils/moduli/_jsu_url_append.js';
-@codekit-append 'componenti/JSutils/moduli/_jsu_text_utilities.js';
-@codekit-append 'componenti/JSutils/moduli/_jsu_getQueryVariables.js';
-@codekit-append 'componenti/JSutils/moduli/_jsu_executeFunctionByName.js';
+@codekit-append 'path/to/node_modules/m-utilities/JSutils/moduli/_jsu_escapeHTML.js';
+@codekit-append 'path/to/node_modules/m-utilities/JSutils/moduli/_jsu_number_format.js';
+@codekit-append 'path/to/node_modules/m-utilities/JSutils/moduli/_jsu_url_append.js';
+@codekit-append 'path/to/node_modules/m-utilities/JSutils/moduli/_jsu_text_utilities.js';
+@codekit-append 'path/to/node_modules/m-utilities/JSutils/moduli/_jsu_getQueryVariables.js';
+@codekit-append 'path/to/node_modules/m-utilities/JSutils/moduli/_jsu_executeFunctionByName.js';
 */
 ```
 

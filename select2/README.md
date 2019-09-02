@@ -12,12 +12,12 @@ Select 2 è utilizzato per produrre elementi autocomplete dinamici.
 
 ### JS
 
-Includere nel proprio progetti i file della distribuzione select 2 e il modulo di personalizzazione dei componenti:
+Includere nel proprio progetti i file della distribuzione select 2 e il modulo di personalizzazione:
 
 ```javascript
-@codekit-append '__path_to__/node_modules/select2/dist/js/select2.full.js';
-#codekit-append '__path_to__/node_modules/select2/dist/js/i18n/it.js';
-@codekit-append '__path_to__/node_modules/front-end-utilities/select2/_select2.js';
+@codekit-append '__path_to__/node_modules/m-utilities/select2/dist/js/select2.full.js';
+#codekit-append '__path_to__/node_modules/m-utilities/select2/dist/js/i18n/it.js';
+@codekit-append '__path_to__/node_modules/m-utilities/front-end-utilities/select2/_select2.js';
 ```
 
 > NB: questa installazione utilizza ed estende il tema “Bootstrap” di select2
@@ -183,7 +183,7 @@ In questo modo, è possibile limitare la configurazione degli elementi select ad
 ```
 Notare come in questo caso non siano più necessari né la classe `s2` né i vari elementi `data`.
 
-Nel javascript si utilizza la funzione globale `componenti.set_select2_options` definita in `__path_to__/node_modules/front-end-utilities/select2/_select2.js`:
+Nel javascript si utilizza la funzione globale `mUtilities.set_select2_options` definita in `__path_to__/node_modules/front-end-utilities/select2/_select2.js`:
 
 ```javascript
 // impostazioni predefinite per select2
@@ -205,7 +205,7 @@ Nel javascript si utilizza la funzione globale `componenti.set_select2_options` 
 			// ...
 		}
 		
-    	_this.select2( componenti.set_select2_options( s2_opts ) );
+    	_this.select2( mUtilities.set_select2_options( s2_opts ) );
 	});
 
 })();
