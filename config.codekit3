@@ -1831,7 +1831,7 @@
 			"optionString": ""
 			},
 		"no-redeclare": {
-			"active": 1,
+			"active": 0,
 			"optionString": "{'builtinGlobals': false}"
 			},
 		"no-regex-spaces": {
