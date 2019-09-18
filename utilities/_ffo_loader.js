@@ -2,7 +2,7 @@
 /*
   Font face observer loader
 
-  Con impostazione manuale dei forn da caricare
+  Con impostazione manuale dei font da caricare
 
 */
 (() => {
