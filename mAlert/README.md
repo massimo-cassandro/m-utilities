@@ -6,23 +6,48 @@ Sistema di alert simile a [Sweetalert](https://sweetalert.js.org/) ma basato sul
 ## Uso
 
 ```javascript
-
 mAlert({
-    type: 'success', // success (default), error, info, warning, confirm
-    
-    title: 'Operazione completata', // facoltativo, default null
-    title_class: 'text-success',    // facoltativo, default null
-    mes: null,                      // facoltativo, default null
-    
-    ok_btn_text: 'OK',              // obbl. default OK
-    ok_btn_class: 'btn-success',    // obbl. default `btn-outline-primary`
-    
-    cancel_btn_text: 'Annulla',     // obbl. solo confirm default Annulla
-    cancel_btn_class: 'btn-outline-warning', // obbl. solo confirm default `btn-outline-primary`
-    
-    timer: 4000,// ms               // facoltativo, default null
-    modal_keyboard: true,           // true o false, parametro keyboard del componente modal
-    modal_backdrop: true            // true, false o 'static', parametro backdrop del componente modal
+    type              : 'success', // success (default), error, info, warning, confirm  
+    title             : 'Operazione completata',
+    title_class       : 'text-success',
+    mes               : null,
+    ok_btn_text       : 'OK',
+    ok_btn_class      : 'btn-success',
+    cancel_btn_text   : 'Annulla',
+    cancel_btn_class  : 'btn-outline-warning',
+    callback          : null,
+    timer             : 4000, // ms
+    modal_keyboard    : true,
+    modal_backdrop    : true
 });
+```
 
+In cui:
+
+* **type**: Tipo di alert, obbligatorio. Uno tra success (default), error, info, warning, confirm  
+* **title**: titolo dell'alert, facoltativo. Default impostato in base al tipo di alert, ma eliminabile impostandolo a null
+* **title_class**: facoltativo, classe applicata al div del titolo, default variabile in base al tipo
+* **mes**: testo dell'alert, facoltativo, default null.
+* **ok\_btn\_text**: testo del pulsante di conferma, obbligatorio, default 'OK' o stringa random per error e warning
+* **ok\_btn\_class**: facoltativo, classe applicata al pulsante OK; default variabile in base al tipo, forzato su `btn-outline-primary` se null
+* **timer**: facoltativo, default null, Delay in ms oltre il quale l'alert si chiude automaticamente. Non applicabile al tipo confirm
+* **modal\_keyboard**: Obbligatorio, true (default) o false, parametro *keyboard* del componente modal di Bootstrap
+* **modal\_backdrop**: Obbligatorio, true (default per info e success), false o static (defauilt per tutti gli altri), parametro *backdrop* del componente modal di Bootstrap
+
+Solo per *confirm*:
+
+* **cancel\_btn\_text**: testo del pulsante di annullamento, obbligatorio (solo per confirm), default 'Annulla'
+* **cancel\_btn\_class**: obbl. solo per confirm, default `btn-outline-primary`
+* **callback**: obbligatorio solo per confirm, default null. Funzione richiamata dopo che l'utente ha scelto se confermare o annullare l'alert di conferma; viene invocata con un unico parametro uguale a `true` (conferma) o `false` (annullamento)
+
+Esempio callback:
+
+```javascript
+mAlert({
+    type: 'confirm',
+    [...],
+    callback: function(esito) {
+        console.log( esito? 'Confermato' : 'Annullato');
+    }
+});
 ```
