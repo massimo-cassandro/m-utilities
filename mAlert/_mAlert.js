@@ -159,10 +159,10 @@ const mAlert = function(params = {}) {
   params = Object.assign({}, _defaults[params.type], params);
 
   let modal =
-    `<div class="modal fade mAlert mAlert-${params.type}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    `<div class="modal fade mAlert mAlert-${params.type}" tabindex="-1" role="dialog" aria-describedby="mAlert-content" aria-modal="true" aria-live="assertive">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-        <div class="modal-body">
+        <div class="modal-body" id="mAlert-content">
             <div class="mAlert-mark">
               ${get_svg_mark()}
             </div>
