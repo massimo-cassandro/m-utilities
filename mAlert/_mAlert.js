@@ -194,8 +194,8 @@ const mAlert = function(params = {}) {
       }
 
       if(params.type === 'confirm') {
-        if(!params.callback) {
-          console.error('mAlert[confirm]: `params.callback` non definito!') // eslint-disable-line
+        if(!params.callback || typeof params.callback !== 'function') {
+          console.error('mAlert[confirm]: `params.callback` non definito o non corretto!') // eslint-disable-line
         }
         //OK
         $('.modal-footer button.mAlert-ok', _modal).click(function() {
@@ -213,7 +213,7 @@ const mAlert = function(params = {}) {
         window.clearTimeout(timeoutID);
       }
 
-      if(params.type === 'confirm') {
+      if(params.callback && typeof params.callback === 'function') {
         params.callback(confirm_result);
       }
     })

@@ -33,14 +33,15 @@ In cui:
 * **timer**: facoltativo, default null, Delay in ms oltre il quale l'alert si chiude automaticamente. Non applicabile al tipo confirm
 * **modal\_keyboard**: Obbligatorio, true (default) o false, parametro *keyboard* del componente modal di Bootstrap
 * **modal\_backdrop**: Obbligatorio, true (default per info e success), false o static (defauilt per tutti gli altri), parametro *backdrop* del componente modal di Bootstrap
+* **callback**: obbligatorio solo per confirm, default null. Funzione richiamata quando la finestra modale viene chiusa. Viene invocata con un unico parametro uguale `null` (per tutti i tipi di alert eccetto confirm) oppure, solo nel caso di **confirm**,  a `true` (conferma) o `false` (annullamento)
 
 Solo per *confirm*:
 
 * **cancel\_btn\_text**: testo del pulsante di annullamento, obbligatorio (solo per confirm), default 'Annulla'
 * **cancel\_btn\_class**: obbl. solo per confirm, default `btn-outline-primary`
-* **callback**: obbligatorio solo per confirm, default null. Funzione richiamata dopo che l'utente ha scelto se confermare o annullare l'alert di conferma; viene invocata con un unico parametro uguale a `true` (conferma) o `false` (annullamento)
 
-Esempio callback:
+
+Esempio callback confirm:
 
 ```javascript
 mAlert({
