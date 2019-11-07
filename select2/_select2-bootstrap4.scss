@@ -505,7 +505,8 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
       list-style: none;
       margin: 0;
       overflow: hidden;
-      padding: 0;
+      //padding: 0;
+      padding: $s2bs-padding-base-vertical $s2bs-padding-base-horizontal 0;
       width: 100%;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -518,7 +519,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
     }
 
     /**
-     * Make Multi Select2's choices match Bootstrap 3's default button styles.
+     * Make Multi Select2's choices match Bootstrap's default button styles.
      */
 
     .select2-selection__choice {
@@ -540,29 +541,28 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
      */
 
     // original bs3 theme
-
-    // .select2-search--inline {
-    //   .select2-search__field {
-    //     background: transparent;
-    //     padding: 0 $s2bs-padding-base-horizontal;
-    //     height: $s2bs-input-height-base - 2;
-    //     line-height: $s2bs-line-height;
-    //     margin-top: 0;
-    //     min-width: 5em;
-    //   }
-    // }
-
-    // berkanakyurek
     .select2-search--inline {
-      margin-bottom: $s2bs-padding-base-horizontal/2;
-
       .select2-search__field {
         background: transparent;
-
+        padding: 0; //$s2bs-padding-base-vertical $s2bs-padding-base-horizontal;
+        height: $s2bs-input-height-base - 2;
         line-height: $s2bs-line-height;
         margin-top: 0;
+        min-width: 5em;
       }
     }
+
+    // berkanakyurek
+    // .select2-search--inline {
+    //   margin-bottom: $s2bs-padding-base-horizontal/2;
+
+    //   .select2-search__field {
+    //     background: transparent;
+
+    //     line-height: $s2bs-line-height;
+    //     margin-top: 0;
+    //   }
+    // }
 
     .select2-selection__choice__remove {
       color: $s2bs-remove-choice-color;
@@ -581,9 +581,9 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
      * Clear the selection.
      */
 
-    .select2-selection__clear {
-      margin-top: $s2bs-padding-base-vertical;
-    }
+    // .select2-selection__clear {
+    //   margin-top: $s2bs-padding-base-vertical;
+    // }
   }
 
 
