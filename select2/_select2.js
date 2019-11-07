@@ -33,7 +33,7 @@ mUtilities.set_select2_options = function( _options, _data ) {
     },
 
     select2_defaults = {
-      theme                : 'bootstrap',
+      theme                : 'bootstrap4',
       width                : '100%',
       language             : 'it',
       debug                : false,
