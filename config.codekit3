@@ -573,6 +573,19 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/select2/_select2-bootstrap4.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/select2/_select2-bootstrap4.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/select2/_select2.js": {
 		"bF": 0,
 		"ft": 64,
@@ -583,46 +596,6 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
-		},
-	"/select2/_select2_bs4.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/select2/_select2_bs4.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/select2/README.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/select2/README.html",
-		"oF": 0
-		},
-	"/select2/README.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/select2/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
 		},
 	"/spinners/_basic_spinner.scss": {
 		"aP": 0,
