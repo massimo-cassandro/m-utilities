@@ -1,6 +1,6 @@
 $columns-rule: 1px dotted #ccc !default;
 $column-gap: 2rem !default;
-.colonne {
+.rcolumns {
   column-rule: $columns-rule;
   column-gap: $column-gap;
   column-width: auto;
@@ -15,7 +15,7 @@ $column-gap: 2rem !default;
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     @for $i from 2 through 5 {
-      .colonne#{$infix}-#{$i}   {
+      .rcolumns#{$infix}-#{$i}   {
         column-count: #{$i} !important;
       }
     }
