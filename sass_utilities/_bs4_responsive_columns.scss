@@ -4,6 +4,7 @@ $column-gap: 2rem !default;
   column-rule: $columns-rule;
   column-gap: $column-gap;
   column-width: auto;
+  column-fill: balance;
   orphans: 1;
   widows: 1;
 }
