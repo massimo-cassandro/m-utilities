@@ -1,0 +1,76 @@
+{% spaceless %}
+{% set glob_vars = {
+  v: '1.0.2',
+
+  breakpoints: {
+    xs: 0,
+    sm: 576,
+    md: 768,
+    lg: 992,
+    xl: 1200
+  },
+
+  jquery_cdn: 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js',
+  viewer: url_esterni.shared_apps ~ '/viewer/',
+  viewer_marchi: url_esterni.shared_apps ~ '/viewer/marchi/',
+
+  google_api_key: 'xxx',
+
+  mailto_string: 'm&#97;ilto&#58;',
+  mailto_replace: {
+    '@': '&#x40;',
+    'a': '&#97;',
+    'e': '&#x65;',
+    'i': '&#x69;',
+    'o': '&#111;',
+    'u': '&#x75;',
+    'n': '&#x6E;',
+    'f': '&#102;',
+    't': '&#x74;',
+    'v': '&#x76;',
+    'r': '&#114;',
+    's': '&#115;',
+    'c': '&#x63;',
+    'p': '&#112;',
+    '.': '&period;'
+  },
+
+  lqip: asset('/bundles/sitiapp/imgs/lowres_img_' ~ (agenzia.brand.id == 2? 'vv' : (agenzia.brand.id == 3? 'bv' : 'bn')) ~ '.png')
+} %}
+
+
+{% set glob_vars = glob_vars|merge({
+  breakpoints_sizes : {
+    xs: {min: null,                     max: glob_vars.breakpoints.sm - 1},
+    sm: {min: glob_vars.breakpoints.sm, max: glob_vars.breakpoints.md - 1},
+    md: {min: glob_vars.breakpoints.md, max: glob_vars.breakpoints.lg - 1},
+    lg: {min: glob_vars.breakpoints.lg, max: glob_vars.breakpoints.xl - 1},
+    xl: {min: glob_vars.breakpoints.xl, max: null}
+  }
+}) %}
+
+{% set glob_vars = glob_vars|merge({
+  mq: {
+    xs: "(max-width: #{glob_vars.breakpoints_sizes.xs.max}px)",
+    sm: "(min-width: #{glob_vars.breakpoints_sizes.sm.min}px) and (max-width: #{glob_vars.breakpoints_sizes.sm.max}px)",
+    md: "(min-width: #{glob_vars.breakpoints_sizes.md.min}px) and (max-width: #{glob_vars.breakpoints_sizes.md.max}px)",
+    lg: "(min-width: #{glob_vars.breakpoints_sizes.lg.min}px) and (max-width: #{glob_vars.breakpoints_sizes.lg.max}px)",
+    xl: "(min-width: #{glob_vars.breakpoints_sizes.xl.min}px)"
+  },
+  special_mq: {
+    xs_sm: "(max-width: #{glob_vars.breakpoints_sizes.md.max}px)",
+    xs_md: "(max-width: #{glob_vars.breakpoints_sizes.lg.max}px)",
+    sm_md: "(min-width: #{glob_vars.breakpoints_sizes.sm.min}px) and (max-width: #{glob_vars.breakpoints_sizes.lg.max}px)",
+    md_lg: "(min-width: #{glob_vars.breakpoints_sizes.md.min}px) and (max-width: #{glob_vars.breakpoints_sizes.xl.max}px)",
+    sm_xl: "(min-width: #{glob_vars.breakpoints_sizes.sm.min}px)",
+    md_xl: "(min-width: #{glob_vars.breakpoints_sizes.md.min}px)",
+    lg_xl: "(min-width: #{glob_vars.breakpoints_sizes.lg.min}px)"
+  }
+}) %}
+
+{% endspaceless %}
+{% block tpl %}{% endblock %}
+
+
+
+

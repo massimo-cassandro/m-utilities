@@ -1,0 +1,50 @@
+{#
+
+
+  {%- include '@includes/flash_messages.html.twig' with {
+
+    modo: alert | fullwidth
+
+  } -%}
+
+
+  message labels:
+  - success
+  - notice
+  - error
+
+  Richiede l'impostazione della variabile sass $flash-messages
+
+#}
+
+{% set modo = modo is defined? modo : 'alert'  %}
+
+{%- if modo == 'fullwidth' -%}
+
+	{% for label, messages in app.flashes %}
+	  {%- if messages|length -%}
+      <section class="flash-message flash-message-{{ label }}">
+        <button type="button" class="close" aria-label="Chiudi">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="container">
+        {% for message in messages %}
+          <p>{{ message|raw|nl2br }}</p>
+        {% endfor %}
+        </div>
+      </section>
+    {%- endif -%}
+  {% endfor %}
+
+{%- else -%} {# alert #}
+
+  {% for message in messages %}
+	  {% for label, messages in app.flashes %}
+      <div class="alert alert-{{ label }}">
+        {{ message|raw }}
+      </div>
+    {% endfor %}
+  {% endfor %}
+
+{%- endif -%}
+

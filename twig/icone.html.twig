@@ -1,0 +1,58 @@
+{% spaceless %}
+{#
+  svg degli elementi grafici
+
+  parametri possibili:
+  class:    eventuale classe da assegnare all'svg (facoltativa)
+  id:       id dell'elemento (obbligatorio)
+  svg_file: eventuale path del file svg, alternativo a quello std o corretto per uso nelle macro
+  title:    facoltativo
+  desc:     facoltativo
+
+  uso
+
+  {% include '@includes/elementi_grafici.html.twig' with {
+    id: 'xxxx',
+    class: 'yyyy'
+    [, svg_file: glob_vars.elementi_grafici_file[tpl_id]] // solo per macro
+  } %}
+
+  oppure (più elementi insieme):
+
+  {% include '@includes/elementi_grafici.html.twig' with {
+    id: ['xxxx', 'yyyy', ...],
+    class: 'yyyy'
+    [, svg_file: glob_vars.elementi_grafici_file[tpl_id]] // solo per macro
+  } %}
+
+#}
+{%- if id is not iterable -%}
+	{% set id = [id] %}
+{%- endif -%}
+{% set base_id = id|join('') ~ 'now'|date('u')  %}
+{% set ariaIDs = [] %}
+{% set descUniqueId = null %}
+{%- if desc is defined and desc -%}
+  {% set descUniqueId = 'd-' ~ base_id %}
+  {% set ariaIDs = ariaIDs|merge([descUniqueId]) %}
+{%- endif -%}
+{% set titleUniqueId = null %}
+{%- if title is defined and title -%}
+  {% set titleUniqueId = 't-' ~ base_id %}
+  {% set ariaIDs = ariaIDs|merge([titleUniqueId]) %}
+{%- endif -%}
+{% set svg_file = svg_file is defined? svg_file : glob_vars.elementi_grafici_file[tpl_id] %}
+<svg {{- class|default('')? (' class="' ~ class ~ '"')|raw : '' }} role="img"
+  {%- if ariaIDs|length %} aria-labelledby="{{ ariaIDs|join(' ') }}"{% endif -%}>
+  {%- if title is defined and title -%}
+  	<title id="{{ titleUniqueId }}">{{ title }}</title>
+  {%- endif -%}
+  {%- if descUniqueId -%}
+  	<desc id="{{ descUniqueId }}">{{ desc }}</desc>
+  {%- endif -%}
+  {% for item in id %}
+    <use xlink:href="{{ svg_file }}#{{ item }}" class="{{ item }}"></use>
+  {% endfor %}
+</svg>
+
+{% endspaceless %}

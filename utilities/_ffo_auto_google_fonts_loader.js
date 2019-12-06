@@ -3,6 +3,7 @@
   Font face observer
   automatic loader for google fonts only (single link tag)
 
+  Requires js-cookie
 */
 (() => {
 

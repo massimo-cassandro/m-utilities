@@ -1,0 +1,168 @@
+{#
+  include file uploader 2
+
+  Crea il markup mecessario per l'attivazione dell'uploader
+
+  {% include '@includes/file_uploader.html.twig' with {
+    id: null
+    attrs: null,
+    viewer: url_esterni.shared_apps ~ '/viewer', // fac.
+
+    data: {
+
+    //default:
+      disable_submit: true,
+      multiple: false,
+      required: false,
+      disabled: false,
+
+      wrapper_extra_class: null,
+      uploader_legend_class: null,
+
+      accept: null,
+      sortable: false,
+      sortable_varname: 'uploader_order',
+
+      varname: 'xxxx'
+      max_filesize: 'xx',
+
+    // end default
+
+      uploader_legend: true,
+      uploader_legend_text: '__legend__',
+
+
+      filetype: 'auto|pdf|img',
+
+      img_min_w: null,
+      img_max_w: null,
+      img_w: null,
+      img_min_h: null,
+      img_max_h: null,
+      img_h: null
+
+    },
+
+    // NB se file singolo, racchiudere la var tra [] (es. [entity.file])
+    values: entity.file? [entity.file] : null
+
+    // file multipli
+    values: (entity.files and entity.files|length)? entity.files : null
+
+    extra_fields: [
+      {
+        value_key : 'field_key',      <== viene aggiunto anche a values
+        use_rel_id: true,             <== per far usare ai campi exyra il rel_id
+        markup    : 'html_string'
+        std_markup: {     <== alternativa a markup, campi predefiniti
+          label: 'label',
+          type : 'text|email|url|number...'
+
+          //TODO aggiungere attributi extra facoltativi
+        }
+      },
+
+    ]
+
+  } %}
+
+
+  in cui:
+    - id: uploader id (fac.)
+    - attrs: altri attributi (fac.)
+    - data: opzioni fileuploader
+    - values: array elementi preregistrati
+    - extra_fields: campi aggiuntivi
+
+#}
+{% set minia_bb = (data.multiple is not defined or data.multiple == false)? '400x400' : '200x200' %}
+{% set viewer = viewer is defined ? viewer : url_esterni.shared_apps ~ '/viewer' %}
+{% set extra_fields = (extra_fields is defined and extra_fields is iterable and extra_fields|length)? extra_fields : null %}
+{% set  values = (values is defined and values is iterable and values|length)? values : null %}
+
+{% set parsed_values = null %}
+{% if values|default() is not null and values|length %}
+  {% set parsed_values = [] %}
+  {% for row in values %}
+    {#
+      nel caso di tabella relazionate, la tabella file corrisponde a row.file
+    #}
+    {% if row|default() %}
+      {% set dati_file = row.file is defined? row.file : row %}
+
+    	{% set this_value = {
+        id    : dati_file.id,
+        name  : dati_file.nome,
+        size  : dati_file.size,
+        url   : viewer ~ '/' ~ row.id
+      } %}
+
+      {% if extra_fields %}
+        {% for extra in extra_fields %}
+          {% set this_value = this_value|merge({(extra.value_key): row[extra.value_key]}) %}
+        {% endfor %}
+      {% endif %}
+
+      {% if row.file is defined %}
+      	{% set this_value = this_value|merge({rel_id: row.id}) %}
+      {% endif %}
+
+      {% if data.filetype == 'img' %}
+      	{% set this_value = this_value|merge({
+          url   : viewer ~ '/' ~ dati_file.id ~ '?bb=900x800',
+          src   : viewer ~ '/' ~ dati_file.id ~ '?bb' ~ minia_bb,
+          wi    : dati_file.width,
+          he    : dati_file.height
+        }) %}
+      {% endif %}
+
+    	{% set parsed_values = parsed_values|merge([this_value]) %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% set parsed_extra_fields = null %}
+{% if extra_fields %}
+  {% set parsed_extra_fields = [] %}
+  {% for row in extra_fields %}
+    {% set this_extra_field = { value_key: row.value_key } %}
+
+    if(row.use_rel_id is defined and row.use_rel_id == true) {
+      {% set this_extra_field = this_extra_field|merge({use_rel_id: true}) %}
+    }
+
+    {% set this_markup = '' %}
+    {% if row.markup is defined %}
+      {% set this_markup = row.markup %}
+
+    {% else %} {# markup predefiniti #}
+      {% if row.std_markup.type|lower in ['text', 'url', 'number', 'email'] %}
+        {% set this_markup %}{% spaceless %}
+          <div class="form-group">
+            <label for="{{ row.value_key }}-{{ '{{idx}}' }}">{{ row.std_markup.label }}</label>
+            <input type="{{ row.std_markup.type|lower }}" {{- ' ' -}}
+              class="form-control form-control-sm"  {{- ' ' -}}
+              id="{{ row.value_key }}-{{ '{{idx}}' }}"  {{- ' ' -}}
+              value="{{ '{{val}}' }}"  {{- ' ' -}}
+              name="{{ '{{name}}' }}"  {{- ' ' -}}
+            >
+          </div>
+        {% endspaceless %}{% endset %}
+
+      {% endif %}
+      {# TODO altri tipi #}
+
+    {% endif %}
+    {% set this_extra_field = this_extra_field|merge({markup: this_markup}) %}
+
+    {% set parsed_extra_fields = parsed_extra_fields|merge([this_extra_field]) %}
+
+  {% endfor %}
+{% endif %}
+
+<div {%- if id|default() %} id="{{ id }}"{% endif %}
+  {%- if attrs is defined and attrs %} {{ attrs|raw }}{%- endif -%}
+  {{- ' ' -}} data-file-uploader="{{ data|json_encode() }}"
+  {%- if parsed_values %} data-values="{{ parsed_values|json_encode() }}"{%- endif -%}
+  {%- if parsed_extra_fields %} data-extra_fields="{{ parsed_extra_fields|json_encode() }}"{%- endif -%}
+></div>

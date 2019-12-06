@@ -1,0 +1,26 @@
+#TEST
+RewriteEngine on
+
+#favicons per coda
+RewriteRule ^apple-touch-icon.png /icon.png
+RewriteRule ^favicon.png /icon.png
+RewriteRule ^favicon.ico /icon.png
+
+# json/php (elimina eventuali slash e parametri aggiuntivi. Gli eventuali parametri aggiuntivi vengo aggiunti come variabile `url_params`)
+RewriteRule ^_TEST/(.*)\.(json|php)(\/.*) /_TEST/$1.$2?url_params=$3 [L,QSA]
+
+#pagine standard (PHP generico)
+RewriteRule ^__BUNDLE_ROOT__/Resources/views/(.*)(\.html\.twig)$ /_dev-utilities/php/pagina_standard.php?twig=$1 [L,QSA]
+
+#assets
+RewriteRule ^bundles/__BUNDLE_APP__/(.*) /__BUNDLE_ROOT__/Resources/public/$1 [L]
+
+#viewer
+#RewriteRule ^viewer/(.*) http://_DOMINIO__/viewer/$1 [L,QSA]
+
+# local viewer (alternativo al precedente)
+RewriteRule ^inner_viewer/(.*) /_dev-utilities/php/local_viewer.php?img_id=$1 [L,QSA]
+RewriteRule ^viewer/(.*) /_dev-utilities/php/local_viewer.php?img_id=$1 [L,QSA]
+
+# local viewer (per casi particolari)
+#RewriteRule ^viewer/(.*) /_TEST/local_viewer.php?img_id=$1 [L,QSA]

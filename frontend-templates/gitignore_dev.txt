@@ -1,0 +1,14 @@
+*~
+.DS_Store
+*.mwb.bak
+*.sass-cache
+.dropbox
+.npm
+
+/twig
+/vendor
+/node_modules
+/-doc
+/-public
+/-views
+/_dev-utilities

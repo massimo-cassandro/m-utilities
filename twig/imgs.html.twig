@@ -1,0 +1,103 @@
+{#
+tag picture per immagini
+
+{%- include '@includes/imgs.html.twig' with {
+  files: [
+    {src: [xxxx.webp', 'xxxx@2x.webp 2x'], fmt: 'webp', mq: xl},
+    {src: 'xxxx.jpg', fmt: 'jpg', mq: xl},
+    ...
+  ],
+  basename: false,
+  baseurl: null, // fac., parte del percorso comune a tutti i file (con slash finale)
+  alt: 'xxxx',
+  class: 'img-fluid',
+  lazyload: true, // facoltativo, default true
+  credits: 'html' // facoltativo
+
+} -%}
+
+i percorsi delle immagini vanno inclusi nell'oggetto `files`
+in ordine di breakpoints (dal più grande al più piccolo),
+di formato (prima webp, poi jpg, png, ...)
+
+per ogni immagine va definito un oggetto che deve contenere:
+  * `src`, stringa o array. Nel secondo è un array di path
+     di immagini con l'indicazione della densità
+  * `fmt`: formato (jpg, webp, png, ecc). corrisponde al tipo mime dell'immagine
+    se non è presente il default è jpg
+  * `mq`: uno dei brekpoint definiti in glob_vars.mq
+
+
+il parametro `basename` (default: false), può corrispondere ad una stringa basename
+In questo caso il parametro `files` verrà generato automaticamente per tutti i breakpoint
+e per le immagini jpg e webp (che devono essere tutti presenti) anche con la densità 2x
+
+Le immagini devono avere questo naming:
+__basename__-md@2x.jpg
+__basename__-lg@1x.webp
+ecc.
+
+Richiede la definizione delle variabili media query nel template main
+
+#}
+{% set baseurl = (baseurl is defined and baseurl)? baseurl : '' %}
+{% set alt = alt is defined ? alt : '' %}
+{% set basename = basename is defined ? basename : false %}
+{% set class = class is defined ? class : '' %}
+{% set lazyload = lazyload is defined ? lazyload : true %}
+
+{%- if lazyload and not('lazyload' in class) -%}
+  {% set class = class ~ ' lazyload' %}
+{%- endif -%}
+
+{%- if basename != false -%}
+  {% set files = [] %}
+  {%- for breakpoint, mediaquery in glob_vars.mq|reverse -%}
+    {% set last_brkp = loop.last %}
+
+    {%- for formato in ['webp', 'jpg'] -%}
+      {% set this_srcset = [] %}
+
+      {% for densita in 1..2 %}
+        {% set this_srcset = this_srcset|merge([
+          basename ~ '-' ~ breakpoint ~ '@' ~ densita ~ 'x.' ~ formato ~
+          '?v=' ~ glob_vars.vers.main ~ (densita > 1? " #{densita}x" : '')
+        ]) %}
+      {%- endfor -%}
+
+      {% set files = files|merge([{
+        srcset: this_srcset,
+        fmt: formato,
+        mq: last_brkp? null : breakpoint
+      }]) %}
+
+    {%- endfor -%}
+  {%- endfor -%}
+{%- endif -%}
+
+<picture {%- if credits is defined %} class="has-credits"{%- endif -%}>
+  {%- for item in files -%}
+
+    {%- if not loop.last -%}
+      <source {{ lazyload? 'data-' : ' ' -}}
+        srcset="{{ baseurl -}}
+          {{ (item.src is not iterable)? item.src : item.src|join(', ' ~ baseurl) }}"
+        {%- if item.fmt is defined and item.fmt == 'webp' %} type="image/webp"{% endif -%}
+        {%- if item.mq %} media="{{ glob_vars.mq[item.mq] }}"{% endif -%}>
+    {%- else -%}
+      <img {{ lazyload? 'data-' : ' ' -}}
+        src="{{ baseurl -}}
+          {{ (item.src is not iterable)? item.src : item.src[0] }}"
+        {%- if item.src is iterable and item.src|length > 1 -%}
+          {{- lazyload? ' data-' : ' ' -}}
+          srcset="{{ baseurl -}}item.src|slice(1)|join(', ' ~ baseurl) -}}"
+        {%- endif -%}
+        {{- ' ' -}} alt="{{ alt }}"
+        {%- if class %} class="{{ class }}"{% endif %}>
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if credits is defined -%}
+    <div class="img_credits">{{ credits|raw }}</div>
+  {%- endif -%}
+</picture>
+

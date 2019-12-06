@@ -1,0 +1,42 @@
+{#
+tag meta e opengraph
+
+{%- include '@includes/meta.html.twig' with {
+  title: block('title'),
+  descr: '_testo_description_',
+  image: null,
+  img_width: null,
+  img_height: null
+} -%}
+#}
+
+{% set image = image is defined ? image : null %}
+
+<meta property="og:site_name" content="{{ agenzia.puntiVendita[0].agenzia }}">
+<meta property="og:url" content="{{ app.request.uri }}">
+<meta property="og:type" content="website">
+
+{%- if image -%}
+	<meta property="og:image" content="{{ image }}">
+  {%- if img_width|default() -%}
+    <meta property="og:image:width" content="{{ img_width }}">
+  {%- endif -%}
+  {%- if img_height|default() -%}
+    <meta property="og:image:height" content="{{ img_height }}">
+  {%- endif -%}
+
+{%- else -%}
+  <meta property="og:image" content="{{ url_esterni.shared_apps ~ '/viewer/marchi/' ~ agenzia.logoFamigliaId ~ '?bb=x750' }}">
+  {#
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="418">
+  #}
+{%- endif -%}
+
+{%- if title|default() -%}
+<meta property="og:title" content="{{ title }}">
+{%- endif -%}
+{%- if descr|default() -%}
+<meta name="description" content="{{ descr }}">
+<meta property="og:description" content="{{ descr }}">
+{%- endif -%}
