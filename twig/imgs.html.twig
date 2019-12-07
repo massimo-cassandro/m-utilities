@@ -9,6 +9,7 @@ tag picture per immagini
   ],
   basename: false,
   baseurl: null, // fac., parte del percorso comune a tutti i file (con slash finale)
+  endurl: null,  // fac., parte del percorso aggiunta in coda a tutti i file
   alt: 'xxxx',
   class: 'img-fluid',
   lazyload: true, // facoltativo, default true
@@ -41,6 +42,7 @@ Richiede la definizione delle variabili media query nel template main
 
 #}
 {% set baseurl = (baseurl is defined and baseurl)? baseurl : '' %}
+{% set endurl = (endurl is defined and endurl)? endurl : '' %}
 {% set alt = alt is defined ? alt : '' %}
 {% set basename = basename is defined ? basename : false %}
 {% set class = class is defined ? class : '' %}
@@ -81,16 +83,19 @@ Richiede la definizione delle variabili media query nel template main
     {%- if not loop.last -%}
       <source {{ lazyload? 'data-' : ' ' -}}
         srcset="{{ baseurl -}}
-          {{ (item.src is not iterable)? item.src : item.src|join(', ' ~ baseurl) }}"
+          {{ (item.src is not iterable)? item.src : item.src|join(', ' ~ baseurl) }}
+          {{- endurl -}}"
         {%- if item.fmt is defined and item.fmt == 'webp' %} type="image/webp"{% endif -%}
         {%- if item.mq %} media="{{ glob_vars.mq[item.mq] }}"{% endif -%}>
     {%- else -%}
       <img {{ lazyload? 'data-' : ' ' -}}
         src="{{ baseurl -}}
-          {{ (item.src is not iterable)? item.src : item.src[0] }}"
+          {{ (item.src is not iterable)? item.src : item.src[0] }}
+          {{- endurl -}}"
         {%- if item.src is iterable and item.src|length > 1 -%}
           {{- lazyload? ' data-' : ' ' -}}
-          srcset="{{ baseurl -}}item.src|slice(1)|join(', ' ~ baseurl) -}}"
+          srcset="{{ baseurl -}}item.src|slice(1)|join(', ' ~ baseurl) -}}
+            {{- endurl -}}"
         {%- endif -%}
         {{- ' ' -}} alt="{{ alt }}"
         {%- if class %} class="{{ class }}"{% endif %}>
