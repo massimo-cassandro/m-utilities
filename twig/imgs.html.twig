@@ -62,19 +62,24 @@ Richiede la definizione delle variabili media query nel template main
 
       {% for densita in 1..2 %}
         {% set this_srcset = this_srcset|merge([
-          basename ~ '-' ~ breakpoint ~ '@' ~ densita ~ 'x.' ~ formato ~
-          '?v=' ~ glob_vars.vers.main ~ (densita > 1? " #{densita}x" : '')
+          baseurl ~ basename ~ '-' ~ breakpoint ~
+          (densita > 1? '@' ~ densita ~ 'x' : '') ~ '.' ~ formato ~
+          endurl ~ (densita > 1? " #{densita}x" : '')
         ]) %}
       {%- endfor -%}
 
       {% set files = files|merge([{
-        srcset: this_srcset,
+        src: this_srcset,
         fmt: formato,
         mq: last_brkp? null : breakpoint
       }]) %}
 
     {%- endfor -%}
   {%- endfor -%}
+
+  {# baseurl e endurl sono azzerati perché già considerati nel ciclo precedente #}
+  {% set baseurl = '' %}
+  {% set endurl = '' %}
 {%- endif -%}
 
 <picture {%- if credits is defined %} class="has-credits"{%- endif -%}>
@@ -82,7 +87,7 @@ Richiede la definizione delle variabili media query nel template main
 
     {%- if not loop.last -%}
       <source {{ lazyload? 'data-' : ' ' -}}
-        srcset="{{ baseurl -}}
+        srcset="{{- baseurl -}}
           {{ (item.src is not iterable)? item.src : item.src|join(', ' ~ baseurl) }}
           {{- endurl -}}"
         {%- if item.fmt is defined and item.fmt == 'webp' %} type="image/webp"{% endif -%}
@@ -94,10 +99,10 @@ Richiede la definizione delle variabili media query nel template main
           {{- endurl -}}"
         {%- if item.src is iterable and item.src|length > 1 -%}
           {{- lazyload? ' data-' : ' ' -}}
-          srcset="{{ baseurl -}}item.src|slice(1)|join(', ' ~ baseurl) -}}
+          srcset="{{ baseurl -}}{{- item.src|slice(1)|join(', ' ~ baseurl) -}}
             {{- endurl -}}"
         {%- endif -%}
-        {{- ' ' -}} alt="{{ alt }}"
+        {{- ' ' -}} alt="{{ alt|raw }}"
         {%- if class %} class="{{ class }}"{% endif %}>
     {%- endif -%}
   {%- endfor -%}
