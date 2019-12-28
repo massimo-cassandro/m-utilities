@@ -2,9 +2,9 @@
 *.mwb.bak
 *.sass-cache
 .dropbox
-.npm
 node_modules
 bower_components/
+vendor
 .codekit-cache/
 
 
