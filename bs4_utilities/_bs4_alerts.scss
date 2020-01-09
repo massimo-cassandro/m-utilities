@@ -1,0 +1,89 @@
+.alert {
+	h2 {
+		margin-top: 0;
+		//@extend .h3;
+		position: relative;
+		top:-5px;
+	}
+
+	> p {
+  	&:last-child {
+    	margin-bottom: 0;
+  	}
+	}
+
+  .alert-link, a {
+  	&:not(.btn) {
+    	font-weight: $body-font-weight-semibold;
+    	text-decoration: underline;
+    }
+  }
+}
+
+.alert-link, a {
+
+	.alert-danger & {
+  	color: darken(theme-color(danger), 10);
+	}
+
+	.alert-success & {
+  	color: darken(theme-color(success), 10);
+	}
+
+
+	.alert-info & {
+  	color: darken(theme-color(info), 10);
+	}
+
+
+	.alert-warning & {
+  	color: darken(theme-color(warning), 10);
+	}
+}
+
+.alert-dismissible {
+  padding-right:3rem;
+}
+
+
+.alert-icon {
+	position: relative;
+	padding-left: 4em;
+
+	&::before {
+		width: 2em;
+		height: 2em;
+		display: block;
+		position: absolute;
+		top: $alert-padding-y / 1.5;
+		left: $alert-padding-x / 1.5;
+	}
+
+	&.alert-danger {
+  	&::before {
+		  content: svg_uri_fill($icona_ui-errore, theme-color(danger));
+    }
+  }
+
+
+	&.alert-success {
+	  &::before {
+      content: svg_uri_fill($icona_ui-success, theme-color(success));
+    }
+	}
+
+	&.alert-info {
+	  &::before {
+		  content: svg_uri_fill($icona_ui-info, theme-color(info));
+    }
+	}
+
+
+	&.alert-warning {
+	  &::before {
+		  content: svg_uri_fill($icona_ui-avviso, theme-color(warning));
+    }
+	}
+
+}
+
