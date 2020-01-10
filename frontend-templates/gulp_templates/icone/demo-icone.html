@@ -56,8 +56,8 @@
 
     <div class="icon_wrapper"></div>
 
-    <script type="module">
-      import icon_list from './icon_list.js';
+    <script src="icon_list.js"></script>
+    <script>
       var svg_file = 'icone.svg',
         wrapper = document.getElementsByClassName('icon_wrapper')[0];
 
@@ -66,7 +66,7 @@
           '<div class="icona">'+
             '<svg>' +
               '<title>' + item + '</title>' +
-              '<use xlink:href="' + svg_file + '#' + item + '"></use>'+
+              '<use href="' + svg_file + '#' + item + '"></use>'+
             '</svg>'+
             '<p class="icon_dida" title="' + item + '">' + item + '</p>'+
           '</div>'

@@ -1,8 +1,21 @@
 /* eslint-env node */
-/* global gutil */
 // gulpfile icone
 // gulp [--gulpfile __gulpfile.js__]
 
+
+/*
+  Questa procedura esegue la minificazione e ottimizzazione delle icone SVG
+  e le combina in un unico file `icone.svg`
+
+  La procedura esegue inoltre:
+
+  * la costruzione del file `icon_list.js`, utilizzato dal `demo-icone.html`
+    per la visualizzazione di una pagina di riepilogo di tutte le icone
+  * la costruzione del file `esa/public/assets/_shared/_svg_elements.scss` che
+    che contiene una selezione di alcune icone in forma di variabili sass
+    per la loro inclusione nel css.
+
+*/
 
 var gulp = require('gulp')
   //,del = require('del')
@@ -19,18 +32,35 @@ var gulp = require('gulp')
 ;
 
 
-var icon_list = []; // lista delle icone, utilizzate per il file demo
-var icon_prefix = 'icone-';
-
-
+var icon_list = [], // lista delle icone, utilizzate per il file demo
+  svg_files_folder = 'svg_files',
+  svg_files_prefix = 'esa-icone_',
+  output_file = 'icone.svg',
+  icon_list_file = 'icon_list.js',
+  svg_to_scss = ['check', 'danger', 'info'], // icone da convertire in variabili scss
+  icons_scss_file = '_icone_svg.scss',
+  svgmin_plugins = [
+    { cleanupIDs: { remove: true, minify: true } }
+    , { removeDoctype: true }
+    , { removeComments: true }
+    , { removeTitle: true }
+    , { removeDimensions: true }
+    , { cleanupNumericValues: { floatPrecision: 3  } }
+    , { convertColors: { names2hex: true, rgb2hex: true } }
+    , { removeStyleElement: true }
+    , { removeUselessDefs: true }
+    , { removeEmptyContainers: true }
+    , { removeAttrs: { attrs: ['(fill|stroke|class|style)', 'svg:(width|height)'] } }
+    //, { addAttributesToSVGElement: {attribute: "#{$attr}"}}
+  ]
+;
 gulp.task('icone', function() {
   return gulp.src([
-    'svg_files/*.svg',
-    '!svg_files/' + icon_prefix + '@*.svg'
+    svg_files_folder + '/*.svg',
+    '!' + svg_files_folder + '/' + svg_files_prefix + '@*.svg'
   ])
     .pipe(rename(function (path) {
-      path.basename = path.basename.replace(icon_prefix, '');
-      //path.basename = 'icon-' + icon_name;
+      path.basename = path.basename.replace(svg_files_prefix, '');
 
       icon_list.push(path.basename);
 
@@ -39,16 +69,7 @@ gulp.task('icone', function() {
     .pipe(svgmin(function () {
       return {
         // https://github.com/svg/svgo/tree/master/plugins
-        plugins: [
-          { cleanupIDs: { remove: true, minify: true } }
-          , { removeDoctype: true }
-          , { removeComments: true }
-          , { removeTitle: true }
-          , { removeDimensions: true }
-          , { cleanupNumericValues: { floatPrecision: 3  } }
-          , { convertColors: { names2hex: true, rgb2hex: true } }
-          , { removeAttrs: { attrs: ['(fill|stroke|class|style)', 'svg:(width|height)'] } }
-        ]
+        plugins: svgmin_plugins
         //,js2svg: { pretty: true }
       };
     }))
@@ -56,7 +77,7 @@ gulp.task('icone', function() {
     .pipe(svgstore())
   //.pipe( replace(/<style>(.*?)<\/style>/g, '') )
   //.pipe( replace(/<title>(.*?)<\/title>/g, '') )
-    .pipe( rename('icone.svg') )
+    .pipe( rename(output_file) )
     .pipe(chmod(0o755))
     .pipe(gulp.dest('./'));
 });
@@ -65,99 +86,49 @@ gulp.task('icone', function() {
 gulp.task('icon_list', function(cb) {
   var str = '// lista id icone per demo\n' +
     '// NB: questo file è generato da uno script gulp, eventuali modifiche saranno sovrascritte\n' +
-    'const icon_list = ' + JSON.stringify(icon_list.sort(), null, '  ').replace(/"/g, '\'') + ';\n\n' +
-    'export default icon_list;';
+    'const icon_list = ' + JSON.stringify(icon_list.sort(), null, '  ').replace(/"/g, '\'') + ';';
 
-/*   return file('icon_list_ada.js', str, { src: true })
-    .pipe(gulp.dest('./')); */
+  //str +=  '\n\nexport default icon_list;';
 
-  // return string_src('icon_list_ada.js', str)
-  //   .pipe(gulp.dest('./'));
-
-  return fs.writeFile('icon_list.js', str, cb);
+  return fs.writeFile(icon_list_file, str, cb);
 });
 
 
-
-
-
 gulp.task('svg2scss', function () {
-  var intro_str = '// icone svg per inclusione nel css\n' +
+  var intro_str = '// icone svg per inclusione nei scss\n' +
       '// NB: questo file è generato da uno script gulp, eventuali modifiche saranno sovrascritte\n\n';
 
-  return gulp.src([
-    'svg_files/' + icon_prefix + 'freccia.svg',
-    'svg_files/' + icon_prefix + 'ui-errore.svg',
-    'svg_files/' + icon_prefix + 'ui-info.svg',
-    'svg_files/' + icon_prefix + 'ui-avviso.svg',
-    'svg_files/' + icon_prefix + 'ui-success.svg',
-    //'svg_files/' + icon_prefix + 'ui-elimina.svg',
-    'svg_files/' + icon_prefix + 'ui-drag.svg'
-  ])
+  let src_list = [];
+  svg_to_scss.forEach(icon => {
+    src_list.push(svg_files_folder + '/' + svg_files_prefix + icon + '.svg');
+  });
+
+  return gulp.src(src_list)
     .pipe(flatmap(function(stream , file){
-      var icon_name = file.path.replace(/^\/(.+\/)*(.+)\.(.+)$/, '$2').replace(icon_prefix, '');
+      var icon_name = file.path.replace(/^\/(.+\/)*(.+)\.(.+)$/, '$2').replace(svg_files_prefix, '');
 
       return stream
         .pipe(svgmin(function () {
           return {
             // https://github.com/svg/svgo/tree/master/plugins
-            plugins: [
-              { cleanupIDs: { remove: true, minify: true } }
-              , { removeDoctype: true }
-              , { removeComments: true }
-              , { removeTitle: true }
-              , { removeDimensions: true }
-              , { cleanupNumericValues: { floatPrecision: 3  } }
-              , { convertColors: { names2hex: true, rgb2hex: true } }
-              , { removeAttrs: { attrs: ['(fill|stroke|class|style)', 'svg:(width|height)'] } }
-              //, { addAttributesToSVGElement: {attribute: "#{$attr}"}}
-            ]
+            plugins: svgmin_plugins
             //,js2svg: { pretty: true }
           };
         })) // end svgmin
         .pipe(inject.wrap('$icona_' + icon_name + ': \'', '\';'));
 
     })) // end flatmap
-    .pipe(concat('_icone_svg.scss'))
-    .pipe(inject.prepend(intro_str))
+    .pipe(concat( icons_scss_file ))
+    .pipe(inject.prepend( intro_str ))
     .pipe(chmod(0o755))
     .pipe(gulp.dest('./'));
-
 });
-
-
-// copia del file xxx in views/security per il suo utilizzo
-// nella pagina di login
-gulp.task('copy2login', function () {
-  return gulp.src('svg_files/' + icon_prefix + 'ada_icona.svg')
-    .pipe(svgmin(function () {
-      return {
-        // https://github.com/svg/svgo/tree/master/plugins
-        plugins: [
-          { cleanupIDs: { remove: true, minify: true } }
-          , { removeDoctype: true }
-          , { removeComments: true }
-          , { removeTitle: true }
-          , { removeDimensions: true }
-          , { cleanupNumericValues: { floatPrecision: 3  } }
-          , { convertColors: { names2hex: true, rgb2hex: true } }
-          , { removeAttrs: { attrs: ['(fill|stroke|class|style)', 'svg:(width|height)'] } }
-          //, { addAttributesToSVGElement: {attribute: "#{$attr}"}}
-        ]
-        //,js2svg: { pretty: true }
-      };
-    })) // end svgmin
-    .pipe( rename('xxx.svg') )
-    .pipe(gulp.dest('../../../views/security/'));
-});
-
 
 gulp.task('default',
   gulp.series('icone',
     gulp.parallel(
       'icon_list',
-      'svg2scss',
-      'copy2login'
+      'svg2scss'
     )
   )
 );

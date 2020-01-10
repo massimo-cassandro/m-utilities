@@ -21,24 +21,13 @@
 }
 
 .alert-link, a {
-
-	.alert-danger & {
-  	color: darken(theme-color(danger), 10);
-	}
-
-	.alert-success & {
-  	color: darken(theme-color(success), 10);
-	}
-
-
-	.alert-info & {
-  	color: darken(theme-color(info), 10);
-	}
-
-
-	.alert-warning & {
-  	color: darken(theme-color(warning), 10);
-	}
+  @each $theme in danger, warning, info, success {
+    @if map-has-key($theme-colors, $theme) {
+      .alert-#{$theme} & {
+        color: darken(theme-color($theme), 10);
+      }
+    }
+  }
 }
 
 .alert-dismissible {
@@ -57,33 +46,20 @@
 		position: absolute;
 		top: $alert-padding-y / 1.5;
 		left: $alert-padding-x / 1.5;
-	}
-
-	&.alert-danger {
-  	&::before {
-		  content: svg_uri_fill($icona_ui-errore, theme-color(danger));
-    }
   }
 
-
-	&.alert-success {
-	  &::before {
-      content: svg_uri_fill($icona_ui-success, theme-color(success));
+  @each $theme in danger, warning, info, success {
+    @if map-has-key($theme-colors, $theme) &&
+      global-variable-exists('ui-icons') &&
+      map-has-key($ui-icons, $theme) {
+        &.alert-#{$theme} {
+          &::before {
+            content: svg_uri(
+              str-replace(map-get($ui-icons, $theme), '<svg', '<svg fill="#{theme-color($theme)}"')
+            );
+          }
+        }
     }
-	}
-
-	&.alert-info {
-	  &::before {
-		  content: svg_uri_fill($icona_ui-info, theme-color(info));
-    }
-	}
-
-
-	&.alert-warning {
-	  &::before {
-		  content: svg_uri_fill($icona_ui-avviso, theme-color(warning));
-    }
-	}
-
+  }
 }
 

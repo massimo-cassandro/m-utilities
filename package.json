@@ -1,6 +1,6 @@
 {
   "name": "m-utilities",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Collection of Front-end development Utilities",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,5 +14,5 @@
   "bugs": {
     "url": "https://github.com/massimo-cassandro/m-utilities/issues"
   },
-  "homepage": "https://github.com/massimo-cassandro/m-utilities#readme",
-
+  "homepage": "https://github.com/massimo-cassandro/m-utilities#readme"
+}
