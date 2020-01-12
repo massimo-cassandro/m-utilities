@@ -1,6 +1,6 @@
-{% spaceless %}
+{% apply spaceless %}
 {#
-  svg degli elementi grafici
+  svg icone
 
   parametri possibili:
   class:    eventuale classe da assegnare all'svg (facoltativa)
@@ -9,20 +9,14 @@
   title:    facoltativo
   desc:     facoltativo
 
-  uso
+  utilizzo di base
+  {% include '@includes/icone.html.twig' with { id: 'xxxx' } %}
 
-  {% include '@includes/elementi_grafici.html.twig' with {
-    id: 'xxxx',
+  oppure:
+  {% include '@includes/icone.html.twig' with {
+    id: ['xxxx', 'yyyy', ...], // più elementi
     class: 'yyyy'
-    [, svg_file: glob_vars.elementi_grafici_file[tpl_id]] // solo per macro
-  } %}
-
-  oppure (più elementi insieme):
-
-  {% include '@includes/elementi_grafici.html.twig' with {
-    id: ['xxxx', 'yyyy', ...],
-    class: 'yyyy'
-    [, svg_file: glob_vars.elementi_grafici_file[tpl_id]] // solo per macro
+    [, svg_file: glob_vars.icone] // solo per macro
   } %}
 
 #}
@@ -41,7 +35,7 @@
   {% set titleUniqueId = 't-' ~ base_id %}
   {% set ariaIDs = ariaIDs|merge([titleUniqueId]) %}
 {%- endif -%}
-{% set svg_file = svg_file is defined? svg_file : glob_vars.elementi_grafici_file[tpl_id] %}
+{% set svg_file = svg_file is defined? svg_file : glob_vars.icon_file %}
 <svg {{- class|default('')? (' class="' ~ class ~ '"')|raw : '' }} role="img"
   {%- if ariaIDs|length %} aria-labelledby="{{ ariaIDs|join(' ') }}"{% endif -%}>
   {%- if title is defined and title -%}
@@ -55,4 +49,4 @@
   {% endfor %}
 </svg>
 
-{% endspaceless %}
+{% endapply %}
