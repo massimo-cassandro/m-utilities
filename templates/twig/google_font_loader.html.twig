@@ -27,6 +27,6 @@ esempio con subset
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 {% for fnt in fonts %}
 	{% set font_url = 'https://fonts.googleapis.com/css?family=' ~ fnt ~ '&amp;display=swap' %}
-	<link rel="preload" href="{{ font_url|raw }}" as="fetch" crossorigin="anonymous">
+	<link rel="preload" href="{{ font_url|raw }}" as="style" crossorigin="anonymous">
   <link href="{{ font_url|raw }}" rel="stylesheet">
 {% endfor %}

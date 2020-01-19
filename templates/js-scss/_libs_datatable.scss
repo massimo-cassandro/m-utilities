@@ -1,0 +1,27 @@
+// personalizzazione datatables
+
+$datatable_responsive_border_color  : #999;
+$datatable_head_border_color        : #000;
+
+
+@import '__path_to_node_modules__/auto-datatables/_scss/_datatable_vars.scss';
+@import '__path_to_node_modules__/auto-datatables/_scss/_creaDatatable.scss';
+@import '__path_to_node_modules__/auto-datatables/_scss/_datatable_processing.scss';
+@import '__path_to_node_modules__/auto-datatables/_scss/_datatable_controls_bs4.scss';
+@import '__path_to_node_modules__/auto-datatables/_scss/_datatable_table_bs4.scss';
+@import '__path_to_node_modules__/auto-datatables/_scss/_datatable_sorting_bs4.scss';
+@import '__path_to_node_modules__/auto-datatables/_scss/_datatable_paging_bs4.scss';
+@import '__path_to_node_modules__/auto-datatables/_scss/_datatables_classes.scss';
+@import '__path_to_node_modules__/auto-datatables/_scss/_datatable_responsive.scss';
+
+// datatable
+//@import '__path_to_node_modules__/datatables.net-bs4/css/dataTables.bootstrap4.css';
+
+// datatable responsive
+@import '__path_to_node_modules__/datatables.net-responsive-bs4/css/responsive.bootstrap4';
+
+//fixed header
+//@import '__path_to_node_modules__/datatables.net-fixedheader-bs4/css/fixedHeader.bootstrap4';
+
+// rowreorder
+@import '__path_to_node_modules__/datatables.net-rowreorder-bs4/css/rowReorder.bootstrap4';

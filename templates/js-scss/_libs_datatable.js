@@ -30,7 +30,9 @@ var datatable_setup = {
     paging         : true,
     pageLength     : 25,
     language: {
-      processing: __spinner__
+      processing: '<div class="spinner-border text-primary" role="status">' +
+      '<span class="sr-only">Caricamento in corso...</span>' +
+      '</div>'
     },
 
     // $grid-breakpoints: (
@@ -62,8 +64,8 @@ var datatable_setup = {
   },
 
   icone: {
-    ok  : __icone.ok,
-    off : __icone.off
+    ok  : '<span class="icona icona-ok"></span>',
+    off : '<span class="icona icona-off"></span>'
   },
 
   id_visible_default: __isStaff? true : false,
