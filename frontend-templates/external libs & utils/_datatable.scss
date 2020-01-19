@@ -1,0 +1,69 @@
+// personalizzazione datatables
+
+$datatable_responsive_border_color  : $grigio-2;
+$datatable_head_border_color        : $nero;
+
+
+@import '../../../node_modules/auto-datatables/_scss/_datatable_vars.scss';
+@import '../../../node_modules/auto-datatables/_scss/_creaDatatable.scss';
+@import '../../../node_modules/auto-datatables/_scss/_datatable_processing.scss';
+@import '../../../node_modules/auto-datatables/_scss/_datatable_controls_bs4.scss';
+@import '../../../node_modules/auto-datatables/_scss/_datatable_table_bs4.scss';
+//@import '../../../node_modules/auto-datatables/_scss/_datatable_sorting_bs4.scss';
+@import '../../../node_modules/auto-datatables/_scss/_datatable_paging_bs4.scss';
+@import '../../../node_modules/auto-datatables/_scss/_datatables_classes.scss';
+@import '../../../node_modules/auto-datatables/_scss/_datatable_responsive.scss';
+
+// datatable
+//@import '../../../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css';
+
+// datatable responsive
+@import '../../../node_modules/datatables.net-responsive-bs4/css/responsive.bootstrap4';
+
+//fixed header
+//@import '../../../node_modules/datatables.net-fixedheader-bs4/css/fixedHeader.bootstrap4';
+
+// rowreorder
+@import '../../../node_modules/datatables.net-rowreorder-bs4/css/rowReorder.bootstrap4';
+
+// sorting (sostituisce _datatable_sorting_bs4.scss)
+
+$datatable_active_sorting_color     : map-get($extra_colors, rosso);
+
+// le impostazioni di default dei bordi sono in tipografia/_tables.scss
+.datatable-wrapper {
+
+  //max-width: 100%;
+
+  .sorting,
+  .sorting_asc,
+  .sorting_desc,
+  .sorting_disabled,
+  .sorting_asc_disabled,
+  .sorting_desc_disabled {
+    border-bottom-color: $grigio-2;
+  }
+
+  .sorting_disabled,
+  .sorting_asc_disabled,
+  .sorting_desc_disabled {
+    cursor: default;
+  }
+
+  .sorting,
+  .sorting_asc,
+  .sorting_desc {
+    cursor:pointer;
+  }
+
+  .sorting:hover {
+    //border-bottom-color: $datatable_active_sorting_color;
+    background-color: rgba($datatable_active_sorting_color,.05);
+  }
+
+
+  .sorting_asc,
+  .sorting_desc {
+    border-bottom-color: $datatable_active_sorting_color;
+  }
+}

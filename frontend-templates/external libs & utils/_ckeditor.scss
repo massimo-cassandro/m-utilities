@@ -1,0 +1,75 @@
+// supporto per le classi aggiunte da CKEDITOR
+
+
+// IMPOSTAZIONI EDITOR
+//================================
+// in ckeditor le tabelle sono inserite all'interno di
+// un tag figure.table
+.ck-content {
+  .table table {
+    @extend .table;
+  }
+
+  &.ck-read-only {
+    color: #999!important;
+    background-color: #efefef!important;
+  }
+}
+
+// IMPOSTAZIONI OUTPUT
+//================================
+figure {
+  &.table table {
+    @extend .table;
+    @extend .table-bordered;
+  }
+
+  $ck-image-spacing: 2rem;
+
+  &.image {
+    text-align: center;
+    clear: both;
+    max-width: 100%;
+
+    &.image-style-side,
+		&.image-style-align-left,
+		&.image-style-align-center,
+		&.image-style-align-right {
+			max-width: 50%;
+			height: auto;
+		}
+
+		&.image-style-side, &.image-style-align-right  {
+			float: right;
+			margin-left: $ck-image-spacing;
+		}
+
+		&.image-style-align-left {
+			float: left;
+			margin-right: $ck-image-spacing;
+		}
+
+		&.image-style-align-center {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		> img {
+  		display: block;
+  		margin: 0 auto;
+      max-width: 100%;
+      height:auto;
+  	}
+  }
+}
+
+
+// container dei blocchi di testo creati con ckeditor
+.text-block {
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+}

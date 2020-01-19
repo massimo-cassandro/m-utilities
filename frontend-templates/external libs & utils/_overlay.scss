@@ -1,0 +1,26 @@
+.overlay {
+  background-color: rgba($nero,.8);
+  top:0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  position:absolute;
+  z-index:10;
+
+  display: flex;
+  justify-content:center;
+  align-items:center;
+
+  &.overlay-chiaro {
+    background-color: rgba($nero,.4);
+  }
+
+  &.overlay-bianco {
+    background-color: rgba($bianco,.7);
+  }
+
+  body > & {
+    position:fixed;
+    z-index: map-get($zindex, page_overlay);
+  }
+}
