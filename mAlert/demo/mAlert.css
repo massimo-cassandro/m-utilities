@@ -1,0 +1,48 @@
+.mAlert-mark {
+  width: 100%; }
+  .mAlert-mark svg {
+    display: block;
+    margin: 1rem auto 2rem; }
+  .mAlert-mark .path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0; }
+    .mAlert-mark .path.circle {
+      animation: dash .9s ease-in-out; }
+    .mAlert-mark .path.line {
+      stroke-dashoffset: 1000;
+      animation: dash .9s .35s ease-in-out forwards; }
+    .mAlert-mark .path.check {
+      stroke-dashoffset: -100;
+      animation: dash-check .9s .35s ease-in-out forwards; }
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000; }
+  100% {
+    stroke-dashoffset: 0; } }
+
+@keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100; }
+  100% {
+    stroke-dashoffset: 900; } }
+
+.mAlert.modal.mAlert-success svg {
+  stroke: green; }
+
+.mAlert.modal.mAlert-error svg {
+  stroke: red; }
+
+.mAlert.modal.mAlert-info svg {
+  stroke: DodgerBlue; }
+
+.mAlert.modal.mAlert-warning svg {
+  stroke: DarkOrange; }
+
+.mAlert.modal.mAlert-confirm svg {
+  stroke: DarkOrange; }
+
+.mAlert.modal .modal-footer button {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-weight: 400; }

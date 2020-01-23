@@ -49,32 +49,42 @@
 		"oAP": "/.npmignore",
 		"oF": 0
 		},
-	"/jcrop_config/_jquery.Jcrop_config.js": {
+	"/bs4_utilities/_bs4_alerts.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/bs4_utilities/_bs4_alerts.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/bs4_utilities/_bs4_responsive_columns.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/bs4_utilities/_bs4_responsive_columns.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/cc/sort-ai-artboards-icons.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 1,
-		"oAP": "/jcrop_config/_jquery.Jcrop_config-min.js",
+		"oA": 0,
+		"oAP": "/cc/sort-ai-artboards-icons-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
-		},
-	"/jcrop_config/_jquery.Jcrop_config.less": {
-		"aP": 0,
-		"bl": 0,
-		"eJ": 0,
-		"ft": 1,
-		"iI": 0,
-		"ma": 1,
-		"mS": 0,
-		"oA": 1,
-		"oAP": "/jcrop_config/_jquery.Jcrop_config.css",
-		"oF": 0,
-		"oS": 0,
-		"rwU": 0,
-		"sI": 0,
-		"sU": 0
 		},
 	"/JS-utilities-2/js/__JSutils_init.js": {
 		"bF": 0,
@@ -301,6 +311,37 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/mAlert/demo/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/mAlert/demo/index.html",
+		"oF": 0
+		},
+	"/mAlert/demo/mAlert.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/mAlert/demo/mAlert-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/mAlert/demo/mAlert.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/mAlert/demo/mAlert.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/mAlert/marks.sketch": {
 		"cB": 0,
 		"ft": 8192,
@@ -378,38 +419,6 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/multiselect/_multiselect.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/multiselect/_multiselect.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/multiselect/README.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/multiselect/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
 	"/package.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -436,19 +445,6 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
-		},
-	"/sass_utilities/_bs4_responsive_columns.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/sass_utilities/_bs4_responsive_columns.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
 		},
 	"/sass_utilities/_color_utilities.scss": {
 		"aP": 0,
@@ -780,6 +776,355 @@
 		"rwU": 0,
 		"sI": 0,
 		"sU": 0
+		},
+	"/templates/-npmrc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/-npmrc",
+		"oF": 0
+		},
+	"/templates/editorconfig.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/editorconfig.txt",
+		"oF": 0
+		},
+	"/templates/eslintrc (moduli).json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/templates/eslintrc (moduli)-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/templates/eslintrc.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/templates/eslintrc-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/templates/gitignore.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/gitignore.txt",
+		"oF": 0
+		},
+	"/templates/gulp/favicons/Favicon Generator for all platforms- iOS, Android, PC-Mac....webloc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/gulp/favicons/Favicon Generator for all platforms- iOS, Android, PC-Mac....webloc",
+		"oF": 0
+		},
+	"/templates/gulp/favicons/gulpfile_favicon.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/templates/gulp/favicons/gulpfile_favicon-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/templates/gulp/gulp_make_docs.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/templates/gulp/gulp_make_docs-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/templates/gulp/gulpfile_email.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/templates/gulp/gulpfile_email-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/templates/gulp/icone/demo-icone.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/gulp/icone/demo-icone.html",
+		"oF": 0
+		},
+	"/templates/gulp/icone/gulpfile.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/templates/gulp/icone/gulpfile-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/templates/gulp/icone/icon_list.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/templates/gulp/icone/icon_list-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/templates/gulp/icone/svg_files/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/gulp/icone/svg_files/.gitkeep",
+		"oF": 0
+		},
+	"/templates/htaccess.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/htaccess.txt",
+		"oF": 0
+		},
+	"/templates/js-scss/_checkmq.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/templates/js-scss/_checkmq-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/templates/js-scss/_ckeditor.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/templates/js-scss/_ckeditor.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/templates/js-scss/_file_uploader.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/templates/js-scss/_file_uploader-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/templates/js-scss/_icone.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/templates/js-scss/_icone.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/templates/js-scss/_libs_datatable.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/templates/js-scss/_libs_datatable-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/templates/js-scss/_libs_datatable.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/templates/js-scss/_libs_datatable.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/templates/js-scss/_libs_fancybox.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/templates/js-scss/_libs_fancybox.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/templates/js-scss/_overlay.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/templates/js-scss/_overlay-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/templates/js-scss/_overlay.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/templates/js-scss/_overlay.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/templates/js-scss/_scroll_observer.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/templates/js-scss/_scroll_observer-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/templates/js-scss/external_libs.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/templates/js-scss/external_libs-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/templates/std_package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/templates/std_package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/templates/twig/_main.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/templates/twig/_main.html.twig",
+		"oF": 0
+		},
+	"/templates/twig/fancybox_cdn.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/twig/fancybox_cdn.html.twig",
+		"oF": 0
+		},
+	"/templates/twig/flash_messages.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/twig/flash_messages.html.twig",
+		"oF": 0
+		},
+	"/templates/twig/google_font_loader.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/twig/google_font_loader.html.twig",
+		"oF": 0
+		},
+	"/templates/twig/icone.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/twig/icone.html.twig",
+		"oF": 0
+		},
+	"/templates/twig/imgs.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/twig/imgs.html.twig",
+		"oF": 0
+		},
+	"/templates/twig/imgs_viewer.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/twig/imgs_viewer.html.twig",
+		"oF": 0
+		},
+	"/templates/twig/meta.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/twig/meta.html.twig",
+		"oF": 0
+		},
+	"/templates/twig_ext.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/twig_ext.txt",
+		"oF": 0
+		},
+	"/utilities/_check_bs4_mq.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/utilities/_check_bs4_mq-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"/utilities/_cookieconsent_std.js": {
 		"bF": 0,
