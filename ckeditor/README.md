@@ -37,10 +37,10 @@ Per la definizione dei parametri globale, è necessario impostarli nella variabi
 
 ```javascript
 window.mUtilities = window.mUtilities || {};
-window.mUtilities.ckeditor: {
+window.mUtilities.ckeditor = {
   cke_url: 'path/to/m-ckeditor-min.js',
   upl_url: 'path/to/uploader',
-  img_viewer: `path/to/viewer/`
+  img_viewer: 'path/to/viewer/'
 };
 ```
 
@@ -108,11 +108,11 @@ In caso di textarea required non compilati, `_m-ckeditor-form-check.js` produce 
 ```javascript
 window.mUtilities = window.mUtilities || {};
 
-window.mUtilities.ckeditor: {
+window.mUtilities.ckeditor = {
   
   cke_url: 'path/to/m-ckeditor-min.js',
   upl_url: 'path/to/uploader',
-  img_viewer: `path/to/viewer/`,
+  img_viewer: 'path/to/viewer/',
 
   requiredErrorMes: elementoRequired => {
     return `L'elemento ${elementoRequired} è obbligatorio`;
