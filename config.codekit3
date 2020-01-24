@@ -41,6 +41,14 @@
 		"oAP": "/.gitattributes",
 		"oF": 0
 		},
+	"/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.gitignore",
+		"oF": 0
+		},
 	"/.npmignore": {
 		"cB": 0,
 		"ft": 8192,
@@ -85,6 +93,12 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/ckeditor": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/ckeditor",
+		"oF": 0
 		},
 	"/JS-utilities-2/js/__JSutils_init.js": {
 		"bF": 0,
@@ -1059,12 +1073,28 @@
 		"oAP": "/templates/twig/fancybox_cdn.html.twig",
 		"oF": 0
 		},
+	"/templates/twig/file_uploader.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/twig/file_uploader.html.twig",
+		"oF": 0
+		},
 	"/templates/twig/flash_messages.html.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/templates/twig/flash_messages.html.twig",
+		"oF": 0
+		},
+	"/templates/twig/form_end.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/twig/form_end.html.twig",
 		"oF": 0
 		},
 	"/templates/twig/google_font_loader.html.twig": {
@@ -3289,7 +3319,7 @@
 	"rollupExternals": "",
 	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
 	"rollupTreeshakingEnabled": 1,
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, /storage/framework/sessions, node_modules",
+	"skippedFoldersString": "/storage/framework/sessions,node_modules,_logs,logs,log,.idea,_cache,cache,/ckeditor",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
 	"tsAllowSyntheticDefaultImports": 0,

@@ -1,0 +1,5 @@
+<IfModule mod_headers.c>
+  <FilesMatch "m-ckeditor-min\.js$">
+    Header set Cache-Control "max-age=1296000, private"
+  </FilesMatch>
+</IfModule>

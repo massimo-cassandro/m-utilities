@@ -4,5 +4,7 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"preview-in-browser.domain": "http://utils.local:8888/"
+	}
 }
