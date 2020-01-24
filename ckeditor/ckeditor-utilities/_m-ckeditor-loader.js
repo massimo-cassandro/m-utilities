@@ -112,6 +112,7 @@
             // abilita eventuali elementi disabilitati con attributo `data-enable="editor"`
             document.querySelectorAll('[data-enable="editor"]:disabled').forEach( el => {
               el.disabled = false;
+              el.closest('.form-group').classList.remove('disabled');
             });
           })
           .catch( error => {

@@ -82,7 +82,7 @@ Esempio, per limitare le immagini a 1 MB:
 <textarea class="editor" id="textarea1" data-cke-upl-max-size="1048576"></textarea>
 ```
 
-### Abilitazione textarea
+### Abilitazione elementi al caricamento di ckeditor
 
 Ad evitare che un textarea sia modificabile prima dell'attivazione di CKeditor (che su reti lente potrebbe avere un delay avvertibile), è sufficiente disabilitarlo e aggiungere l'attributo `data-enable="editor"`.
 
@@ -91,6 +91,10 @@ Ad evitare che un textarea sia modificabile prima dell'attivazione di CKeditor (
 ```
 
 All'attivazione di CKEditor, il campo verrò automaticamente abilitato.
+
+Oltre che sui textarea, questo metodo può essere applicato ad ogni elemento che necessiti di essere abilitato in questo modo.
+
+In aggiunta, se l'elemento in esame è all'interno di un `div.form-group`, l'eventual classe disabled presente, viene eliminata.
 
 
 ## Utilità
