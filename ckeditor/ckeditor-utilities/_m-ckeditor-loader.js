@@ -57,7 +57,7 @@
         'numberedList',
         //'imageUpload',
         'blockQuote',
-        'insertTable',
+        //'insertTable',
         'undo',
         'redo'
       ];
@@ -85,7 +85,7 @@
             uploaderUrl: window.mUtilities.ckeditor.upl_url,
             imgViewer: window.mUtilities.ckeditor.img_viewer,
             toolbar: lite_toolbar,
-            removePlugins: [ 'mUploadAdapter', 'ImageUpload' ],
+            removePlugins: [ 'mUploadAdapter', 'ImageUpload', 'insertTable' ],
           };
         }
 
