@@ -83,6 +83,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/bs4_utilities/_forms-macro-alt-rows.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/bs4_utilities/_forms-macro-alt-rows.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/cc/sort-ai-artboards-icons.js": {
 		"bF": 0,
 		"ft": 64,
