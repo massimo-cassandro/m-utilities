@@ -1,0 +1,54 @@
+$datatable_responsive_border_color: #ccc !default;
+$datatable_sorting_arrows_color: currentColor !default;
+$datatable_active_sorting_color: #c00 !default;
+$datatable_active_sorting_bg: transparent !default;
+$datatable_processing_padding: 0!default;
+$datatable_processing_bg: linear-gradient(to right, rgba($bianco, 0) 0%, rgba($bianco, .9) 25%, rgba($bianco, .9) 75%, rgba($bianco, 0) 100%) !default;
+
+$sorting_arrow_size: 4px !default; //  false per eliminare la freccia
+
+
+/*
+  STRUTTURA del markup costruito da datatable e creaDatatable
+  (secondo le impostazioni in _datatables_config_bs4.js)
+
+  <div class="dt_container auto_dt">   // container creaDatatable
+
+    parametro dataTable.defaults.dom in _datatables_config_bs4.js :
+    ------------------------------------------------------------------
+    <div class="datatable-wrapper">
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="dataTables_length"> [Select record per pagina] </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="datatables-filter"> [Input filtro] </div>
+        </div>
+      </div>
+
+      <table class="..."> </table>
+      <div class="dataTables_processing"></div>
+
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="dataTables_info">
+            <small>Stai visualizzando le righe da 1 a 10 su un totale di 10 record trovati</small>
+            <small>(filtrati da 167 record)</small>
+          </div>
+        </div>
+        <div class="col-sm-7">
+          <div class="dataTables_paginate paging_simple_numbers">
+            <ul class="pagination">
+              <li class="paginate_button page-item active"><a href="#" class="page-link">1</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div> // end dataTables_wrapper
+
+  ----------------------
+  </div>
+
+*/
