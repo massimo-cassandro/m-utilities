@@ -3,7 +3,7 @@
 
 /*!@license
  * creaDatatable & autoDatatable
- * Massimo Cassandro 2016/2017
+ * Massimo Cassandro 2016-2020
  */
 
 //TODO ottimizzare valori di default differenziando creadt e autodt
