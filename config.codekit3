@@ -282,6 +282,25 @@
 		"oAP": "/build/ckeditor",
 		"oF": 0
 		},
+	"/js-modules/.eslintrc.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/js-modules/.eslintrc-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/js-modules/_date_in_sequenza.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js-modules/_date_in_sequenza-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/JS-utilities-2/js/__JSutils_init.js": {
 		"bF": 0,
 		"ft": 64,
