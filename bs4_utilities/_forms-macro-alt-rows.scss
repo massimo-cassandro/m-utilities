@@ -2,12 +2,8 @@
 // per macro aggiunta record dinamici
 
 //.macro-riga
-.macro-riga-alternate {
-  padding:.4rem;
+.macro-riga-label-alternate {
 
-  &:nth-child(even) {
-    background-color: $table-accent-bg;
-  }
   &:not(:first-child) {
     label, legend {
       display:none;
@@ -34,4 +30,14 @@
       }
     }
   }
+}
+
+.macro-riga-alternate {
+  padding:.4rem;
+
+  &:nth-child(even) {
+    background-color: $table-accent-bg;
+  }
+
+  @extend .macro-riga-label-alternate;
 }
