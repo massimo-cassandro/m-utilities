@@ -13,11 +13,11 @@ export  function inputDatetimeSupport() {
   'use strict';
 
   const  input = document.createElement('input'),
-    notADateValue = 'not-a-date';
+    notADateTimeValue = 'not-a-datetime';
   input.setAttribute('type','datetime-local');
-  input.setAttribute('value', notADateValue);
+  input.setAttribute('value', notADateTimeValue);
 
-  return (input.value !== notADateValue);
+  return (input.value !== notADateTimeValue);
 }
 
 export  function inputTimeSupport() {
@@ -25,7 +25,7 @@ export  function inputTimeSupport() {
 
   const  input = document.createElement('input'),
     notATimeValue = 'not-a-time';
-  input.setAttribute('type','datetime-local');
+  input.setAttribute('type','time');
   input.setAttribute('value', notATimeValue);
 
   return (input.value !== notATimeValue);
