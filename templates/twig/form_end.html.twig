@@ -20,6 +20,7 @@ personalizzazioni:
   delete_help         : "", // default
 
   show_edit_info      : true, //default
+  edit_info_new_line  : false,
   umTimestamp         : entity.umTimestamp,   //default
   umUtente            : entity.umUtente, //default
 } %}
@@ -45,12 +46,13 @@ personalizzazioni:
 
 
 {% set show_submit = show_submit is defined ? show_submit : true %}
+{% set edit_info_new_line = edit_info_new_line is defined ? edit_info_new_line : false %}
 {% set submit_button_id = submit_button_id is defined? submit_button_id|trim : '' %}
 {% set submit_name = submit_name is defined? submit_name|trim : '' %}
 {% set submit_class = submit_class is defined? submit_class : '' %}
 
-<div class="row">
-  <div class="col-md-6 text-center text-md-left">
+{%- if not edit_info_new_line %}<div class="row">{% endif -%}
+  <div class="{%- if not edit_info_new_line %}col-md-6 {% endif -%} text-center text-md-left">
     {%- if show_submit -%}
       <div class="form-group">
         <button type="submit"
@@ -68,7 +70,7 @@ personalizzazioni:
   {% set umUtente = umUtente is defined? umUtente : entity.umUtente %}
 
   {%- if entity.id|default() and  show_edit_info -%}
-    <div class="form-edit-info col-md-6 text-center text-md-right mt-2 mt-md-0">
+    <div class="{%- if not edit_info_new_line %}col-md-6 mt-md-0 {% endif -%} form-edit-info text-center text-md-right mt-2">
       <span class="mr-1">{% include '@includes/icone.html.twig' with { id: 'orologio', class: 'icona' } %}</span>
       {{ umTimestamp|localizeddate('medium', 'none', app.request.locale) }}
       <small>{{ umTimestamp|date('H:i') }}</small>
@@ -79,4 +81,4 @@ personalizzazioni:
 
     </div>
   {%- endif -%}
-</div>
+{%- if not edit_info_new_line %}</div>{%- endif -%}
