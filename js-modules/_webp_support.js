@@ -1,17 +1,17 @@
-//* eslint no-console: 0, no-unused-vars: 0, no-empty:  0 */
-
 // webp support detection
 // https://github.com/Modernizr/Modernizr/blob/master/feature-detects/img/webp.js
 // https://gist.github.com/jakearchibald/6c43d5c454bc8f48f83d8471f45698fa
 // https://davidwalsh.name/detect-webp
 
-(function() {
+export  function webpSupport() {
   'use strict';
 
   var webpData = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=',
-    setWebpSupport = function (esito) {
-    //console.log('webp support: ' + esito);
+    setWebpSupport = esito => {
+      //console.log('webp support: ' + esito);
       document.documentElement.classList.add(esito? 'webp' : 'no-webp');
+
+      return esito;
     };
 
   try {
@@ -30,5 +30,4 @@
   } catch(e) { //throw "error"
     setWebpSupport(false);
   }
-
-})();
+}
