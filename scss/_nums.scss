@@ -1,0 +1,10 @@
+.lining-nums {
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: "lnum", "pnum";
+}
+
+.tabular-nums {
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum","tnum";
+}
+
