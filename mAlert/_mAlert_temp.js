@@ -175,48 +175,51 @@ const mAlert = function(params = {}) {
       </div>
     </div>`;
 
-  let timeoutID = null, autoclose = false, confirm_result = null;
-
-  $(modal).modal({
-    keyboard: params.modal_keyboard,
-    backdrop: params.modal_backdrop,
-    show:true
-  })
-    .on('shown.bs.modal', function () {
-      let _modal = $(this);
-      $('.modal-footer button', _modal).eq(0).focus();
-
-      if( params.timer ) {
-        timeoutID = window.setTimeout( function() {
-          autoclose = true;
-          _modal.modal('hide');
-        }, params.timer);
-      }
-      if(params.type === 'confirm') {
-        if(!params.callback || typeof params.callback !== 'function') {
-          console.error('mAlert[confirm]: `params.callback` non definito o non corretto!') // eslint-disable-line
-        }
-        //OK
-        $('.modal-footer button.mAlert-ok', _modal).click(function() {
-          params.callback(true);
-        });
-        //Cancel
-        $('.modal-footer button.mAlert-cancel', _modal).click(function() {
-          params.callback(false);
-        });
-      }
-
+  let timeoutID = null, autoclose = false;
+  new Promise(function(resolve) {
+    $(modal).modal({
+      keyboard: params.modal_keyboard,
+      backdrop: params.modal_backdrop,
+      show:true
     })
-    .on('hide.bs.modal', function () {
+      .on('shown.bs.modal', function () {
+        let _modal = $(this);
+        $('.modal-footer button', _modal).eq(0).focus();
+
+        if( params.timer ) {
+          timeoutID = window.setTimeout( function() {
+            autoclose = true;
+            _modal.modal('hide');
+          }, params.timer);
+        }
+
+        if(params.type === 'confirm') {
+          if(!params.callback || typeof params.callback !== 'function') {
+            console.error('mAlert[confirm]: `params.callback` non definito o non corretto!') // eslint-disable-line
+          }
+          //OK
+          $('.modal-footer button.mAlert-ok', _modal).click(function() {
+            resolve(true);
+          });
+          //Cancel
+          $('.modal-footer button.mAlert-cancel', _modal).click(function() {
+            resolve(false);
+          });
+        }
+      });
+
+  }).then(function(result) {
+    $(modal).on('hide.bs.modal', function () {
       if ( timeoutID && !autoclose) {
         window.clearTimeout(timeoutID);
       }
-
-      // if(params.callback && typeof params.callback === 'function') {
-      //   params.callback(confirm_result);
-      // }
+      if(params.callback && typeof params.callback === 'function') {
+        return params.callback(result);
+      }
     })
-    .on('hidden.bs.modal', function () {
-      $(this).remove();
-    });
+      .on('hidden.bs.modal', function () {
+        $(this).remove();
+      });
+  });
+
 };
