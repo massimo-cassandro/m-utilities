@@ -57,6 +57,17 @@
 		"oAP": "/.npmignore",
 		"oF": 0
 		},
+	"/adobe-cc/sort-ai-artboards-icons.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/adobe-cc/sort-ai-artboards-icons-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/auto-datatables/_js/_datatable_crea_dt.js": {
 		"bF": 0,
 		"ft": 64,
@@ -265,17 +276,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/cc/sort-ai-artboards-icons.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/cc/sort-ai-artboards-icons-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/ckeditor": {
 		"ft": 65536,
 		"oA": 1,
@@ -319,6 +319,17 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/js-modules/_input_date_support-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js-modules/_lazyloading TODO.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js-modules/_lazyloading TODO-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -677,14 +688,6 @@
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
-		},
-	"/package.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/package-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
 		},
 	"/README.md": {
 		"cB": 0,
