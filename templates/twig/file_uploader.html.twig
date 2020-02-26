@@ -146,7 +146,7 @@
       {% if data.filetype == 'img' %}
       	{% set this_value = this_value|merge({
           url   : viewer ~ '/' ~ dati_file.id ~ '?bb=900x800',
-          src   : viewer ~ '/' ~ dati_file.id ~ '?bb' ~ minia_bb,
+          src   : viewer ~ '/' ~ dati_file.id ~ '?bb=' ~ minia_bb,
           wi    : dati_file.width,
           he    : dati_file.height
         }) %}
@@ -175,10 +175,8 @@
       {% set this_markup %}
         {% if row.std_markup.type|lower in ['text', 'url', 'number', 'email'] %}
 
-          <div class="form-group">
-            <label for="{{ row.value_key }}-{{ '{{idx}}' }}" {{- ' ' -}}
-              {%- if 'required' in  row.std_markup.attrs|default() %} class="required"{% endif -%}
-            >{{ row.std_markup.label }}</label>
+          <div class="form-group {%- if 'required' in  row.std_markup.attrs|default() %} required{% endif -%}">
+            <label for="{{ row.value_key }}-{{ '{{idx}}' }}">{{ row.std_markup.label }}</label>
             <input type="{{ row.std_markup.type|lower }}" {{- ' ' -}}
               class="form-control form-control-sm {{- row.std_markup.extra_class|default()? ' ' ~ row.std_markup.extra_class : '' -}}" {{- ' ' -}}
               id="{{ row.value_key }}-{{ '{{idx}}' }}"  {{- ' ' -}}
