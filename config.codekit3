@@ -1421,14 +1421,6 @@
 		"oAP": "/templates/twig/imgs.html.twig",
 		"oF": 0
 		},
-	"/templates/twig/imgs_viewer.html.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/templates/twig/imgs_viewer.html.twig",
-		"oF": 0
-		},
 	"/templates/twig/meta.html.twig": {
 		"cB": 0,
 		"ft": 8192,
