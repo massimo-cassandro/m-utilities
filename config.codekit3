@@ -689,6 +689,14 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/README.md": {
 		"cB": 0,
 		"cS": 0,
@@ -1419,6 +1427,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/templates/twig/imgs.html.twig",
+		"oF": 0
+		},
+	"/templates/twig/imgs_viewer.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/twig/imgs_viewer.html.twig",
 		"oF": 0
 		},
 	"/templates/twig/meta.html.twig": {
