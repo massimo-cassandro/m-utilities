@@ -85,16 +85,16 @@
   {%- for breakpoint, params in sizes -%}
 
     {% set this_img = params.img is defined and params.img is not null ? params.img : img %}
-    {% set img_base_url = viewer ~ this_img.id %}
+    {% set img_base_url = viewer ~ this_img.id|default() %}
     {% set last_breakpoint = loop.last %}
 
     {%- for formato in (local? ['default'] : ['webp', 'default']) -%}
       {%- set f_param = [] -%}
 
-      {%- if formato == 'webp' and not ('webp' in this_img.mime) -%}
+      {%- if formato == 'webp' and not ('webp' in this_img.mime|default()) -%}
         {%- set f_param = ['f=webp'] -%}
 
-      {%- elseif formato == 'default' and ('webp' in this_img.mime) -%}
+      {%- elseif formato == 'default' and ('webp' in this_img.mime|default()) -%}
         {%- set f_param = ['f=pjpeg'] -%}
 
       {%- endif -%}
@@ -107,7 +107,7 @@
           {% set this_width =  (params.w is defined and params.w is not null)?  params.w * densita : null %}
           {% set this_height = (params.h is defined and params.h is not null)?  params.h * densita : null %}
 
-          {% if densita == 1 or (this_width and this_img.width >= this_width) or (this_height and this_img.height >= this_height) %}
+          {% if densita == 1 or (this_width and this_img.width|default() >= this_width) or (this_height and this_img.height|default() >= this_height) %}
             {%- set this_size_params = [] -%}
 
             {%- if this_width is not null or this_height is not null  -%}
