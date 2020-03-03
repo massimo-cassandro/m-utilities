@@ -19,6 +19,8 @@
     lazyload: true,        // facoltativo, default true,
     attrs: null,           // attributi extra facoltativi
     viewer: '/viewer/',                      // <== default
+    viewer_extra_params: [],                 // <== array di eventuali parametri da aggiungere al viewer
+                                             //     es: ['ext=1', 'alpha=1']
     densita_max: 2,                          // <== default
     test: app.environment != 'prod',         // <== default
     local: app.request.port in [8888, 8890]  // <== default
@@ -71,6 +73,7 @@
 {% set viewer = viewer is defined ? viewer : '/viewer/' %}
 {% set local = local is defined ? local : app.request.port in [8888, 8890] %}
 {% set test = local or (test is defined ? test : app.environment != 'prod') %}
+{% set viewer_extra_params = viewer_extra_params is defined ? viewer_extra_params : [] %}
 
 {%- if lazyload and not ('lazyload' in class) -%}
 	{% set class = class ~ ' lazyload' %}
@@ -117,7 +120,7 @@
               {%- set this_size_params = this_size_params|merge(['fd=1']) -%}
             {%- endif -%}
 
-            {%- set tot_params = []|merge(this_size_params)|merge(f_param) -%}
+            {%- set tot_params = []|merge(viewer_extra_params)|merge(this_size_params)|merge(f_param) -%}
             {% set std_img = img_base_url ~ (tot_params|length? '?' ~ tot_params|join('&') : '') %}
 
             {% set srcset = srcset|merge([std_img ~ (densita > 1 ? " #{densita}x" : '')]) %}

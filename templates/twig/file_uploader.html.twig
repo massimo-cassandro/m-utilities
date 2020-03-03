@@ -80,6 +80,9 @@
     // file multipli
     values: (entity.files and entity.files|length)? entity.files : null
 
+    // array di eventuali parametri da aggiungere al viewer es: ['ext=1', 'alpha=1']
+    viewer_extra_params: [],
+
     ,extra_fields: [
       {
         value_key : 'field_key',
@@ -113,6 +116,7 @@
 {% set viewer = viewer is defined ? viewer : '/viewer' %}
 {% set extra_fields = (extra_fields is defined and extra_fields is iterable and extra_fields|length)? extra_fields : null %}
 {% set  values = (values is defined and values is iterable and values|length)? values : null %}
+{% set viewer_extra_params = viewer_extra_params is defined ? '&' ~ viewer_extra_params|join('&') : '' %}
 
 {% set parsed_values = null %}
 {% if values|default() is not null and values|length %}
@@ -145,8 +149,8 @@
 
       {% if data.filetype == 'img' %}
       	{% set this_value = this_value|merge({
-          url   : viewer ~ '/' ~ dati_file.id ~ '?bb=900x800',
-          src   : viewer ~ '/' ~ dati_file.id ~ '?bb=' ~ minia_bb,
+          url   : viewer ~ '/' ~ dati_file.id ~ '?bb=900x800' ~ viewer_extra_params,
+          src   : viewer ~ '/' ~ dati_file.id ~ '?bb=' ~ minia_bb ~ viewer_extra_params,
           wi    : dati_file.width,
           he    : dati_file.height
         }) %}
