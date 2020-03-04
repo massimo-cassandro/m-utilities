@@ -229,6 +229,10 @@
                     row[i] = row[i].replace(/(<([^>]+)>)/ig, '');
                     break;
 
+                  case 'bool':
+                    row[i] = Boolean(+row[i]);
+                    break;
+
                   case 'num_format0':
                     if(!isNaN(row[i]) && row[i] !== null) {
                       row[i] = JSutils.number_format(row[i],0);
