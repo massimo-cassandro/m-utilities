@@ -1381,6 +1381,14 @@
 		"oAP": "/templates/twig/fancybox_cdn.html.twig",
 		"oF": 0
 		},
+	"/templates/twig/file_uploader.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/twig/file_uploader.html.twig",
+		"oF": 0
+		},
 	"/templates/twig/flash_messages.html.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -1421,12 +1429,12 @@
 		"oAP": "/templates/twig/imgs.html.twig",
 		"oF": 0
 		},
-	"/templates/twig/meta.html.twig": {
+	"/templates/twig/imgs_viewer.html.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/templates/twig/meta.html.twig",
+		"oAP": "/templates/twig/imgs_viewer.html.twig",
 		"oF": 0
 		},
 	"/templates/twig_ext.txt": {
