@@ -68,6 +68,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/auto-datatables/_js/_datatable_crea_dt.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/auto-datatables/_js/_datatable_crea_dt-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/auto-datatables/_js/_datatables_config_base.js": {
 		"bF": 0,
 		"ft": 64,
@@ -677,6 +688,30 @@
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
+		},
+	"/mGallery/_mGallery.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/mGallery/_mGallery-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/mGallery/_mGallery.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/mGallery/_mGallery.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"/package.json": {
 		"ft": 524288,
@@ -1424,6 +1459,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/templates/twig/imgs_viewer.html.twig",
+		"oF": 0
+		},
+	"/templates/twig/meta.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/twig/meta.html.twig",
 		"oF": 0
 		},
 	"/templates/twig_ext.txt": {
