@@ -1,28 +1,42 @@
 $mGallery-sizes: (
   xs: (
     container-width: 100%,
+    container-height: 300px,
+    on-img-width: 70%
+  ),
+  sm: (
+    container-width: 100%,
+    container-height: 400px,
+    on-img-width: 70%
+  ),
+  md: (
+    container-width: 100%,
+    container-height: 550px,
+    on-img-width: 75%
+  ),
+  lg: (
+    container-width: 100%,
     container-height: 600px,
-    on-img-width: 100%,
-    on-img-height:400px,
+    on-img-width: 800px
   )
 )!default;
 
 $mGallery-img-bg-color: #000!default;
-$mGallery-next-img-opacity: .85!default;
-$mGallery-next-img-scale: 80%!default;
-$mGallery-next-img-filter: grayscale(40%)!default;
+$mGallery-next-img-opacity: .75!default;
+$mGallery-next-img-scale: .8!default; // dimensione delle immagini non attive rispetto a quella selezionata
+$mGallery-next-img-filter: grayscale(70%)!default;
 
 .mGallery {
 
   position: relative;
   overflow: hidden;
   z-index:0;
-  width: map-deep-get($mGallery-sizes, xs, container-width);
-  height: map-deep-get($mGallery-sizes, xs, container-height);
+  // width: map-deep-get($mGallery-sizes, xs, container-width);
+  // height: map-deep-get($mGallery-sizes, xs, container-height);
 
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content:flex-start;
   align-items:center;
@@ -34,52 +48,37 @@ $mGallery-next-img-filter: grayscale(40%)!default;
     display: inline-block;
     background-color: $mGallery-img-bg-color;
     flex:0;
-    width:$mGallery-next-img-scale;
     position: absolute;
     z-index:1;
 
-    // altezza della porzione di immagine sopra e sotto quella attiva
-    $portion-height: (map-deep-get($mGallery-sizes, xs, container-height) - map-deep-get($mGallery-sizes, xs, on-img-height)) / 2;
+    // $next-img-width: map-deep-get($mGallery-sizes, xs, container-width) * $mGallery-next-img-scale;
+    // width:$next-img-width;
+    // height: map-deep-get($mGallery-sizes, xs, container-height) * $mGallery-next-img-scale;
+    transform: none;
 
-    &:not(.mgallery-on) {
-      top: 0;
-      transform: translateY( calc(-100% + #{$portion-height}) );
+    transition: all .3s ease-in-out;
 
-      $mask: linear-gradient(to top, #000, transparent $portion-height);
-      @supports (-webkit-mask-image: $mask) {
-        -webkit-mask-image: $mask;
-      }
-      @supports (-o-mask-image: $mask) {
-        -o-mask-image: $mask;
-      }
-      @supports (mask-image: $mask) {
-        mask-image: $mask;
-      }
-    }
+    // elementi a sx
+    // &:not(.mgallery-on) {
+    //   left: calc( -#{$next-img-width} +
+    //     ((#{map-deep-get($mGallery-sizes, xs, container-width)} - #{map-deep-get($mGallery-sizes, xs, on-img-width)}) / 2)
+    //   );
+    // }
 
-    &.mgallery-on ~ div {
-      top: map-deep-get($mGallery-sizes, xs, container-height) - $portion-height;
-      transform: none;
-
-      $mask: linear-gradient(to bottom, #000, transparent $portion-height);
-
-      @supports (-webkit-mask-image: $mask) {
-        -webkit-mask-image: $mask;
-      }
-      @supports (-o-mask-image: $mask) {
-        -o-mask-image: $mask;
-      }
-      @supports (mask-image: $mask) {
-        mask-image: $mask;
-      }
-    }
+    // // elementi a dx
+    // &.mgallery-on ~ div {
+    //   left: calc( #{map-deep-get($mGallery-sizes, xs, on-img-width)} +
+    //     ((#{map-deep-get($mGallery-sizes, xs, container-width)} - #{map-deep-get($mGallery-sizes, xs, on-img-width)}) / 2)
+    //   );
+    // }
 
     &.mgallery-on + div {
       z-index:2;
     }
 
     &.mgallery-on {
-      width:100%;
+      // width: map-deep-get($mGallery-sizes, xs, on-img-width);
+
       z-index:3;
 
       top:50%;
@@ -89,8 +88,6 @@ $mGallery-next-img-filter: grayscale(40%)!default;
 
       img {
         opacity:1;
-        width: map-deep-get($mGallery-sizes, xs, on-img-width);
-        height: map-deep-get($mGallery-sizes, xs, on-img-height);
         filter:none;
       }
     }
@@ -101,8 +98,47 @@ $mGallery-next-img-filter: grayscale(40%)!default;
     object-fit: cover;
     object-position: center;
     display: inline-block;
+    width:100%;
+    height: 100%;
     opacity:$mGallery-next-img-opacity;
     filter:$mGallery-next-img-filter;
     cursor: pointer;
   }
-}
+
+  @each $brkpt, $sizes in $mGallery-sizes {
+    @include media-breakpoint-up(#{$brkpt}) {
+
+      width: map-deep-get($mGallery-sizes, $brkpt, container-width);
+      height: map-deep-get($mGallery-sizes, $brkpt, container-height);
+
+      > div {
+
+        $next-img-width: map-deep-get($mGallery-sizes, $brkpt, container-width) * $mGallery-next-img-scale;
+        width:$next-img-width;
+        height: map-deep-get($mGallery-sizes, $brkpt, container-height) * $mGallery-next-img-scale;
+
+        // elementi a sx
+        &:not(.mgallery-on) {
+          left: calc( -#{$next-img-width} +
+            ((#{map-deep-get($mGallery-sizes, $brkpt, container-width)} - #{map-deep-get($mGallery-sizes, $brkpt, on-img-width)}) / 2)
+          );
+        }
+
+        // elementi a dx
+        &.mgallery-on ~ div {
+          left: calc( #{map-deep-get($mGallery-sizes, $brkpt, on-img-width)} +
+            ((#{map-deep-get($mGallery-sizes, $brkpt, container-width)} - #{map-deep-get($mGallery-sizes, $brkpt, on-img-width)}) / 2)
+          );
+        }
+
+        &.mgallery-on {
+          width: map-deep-get($mGallery-sizes, $brkpt, on-img-width);
+          height: 100%;
+
+        }
+      }
+    }
+  } // end @media
+} // end @each
+
+
