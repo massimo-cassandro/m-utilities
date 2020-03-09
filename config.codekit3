@@ -700,6 +700,19 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/mGallery/_mGallery.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/mGallery/_mGallery.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/package.json": {
 		"ft": 524288,
 		"oA": 1,
