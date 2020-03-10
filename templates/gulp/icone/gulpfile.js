@@ -50,7 +50,7 @@ var icon_list = [], // lista delle icone, utilizzate per il file demo
     , { removeStyleElement: true }
     , { removeUselessDefs: true }
     , { removeEmptyContainers: true }
-    , { removeAttrs: { attrs: ['(fill|stroke|class|style)', 'svg:(width|height)'] } }
+    , { removeAttrs: { attrs: ['(fill|stroke|class|style|data.*)', 'svg:(width|height)'] } }
     //, { addAttributesToSVGElement: {attribute: "#{$attr}"}}
   ]
 ;
