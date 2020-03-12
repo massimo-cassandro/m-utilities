@@ -5,7 +5,10 @@ tag meta e opengraph (i valori indicati sono quelli di default)
   robots: true,
 
   title: contenuti.meta.XXXX_title,
-  descr: contenuti.meta.XXXX_description ,
+  descr: contenuti.meta.XXXX_description,
+
+  og: true, <== se false i meta ogp non vengono generati
+
   og_title: contenuti.meta.XXXX_og_title | contenuti.meta.XXXX_title,
   og_description: contenuti.meta.XXXX_og_description | contenuti.meta.XXXX_description | null,
 
@@ -20,6 +23,7 @@ tag meta e opengraph (i valori indicati sono quelli di default)
 } -%}
 #}
 {% set robots = robots is defined? robots : true %}
+{% set og = og is defined? og : true %}
 {% set viewer = viewer is defined? viewer : path('inner_viewer') %}
 
 <title>
@@ -28,38 +32,42 @@ tag meta e opengraph (i valori indicati sono quelli di default)
   {{- app.environment != 'prod'? ' [TEST]' : '' -}}
 </title>
 
-{%- if contenuti.globali.og_site_name|default() -%}
-  <meta property="og:site_name" content="{{ contenuti.globali.og_site_name }}">
-{%- endif -%}
-
-<meta property="og:url" content="{{ app.request.uri }}">
-<meta property="og:type" content="website">
-{%- if title|default() or og_title|default() -%}
-  <meta property="og:title" content="{{ og_title|default()? og_title : title }}">
-{%- endif -%}
 {%- if descr|default() -%}
   <meta name="description" content="{{ descr }}">
 {%- endif -%}
-{%- if descr|default() or og_description|default() -%}
-  <meta property="og:description" content="{{ og_description|default()? og_description : descr }}">
-{%- endif -%}
 
-{%- if og_img is defined and og_img.src|default() -%}
-  <meta property="og:image" content="{{ og_img.src }}">
-  {%- if og_img.w|default() -%}
-    <meta property="og:image:width" content="{{ og_img.w }}">
+{%- if og -%}
+  {%- if contenuti.globali.og_site_name|default() -%}
+    <meta property="og:site_name" content="{{ contenuti.globali.og_site_name }}">
   {%- endif -%}
-  {%- if og_img.h|default() -%}
-    <meta property="og:image:height" content="{{ og_img.h }}">
+
+  <meta property="og:url" content="{{ app.request.uri }}">
+  <meta property="og:type" content="website">
+  {%- if title|default() or og_title|default() -%}
+    <meta property="og:title" content="{{ og_title|default()? og_title : title }}">
   {%- endif -%}
-{%- elseif viewer_og_img|default() and viewer_og_img.desktop_img|default() -%}
-  <meta property="og:image" content="{{ absolute_url(viewer ~ '/' ~ viewer_og_img.desktop_img.id) }}">
-  <meta property="og:image:width" content="{{ viewer_og_img.desktop_img.width }}">
-  <meta property="og:image:height" content="{{ viewer_og_img.desktop_img.height }}">
-{%- else -%}
-  <meta property="og:image" content="{{ absolute_url(asset('/assets/og/esa_og.png')) }}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="1200">
+
+  {%- if descr|default() or og_description|default() -%}
+    <meta property="og:description" content="{{ og_description|default()? og_description : descr }}">
+  {%- endif -%}
+
+  {%- if og_img is defined and og_img.src|default() -%}
+    <meta property="og:image" content="{{ og_img.src }}">
+    {%- if og_img.w|default() -%}
+      <meta property="og:image:width" content="{{ og_img.w }}">
+    {%- endif -%}
+    {%- if og_img.h|default() -%}
+      <meta property="og:image:height" content="{{ og_img.h }}">
+    {%- endif -%}
+  {%- elseif viewer_og_img|default() and viewer_og_img.desktop_img|default() -%}
+    <meta property="og:image" content="{{ absolute_url(viewer ~ '/' ~ viewer_og_img.desktop_img.id) }}">
+    <meta property="og:image:width" content="{{ viewer_og_img.desktop_img.width }}">
+    <meta property="og:image:height" content="{{ viewer_og_img.desktop_img.height }}">
+  {%- else -%}
+    <meta property="og:image" content="{{ absolute_url(asset('/assets/og/esa_og.png')) }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+  {%- endif -%}
 {%- endif -%}
 
 {%- if app.environment == 'prod' and robots -%}
