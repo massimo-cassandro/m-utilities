@@ -151,6 +151,9 @@ const mAlert = function(params = {}) {
   if( params.type === undefined ) {
     params.type = 'success';
   }
+  if( params.type === 'notice' ) { // symfony default
+    params.type = 'info';
+  }
   params.type = params.type.toLowerCase();
   if(params.type === 'confirm') {
     params.timer = null;
