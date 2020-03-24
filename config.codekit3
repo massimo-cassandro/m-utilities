@@ -68,17 +68,6 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/auto-datatables/_js/_datatable_crea_dt.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/auto-datatables/_js/_datatable_crea_dt-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/auto-datatables/_js/_datatables_config_base.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1465,14 +1454,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/templates/twig/icone.html.twig",
-		"oF": 0
-		},
-	"/templates/twig/imgs.html.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/templates/twig/imgs.html.twig",
 		"oF": 0
 		},
 	"/templates/twig/imgs_viewer.html.twig": {

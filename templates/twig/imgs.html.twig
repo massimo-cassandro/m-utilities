@@ -1,4 +1,11 @@
 {#
+
+NB: DA SISTEMARE
+
+#}
+
+
+{#
 tag picture per immagini
 
 {%- include '@includes/imgs.html.twig' with {
@@ -47,10 +54,6 @@ Richiede la definizione delle variabili media query nel template main
 {% set basename = basename is defined ? basename : false %}
 {% set class = class is defined ? class : '' %}
 {% set lazyload = lazyload is defined ? lazyload : true %}
-
-{%- if lazyload and not('lazyload' in class) -%}
-  {% set class = class ~ ' lazyload' %}
-{%- endif -%}
 
 {%- if basename != false -%}
   {% set files = [] %}
@@ -102,6 +105,7 @@ Richiede la definizione delle variabili media query nel template main
           srcset="{{ baseurl -}}{{- item.src|slice(1)|join(', ' ~ baseurl) -}}
             {{- endurl -}}"
         {%- endif -%}
+        {%- if lazyload %} loading="lazy"{%- endif -%}
         {{- ' ' -}} alt="{{ alt|raw }}"
         {%- if class %} class="{{ class }}"{% endif %}>
     {%- endif -%}

@@ -267,6 +267,14 @@
                     }
                     break;
 
+                  case 'sf_datetime':
+                    if(row[i] !== null) {
+                      row[i] = moment(row[i].date).format(dt_options.formats.moment_datetime);
+                    } else {
+                      row[i] = '&mdash;';
+                    }
+                    break;
+
                   case 'date':
                     if(row[i] !== null) {
                       row[i] = moment(row[i]).format(dt_options.formats.moment_date);
