@@ -81,7 +81,10 @@ export  function datetimeModalFallback(datetime_field) {
   datetime_field.insertAdjacentHTML('beforebegin',
     '<div class="input-group mb-3">'+
       `<span id="${fallback_container_id}" class="form-control bg-transparent text-white text-truncate text-monospace font-weight-normal">` +
-        new Date(datetime_field.value).toLocaleString('it-IT', localeOptions) +
+      (datetime_field.value?
+        new Date(datetime_field.value).toLocaleString('it-IT', localeOptions) :
+        '&mdash;'
+      ) +
       '</span>'+
       '<div class="input-group-append">'+
         `<button id="${fallback_trigger_id}" class="btn btn-secondary" type="button">Imposta</button>`+
