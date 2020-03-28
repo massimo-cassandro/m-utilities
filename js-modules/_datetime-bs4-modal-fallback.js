@@ -40,9 +40,9 @@ export  function datetimeModalFallback(datetime_field) {
       hour:'2-digit',
       minute:'2-digit'
     },
-    step_attr = datetime_field.step || null,
-    min_attr = datetime_field.min || null,
-    max_attr = datetime_field.max || null,
+
+    min_attr = null,
+    max_attr = null,
 
     fallback_container_id = datetime_field.id + '-dt-fallback-show',
     fallback_trigger_id = datetime_field.id + '-dt-fallback-trigger';
@@ -84,46 +84,48 @@ export  function datetimeModalFallback(datetime_field) {
 
   const modalDatetimeFallback = document.querySelector('#modalDatetimeFallback'),
     date_fallback_field = modalDatetimeFallback.querySelector('#modal-datetime-fallback-date'),
-    time_fallback_field = modalDatetimeFallback.querySelector('#modal-datetime-fallback-time'),
+    time_fallback_field = modalDatetimeFallback.querySelector('#modal-datetime-fallback-time');
 
-    datetime_split = datetime_str => {
-      let [d,t] = datetime_str.split( datetime_str.indexOf('T') !== -1 ? 'T' : ' ' );
-      let [h,m] = t.split(':')
-      if(+h !== 0 || +m !== 0) {
-        t = String('00' + Number(h)).slice(-2) + ':' + String('00' + Number(m)).slice(-2);
-      } else {
-        t = null;
-      }
-
-      return [d,t];
-    };
-
-  if(step_attr) {
-    time_fallback_field.step = step_attr;
+  if(datetime_field.step) {
+    time_fallback_field.step = datetime_field.step;
   }
-  if(min_attr) {
-    let [d,t] = datetime_split(min_attr);
-    date_fallback_field.min = d;
-    if(t) {
-      time_fallback_field.min = t;
+  if(datetime_field.min) {
+    try {
+      min_attr = new Date(datetime_field.min);
+      date_fallback_field.min =
+        min_attr.getFullYear() + '-' +
+        String('00', min_attr.getMonth() + 1).slice(-2) + '-' +
+        String('00', min_attr.getDate()).slice(-2);
+
+    } catch(e) {
+      alert('Il valore dell\'attributo “min” non è corretto');
     }
   }
-  if(max_attr) {
-    let [d,t] = datetime_split(max_attr);
-    date_fallback_field.max = d;
-    if(t) {
-      time_fallback_field.max = t;
+  if(datetime_field.max) {
+    try {
+      max_attr = new Date(datetime_field.max);
+      date_fallback_field.max =
+      max_attr.getFullYear() + '-' +
+        String('00', max_attr.getMonth() + 1).slice(-2) + '-' +
+        String('00', max_attr.getDate()).slice(-2);
+
+    } catch(e) {
+      alert('Il valore dell\'attributo “max” non è corretto');
     }
   }
+
+  let fallback_date = (datetime_field.value?
+      new Date(datetime_field.value).toLocaleString('it-IT', localeOptions) :
+      '&mdash;'
+    );
 
   datetime_field.insertAdjacentHTML('beforebegin',
     '<div class="input-group mb-3">'+
       `<span id="${fallback_container_id}" ` +
-        'class="form-control bg-transparent text-white text-truncate text-monospace font-weight-normal">' +
-      (datetime_field.value?
-        new Date(datetime_field.value).toLocaleString('it-IT', localeOptions) :
-        '&mdash;'
-      ) +
+        'class="form-control bg-transparent text-white text-truncate text-monospace font-weight-normal" ' +
+        `title="${fallback_date}"` +
+      '>' +
+        fallback_date +
       '</span>'+
       '<div class="input-group-append">'+
         `<button id="${fallback_trigger_id}" class="btn btn-secondary" type="button">Imposta</button>`+
@@ -148,36 +150,77 @@ export  function datetimeModalFallback(datetime_field) {
   }, false);
 
 
+
   modalDatetimeFallback.querySelector('#modal-datetime-set-date').addEventListener('click', () => {
 
-    let alert = modalDatetimeFallback.querySelector('.alert');
-    if(alert) {
+    let alert = modalDatetimeFallback.querySelector('.alert'),
+      nuova_data = date_fallback_field.value + 'T' + time_fallback_field.value;
+
+      if(alert) {
       alert.remove();
     }
 
-    if(!date_fallback_field.value || !time_fallback_field.value) {
+    const add_alert = mes => {
       modalDatetimeFallback.querySelector('#modalDatetimeFallbackInfo')
         .insertAdjacentHTML('beforebegin',
           '<div class="alert alert-dismissible alert-danger" role="alert">'+
           '<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Chiudi</span></button>'+
-          'Devi inserire data e ora'+
+          mes +
           '</div>'
         );
+    };
+
+
+    if(!date_fallback_field.value || !time_fallback_field.value) {
+
+      add_alert('Devi inserire data e ora');
 
     } else if( modalDatetimeFallback.querySelectorAll(':invalid').length ) {
 
       modalDatetimeFallback.querySelector(':invalid').reportValidity();
 
     } else {
-      let nuova_data = date_fallback_field.value + 'T' + time_fallback_field.value;
+      let err_min = false, err_max = false,
+        new_date = new Date(nuova_data);
 
-      datetime_field.value = nuova_data;
+      if( min_attr && new_date.getTime() < min_attr.getTime() ) {
+        err_min = true;
+      }
 
-      document.getElementById(fallback_container_id)
-        .innerText = new Date(nuova_data).toLocaleString('it-IT', localeOptions);
 
-      $('#modalDatetimeFallback').modal('hide');
+      if(max_attr && new_date.getTime() > max_attr.getTime() ) {
+        err_max = true;
+      }
 
+      if(err_min || err_max) {
+        let err_mes;
+        if(err_min && err_max) {
+          err_mes = 'Data e ora devono essere comprese tra ' +
+            '<strong class="text-nowrap">' + min_attr.toLocaleString('it-IT', localeOptions) + '</strong>' +
+            ' e ' +
+            '<strong class="text-nowrap">' + max_attr.toLocaleString('it-IT', localeOptions) + '</strong>';
+
+        } else if(err_min) {
+          err_mes = 'Data e ora non devono essere precedenti a ' +
+            '<strong class="text-nowrap">' + min_attr.toLocaleString('it-IT', localeOptions) + '</strong>';
+
+        } else if(err_max) {
+          err_mes = 'Data e ora non devono essere successive a ' +
+            '<strong class="text-nowrap">' + max_attr.toLocaleString('it-IT', localeOptions) + '</strong>';
+        }
+
+        add_alert(err_mes);
+
+      } else {
+
+        datetime_field.value = nuova_data;
+        fallback_date = new Date(nuova_data).toLocaleString('it-IT', localeOptions);
+
+        document.getElementById(fallback_container_id).innerText = fallback_date;
+        document.getElementById(fallback_container_id).title = fallback_date;
+
+        $('#modalDatetimeFallback').modal('hide');
+      }
     }
   }, false)
 

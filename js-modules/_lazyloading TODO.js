@@ -1,3 +1,8 @@
+/*
+  attualmente inutilizzato
+  -> vanilla lazyload
+*/
+
 // https://addyosmani.com/blog/lazy-loading/
 export default function () {
   'use strict';
