@@ -281,6 +281,13 @@
                     }
                     break;
 
+                  case 'strips_truncate_100':
+                    if(row[i]) {
+                      row[i] = row[i].replace(/(<([^>]+)>)/ig, '');
+                      row[i] = row[i].substring(0, 100) + (row[i].length > 100? '…' : '');
+                    }
+                    break;
+
                   /*
                     elabora la stringa fornita, separandola usando la stringa `separator`
                     crea per ogni elemento una stringa definita dal
