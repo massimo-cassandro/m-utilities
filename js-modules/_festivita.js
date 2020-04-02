@@ -1,8 +1,15 @@
-export default function (datesOnly = true, anno) {
+export default function (returnMode = 'datesOnly', anno) {
 
   /*
     restituisce un array con i giorni di festività per l'anno indicato
     le date sono in formato iso YYYY-MM-DD
+
+    in base al parametro `returnMode` restituisce:
+
+      - returnMode == 'datesOnly' => un array di date
+      - returnMode == 'fullArray' => un array di array, nella forma [[ data, descrizione ], ...]
+      - returnMode == 'obj' => un oggetto, nella forma { data: descrizione, ...}
+
     ogni elemento dell'array è a sua forma
       [ data, descrizione ]
   */
@@ -72,11 +79,21 @@ export default function (datesOnly = true, anno) {
     return 0;
   });
 
-  if(!datesOnly) {
+
+  if (returnMode === 'fullArray') {
+    return festivi;
+
+  } else if (returnMode === 'obj') {
+    let obj = {};
+    festivi.forEach(item => {
+      obj[item[0]] = item[1];
+    });
+    return obj;
+
+  } else { //returnMode === 'datesOnly')
 
     return festivi.map(item => {
       return item[0];
     });
   }
-  return festivi;
 }

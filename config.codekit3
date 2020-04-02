@@ -68,6 +68,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/auto-datatables/_js/_datatable_crea_dt.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/auto-datatables/_js/_datatable_crea_dt-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/auto-datatables/_js/_datatables_config_base.js": {
 		"bF": 0,
 		"ft": 64,
@@ -297,17 +308,6 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/js-modules/_datetime-bs4-modal-fallback-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/js-modules/_festivita.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js-modules/_festivita-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
