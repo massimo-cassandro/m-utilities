@@ -43,12 +43,18 @@ tag meta e opengraph (i valori indicati sono quelli di default)
 
   <meta property="og:url" content="{{ app.request.uri }}">
   <meta property="og:type" content="website">
+
+  <meta property="twitter:url" content="{{ app.request.uri }}">
+  <meta property="twitter:card" content="summary_large_image">
+
   {%- if title|default() or og_title|default() -%}
     <meta property="og:title" content="{{ og_title|default()? og_title : title }}">
+    <meta property="twitter:title" content="{{ og_title|default()? og_title : title }}">
   {%- endif -%}
 
   {%- if descr|default() or og_description|default() -%}
     <meta property="og:description" content="{{ og_description|default()? og_description : descr }}">
+    <meta property="twitter:description" content="{{ og_description|default()? og_description : descr }}">
   {%- endif -%}
 
   {%- if og_img is defined and og_img.src|default() -%}
@@ -59,16 +65,23 @@ tag meta e opengraph (i valori indicati sono quelli di default)
     {%- if og_img.h|default() -%}
       <meta property="og:image:height" content="{{ og_img.h }}">
     {%- endif -%}
-  {%- elseif viewer_og_img|default() and viewer_og_img.desktop_img|default() -%}
-    <meta property="og:image" content="{{ absolute_url(viewer ~ '/' ~ viewer_og_img.desktop_img.id) }}">
-    <meta property="og:image:width" content="{{ viewer_og_img.desktop_img.width }}">
-    <meta property="og:image:height" content="{{ viewer_og_img.desktop_img.height }}">
+  {%- elseif viewer_og_img|default()  -%}
+    <meta property="og:image" content="{{ absolute_url(viewer ~ '/' ~ viewer_og_img.id) }}">
+    <meta property="og:image:type" content="{{ viewer_og_img.mime }}">
+    <meta property="og:image:width" content="{{ viewer_og_img.width }}">
+    <meta property="og:image:height" content="{{ viewer_og_img.height }}">
+    <meta property="twitter:image" content="{{ absolute_url(viewer ~ '/' ~ viewer_og_img.id) }}">
+
   {%- else -%}
     <meta property="og:image" content="{{ absolute_url(asset('/assets/og/esa_og.png')) }}">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="1200">
+    <meta property="twitter:image" content="{{ absolute_url(asset('/assets/og/esa_og.png')) }}">
+
   {%- endif -%}
 {%- endif -%}
+
 
 {%- if app.environment == 'prod' and robots -%}
   <meta name="robots" content="index,follow">
