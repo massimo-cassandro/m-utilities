@@ -7,7 +7,7 @@
 		"uuidString": "991010E9-FF8C-468F-8FFE-D2E604494AA0"
 		}
 	],
-"creatorBuild": "31934",
+"creatorBuild": "32001",
 "files": {
 	"/.editorconfig": {
 		"cB": 0,
@@ -289,28 +289,6 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
-		},
-	"/js-modules/_date_in_sequenza.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js-modules/_date_in_sequenza-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/js-modules/_datetime-bs4-modal-fallback.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js-modules/_datetime-bs4-modal-fallback-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
 		},
 	"/js-modules/_festivita.js": {
 		"bF": 0,
@@ -2195,6 +2173,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"grouped-accessor-pairs": {
+			"active": 0,
+			"optionString": "'anyOrder'"
+			},
 		"guard-for-in": {
 			"active": 0,
 			"optionString": ""
@@ -2371,6 +2353,10 @@
 			"active": 1,
 			"optionString": "{'checkLoops': true}"
 			},
+		"no-constructor-return": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-continue": {
 			"active": 0,
 			"optionString": ""
@@ -2396,6 +2382,10 @@
 			"optionString": ""
 			},
 		"no-dupe-class-members": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-dupe-else-if": {
 			"active": 1,
 			"optionString": ""
 			},
@@ -2699,6 +2689,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-setter-return": {
+			"active": 1,
+			"optionString": ""
+			},
 		"no-shadow": {
 			"active": 0,
 			"optionString": "{'builtinGlobals': false, 'hoist': 'functions', 'allow': []}"
@@ -2902,6 +2896,10 @@
 		"prefer-destructuring": {
 			"active": 0,
 			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
+			},
+		"prefer-exponentiation-operator": {
+			"active": 0,
+			"optionString": ""
 			},
 		"prefer-named-capture-group": {
 			"active": 0,

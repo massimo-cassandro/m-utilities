@@ -11,6 +11,7 @@ export default function () {
   */
   document.querySelectorAll('input[type="date"][data-min]').forEach(el => {
     let campo_correlato = document.querySelector('#' + el.dataset.min);
+    el.setAttribute('min', campo_correlato.value);
     campo_correlato.addEventListener('change', () => {
       el.setAttribute('min', campo_correlato.value);
     });
@@ -18,6 +19,7 @@ export default function () {
 
   document.querySelectorAll('input[type="date"][data-max]').forEach(el => {
     let campo_correlato = document.querySelector('#' + el.dataset.max);
+    el.setAttribute('max', campo_correlato.value);
     campo_correlato.addEventListener('change', () => {
       el.setAttribute('max', campo_correlato.value);
     });
