@@ -55,7 +55,7 @@
 
     html.classList.add('fonts-loading');
 
-    if (Cookies.get('fontsloaded') === google_fonts_array.join('|')) {
+    if (Cookies.get('gfontsloaded') === google_fonts_array.join('|')) {
       html.classList.remove('fonts-loading');
       html.classList.add('fonts-loaded');
       font_cookie = true;
@@ -63,14 +63,14 @@
 
     Promise.all(font_observers).then(function () {
 
-      Cookies.set('fontsloaded', google_fonts_array.join('|'), { expires: 1 });
+      Cookies.set('gfontsloaded', google_fonts_array.join('|'), { expires: 1 });
 
       html.classList.remove('fonts-loading');
       html.classList.add('fonts-loaded');
     }).catch(function () {
       if (!font_cookie) {
 
-        Cookies.remove('fontsloaded');
+        Cookies.remove('gfontsloaded');
 
         html.classList.remove('fonts-loading');
         html.classList.add('fonts-failed');

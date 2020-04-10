@@ -282,80 +282,6 @@
 		"oAP": "/build/ckeditor",
 		"oF": 0
 		},
-	"/js-modules/.eslintrc.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/js-modules/.eslintrc-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/js-modules/_festivita.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js-modules/_festivita-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/js-modules/_ie_check.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js-modules/_ie_check-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/js-modules/_imgs_viewer.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js-modules/_imgs_viewer-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/js-modules/_input_date_support.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js-modules/_input_date_support-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/js-modules/_lazyloading TODO.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js-modules/_lazyloading TODO-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/js-modules/_webp_support.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js-modules/_webp_support-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/JS-utilities-2/js/__JSutils_init.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1521,6 +1447,39 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/utilities/_date_in_sequenza.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/utilities/_date_in_sequenza-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/utilities/_datetime-bs4-modal-fallback.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/utilities/_datetime-bs4-modal-fallback-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/utilities/_festivita.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/utilities/_festivita-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/utilities/_ffo_auto_google_fonts_loader.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1556,6 +1515,50 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/utilities/_ie_check.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/utilities/_ie_check-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/utilities/_imgs_viewer.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/utilities/_imgs_viewer-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/utilities/_input_date_support.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/utilities/_input_date_support-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/utilities/_lazyloading TODO.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/utilities/_lazyloading TODO-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/utilities/_svg4everybody.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1563,6 +1566,17 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/utilities/_svg4everybody-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/utilities/_webp_support.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/utilities/_webp_support-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0

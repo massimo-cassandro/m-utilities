@@ -12,7 +12,10 @@
       md: {w:  991, h: xxx, img: null},
       sm: {w:  767, h: xxx, img: null},
       xs: {w:  575, h: xxx, img: null},
-      xs_sm: {...}, md_xl: {...}  // eventuali breakpoint particolari da gestire in _main.html.twig
+      lg_xl
+      md_xl
+      md_lg
+      xs_sm
     },
     lqip: null,            // low quality img placeholder
     class: 'img-fluid',
@@ -37,9 +40,9 @@
 
     sizes = {                  <== array breakpoint -> bounding box (NB: da xl a xs)
       xl: {w: 1000, h: null},  <== equivale a `bb=1000x`
-      lg: {},                  <== eventuali breakpoints non necessari devono essere omessi
+      lg: {},                  <== equivale a utilizzare l'img di default
       md: {w: null, h: null},  <== equivale a omettere il parametro bb
-      sm: {...},
+      sm: false,               <== il breakpoint viene saltato, equivale a ometterlo del tutto
       xs: {w: 700, h: null. img: img_obj} <== img specifica per questo breakpoint in sostituzione di quella base
     }
 
@@ -84,72 +87,74 @@
 <picture>
   {%- for breakpoint, params in sizes -%}
 
-    {% set this_img = params.img is defined and params.img is not null ? params.img : img %}
-    {% set img_base_url = viewer ~ this_img.id|default() %}
-    {% set last_breakpoint = loop.last %}
+    {%- if params != false -%}
+      {% set this_img = params.img is defined and params.img is not null ? params.img : img %}
+      {% set img_base_url = viewer ~ this_img.id|default() %}
+      {% set last_breakpoint = loop.last %}
 
-    {%- for formato in (local? ['default'] : ['webp', 'default']) -%}
-      {%- set f_param = [] -%}
+      {%- for formato in (local? ['default'] : ['webp', 'default']) -%}
+        {%- set f_param = [] -%}
 
-      {%- if formato == 'webp' and not ('webp' in this_img.mime|default()) -%}
-        {%- set f_param = ['f=webp'] -%}
+        {%- if formato == 'webp' and not ('webp' in this_img.mime|default()) -%}
+          {%- set f_param = ['f=webp'] -%}
 
-      {%- elseif formato == 'default' and ('webp' in this_img.mime|default()) -%}
-        {%- set f_param = ['f=pjpeg'] -%}
-
-      {%- endif -%}
-
-      {% set srcset = [] %}
-
-      {% for densita in 1..densita_max  %}
-        {%- if not (breakpoint in ['xl','lg','md', 'md_xl', 'md_lg', 'lg_xl'] and densita == 3 ) -%}
-
-          {% set this_width =  (params.w is defined and params.w is not null)?  params.w * densita : null %}
-          {% set this_height = (params.h is defined and params.h is not null)?  params.h * densita : null %}
-
-          {% if densita == 1 or (this_width and this_img.width|default() >= this_width) or (this_height and this_img.height|default() >= this_height) %}
-            {%- set this_size_params = [] -%}
-
-            {%- if this_width is not null or this_height is not null  -%}
-              {%- set this_size_params = this_size_params|merge([
-                'bb=' ~ (this_width? this_width : '') ~ 'x' ~ (this_height? this_height : '')
-              ]) -%}
-            {%- endif -%}
-
-            {%- if this_width is not null and this_height is not null  -%}
-              {%- set this_size_params = this_size_params|merge(['fd=1']) -%}
-            {%- endif -%}
-
-            {%- set tot_params = []|merge(viewer_extra_params)|merge(this_size_params)|merge(f_param) -%}
-            {% set std_img = img_base_url ~ (tot_params|length? '?' ~ tot_params|join('&') : '') %}
-
-            {% set srcset = srcset|merge([std_img ~ (densita > 1 ? " #{densita}x" : '')]) %}
-          {% endif %} {# end densita == 1 or (this_width and this_width >= this_img.width ... #}
+        {%- elseif formato == 'default' and ('webp' in this_img.mime|default()) -%}
+          {%- set f_param = ['f=pjpeg'] -%}
 
         {%- endif -%}
-      {%- endfor -%} {# end for densita #}
 
-      {%- if last_breakpoint and formato == 'default' -%}
+        {% set srcset = [] %}
 
-        <img
-          {{- (lazyload and (not lqip))? ' data-' : ' ' -}} src="{{ lqip? lqip : srcset[0] }}"
-          {{- lazyload? ' data-' : ' ' -}} srcset="{{ srcset|slice(1)|join(', ') }}"
-          {{- lazyload? ' loading="lazy"' : '' -}}
-          {{- ' ' -}} alt="{{ alt }}"
-          {%- if class %} class="{{ class }}"{% endif %}
-          {%- if test %} data-brkp="{{ breakpoint }}"{% endif -%}
-          {%- if attrs|default() %} {{ attrs|raw }}{% endif -%}>
+        {% for densita in 1..densita_max  %}
+          {%- if not (breakpoint in ['xl','lg','md', 'md_xl', 'md_lg', 'lg_xl'] and densita == 3 ) -%}
 
-      {%- else -%}
+            {% set this_width =  (params.w is defined and params.w is not null)?  params.w * densita : null %}
+            {% set this_height = (params.h is defined and params.h is not null)?  params.h * densita : null %}
 
-        <source
-          {{- lazyload? ' data-' : ' ' -}} srcset="{{ srcset|join(', ') }}"
-          {%- if formato == 'webp' %} type="image/webp"{% endif -%}
-          {{- ' ' -}} media="{{ mediaqueries[breakpoint] }}"
-          {%- if test %} data-brkp="{{ breakpoint }}"{% endif %}>
+            {% if densita == 1 or (this_width and this_img.width|default() >= this_width) or (this_height and this_img.height|default() >= this_height) %}
+              {%- set this_size_params = [] -%}
 
-      {%- endif -%}
+              {%- if this_width is not null or this_height is not null  -%}
+                {%- set this_size_params = this_size_params|merge([
+                  'bb=' ~ (this_width? this_width : '') ~ 'x' ~ (this_height? this_height : '')
+                ]) -%}
+              {%- endif -%}
 
-  	{%- endfor -%} {# end for breakpoint #}
-  {%- endfor -%}
+              {%- if this_width is not null and this_height is not null  -%}
+                {%- set this_size_params = this_size_params|merge(['fd=1']) -%}
+              {%- endif -%}
+
+              {%- set tot_params = []|merge(viewer_extra_params)|merge(this_size_params)|merge(f_param) -%}
+              {% set std_img = img_base_url ~ (tot_params|length? '?' ~ tot_params|join('&') : '') %}
+
+              {% set srcset = srcset|merge([std_img ~ (densita > 1 ? " #{densita}x" : '')]) %}
+            {% endif %} {# end densita == 1 or (this_width and this_width >= this_img.width ... #}
+
+          {%- endif -%}
+        {%- endfor -%} {# end for densita #}
+
+        {%- if last_breakpoint and formato == 'default' -%}
+
+          <img
+            {{- (lazyload and (not lqip))? ' data-' : ' ' -}} src="{{ lqip? lqip : srcset[0] }}"
+            {{- lazyload? ' data-' : ' ' -}} srcset="{{ srcset|slice(1)|join(', ') }}"
+            {{- lazyload? ' loading="lazy"' : '' -}}
+            {{- ' ' -}} alt="{{ alt }}"
+            {%- if class %} class="{{ class }}"{% endif %}
+            {%- if test %} data-brkp="{{ breakpoint }}"{% endif -%}
+            {%- if attrs|default() %} {{ attrs|raw }}{% endif -%}>
+
+        {%- else -%}
+
+          <source
+            {{- lazyload? ' data-' : ' ' -}} srcset="{{ srcset|join(', ') }}"
+            {%- if formato == 'webp' %} type="image/webp"{% endif -%}
+            {{- ' ' -}} media="{{ mediaqueries[breakpoint] }}"
+            {%- if test %} data-brkp="{{ breakpoint }}"{% endif %}>
+
+        {%- endif -%}
+
+      {%- endfor -%} {# end for formato #}
+    {%- endif -%}
+  {%- endfor -%} {# end for breakpoint #}
 </picture>
