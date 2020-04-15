@@ -73,3 +73,12 @@ figure {
   }
 
 }
+
+
+// sticky toolbar
+.ck.ck-editor__top {
+  position: sticky!important;
+  top:0!important;
+  border-bottom:1px solid #666!important;
+}
+
