@@ -37,7 +37,8 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
-
+import Indent from '@ckeditor/ckeditor5-indent/src/indent';
+import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -45,6 +46,8 @@ export default class ClassicEditor extends ClassicEditorBase {}
 ClassicEditor.builtinPlugins = [
   Essentials,
   Alignment,
+  Indent,
+  IndentBlock,
   //UploadAdapter,
   mUploadAdapter,
   Autoformat,
