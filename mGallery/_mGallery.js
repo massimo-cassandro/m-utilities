@@ -1,4 +1,4 @@
-export  function mGallery () {
+export function mGallery () {
   'use strict';
 
   const active_element_class = 'mgallery-on',

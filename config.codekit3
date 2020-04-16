@@ -68,40 +68,7 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/auto-datatables/_js/_datatable_crea_dt.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/auto-datatables/_js/_datatable_crea_dt-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/auto-datatables/_js/_datatables_config_base.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/auto-datatables/_js/_datatables_config_base-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/auto-datatables/_js/_datatables_config_bs4.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/auto-datatables/_js/_datatables_config_bs4-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/auto-datatables/_scss/_creaDatatable.scss": {
+	"/bs4-utilities/_bs4_alerts.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -109,12 +76,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/auto-datatables/_scss/_creaDatatable.css",
+		"oAP": "/bs4-utilities/_bs4_alerts.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/auto-datatables/_scss/_datatable_controls_bs4.scss": {
+	"/bs4-utilities/_bs4_responsive_columns.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -122,12 +89,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/auto-datatables/_scss/_datatable_controls_bs4.css",
+		"oAP": "/bs4-utilities/_bs4_responsive_columns.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/auto-datatables/_scss/_datatable_paging_bs4.scss": {
+	"/bs4-utilities/_forms-macro-alt-rows.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -135,143 +102,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/auto-datatables/_scss/_datatable_paging_bs4.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/auto-datatables/_scss/_datatable_processing.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/auto-datatables/_scss/_datatable_processing.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/auto-datatables/_scss/_datatable_responsive.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/auto-datatables/_scss/_datatable_responsive.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/auto-datatables/_scss/_datatable_sorting_bs4.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/auto-datatables/_scss/_datatable_sorting_bs4.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/auto-datatables/_scss/_datatable_table_bs4.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/auto-datatables/_scss/_datatable_table_bs4.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/auto-datatables/_scss/_datatable_vars.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/auto-datatables/_scss/_datatable_vars.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/auto-datatables/_scss/_datatables_classes.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/auto-datatables/_scss/_datatables_classes.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/auto-datatables/README.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/auto-datatables/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"/bs4_utilities/_bs4_alerts.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/bs4_utilities/_bs4_alerts.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/bs4_utilities/_bs4_responsive_columns.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/bs4_utilities/_bs4_responsive_columns.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/bs4_utilities/_forms-macro-alt-rows.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/bs4_utilities/_forms-macro-alt-rows.css",
+		"oAP": "/bs4-utilities/_forms-macro-alt-rows.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -282,128 +113,665 @@
 		"oAP": "/build/ckeditor",
 		"oF": 0
 		},
-	"/JS-utilities-2/js/__JSutils_init.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/JS-utilities-2/js/__JSutils_init-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
+	"/config-templates/-npmrc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config-templates/-npmrc",
+		"oF": 0
 		},
-	"/JS-utilities-2/js/_getQueryVariables.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/JS-utilities-2/js/_getQueryVariables-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
+	"/config-templates/editorconfig.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config-templates/editorconfig.txt",
+		"oF": 0
 		},
-	"/JS-utilities-2/JSutils.js": {
+	"/config-templates/eslintrc (moduli).json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/config-templates/eslintrc (moduli)-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/config-templates/eslintrc.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/config-templates/eslintrc-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/config-templates/gitignore.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config-templates/gitignore.txt",
+		"oF": 0
+		},
+	"/config-templates/htaccess.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config-templates/htaccess.txt",
+		"oF": 0
+		},
+	"/config-templates/std_package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/config-templates/std_package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/config-templates/twig_ext.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config-templates/twig_ext.txt",
+		"oF": 0
+		},
+	"/gulp-templates/favicons/Favicon Generator for all platforms- iOS, Android, PC-Mac....webloc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gulp-templates/favicons/Favicon Generator for all platforms- iOS, Android, PC-Mac....webloc",
+		"oF": 0
+		},
+	"/gulp-templates/favicons/gulpfile_favicon.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/JS-utilities-2/JSutils-min.js",
+		"oAP": "/gulp-templates/favicons/gulpfile_favicon-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/JSutils/_js_utility.OLD.js": {
+	"/gulp-templates/gulp_make_docs.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/gulp-templates/gulp_make_docs-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/gulp-templates/gulpfile_email.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/gulp-templates/gulpfile_email-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/gulp-templates/icone/demo-icone.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gulp-templates/icone/demo-icone.html",
+		"oF": 0
+		},
+	"/gulp-templates/icone/gulpfile-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/gulp-templates/icone/gulpfile-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/gulp-templates/icone/gulpfile.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/gulp-templates/icone/gulpfile-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/gulp-templates/icone/icon_list.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/gulp-templates/icone/icon_list-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/gulp-templates/icone/svg_files/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gulp-templates/icone/svg_files/.gitkeep",
+		"oF": 0
+		},
+	"/js-utilities/_date-utilities.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/JSutils/_js_utility.OLD-min.js",
+		"oAP": "/js-utilities/_date-utilities-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/JSutils/_JSutils.js": {
+	"/js-utilities/_date_in_sequenza.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/JSutils/_JSutils-min.js",
+		"oAP": "/js-utilities/_date_in_sequenza-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/JSutils/moduli/_jsu_escapeHTML.js": {
+	"/js-utilities/_datetime-bs4-modal-fallback.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/JSutils/moduli/_jsu_escapeHTML-min.js",
+		"oAP": "/js-utilities/_datetime-bs4-modal-fallback-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/JSutils/moduli/_jsu_executeFunctionByName.js": {
+	"/js-utilities/_festivita.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/JSutils/moduli/_jsu_executeFunctionByName-min.js",
+		"oAP": "/js-utilities/_festivita-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/JSutils/moduli/_jsu_getQueryVariables.js": {
+	"/js-utilities/_ie_check.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/JSutils/moduli/_jsu_getQueryVariables-min.js",
+		"oAP": "/js-utilities/_ie_check-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/JSutils/moduli/_jsu_number_format.js": {
+	"/js-utilities/_imgs_viewer.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/JSutils/moduli/_jsu_number_format-min.js",
+		"oAP": "/js-utilities/_imgs_viewer-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/JSutils/moduli/_jsu_text_utilities.js": {
+	"/js-utilities/_input_date_support.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/JSutils/moduli/_jsu_text_utilities-min.js",
+		"oAP": "/js-utilities/_input_date_support-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/JSutils/moduli/_jsu_url_append.js": {
+	"/js-utilities/_webp_support.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/JSutils/moduli/_jsu_url_append-min.js",
+		"oAP": "/js-utilities/_webp_support-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/JSutils/README.md": {
+	"/legacy/_check_bs4_mq.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/_check_bs4_mq-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/_cookieconsent_std.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/_cookieconsent_std-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/_ffo_auto_google_fonts_loader.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/_ffo_auto_google_fonts_loader-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/_ffo_loader.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/_ffo_loader-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/_font_loader.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/_font_loader.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/_svg4everybody.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/_svg4everybody-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/js-scss-templates/_checkmq.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/js-scss-templates/_checkmq-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/js-scss-templates/_ckeditor.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/js-scss-templates/_ckeditor.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/js-scss-templates/_file_uploader.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/js-scss-templates/_file_uploader-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/js-scss-templates/_icone.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/js-scss-templates/_icone.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/js-scss-templates/_libs_datatable.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/js-scss-templates/_libs_datatable-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/js-scss-templates/_libs_datatable.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/js-scss-templates/_libs_datatable.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/js-scss-templates/_libs_fancybox.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/js-scss-templates/_libs_fancybox.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/js-scss-templates/_overlay.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/js-scss-templates/_overlay-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/js-scss-templates/_overlay.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/js-scss-templates/_overlay.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/js-scss-templates/_scroll_observer.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/js-scss-templates/_scroll_observer-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/js-scss-templates/external_libs.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/legacy/js-scss-templates/external_libs-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/JSutils/_js_utility.OLD.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/_js_utility.OLD-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/JSutils/_JSutils.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/_JSutils-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/JSutils/auto-datatables/_js/_datatable_crea_dt.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/auto-datatables/_js/_datatable_crea_dt-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/JSutils/auto-datatables/_js/_datatables_config_base.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/auto-datatables/_js/_datatables_config_base-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/JSutils/auto-datatables/_js/_datatables_config_bs4.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/auto-datatables/_js/_datatables_config_bs4-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/JSutils/auto-datatables/_scss/_creaDatatable.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/auto-datatables/_scss/_creaDatatable.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/JSutils/auto-datatables/_scss/_datatable_controls_bs4.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/auto-datatables/_scss/_datatable_controls_bs4.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/JSutils/auto-datatables/_scss/_datatable_paging_bs4.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/auto-datatables/_scss/_datatable_paging_bs4.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/JSutils/auto-datatables/_scss/_datatable_processing.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/auto-datatables/_scss/_datatable_processing.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/JSutils/auto-datatables/_scss/_datatable_responsive.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/auto-datatables/_scss/_datatable_responsive.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/JSutils/auto-datatables/_scss/_datatable_sorting_bs4.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/auto-datatables/_scss/_datatable_sorting_bs4.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/JSutils/auto-datatables/_scss/_datatable_table_bs4.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/auto-datatables/_scss/_datatable_table_bs4.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/JSutils/auto-datatables/_scss/_datatable_vars.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/auto-datatables/_scss/_datatable_vars.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/JSutils/auto-datatables/_scss/_datatables_classes.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/auto-datatables/_scss/_datatables_classes.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/JSutils/auto-datatables/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/auto-datatables/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/legacy/JSutils/mAccordion/_mAccordion_bs4.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/mAccordion/_mAccordion_bs4.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/JSutils/mAccordion/_mAccordion_wrapper_bs4.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/mAccordion/_mAccordion_wrapper_bs4.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/JSutils/mAccordion/README.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -413,7 +781,7 @@
 		"ft": 4096,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/JSutils/README.html",
+		"oAP": "/legacy/JSutils/mAccordion/README.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -421,6 +789,258 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"/legacy/JSutils/moduli/_jsu_escapeHTML.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/moduli/_jsu_escapeHTML-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/JSutils/moduli/_jsu_executeFunctionByName.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/moduli/_jsu_executeFunctionByName-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/JSutils/moduli/_jsu_getQueryVariables.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/moduli/_jsu_getQueryVariables-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/JSutils/moduli/_jsu_number_format.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/moduli/_jsu_number_format-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/JSutils/moduli/_jsu_text_utilities.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/moduli/_jsu_text_utilities-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/JSutils/moduli/_jsu_url_append.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/JSutils/moduli/_jsu_url_append-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/JSutils/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/legacy/JSutils/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/legacy/mAlert/_mAlert.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/mAlert/_mAlert-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/mAlert/_mAlert.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/mAlert/_mAlert.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/mAlert/_mAlert_temp.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/mAlert/_mAlert_temp-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/mAlert/demo/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/legacy/mAlert/demo/index.html",
+		"oF": 0
+		},
+	"/legacy/mAlert/demo/mAlert.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/legacy/mAlert/demo/mAlert-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/legacy/mAlert/demo/mAlert.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/legacy/mAlert/demo/mAlert.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/mAlert/marks.sketch": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/legacy/mAlert/marks.sketch",
+		"oF": 0
+		},
+	"/legacy/mAlert/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/legacy/mAlert/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/legacy/mAlert/svg/confirm.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/legacy/mAlert/svg/confirm.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/legacy/mAlert/svg/error.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/legacy/mAlert/svg/error.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/legacy/mAlert/svg/info.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/legacy/mAlert/svg/info.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/legacy/mAlert/svg/success.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/legacy/mAlert/svg/success.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/legacy/mAlert/svg/warning.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/legacy/mAlert/svg/warning.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/legacy/select2/_select2-bootstrap4.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/legacy/select2/_select2-bootstrap4.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/legacy/select2/_select2.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/select2/_select2-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"/LICENSE": {
 		"cB": 0,
@@ -437,194 +1057,6 @@
 		"oA": 0,
 		"oAP": "/m-utilities.code-workspace",
 		"oF": 0
-		},
-	"/mAccordion/_mAccordion_bs4.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/mAccordion/_mAccordion_bs4.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/mAccordion/_mAccordion_wrapper_bs4.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/mAccordion/_mAccordion_wrapper_bs4.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/mAccordion/README.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/mAccordion/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"/mAlert/_mAlert.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/mAlert/_mAlert-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/mAlert/_mAlert.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/mAlert/_mAlert.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/mAlert/_mAlert_temp.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/mAlert/_mAlert_temp-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/mAlert/demo/index.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/mAlert/demo/index.html",
-		"oF": 0
-		},
-	"/mAlert/demo/mAlert.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/mAlert/demo/mAlert-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/mAlert/demo/mAlert.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/mAlert/demo/mAlert.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/mAlert/marks.sketch": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/mAlert/marks.sketch",
-		"oF": 0
-		},
-	"/mAlert/README.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/mAlert/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"/mAlert/svg/confirm.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/mAlert/svg/confirm.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/mAlert/svg/error.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/mAlert/svg/error.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/mAlert/svg/info.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/mAlert/svg/info.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/mAlert/svg/success.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/mAlert/svg/success.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/mAlert/svg/warning.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/mAlert/svg/warning.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
 		},
 	"/mGallery/_mGallery.js": {
 		"bF": 0,
@@ -677,7 +1109,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/sass_utilities/_color_utilities.scss": {
+	"/scss-functions/_color_utilities.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -685,12 +1117,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/sass_utilities/_color_utilities.css",
+		"oAP": "/scss-functions/_color_utilities.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/sass_utilities/_map_deep_get.scss": {
+	"/scss-functions/_map_deep_get.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -698,12 +1130,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/sass_utilities/_map_deep_get.css",
+		"oAP": "/scss-functions/_map_deep_get.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/sass_utilities/_min_max_fix.scss": {
+	"/scss-functions/_min_max_fix.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -711,12 +1143,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/sass_utilities/_min_max_fix.css",
+		"oAP": "/scss-functions/_min_max_fix.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/sass_utilities/_px2rem.scss": {
+	"/scss-functions/_px2rem.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -724,12 +1156,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/sass_utilities/_px2rem.css",
+		"oAP": "/scss-functions/_px2rem.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/sass_utilities/_str_replace.scss": {
+	"/scss-functions/_str_replace.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -737,12 +1169,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/sass_utilities/_str_replace.css",
+		"oAP": "/scss-functions/_str_replace.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/sass_utilities/_svg_uri.scss": {
+	"/scss-functions/_svg_uri.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -750,12 +1182,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/sass_utilities/_svg_uri.css",
+		"oAP": "/scss-functions/_svg_uri.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/sass_utilities/_type_checking.scss": {
+	"/scss-functions/_type_checking.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -763,12 +1195,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/sass_utilities/_type_checking.css",
+		"oAP": "/scss-functions/_type_checking.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/sass_utilities/README.md": {
+	"/scss-functions/README.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -778,7 +1210,7 @@
 		"ft": 4096,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/sass_utilities/README.html",
+		"oAP": "/scss-functions/README.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -787,7 +1219,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/scss/_decimali.scss": {
+	"/scss-utilities/_decimali.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -795,12 +1227,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/scss/_decimali.css",
+		"oAP": "/scss-utilities/_decimali.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_euro.scss": {
+	"/scss-utilities/_euro.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -808,12 +1240,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/scss/_euro.css",
+		"oAP": "/scss-utilities/_euro.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_font-weights.scss": {
+	"/scss-utilities/_font-weights.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -821,12 +1253,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/scss/_font-weights.css",
+		"oAP": "/scss-utilities/_font-weights.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_nums.scss": {
+	"/scss-utilities/_nums.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -834,12 +1266,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/scss/_nums.css",
+		"oAP": "/scss-utilities/_nums.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_perc.scss": {
+	"/scss-utilities/_perc.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -847,34 +1279,10 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/scss/_perc.css",
+		"oAP": "/scss-utilities/_perc.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
-		},
-	"/select2/_select2-bootstrap4.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/select2/_select2-bootstrap4.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/select2/_select2.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/select2/_select2-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
 		},
 	"/spinners/_basic_spinner.scss": {
 		"aP": 0,
@@ -1060,526 +1468,145 @@
 		"sI": 0,
 		"sU": 0
 		},
-	"/templates/-npmrc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/templates/-npmrc",
-		"oF": 0
-		},
-	"/templates/editorconfig.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/templates/editorconfig.txt",
-		"oF": 0
-		},
-	"/templates/eslintrc (moduli).json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/templates/eslintrc (moduli)-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/templates/eslintrc.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/templates/eslintrc-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/templates/gitignore.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/templates/gitignore.txt",
-		"oF": 0
-		},
-	"/templates/gulp/favicons/Favicon Generator for all platforms- iOS, Android, PC-Mac....webloc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/templates/gulp/favicons/Favicon Generator for all platforms- iOS, Android, PC-Mac....webloc",
-		"oF": 0
-		},
-	"/templates/gulp/favicons/gulpfile_favicon.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/templates/gulp/favicons/gulpfile_favicon-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/templates/gulp/gulp_make_docs.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/templates/gulp/gulp_make_docs-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/templates/gulp/gulpfile_email.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/templates/gulp/gulpfile_email-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/templates/gulp/icone/demo-icone.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/templates/gulp/icone/demo-icone.html",
-		"oF": 0
-		},
-	"/templates/gulp/icone/gulpfile-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/templates/gulp/icone/gulpfile-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/templates/gulp/icone/gulpfile.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/templates/gulp/icone/gulpfile-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/templates/gulp/icone/icon_list.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/templates/gulp/icone/icon_list-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/templates/gulp/icone/svg_files/.gitkeep": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/templates/gulp/icone/svg_files/.gitkeep",
-		"oF": 0
-		},
-	"/templates/htaccess.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/templates/htaccess.txt",
-		"oF": 0
-		},
-	"/templates/js-scss/_checkmq.js": {
+	"/TODO/_lazyloading.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/templates/js-scss/_checkmq-min.js",
+		"oAP": "/TODO/_lazyloading-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/templates/js-scss/_ckeditor.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
+	"/TODO/consenso-cookie/_consenso_cookie.js": {
+		"bF": 0,
+		"ft": 64,
 		"ma": 0,
-		"oA": 1,
-		"oAP": "/templates/js-scss/_ckeditor.css",
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/TODO/consenso-cookie/_consenso_cookie-min.js",
 		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/TODO/consenso-cookie/LICENSE.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/TODO/consenso-cookie/LICENSE.html",
+		"oF": 0,
+		"oFM": 0,
 		"oS": 0,
-		"uL": 1
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
-	"/templates/js-scss/_file_uploader.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
+	"/TODO/consenso-cookie/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
 		"oA": 1,
-		"oAP": "/templates/js-scss/_file_uploader-min.js",
+		"oAP": "/TODO/consenso-cookie/README.html",
 		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/templates/js-scss/_icone.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/templates/js-scss/_icone.css",
-		"oF": 0,
+		"oFM": 0,
 		"oS": 0,
-		"uL": 1
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
-	"/templates/js-scss/_libs_datatable.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/templates/js-scss/_libs_datatable-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/templates/js-scss/_libs_datatable.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/templates/js-scss/_libs_datatable.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/templates/js-scss/_libs_fancybox.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/templates/js-scss/_libs_fancybox.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/templates/js-scss/_overlay.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/templates/js-scss/_overlay-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/templates/js-scss/_overlay.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/templates/js-scss/_overlay.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/templates/js-scss/_scroll_observer.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/templates/js-scss/_scroll_observer-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/templates/js-scss/external_libs.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/templates/js-scss/external_libs-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/templates/std_package.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/templates/std_package-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/templates/twig/_main.html.twig": {
+	"/twig-templates/_main.html.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/templates/twig/_main.html.twig",
+		"oAP": "/twig-templates/_main.html.twig",
 		"oF": 0
 		},
-	"/templates/twig/fancybox_cdn.html.twig": {
+	"/twig-templates/fancybox_cdn.html.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/templates/twig/fancybox_cdn.html.twig",
+		"oAP": "/twig-templates/fancybox_cdn.html.twig",
 		"oF": 0
 		},
-	"/templates/twig/file_uploader.html.twig": {
+	"/twig-templates/file_uploader.html.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/templates/twig/file_uploader.html.twig",
+		"oAP": "/twig-templates/file_uploader.html.twig",
 		"oF": 0
 		},
-	"/templates/twig/flash_messages.html.twig": {
+	"/twig-templates/flash_messages.html.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/templates/twig/flash_messages.html.twig",
+		"oAP": "/twig-templates/flash_messages.html.twig",
 		"oF": 0
 		},
-	"/templates/twig/form_end.html.twig": {
+	"/twig-templates/form_end.html.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/templates/twig/form_end.html.twig",
+		"oAP": "/twig-templates/form_end.html.twig",
 		"oF": 0
 		},
-	"/templates/twig/google_font_loader.html.twig": {
+	"/twig-templates/google_font_loader.html.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/templates/twig/google_font_loader.html.twig",
+		"oAP": "/twig-templates/google_font_loader.html.twig",
 		"oF": 0
 		},
-	"/templates/twig/icone.html.twig": {
+	"/twig-templates/icone.html.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/templates/twig/icone.html.twig",
+		"oAP": "/twig-templates/icone.html.twig",
 		"oF": 0
 		},
-	"/templates/twig/imgs.html.twig": {
+	"/twig-templates/imgs.html.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/templates/twig/imgs.html.twig",
+		"oAP": "/twig-templates/imgs.html.twig",
 		"oF": 0
 		},
-	"/templates/twig/imgs_viewer.html.twig": {
+	"/twig-templates/imgs_viewer.html.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/templates/twig/imgs_viewer.html.twig",
+		"oAP": "/twig-templates/imgs_viewer.html.twig",
 		"oF": 0
 		},
-	"/templates/twig/meta.html.twig": {
+	"/twig-templates/meta.html.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/templates/twig/meta.html.twig",
+		"oAP": "/twig-templates/meta.html.twig",
 		"oF": 0
-		},
-	"/templates/twig_ext.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/templates/twig_ext.txt",
-		"oF": 0
-		},
-	"/utilities/_check_bs4_mq.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/utilities/_check_bs4_mq-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/utilities/_cookieconsent_std.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/utilities/_cookieconsent_std-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/utilities/_date_in_sequenza.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/utilities/_date_in_sequenza-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/utilities/_datetime-bs4-modal-fallback.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/utilities/_datetime-bs4-modal-fallback-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/utilities/_festivita.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/utilities/_festivita-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/utilities/_ffo_auto_google_fonts_loader.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/utilities/_ffo_auto_google_fonts_loader-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/utilities/_ffo_loader.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/utilities/_ffo_loader-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/utilities/_font_loader.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/utilities/_font_loader.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/utilities/_ie_check.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/utilities/_ie_check-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/utilities/_imgs_viewer.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/utilities/_imgs_viewer-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/utilities/_input_date_support.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/utilities/_input_date_support-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/utilities/_lazyloading TODO.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/utilities/_lazyloading TODO-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/utilities/_svg4everybody.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/utilities/_svg4everybody-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/utilities/_webp_support.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/utilities/_webp_support-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
 		}
 	},
 "hooks": [

@@ -3,7 +3,7 @@
 // https://gist.github.com/jakearchibald/6c43d5c454bc8f48f83d8471f45698fa
 // https://davidwalsh.name/detect-webp
 
-export  function webpSupport() {
+export function webpSupport() {
   'use strict';
 
   var webpData = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=',
