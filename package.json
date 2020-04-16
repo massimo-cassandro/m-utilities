@@ -1,6 +1,6 @@
 {
   "name": "m-utilities",
-  "version": "1.10.0",
+  "version": "1.10.1",
   "description": "My collection of front-end development snippets & utilities",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
