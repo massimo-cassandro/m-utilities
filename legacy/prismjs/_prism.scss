@@ -1,0 +1,19 @@
+//@import '../../../prismjs/themes/prism';
+//@import '../../../prismjs/themes/prism-okaidia';
+@import '../../../prismjs/themes/prism-tomorrow';
+
+//plugins
+//@import '../../../prismjs/plugins/command-line/prism-command-line';
+@import '../../../prismjs/plugins/toolbar/prism-toolbar';
+@import '../../../prismjs/plugins/line-numbers/prism-line-numbers';
+@import '../../../prismjs/plugins/previewers/prism-previewers';
+//@import '../../../prismjs/plugins/line-highlight/prism-line-highlight';
+//@import '../../../prismjs/plugins/unescaped-markup/prism-unescaped-markup';
+
+
+// correzioni  bootstrap code
+
+pre code[class*="language-"] {
+  border:none;
+  padding:0;
+}

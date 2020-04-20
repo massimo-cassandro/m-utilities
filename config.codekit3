@@ -207,6 +207,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/gulp-templates/gulpfile-update-from-mUtilities.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/gulp-templates/gulpfile-update-from-mUtilities-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/gulp-templates/gulpfile_email.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1017,6 +1028,30 @@
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
+		},
+	"/legacy/prismjs/_prism.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/legacy/prismjs/_prism-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/prismjs/_prism.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/legacy/prismjs/_prism.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"/legacy/select2/_select2-bootstrap4.scss": {
 		"aP": 0,
