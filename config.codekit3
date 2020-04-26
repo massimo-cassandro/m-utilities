@@ -129,14 +129,6 @@
 		"oAP": "/config-templates/editorconfig.txt",
 		"oF": 0
 		},
-	"/config-templates/eslintrc (moduli).json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/config-templates/eslintrc (moduli)-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
 	"/config-templates/eslintrc.json": {
 		"ft": 524288,
 		"oA": 1,
