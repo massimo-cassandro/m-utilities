@@ -384,17 +384,6 @@
 		"oAP": "/gulp-templates/icone/svg_files/.gitkeep",
 		"oF": 0
 		},
-	"/js-utilities/_date-utilities.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js-utilities/_date-utilities-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/js-utilities/_date_in_sequenza.js": {
 		"bF": 0,
 		"ft": 64,
@@ -457,6 +446,17 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/js-utilities/_input_date_support-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js-utilities/_svg4everybody.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js-utilities/_svg4everybody-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
