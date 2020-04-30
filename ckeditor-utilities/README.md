@@ -1,10 +1,12 @@
 #CKEditor utilities
 
 includere i due file
-* `./_m-ckeditor-form-check.js`
-* `./_m-ckeditor-loader.js`
+* `./m-ckeditor-form-check.js`
+* `./m-ckeditor-loader.js`
 
-config (editare i eprcorsi secondo necessità):
+## configurazione
+
+(editare i percorsi secondo le impostazioni del progetto)
 
 ```javascript
 window.mUtilities = window.mUtilities || {};

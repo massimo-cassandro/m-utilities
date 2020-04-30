@@ -4,7 +4,7 @@
   FILE DA INCLUDERE per l'utilizzo di ckeditor
 */
 
-(function () {
+export default function () {
   'use strict';
 
   if(typeof window.mUtilities === 'undefined') {
@@ -144,4 +144,4 @@
 
   } // end if( editor_list.length
 
-})();
+}

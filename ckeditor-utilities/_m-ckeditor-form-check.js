@@ -4,26 +4,26 @@
   Controlli campi ckeditor
 */
 
-if(typeof window.mUtilities === 'undefined') {
-  window.mUtilities = {};
-}
-if(typeof window.mUtilities.ckeditor === 'undefined') {
-  window.mUtilities.ckeditor = {};
-}
-if(typeof window.mUtilities.ckeditor.requiredErrorMes === 'undefined') {
-  window.mUtilities.ckeditor.requiredErrorMes = requiredElement => {
-    return `L'elemento ${requiredElement} è obbligatorio`;
-  };
-}
-if(typeof window.mUtilities.ckeditor.alertUI === 'undefined') {
-  window.mUtilities.ckeditor.alertUI = mes => {
-    alert(mes);
-  };
-}
 
-
-(() => {
+export default function () {
   'use strict';
+
+  if(typeof window.mUtilities === 'undefined') {
+    window.mUtilities = {};
+  }
+  if(typeof window.mUtilities.ckeditor === 'undefined') {
+    window.mUtilities.ckeditor = {};
+  }
+  if(typeof window.mUtilities.ckeditor.requiredErrorMes === 'undefined') {
+    window.mUtilities.ckeditor.requiredErrorMes = requiredElement => {
+      return `L'elemento ${requiredElement} è obbligatorio`;
+    };
+  }
+  if(typeof window.mUtilities.ckeditor.alertUI === 'undefined') {
+    window.mUtilities.ckeditor.alertUI = mes => {
+      alert(mes);
+    };
+  }
 
   let editor_textareas = document.querySelectorAll('textarea.editor'),
     editors_required = document.querySelectorAll('textarea.editor[required]');
@@ -75,4 +75,4 @@ if(typeof window.mUtilities.ckeditor.alertUI === 'undefined') {
 
   });
 
-})();
+}
