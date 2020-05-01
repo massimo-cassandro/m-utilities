@@ -35,11 +35,18 @@ export const date_utilities = {
     // (che non deve quindi essere presente nella stringa)
 
     try {
-
+      iso_str = iso_str.trim();
       let now = new Date(),
         timeOffset = now.getTimezoneOffset();
 
-      if(iso_str.lenght === 10) { // solo data yyyy-mm-dd
+      if(iso_str.length < 10) { // data probabilmente con numeri a una cifra
+        let tmp = iso_str.split('-');
+        iso_str = tmp[0] + '-' +
+          ('00' + tmp[1]).slice(-2) + '-' +
+          ('00' + tmp[2]).slice(-2);
+      }
+
+      if(iso_str.length <= 10) { // data yyyy-mm-dd
         iso_str += 'T00:00:00';
       }
 
