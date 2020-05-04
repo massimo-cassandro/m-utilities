@@ -37,33 +37,33 @@ Scaricare i moduli necessari per la compilazione di CKEditor come indicato in <h
 
 > NB: far sempre riferimento al branch `stable`
 
-I moduli presenti nella versione attuale (18.0.0/apr 2020) sono:
+I moduli presenti nella versione attuale (19.0.0/apr 2020) sono:
 
 ```json
 "dependencies": {
     
-    "@ckeditor/ckeditor5-adapter-ckfinder": "^18.0.0",
-    "@ckeditor/ckeditor5-autoformat": "^18.0.0",
-    "@ckeditor/ckeditor5-basic-styles": "^18.0.0",
-    "@ckeditor/ckeditor5-block-quote": "^18.0.0",
-    "@ckeditor/ckeditor5-ckfinder": "^18.0.0",
-    "@ckeditor/ckeditor5-core": "^18.0.0",
-    "@ckeditor/ckeditor5-dev-utils": "^12.0.0",
-    "@ckeditor/ckeditor5-dev-webpack-plugin": "^8.0.0",
-    "@ckeditor/ckeditor5-easy-image": "^18.0.0",
-    "@ckeditor/ckeditor5-editor-classic": "^18.0.0",
-    "@ckeditor/ckeditor5-essentials": "^18.0.0",
-    "@ckeditor/ckeditor5-heading": "^18.0.0",
-    "@ckeditor/ckeditor5-image": "^18.0.0",
-    "@ckeditor/ckeditor5-indent": "^18.0.0",
-    "@ckeditor/ckeditor5-link": "^18.0.0",
-    "@ckeditor/ckeditor5-list": "^18.0.0",
-    "@ckeditor/ckeditor5-media-embed": "^18.0.0",
-    "@ckeditor/ckeditor5-paragraph": "^18.0.0",
-    "@ckeditor/ckeditor5-paste-from-office": "^18.0.0",
-    "@ckeditor/ckeditor5-table": "^18.0.0",
-    "@ckeditor/ckeditor5-typing": "^18.0.0",
-    "@ckeditor/ckeditor5-theme-lark": "^18.0.0",
+    "@ckeditor/ckeditor5-adapter-ckfinder": "^19.0.0",
+    "@ckeditor/ckeditor5-autoformat": "^19.0.0",
+    "@ckeditor/ckeditor5-basic-styles": "^19.0.0",
+    "@ckeditor/ckeditor5-block-quote": "^19.0.0",
+    "@ckeditor/ckeditor5-ckfinder": "^19.0.0",
+    "@ckeditor/ckeditor5-core": "^19.0.0",
+    "@ckeditor/ckeditor5-dev-utils": "^13.0.0",
+    "@ckeditor/ckeditor5-dev-webpack-plugin": "^9.0.0",
+    "@ckeditor/ckeditor5-easy-image": "^19.0.0",
+    "@ckeditor/ckeditor5-editor-classic": "^19.0.0",
+    "@ckeditor/ckeditor5-essentials": "^19.0.0",
+    "@ckeditor/ckeditor5-heading": "^19.0.0",
+    "@ckeditor/ckeditor5-image": "^19.0.0",
+    "@ckeditor/ckeditor5-indent": "^19.0.0",
+    "@ckeditor/ckeditor5-link": "^19.0.0",
+    "@ckeditor/ckeditor5-list": "^19.0.0",
+    "@ckeditor/ckeditor5-media-embed": "^19.0.0",
+    "@ckeditor/ckeditor5-paragraph": "^19.0.0",
+    "@ckeditor/ckeditor5-paste-from-office": "^19.0.0",
+    "@ckeditor/ckeditor5-table": "^19.0.0",
+    "@ckeditor/ckeditor5-typing": "^19.0.0",
+    "@ckeditor/ckeditor5-theme-lark": "^19.0.0",
     "eslint": "^5.5.0",
     "eslint-config-ckeditor5": "^2.0.0",
     "husky": "^1.3.1",
@@ -82,12 +82,9 @@ I moduli presenti nella versione attuale (18.0.0/apr 2020) sono:
 A questi moduli sono stati aggiunti: 
 
 * `ckeditor5-alignment` (vedi <https://ckeditor.com/docs/ckeditor5/latest/features/text-alignment.html>)
-* `CKEditor 5 block indent feature` (<https://ckeditor.com/docs/ckeditor5/latest/features/indent.html>)
-
 
 ```bash
-npm install --save @ckeditor/ckeditor5-alignment@latest
-npm install --save @ckeditor/ckeditor5-indent@latest
+npm install --save @ckeditor/ckeditor5-alignment
 ```
 
 Opzionali:
@@ -112,7 +109,7 @@ Una volta verificata la presenza di tutti i moduli, procedere con la configurazi
 
 > NB: specialmente nel caso di aggiornamento a nuove versioni, è altamente consigliabile rimuovere totalmente la vecchia cartella `node_modules` e il file `package-lock.json` prima di procedere con l'installazione. **È inoltre essenziale che le versioni delle varie dipendenze siano aggiornate, è consigliabile copiare per intero la lista delle dipendenze dal file `package.json` originale**
 
-> Verificare anche che il file `webpack.config.js` sia allineato con la versione della build a cui si fa riferimento (<https://github.com/ckeditor/ckeditor5-build-classic/blob/stable/webpack.config.js>)
+> Verificare anche che il file `webpack.config.js` sia allineato con la versione della build a cui si fa riferimento
 
 ## Creazione della build
 

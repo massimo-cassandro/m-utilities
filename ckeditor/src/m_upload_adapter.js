@@ -108,7 +108,7 @@ class UploadAdapter {
         return reject(`il file ${file.name} supera la dimensione massima ammessa (${allowed_size})`);
       }
 
-      if('demo' in response && response.demo) {
+      if(response && 'demo' in response && response.demo) {
         img_src = {
           default: response.demo
         };

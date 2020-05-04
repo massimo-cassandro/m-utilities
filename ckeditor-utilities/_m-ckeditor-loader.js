@@ -19,7 +19,7 @@ export default function () {
 
   window.mUtilities.ckeditor.cke_url = window.mUtilities.ckeditor.cke_url || (script_data.cke || '/assets/ckeditor-dist/m-ckeditor-min.js');
   window.mUtilities.ckeditor.upl_url = window.mUtilities.ckeditor.upl_url || (script_data.ckeUpl || '/ckeditor/file-uploader');
-  window.mUtilities.ckeditor.img_viewer = window.mUtilities.ckeditor.upl_url || (script_data.ckeImgViewer || '/viewer/');  // (NB: con slash finale)
+  window.mUtilities.ckeditor.img_viewer = window.mUtilities.ckeditor.img_viewer || (script_data.ckeImgViewer || '/viewer/');  // (NB: con slash finale)
 
 
   if (editor_list.length) {
