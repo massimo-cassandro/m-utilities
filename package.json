@@ -1,6 +1,6 @@
 {
   "name": "m-utilities",
-  "version": "1.11.0",
+  "version": "1.11.2",
   "description": "My collection of front-end development snippets & utilities",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,7 +24,9 @@
     "less",
     "html",
     "jQuery",
-    "twig"
+    "twig",
+    "font",
+    "Google Fonts"
   ],
   "bugs": {
     "url": "https://github.com/massimo-cassandro/m-utilities/issues"

@@ -1,6 +1,6 @@
 /*
  * Upload adapter per CKEditor 5
- * Massimo Cassandro - v. 1.1 - 2018/2020
+ * Massimo Cassandro - v. 1.1.1 - 2018/2020
  *
  * Refs:
  *  - https://ckeditor.com/docs/ckeditor5/latest/framework/guides/creating-simple-plugin.html
@@ -41,7 +41,7 @@ class UploadAdapter {
     this.textarea_element = textarea_element;
 
     // img viewer base path
-    this.imgViewer = imgViewer;
+    this.imgViewer = imgViewer + (/\/$/.test(imgViewer) ? '' : '/');
 
     //uploadMaxSize
     this.uploadMaxSize = uploadMaxSize;
@@ -108,7 +108,7 @@ class UploadAdapter {
         return reject(`il file ${file.name} supera la dimensione massima ammessa (${allowed_size})`);
       }
 
-      if(response.demo) {
+      if('demo' in response && response.demo) {
         img_src = {
           default: response.demo
         };

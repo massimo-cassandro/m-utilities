@@ -1,0 +1,56 @@
+// https://medium.com/@richardkall/avoid-flash-of-unstyled-text-using-css-transitions-f4b8f70da12f
+
+$font-loader-spinner-color: #000!default;
+
+.content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body {
+  background-image: none;
+}
+
+@keyframes font_loader_spinner {
+  to { transform: rotate(360deg); }
+}
+
+//assegnato via js
+.fonts-loading {
+
+  .content {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  body {
+    position: relative;
+    &::before {
+      content:'';
+      display: block;
+      margin:6rem auto 0;
+      width:120px;
+      height: 120px;
+      border-radius:50%;
+      border:10px solid $font-loader-spinner-color;
+      border-top-color:transparent;
+      animation: font_loader_spinner .75s linear infinite;
+    }
+  }
+}
+
+
+.fonts-loaded, .fonts-failed {
+  transition: transform .6s ease-in-out, opacity .4s ease-in-out;
+}
+
+
+.fonts-failed {
+  body {
+    font-size: $fallback-size;
+    font-weight: $fallback-weight;
+    font-family: $fallback-font;
+    word-spacing: 0.75px;
+    letter-spacing: 0.25px;
+  }
+}

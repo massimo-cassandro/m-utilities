@@ -384,6 +384,17 @@
 		"oAP": "/gulp-templates/icone/svg_files/.gitkeep",
 		"oF": 0
 		},
+	"/js-utilities/_date-utilities.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js-utilities/_date-utilities-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/js-utilities/_date_in_sequenza.js": {
 		"bF": 0,
 		"ft": 64,
@@ -413,6 +424,17 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/js-utilities/_festivita-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js-utilities/_fontfaceobserver-gfonts-auto-loader.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js-utilities/_fontfaceobserver-gfonts-auto-loader-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -457,6 +479,17 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/js-utilities/_svg4everybody-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js-utilities/_textarea-autosize.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js-utilities/_textarea-autosize-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -1395,6 +1428,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/scss-utilities/_font-weights.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/scss-utilities/_font_loader.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/scss-utilities/_font_loader.css",
 		"oF": 0,
 		"oS": 0,
 		"sct": 1
