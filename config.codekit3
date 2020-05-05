@@ -68,6 +68,19 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/bs4-utilities/_boxes.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/bs4-utilities/_boxes.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
 	"/bs4-utilities/_bs4_alerts.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -226,163 +239,6 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
-		},
-	"/config-templates/-npmrc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/config-templates/-npmrc",
-		"oF": 0
-		},
-	"/config-templates/editorconfig.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/config-templates/editorconfig.txt",
-		"oF": 0
-		},
-	"/config-templates/eslintrc.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/config-templates/eslintrc-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/config-templates/gitignore.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/config-templates/gitignore.txt",
-		"oF": 0
-		},
-	"/config-templates/htaccess.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/config-templates/htaccess.txt",
-		"oF": 0
-		},
-	"/config-templates/std_package.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/config-templates/std_package-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/config-templates/twig_ext.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/config-templates/twig_ext.txt",
-		"oF": 0
-		},
-	"/gulp-templates/favicons/Favicon Generator for all platforms- iOS, Android, PC-Mac....webloc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/gulp-templates/favicons/Favicon Generator for all platforms- iOS, Android, PC-Mac....webloc",
-		"oF": 0
-		},
-	"/gulp-templates/favicons/gulpfile_favicon.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/gulp-templates/favicons/gulpfile_favicon-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/gulp-templates/gulp_make_docs.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/gulp-templates/gulp_make_docs-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/gulp-templates/gulpfile-update-from-mUtilities.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/gulp-templates/gulpfile-update-from-mUtilities-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/gulp-templates/gulpfile_email.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/gulp-templates/gulpfile_email-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/gulp-templates/icone/demo-icone.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/gulp-templates/icone/demo-icone.html",
-		"oF": 0
-		},
-	"/gulp-templates/icone/gulpfile-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/gulp-templates/icone/gulpfile-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/gulp-templates/icone/gulpfile.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/gulp-templates/icone/gulpfile-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/gulp-templates/icone/icon_list.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/gulp-templates/icone/icon_list-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/gulp-templates/icone/svg_files/.gitkeep": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/gulp-templates/icone/svg_files/.gitkeep",
-		"oF": 0
 		},
 	"/js-utilities/_date-utilities.js": {
 		"bF": 0,
@@ -1404,6 +1260,19 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/scss-utilities/_counters.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/scss-utilities/_counters.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
 	"/scss-utilities/_decimali.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1666,6 +1535,243 @@
 		"sI": 0,
 		"sU": 0
 		},
+	"/templates-config/-npmrc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates-config/-npmrc",
+		"oF": 0
+		},
+	"/templates-config/editorconfig.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates-config/editorconfig.txt",
+		"oF": 0
+		},
+	"/templates-config/eslintrc.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/templates-config/eslintrc-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/templates-config/gitignore.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates-config/gitignore.txt",
+		"oF": 0
+		},
+	"/templates-config/htaccess.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates-config/htaccess.txt",
+		"oF": 0
+		},
+	"/templates-config/std_package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/templates-config/std_package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/templates-config/twig_ext.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates-config/twig_ext.txt",
+		"oF": 0
+		},
+	"/templates-gulp/favicons/Favicon Generator for all platforms- iOS, Android, PC-Mac....webloc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates-gulp/favicons/Favicon Generator for all platforms- iOS, Android, PC-Mac....webloc",
+		"oF": 0
+		},
+	"/templates-gulp/favicons/gulpfile_favicon.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/templates-gulp/favicons/gulpfile_favicon-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/templates-gulp/gulp_make_docs.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/templates-gulp/gulp_make_docs-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/templates-gulp/gulpfile-update-from-mUtilities.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/templates-gulp/gulpfile-update-from-mUtilities-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/templates-gulp/gulpfile_email.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/templates-gulp/gulpfile_email-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/templates-gulp/icone/demo-icone.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates-gulp/icone/demo-icone.html",
+		"oF": 0
+		},
+	"/templates-gulp/icone/gulpfile-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/templates-gulp/icone/gulpfile-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/templates-gulp/icone/gulpfile.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/templates-gulp/icone/gulpfile-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/templates-gulp/icone/icon_list.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/templates-gulp/icone/icon_list-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/templates-gulp/icone/svg_files/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates-gulp/icone/svg_files/.gitkeep",
+		"oF": 0
+		},
+	"/templates-twig/_main.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/templates-twig/_main.html.twig",
+		"oF": 0
+		},
+	"/templates-twig/fancybox_cdn.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates-twig/fancybox_cdn.html.twig",
+		"oF": 0
+		},
+	"/templates-twig/file_uploader.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates-twig/file_uploader.html.twig",
+		"oF": 0
+		},
+	"/templates-twig/flash_messages.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates-twig/flash_messages.html.twig",
+		"oF": 0
+		},
+	"/templates-twig/form_end.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates-twig/form_end.html.twig",
+		"oF": 0
+		},
+	"/templates-twig/google_font_loader.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates-twig/google_font_loader.html.twig",
+		"oF": 0
+		},
+	"/templates-twig/icone.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates-twig/icone.html.twig",
+		"oF": 0
+		},
+	"/templates-twig/imgs.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates-twig/imgs.html.twig",
+		"oF": 0
+		},
+	"/templates-twig/imgs_viewer.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates-twig/imgs_viewer.html.twig",
+		"oF": 0
+		},
+	"/templates-twig/meta.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates-twig/meta.html.twig",
+		"oF": 0
+		},
 	"/TODO/_lazyloading.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1725,86 +1831,6 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
-		},
-	"/twig-templates/_main.html.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/twig-templates/_main.html.twig",
-		"oF": 0
-		},
-	"/twig-templates/fancybox_cdn.html.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/twig-templates/fancybox_cdn.html.twig",
-		"oF": 0
-		},
-	"/twig-templates/file_uploader.html.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/twig-templates/file_uploader.html.twig",
-		"oF": 0
-		},
-	"/twig-templates/flash_messages.html.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/twig-templates/flash_messages.html.twig",
-		"oF": 0
-		},
-	"/twig-templates/form_end.html.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/twig-templates/form_end.html.twig",
-		"oF": 0
-		},
-	"/twig-templates/google_font_loader.html.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/twig-templates/google_font_loader.html.twig",
-		"oF": 0
-		},
-	"/twig-templates/icone.html.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/twig-templates/icone.html.twig",
-		"oF": 0
-		},
-	"/twig-templates/imgs.html.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/twig-templates/imgs.html.twig",
-		"oF": 0
-		},
-	"/twig-templates/imgs_viewer.html.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/twig-templates/imgs_viewer.html.twig",
-		"oF": 0
-		},
-	"/twig-templates/meta.html.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/twig-templates/meta.html.twig",
-		"oF": 0
 		}
 	},
 "hooks": [

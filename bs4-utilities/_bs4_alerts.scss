@@ -49,8 +49,8 @@
   }
 
   @each $theme in danger, warning, info, success {
-    @if map-has-key($theme-colors, $theme) &&
-      global-variable-exists('ui-icons') &&
+    @if map-has-key($theme-colors, $theme) and
+      global-variable-exists('ui-icons') and
       map-has-key($ui-icons, $theme) {
         &.alert-#{$theme} {
           &::before {

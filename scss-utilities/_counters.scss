@@ -1,0 +1,13 @@
+.counter-wrapper {
+  counter-set: step;
+  counter-reset: step;
+
+  .counter {
+
+    &::before {
+      counter-increment: step;
+      content: counter(step) '.';
+    }
+  }
+
+}
