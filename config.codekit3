@@ -295,6 +295,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/js-utilities/_fontfaceobserver-gfonts-v2-auto-loader.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js-utilities/_fontfaceobserver-gfonts-v2-auto-loader-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/js-utilities/_ie_check.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1732,12 +1743,12 @@
 		"oAP": "/templates-twig/form_end.html.twig",
 		"oF": 0
 		},
-	"/templates-twig/google_font_loader.html.twig": {
+	"/templates-twig/google_font_v2_loader.html.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/templates-twig/google_font_loader.html.twig",
+		"oAP": "/templates-twig/google_font_v2_loader.html.twig",
 		"oF": 0
 		},
 	"/templates-twig/icone.html.twig": {
