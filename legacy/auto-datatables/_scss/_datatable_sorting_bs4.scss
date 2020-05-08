@@ -59,11 +59,19 @@
   .sorting_asc,
   .sorting_desc,
   .sorting:hover {
-    color: $datatable_active_sorting_color !important;
-    background: $datatable_active_sorting_bg !important;
+    @if $datatable_active_sorting_color {
+      color: $datatable_active_sorting_color !important;
+    }
+    @if $datatable_active_sorting_bg {
+      background: $datatable_active_sorting_bg !important;
+    }
     background-clip: padding-box !important;
 
-    @if $sorting_arrow_size  {
+    @if $datatable_active_sorting_border-bottom {
+      border-bottom: $datatable_active_sorting_border-bottom;
+    }
+
+    @if ($sorting_arrow_size and $datatable_active_sorting_color) {
 
       &:before {
         border-bottom-color:$datatable_active_sorting_color;

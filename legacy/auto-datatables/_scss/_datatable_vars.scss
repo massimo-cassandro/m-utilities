@@ -1,7 +1,8 @@
 $datatable_responsive_border_color: #ccc !default;
 $datatable_sorting_arrows_color: currentColor !default;
-$datatable_active_sorting_color: #c00 !default;
-$datatable_active_sorting_bg: transparent !default;
+$datatable_active_sorting_color: #c00 !default; // false = nessuna modifica al valore std
+$datatable_active_sorting_bg: transparent !default; // false = nessuna modifica al valore std
+$datatable_active_sorting_border-bottom: false!default; // false = nessuna modifica al bordo std
 $datatable_processing_padding: 0!default;
 $datatable_processing_bg: linear-gradient(to right, rgba($bianco, 0) 0%, rgba($bianco, .9) 25%, rgba($bianco, .9) 75%, rgba($bianco, 0) 100%) !default;
 
