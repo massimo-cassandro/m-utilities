@@ -1,0 +1,68 @@
+{% extends '_shared/_main.html.twig' %}
+{% block tpl %}
+{%- set main_template -%}
+<!DOCTYPE html>
+<html lang="it" {%- if app.environment != 'prod' %} class="test"{% endif -%}>
+  <head>
+    {% include 'backoffice/_incl/head.incl.html.twig' %}
+    <title>
+      {%- block title %}{% endblock -%}
+      {{- ' | XXXXX' -}}
+      {{- app.environment != 'prod'? ' [' ~ app.environment|upper ~ ']' : '' -}}
+    </title>
+    {% block head %}{% endblock %}
+  </head>
+  <body {%- if controller is defined and controller %} data-controller="{{ controller }}"{% endif -%}>
+    <div id="content">
+      
+      <div class="content-wrapper">
+
+        {%- if not app.user.pwdTemp|default() -%}
+          <nav class="menu-wrapper" id="main-menu">
+            {% include 'backoffice/_incl/backoffice-menu.html.twig' %}
+          </nav>
+        {% endif %}
+
+        <main class="outer-content">
+          {% for label, messages in app.flashes %}
+            {% for message in messages %}
+              {%
+                set alert_class = 'alert alert-dismissable alert-icon alert-flash ' ~
+                ' alert-' ~ (label == 'error' ? 'danger' : (label == 'notice' ? 'info' : label)) ~
+                (label == 'success'? ' alert-autoclose' : '')
+              %}
+              <div class="{{ alert_class }}">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Chiudi">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                {{ message|raw }}
+              </div>
+            {% endfor %}
+          {% endfor %}
+
+          <article class="main-content container-fluid">
+
+            {% block body %}{% endblock %}
+          </article>
+        </main>
+
+      </div> {# /content-wrapper #}
+
+      <footer>
+        
+      </footer>
+
+    </div> {# end #content #}
+
+ 
+    {% include 'backoffice/_incl/end.incl.html.twig' %}
+
+  </body>
+</html>
+{%- endset -%}
+{%- if app.environment == 'prod' -%}
+  {{ main_template|spaceless }}
+{%- else -%}
+  {{ main_template }}
+{%- endif -%}
+{% endblock tpl %}

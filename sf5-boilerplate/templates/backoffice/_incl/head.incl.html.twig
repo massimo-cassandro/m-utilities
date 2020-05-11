@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+{%- include '@includes/google_font_v2_loader.html.twig' with {
+  fonts: glob_vars.fonts
+} -%}
+{% include '@includes/favicons.html.twig' %}
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preload" href="{{ asset('/assets/js/xxx-backoffice-libs-min.js') }}?v={{ glob_vars.vers.backoffice}}" as="script">
+<link rel="preload" href="{{ asset('/assets/js/xxx-backoffice-min.js') }}?v={{ glob_vars.vers.backoffice}}" as="script">
+<link rel="preload" href="{{ asset('/assets/css/xxx-backoffice.css') }}?v={{ glob_vars.vers.backoffice}}" as="style">
+<link rel="stylesheet" href="{{ asset('/assets/css/xxx-backoffice.css') }}?v={{ glob_vars.vers.backoffice}}" type="text/css" media="all">
+<meta name="robots" content="noindex, nofollow">

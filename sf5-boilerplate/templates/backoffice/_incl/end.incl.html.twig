@@ -1,0 +1,14 @@
+{% block last_content %}{% endblock %}
+{% if app.environment != 'prod' %}
+  <script src="{{ asset('/assets/layout-tools/layout_tools-min.js') }}"></script>
+{% endif %}
+{% block jsfiles_start %}{% endblock %}
+<span class="appdata" data-d="{{ {
+  'v'           : glob_vars.vers.backoffice,
+  'icon_file'   : glob_vars.icon_file,
+  'baseUrl'     : app.request.baseUrl
+}|merge(app.environment != 'prod'? {test: true} : {})|json_encode()|e('html_attr') }}"></span>
+<script src="{{ asset('/assets/js/xxx-backoffice-libs-min.js') }}?v={{ glob_vars.vers.backoffice }}"></script>
+<script src="{{ asset('/assets/js/xxx-backoffice-min.js') }}?v={{ glob_vars.vers.backoffice }}"></script>
+
+{% block jsfiles %}{% endblock %}

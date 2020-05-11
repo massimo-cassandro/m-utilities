@@ -6,6 +6,9 @@
   Requires js-cookie
 
   version 2 for gfonts api 2 (variable fonts)
+
+  //NB DA VERIFICARE, NON USARE IN PRODUZIONE
+
 */
 export default function () {
   'use strict';
