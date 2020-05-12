@@ -67,6 +67,27 @@ export default function () {
         '|',
         //'imageUpload',
         'blockQuote',
+        'insertTable',
+        'undo',
+        'redo'
+      ],
+
+      xlite_toolbar = [
+        'heading',
+        '|',
+        'bold',
+        'italic',
+        'link',
+        '|',
+        'alignment:left', 'alignment:center', 'alignment:right', 'alignment:justify',
+        '|',
+        'outdent', 'indent',
+        '|',
+        'bulletedList',
+        'numberedList',
+        '|',
+        //'imageUpload',
+        'blockQuote',
         //'insertTable',
         'undo',
         'redo'
@@ -92,9 +113,12 @@ export default function () {
         // https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/configuration.html#removing-features
         if (item.classList.contains('editor-lite')) {
           options = {
-            uploaderUrl: window.mUtilities.ckeditor.upl_url,
-            imgViewer: window.mUtilities.ckeditor.img_viewer,
             toolbar: lite_toolbar,
+            removePlugins: [ 'mUploadAdapter', 'ImageUpload' ],
+          };
+        } else if(item.classList.contains('editor-xlite')) {
+          options = {
+            toolbar: xlite_toolbar,
             removePlugins: [ 'mUploadAdapter', 'ImageUpload', 'insertTable' ],
           };
         }
