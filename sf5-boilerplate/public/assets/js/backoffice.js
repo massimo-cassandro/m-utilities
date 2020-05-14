@@ -1,27 +1,43 @@
 import m_cke_loader from 'm-utilities/ckeditor-utilities/_m-ckeditor-loader';
 import m_cke_form_check from 'm-utilities/ckeditor-utilities/_m-ckeditor-form-check';
 import textarea_autosize from 'm-utilities/js-utilities/_textarea-autosize';
-import ffo_loader from 'm-utilities/js-utilities/_fontfaceobserver-gfonts-v2-auto-loader';
+import ffo_loader from 'm-utilities/js-utilities/_fontfaceobserver_loader';
 import file_upl from './src-backoffice/_file_uploader';
 import {inputDateSupport, inputTimeSupport} from 'm-utilities/js-utilities/_input_date_support';
 import {isIE} from 'm-utilities/js-utilities/_ie_check';
 
+import utenti_scheda from './src-backoffice/_utenti_scheda';
+import contenuti_scheda from './src-backoffice/_contenuti_scheda';
+import news_scheda from './src-backoffice/_news_scheda';
+
 let jsapp = {
   maindata: $('.appdata').data('d'),
+  utenti_scheda: utenti_scheda,
+  contenuti_scheda: contenuti_scheda,
+  news_scheda: news_scheda
 };
 
 (() => {
   'use strict';
 
+
   // standard modules
   textarea_autosize();
-  ffo_loader();
   file_upl();
 
-
-  //page is loaded
-  document.documentElement.classList.add('page-is-loaded');
-
+  // fonts
+  //'Work+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700', 'Zilla+Slab:wght@300'
+  ffo_loader([
+    ['Work Sans', { weight: 300, style: 'normal'}],
+    ['Work Sans', { weight: 300, style: 'italic'}],
+    ['Work Sans', { weight: 400, style: 'normal'}],
+    ['Work Sans', { weight: 400, style: 'italic'}],
+    ['Work Sans', { weight: 500, style: 'normal'}],
+    //['Work Sans', { weight: 500, style: 'italic'}],
+    ['Work Sans', { weight: 700, style: 'normal'}],
+    ['Work Sans', { weight: 700, style: 'italic'}],
+    ['Zilla Slab', { weight: 300, style: 'normal'}]
+  ]);
 
   // browser check
   if(!inputDateSupport() || !inputTimeSupport() || isIE()) {
@@ -53,28 +69,27 @@ let jsapp = {
   }
 
 
-  // // scroll observer (mobile)
-  // if ('IntersectionObserver' in window &&
-  //   'IntersectionObserverEntry' in window &&
-  //   'intersectionRatio' in window.IntersectionObserverEntry.prototype
-  // ) {
+  // go2top
+  const go2top = document.querySelector('.go2top'),
+    observer_element = document.querySelector('.main-header');
 
-  //   const observer_element = document.querySelector('.main-header');
-  //   // in modo fancy non è presente
-  //   if(observer_element) {
-  //     const scrollObserver = new IntersectionObserver( (entries) => {
-  //       document.documentElement.classList.toggle('scrolling-on', !entries[0].isIntersecting);
-  //     },{
-  //       rootMargin: '100px 0px'
-  //     });
+  if(go2top && observer_element && // in modo fancy observer_element non è presente
+    'IntersectionObserver' in window &&
+    'IntersectionObserverEntry' in window &&
+    'intersectionRatio' in window.IntersectionObserverEntry.prototype
+  ) {
+    const scrollObserver = new IntersectionObserver( (entries) => {
+      document.documentElement.classList.toggle('scrolling-on', !entries[0].isIntersecting);
+    },{
+      rootMargin: '100px 0px'
+    });
+    scrollObserver.observe(observer_element);
 
-  //     scrollObserver.observe(observer_element);
-  //   }
-  // }
+    go2top.addEventListener('click', () => {
+      $('html, body').animate({ scrollTop: 0 }, 400);
+    }, false);
+  }
 
-  // document.querySelector('.go2top').addEventListener('click', () => {
-  //   $('html, body').animate({ scrollTop: 0 }, 600);
-  // }, false);
 
   // alert autoclose
   window.setTimeout(function () {
@@ -155,6 +170,9 @@ let jsapp = {
       }
     });
   }
+
+  //page is loaded
+  document.documentElement.classList.add('page-is-loaded');
 
 })();
 

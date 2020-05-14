@@ -1,7 +1,7 @@
 {% set pagID = 'contenuti_elenco' %}
 {# {% set controller = pagID %} #}
 {% extends 'backoffice/_backoffice-tpl.html.twig' %}
-{% block title %}{% endblock %}
+{% block title %}Testi e altri contenuti del sito{% endblock %}
 {% block head %}{% endblock %}
 {% block jsfiles_start %}{% endblock %}
 {% block jsfiles %}{% endblock %}
@@ -10,6 +10,116 @@
 
 {% block body %}
   <h1>{{- block('title') -}}</h1>
+
+  <form action="{{ path('admin_contenuti_elenco_json') }}" id="f_ricerca" method="post" data-disable-submit="false" class="d-print-none">
+    <fieldset>
+      <legend>Filtra contenuti</legend>
+      <div class="row">
+        <div class="col-md-6">
+          {{ form_row(form.sezione, {
+            "label": "Sezione/pagina"
+          }) }}
+        </div>
+        <div class="col-md-6">
+          {{ form_row(form.tipo, {
+            "label": "Tipo contenuto"
+          }) }}
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Cerca</button>
+      </div>
+    </fieldset>
+  </form>
+
+  {%- if is_granted('ROLE_SUPER_ADMIN') -%}
+    <p class="d-print-none text-right"><a href="{{ path('admin_contenuti_scheda') }}">Nuovo contenuto</a></p>
+  {%- endif -%}
+
+  <div class="dt_container auto_dt"
+    data-cdt_options="{{ {
+      dtRender: {
+        bindToForm: 'f_ricerca',
+        formSubmitButton: 'submitButton'
+      },
+      datatable_options : {
+        order: [[1,'asc'],[2,'asc']],
+        pageLength: 50
+      }
+    }|json_encode|e('html_attr') }}"
+    data-cdt_options="{{ {
+      datatable_options : {
+        ajax: path('admin_contenuti_elenco_json'),
+        order: [[1,'asc'],[2,'asc']],
+        pageLength: 50
+      }
+    }|json_encode|e('html_attr') }}"
+    data-dt_columns="{{ [
+      {
+        dtRender  : { type: 'id' }
+      },
+      {
+        title     : 'Sezione',
+        data      : 'sezione'
+      },
+      {
+        title     : 'Contenuto',
+        name      : 'nome',
+        dtRender  : {
+          type        : 'tpl',
+          sf_base_url : path('admin_contenuti_scheda', { id: null }),
+          tpl         : '<a href="[[sf_base_url]][[id]]">[[nome]]</a>'
+        }
+      },
+      {
+        title     : 'Tipo',
+        data      : 'tipo'
+      },
+      {
+        title     : 'Valore',
+        name      : 'val',
+        dtRender  : {
+          type        : 'tpl',
+          filter: {
+            'val': 'strips_truncate_100'
+          },
+          tpl         : '[[#img]]' ~
+                          '[[#imgVal]]<span class="icona icona-ok"></span>[[/imgVal]]' ~
+                          '[[^imgVal]]<span class="icona icona-off"></span>[[/imgVal]]' ~
+                        '[[/img]]' ~
+                        '[[^img]]' ~
+                        '[[& val]]'~
+                        '[[/img]]'
+        }
+      },
+      {
+        data      : 'imgVal',
+        visible   : false
+      },
+      {
+        title     : 'Variabile',
+        name      : 'chiave',
+        dtRender  : {
+          type        : 'tpl',
+          tpl         : 'contenuti.[[chiaveSezione]].[[chiave]]'
+        },
+        visible: is_granted('ROLE_SUPER_ADMIN')
+      },
+      {
+        title     : 'chiaveSezione',
+        data      : 'chiaveSezione',
+        visible   : false
+      }
+    ]|json_encode|e('html_attr') }}"></div>
+
+  {#
+
+    '[[#val]][[& val]][[/val]]'
+  #}
+
+  {%- if is_granted('ROLE_SUPER_ADMIN') -%}
+    <p class="d-print-none"><a href="{{ path('admin_contenuti_scheda') }}">Nuovo contenuto</a></p>
+  {%- endif -%}
 
 {% endblock body %}
 {% block last_content %}{% endblock last_content %}

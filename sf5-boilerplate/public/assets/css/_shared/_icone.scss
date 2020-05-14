@@ -26,12 +26,17 @@ span.icona {
     position: absolute;
     top: 0;
     left: 0;
+
+    .table & {
+      width: 1.2em;
+      height: 1.2em;
+    }
   }
 
   &-ok {
     &::before {
       content: svg_uri(
-      str-replace(map-get($ui-icons, on), '<svg', '<svg fill="#{theme-color(success)}"')
+      str-replace(map-get($ui-icons, on), '<svg', '<svg stroke="#{theme-color(success)}"')
       );
     }
   }
@@ -39,10 +44,11 @@ span.icona {
   &-off {
     &::before {
       content: svg_uri(
-      str-replace(map-get($ui-icons, off), '<svg', '<svg fill="#{theme-color(danger)}"')
+      str-replace(map-get($ui-icons, off), '<svg', '<svg stroke="#{theme-color(danger)}"')
       );
     }
   }
+
 }
 
 .btn-icon {
