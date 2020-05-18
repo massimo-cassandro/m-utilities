@@ -3,4 +3,4 @@
 .eslintrc.json
 .npmignore
 .gitignore
-
+*.code-workspace

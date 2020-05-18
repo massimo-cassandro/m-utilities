@@ -64,7 +64,7 @@ export default function () {
 
     Promise.all(font_observers).then(function () {
 
-      Cookies.set('gfontsloaded', google_fonts_array.join('|'), { expires: 1 });
+      Cookies.set('gfontsloaded', google_fonts_array.join('|'), { expires: 1, secure:true });
 
       html.classList.remove('fonts-loading');
       html.classList.add('fonts-loaded');

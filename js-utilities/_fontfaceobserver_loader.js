@@ -47,7 +47,7 @@ export default function ( fonts_array ) {
 
   Promise.all(font_observers).then(function () {
 
-    Cookies.set('fontsloaded', 1, { expires: 1 });
+    Cookies.set('fontsloaded', 1, { expires: 1, secure: true });
 
     html.classList.remove('fonts-loading');
     html.classList.add('fonts-loaded');
