@@ -37,7 +37,8 @@
 
 .alert-icon {
 	position: relative;
-	padding-left: 4em;
+  padding-left: 4em;
+  min-height: 3em;
 
 	&::before {
 		width: 2em;
