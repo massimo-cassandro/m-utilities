@@ -46,3 +46,27 @@
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   font-weight: 400; }
+  .mAlert.modal .modal-footer button.btn-success {
+    background-color: green;
+    color: color-yiq(green); }
+    .mAlert.modal .modal-footer button.btn-success:hover {
+      background-color: #003400;
+      color: color-yiq(#003400); }
+  .mAlert.modal .modal-footer button.btn-info {
+    background-color: DodgerBlue;
+    color: color-yiq(DodgerBlue); }
+    .mAlert.modal .modal-footer button.btn-info:hover {
+      background-color: #006ad1;
+      color: color-yiq(#006ad1); }
+  .mAlert.modal .modal-footer button.btn-warning {
+    background-color: DarkOrange;
+    color: color-yiq(DarkOrange); }
+    .mAlert.modal .modal-footer button.btn-warning:hover {
+      background-color: #b36200;
+      color: color-yiq(#b36200); }
+  .mAlert.modal .modal-footer button.btn-danger {
+    background-color: red;
+    color: color-yiq(red); }
+    .mAlert.modal .modal-footer button.btn-danger:hover {
+      background-color: #b30000;
+      color: color-yiq(#b30000); }

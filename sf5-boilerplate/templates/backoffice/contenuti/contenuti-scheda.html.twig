@@ -179,7 +179,7 @@
             {%- if entity.sezione.intro|default() -%}
               <div>{{ entity.sezione.intro|raw }}</div>
             {%- endif -%}
-            {%- if entity.note|default() -%}
+            {%- if entity.note|striptags|trim|default() -%}
               <div>{{ entity.note|raw }}</div>
             {%- endif -%}
           </div>

@@ -9,6 +9,22 @@
 	],
 "creatorBuild": "32147",
 "files": {
+	"/.eslintrc.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/.eslintrc-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.gitignore",
+		"oF": 0
+		},
 	"/ckeditor": {
 		"ft": 65536,
 		"oA": 1,
@@ -41,11 +57,249 @@
 		"oS": 3,
 		"sct": 0
 		},
+	"/css/backoffice.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/backoffice-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/backoffice.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "/css/backoffice.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 0
+		},
+	"/css/scss-backoffice/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/css/scss-backoffice/.gitkeep",
+		"oF": 0
+		},
+	"/css/scss/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/css/scss/.gitkeep",
+		"oF": 0
+		},
+	"/editorconfig.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/editorconfig.txt",
+		"oF": 0
+		},
+	"/email/_mail-vars.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/email/_mail-vars.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 0
+		},
+	"/email/mail-embed.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "/email/mail-embed.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 0
+		},
+	"/email/mail-inline.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "/email/mail-inline.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 0
+		},
+	"/favicons/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/favicons/.gitkeep",
+		"oF": 0
+		},
+	"/icone/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/icone/.gitkeep",
+		"oF": 0
+		},
+	"/icone/demo-icone.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/icone/demo-icone.html",
+		"oF": 0
+		},
+	"/icone/gulpfile.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/icone/gulpfile-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/icone/icon_list.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/icone/icon_list-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/icone/svg_files/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/icone/svg_files/.gitkeep",
+		"oF": 0
+		},
+	"/imgs/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/imgs/.gitkeep",
+		"oF": 0
+		},
+	"/js/backoffice-libs.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/backoffice-libs-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/backoffice.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/backoffice-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/src-backoffice/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/js/src-backoffice/.gitkeep",
+		"oF": 0
+		},
+	"/js/src-backoffice/_contenuti_scheda.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js/src-backoffice/_contenuti_scheda-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/src-backoffice/_datatable_config.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js/src-backoffice/_datatable_config-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/src-backoffice/_file_uploader.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js/src-backoffice/_file_uploader-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/src-backoffice/_utenti_scheda.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js/src-backoffice/_utenti_scheda-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/src/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/js/src/.gitkeep",
+		"oF": 0
+		},
 	"/layout-tools": {
 		"ft": 65536,
 		"oA": 1,
 		"oAP": "/build/layout-tools",
 		"oF": 0
+		},
+	"/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		}
 	},
 "hooks": [

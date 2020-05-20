@@ -1,7 +1,7 @@
 *~
 .DS_Store
 composer.phar
-**/*.mwb.bak
+
 
 ###> symfony/framework-bundle ###
 /.env.local
@@ -20,6 +20,8 @@ composer.phar
 ###< symfony/phpunit-bridge ###
 
 ## ***
+/**/*.mwb.bak
 /**/node_modules/
 /**/bower_components/
-*.sass-cache
+/**/*.sass-cache
+/public/assets/icone/svg/

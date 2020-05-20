@@ -33,6 +33,6 @@
     "popper.js": "^1.16.1",
     "svg4everybody": "^2.1.9",
     "symfony-bootstrap-form-theme": "^0.2.3",
-    "vanilla-lazyload": "^15.2.0"
+    "vanilla-lazyload": "^16.0.0"
   }
 }

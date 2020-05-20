@@ -5,6 +5,15 @@ $mAlert-color-warning: theme-color(warning)!default;
 $mAlert-color-confirm: theme-color(warning)!default;
 $mAlert-button-font-weight: 400!default;
 
+// mappatura dei colori di stato standard bs4
+// per eventuale sostituzione nel caso non siano tutti definiti
+$mAlert-bs4-status-color: (
+  success: $mAlert-color-success,
+  info: $mAlert-color-info,
+  warning: $mAlert-color-warning,
+  danger: $mAlert-color-error
+)!default;
+
 .mAlert-mark {
 
   width: 100%;
@@ -81,6 +90,21 @@ $mAlert-button-font-weight: 400!default;
       padding-left:1.5rem;
       padding-right:1.5rem;
       font-weight: $mAlert-button-font-weight;
+
+      @each $status, $st-color in $mAlert-bs4-status-color {
+        @if not map-has-key($theme-colors, $status) {
+
+          &.btn-#{$status} {
+            background-color: $st-color;
+            color: color-yiq($st-color);
+            &:hover {
+              background-color: darken($st-color, 15);
+              color: color-yiq(darken($st-color, 15));
+            }
+          }
+
+        }
+      }
     }
   }
 

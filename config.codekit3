@@ -76,6 +76,19 @@
 		"oS": 0,
 		"sct": 1
 		},
+	"/bs4-utilities/_bs4_alerts.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/bs4-utilities/_bs4_alerts.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
 	"/bs4-utilities/_bs4_responsive_columns.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -928,17 +941,7 @@
 		"oAP": "/legacy/mAlert-bs4/demo/index.html",
 		"oF": 0
 		},
-	"/legacy/mAlert-bs4/demo/mAlert.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/legacy/mAlert-bs4/demo/mAlert-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/legacy/mAlert-bs4/demo/mAlert.scss": {
+	"/legacy/mAlert-bs4/demo/mAlert-demo.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -946,7 +949,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/legacy/mAlert-bs4/demo/mAlert.css",
+		"oAP": "/legacy/mAlert-bs4/demo/mAlert-demo.css",
 		"oF": 0,
 		"oS": 0,
 		"sct": 1
