@@ -21,7 +21,7 @@
     class: 'img-fluid',
     lazyload: true,        // facoltativo, default true,
     attrs: null,           // attributi extra facoltativi
-    viewer: '/viewer/',                      // <== default
+    viewer: path('inner_viewer') ~ '/',      // <== default /viewer/
     viewer_extra_params: [],                 // <== array di eventuali parametri da aggiungere al viewer
                                              //     es: ['ext=1', 'alpha=1']
     densita_max: 2,                          // <== default
@@ -73,7 +73,7 @@
 {% set class = class is defined ? class : '' %}
 {% set lqip = lqip is defined ? lqip : null %}
 {% set densita_max = densita_max is defined ? densita_max : 2 %}
-{% set viewer = viewer is defined ? viewer : '/viewer/' %}
+{% set viewer = viewer is defined ? viewer : path('inner_viewer') ~ '/' %}
 {% set local = local is defined ? local : app.request.port in [8888, 8890] %}
 {% set test = local or (test is defined ? test : app.environment != 'prod') %}
 {% set viewer_extra_params = viewer_extra_params is defined ? viewer_extra_params : [] %}

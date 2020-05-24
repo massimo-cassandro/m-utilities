@@ -268,6 +268,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/js-utilities/_email-obfuscator.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js-utilities/_email-obfuscator-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/js-utilities/_festivita.js": {
 		"bF": 0,
 		"ft": 64,
@@ -941,6 +952,16 @@
 		"oAP": "/legacy/mAlert-bs4/demo/index.html",
 		"oF": 0
 		},
+	"/legacy/mAlert-bs4/demo/mAlert-demo.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/legacy/mAlert-bs4/demo/mAlert-demo-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/legacy/mAlert-bs4/demo/mAlert-demo.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1536,18 +1557,6 @@
 		"rwU": 0,
 		"sI": 0,
 		"sU": 0
-		},
-	"/templates-config": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/templates-config",
-		"oF": 0
-		},
-	"/templates-gulp": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/templates-gulp",
-		"oF": 0
 		},
 	"/TODO/_fontfaceobserver-gfonts-v2-auto-loader.js": {
 		"bF": 0,
