@@ -1,9 +1,9 @@
 {% apply spaceless %}
 {% set glob_vars = {
   vers : {
-    top           : '1.0.0',
-    backoffice    : '1.0.0',
-    icone         : '1.0.0'
+    sitopub       : '1.0.6',
+    backoffice    : '1.0.3',
+    icone         : '1.0.1'
   },
 
   breakpoints: {
@@ -14,15 +14,38 @@
     xl: 1200
   },
 
-  fonts: ['Work+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700', 'Zilla+Slab:wght@300'],
-  emailfonts: ['Work+Sans:ital,wght@0,400;0,700;1,400;1,700'],
+  fonts: ['Work+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700', 'Zilla+Slab:wght@300;500'],
+  emailfonts: 'Work+Sans:ital,wght@0,400;0,600;1,400;1,600',
 
   icon_file: '/assets/icone/icone.svg',
 
-  chiave_recaptcha_client: 'xxx',
-
+  analitycs_id: 'UA-167583311-1',
+  chiave_recaptcha_client: '6Lch8PMUAAAAAKiKugiuKF0c_iBAaopQ4MCzL5P5',
+  gmaps_api_key: 'AIzaSyBqm6sZsZ8xQBaYAB59hEmnPKnmPrm_Ahk',
+  domain: 'topsrl.org',
   email: {
-    info: 'info@xxxx'
+    info: 'info@topsrl.org'
+  },
+
+  contact_data : {
+    nome: 'The Opportunities Partners',
+    indirizzo: 'Via Nomentana 183/185',
+    cap: '00198',
+    comune: 'Roma',
+    tel: '06.591.1189',
+    email_data: 'info',
+    lat: 41.912857,
+    lng: 12.506224
+  },
+
+
+  default_meta: {
+    descr: 'Una grande squadra per soddisfare tutti i bisogni di sicurezza e protezione di privati, professionisti e imprese',
+    og_site_name: 'The Opportunity Partners',
+    og_img: absolute_url(asset('assets/imgs/opengraph.png')),
+    og_image_type: 'image/png',
+    og_image_width: 1200,
+    og_image_height: 1200
   }
 
 } %}

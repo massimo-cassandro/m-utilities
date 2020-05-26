@@ -22,11 +22,11 @@
     lazyload: true,        // facoltativo, default true,
     attrs: null,           // attributi extra facoltativi
     viewer: path('inner_viewer') ~ '/',      // <== default /viewer/
-    viewer_extra_params: [],                 // <== array di eventuali parametri da aggiungere al viewer
-                                             //     es: ['ext=1', 'alpha=1']
+    viewer_extra_params: ['fd=1', 'ext=1', 'alpha=1'], // <== array di eventuali parametri da aggiungere al viewer
     densita_max: 2,                          // <== default
     test: app.environment != 'prod',         // <== default
-    local: app.request.port in [8888, 8890]  // <== default
+    local: app.request.port in [8888, 8890], // <== default
+    mediaqueries : globals.glob_vars.mq      // array mediaqueries, per macro o impostazioni particolari
   } -%}
 
 
@@ -82,7 +82,7 @@
 	{% set class = class ~ ' lazyload' %}
 {%- endif -%}
 
-{% set mediaqueries = glob_vars.mq|merge(glob_vars.special_mq) %}
+{% set mediaqueries = mediaqueries is defined? mediaqueries : glob_vars.mq|merge(glob_vars.special_mq) %}
 
 <picture>
   {%- for breakpoint, params in sizes -%}
@@ -120,9 +120,9 @@
                 ]) -%}
               {%- endif -%}
 
-              {%- if this_width is not null and this_height is not null  -%}
+              {# {%- if this_width is not null and this_height is not null  -%}
                 {%- set this_size_params = this_size_params|merge(['fd=1']) -%}
-              {%- endif -%}
+              {%- endif -%} #}
 
               {%- set tot_params = []|merge(viewer_extra_params)|merge(this_size_params)|merge(f_param) -%}
               {% set std_img = img_base_url ~ (tot_params|length? '?' ~ tot_params|join('&') : '') %}

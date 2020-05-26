@@ -292,6 +292,8 @@
 
           {%- if config.editor|default() is same as('lite') -%}
             {% set class = class ~ ' editor editor-lite' %}
+          {%- elseif config.editor|default() is same as('xlite') -%}
+            {% set class = class ~ ' editor editor-xlite' %}
           {%- elseif config.editor|default() is same as(true) or config.editor|default() is same as('true') -%}
             {% set class = class ~ ' editor' %}
           {%- elseif config.html|default() is same as(true) or config.html|default() is same as('true') -%}
