@@ -1,3 +1,5 @@
+import {escapeHTML} from './_escapeHTML';
+
 export  function img_viewer(params) {
   'use strict';
 
@@ -74,7 +76,7 @@ export  function img_viewer(params) {
         sources += `<img ${lazy_data_prefix}src="${this_base_src}${this_bb_wi}x${this_bb_he}"`;
         if(doppia_densita) sources += ` ${lazy_data_prefix}srcset="${this_src}"`;
         if(p.lazy) sources += ' loading="lazy"';
-        sources += ` alt="${JSutils.escapeHTML(p.alt)}">`;
+        sources += ` alt="${escapeHTML(p.alt)}">`;
       }
     }); // end forEach fmt
   }); // end forEach bbs
