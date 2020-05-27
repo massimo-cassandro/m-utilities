@@ -24,7 +24,7 @@ var gulp = require('gulp')
 
 
 var icon_list = [], // lista delle icone, utilizzate per il file demo
-  svg_files_folder = 'svg',
+  svg_files_folder = 'marchi-svg',
   svg_files_prefix = '',
   output_file = 'marchi.svg',
   icon_list_file = 'icon_list_marchi.js',

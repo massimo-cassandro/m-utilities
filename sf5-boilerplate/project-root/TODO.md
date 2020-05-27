@@ -1,6 +1,6 @@
 # TODO
 
-- [ ] pagine errore
-- [ ] sitemap
 - [ ] Attivazione Google Analytics
 - [ ] Attivazione Google Search Console
+- [ ] pagine errore
+- [ ] sitemap

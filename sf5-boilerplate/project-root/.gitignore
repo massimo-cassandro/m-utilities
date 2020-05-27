@@ -24,4 +24,4 @@ composer.phar
 /**/node_modules/
 /**/bower_components/
 /**/*.sass-cache
-/public/assets/icone/svg/
+/public/assets/icone/icone-svg/

@@ -7,7 +7,7 @@
 		"uuidString": "991010E9-FF8C-468F-8FFE-D2E604494AA0"
 		}
 	],
-"creatorBuild": "32147",
+"creatorBuild": "32186",
 "files": {
 	"/.editorconfig": {
 		"cB": 0,
@@ -235,6 +235,17 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/contenuti/_contenuti_scheda.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/contenuti/_contenuti_scheda-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/js-utilities/_date-utilities.js": {
 		"bF": 0,
 		"ft": 64,
@@ -330,6 +341,17 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/js-utilities/_ie_check-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js-utilities/_imgs_viewer.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js-utilities/_imgs_viewer-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -2130,6 +2152,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"default-case-last": {
+			"active": 0,
+			"optionString": ""
+			},
 		"default-param-last": {
 			"active": 0,
 			"optionString": ""
@@ -2542,6 +2568,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-loss-of-precision": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-magic-numbers": {
 			"active": 0,
 			"optionString": "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
@@ -2657,6 +2687,10 @@
 		"no-regex-spaces": {
 			"active": 1,
 			"optionString": ""
+			},
+		"no-restricted-exports": {
+			"active": 0,
+			"optionString": "{'restrictedNamedExports': []}"
 			},
 		"no-restricted-globals": {
 			"active": 0,
@@ -2801,6 +2835,10 @@
 		"no-use-before-define": {
 			"active": 0,
 			"optionString": "{'functions': true, 'classes': true, 'variables': true}"
+			},
+		"no-useless-backreference": {
+			"active": 0,
+			"optionString": ""
 			},
 		"no-useless-call": {
 			"active": 0,
