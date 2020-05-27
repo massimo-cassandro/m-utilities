@@ -8,11 +8,11 @@ export  function img_viewer(params) {
   /*
     img è un oggetto nella forma
       {
-        "id": 20,
-        "width": 800,
-        "height": 800,
-        "mime": "image/jpeg",
-        "size": 88195
+        id: 20,
+        width: 800,
+        height: 800,
+        mime: "image/jpeg",
+        size: 88195,
       }
 
     bbs è un array di media queries e dimensioni (dal più grande al più piccolo):
@@ -34,7 +34,8 @@ export  function img_viewer(params) {
       bbs: [],
       lazy: true,
       viewer_params: '', // eventuali parametri aggiunti per il viewer
-      alt: '' // alt
+      alt: '', // alt
+      class: ''
     },
     p, // parametri elaborati
     base_src,
@@ -76,6 +77,7 @@ export  function img_viewer(params) {
         sources += `<img ${lazy_data_prefix}src="${this_base_src}${this_bb_wi}x${this_bb_he}"`;
         if(doppia_densita) sources += ` ${lazy_data_prefix}srcset="${this_src}"`;
         if(p.lazy) sources += ' loading="lazy"';
+        if(p.class) sources += ` class="${p.class}"`;
         sources += ` alt="${escapeHTML(p.alt)}">`;
       }
     }); // end forEach fmt
