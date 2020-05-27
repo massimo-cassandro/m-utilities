@@ -1355,6 +1355,19 @@
 		"oS": 0,
 		"sct": 1
 		},
+	"/scss-utilities/_overlay.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/scss-utilities/_overlay.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
 	"/scss-utilities/_perc.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1435,19 +1448,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/spinners/_classic_spinner2.css",
-		"oF": 0,
-		"oS": 0,
-		"sct": 1
-		},
-	"/spinners/_overlay.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"ec": 1,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/spinners/_overlay.css",
 		"oF": 0,
 		"oS": 0,
 		"sct": 1

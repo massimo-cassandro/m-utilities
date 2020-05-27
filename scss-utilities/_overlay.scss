@@ -1,11 +1,6 @@
-/*
-codekit import:
-@import 'componenti/spinners/_overlay';
-
-*/
-
+$overlay-bg: rgba(0,0,0,.8)!default;
 .page_overlay, .div_overlay {
-	background-color: rgba(0,0,0,.8);
+	background-color: $overlay-bg;
     top:0;
     bottom: 0;
     left:0;
