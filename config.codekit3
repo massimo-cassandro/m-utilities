@@ -235,17 +235,6 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/contenuti/_contenuti_scheda.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/contenuti/_contenuti_scheda-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/js-utilities/_date-utilities.js": {
 		"bF": 0,
 		"ft": 64,

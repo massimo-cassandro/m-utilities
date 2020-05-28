@@ -58,7 +58,8 @@ export default function () {
         sortable: true,
         sortable_varname: 'ordine'
       },
-      dida: 'true|required|false'
+      dida: 'true|required|false',
+      link: 'true|required|false'
     };
 
   $('#toggle-config').click(function(){
