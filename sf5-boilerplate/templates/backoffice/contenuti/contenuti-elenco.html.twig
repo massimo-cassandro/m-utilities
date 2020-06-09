@@ -1,5 +1,5 @@
 {% set pagID = 'contenuti_elenco' %}
-{# {% set controller = pagID %} #}
+{% set controller = pagID %}
 {% extends 'backoffice/_backoffice-tpl.html.twig' %}
 {% block title %}Testi e altri contenuti del sito{% endblock %}
 {% block head %}{% endblock %}
@@ -17,17 +17,24 @@
       <div class="row">
         <div class="col-md-6">
           {{ form_row(form.sezione, {
-            "label": "Sezione/pagina"
+            id: 'filtro-sezione',
+            label: "Sezione/pagina"
           }) }}
         </div>
         <div class="col-md-6">
           {{ form_row(form.tipo, {
-            "label": "Tipo contenuto"
+            id: 'filtro-tipo',
+            label: "Tipo contenuto"
           }) }}
         </div>
       </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Cerca</button>
+      <div class="row">
+        <div class="col-md-6 form-group text-center text-md-left">
+          <button type="submit" class="btn btn-primary">Cerca</button>
+        </div>
+        <div class="col-md-6 form-group text-center text-md-right mt-2 mt-md-0">
+          <button type="button" class="contenuti-filter-reset btn btn-sm btn-secondary">Azzera filtri</button>
+        </div>
       </div>
     </fieldset>
   </form>

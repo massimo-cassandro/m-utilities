@@ -7,12 +7,14 @@ import {inputDateSupport, inputTimeSupport} from 'm-utilities/js-utilities/_inpu
 import {isIE} from 'm-utilities/js-utilities/_ie_check';
 
 import utenti_scheda from './src-backoffice/_utenti_scheda';
+import contenuti_elenco from './src-backoffice/_contenuti_elenco';
 import contenuti_scheda from './src-backoffice/_contenuti_scheda';
 import news_scheda from './src-backoffice/_news_scheda';
 
 let jsapp = {
   maindata: $('.appdata').data('d'),
   utenti_scheda: utenti_scheda,
+  contenuti_elenco: contenuti_elenco,
   contenuti_scheda: contenuti_scheda,
   news_scheda: news_scheda
 };

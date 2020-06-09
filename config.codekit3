@@ -235,6 +235,17 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/contenuti/_contenuti_elenco.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/contenuti/_contenuti_elenco-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/contenuti/_contenuti_scheda.js": {
 		"bF": 0,
 		"ft": 64,
@@ -486,6 +497,39 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/legacy/_svg4everybody-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/auto-datatables/_js/_datatable_crea_dt.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/auto-datatables/_js/_datatable_crea_dt-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/auto-datatables/_js/_datatables_config_base.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/auto-datatables/_js/_datatables_config_base-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/auto-datatables/_js/_datatables_config_bs4.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/auto-datatables/_js/_datatables_config_bs4-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
