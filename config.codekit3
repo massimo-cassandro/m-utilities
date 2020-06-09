@@ -490,39 +490,6 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/legacy/auto-datatables/_js/_datatable_crea_dt.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/legacy/auto-datatables/_js/_datatable_crea_dt-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/legacy/auto-datatables/_js/_datatables_config_base.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/legacy/auto-datatables/_js/_datatables_config_base-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/legacy/auto-datatables/_js/_datatables_config_bs4.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/legacy/auto-datatables/_js/_datatables_config_bs4-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/legacy/auto-datatables/_scss/_creaDatatable.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1590,6 +1557,17 @@
 		"rwU": 0,
 		"sI": 0,
 		"sU": 0
+		},
+	"/TODO/_bs4_accordion2tabs.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/TODO/_bs4_accordion2tabs-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"/TODO/_fontfaceobserver-gfonts-v2-auto-loader.js": {
 		"bF": 0,

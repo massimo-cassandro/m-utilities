@@ -9,7 +9,7 @@ $.extend( true, $.fn.dataTable.defaults, {
   dom:
     "<'row d-print-none'<'col-sm-6'l><'col-sm-6'f>>" +      // controlli
     //"<'position-relative'tr>" +                // table + processing
-    "<'row'<'col-sm-12 position-relative'tr>>" +   // table + processing
+    "<'position-relative'<'table-responsive-md't>r>" +   // table + processing
     "<'row mt-2 d-print-none'<'col-sm-5 col-md-6 small'i><'col-sm-7 col-md-6'p>>", // info + paginazione
   renderer: 'bootstrap',
 

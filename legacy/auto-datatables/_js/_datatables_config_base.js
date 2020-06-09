@@ -7,8 +7,8 @@ $.extend( true, $.fn.dataTable.defaults, {
   serverSide            : true,
   autoWidth             : false,
 
-  //stateSave           : true,
-  //stateDuration       : -1, //sessionStorage,
+  stateSave           : true,
+  stateDuration       : 3600, //-1 = sessionStorage,
 
   //caseInsensitive     : true, // default true
 

@@ -44,16 +44,10 @@
       },
       datatable_options : {
         order: [[1,'asc'],[2,'asc']],
-        pageLength: 50
+        pageLength: 25
       }
     }|json_encode|e('html_attr') }}"
-    data-cdt_options="{{ {
-      datatable_options : {
-        ajax: path('admin_contenuti_elenco_json'),
-        order: [[1,'asc'],[2,'asc']],
-        pageLength: 50
-      }
-    }|json_encode|e('html_attr') }}"
+
     data-dt_columns="{{ [
       {
         dtRender  : { type: 'id' }
@@ -101,7 +95,21 @@
         name      : 'chiave',
         dtRender  : {
           type        : 'tpl',
-          tpl         : 'contenuti.[[chiaveSezione]].[[chiave]]'
+          filter: {
+            'chiaveSezione': {
+              filter: 'replace',
+              flag: 'g',
+              regexp: '_',
+              replace: '_<wbr>'
+            },
+            'chiave': {
+              filter: 'replace',
+              flag: 'g',
+              regexp: '_',
+              replace: '_<wbr>'
+            }
+          },
+          tpl         : 'contenuti<wbr>.[[& chiaveSezione]]<wbr>.[[& chiave]]'
         },
         visible: is_granted('ROLE_SUPER_ADMIN')
       },

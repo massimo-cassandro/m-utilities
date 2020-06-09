@@ -24,8 +24,51 @@
       opts = $.extend(true, {}, datatable_setup, options)
     ;
 
-    opts.table_id = 'cdt_' + ( _this.attr('id') ? _this.attr('id') : Date.now());
+    opts.table_id = 'cdt_' + ( _this.attr('id') ? _this.attr('id') : 'dom_' + _this.index());
     _this.html('');
+
+    // salvataggio parametri form ricerca
+    if(opts.datatable_options.stateSave && opts.dtRender.bindToForm) {
+      let search_form_data = Object.fromEntries(
+        new FormData(document.getElementById(opts.dtRender.bindToForm))
+      );
+
+      opts.datatable_options.stateSaveCallback = function(settings, data) {
+
+        data.search_form_data = JSON.parse(JSON.stringify(search_form_data));
+
+        if(opts.datatable_options.stateDuration === -1) {
+          sessionStorage.setItem( 'DataTables_' + settings.sInstance, JSON.stringify(data) );
+
+        } else {
+          localStorage.setItem( 'DataTables_' + settings.sInstance, JSON.stringify(data) );
+        }
+      };
+
+      opts.datatable_options.stateLoadCallback = function(settings) {
+        let _storage;
+
+        if(opts.datatable_options.stateDuration === -1) {
+          _storage = JSON.parse( sessionStorage.getItem( 'DataTables_' + settings.sInstance ) );
+
+        } else {
+          _storage = JSON.parse( localStorage.getItem( 'DataTables_' + settings.sInstance ) );
+        }
+
+        if(_storage.search_form_data) {
+          let form = $('#' + opts.dtRender.bindToForm);
+          for( let i in _storage.search_form_data ) {
+            $(`[name="${i}"]`, form).val(_storage.search_form_data[i]);
+          }
+
+          // form.submit();
+        }
+
+        return _storage;
+      }
+
+    }
+
 
     if(opts.container_header) {
       _this.html('<h' + opts.container_header_level + '>' + opts.container_header + '</h' + opts.container_header_level + '>');

@@ -1,0 +1,84 @@
+{#
+Chiusura form standard
+----------------------------------
+
+{% include '@includes/form_end_std.html.twig' %}
+
+personalizzazioni:
+
+{% include '@includes/form_end_std.html.twig' with {
+  submit_button_id    : '__id__', //default ''
+  submit_text         : 'Registra'
+  show_submit         : true, //default
+  submit_name         : '__name__', // default ''
+
+  show_delete         : true, // default, mostra il cbox cancellato
+  delete_field        : 'cancellato', // default, nome del campo
+  delete_label        : "Elimina", // default
+  delete_class        : "", // default
+  delete_label_class  : "", // default
+  delete_help         : "", // default
+
+  show_edit_info      : true, //default
+  edit_info_new_line  : false,
+  umTimestamp         : entity.umTimestamp,   //default
+  umUtente            : entity.umUtente, //default
+} %}
+
+#}
+{% set show_delete = show_delete is defined ? show_delete : true %}
+{% set delete_field = delete_field is defined ? delete_field : 'cancellato' %}
+{% set delete_label = delete_label is defined ? delete_label : 'Elimina' %}
+{% set delete_class = delete_class is defined ? delete_class : '' %}
+{% set delete_label_class = delete_label_class is defined ? delete_label_class : '' %}
+{% set delete_help = delete_help is defined ? delete_help : '' %}
+
+{%- if entity.id|default() and show_delete -%}
+  <div class="text-right">
+    {{ form_row(form[delete_field], {
+      label: delete_label,
+      label_attr:{}|merge(delete_label_class? {class: delete_label_class} : {}),
+      attr: {class: 'trigger-no-validate' ~ (delete_class? ' ' ~ delete_class : '')},
+      help: delete_help
+    }) }}
+  </div>
+{%- endif -%}
+
+
+{% set show_submit = show_submit is defined ? show_submit : true %}
+{% set edit_info_new_line = edit_info_new_line is defined ? edit_info_new_line : false %}
+{% set submit_button_id = submit_button_id is defined? submit_button_id|trim : '' %}
+{% set submit_name = submit_name is defined? submit_name|trim : '' %}
+{% set submit_class = submit_class is defined? submit_class : '' %}
+
+{%- if not edit_info_new_line %}<div class="row">{% endif -%}
+  <div class="{%- if not edit_info_new_line %}col-md-6 {% endif -%} text-center text-md-left">
+    {%- if show_submit -%}
+      <div class="form-group">
+        <button type="submit"
+          {%- if submit_button_id %} id="{{ submit_button_id }}"{% endif -%}
+          {%- if submit_name %} name="{{ submit_name }}"{% endif -%}
+          {{- ' ' -}} class="btn btn-primary {{- submit_class? ' ' ~ submit_class : '' }}">
+          {{- submit_text is defined and submit_text ? submit_text : 'Registra' -}}
+        </button>
+      </div>
+    {%- endif -%}
+  </div>
+
+  {% set show_edit_info = show_edit_info is defined ? show_edit_info : true %}
+  {% set umTimestamp = umTimestamp is defined? umTimestamp : entity.umTimestamp %}
+  {% set umUtente = umUtente is defined? umUtente : entity.umUtente %}
+
+  {%- if entity.id|default() and  show_edit_info -%}
+    <div class="{%- if not edit_info_new_line %}col-md-6 mt-md-0 {% endif -%} form-edit-info text-center text-md-right mt-2">
+      <span class="mr-1">{% include '@includes/icone.html.twig' with { id: 'orologio', class: 'icona' } %}</span>
+      {{ umTimestamp|localizeddate('medium', 'none', app.request.locale) }}
+      <small>{{ umTimestamp|date('H:i') }}</small>
+
+      {% if umUtente.id > 0 -%}
+        / {{ umUtente.nome ~ ' ' ~ umUtente.cognome }}
+      {%- endif -%}
+
+    </div>
+  {%- endif -%}
+{%- if not edit_info_new_line %}</div>{%- endif -%}

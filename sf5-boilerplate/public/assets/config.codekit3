@@ -7,8 +7,24 @@
 		"uuidString": "7C01D352-0021-4149-AFE5-703B5DB5AE57"
 		}
 	],
-"creatorBuild": "32147",
+"creatorBuild": "32186",
 "files": {
+	"/.editorconfig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.editorconfig",
+		"oF": 0
+		},
+	"/.eslintignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.eslintignore",
+		"oF": 0
+		},
 	"/.eslintrc.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -80,6 +96,37 @@
 		"oS": 3,
 		"sct": 0
 		},
+	"/css/public.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/public-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/public.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/css/public.css.map",
+		"oF": 0
+		},
+	"/css/public.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "/css/public.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 0
+		},
 	"/css/scss-backoffice/.gitkeep": {
 		"cB": 0,
 		"ft": 8192,
@@ -94,14 +141,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/css/scss/.gitkeep",
-		"oF": 0
-		},
-	"/editorconfig.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/editorconfig.txt",
 		"oF": 0
 		},
 	"/email/_mail-vars.scss": {
@@ -168,33 +207,33 @@
 		"oF": 0
 		},
 	"/icone/gulpfile.js": {
-		"bF": 0,
+		"bF": 4,
 		"ft": 64,
-		"ma": 0,
+		"ma": 1,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/icone/gulpfile-min.js",
-		"oF": 0,
-		"sC": 3,
+		"oF": 1,
+		"sC": 0,
 		"tS": 0
 		},
 	"/icone/icon_list.js": {
-		"bF": 0,
+		"bF": 4,
 		"ft": 64,
-		"ma": 0,
+		"ma": 1,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/icone/icon_list-min.js",
-		"oF": 0,
-		"sC": 3,
+		"oF": 1,
+		"sC": 0,
 		"tS": 0
 		},
-	"/icone/svg_files/.gitkeep": {
+	"/icone/icone-svg/.gitkeep": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/icone/svg_files/.gitkeep",
+		"oAP": "/icone/icone-svg/.gitkeep",
 		"oF": 0
 		},
 	"/imgs/.gitkeep": {
@@ -208,7 +247,7 @@
 	"/js/backoffice-libs.js": {
 		"bF": 0,
 		"ft": 64,
-		"ma": 0,
+		"ma": 1,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/backoffice-libs-min.js",
@@ -217,12 +256,34 @@
 		"tS": 0
 		},
 	"/js/backoffice.js": {
-		"bF": 0,
+		"bF": 4,
 		"ft": 64,
-		"ma": 0,
+		"ma": 1,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/backoffice-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/public-libs.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/public-libs-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/public.js": {
+		"bF": 4,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/public-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -235,21 +296,10 @@
 		"oAP": "/js/src-backoffice/.gitkeep",
 		"oF": 0
 		},
-	"/js/src-backoffice/_contenuti_scheda.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js/src-backoffice/_contenuti_scheda-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/js/src-backoffice/_datatable_config.js": {
-		"bF": 0,
+		"bF": 4,
 		"ft": 64,
-		"ma": 0,
+		"ma": 1,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/js/src-backoffice/_datatable_config-min.js",
@@ -258,9 +308,9 @@
 		"tS": 0
 		},
 	"/js/src-backoffice/_file_uploader.js": {
-		"bF": 0,
+		"bF": 4,
 		"ft": 64,
-		"ma": 0,
+		"ma": 1,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/js/src-backoffice/_file_uploader-min.js",
@@ -269,15 +319,23 @@
 		"tS": 0
 		},
 	"/js/src-backoffice/_utenti_scheda.js": {
-		"bF": 0,
+		"bF": 4,
 		"ft": 64,
-		"ma": 0,
+		"ma": 1,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/js/src-backoffice/_utenti_scheda-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/js/src-shared/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/js/src-shared/.gitkeep",
+		"oF": 0
 		},
 	"/js/src/.gitkeep": {
 		"cB": 0,
@@ -851,6 +909,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"default-case-last": {
+			"active": 0,
+			"optionString": ""
+			},
 		"default-param-last": {
 			"active": 0,
 			"optionString": ""
@@ -1263,6 +1325,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-loss-of-precision": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-magic-numbers": {
 			"active": 0,
 			"optionString": "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
@@ -1378,6 +1444,10 @@
 		"no-regex-spaces": {
 			"active": 1,
 			"optionString": ""
+			},
+		"no-restricted-exports": {
+			"active": 0,
+			"optionString": "{'restrictedNamedExports': []}"
 			},
 		"no-restricted-globals": {
 			"active": 0,
@@ -1522,6 +1592,10 @@
 		"no-use-before-define": {
 			"active": 0,
 			"optionString": "{'functions': true, 'classes': true, 'variables': true}"
+			},
+		"no-useless-backreference": {
+			"active": 0,
+			"optionString": ""
 			},
 		"no-useless-call": {
 			"active": 0,
@@ -2227,8 +2301,8 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"bundleFormat": 0,
-		"createSourceMap": 0,
+		"bundleFormat": 4,
+		"createSourceMap": 1,
 		"minifyOutput": 1,
 		"syntaxCheckerStyle": 3,
 		"transpilerStyle": 0
