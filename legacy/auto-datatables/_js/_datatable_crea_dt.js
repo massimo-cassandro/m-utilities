@@ -54,8 +54,7 @@
         } else {
           _storage = JSON.parse( localStorage.getItem( 'DataTables_' + settings.sInstance ) );
         }
-
-        if(_storage.search_form_data) {
+        if(_storage && _storage.search_form_data) {
           let form = $('#' + opts.dtRender.bindToForm);
           for( let i in _storage.search_form_data ) {
             $(`[name="${i}"]`, form).val(_storage.search_form_data[i]);
