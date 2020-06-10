@@ -64,7 +64,7 @@ export default function () {
 
   $('#toggle-config').click(function(){
     $('#cfg-wrapper').slideToggle(function() {
-      config_field.trigger('input');
+      config_field[0].dispatchEvent(new Event('input'));
     });
   });
 

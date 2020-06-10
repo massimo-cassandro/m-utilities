@@ -7,7 +7,7 @@
   per ridimensionare un elemento textarea in seguito all'aggiunta di un testo
   dinamico, effettuare il trigger dell'evento input:
 
-    target_textarea.dispatchEvent('input')
+    target_textarea.dispatchEvent(new Event('input'));
 
 
   Credits:
@@ -28,6 +28,6 @@ export default function () {
     el.addEventListener('input', () => {
       el.style.height = 0;
       el.style.height = (el.scrollHeight - v_borders) + 'px';
-    });
+    }, false);
   });
 }
