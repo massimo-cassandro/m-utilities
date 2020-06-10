@@ -28,7 +28,7 @@
     _this.html('');
 
     // salvataggio parametri form ricerca
-    if(opts.datatable_options.stateSave && opts.dtRender.bindToForm) {
+    if(opts.datatable_options.stateSave && opts.dtRender && opts.dtRender.bindToForm) {
       let search_form_data = Object.fromEntries(
         new FormData(document.getElementById(opts.dtRender.bindToForm))
       );

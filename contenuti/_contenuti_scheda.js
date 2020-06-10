@@ -187,7 +187,7 @@ export default function () {
       } catch(e) { //throw "error"
         mAlert({
           type  : 'error',
-          title : 'Il campo `Config` non contiene un JSON valido'
+          title : 'Il campo `Config` contiene un JSON non valido'
         });
         return false;
       }
