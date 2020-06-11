@@ -42,7 +42,6 @@
   {{ form_errors(form) }}
 
     {%- if is_granted('ROLE_SUPER_ADMIN') -%}
-      <p class="text-right d-print-none"><a href="{{ path('admin_contenuti_elenco') }}">Torna all'elenco</a></p>
       <div class="box mb-4">
         <fieldset class="my-0">
           <legend>Config <button type="button" id="toggle-config" class="ml-4 btn btn-link p-0 small">Mostra/Nascondi</button></legend>
@@ -171,6 +170,8 @@
       </div>
     {%- endif -%}
 
+    <p class="text-right d-print-none"><a href="{{ path('admin_contenuti_elenco') }}">Torna all'elenco</a></p>
+
     {%- if entity.id|default() -%}
       <div class="contenuti-values">
 
@@ -252,7 +253,7 @@
           {%- endif -%}
 
           <div class="row">
-            <div class="col-sm-6 col-md-6">
+            <div class="col-md-6">
               <div class="form-group {{- is_required? ' required' : '' }}">
                 {{ label_tag|raw }}
                 {%- if input_group_append or input_group_prepend -%}
@@ -303,17 +304,21 @@
             {% set class = class ~ ' autosize' %}
           {%- endif -%}
 
-          <div class="form-group {{- is_required? ' required' : '' }}">
-            {{ label_tag|raw }}
-            <textarea class="form-control {{- class -}}" {{- attrs|raw  -}}>{{- entity.val -}}</textarea>
-            {%- if is_testo_html -%}
-              <div class="form-help-text">
-                Usa i tag html per grassetti (<code>&lt;strong&gt; ... &lt;/strong&gt;</code>),
-                corsivi (<code>&lt;em&gt; ... &lt;/em&gt;</code>) o
-                nuova riga (<code>&lt;br&gt;</code>), ecc.<br>
-                Gli “a capo” senza il tag <code>&lt;br&gt;</code> vengono ignorati.
+          <div class="row">
+            <div class="col-lg-10 col-xl-8">
+              <div class="form-group {{- is_required? ' required' : '' }}">
+                {{ label_tag|raw }}
+                <textarea class="form-control {{- class -}}" {{- attrs|raw  -}}>{{- entity.val -}}</textarea>
+                {%- if is_testo_html -%}
+                  <div class="form-help-text">
+                    Usa i tag html per grassetti (<code>&lt;strong&gt; ... &lt;/strong&gt;</code>),
+                    corsivi (<code>&lt;em&gt; ... &lt;/em&gt;</code>) o
+                    nuova riga (<code>&lt;br&gt;</code>), ecc.<br>
+                    Gli “a capo” senza il tag <code>&lt;br&gt;</code> vengono ignorati.
+                  </div>
+                {%- endif -%}
               </div>
-            {%- endif -%}
+            </div>
           </div>
 
         {# checkbox #}
@@ -403,6 +408,44 @@
         {# gallery #}
         {%- elseif tipo == 11 -%}
 
+          {%- if config.link is not defined -%}
+            {% set link = false %}
+          {%- elseif config.link is same as(false) or config.link is same as('false') -%}
+            {% set link = false %}
+          {%- else -%}
+            {% set link = config.link %}
+          {%- endif -%}
+
+          {% set cfg_extra_fields = [] %}
+
+          {%- if dida is not same as(false) -%}
+            {% set cfg_extra_fields = cfg_extra_fields|merge([
+              {
+                value_key : 'dida',
+                use_rel_id: true,
+                std_markup: {
+                  label: "Dida./descr.",
+                  type : 'text',
+                  attrs: dida is same as('required')? 'required' : null
+                }
+              }
+            ]) %}
+          {%- endif -%}
+
+          {%- if link is not same as(false) -%}
+            {% set cfg_extra_fields = cfg_extra_fields|merge([
+              {
+                value_key : 'link',
+                use_rel_id: true,
+                std_markup: {
+                  label: "Link",
+                  type : 'url',
+                  attrs: link is same as('required')? 'required' : null
+                }
+              }
+            ]) %}
+          {%- endif -%}
+
           {% include '@includes/file_uploader.html.twig' with {
 
             data: {
@@ -418,35 +461,11 @@
             }),
 
             values: (entity.gallery and entity.gallery|length)? entity.gallery : null,
-            viewer_extra_params: ['ext=1', 'alpha=1']
+            viewer_extra_params: ['ext=1', 'alpha=1'],
 
-          }
-          |merge(dida is not same as(false)? {
-            extra_fields: [
-              {
-                value_key : 'dida',
-                use_rel_id: true,
-                std_markup: {
-                  label: "Dida./descr.",
-                  type : 'text',
-                  attrs: dida is same as('required')? 'required' : null
-                }
-              }
-            ]
-          } : {})
-          |merge(url is not same as(false)? {
-            extra_fields: [
-              {
-                value_key : 'url',
-                use_rel_id: true,
-                std_markup: {
-                  label: "Url",
-                  type : 'url',
-                  attrs: url is same as('required')? 'required' : null
-                }
-              }
-            ]
-          } : {}) %}
+            extra_fields: cfg_extra_fields
+          } %}
+
 
         {%- endif -%}
       </div>
@@ -460,7 +479,7 @@
     {{ form_widget(form._token) }}
     {{ form_end(form, {'render_rest': false}) }}
 
-  <p class="text-right d-print-none"><a href="{{ path('admin_contenuti_elenco') }}">Torna all'elenco</a></p>
+  <p class="text-right d-print-none"><a href="{{ path('admin_contenuti_elenco') }}">Torna all’elenco</a></p>
 
 
 {% endblock body %}

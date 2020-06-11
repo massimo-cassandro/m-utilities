@@ -1,4 +1,4 @@
-/* globals moment,  Mustache, JSutils, datatable_setup:true */
+/* globals moment,  Mustache, datatable_setup:true */
 // exported
 
 /*!@license
@@ -15,6 +15,38 @@
   Il plugin va assegnato al div che conterrà la tabella
   è necessario che il valore datatable_options.columns sia impostato
   */
+
+  // patch per l'eliminazione di JSUtil
+  // TODO nella nuova versione utilizzare il modulo es6 esistente
+  const number_format = function (number, decimals) {
+
+    if(decimals === undefined) decimals=0;
+    number = Number( number);
+
+    function toLocaleStringSupportsLocales() {
+      var nn = 0;
+      try {
+        nn.toLocaleString('i');
+      } catch (e) {
+        return e.name === 'RangeError';
+      }
+      return false;
+    }
+
+    if(toLocaleStringSupportsLocales()) {
+      number = Number(number.toFixed(decimals));
+      return number.toLocaleString('it-IT', { minimumFractionDigits: decimals });
+
+    } else {
+
+      // http://stackoverflow.com/questions/2254185/regular-expression-for-formatting-numbers-in-javascript
+      number = number.toFixed( decimals );
+      var number_parts = String(number).split('.');
+
+      return number_parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.') + ( decimals ? ',' + number_parts[1] : '');
+    }
+  };
+
   $.fn.creaDataTable=function (options) {
 
     datatable_setup = datatable_setup || {};
@@ -64,7 +96,7 @@
         }
 
         return _storage;
-      }
+      };
 
     }
 
@@ -277,13 +309,13 @@
 
                   case 'num_format0':
                     if(!isNaN(row[i]) && row[i] !== null) {
-                      row[i] = JSutils.number_format(row[i],0);
+                      row[i] = number_format(row[i],0);
                     }
                     break;
 
                   case 'num_format2':
                     if(!isNaN(row[i]) && row[i] !== null) {
-                      row[i] = JSutils.number_format(row[i],2);
+                      row[i] = number_format(row[i],2);
                     }
                     break;
 
@@ -460,7 +492,7 @@
         case 'num':
           item.dtRender.decimali = item.dtRender.decimali || 0;
           item.data = function (row) {
-            return JSutils.number_format( row[item.dtRender.field], +item.dtRender.decimali ).replace(/,(\d+)/, '.<span class="' + dt_options.formats.decimals_class + '">$1</span>');
+            return number_format( row[item.dtRender.field], +item.dtRender.decimali ).replace(/,(\d+)/, '.<span class="' + dt_options.formats.decimals_class + '">$1</span>');
           };
           item.type = 'num'; // 'num-fmt'
           item.className = item.className || 'text-right';
@@ -476,7 +508,7 @@
 
           item.data = function (row) {
             return row[item.dtRender.field] ? '<span class="' + dt_options.formats.euro_class + '">' +
-                JSutils.number_format( row[item.dtRender.field], +item.dtRender.decimali ).replace(/,(\d+)/, '.<span class="' + dt_options.formats.decimals_class + '">$1</span>') +
+                number_format( row[item.dtRender.field], +item.dtRender.decimali ).replace(/,(\d+)/, '.<span class="' + dt_options.formats.decimals_class + '">$1</span>') +
                 '</span>' : '&mdash;';
           };
           item.className = item.className || 'text-right';

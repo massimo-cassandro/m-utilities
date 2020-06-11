@@ -14,26 +14,27 @@
   <form action="{{ path('admin_contenuti_elenco_json') }}" id="f_ricerca" method="post" data-disable-submit="false" class="d-print-none">
     <fieldset>
       <legend>Filtra contenuti</legend>
-      <div class="row">
-        <div class="col-md-6">
+      <div class="row align-items-end">
+        <div class="col-sm-6 col-lg-4">
           {{ form_row(form.sezione, {
             id: 'filtro-sezione',
             label: "Sezione/pagina"
           }) }}
         </div>
-        <div class="col-md-6">
+        <div class="col-sm-6 col-lg-4">
           {{ form_row(form.tipo, {
             id: 'filtro-tipo',
             label: "Tipo contenuto"
           }) }}
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 form-group text-center text-md-left">
-          <button type="submit" class="btn btn-primary">Cerca</button>
-        </div>
-        <div class="col-md-6 form-group text-center text-md-right mt-2 mt-md-0">
-          <button type="button" class="contenuti-filter-reset btn btn-sm btn-secondary">Azzera filtri</button>
+
+        <div class="col-lg-4 d-sm-flex justify-content-between">
+          <div class="form-group text-center text-sm-left">
+            <button type="submit" class="btn btn-primary">Cerca</button>
+          </div>
+          <div class="form-group text-center text-sm-left mt-3 mt-sm-0">
+            <button type="button" class="contenuti-filter-reset btn btn-secondary">Azzera filtri</button>
+          </div>
         </div>
       </div>
     </fieldset>
