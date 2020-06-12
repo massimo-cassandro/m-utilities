@@ -1,10 +1,13 @@
 import m_cke_loader from 'm-utilities/ckeditor-utilities/_m-ckeditor-loader';
 import m_cke_form_check from 'm-utilities/ckeditor-utilities/_m-ckeditor-form-check';
 import textarea_autosize from 'm-utilities/js-utilities/_textarea-autosize';
-import ffo_loader from 'm-utilities/js-utilities/_fontfaceobserver_loader';
+// import ffo_loader from 'm-utilities/js-utilities/_fontfaceobserver_loader';
 import file_upl from './src-backoffice/_file_uploader';
 import {inputDateSupport, inputTimeSupport} from 'm-utilities/js-utilities/_input_date_support';
+import {datetimeModalFallback} from 'm-utilities/js-utilities/_input_datetime-bs4-modal-fallback';
+import {inputDateRawFallback} from 'm-utilities/js-utilities/_input_date_raw_fallback';
 import {isIE} from 'm-utilities/js-utilities/_ie_check';
+
 
 import utenti_scheda from './src-backoffice/_utenti_scheda';
 import contenuti_elenco from './src-backoffice/_contenuti_elenco';
@@ -27,19 +30,29 @@ let jsapp = {
   textarea_autosize();
   file_upl();
 
-  // fonts
-  //'Work+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700', 'Zilla+Slab:wght@300'
-  ffo_loader([
-    ['Work Sans', { weight: 300, style: 'normal'}],
-    ['Work Sans', { weight: 300, style: 'italic'}],
-    ['Work Sans', { weight: 400, style: 'normal'}],
-    ['Work Sans', { weight: 400, style: 'italic'}],
-    ['Work Sans', { weight: 500, style: 'normal'}],
-    //['Work Sans', { weight: 500, style: 'italic'}],
-    ['Work Sans', { weight: 700, style: 'normal'}],
-    ['Work Sans', { weight: 700, style: 'italic'}],
-    ['Zilla Slab', { weight: 300, style: 'normal'}]
-  ]);
+  //date fallback
+  inputDateRawFallback();
+
+  // datetime fallback
+  new datetimeModalFallback( {
+    container_class: '',
+    date_display_class: 'form-control text-truncate font-weight-normal',
+    btn_class: 'btn btn-secondary'
+  });
+
+  // // fonts
+  // //'Work+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700', 'Zilla+Slab:wght@300'
+  // ffo_loader([
+  //   ['Work Sans', { weight: 300, style: 'normal'}],
+  //   ['Work Sans', { weight: 300, style: 'italic'}],
+  //   ['Work Sans', { weight: 400, style: 'normal'}],
+  //   ['Work Sans', { weight: 400, style: 'italic'}],
+  //   ['Work Sans', { weight: 500, style: 'normal'}],
+  //   //['Work Sans', { weight: 500, style: 'italic'}],
+  //   ['Work Sans', { weight: 700, style: 'normal'}],
+  //   ['Work Sans', { weight: 700, style: 'italic'}],
+  //   ['Zilla Slab', { weight: 300, style: 'normal'}]
+  // ]);
 
   // browser check
   if(!inputDateSupport() || !inputTimeSupport() || isIE()) {
