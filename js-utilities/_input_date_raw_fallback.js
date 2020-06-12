@@ -8,7 +8,7 @@ import {date_utilities} from 'm-utilities/js-utilities/_date-utilities';
 export function inputDateRawFallback() {
   'use strict';
 
-  if( inputDateSupport() ) {
+  if( !inputDateSupport() ) {
 
     const date_regexp_string = '([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))',
       date_regexp = new RegExp(date_regexp_string);
@@ -22,10 +22,10 @@ export function inputDateRawFallback() {
       date_field.addEventListener('change', () => {
         let data = date_field.value,
           data_valida = date_utilities.date_from_iso(data) !== false && date_regexp.test(data),
-          invalid_string = 'È necessario inserire la data nel formato AAAA-MM-GG. '+
+          customValidity = 'È necessario inserire la data nel formato AAAA-MM-GG. '+
             'Mese e giorno devono essere di due cifre (es. 01, 02... 10, 11...)';
 
-        date_field.setCustomValidity(data_valida? '' : invalid_string);
+        date_field.setCustomValidity(data_valida? '' : customValidity);
       }, false);
 
     }); // end foreach
