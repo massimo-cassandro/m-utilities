@@ -1,8 +1,7 @@
 export default function () {
   'use strict';
 
-  const esa_app = this,
-    config_field = $('#config'),
+  const config_field = $('#config'),
     cfg_tpl_common = {
       class: 'class1 class2',
       attributes: {
@@ -160,15 +159,15 @@ export default function () {
     }
   });
 
-  $('.test-video').click(function() {
+  // $('.test-video').click(function() {
 
-    let btn = $(this),
-      video_container = btn.closest('.form-group'),
-      titolo_modal = $('label', video_container).text(),
-      keyname = $('.video-keyname', video_container).val();
+  //   let btn = $(this),
+  //     video_container = btn.closest('.form-group'),
+  //     titolo_modal = $('label', video_container).text(),
+  //     keyname = $('.video-keyname', video_container).val();
 
-    esa_app.test_video(keyname, titolo_modal);
-  });
+  //   test_S3_video(keyname, titolo_modal);
+  // });
 
   $('#form_contenuti').submit(function(){
 
