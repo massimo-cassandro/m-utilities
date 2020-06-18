@@ -257,17 +257,6 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/js-utilities/_email-antispam.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js-utilities/_email-antispam-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/js-utilities/_escapeHTML.js": {
 		"bF": 0,
 		"ft": 64,
@@ -490,6 +479,17 @@
 		"oS": 0,
 		"sct": 1
 		},
+	"/legacy/_input_date_support.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/_input_date_support-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/legacy/_svg4everybody.js": {
 		"bF": 0,
 		"ft": 64,
@@ -497,6 +497,17 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/legacy/_svg4everybody-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/_webp_support.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/_webp_support-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0

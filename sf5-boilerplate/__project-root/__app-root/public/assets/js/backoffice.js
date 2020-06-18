@@ -1,21 +1,32 @@
-import m_cke_loader from 'm-utilities/ckeditor-utilities/_m-ckeditor-loader';
-import m_cke_form_check from 'm-utilities/ckeditor-utilities/_m-ckeditor-form-check';
-import textarea_autosize from 'm-utilities/js-utilities/_textarea-autosize';
+import m_cke_loader from './node_modules/m-utilities/ckeditor-utilities/_m-ckeditor-loader';
+import m_cke_form_check from './node_modules/m-utilities/ckeditor-utilities/_m-ckeditor-form-check';
+import textarea_autosize from './node_modules/m-utilities/js-utilities/_textarea-autosize';
 // import ffo_loader from 'm-utilities/js-utilities/_fontfaceobserver_loader';
 import file_upl from './src-backoffice/_file_uploader';
-import {inputDateSupport, inputTimeSupport} from 'm-utilities/js-utilities/_input_date_support';
-import {datetimeModalFallback} from 'm-utilities/js-utilities/_input_datetime-bs4-modal-fallback';
-import {inputDateRawFallback} from 'm-utilities/js-utilities/_input_date_raw_fallback';
-import {isIE} from 'm-utilities/js-utilities/_ie_check';
+import {inputDateSupport, inputTimeSupport} from './node_modules/m-utilities/js-utilities/_input_date_support';
+import {datetimeModalFallback} from './node_modules/m-utilities/js-utilities/_input_datetime-bs4-modal-fallback';
+import {inputDateRawFallback} from './node_modules/m-utilities/js-utilities/_input_date_raw_fallback';
+import {isIE} from './node_modules/m-utilities/js-utilities/_ie_check';
 
 
 import utenti_scheda from './src-backoffice/_utenti_scheda';
-import contenuti_elenco from './src-backoffice/_contenuti_elenco';
-import contenuti_scheda from './src-backoffice/_contenuti_scheda';
+import contenuti_elenco from './node_modules/m-utilities/sf5-boilerplate/contenuti/_contenuti_elenco';
+import contenuti_scheda from './node_modules/m-utilities/sf5-boilerplate/contenuti/_contenuti_scheda';
 import news_scheda from './src-backoffice/_news_scheda';
 
 let jsapp = {
   maindata: $('.appdata').data('d'),
+  submit_err: (title, mes) => {
+    'use strict';
+    $(':submit').prop('disabled', false);
+    mAlert({
+      type  : 'error',
+      title : title,
+      mes   : mes || null
+    });
+    return false;
+  },
+
   utenti_scheda: utenti_scheda,
   contenuti_elenco: contenuti_elenco,
   contenuti_scheda: contenuti_scheda,
@@ -53,6 +64,12 @@ let jsapp = {
   //   ['Work Sans', { weight: 700, style: 'italic'}],
   //   ['Zilla Slab', { weight: 300, style: 'normal'}]
   // ]);
+
+
+  // disabilita pulsante submit al momento della registrazione
+  $('form:not([data-disable-submit="false"])').submit(function () {
+    $(this).find(':submit').prop('disabled', true);
+  });
 
   // browser check
   if(!inputDateSupport() || !inputTimeSupport() || isIE()) {
@@ -148,6 +165,7 @@ let jsapp = {
         type  : 'error',
         title : 'È necessario caricare le immagini obbligatorie'
       });
+      $(':submit').disabled(false);
       return false;
     }
   });
@@ -165,6 +183,7 @@ let jsapp = {
       return `Il campo ${elementoRequired} è obbligatorio`;
     },
     alertUI: mes => {
+      $(':submit').disabled(false);
       mAlert({
         type           : 'error',
         title          : mes,

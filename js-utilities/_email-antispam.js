@@ -80,7 +80,7 @@ export function email_antispam (options) {
   }
 
   document.querySelectorAll('[data-e]').forEach(el => {
-    let domain = options.default_domain || el.dataset.d;
+    let domain = el.dataset.d || options.default_domain;
     if(domain) {
       let email = el.dataset.e + '@' + domain,
         content = el.innerHTML || obfuscate_email(email);
