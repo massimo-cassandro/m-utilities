@@ -87,9 +87,11 @@ export function email_antispam (options) {
       let email = el.dataset.asE + '@' + domain,
         content = el.innerHTML || obfuscate_email(email);
 
-      el.innerHTML = `<a href="#">${content}</a>`;
+      // el.innerHTML = `<a href="mailto:${email}" target="_blank" rel="noopener noreferrer">${content}</a>`;
 
-      el.querySelector('a').addEventListener('click', () => {
+      el.innerHTML = `<a href="#" target="_blank" rel="noopener noreferrer">${content}</a>`;
+      el.querySelector('a').addEventListener('click', (e) => {
+        e.preventDefault();
         window.location.href = `mailto:${email}`;
       }, false);
     }
