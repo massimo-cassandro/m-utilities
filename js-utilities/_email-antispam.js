@@ -3,12 +3,13 @@
  * Nasconde le email agli spammer
  * sostituire i tag mailto con
  *
- *    <span data-e="xxxx" data-d="xxxx.it">__argument__</span>
+ *    <span data-as-e="xxxx" data-as-d="xxxx/it">__argument__</span>
  *
  * dove:
  *  - `e` è la porzione utente dell'indirizzo email (prima della chiocciola)
  *  - `d` è il dominio (dopo la chiocciola). Se è indicato un dominio di default
- *        può essere omesso
+ *        può essere omesso. È possibile sostituire i punti con lo slash ('/')
+ *        per rendere meno riconoscibile il dominio
  * - `__argument__` è il testo (opzionale) da mostrare. Se non è presente viene
  *                  mostrato l'indirizzo email (offuscato)
  */
@@ -79,10 +80,11 @@ export function email_antispam (options) {
     options = opts;
   }
 
-  document.querySelectorAll('[data-e]').forEach(el => {
-    let domain = el.dataset.d || options.default_domain;
+  document.querySelectorAll('[data-as-e]').forEach(el => {
+    let domain = el.dataset.asD || options.default_domain;
     if(domain) {
-      let email = el.dataset.e + '@' + domain,
+      domain = domain.replace(/\//g, '.');
+      let email = el.dataset.asE + '@' + domain,
         content = el.innerHTML || obfuscate_email(email);
 
       el.innerHTML = `<a href="#">${content}</a>`;
