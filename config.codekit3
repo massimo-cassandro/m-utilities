@@ -257,6 +257,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/js-utilities/_email-antispam.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js-utilities/_email-antispam-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/js-utilities/_escapeHTML.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1436,11 +1447,27 @@
 		"oS": 0,
 		"sct": 1
 		},
-	"/sf5-boilerplate": {
-		"ft": 65536,
+	"/sistema-contenuti/_contenuti_elenco.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
 		"oA": 1,
-		"oAP": "/build/sf5-boilerplate",
-		"oF": 0
+		"oAP": "/sistema-contenuti/_contenuti_elenco-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/sistema-contenuti/_contenuti_scheda.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/sistema-contenuti/_contenuti_scheda-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"/spinners/_basic_spinner.scss": {
 		"aP": 0,

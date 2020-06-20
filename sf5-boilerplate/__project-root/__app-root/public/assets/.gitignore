@@ -1,8 +1,0 @@
-*~
-.DS_Store
-**/*.mwb.bak
-
-## ***
-/**/node_modules/
-/**/bower_components/
-*.sass-cache
