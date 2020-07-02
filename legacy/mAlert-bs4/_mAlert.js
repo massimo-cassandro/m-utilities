@@ -148,11 +148,11 @@ const mAlert = function(params = {}) {
     };
 
   params = params || {};
-  if( params.type === undefined ) {
+  if( !params.type ) {
     params.type = 'success';
   }
-  if( params.type === 'notice' ) { // symfony default
-    params.type = 'info';
+  if( params.type === 'notice' ) {
+    params.type = 'error';
   }
   params.type = params.type.toLowerCase();
   if(params.type === 'confirm') {
