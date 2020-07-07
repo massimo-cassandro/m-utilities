@@ -3,6 +3,10 @@
 // bootstrap based alert system
 // check marks: https://codepen.io/sat-ui/pen/BeWbeo
 
+
+NB RICONTROLLARE ALLINEAMENTO CON VERSIONE UFFICIALE
+
+
 const mAlert = function(params = {}) {
 
   const errorBtnLabel = function () {
