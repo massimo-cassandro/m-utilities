@@ -5,6 +5,8 @@
   Massimo Cassandro
 */
 
+// riscrivere con https://dmitripavlutin.com/parse-url-javascript/?
+
 JSutils = (function (utils) {
 	"use strict";
 

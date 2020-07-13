@@ -14,7 +14,8 @@ La build permette l'integrazione con il *viewer* per immagini e documenti e l'in
 	* <https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html>
 	* <https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/advanced-setup.html>
 	* <https://ckeditor.com/docs/ckeditor5/latest/features/image.html>
-* Repository: <https://github.com/ckeditor/ckeditor5-build-classic>
+* main repo: <https://github.com/ckeditor/ckeditor5/tree/master/packages>
+* Repository (build classic): <https://github.com/ckeditor/ckeditor5-build-classic>
 * Altre info utili: <https://ckeditor.com/docs/ckeditor5/latest/builds/guides/faq.html>
 
 ## Utilizzo di questa distribuzione
@@ -37,47 +38,9 @@ Scaricare i moduli necessari per la compilazione di CKEditor come indicato in <h
 
 > NB: far sempre riferimento al branch `stable`
 
-I moduli presenti nella versione attuale (19.0.0/apr 2020) sono:
+Consulta il file `package.json` per verificare la versione presente in questo repository.
 
-```json
-"dependencies": {
-    
-    "@ckeditor/ckeditor5-adapter-ckfinder": "^19.0.0",
-    "@ckeditor/ckeditor5-autoformat": "^19.0.0",
-    "@ckeditor/ckeditor5-basic-styles": "^19.0.0",
-    "@ckeditor/ckeditor5-block-quote": "^19.0.0",
-    "@ckeditor/ckeditor5-ckfinder": "^19.0.0",
-    "@ckeditor/ckeditor5-core": "^19.0.0",
-    "@ckeditor/ckeditor5-dev-utils": "^13.0.0",
-    "@ckeditor/ckeditor5-dev-webpack-plugin": "^9.0.0",
-    "@ckeditor/ckeditor5-easy-image": "^19.0.0",
-    "@ckeditor/ckeditor5-editor-classic": "^19.0.0",
-    "@ckeditor/ckeditor5-essentials": "^19.0.0",
-    "@ckeditor/ckeditor5-heading": "^19.0.0",
-    "@ckeditor/ckeditor5-image": "^19.0.0",
-    "@ckeditor/ckeditor5-indent": "^19.0.0",
-    "@ckeditor/ckeditor5-link": "^19.0.0",
-    "@ckeditor/ckeditor5-list": "^19.0.0",
-    "@ckeditor/ckeditor5-media-embed": "^19.0.0",
-    "@ckeditor/ckeditor5-paragraph": "^19.0.0",
-    "@ckeditor/ckeditor5-paste-from-office": "^19.0.0",
-    "@ckeditor/ckeditor5-table": "^19.0.0",
-    "@ckeditor/ckeditor5-typing": "^19.0.0",
-    "@ckeditor/ckeditor5-theme-lark": "^19.0.0",
-    "eslint": "^5.5.0",
-    "eslint-config-ckeditor5": "^2.0.0",
-    "husky": "^1.3.1",
-    "lint-staged": "^7.0.0",
-    "stylelint": "^11.1.1",
-    "stylelint-config-ckeditor5": "^1.0.0",
-    "postcss-loader": "^3.0.0",
-    "raw-loader": "^3.1.0",
-    "style-loader": "^1.0.0",
-    "terser-webpack-plugin": "^2.2.1",
-    "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6"
-}
-```
+
 
 A questi moduli sono stati aggiunti: 
 
