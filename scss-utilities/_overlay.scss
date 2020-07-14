@@ -1,7 +1,7 @@
 $overlay-bg: rgba(0,0,0,.8)!default;
 $overlay-color: #fff!default; // colore dello spinner bs4
 
-.page_overlay, .div_overlay {
+.page-overlay, .div-overlay {
   background-color: $overlay-bg;
   top:0;
   bottom: 0;
@@ -9,11 +9,16 @@ $overlay-color: #fff!default; // colore dello spinner bs4
   right: 0;
   z-index: 999999;
   color: $overlay-color;
+
+  display: flex;
+  justify-content:center;
+  align-items:center;
 }
-.page_overlay {
+.page-overlay {
   position:fixed;
 }
 
-.div_overlay {
+.div-overlay {
   position:absolute;
 }
+
