@@ -5,7 +5,7 @@ export  function overlay( container ) {
   let full_page = container === document.body;
 
   container.insertAdjacentHTML('beforeend',
-    `<div class="${full_page? 'page_overlay' : 'div_overlay'} d-flex justify-content-center align-items-center">` +
+    `<div class="${full_page? 'page-overlay' : 'div-overlay'}">` +
       '<div class="spinner-border" role="status">' +
         '<span class="sr-only">Caricamento...</span>' +
       '</div>' +
@@ -18,6 +18,6 @@ export  function remove_overlay( container ) {
 
   container = container || document.body;
   let full_page = container === document.body;
-  container.querySelector(`.${full_page? 'page_overlay' : 'div_overlay'}`).remove();
+  container.querySelector(`.${full_page? 'page-overlay' : 'div-overlay'}`).remove();
 
 }
