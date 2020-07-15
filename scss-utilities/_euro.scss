@@ -1,9 +1,9 @@
-$perc-color: currentColor!default;
+$euro-color: currentColor!default;
 .euro {
   &::before {
     font-size:70%;
     content: '\20AC';
     margin-right:.2rem;
-    color: $perc-color;
+    color: $euro-color;
   }
 }
