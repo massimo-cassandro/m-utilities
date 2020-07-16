@@ -498,6 +498,13 @@
               return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field].date).format(dt_options.formats.moment_date) : '&mdash;';
             };
             item.type = 'date';
+            item.render = function ( data, type, row ) {
+              if(type === 'sort') {
+                return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field].date).format('YYYY-MM-DD') : ''
+              } else {
+                return data;
+              }
+            };
             item.className = item.className || 'text-right';
             break;
 
@@ -506,12 +513,26 @@
               return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field].date).format(dt_options.formats.moment_datetime) : '&mdash;';
             };
             item.type = 'date';
+            item.render = function ( data, type, row ) {
+              if(type === 'sort') {
+                return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field].date).format('YYYY-MM-DD HH:mm') : ''
+              } else {
+                return data;
+              }
+            };
             item.className = item.className || 'text-right';
             break;
 
           case 'date':  // stringa data
             item.data = function (row) {
               return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field]).format(dt_options.formats.moment_date) : '&mdash;';
+            };
+            item.render = function ( data, type, row ) {
+              if(type === 'sort') {
+                return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field]).format('YYYY-MM-DD') : ''
+              } else {
+                return data;
+              }
             };
             item.type = 'date';
             item.className = item.className || 'text-right';
@@ -522,6 +543,13 @@
               return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field]).format(dt_options.formats.moment_datetime) : '&mdash;';
             };
             item.type = 'date';
+            item.render = function ( data, type, row ) {
+              if(type === 'sort') {
+                return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field]).format('YYYY-MM-DD HH:mm') : ''
+              } else {
+                return data;
+              }
+            };
             item.className = item.className || 'text-right';
             break;
 
@@ -531,10 +559,16 @@
               return number_format( row[item.dtRender.field], +item.dtRender.decimali ).replace(/,(\d+)/, '.<span class="' + dt_options.formats.decimals_class + '">$1</span>');
             };
             item.type = 'num'; // 'num-fmt'
+            item.render = function ( data, type, row ) {
+              if(type === 'sort' || type === 'filter') {
+                return row[item.dtRender.field];
+              } else {
+                return data;
+              }
+            };
             item.className = item.className || 'text-right';
 
             break;
-
 
           case 'euro':
             item.dtRender.decimali = item.dtRender.decimali !== undefined? item.dtRender.decimali : 2;
@@ -547,9 +581,15 @@
                   number_format( row[item.dtRender.field], +item.dtRender.decimali ).replace(/,(\d+)/, '.<span class="' + dt_options.formats.decimals_class + '">$1</span>') +
                   '</span>' : '&mdash;';
             };
+            item.render = function ( data, type, row ) {
+              if(type === 'sort' || type === 'filter') {
+                return row[item.dtRender.field];
+              } else {
+                return data;
+              }
+            };
             item.className = item.className || 'text-right';
             item.type = 'num'; // 'num-fmt'
-
             break;
 
           case 'bool_icons':
@@ -566,12 +606,22 @@
                   true_icon : false_icon;
               }
             };
+
+            item.render = function ( data, type, row ) {
+              if(type === 'sort' || type === 'filter') {
+                return +row[item.dtRender.field];
+              } else {
+                return data;
+              }
+            };
             item.type = 'num';
             break;
 
         } // end switch (item.dtRender.type)
 
         //delete item.dtRender;
+
+
 
       } else { // datatable std items
 
@@ -589,7 +639,7 @@
 
       } // end if(item.dtRender !== undefined )
       _columns.push(item);
-
+      // console.log(item);
     });
 
     dt_options.datatable_options.columns = _columns;
@@ -612,7 +662,7 @@
         } // end if cf_valid
 
         return false;
-*/
+      */
       _form.submit(function (event) {
         event.preventDefault();
         _formSubmitButton.prop('disabled', false);
