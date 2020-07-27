@@ -19,12 +19,17 @@ export default function (m_sorting_container, m_sorting_elements_selector, callb
 
 
 
-  let dragged_element = null, m_sorting_elements;
+  let dragged_element = null, m_sorting_elements = [];
 
-  if(m_sorting_elements_selector) {
-    m_sorting_elements = m_sorting_container.querySelectorAll(m_sorting_elements_selector);
-  } else {
-    m_sorting_elements = Array.from(m_sorting_container.children);
+  if(m_sorting_container) {
+    if(m_sorting_elements_selector) {
+      m_sorting_elements = m_sorting_container.querySelectorAll(m_sorting_elements_selector);
+    } else {
+      let children_elements = m_sorting_container.children;
+      if(children_elements) {
+        m_sorting_elements = Array.from(children_elements);
+      }
+    }
   }
 
 
@@ -40,7 +45,6 @@ export default function (m_sorting_container, m_sorting_elements_selector, callb
     dragged_element = null;
     // e.dataTransfer.clearData();
   };
-
 
   m_sorting_elements.forEach(el => {
     el.setAttribute('draggable', 'true');
