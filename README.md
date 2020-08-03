@@ -38,16 +38,16 @@ A very simple css+js gallery
 Dom elements sorting js class
 ## scss-functions
 
-Collection of thitd-party scss functions
+Collection of third-party scss functions
 ## scss-utilities
 
 Some scss classes that I use frequently
 
 ## boilerplate
 
-Scripts and css for my personal boilerplaet
+Scripts and css for my personal boilerplate
 ## spinners
 
 Collection of scss and less spinners
 
-## legacyLegacy js and scss (for complatibility with my older projects)
+## legacyLegacy js and scss (for compatibility with my older projects)

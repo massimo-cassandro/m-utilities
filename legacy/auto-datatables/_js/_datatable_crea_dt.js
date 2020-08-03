@@ -364,6 +364,14 @@
                         }
                         break;
 
+                      case 'sf_time':
+                        if(row[i] !== null) {
+                          row[i] = moment(row[i].date).format('HH:mm');
+                        } else {
+                          row[i] = '';
+                        }
+                        break;
+
                       case 'date':
                         if(row[i] !== null) {
                           row[i] = moment(row[i]).format(dt_options.formats.moment_date);
