@@ -422,6 +422,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/js-utilities/_submit_err.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js-utilities/_submit_err-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/js-utilities/_svg4everybody.js": {
 		"bF": 0,
 		"ft": 64,
@@ -563,6 +574,17 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/legacy/_webp_support-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/legacy/auto-datatables/_js/_datatable_crea_dt.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/legacy/auto-datatables/_js/_datatable_crea_dt-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0

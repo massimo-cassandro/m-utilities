@@ -1,13 +1,14 @@
 {
   "env": {
     "browser": true,
-    "es6": true,
-    "jquery": true
+    "jquery": true,
+    "es6": true
   },
   "extends": "eslint:recommended",
   "globals": {
     "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
+    "SharedArrayBuffer": "readonly",
+    "mAlert": "readonly"
   },
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -16,37 +17,33 @@
   "rules": {
     "indent": [
       "error",
-      2
+      2,
+      { "SwitchCase": 1 }
     ],
     "linebreak-style": [
       "error",
       "unix"
     ],
     "quotes": [
-      "error",
+      "warn",
       "single"
     ],
     "semi": [
       "error",
       "always"
     ],
+
     "eqeqeq": "warn",
     "no-extra-semi": "error",
-    "semi-spacing": [
-      "error",
-      {
-        "before": false,
-        "after": true
-      }
-    ],
+    "semi-spacing": ["error", {
+      "before": false,
+      "after": true
+    }],
     "no-console": "warn",
-    "no-unused-vars": [
-      "error",
-      {
-        "vars": "all",
-        "args": "after-used",
-        "ignoreRestSiblings": false
-      }
-    ]
+    "no-unused-vars": ["error", {
+      "vars": "all",
+      "args": "after-used",
+      "ignoreRestSiblings": false
+    }]
   }
 }
