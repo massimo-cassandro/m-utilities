@@ -123,6 +123,18 @@ export default function () {
           };
         }
 
+        if(item.classList.contains('editor-no-headings')) {
+          options.toolbar = options.toolbar.filter(item => item !== 'heading');
+        }
+
+        // rimozione eventuali separatori all'inizio e alla fine
+        if(options.toolbar[0] === '|') {
+          options.toolbar = options.toolbar.slice(1);
+        }
+        if(options.toolbar.slice(-1) === '|') {
+          options.toolbar = options.toolbar.slice(0, -1);
+        }
+
         ClassicEditor.create(item, options)
 
 
