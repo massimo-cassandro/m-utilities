@@ -1,6 +1,7 @@
 #CKEditor utilities
 
 includere i due file
+
 * `./m-ckeditor-form-check.js`
 * `./m-ckeditor-loader.js`
 
@@ -29,3 +30,7 @@ window.mUtilities.ckeditor = {
   }
 }
 ```
+
+##TODO
+
+Custom heading (loader): <https://ckeditor.com/docs/ckeditor5/latest/features/headings.html>
