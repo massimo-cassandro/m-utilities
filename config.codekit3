@@ -154,6 +154,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/ckeditor-utilities/_m-ckeditor-loader.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/ckeditor-utilities/_m-ckeditor-loader-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/ckeditor-utilities/_m-ckeditor.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -440,17 +451,6 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/js-utilities/_textarea-autosize-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/js-utilities/_toggle_disabled.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js-utilities/_toggle_disabled-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
