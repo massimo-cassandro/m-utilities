@@ -1,5 +1,5 @@
 {
-  "name": "m-utilities",
+  "name": "@massimo-cassandro/m-utilities",
   "version": "1.18.13",
   "description": "My collection of front-end development snippets & utilities",
   "scripts": {
@@ -8,6 +8,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/massimo-cassandro/m-utilities.git#master"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "author": "Massimo Cassandro",
   "license": "MIT",

@@ -5,7 +5,7 @@ Collection of js, less, sass etc snippets and utilities, including ones from oth
 Install it using npm:
 
 ```
-npm i --save m-utilities
+npm i --save @massimo-cassandro/m-utilities
 ```
 
 
@@ -22,32 +22,43 @@ Adobe Creative Cloud scripts
 ## bs4-utilities
 
 Some Bootstrap-4-based stuffs
-## ckeditor
+
+## ckeditor
 
 Ckeditor build with custom file uploader
-## ckeditor-utilities
+
+## ckeditor-utilities
 
 Ckeditor loader and other utilities
-## js-utilities
 
-Collection of js utilities## m-gallery
+## js-utilities
+
+Collection of js utilities
+
+## m-gallery
 
 A very simple css+js gallery
-## m-sorting
+
+## m-sorting
 
 Dom elements sorting js class
-## scss-functions
+
+## scss-functions
 
 Collection of third-party scss functions
-## scss-utilities
+
+## scss-utilities
 
 Some scss classes that I use frequently
 
 ## boilerplate
 
 Scripts and css for my personal boilerplate
-## spinners
+
+## spinners
 
 Collection of scss and less spinners
 
-## legacyLegacy js and scss (for compatibility with my older projects)
+## legacy
+
+Legacy js and scss (for compatibility with my older projects)
