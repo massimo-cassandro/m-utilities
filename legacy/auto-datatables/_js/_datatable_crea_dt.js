@@ -20,7 +20,7 @@
   // TODO nella nuova versione utilizzare il modulo es6 esistente
   const number_format = function (number, decimals) {
     decimals = decimals || 0;
-    return +number.toLocaleString('it-IT', { minimumFractionDigits: decimals });
+    return String(+number.toLocaleString('it-IT', { minimumFractionDigits: decimals }));
   };
 
   $.fn.creaDataTable=function (options) {
@@ -444,26 +444,26 @@
                         }
                         break;
 
-                        case 'mese':
-                          if(row[i]) {
-                            row[i] = +row[i];
-                            row[i + '_parsed'] = _mesi[row[i]];
-                          }
-                          break;
+                      case 'mese':
+                        if(row[i]) {
+                          row[i] = +row[i];
+                          row[i + '_parsed'] = _mesi[row[i]];
+                        }
+                        break;
 
-                        case 'annomese':
-                          // stringa/numero anno mese nella forma `YYYY-MM` o `YYYYMM`
-                          if(row[i]) {
-                            let anno, mese;
-                            if(row[i].indexOf('-') !== -1) {
-                              [anno, mese] = row[i].split('-').map(i => i = +i);
-                            } else {
-                              anno = -row[i].substr(0,4);
-                              mese = +row[i].substr(4);
-                            }
-                            row[i + '_parsed'] = _mesi[mese] + ' ' + anno;
+                      case 'annomese':
+                        // stringa/numero anno mese nella forma `YYYY-MM` o `YYYYMM`
+                        if(row[i]) {
+                          let anno, mese;
+                          if(row[i].indexOf('-') !== -1) {
+                            [anno, mese] = row[i].split('-').map(i => i = +i);
+                          } else {
+                            anno = -row[i].substr(0,4);
+                            mese = +row[i].substr(4);
                           }
-                          break;
+                          row[i + '_parsed'] = _mesi[mese] + ' ' + anno;
+                        }
+                        break;
 
                     } // end switch filter
                   }
@@ -484,7 +484,7 @@
             item.type = 'date';
             item.render = function ( data, type, row ) {
               if(type === 'sort') {
-                return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field].date).format('YYYY-MM-DD') : ''
+                return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field].date).format('YYYY-MM-DD') : '';
               } else {
                 return data;
               }
@@ -499,7 +499,7 @@
             item.type = 'date';
             item.render = function ( data, type, row ) {
               if(type === 'sort') {
-                return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field].date).format('YYYY-MM-DD HH:mm') : ''
+                return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field].date).format('YYYY-MM-DD HH:mm') : '';
               } else {
                 return data;
               }
@@ -513,7 +513,7 @@
             };
             item.render = function ( data, type, row ) {
               if(type === 'sort') {
-                return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field]).format('YYYY-MM-DD') : ''
+                return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field]).format('YYYY-MM-DD') : '';
               } else {
                 return data;
               }
@@ -529,7 +529,7 @@
             item.type = 'date';
             item.render = function ( data, type, row ) {
               if(type === 'sort') {
-                return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field]).format('YYYY-MM-DD HH:mm') : ''
+                return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field]).format('YYYY-MM-DD HH:mm') : '';
               } else {
                 return data;
               }
@@ -540,7 +540,10 @@
           case 'num':
             item.dtRender.decimali = item.dtRender.decimali || 0;
             item.data = function (row) {
-              return number_format( row[item.dtRender.field], +item.dtRender.decimali ).replace(/,(\d+)/, '.<span class="' + dt_options.formats.decimals_class + '">$1</span>');
+              return row[item.dtRender.field]?
+                number_format( row[item.dtRender.field], +item.dtRender.decimali )
+                  .replace(/,(\d+)/, ',<span class="' + dt_options.formats.decimals_class + '">$1</span>')
+                : '';
             };
             item.type = 'num'; // 'num-fmt'
             item.render = function ( data, type, row ) {
