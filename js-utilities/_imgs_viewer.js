@@ -1,33 +1,58 @@
 import {escapeHTML} from './_escapeHTML';
 
+/*
+  import {img_viewer} from '@massimo-cassandro/m-utilities/js-utilities/_imgs_viewer';
+
+  img_viewer({
+    viewer: window.mUtilities.viewer, // default /viewer
+    img: {
+      id: 20,
+      width: 800,
+      height: 800,
+      mime: "image/jpeg",
+      size: 88195,
+    },
+    bbs: [
+      {mq: '(min-width: 1199px)', bb:[255,255]},
+      {mq: '...', bb:[210,210]},
+      ...
+      {mq: null, bb: [546,480]}
+    ],
+    lazy: true,
+    viewer_params: '', // eventuali parametri aggiunti per il viewer
+    alt: '', // alt
+    class: ''
+  });
+
+
+  img è un oggetto nella forma
+    {
+      id: 20,
+      width: 800,
+      height: 800,
+      mime: "image/jpeg",
+      size: 88195,
+    }
+
+  bbs è un array di media queries e dimensioni (dal più grande al più piccolo):
+  l'ultimo elemento (con mq== null) rappresenta le dimensioni dell'immagine base
+
+  le dimensioni sono un array composto da base e altezza
+    [
+      {mq: '(min-width: 1199px)', bb:[255,255]},
+      {mq: '...', bb:[210,210]},
+      ...
+      {mq: null, bb: [546,480]}
+    ];
+
+  l'ultimo deve avere mq = null
+*/
 export  function img_viewer(params) {
   'use strict';
 
   window.mUtilities = window.mUtilities || {};
   window.mUtilities.viewer = window.mUtilities.viewer || '/viewer';
-  /*
-    img è un oggetto nella forma
-      {
-        id: 20,
-        width: 800,
-        height: 800,
-        mime: "image/jpeg",
-        size: 88195,
-      }
 
-    bbs è un array di media queries e dimensioni (dal più grande al più piccolo):
-    l'ultimo elemento (con mq== null) rappresenta le dimensioni dell'immagine base
-
-    le dimensioni sono un array composto da base e altezza
-      [
-        {mq: '(min-width: 1199px)', bb:[255,255]},
-        {mq: '...', bb:[210,210]},
-        ...
-        {mq: null, bb: [546,480]}
-      ];
-
-    l'ultimo deve avere mq = null
-  */
   let default_params = {
       viewer: window.mUtilities.viewer,
       img: null,
