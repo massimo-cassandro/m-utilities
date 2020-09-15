@@ -5,16 +5,10 @@ import {escapeHTML} from './_escapeHTML';
 
   img_viewer({
     viewer: window.mUtilities.viewer, // default /viewer
-    img: {
-      id: 20,
-      width: 800,
-      height: 800,
-      mime: "image/jpeg",
-      size: 88195,
-    },
+    img: __img_obj__,
     bbs: [
       {mq: '(min-width: 1199px)', bb:[255,255]},
-      {mq: '...', bb:[210,210]},
+      {mq: 'lg', bb:[210,210]},
       ...
       {mq: null, bb: [546,480]}
     ],
@@ -45,6 +39,8 @@ import {escapeHTML} from './_escapeHTML';
       {mq: null, bb: [546,480]}
     ];
 
+  mq può anche essere una delle chiavi di `bs4_std_brkpts`
+
   l'ultimo deve avere mq = null
 */
 export  function img_viewer(params) {
@@ -52,6 +48,20 @@ export  function img_viewer(params) {
 
   window.mUtilities = window.mUtilities || {};
   window.mUtilities.viewer = window.mUtilities.viewer || '/viewer';
+
+  const bs4_std_brkpts = {
+    xs: '(max-width: 575px)',
+    sm: '(min-width: 576px) and (max-width: 767px)',
+    md: '(min-width: 768px) and (max-width: 991px)',
+    lg: '(min-width: 992px) and (max-width: 1199px)',
+    xl: '(min-width: 1200px)',
+
+    xs_sm: '(max-width: 767px)',
+    xs_md: '(max-width: 991px)',
+    md_lg: '(min-width: 768px) and (max-width: 1199px)',
+    md_xl: '(min-width: 768px)',
+    lg_xl: '(min-width: 992px)'
+  };
 
   let default_params = {
       viewer: window.mUtilities.viewer,
@@ -78,6 +88,12 @@ export  function img_viewer(params) {
 
   // elaborazione bbs e calcolo doppie densità (se l'immagine originale è abbastanza grande)
   p.bbs.forEach( item => {
+
+    // sostituzione parametro `mq` con il valore di bs4_std_brkpts
+    // se la chiave corrisponde
+    if( Object.keys(bs4_std_brkpts).indexOf(item.mq) !== -1 ) {
+      item.mq = bs4_std_brkpts[item.mq];
+    }
 
     img_fmt.forEach( fmt => {
       let this_bb_wi = item.bb[0],
