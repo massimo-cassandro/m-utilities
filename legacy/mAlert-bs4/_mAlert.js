@@ -215,9 +215,9 @@ const mAlert = function(params = {}) {
         window.clearTimeout(timeoutID);
       }
 
-      // if(params.callback && typeof params.callback === 'function') {
-      //   params.callback(confirm_result);
-      // }
+      if(params.callback && typeof params.callback === 'function') {
+        params.callback(confirm_result);
+      }
     })
     .on('hidden.bs.modal', function () {
       $(this).remove();
