@@ -59,6 +59,13 @@ export default function () {
       },
       dida: 'true|required|false',
       link: 'true|required|false'
+    },
+    cfg_tpl_file = {
+      file_uploader_data: {
+        filetype: 'auto|pdf',
+        max_filesize: '4Mb',
+        required: false
+      }
     };
 
   $('#toggle-config').click(function(){
@@ -119,21 +126,25 @@ export default function () {
       let cfg_tpl = Object.assign({}, cfg_tpl_common);
 
       switch (tipo) {
-      case 2: // number
-        cfg_tpl = Object.assign(cfg_tpl, cfg_tpl_num);
-        break;
+        case 2: // number
+          cfg_tpl = Object.assign(cfg_tpl, cfg_tpl_num);
+          break;
 
-      case 6: // textarea
-        cfg_tpl = Object.assign(cfg_tpl, cfg_tpl_textarea);
-        break;
+        case 6: // textarea
+          cfg_tpl = Object.assign(cfg_tpl, cfg_tpl_textarea);
+          break;
 
-      case 10: // img
-        cfg_tpl = Object.assign({}, cfg_tpl_img);
-        break;
+        case 10: // img
+          cfg_tpl = Object.assign({}, cfg_tpl_img);
+          break;
 
-      case 11: // gallery
-        cfg_tpl = Object.assign({}, cfg_tpl_gallery);
-        break;
+        case 11: // gallery
+          cfg_tpl = Object.assign({}, cfg_tpl_gallery);
+          break;
+
+        case 12: // file
+          cfg_tpl = Object.assign({}, cfg_tpl_file);
+          break;
       }
 
       let cfg_tpl_str = JSON.stringify(cfg_tpl, null, 2);
