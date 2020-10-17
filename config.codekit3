@@ -444,6 +444,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/js-utilities/_text_utilities.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js-utilities/_text_utilities-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/js-utilities/_textarea-autosize.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1251,30 +1262,6 @@
 		"oAP": "/LICENSE",
 		"oF": 0
 		},
-	"/m-gallery/_m-gallery.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/m-gallery/_m-gallery-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/m-gallery/_m-gallery.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"ec": 1,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/m-gallery/_m-gallery.css",
-		"oF": 0,
-		"oS": 0,
-		"sct": 1
-		},
 	"/m-sorting/_m-sorting.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1743,6 +1730,30 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/TODO/m-gallery/_m-gallery.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/TODO/m-gallery/_m-gallery-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/TODO/m-gallery/_m-gallery.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/TODO/m-gallery/_m-gallery.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
 		}
 	},
 "hooks": [

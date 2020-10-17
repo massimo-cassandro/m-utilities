@@ -7,3 +7,9 @@ ehthumbs.db
 Icon?
 Thumbs.db
 **/.gitkeep
+/TODO
+/adobe-cc
+/.editorconfig
+/.eslintignore
+/.eslintrc.json
+/.gitattributes
