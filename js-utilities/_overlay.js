@@ -1,5 +1,4 @@
 export  function overlay( container ) {
-  'use strict';
 
   container = container || document.body;
   let full_page = container === document.body;
@@ -14,7 +13,6 @@ export  function overlay( container ) {
 }
 
 export  function remove_overlay( container ) {
-  'use strict';
 
   container = container || document.body;
   let full_page = container === document.body;

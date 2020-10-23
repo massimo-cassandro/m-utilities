@@ -75,7 +75,6 @@
 
 
 function bs4_accordion2Tabs(accordion_container, switch_breakpoint, tab_pills, title_container_class) {
-	"use strict";
 
 	switch_breakpoint      = switch_breakpoint || 'sm';              // breakpoint oltre il quale si passa da accordion a tabs e viceversa
 	tab_pills              = tab_pills || false;                     // usa nav-pills invece di nav-tabs

@@ -6,7 +6,6 @@
   Requires js-cookie
 */
 export default function () {
-  'use strict';
 
   // google font -> es: https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700|Roboto:400&display=swap
   let google_fonts_array=document.querySelector('link[href^="https://fonts.googleapis.com"][rel="stylesheet"]');

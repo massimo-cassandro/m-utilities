@@ -10,7 +10,6 @@ if(typeof mUtilities === 'undefined') {
 }
 
 mUtilities.check_bs4_mq = (callback) => {
-  'use strict';
 
   // costruisce la struttura per il rilevamento del breakpoint
   document.body.insertAdjacentHTML("beforeend",
@@ -27,7 +26,6 @@ mUtilities.check_bs4_mq = (callback) => {
 
   // restituisce il breakpoint corrente
   const checkmq = () => {
-    'use strict';
 
     const brtkpts = ['xs', 'sm', 'md', 'lg', 'xl'];
 

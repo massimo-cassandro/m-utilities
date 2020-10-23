@@ -3,7 +3,6 @@
 */
 
 export  function escapeHTML(str) {
-  'use strict';
 
   let characters = {
     '&': '&amp;',

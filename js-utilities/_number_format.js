@@ -1,5 +1,4 @@
 export  function number_format (number, decimals) {
-  'use strict';
 
   if(decimals === undefined) decimals=0;
   number = Number( number);

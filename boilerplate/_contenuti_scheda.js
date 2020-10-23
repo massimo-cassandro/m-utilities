@@ -1,5 +1,4 @@
 export default function () {
-  'use strict';
 
   const config_field = $('#config'),
     cfg_tpl_common = {

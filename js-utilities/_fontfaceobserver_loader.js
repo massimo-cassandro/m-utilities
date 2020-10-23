@@ -24,7 +24,6 @@
 */
 
 export default function ( fonts_array ) {
-  'use strict';
 
   const html = document.documentElement;
   let font_observers = [],

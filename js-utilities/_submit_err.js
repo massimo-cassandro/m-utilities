@@ -14,7 +14,6 @@
 */
 
 export  function submit_err(title, mes) {
-  'use strict';
 
   document.querySelectorAll('[type="submit"]').forEach(el => {
     el.disabled = false;

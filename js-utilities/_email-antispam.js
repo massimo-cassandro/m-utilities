@@ -14,10 +14,9 @@
  *                  mostrato l'indirizzo email (offuscato)
  */
 
- export  function obfuscate_email (email) {
-   'use strict';
+export  function obfuscate_email (email) {
 
-   const rand_string = () => {
+  const rand_string = () => {
     const chars='abcedefghjilmnopqestuvwxyz ABCEDEFGHJILMNOPQESTUVWXYZ 0123456789' +
       '\n\t“”"«»%$£&/()=?^*é§°çòàù+èùàò-_.:,;',
       lunghezza = 4;
@@ -29,7 +28,7 @@
       str += chars.charAt(pos);
     }
     return str;
-  }
+  };
 
   let encoded_email = '';
   email.split('').forEach((char, idx) => {
@@ -58,10 +57,9 @@
   });
   return encoded_email;
 
- }
+}
 
 export function email_antispam (options) {
-  'use strict';
 
   const default_options = {
     default_domain: null

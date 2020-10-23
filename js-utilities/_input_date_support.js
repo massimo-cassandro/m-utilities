@@ -1,5 +1,4 @@
 export  function inputDateSupport() {
-  'use strict';
 
   const  input = document.createElement('input'),
     notADateValue = 'not-a-date';
@@ -10,7 +9,6 @@ export  function inputDateSupport() {
 }
 
 export  function inputDatetimeSupport() {
-  'use strict';
 
   const  input = document.createElement('input'),
     notADateTimeValue = 'not-a-datetime';
@@ -21,7 +19,6 @@ export  function inputDatetimeSupport() {
 }
 
 export  function inputTimeSupport() {
-  'use strict';
 
   const  input = document.createElement('input'),
     notATimeValue = 'not-a-time';

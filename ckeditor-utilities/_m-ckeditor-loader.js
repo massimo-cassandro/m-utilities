@@ -5,7 +5,6 @@
 */
 
 export default function () {
-  'use strict';
 
   if(typeof window.mUtilities === 'undefined') {
     window.mUtilities = {};

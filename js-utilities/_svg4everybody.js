@@ -1,7 +1,6 @@
 /* globals svg4everybody */
 
 export default function () {
-  'use strict';
 
   var script = document.createElement('script');
   script.onload = function() {

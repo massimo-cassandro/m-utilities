@@ -44,7 +44,6 @@ import {escapeHTML} from './_escapeHTML';
   l'ultimo deve avere mq = null
 */
 export  function img_viewer(params) {
-  'use strict';
 
   window.mUtilities = window.mUtilities || {};
   window.mUtilities.viewer = window.mUtilities.viewer || '/viewer';

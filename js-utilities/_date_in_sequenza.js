@@ -1,5 +1,4 @@
 export default function () {
-  'use strict';
   //date in sequenza
   /*
     l'attributo `data-min` in un campo data indica l'id del campo il cui valore

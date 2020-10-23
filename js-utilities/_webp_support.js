@@ -4,7 +4,6 @@
 // https://davidwalsh.name/detect-webp
 
 export function webpSupport() {
-  'use strict';
 
   var webpData = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=',
     setWebpSupport = esito => {

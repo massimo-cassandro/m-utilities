@@ -6,7 +6,6 @@ import {date_utilities} from 'm-utilities/js-utilities/_date-utilities';
   necessario comunque effettuare la validazione della data nel submit
 */
 export function inputDateRawFallback() {
-  'use strict';
 
   if( !inputDateSupport() ) {
 

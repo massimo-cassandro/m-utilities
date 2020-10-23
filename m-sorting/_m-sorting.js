@@ -1,5 +1,4 @@
 export default function (m_sorting_container, m_sorting_elements_selector, callback)  {
-  'use strict';
 
   /*
     m_sorting_container: html dom element

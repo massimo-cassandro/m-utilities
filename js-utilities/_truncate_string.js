@@ -1,6 +1,6 @@
 // from https://www.codegrepper.com/code-examples/javascript/javascript+truncate+string+full+word
 export function truncate(str, max, suffix) {
-  'use strict';
+
   suffix = suffix || '…';
   if(str) {
     return str.length < max ? str :

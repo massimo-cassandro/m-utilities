@@ -6,7 +6,6 @@
 
 */
 export default function (field, is_required) {
-  'use strict';
 
   if(window.jQuery !== undefined && field instanceof window.jQuery) {
     field.prop('required', is_required)

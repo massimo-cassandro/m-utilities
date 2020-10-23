@@ -14,7 +14,6 @@
   https://github.com/javierjulio/textarea-autosize/
 */
 export default function () {
-  'use strict';
 
   // select interested textareas
   let textareas = document.querySelectorAll('textarea.autosize');

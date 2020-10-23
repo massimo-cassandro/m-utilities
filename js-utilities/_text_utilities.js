@@ -30,7 +30,6 @@ const particelle = [
 ];
 
 export function better_text(str) {
-  'use strict';
 
   if(str) {
     str = str.trim();
@@ -80,7 +79,6 @@ export function better_text(str) {
 }
 
 export function title_case(str) {
-  'use strict';
 
   if(str) {
     str = str.replace( /\w\S*/g, function(txt) {

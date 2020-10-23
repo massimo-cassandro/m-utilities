@@ -7,7 +7,6 @@
 
 */
 export default function (element, is_disabled) {
-  'use strict';
 
   if(window.jQuery !== undefined && element instanceof window.jQuery) {
     element.prop('disabled', is_disabled).toggleClass('disabled', is_disabled)

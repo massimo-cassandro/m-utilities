@@ -42,7 +42,6 @@ import {inputDateSupport, inputTimeSupport, inputDatetimeSupport} from 'm-utilit
   TODO: personalizzazione intero markup
   TODO: gestione required
 */
-'use strict';
 export class datetimeModalFallback {
 
   constructor(options) {

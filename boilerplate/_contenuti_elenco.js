@@ -1,5 +1,4 @@
 export default function () {
-  'use strict';
 
   $('.contenuti-filter-reset').click(function(){
     $('#filtro-tipo').val('');

@@ -1,5 +1,4 @@
 export default function (min_length) {
-  'use strict';
 
   let chars='ABCDEFGHJKLMNPQRSTUVWXYZ123456789',
     charsNum = chars.length,
