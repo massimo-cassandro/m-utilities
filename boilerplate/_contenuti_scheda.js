@@ -4,6 +4,8 @@ export default function () {
     cfg_tpl_common = {
       class: 'class1 class2',
       attributes: {
+        maxlength: 24,
+        minlength: 10,
         min: 0,
         max: 100,
         step: 1
