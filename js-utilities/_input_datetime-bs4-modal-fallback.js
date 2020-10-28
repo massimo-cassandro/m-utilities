@@ -1,4 +1,4 @@
-import {inputDateSupport, inputTimeSupport, inputDatetimeSupport} from 'm-utilities/js-utilities/_input_date_support';
+import {inputDateSupport, inputTimeSupport, inputDatetimeSupport} from '@massimo-cassandro/m-utilities/js-utilities/_input_date_support';
 
 /*
   Datetime fallback utilizzando una finestra modal BS4

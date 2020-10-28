@@ -74,6 +74,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/boilerplate/_contenuti_scheda.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/boilerplate/_contenuti_scheda-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/bs4-utilities/_boxes.scss": {
 		"aP": 0,
 		"bl": 0,
