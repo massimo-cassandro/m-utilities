@@ -181,6 +181,8 @@ export default function () {
 
   $('#form_contenuti').submit(function(){
 
+    const submit_btn = $(':submit', $(this));
+
     if(config_field.length) {
       let cfg_str = config_field.val().trim()
         .replace(/"true"/g, 'true')
@@ -198,6 +200,7 @@ export default function () {
           type  : 'error',
           title : 'Il campo `Config` contiene un JSON non valido'
         });
+        submit_btn.prop('disabled', false);
         return false;
       }
 
@@ -206,27 +209,14 @@ export default function () {
           type  : 'error',
           title : 'Il campo `Config` contiene dei valori da impostare (è presente il carattere “|”)'
         });
+        submit_btn.prop('disabled', false);
         return false;
       }
       let contenuto = $('#contenuto');
       if(contenuto.length) {
         contenuto.val(contenuto.val().trim());
       }
-
     }
-
-    /*
-    Già presente nel JS principale
-
-    // required file-uploader
-    if($('.fupl-wrapper:not([disabled])[data-required="true"][data-has-values="false"]').length > 0) {
-      mAlert({
-        type  : 'error',
-        title : 'È necessario caricare l\'immagine desktop'
-      });
-      return false;
-    }
-    */
 
   });
 }
