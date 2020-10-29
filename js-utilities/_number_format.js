@@ -1,14 +1,20 @@
-export  function number_format (number, decimals) {
+export  function number_format (number, decimals, force_plus) {
 
   if(decimals === undefined) decimals=0;
+  if(force_plus === undefined) force_plus=false;
   number = Number( number);
+  let sign = '';
 
   if(decimals) {
     number = Math.round((number + Number.EPSILON) * Math.pow(10, decimals)) / Math.pow(10, decimals);
   } else {
     number = Math.round(number);
   }
-  return number.toLocaleString('it-IT', { minimumFractionDigits: decimals });
+  if(force_plus) {
+    sign = number > 0? '+' : '−';
+    number = Math.abs(number);
+  }
+  return sign + number.toLocaleString('it-IT', { minimumFractionDigits: decimals });
 
   // function toLocaleStringSupportsLocales() {
   //   var nn = 0;

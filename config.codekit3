@@ -400,17 +400,6 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/js-utilities/_number_format.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js-utilities/_number_format-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/js-utilities/_overlay.js": {
 		"bF": 0,
 		"ft": 64,
@@ -418,6 +407,17 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/js-utilities/_overlay-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js-utilities/_print_icon.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js-utilities/_print_icon-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
