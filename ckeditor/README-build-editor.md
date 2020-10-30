@@ -15,7 +15,7 @@ La build permette l'integrazione con il *viewer* per immagini e documenti e l'in
 	* <https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/advanced-setup.html>
 	* <https://ckeditor.com/docs/ckeditor5/latest/features/image.html>
 * main repo: <https://github.com/ckeditor/ckeditor5/tree/master/packages>
-* Repository (build classic): <https://github.com/ckeditor/ckeditor5-build-classic>
+* Repository (build classic): <https://github.com/ckeditor/ckeditor5/tree/stable/packages/ckeditor5-build-classic>
 * Altre info utili: <https://ckeditor.com/docs/ckeditor5/latest/builds/guides/faq.html>
 
 ## Utilizzo di questa distribuzione
@@ -34,11 +34,11 @@ Per costruire la build la via più facile è partire da una distribuzione uffici
 
 ### Scaricare il repository tramite npm
 
-Scaricare i moduli necessari per la compilazione di CKEditor come indicato in <https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/advanced-setup.html#scenario-2-building-from-source>, è consigliabile consultare il [file package.json originale](https://github.com/ckeditor/ckeditor5-build-classic/blob/stable/package.json) per verificare la presenza di eventuali nuovi moduli.
+Scaricare i moduli necessari per la compilazione di CKEditor come indicato in <https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/advanced-setup.html#scenario-2-building-from-source>, è consigliabile consultare il [file package.json originale](https://github.com/ckeditor/ckeditor5/blob/master/packages/ckeditor5-build-classic/package.json) per verificare la presenza di eventuali nuovi moduli.
 
 > NB: far sempre riferimento al branch `stable`
 
-Consulta il file `package.json` per verificare la versione presente in questo repository.
+Consulta il file [package.json](./package.json) per verificare la versione presente in questo repository.
 
 
 
@@ -47,7 +47,7 @@ A questi moduli sono stati aggiunti:
 * `ckeditor5-alignment` (vedi <https://ckeditor.com/docs/ckeditor5/latest/features/text-alignment.html>)
 
 ```bash
-npm install --save @ckeditor/ckeditor5-alignment
+npm install --save @ckeditor/ckeditor5-alignment@latest
 ```
 
 Opzionali:
@@ -55,15 +55,13 @@ Opzionali:
 * `CKEditor 5 highlight` (vedi <https://ckeditor.com/docs/ckeditor5/latest/api/highlight.html>) 
 
 ```bash
-npm install --save @ckeditor/ckeditor5-highlight
+npm install --save @ckeditor/ckeditor5-highlight@latest
 ```
 
-Per esiguire i test, installare anche l'inspector ckeditor (vedi <https://ckeditor.com/docs/ckeditor5/latest/framework/guides/development-tools.html#ckeditor-5-inspector>).
+Per eseguire i test, installare anche l'inspector ckeditor (vedi <https://ckeditor.com/docs/ckeditor5/latest/framework/guides/development-tools.html#ckeditor-5-inspector>).
 
-```javascript
-"devDependencies": {
-  "@ckeditor/ckeditor5-inspector": "^1.3.0"
-}
+```bash
+npm i --save-dev @ckeditor/ckeditor5-inspector@latest
 ```
 
 ---
@@ -87,7 +85,7 @@ Vedi
 * <https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html> 
 * <https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/advanced-setup.html#scenario-2-building-from-source>.
 
-È consigliabile effettuare un *diff* tra i file presenti nel progetto e quelli nel repo ufficiale (<https://github.com/ckeditor/ckeditor5-build-classic/tree/stable>) per verificare eventuali nuove funzionalità non presenti nei file della release *m-ckeditor* attuale.
+È consigliabile effettuare un *diff* tra i file di configurazione presenti nel progetto e quelli nel repo ufficiale (<https://github.com/ckeditor/ckeditor5/tree/stable/packages/ckeditor5-build-classic>) per verificare eventuali nuove funzionalità non presenti nei file della release *m-ckeditor* attuale.
 
 
 
