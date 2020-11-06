@@ -5,8 +5,18 @@
 */
 
 
-export default function () {
+export default function (options) {
 
+  const default_options = {
+    requiredErrorMes: requiredElement => {
+      return `L'elemento ${requiredElement} è obbligatorio`;
+    },
+    alertUI: mes => {
+      alert(mes);
+    }
+  };
+
+  // per compatibilità con le versioni precedenti, deprecato
   if(typeof window.mUtilities === 'undefined') {
     window.mUtilities = {};
   }
@@ -23,8 +33,11 @@ export default function () {
       alert(mes);
     };
   }
+  // ------------------
 
-  let editor_textareas = document.querySelectorAll('textarea.editor'),
+  let cke_opts = Object.assign({}, default_options, options || {}, window.mUtilities.ckeditor || {}),
+
+    editor_textareas = document.querySelectorAll('textarea.editor'),
     editors_required = document.querySelectorAll('textarea.editor[required]');
 
 
@@ -53,6 +66,7 @@ export default function () {
         let editor = ckeditor_instances[item.id],
           cke_data = editor.getData();
         cke_data = cke_data
+          .replace(/^((<p>&nbsp;<\/p>)*)/i, '') // righe vuote all'inizio
           .replace(/((<p>&nbsp;<\/p>)*)$/i, '') // righe vuote alla fine
           .replace(/( *(&nbsp;)*<\/p>)$/i, ''); // spazi vuoti alla fine dei tag p
 
@@ -65,7 +79,7 @@ export default function () {
       // required
       editors_required.forEach(item => {
         if(!item.value) {
-          window.mUtilities.ckeditor.alertUI(window.mUtilities.ckeditor.requiredErrorMes(item.id));
+          cke_opts.alertUI(cke_opts.requiredErrorMes(item.id));
           e.preventDefault();
           return false;
         }

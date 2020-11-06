@@ -4,22 +4,20 @@
   FILE DA INCLUDERE per l'utilizzo di ckeditor
 */
 
-export default function () {
+export default function (loader_options) {
 
-  if(typeof window.mUtilities === 'undefined') {
-    window.mUtilities = {};
-  }
-  if(typeof window.mUtilities.ckeditor === 'undefined') {
-    window.mUtilities.ckeditor = {};
-  }
+  const default_options = {
+    cke_url: '/assets/ckeditor-dist/m-ckeditor-min.js',
+    upl_url: '/ckeditor/file-uploader',
+    img_viewer: '/viewer/'  // (visualizzaione dei file da db, NB: con slash finale)
+  };
 
-  const script_data = document.currentScript.dataset,
-    editor_list = document.querySelectorAll('textarea.editor');
 
-  window.mUtilities.ckeditor.cke_url = window.mUtilities.ckeditor.cke_url || (script_data.cke || '/assets/ckeditor-dist/m-ckeditor-min.js');
-  window.mUtilities.ckeditor.upl_url = window.mUtilities.ckeditor.upl_url || (script_data.ckeUpl || '/ckeditor/file-uploader');
-  window.mUtilities.ckeditor.img_viewer = window.mUtilities.ckeditor.img_viewer || (script_data.ckeImgViewer || '/viewer/');  // (NB: con slash finale)
+  const editor_list = document.querySelectorAll('textarea.editor');
 
+  if(typeof window.mUtilities === 'undefined') { window.mUtilities = {};} // per compatibilità con le versioni precedenti, deprecato
+
+  let cke_opts = Object.assign({}, default_options, loader_options || {}, window.mUtilities.ckeditor || {});
 
   if (editor_list.length) {
 
@@ -90,7 +88,11 @@ export default function () {
         //'insertTable',
         'undo',
         'redo'
-      ];
+      ],
+
+      img_plugins = ['mUploadAdapter', 'ImageUpload', 'Image', 'ImageToolbar', 'ImageStyle', 'ImageUpload', 'ImageCaption'],
+      table_plugins = ['insertTable', 'Table', 'TableToolbar', 'TableProperties', 'TableCellProperties'],
+      headings_plugins = ['Heading'];
 
     let script = document.createElement('script');
     script.onload =  () => {
@@ -98,9 +100,9 @@ export default function () {
       editor_list.forEach(function (item, idx) {
 
         let options = {
-          uploaderUrl: window.mUtilities.ckeditor.upl_url,
+          uploaderUrl: cke_opts.upl_url,
           uploadMaxSize : 4 * 1024 * 1024,
-          imgViewer: window.mUtilities.ckeditor.img_viewer,
+          imgViewer: cke_opts.img_viewer,
           toolbar: std_toolbar
         };
 
@@ -113,17 +115,18 @@ export default function () {
         if (item.classList.contains('editor-lite')) {
           options = {
             toolbar: lite_toolbar,
-            removePlugins: [ 'mUploadAdapter', 'ImageUpload' ],
+            removePlugins: img_plugins,
           };
         } else if(item.classList.contains('editor-xlite')) {
           options = {
             toolbar: xlite_toolbar,
-            removePlugins: [ 'mUploadAdapter', 'ImageUpload', 'insertTable' ],
+            removePlugins: img_plugins.concat(table_plugins),
           };
         }
 
         if(item.classList.contains('editor-no-headings')) {
           options.toolbar = options.toolbar.filter(item => item !== 'heading');
+          options.removePlugins = options.removePlugins.concat(headings_plugins);
         }
 
         // rimozione eventuali separatori all'inizio e alla fine
@@ -134,7 +137,10 @@ export default function () {
           options.toolbar = options.toolbar.slice(0, -1);
         }
 
+        // console.log(options);
+
         ClassicEditor.create(item, options)
+
 
 
         // .then( editor => {
@@ -173,7 +179,7 @@ export default function () {
 
     }; // end onload
 
-    script.src = window.mUtilities.ckeditor.cke_url;
+    script.src = cke_opts.cke_url;
     script.type = 'text/javascript';
     document.head.appendChild(script);
 
