@@ -4,10 +4,10 @@
 /*
   inserire globalmente
 
+  import disableSubmitBtns from '@massimo-cassandro/m-utilities/js-utilities/_submit-disable-btns';
+
   // disable btn on submit
-  $('form').submit(function(){
-    $(':submit').prop('disabled', true);
-  });
+  disableSubmitBtns();
 
   TODO gestione validityState
 

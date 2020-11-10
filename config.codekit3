@@ -257,6 +257,14 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/favicon.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/favicon.ico",
+		"oF": 0
+		},
 	"/js-utilities/_date-utilities.js": {
 		"bF": 0,
 		"ft": 64,
@@ -429,6 +437,17 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/js-utilities/_print_icon-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js-utilities/_submit-disable-btns.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js-utilities/_submit-disable-btns-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -1304,6 +1323,185 @@
 		"oA": 0,
 		"oAP": "/m-utilities.code-workspace",
 		"oF": 0
+		},
+	"/mAlert-jQuery-bs4/_mAlert.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/mAlert-jQuery-bs4/_mAlert-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/mAlert-jQuery-bs4/_mAlert.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/mAlert-jQuery-bs4/_mAlert.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/mAlert-jQuery-bs4/demo/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/mAlert-jQuery-bs4/demo/index.html",
+		"oF": 0
+		},
+	"/mAlert-jQuery-bs4/demo/mAlert-demo-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/mAlert-jQuery-bs4/demo/mAlert-demo-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/mAlert-jQuery-bs4/demo/mAlert-demo.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/mAlert-jQuery-bs4/demo/mAlert-demo-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/mAlert-jQuery-bs4/demo/mAlert-demo.js": {
+		"bF": 4,
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/mAlert-jQuery-bs4/demo/mAlert-demo-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/mAlert-jQuery-bs4/demo/mAlert-demo.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/mAlert-jQuery-bs4/demo/mAlert-demo.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/mAlert-jQuery-bs4/marks.sketch": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/mAlert-jQuery-bs4/marks.sketch",
+		"oF": 0
+		},
+	"/mAlert-jQuery-bs4/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/mAlert-jQuery-bs4/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/mAlert-jQuery-bs4/svg/confirm.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/mAlert-jQuery-bs4/svg/confirm.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/mAlert-jQuery-bs4/svg/error.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/mAlert-jQuery-bs4/svg/error.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/mAlert-jQuery-bs4/svg/info.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/mAlert-jQuery-bs4/svg/info.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/mAlert-jQuery-bs4/svg/success.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/mAlert-jQuery-bs4/svg/success.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/mAlert-jQuery-bs4/svg/warning.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/mAlert-jQuery-bs4/svg/warning.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/node_modules": {
+		"ft": 65536,
+		"oA": 2,
+		"oAP": "/build/node_modules",
+		"oF": 0
+		},
+	"/node_modules/jquery/dist/jquery.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/jquery/dist/jquery-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/package-lock.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/package-lock-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
 	"/package.json": {
 		"ft": 524288,

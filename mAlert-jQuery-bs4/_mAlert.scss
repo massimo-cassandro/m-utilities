@@ -1,0 +1,111 @@
+$mAlert-color-success: theme-color(success)!default;
+$mAlert-color-error:   theme-color(danger)!default;
+$mAlert-color-info:    theme-color(info)!default;
+$mAlert-color-warning: theme-color(warning)!default;
+$mAlert-color-confirm: theme-color(warning)!default;
+$mAlert-button-font-weight: 400!default;
+
+// mappatura dei colori di stato standard bs4
+// per eventuale sostituzione nel caso non siano tutti definiti
+$mAlert-bs4-status-color: (
+  success: $mAlert-color-success,
+  info: $mAlert-color-info,
+  warning: $mAlert-color-warning,
+  danger: $mAlert-color-error
+)!default;
+
+.mAlert-mark {
+
+  width: 100%;
+
+  svg {
+    display: block;
+    margin: 1rem auto 2rem;
+  }
+
+  .path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    &.circle {
+      animation: dash .9s ease-in-out;
+    }
+    &.line {
+      stroke-dashoffset: 1000;
+      animation: dash .9s .35s ease-in-out forwards;
+    }
+    &.check {
+      stroke-dashoffset: -100;
+      animation: dash-check .9s .35s ease-in-out forwards;
+    }
+  }
+
+  @keyframes dash {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes dash-check {
+    0% {
+      stroke-dashoffset: -100;
+    }
+    100% {
+      stroke-dashoffset: 900;
+    }
+  }
+}
+
+.mAlert.modal {
+  &.mAlert-success {
+    svg {
+      stroke: $mAlert-color-success;
+    }
+  }
+  &.mAlert-error {
+    svg {
+      stroke: $mAlert-color-error;
+    }
+  }
+  &.mAlert-info {
+    svg {
+      stroke: $mAlert-color-info;
+    }
+  }
+  &.mAlert-warning {
+    svg {
+      stroke: $mAlert-color-warning;
+    }
+  }
+  &.mAlert-confirm {
+    svg {
+      stroke: $mAlert-color-confirm;
+    }
+  }
+
+  .modal-footer {
+    button {
+      padding-left:1.5rem;
+      padding-right:1.5rem;
+      font-weight: $mAlert-button-font-weight;
+
+      @each $status, $st-color in $mAlert-bs4-status-color {
+        @if not map-has-key($theme-colors, $status) {
+
+          &.btn-#{$status} {
+            background-color: $st-color;
+            color: color-yiq($st-color);
+            &:hover {
+              background-color: darken($st-color, 15);
+              color: color-yiq(darken($st-color, 15));
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+}
