@@ -1324,18 +1324,18 @@
 		"oAP": "/m-utilities.code-workspace",
 		"oF": 0
 		},
-	"/mAlert-jQuery-bs4/_mAlert.js": {
+	"/mAlert-bs4/_mAlert.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/mAlert-jQuery-bs4/_mAlert-min.js",
+		"oAP": "/mAlert-bs4/_mAlert-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/mAlert-jQuery-bs4/_mAlert.scss": {
+	"/mAlert-bs4/_mAlert.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1343,52 +1343,52 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/mAlert-jQuery-bs4/_mAlert.css",
+		"oAP": "/mAlert-bs4/_mAlert.css",
 		"oF": 0,
 		"oS": 0,
 		"sct": 1
 		},
-	"/mAlert-jQuery-bs4/demo/index.html": {
+	"/mAlert-bs4/demo/index.html": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/mAlert-jQuery-bs4/demo/index.html",
+		"oAP": "/mAlert-bs4/demo/index.html",
 		"oF": 0
 		},
-	"/mAlert-jQuery-bs4/demo/mAlert-demo-min.js": {
+	"/mAlert-bs4/demo/mAlert-demo-min.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/mAlert-jQuery-bs4/demo/mAlert-demo-min-min.js",
+		"oAP": "/mAlert-bs4/demo/mAlert-demo-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/mAlert-jQuery-bs4/demo/mAlert-demo.css": {
+	"/mAlert-bs4/demo/mAlert-demo.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/mAlert-jQuery-bs4/demo/mAlert-demo-min.css",
+		"oAP": "/mAlert-bs4/demo/mAlert-demo-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/mAlert-jQuery-bs4/demo/mAlert-demo.js": {
+	"/mAlert-bs4/demo/mAlert-demo.js": {
 		"bF": 4,
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "/mAlert-jQuery-bs4/demo/mAlert-demo-min.js",
+		"oAP": "/mAlert-bs4/demo/mAlert-demo-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/mAlert-jQuery-bs4/demo/mAlert-demo.scss": {
+	"/mAlert-bs4/demo/mAlert-demo.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1396,20 +1396,20 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/mAlert-jQuery-bs4/demo/mAlert-demo.css",
+		"oAP": "/mAlert-bs4/demo/mAlert-demo.css",
 		"oF": 0,
 		"oS": 0,
 		"sct": 1
 		},
-	"/mAlert-jQuery-bs4/marks.sketch": {
+	"/mAlert-bs4/marks.sketch": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/mAlert-jQuery-bs4/marks.sketch",
+		"oAP": "/mAlert-bs4/marks.sketch",
 		"oF": 0
 		},
-	"/mAlert-jQuery-bs4/README.md": {
+	"/mAlert-bs4/README.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1419,7 +1419,7 @@
 		"ft": 4096,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/mAlert-jQuery-bs4/README.html",
+		"oAP": "/mAlert-bs4/README.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1428,51 +1428,51 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/mAlert-jQuery-bs4/svg/confirm.svg": {
+	"/mAlert-bs4/svg/confirm.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/mAlert-jQuery-bs4/svg/confirm.svg",
+		"oAP": "/mAlert-bs4/svg/confirm.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/mAlert-jQuery-bs4/svg/error.svg": {
+	"/mAlert-bs4/svg/error.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/mAlert-jQuery-bs4/svg/error.svg",
+		"oAP": "/mAlert-bs4/svg/error.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/mAlert-jQuery-bs4/svg/info.svg": {
+	"/mAlert-bs4/svg/info.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/mAlert-jQuery-bs4/svg/info.svg",
+		"oAP": "/mAlert-bs4/svg/info.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/mAlert-jQuery-bs4/svg/success.svg": {
+	"/mAlert-bs4/svg/success.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/mAlert-jQuery-bs4/svg/success.svg",
+		"oAP": "/mAlert-bs4/svg/success.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/mAlert-jQuery-bs4/svg/warning.svg": {
+	"/mAlert-bs4/svg/warning.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/mAlert-jQuery-bs4/svg/warning.svg",
+		"oAP": "/mAlert-bs4/svg/warning.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
