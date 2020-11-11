@@ -1,0 +1,8 @@
+.dataTables_paginate {
+  display: flex;
+  justify-content: flex-end;
+
+  ul.pagination {
+    @extend .pagination-sm;
+  }
+}
