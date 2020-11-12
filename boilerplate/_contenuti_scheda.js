@@ -1,3 +1,6 @@
+import $ from 'jquery';
+import {mAlert} from '@massimo.cassandro/m-utilities/_mAlert';
+
 export default function () {
 
   const config_field = $('#config'),

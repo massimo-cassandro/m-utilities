@@ -21,12 +21,10 @@ Crea un datatable leggendo gli attributi data assegnati ad un div e utilizzando 
 
 L'utilità di questa funzione è il poter configurare un datatable interamente con attributi data.
 
-il contenitore deve avere la classe `dt_container` (assegnato dallo script) e gli attributi:
+il contenitore deve avere gli attributi:
 
 * `data-dt_columns`  definizione delle colonne datatable
 * `data-cdt_options`   permette di modificare le altre opzioni di creaDataTable
-
-i valori di default delle opzioni creaDataTable vanno definite estendendo il default
 
 tipi e opzioni colonne: <https://datatables.net/reference/option/columns.type>
 
@@ -64,11 +62,12 @@ npm i --save mustache
 ```
 
 ```js
-import $ from 'jquery';
 import {creaDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/_creaDataTable';
 
-creaDataTable( $('#dt_container'), options, true );
+creaDataTable( '#dt_container', options, true );
 ```
+
+Il primo argomento della funzione può essere un selettore css (stringa), un elemento DOM o un oggetto jQuery.
 
 Vedi lo script e [demo/creaDataTable.html]() per altre info.
 
