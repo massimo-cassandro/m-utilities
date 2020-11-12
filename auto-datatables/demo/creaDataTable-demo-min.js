@@ -26645,7 +26645,8 @@
 	  creaDataTable
 	  Genera un datatable da un flusso JSON
 
-	  * $container è il div entro cui generare il datatable (è un oggetto jQuery)
+	  * $container è il div entro cui generare il datatable
+	    può essere un selettore, un elemento DOM o un oggetto jQuery
 	  * options è un oggetto che contiene i parametri necessari per la configurazione
 	      tra cui `datatable_options`, un oggetto con le impostazioni richieste da DataTable.
 	      Se non impostato, viene utilizzato il default incluso nel file `_config.js`
@@ -26660,6 +26661,11 @@
 	  window.jQuery = jquery;
 	  jquery.fn.dataTable = jquery_dataTables(window,jquery);
 	  jquery.fn.DataTable.ext = dataTables_bootstrap4(window,jquery);
+
+
+	  if(!($container instanceof jquery)) {
+	    $container = jquery($container);
+	  }
 
 	  // configurazione default datatable
 	  if(bs4) {
@@ -26754,6 +26760,9 @@
 	  return jquery('#' + options.table_id ).DataTable(options.datatable_options);  // datatable istance
 	}
 
+	// import $ from 'jquery';
+
+
 	/*
 	  {
 	      "id": 5,
@@ -26764,7 +26773,7 @@
 	    },
 	*/
 	creaDataTable(
-	  jquery('#datatable_container'),
+	  '#datatable_container', // oppure $('#datatable_container') oppure document.getElementById('datatable_container')
 	  {
 	    datatable_options: {
 	      ajax             : './demo_data.json',

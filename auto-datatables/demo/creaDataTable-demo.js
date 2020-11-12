@@ -1,4 +1,4 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 import {creaDataTable} from '../js/_creaDataTable';
 
 
@@ -12,7 +12,7 @@ import {creaDataTable} from '../js/_creaDataTable';
     },
 */
 creaDataTable(
-  $('#datatable_container'),
+  '#datatable_container', // oppure $('#datatable_container') oppure document.getElementById('datatable_container')
   {
     datatable_options: {
       ajax             : './demo_data.json',

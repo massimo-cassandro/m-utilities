@@ -41,6 +41,11 @@ import moment from 'moment';
 
 export  function autoDataTable( $container, cdt_options = {}, bs4 = true ) {
 
+
+  if(!($container instanceof $)) {
+    $container = $($container);
+  }
+
   let _data = $container.data(),
     table_columns  = [],
     _form = null,

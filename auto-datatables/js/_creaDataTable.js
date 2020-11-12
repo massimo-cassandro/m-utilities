@@ -8,7 +8,8 @@ import * as dt_config from './src/_config';
   creaDataTable
   Genera un datatable da un flusso JSON
 
-  * $container è il div entro cui generare il datatable (è un oggetto jQuery)
+  * $container è il div entro cui generare il datatable
+    può essere un selettore, un elemento DOM o un oggetto jQuery
   * options è un oggetto che contiene i parametri necessari per la configurazione
       tra cui `datatable_options`, un oggetto con le impostazioni richieste da DataTable.
       Se non impostato, viene utilizzato il default incluso nel file `_config.js`
@@ -23,6 +24,11 @@ export function creaDataTable( $container, options = {}, bs4 = true ) {
   window.jQuery = $;
   $.fn.dataTable = dt(window,$);
   $.fn.DataTable.ext = dt_bs4(window,$);
+
+
+  if(!($container instanceof $)) {
+    $container = $($container);
+  }
 
   // configurazione default datatable
   if(bs4) {
