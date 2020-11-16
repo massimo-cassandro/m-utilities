@@ -1,4 +1,4 @@
-export default function (min_length) {
+export default function (min_length) { // pwd_field.minlength
 
   let chars='ABCDEFGHJKLMNPQRSTUVWXYZ123456789',
     charsNum = chars.length,

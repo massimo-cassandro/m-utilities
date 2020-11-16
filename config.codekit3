@@ -728,6 +728,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/js-utilities/_sf_macro.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js-utilities/_sf_macro-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/js-utilities/_submit-disable-btns.js": {
 		"bF": 0,
 		"ft": 64,
@@ -2242,6 +2253,25 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/TODO/_lazyloading-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/TODO/_sf_flash_messages_autoclose.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/TODO/_sf_flash_messages_autoclose.html",
+		"oF": 0
+		},
+	"/TODO/_sf_flash_messages_autoclose.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/TODO/_sf_flash_messages_autoclose-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0

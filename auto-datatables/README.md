@@ -62,7 +62,7 @@ npm i --save mustache
 ```
 
 ```js
-import {creaDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/_creaDataTable';
+import {creaDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/js/_creaDataTable';
 
 creaDataTable( '#dt_container', options, true );
 ```
@@ -95,7 +95,7 @@ Opzione con form di ricerca:
 
 ```js
 import $ from 'jquery';
-import {autoDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/_autoDataTable';
+import {autoDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/js/_autoDataTable';
 
 autoDataTable( $('#dt_container') );
 ```
