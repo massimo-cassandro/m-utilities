@@ -13,11 +13,19 @@
 /// @link http://codepen.io/jakob-e/pen/doMoML
 /// @param {String} $svg - SVG image to encode
 /// @return {String} - Encoded SVG data uri
-@function svg-uri($svg) {
+
+/// @author Massimo Cassandro
+/// @param {String} $attr - string of attributes (e.g 'fill="#c00" class="..."')
+
+@function svg-uri($svg, $attr:'') {
     $encoded: '';
     $slice: 2000;
     $index: 0;
     $loops: ceil(str-length($svg) / $slice);
+
+    @if $attr {
+      $svg : str-replace($svg, '<svg', '<svg #{$attr}')
+    }
 
     @for $i from 1 through $loops {
         $chunk: str-slice($svg, $index, $index + $slice - 1);
