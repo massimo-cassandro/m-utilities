@@ -1045,28 +1045,12 @@
 		"oAP": "/boilerplate/_PROJ_ROOT_/_vscode/proj-v2.code-snippets",
 		"oF": 0
 		},
-	"/boilerplate/_PROJ_ROOT_/_vscode/tasks.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/boilerplate/_PROJ_ROOT_/_vscode/tasks-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
 	"/boilerplate/_PROJ_ROOT_/_vscode/upd-from-boilerplate-params.sh": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/boilerplate/_PROJ_ROOT_/_vscode/upd-from-boilerplate-params.sh",
-		"oF": 0
-		},
-	"/boilerplate/_PROJ_ROOT_/_vscode/upd-from-boilerplate.sh": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/boilerplate/_PROJ_ROOT_/_vscode/upd-from-boilerplate.sh",
 		"oF": 0
 		},
 	"/boilerplate/_PROJ_ROOT_/assets_template.sketch": {

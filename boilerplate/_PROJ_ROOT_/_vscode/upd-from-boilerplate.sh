@@ -8,7 +8,8 @@ source upd-from-boilerplate-params.sh
 ASSETS_DIR="$project_base_dir"/public/assets
 NODE_MOD_DIR="$ASSETS_DIR"/node_modules
 TEMPLATES_DIR="$project_base_dir"/templates
-BOILERPLATE_PROJ_DIR="$boilerplate_path"/_PROJ_ROOT_
+BOILERPLATE_PATH="$NODE_MOD_DIR"/@massimo-cassandro/m-utilities/boilerplate # senza slash finale, no quotes
+BOILERPLATE_PROJ_DIR="$BOILERPLATE_PATH"/_PROJ_ROOT_
 BOILERPLATE_REPO_DIR="$BOILERPLATE_PROJ_DIR"/_REPO_
 
 # https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
@@ -81,6 +82,7 @@ SHARED_DIR_FILES=(
   imgs.html.twig
   meta.html.twig
 )
+
 for i in "${SHARED_DIR_FILES[@]}"
 do
   SOURCE="$BOILERPLATE_REPO_DIR"/templates/_shared/"$i"
@@ -95,7 +97,7 @@ done
 
 # read -e -p "Aggiorno anche questo script [s/N]?" SN # -i "N"
 
-# if [ -z "$SN" ] 
+# if [ -z "$SN" ]
 # then
 #   SN="N"
 # fi
@@ -105,7 +107,7 @@ done
 #   printf "* ${SUCCESS}upd-from-boilerplate.sh aggiornato${RESET}\n"
 # fi
 
-cp "$BOILERPLATE_PROJ_DIR"/_vscode/upd-from-boilerplate.sh "$PWD"
-printf "* ${SUCCESS}upd-from-boilerplate.sh aggiornato${RESET}\n"
+# cp "$BOILERPLATE_PROJ_DIR"/_vscode/upd-from-boilerplate.sh "$PWD"
+# printf "* ${SUCCESS}upd-from-boilerplate.sh aggiornato${RESET}\n"
 
 echo END

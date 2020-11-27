@@ -6,7 +6,7 @@
     {
       "label": "Aggiorna elementi da boilerplate & m-utilities",
       "type": "shell",
-      "command": "cd ${workspaceFolder}/.vscode; . upd-from-boilerplate.sh",
+      "command": "cd ${workspaceFolder:assets}; . node_modules/@massimo-cassandro/m-utilities/boilerplate/_PROJ_ROOT_/_vscode/upd-from-boilerplate.sh ${workspaceFolder}/.vscode/upd-from-boilerplate-params.sh",
       "presentation": {
         "reveal": "always",
         "panel": "shared",

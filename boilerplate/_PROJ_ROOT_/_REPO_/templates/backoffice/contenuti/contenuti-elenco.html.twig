@@ -1,6 +1,6 @@
 {% set pagID = 'contenuti_elenco' %}
 {% set js_files = [asset("/assets/js/backoffice/dist/#{pagID}-min.js") ~ '?v=' ~ glob_vars.vers.backoffice] %}
-{% set fluid_container = true %}
+{% set fluid_container = false %}
 {% extends 'backoffice/_backoffice-tpl.html.twig' %}
 
 {% block title %}Contenuti &amp; impostazioni{% endblock %}
@@ -34,7 +34,7 @@
             <button type="submit" class="btn btn-primary">Cerca</button>
           </div>
           <div class="form-group text-center text-sm-left mt-3 mt-sm-0">
-            <button type="button" class="contenuti-filter-reset btn btn-secondary">Azzera filtri</button>
+            <button type="button" class="contenuti-filter-reset btn btn-outline-secondary">Azzera filtri</button>
           </div>
         </div>
       </div>
