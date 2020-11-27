@@ -1,0 +1,111 @@
+{% extends '_shared/_main.html.twig' %}
+{% block tpl %}
+{%- set main_template -%}
+<!DOCTYPE html>
+<html lang="it" {%- if app.environment != 'prod' %} class="test"{% endif -%}>
+  <head>
+    <meta charset="utf-8">
+    {%- include '@includes/google_font_v2_loader.html.twig' with {
+      fonts: glob_vars.fonts
+    } -%}
+    {% include '@includes/favicons.html.twig' %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="preload" href="{{ asset('/assets/js/backoffice-libs-min.js') }}?v={{ glob_vars.vers.backoffice}}" as="script">
+    <link rel="preload" href="{{ asset('/assets/js/backoffice-min.js') }}?v={{ glob_vars.vers.backoffice}}" as="script">
+    <link rel="preload" href="{{ asset('/assets/css/backoffice.css') }}?v={{ glob_vars.vers.backoffice}}" as="style">
+    <link rel="stylesheet" href="{{ asset('/assets/css/backoffice.css') }}?v={{ glob_vars.vers.backoffice}}" type="text/css" media="all">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>
+      {%- block title %}{% endblock -%}
+      {{- ' | XXXXX' -}}
+      {{- app.environment != 'prod'? ' [' ~ app.environment|upper ~ ']' : '' -}}
+    </title>
+    {% block head %}{% endblock %}
+  </head>
+  <body {%- if controller is defined and controller %} data-controller="{{ controller }}"{% endif -%}>
+    <div id="content">
+      <header class="main-header">
+
+      </header>
+
+      <div class="content-wrapper">
+
+        {%- if not app.user.pwdTemp|default() -%}
+          <nav class="menu-wrapper" id="main-menu">
+            {% include 'backoffice/_incl/menu_admin.html.twig' %}
+          </nav>
+        {% endif %}
+
+        <main class="main-content">
+          <div class="container-fluid">
+            {% for label, messages in app.flashes %}
+              {% for message in messages %}
+                {%
+                  set alert_class = 'alert alert-dismissable alert-icon alert-flash ' ~
+                  ' alert-' ~ (label == 'error' ? 'danger' : (label == 'notice' ? 'info' : label)) ~
+                  (label == 'success'? ' alert-autoclose' : '')
+                %}
+                <div class="{{ alert_class }}">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Chiudi">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  {{ message|raw }}
+                </div>
+              {% endfor %}
+            {% endfor %}
+
+            {# {%- for state in ['danger', 'success', 'warning', 'info'] -%}
+              <div class="alert alert-dismissable alert-icon alert-flash alert-{{ state }}">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Chiudi">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                {{ state }}
+              </div>
+            {%- endfor -%} #}
+
+            {% block body %}{% endblock %}
+          </div> {# /container-fluid #}
+        </main> {# /main-content #}
+
+      </div> {# /content-wrapper #}
+
+      <footer>
+
+      </footer>
+
+    </div> {# end #content #}
+
+    <div class="go2top d-flex d-md-none" role="button">
+      {% include '@includes/icone.html.twig' with { id: 'freccia', class:'r270', title: 'Torna a inizio pagina' } %}
+    </div>
+
+
+    {% block last_content %}{% endblock %}
+    {% if app.environment != 'prod' %}
+      <script src="{{ asset('/assets/layout-tools/layout_tools-min.js') }}"></script>
+    {% endif %}
+    {% block jsfiles_start %}{% endblock %}
+    <span class="appdata" data-d="{{ {
+      'v'           : glob_vars.vers.backoffice,
+      'icon_file'   : glob_vars.icon_file,
+      'baseUrl'     : app.request.baseUrl
+    }|merge(app.environment != 'prod'? {test: true} : {})|json_encode()|e('html_attr') }}"></span>
+    <script src="{{ asset('/assets/js/backoffice-libs-min.js') }}?v={{ glob_vars.vers.backoffice }}"></script>
+    <script src="{{ asset('/assets/js/backoffice-min.js') }}?v={{ glob_vars.vers.backoffice }}"></script>
+
+    {% block jsfiles %}{% endblock %}
+
+
+  </body>
+</html>
+{%- endset -%}
+{%- if app.environment == 'prod' -%}
+  {{ main_template|spaceless }}
+{%- else -%}
+  {{ main_template }}
+{%- endif -%}
+{% endblock tpl %}

@@ -1,0 +1,42 @@
+{#
+
+  message labels:
+  - success
+  - notice
+  - error
+  - warning
+
+  la classe `alert-flash` viene utilizzata per aggiungere eventuali comportamenti (es. auto fade-out)
+
+#}
+
+{# {%- for state in ['danger', 'success', 'warning', 'info'] -%}
+  <div class="bg-{{ state }}">
+      <div class="container">
+        <div class="alert alert-dismissable alert-icon alert-flash alert-{{ state }}">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Chiudi">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          {{ state }}
+        </div>
+      </div>
+    </div>
+{%- endfor -%} #}
+
+
+{# {%- for state in ['danger', 'success', 'warning', 'info'] -%}
+  <div class="alert alert-dismissable alert-icon alert-flash alert-{{ state }}">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Chiudi">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {{ state }}
+  </div>
+{%- endfor -%} #}
+
+{% for label, messages in app.flashes %}
+  {% for message in messages %}
+    <div class="alert alert-{{ label == 'error' ? 'danger' : (label == 'notice' ? 'danger' : label)}} alert-icon alert-flash">
+      {{ message|raw }}
+    </div>
+  {% endfor %}
+{% endfor %}

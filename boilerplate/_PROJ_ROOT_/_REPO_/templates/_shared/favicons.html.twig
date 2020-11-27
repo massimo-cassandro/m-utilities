@@ -1,0 +1,21 @@
+{# SVG favicons #}
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="{{ asset('assets/favicons/favicon.svg') }}">
+<link rel="mask-icon" href="{{ asset('assets/favicons/mask-icon.svg') }}" color="#000000">
+<link rel="apple-touch-icon" href="{{ asset('assets/favicons/apple-touch-icon.png') }}">
+<link rel="manifest" href="{{ asset('assets/favicons/manifest.json') }}">
+
+{#
+  In .htaccess:
+
+  <IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    #favicons default
+    RewriteRule ^apple-touch-icon.png /assets/favicons/apple-touch-icon.png [L]
+    RewriteRule ^favicon.ico /assets/favicons/favicon.ico [L]
+
+    [...]
+
+  </IfModule>
+#}

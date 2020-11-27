@@ -1,0 +1,58 @@
+{% extends '@includes/_main.html.twig' %}
+{% block tpl %}
+{%- set main_template -%}
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    {% include '@includes/analytics.html.twig' %}
+    {%- include '@includes/google_font_v2_loader.html.twig' with {
+      fonts: glob_vars.fonts
+    } -%}
+    {% include '@includes/favicons.html.twig' %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="{{ asset('/assets/js/public-libs-min.js') }}?v={{ glob_vars.vers.public }}" as="script">
+    <link rel="preload" href="{{ asset('/assets/js/public-min.js') }}?v={{ glob_vars.vers.public }}" as="script">
+    <link rel="preload" href="{{ asset('/assets/css/public.css') }}?v={{ glob_vars.vers.public }}" as="style">
+    <link rel="stylesheet" href="{{ asset('/assets/css/public.css') }}?v={{ glob_vars.vers.public }}" type="text/css" media="all">
+    {%- block head -%}{%- endblock -%}
+  </head>
+  <body
+    {%- if pagID|default() %} class="{{ pagID }}"{% endif -%}
+    {%- if controller is defined and controller %} data-controller="{{ controller }}"{% endif -%}>
+    
+    {%- block content -%}{%- endblock -%}
+    
+
+    {%- block last_content -%}{%- endblock -%}
+
+    {% block jsfiles_start %}{% endblock %}
+    
+    {% if app.environment != 'prod' %}
+      <script src="{{ asset('/assets/layout-tools/layout_tools-min.js') }}"></script>
+    {% endif %}
+
+    <span class="appdata" data-d="{{ {
+        v : glob_vars.vers.public,
+        i : glob_vars.icon_file
+      }|merge(app.request.baseUrl? {baseUrl: app.request.baseUrl} : {})
+      |merge(app.environment != 'prod'? {test: true} : {})
+    |json_encode()|e('html_attr') }}"></span>
+
+    <script src="{{ asset('/assets/js/public-libs-min.js') }}?v={{ glob_vars.vers.public }}"></script>
+    <script src="{{ asset('/assets/js/public-min.js') }}?v={{ glob_vars.vers.public }}"></script>
+
+    {% block jsfiles %}{% endblock %}
+
+    {% include '@includes/flash_messages_malert.html.twig' %}
+  </body>
+</html>
+{%- endset -%}
+{%- if app.environment != 'prod' -%}
+	{{ main_template }}
+{%- else -%}
+  {{ main_template|spaceless }}
+{%- endif -%}
+{% endblock tpl %}

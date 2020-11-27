@@ -1,0 +1,40 @@
+{% set pagID = 'recupero_pwd' %}
+{% set controller = pagID %}
+{% extends 'security/_security-tpl.html.twig' %}
+{% block title %}{% endblock title %}
+{% block head %}
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+{% endblock head %}
+{% block jsfiles_start %}{% endblock jsfiles_start %}
+{% block jsfiles %}{% endblock jsfiles %}
+
+{##}
+
+{% block last_content %}{% endblock last_content %}
+
+{% block content %}
+  <h1>Password dimenticata?</h1>
+  {{ form_start(form, {attr: {id: 'form_recupero_pwd', class:'text-left'}}) }}
+    <p>Inserisci la mail associata al tuo account:</p>
+    {{ form_row(form.email, {
+      required: true,
+      type: 'email',
+      attr: {
+        autofocus: true,
+        autocapitalize: "off",
+        spellcheck: "false",
+        autocorrect: "off",
+        tabindex: "1"
+      }
+    }) }}
+
+    <div class="my-4 text-center">
+      <div class="g-recaptcha d-inline-block" data-sitekey="{{ glob_vars.chiave_recaptcha_client }}"></div>
+      <div class="mt-2">
+        <button type="submit" class="btn btn-primary">Ripristina la password</button>
+      </div>
+    </div>
+  {{ form_end(form) }}
+
+  <p class="text-center mt-5 mb-0"><a href="{{ path('app_login') }}">Torna alla pagina di login</a></p>
+{% endblock %}

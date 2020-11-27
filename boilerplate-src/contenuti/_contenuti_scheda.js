@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import {mAlert} from '@massimo.cassandro/m-utilities/_mAlert';
+import {mAlert} from '@massimo-cassandro/m-utilities/mAlert-bs4/_mAlert';
 
 export default function () {
 

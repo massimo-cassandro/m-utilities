@@ -1,0 +1,15 @@
+{% set pagID = 'dashboard' %}
+{# {% set controller = pagID %} #}
+{% extends 'backoffice/_backoffice-tpl.html.twig' %}
+{% block title %}Dashboard{% endblock %}
+{% block head %}{% endblock %}
+{% block jsfiles_start %}{% endblock %}
+{% block jsfiles %}{% endblock %}
+
+{##}
+
+{% block body %}
+  <h1>{{- block('title') -}}</h1>
+
+{% endblock body %}
+{% block last_content %}{% endblock last_content %}

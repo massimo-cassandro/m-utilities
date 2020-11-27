@@ -1,0 +1,52 @@
+{#
+{% include '@includes/analytics.html.twig' with { analytics_purchase_obj = null } %}
+
+{% set analytics_purchase_obj  = pagamentoOK|default() and (not registrazioneAnalytics|default())? {
+  transaction_id: entity.id,
+  affiliation: '__site_name__',
+  value: entity.transaction.amount,
+  currency: 'EUR',
+  tax: 0,
+  shipping: 0,
+  items: [
+    {
+      id: entity.prodotto.id,
+      name: entity.prodotto.nome,
+      quantity: 1,
+      price: entity.transaction.amount
+    }
+  ]
+} : null %}
+
+#}
+
+{%- if analytics_purchase_obj is defined and analytics_purchase_obj is not null -%}
+  {% set analytics_purchase_json = analytics_purchase_obj|json_encode(constant('JSON_HEX_APOS') b-or constant('JSON_HEX_QUOT')) %}
+{%- else -%}
+  {% set analytics_purchase_json = null %}
+{%- endif -%}
+
+{%- if app.environment == 'prod' -%}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{- glob_vars.analytics_id -}}"></script>
+  <script>{{- '' -}}
+    window.dataLayer = window.dataLayer || []; {{- '' -}}
+    function gtag(){dataLayer.push(arguments);} {{- '' -}}
+    gtag('js', new Date()); {{- '' -}}
+    gtag('config', '{{- glob_vars.analytics_id -}}'); {{- '' -}}
+
+    {%- if analytics_purchase_obj|default() -%}
+      gtag('event', 'purchase', {{ analytics_purchase_json|raw }});
+    {%- endif -%}
+  </script>
+{%- else -%}
+  <script>
+    console.groupCollapsed('Impostazioni analytics');
+    console.log("analytics_id: {{ glob_vars.analytics_id }}");
+    {%- if analytics_purchase_obj|default() -%}
+      console.log('purchase:');
+      console.log({{ analytics_purchase_json|raw }});
+      console.log('{{ analytics_purchase_json|raw }}');
+    {%- endif -%}
+    console.groupEnd();
+  </script>
+{%- endif -%}

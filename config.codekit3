@@ -339,16 +339,939 @@
 		"oS": 0,
 		"sct": 1
 		},
-	"/boilerplate/_contenuti_scheda.js": {
+	"/boilerplate-src/contenuti/_contenuti_elenco.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/boilerplate/_contenuti_scheda-min.js",
+		"oAP": "/boilerplate-src/contenuti/_contenuti_elenco-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/boilerplate-src/contenuti/_contenuti_scheda.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/boilerplate-src/contenuti/_contenuti_scheda-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_editorconfig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_editorconfig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/_editorconfig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/_editorconfig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/_env.local": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/_env.local",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/_gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/_gitignore",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/config/packages/twig.yaml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/config/packages/twig.yaml",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/_editorconfig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/_editorconfig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/_eslintignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/_eslintignore",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/_eslintrc.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/_eslintrc-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/_gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/_gitignore",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/_npmignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/_npmignore",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/ckeditor/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/ckeditor/.gitkeep",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/css/_shared/__vars.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/css/_shared/__vars.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/css/_shared/_alerts.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/css/_shared/_alerts.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/css/_shared/_icone.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/css/_shared/_icone.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/css/backoffice/backoffice.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/css/backoffice/backoffice.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/css/backoffice/scss/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/css/backoffice/scss/.gitkeep",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/css/public/public.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/css/public/public.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/css/public/scss/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/css/public/scss/.gitkeep",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/email/_mail-vars.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/email/_mail-vars.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/email/mail-embed.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/email/mail-embed.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/email/mail-inline.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/email/mail-inline.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/favicons/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/favicons/.gitkeep",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/favicons/manifest.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/favicons/manifest-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/icone/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/icone/.gitkeep",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/icone/demo-icone.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/icone/demo-icone.html",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/icone/gulpfile.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/icone/gulpfile-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/icone/icon_list.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/icone/icon_list-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/icone/icone-svg/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/icone/icone-svg/.gitkeep",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/imgs/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/imgs/.gitkeep",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---separate-files/backoffice/contenuti_elenco.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---separate-files/backoffice/contenuti_elenco-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---separate-files/backoffice/contenuti_scheda.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---separate-files/backoffice/contenuti_scheda-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---separate-files/backoffice/default.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---separate-files/backoffice/default-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/backoffice-libs.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/backoffice-libs-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/backoffice.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/backoffice-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/public-libs.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/public-libs-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/public.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/public-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-backoffice/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-backoffice/.gitkeep",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-backoffice/_datatable_config.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-backoffice/_datatable_config-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-backoffice/_file_uploader.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-backoffice/_file_uploader-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-backoffice/_utenti_scheda.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-backoffice/_utenti_scheda-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-shared/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-shared/.gitkeep",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src/.gitkeep",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/npm setup.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/npm setup.sh",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/robots.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/robots.txt",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/sitemap.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/sitemap.xml",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/_main.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/_main.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/analytics.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/analytics.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/fancybox_cdn.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/fancybox_cdn.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/favicons.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/favicons.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/file_uploader.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/file_uploader.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/flash_messages.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/flash_messages.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/flash_messages_malert.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/flash_messages_malert.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/form_end_sf4.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/form_end_sf4.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/form_end_sf5.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/form_end_sf5.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/google_font_loader.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/google_font_loader.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/google_font_v2_loader.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/google_font_v2_loader.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/icone.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/icone.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/imgs.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/imgs.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/imgs_viewer.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/imgs_viewer.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/meta.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/meta.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/_backoffice-tpl-v1.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/_backoffice-tpl-v1.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/contenuti/contenuti-elenco.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/contenuti/contenuti-elenco.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/contenuti/contenuti-scheda.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/contenuti/contenuti-scheda.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/dashboard.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/dashboard.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/utenti/utenti-elenco.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/utenti/utenti-elenco.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/utenti/utenti-scheda.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/utenti/utenti-scheda.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/email/_email-tpl.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/email/_email-tpl.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/email/attivazione-utente.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/email/attivazione-utente.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/email/richiesta-contatto.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/email/richiesta-contatto.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/public-site/_public-tpl-v1.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/public-site/_public-tpl-v1.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/security/_security-tpl.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/security/_security-tpl.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/security/login.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/security/login.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/security/recupero-pwd.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/security/recupero-pwd.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_vscode/proj-v1.code-snippets": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_vscode/proj-v1.code-snippets",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_vscode/proj-v2.code-snippets": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_vscode/proj-v2.code-snippets",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_vscode/tasks.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_vscode/tasks-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/boilerplate/_PROJ_ROOT_/_vscode/upd-from-boilerplate-params.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_vscode/upd-from-boilerplate-params.sh",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_vscode/upd-from-boilerplate.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_vscode/upd-from-boilerplate.sh",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/assets_template.sketch": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/assets_template.sketch",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/files_repo/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/files_repo/.gitkeep",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/proj.code-workspace": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/proj.code-workspace",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/pwd/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/pwd/.gitkeep",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/SETUP checklist.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/SETUP checklist.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/boilerplate/LICENSE": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/LICENSE",
+		"oF": 0
+		},
+	"/boilerplate/optional/contenuti.sql": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/optional/contenuti.sql",
+		"oF": 0
+		},
+	"/boilerplate/optional/favicons/Favicon Generator for all platforms- iOS, Android, PC-Mac....webloc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/optional/favicons/Favicon Generator for all platforms- iOS, Android, PC-Mac....webloc",
+		"oF": 0
+		},
+	"/boilerplate/optional/favicons/gulpfile_favicon.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/boilerplate/optional/favicons/gulpfile_favicon-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/optional/gulp_make_docs.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/boilerplate/optional/gulp_make_docs-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/optional/gulpfile_email.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/boilerplate/optional/gulpfile_email-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/optional/marchi/_sizes.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/optional/marchi/_sizes.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/boilerplate/optional/marchi/demo-marchi.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/optional/marchi/demo-marchi.html",
+		"oF": 0
+		},
+	"/boilerplate/optional/marchi/gulpfile.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/boilerplate/optional/marchi/gulpfile-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/optional/marchi/icon_list_marchi.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/boilerplate/optional/marchi/icon_list_marchi-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/optional/marchi/marchi-svg/.gitkeep": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/optional/marchi/marchi-svg/.gitkeep",
+		"oF": 0
+		},
+	"/boilerplate/optional/marchi/marchi.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/boilerplate/optional/marchi/marchi.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/boilerplate/optional/npmignore.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/optional/npmignore.txt",
+		"oF": 0
+		},
+	"/boilerplate/optional/npmrc.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/optional/npmrc.txt",
+		"oF": 0
+		},
+	"/boilerplate/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
 	"/bs4-utilities/_boxes.scss": {
 		"aP": 0,
@@ -1770,6 +2693,149 @@
 		"oA": 2,
 		"oAP": "/build/node_modules",
 		"oF": 0
+		},
+	"/node_modules/../node_modules/bootstrap/js/dist/alert.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/../node_modules/bootstrap/js/dist/alert-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/../node_modules/bootstrap/js/dist/dropdown.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/../node_modules/bootstrap/js/dist/dropdown-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/../node_modules/bootstrap/js/dist/index.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/../node_modules/bootstrap/js/dist/index-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/../node_modules/bootstrap/js/dist/modal.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/../node_modules/bootstrap/js/dist/modal-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/../node_modules/bootstrap/js/dist/toast.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/../node_modules/bootstrap/js/dist/toast-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/../node_modules/bootstrap/js/dist/util.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/../node_modules/bootstrap/js/dist/util-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/../node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/../node_modules/datatables.net-bs4/js/dataTables.bootstrap4-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/../node_modules/datatables.net/js/jquery.dataTables.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/../node_modules/datatables.net/js/jquery.dataTables-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/../node_modules/jquery/dist/jquery.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/../node_modules/jquery/dist/jquery.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/../node_modules/moment/locale/it.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/../node_modules/moment/locale/it-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/../node_modules/moment/min/moment.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/../node_modules/moment/min/moment.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/../node_modules/mustache/mustache.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/../node_modules/mustache/mustache-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/../node_modules/popper.js/dist/umd/popper.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/../node_modules/popper.js/dist/umd/popper-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"/node_modules/jquery/dist/jquery.js": {
 		"bF": 0,
