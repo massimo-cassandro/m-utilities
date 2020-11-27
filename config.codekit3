@@ -339,17 +339,6 @@
 		"oS": 0,
 		"sct": 1
 		},
-	"/boilerplate/_contenuti_elenco.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/boilerplate/_contenuti_elenco-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/boilerplate/_contenuti_scheda.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1908,6 +1897,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/scss-functions/_str_replace.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/scss-functions/_svg_uri.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/scss-functions/_svg_uri.css",
 		"oF": 0,
 		"oS": 0,
 		"sct": 1
