@@ -1,0 +1,24 @@
+$overlay-bg: rgba(0,0,0,.8)!default;
+$overlay-color: #fff!default; // colore dello spinner bs4
+
+.page-overlay, .div-overlay {
+  background-color: $overlay-bg;
+  top:0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  z-index: 999999;
+  color: $overlay-color;
+
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+.page-overlay {
+  position:fixed;
+}
+
+.div-overlay {
+  position:absolute;
+}
+

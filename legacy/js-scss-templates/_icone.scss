@@ -1,0 +1,54 @@
+.icona {
+  display: inline-block;
+  width:1em;
+  height: 1em;
+  position: relative;
+
+  &:before {
+    width: 100%;
+		height: 100%;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+  }
+
+  &-ok {
+    content: svg_uri(
+      str-replace(map-get($ui-icons, success), '<svg', '<svg fill="#{theme-color(success)}"')
+    );
+  }
+
+  &-off {
+    content: svg_uri(
+      str-replace(map-get($ui-icons, off), '<svg', '<svg fill="#{theme-color(danger)}"')
+    );
+  }
+
+  // &-drag {
+  //   position:relative;
+	//   &::before {
+  //     content: svg_uri_fill($icona_ui-drag, 'currentColor');
+  //     position:absolute;
+  //     display: block;
+  //     width:1em;
+  //     height: 1em;
+  //   }
+  // }
+}
+
+
+/*
+a .icona {
+  fill: $link-color;
+
+  &:hover {
+    fill: $link-hover-color;
+  }
+}
+*/
+
+.btn .icona {
+  position: relative;
+  //top:3px;
+}

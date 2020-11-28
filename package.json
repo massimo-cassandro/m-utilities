@@ -1,0 +1,47 @@
+{
+  "name": "@massimo-cassandro/m-utilities",
+  "version": "3.0.1",
+  "description": "My collection of front-end development snippets & utilities",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/massimo-cassandro/m-utilities.git#master"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Massimo Cassandro",
+  "license": "MIT",
+  "keywords": [
+    "ux",
+    "user-interface",
+    "user-experience",
+    "forms",
+    "javascript",
+    "Bootstrap",
+    "sass",
+    "scss",
+    "css",
+    "less",
+    "html",
+    "jQuery",
+    "twig",
+    "font",
+    "Google Fonts"
+  ],
+  "bugs": {
+    "url": "https://github.com/massimo-cassandro/m-utilities/issues"
+  },
+  "homepage": "https://github.com/massimo-cassandro/m-utilities#readme",
+  "devDependencies": {
+    "bootstrap": "^4.5.3",
+    "datatables.net-bs4": "^1.10.22",
+    "jquery": "^3.5.1",
+    "moment": "^2.29.1",
+    "mustache": "^4.0.1",
+    "popper.js": "^1.16.1"
+  },
+  "dependencies": {}
+}

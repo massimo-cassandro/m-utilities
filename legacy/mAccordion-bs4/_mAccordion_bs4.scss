@@ -1,0 +1,67 @@
+/*
+  mAccordion v. 2.0
+  Massimo Cassandro 2016-2017
+*/
+/* utilizza Bootstrap collapse */
+
+$mAccordion-padding                     : .5rem !default;
+$mAccordion-border-color                : $card-border-color !default;
+$mAccordion-border-radius               : $border-radius !default;
+$mAccordion-head-background-color       : $link-color !default;
+$mAccordion-head-color                  : #fff !default;
+$mAccordion-head-font-weight            : $headings-font-weight !default;
+$mAccordion-head-font-size              : 1.2rem !default;
+$mAccordion-head-hover-background-color : $link-hover-color !default;
+$mAccordion-head-hover-color            : #fff !default;
+$mAccordion-head-font-family            : $headings-font-family !default;
+$mAccordion-head-border-bottom          : 1px solid $mAccordion-border-color;
+
+$mAccordion-wrapper-border-color        : #666 !default;
+$mAccordion-wrapper-h2-font-family      : $mAccordion-head-font-family !default;
+
+.mAccordion {
+
+  margin: 1rem 0 2rem;
+  border:1px solid $mAccordion-border-color;
+  border-radius: $mAccordion-border-radius;
+
+  .card {
+    border: none;
+  }
+
+  .card-header {
+    padding: 0;
+    border: none;
+
+    > * {
+      margin:0;
+      line-height: 1;
+    }
+
+    a {
+      padding:$mAccordion-padding;
+      display: block;
+      text-decoration: none;
+      font-size:$mAccordion-head-font-size;
+      font-weight: $mAccordion-head-font-weight;
+      font-family: $mAccordion-head-font-family;
+      background-color: $mAccordion-head-background-color;
+      color: $mAccordion-head-color;
+      border-bottom: $mAccordion-head-border-bottom;
+      &:hover {
+        background-color: $mAccordion-head-hover-background-color;
+        color:$mAccordion-head-hover-color;
+      }
+    }
+  }
+
+  .card-body {
+    padding:$mAccordion-padding;
+  }
+
+  .card:last-child {
+    a[aria-expanded="false"]{
+      border-bottom:none;
+    }
+  }
+}

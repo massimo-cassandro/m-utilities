@@ -1,0 +1,70 @@
+// colori
+$text-color: #333333;
+$bianco: #FFFFFF;
+$nero: #000000;
+$grigio-1: #E9EBEE;
+$grigio-2: #D3D8DE;
+$grigio-3: #BEC4CD;
+$grigio-4: #666A6E;
+$primary: #206749;
+$secondary: #897D79;
+$error: #970E27;
+$info: #1660E0;
+$success: #199738;
+$warning: #E0670B;
+
+$giallo: #fc0;
+$rosso: #c00;
+
+$danger: $error;
+$text-muted: $grigio-1;
+
+$menu-admin-color          : #000;
+$menu-admin-hover-bg-color : $menu-admin-color;
+$menu-admin-hover-color    : color-yiq($menu-admin-hover-bg-color);
+
+// *******************
+// !Font
+// *******************
+/*
+
+  font-family: 'Zilla Slab', serif;
+  font-family: 'Work Sans', sans-serif;
+
+  https://fonts.google.com/specimen/Zilla+Slab
+  https://fonts.google.com/specimen/Work+Sans
+
+  'Work+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700', 'Zilla+Slab:wght@300'
+
+*/
+
+$body-font-family            : 'Work Sans', sans-serif;
+$body-font-weight-light      : 300;
+$body-font-weight-regular    : 400;
+$body-font-weight-semibold   : 500;
+$body-font-weight-bold       : 700;
+
+$heading-font-family         : 'Zilla Slab', serif;
+$heading-font-weight-light   : 300;
+$heading-font-weight-regular : 300;
+$heading-font-weight-bold    : 300;
+
+$menu-font-family            : $body-font-family;
+$menu-font-weight-regular    : $body-font-weight-regular;
+$menu-font-weight-bold       : $body-font-weight-semibold;
+
+
+$monospace-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+$base-line-height: 1.45;
+
+// icone svg, sono usate per gli alert con icona e altro
+@import '../icone/icone_svg';
+$ui-icons: (
+  warning: $icona_ui-warning,
+  danger: $icona_ui-error,
+  info: $icona_ui-info,
+  success: $icona_ui-check,
+  off: $icona_ui-off,
+  on: $icona_ui-check
+);

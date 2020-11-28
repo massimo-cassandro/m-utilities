@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>CKEditor test</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="./test_files/test.css">
+</head>
+<body>
+  <div class="container my-5">
+    <h1>CKEditor Test</h1>
+
+    <div class="alert alert-info">
+      NB: in questa demo le immagini non sono inviate al server, ma sono codificate
+      in base64
+    </div>
+
+    <form id="cke_test_form" action="test_files/server_side.php" method="post">
+
+      <div class="demo_wrapper">
+        <label class="d-block" for="editor1">1. Editor standard</label>
+        <textarea class="editor" id="editor1" name="editor1">
+          <figure class="image image-style-align-left">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Juvenile_herring_gull_seagull_at_Broadstairs%2C_Kent%2C_England.jpg" alt="Seagull.">
+            <figcaption>Seagull.</figcaption></figure>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque quia magni
+              commodi pariatur sit molestias consequuntur natus odit, ullam ratione cupiditate
+              harum accusamus nesciunt voluptate, culpa amet odio recusandae itaque. Ipsa natus,
+              sequi quidem incidunt, ad distinctio consequatur sunt quam tempore temporibus,
+              voluptas saepe vel eaque veritatis. Earum, tempore modi.</p>
+            <p>&nbsp;</p>
+            <figure class="table">
+              <table>
+                <thead><tr><th>A</th><th>B</th></tr></thead>
+                <tbody><tr><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td></tr></tbody>
+              </table>
+            </figure>
+        </textarea>
+        <div class="mt-2">
+          <button type="button" class="btn btn-outline-primary btn-sm get-data-btn">getData</button>
+          <div class="cke-data p-2 border mt-2"></div>
+        </div>
+      </div>
+
+
+
+      <div class="mt-3">
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Test invio dati lato server (php)</button>
+        </div>
+      </div>
+
+    </form>
+
+    <p>vedi il file <a href="../README.md">readme</a> per altre info</p>
+
+
+    <button type="button" id="start-inspector" class="btn btn-outline-primary mt-4">Attiva Inspector</button>
+
+  </div>
+
+
+  <script src="../node_modules/@ckeditor/ckeditor5-inspector/build/inspector.js"></script>
+
+  <script>
+    // modalità deprecata mantenuta per compatibilità con implementazioni precedenti
+    window.mUtilities = {};
+    window.mUtilities.ckeditor = {
+      cke_url: '../ckeditor-dist/m-ckeditor-min.js',
+      upl_url: 'test_files/test_server_upload_response.php',
+      img_viewer: ''
+    };
+  </script>
+  <script src="../../ckeditor-utilities/iife/m-ckeditor-loader-min.js"></script>
+
+  <!-- <script src="../dist/m-ckeditor-min.js"></script>
+  <script>
+    ClassicEditor
+      .create( document.querySelector( '#editor1' ), {
+        toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+      } )
+      .then( editor => {
+        window.editor = editor;
+      } )
+      .catch( err => {
+        console.error( err.stack );
+      } );
+  </script> -->
+
+  <script src="test.js"></script>
+  <script src="../../ckeditor-utilities/iife/m-ckeditor-form-check-min.js"></script>
+</body>
+</html>

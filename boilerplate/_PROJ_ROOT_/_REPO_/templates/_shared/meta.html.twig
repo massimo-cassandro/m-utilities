@@ -1,0 +1,116 @@
+{#
+tag meta e opengraph (i valori indicati sono quelli di default)
+
+
+{%- block title -%}{%- endblock title -%}
+
+{% include '@includes/meta.html.twig' with {
+  robots: true (default),
+
+  descr: '__descr__',
+
+  og_title: block('title'),
+  og_description: default contenuto descr,
+
+  og_img: <== img alternativa a quella di default (url assoluto)
+
+  og_image_type:  <== facoltativi, impostare a null per evitare il default
+  og_image_width:
+  og_image_height:
+
+  viewer_og_img: null, (se presente prevale su og_img)
+  viewer: path('inner_viewer')
+
+} %}
+#}
+
+{% set robots = robots is defined? robots : true %}
+{% set descr = descr is defined? descr : glob_vars.default_meta.descr %}
+
+{% set og_title = og_title is defined? og_title : null %}
+{% set og_description = og_description is defined? og_description : descr %}
+
+{% set viewer_og_img = viewer_og_img is defined? viewer_og_img : null %}
+{% set viewer = viewer is defined? viewer : path('inner_viewer') %}
+
+{% set og_img = og_img is defined? og_img : null %}
+{% set og_image_type = (og_img and og_image_type is defined)? og_image_type : null %}
+{% set og_image_width = (og_img and og_image_width is defined)? og_image_width : null %}
+{% set og_image_height = (og_img and og_image_height is defined)? og_image_height : null %}
+
+{% if (not og_img) and glob_vars.default_meta.og_img is defined and glob_vars.default_meta.og_img %}
+  {% set og_img = glob_vars.default_meta.og_img  %}
+
+  {%- if glob_vars.default_meta.og_image_type is defined and glob_vars.default_meta.og_image_type -%}
+    {% set og_image_type = glob_vars.default_meta.og_image_type %}
+  {%- endif -%}
+
+  {%- if glob_vars.default_meta.og_image_width is defined and glob_vars.default_meta.og_image_width -%}
+    {% set og_image_width = glob_vars.default_meta.og_image_width %}
+  {%- endif -%}
+
+  {%- if glob_vars.default_meta.og_image_height is defined and glob_vars.default_meta.og_image_height -%}
+    {% set og_image_height = glob_vars.default_meta.og_image_height %}
+  {%- endif -%}
+{% endif %}
+
+{% if descr|default() %}
+  <meta name="description" content="{{ descr }}">
+  <meta itemprop="description" content="{{ descr }}">
+{% endif %}
+
+
+{% if glob_vars.default_meta.og_site_name|default() %}
+  <meta property="og:site_name" content="{{ glob_vars.default_meta.og_site_name }}">
+{% endif %}
+
+<meta property="og:url" content="{{ app.request.uri }}">
+<meta property="og:type" content="website">
+
+<meta property="twitter:url" content="{{ app.request.uri }}">
+<meta property="twitter:card" content="summary_large_image">
+
+{% if og_title %}
+  <meta itemprop="name" content="{{ og_title }}">
+  <meta property="og:title" content="{{ og_title }}">
+  <meta property="twitter:title" content="{{ og_title }}">
+{% endif %}
+
+{% if og_description %}
+  <meta property="og:description" content="{{ og_description }}">
+  <meta property="twitter:description" content="{{ og_description }}">
+{% endif %}
+
+
+{% if viewer_og_img  -%}
+  <meta property="og:image" content="{{ absolute_url(viewer ~ '/' ~ viewer_og_img.id) }}">
+  <meta property="twitter:image" content="{{ absolute_url(viewer ~ '/' ~ viewer_og_img.id) }}">
+  <meta itemprop="image" content="{{ absolute_url(viewer ~ '/' ~ viewer_og_img.id) }}">
+
+  <meta property="og:image:type" content="{{ viewer_og_img.mime }}">
+  <meta property="og:image:width" content="{{ viewer_og_img.width }}">
+  <meta property="og:image:height" content="{{ viewer_og_img.height }}">
+
+{% elseif og_img %}
+  <meta property="og:image" content="{{ og_img }}">
+  <meta property="twitter:image" content="{{ og_img }}">
+  <meta itemprop="image" content="{{ og_img }}">
+
+  {% if og_image_width|default() %}
+    <meta property="og:image:width" content="{{ og_image_width }}">
+  {% endif %}
+  {% if og_image_height|default() %}
+    <meta property="og:image:height" content="{{ og_image_height }}">
+  {% endif %}
+  {% if og_image_type|default() %}
+    <meta property="og:image:type" content="{{ og_image_type }}">
+  {% endif %}
+
+{% endif %}
+
+
+{% if app.environment == 'prod' and robots %}
+  <meta name="robots" content="index,follow">
+{% else %}
+  <meta name="robots" content="noindex,nofollow,noarchive,nocache">
+{% endif %}

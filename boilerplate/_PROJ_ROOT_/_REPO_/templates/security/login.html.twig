@@ -1,0 +1,37 @@
+{% set pagID = 'login' %}
+{# {% set controller = pagID %} #}
+{% extends 'security/_security-tpl.html.twig' %}
+{% block title %}{% endblock title %}
+{% block head %}{% endblock head %}
+{% block jsfiles_start %}{% endblock jsfiles_start %}
+{% block jsfiles %}{% endblock jsfiles %}
+
+{##}
+
+{% block last_content %}{% endblock last_content %}
+
+{% block content %}
+  <h1>Accedi all’area riservata</h1>
+  <form method="post">
+    <div class="row">
+      <div class="col-md">
+        <div class="form-group mb-md-0">
+          <label for="inputEmail" class="sr-only">Email</label>
+          <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="form-group mb-md-0">
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        </div>
+      </div>
+      <div class="col-md-auto">
+        <button class="btn btn-primary" type="submit">Accedi</button>
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+      </div>
+    </div>
+  </form>
+  <hr>
+  <p><a href="{{ path('password_recovery') }}">Password dimenticata?</a></p>
+{% endblock %}

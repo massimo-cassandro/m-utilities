@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>CKEditor test (lite / xlite)</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="./test_files/test.css">
+</head>
+<body>
+  <div class="container my-5">
+    <h1>CKEditor Test / lite and xlite</h1>
+
+    <p>L'<strong>editor lite </strong>non permette l'inserimento e il pasting delle immagini;<br>
+    l'<strong>editor xlite</strong> non permette l'utilizzo delle tabelle.</p>
+    <p>Qualsiasi tipo di editor (standard, lite o xlite) può escludere gli headings.</p>
+
+    <p>Per attivare l'editor lite, l'elemento deve avere le classi: <code>editor editor-lite</code>,
+    per leditor xlite: <code>editor editor-xlite</code>.<br>
+    Per disattivare gli headings aggiungere anche la classe <code>editor-no-headings</code>.</p>
+
+    <div class="alert alert-info">
+      NB: in questa demo le immagini non sono inviate al server, ma sono codificate
+      in base64
+    </div>
+
+    <form id="cke_test_form" action="test_files/server_side.php" method="post">
+
+      <div class="demo_wrapper">
+        <label class="d-block" for="editor1">1. Editor lite (no img)</label>
+        <textarea class="editor editor-lite" id="editor1" name="editor1"></textarea>
+
+        <div class="mt-2">
+          <button type="button" class="btn btn-outline-primary btn-sm get-data-btn">getData</button>
+          <div class="cke-data p-2 border mt-2"></div>
+        </div>
+      </div>
+
+      <div class="mt-3">
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Test invio dati lato server (php)</button>
+        </div>
+      </div>
+
+      <hr class="mt-5">
+
+      <div class="demo_wrapper">
+        <label class="d-block" for="editor2">2. Editor xlite (no img, table)</label>
+        <textarea class="editor editor-xlite" id="editor2" name="editor2"></textarea>
+
+        <div class="mt-2">
+          <button type="button" class="btn btn-outline-primary btn-sm get-data-btn">getData</button>
+          <div class="cke-data p-2 border mt-2"></div>
+        </div>
+      </div>
+
+      <div class="mt-3">
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Test invio dati lato server (php)</button>
+        </div>
+      </div>
+
+
+      <hr class="mt-5">
+
+      <div class="demo_wrapper">
+        <label class="d-block" for="editor3">3. Editor xlite + no-headings</label>
+        <textarea class="editor editor-xlite editor-no-headings" id="editor3" name="editor3"></textarea>
+
+        <div class="mt-2">
+          <button type="button" class="btn btn-outline-primary btn-sm get-data-btn">getData</button>
+          <div class="cke-data p-2 border mt-2"></div>
+        </div>
+      </div>
+
+      <div class="mt-3">
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Test invio dati lato server (php)</button>
+        </div>
+      </div>
+
+    </form>
+
+    <p>vedi il file <a href="../README.md">readme</a> per altre info</p>
+
+
+    <button type="button" id="start-inspector" class="btn btn-outline-primary mt-4">Attiva Inspector</button>
+
+  </div>
+
+
+  <script src="../node_modules/@ckeditor/ckeditor5-inspector/build/inspector.js"></script>
+
+  <script type="module">
+    import CKEloader from '../../ckeditor-utilities/_m-ckeditor-loader.js';
+
+    CKEloader({
+      cke_url: '../ckeditor-dist/m-ckeditor-min.js',
+      upl_url: 'test_files/test_server_upload_response.php',
+      img_viewer: ''
+    });
+
+  </script>
+
+
+
+  <script src="test.js"></script> <!-- test utilities -->
+</body>
+</html>

@@ -1,0 +1,19 @@
+.dataTables_processing {
+      //background: #fff;
+      z-index:99;
+      margin:0;
+      position: absolute;
+      width:100%;
+      height: 100%;
+      top:0;
+      left:0;
+      padding:$datatable_processing_padding;
+      background: $datatable_processing_bg;
+
+      /*
+        > div {
+          top:4rem;
+        }
+      */
+
+    }

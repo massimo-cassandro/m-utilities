@@ -1,0 +1,240 @@
+{#
+  include file uploader 2
+
+  Crea il markup mecessario per l'attivazione dell'uploader
+
+
+  ******************
+  STD
+  ******************
+
+  {% include '@includes/file_uploader.html.twig' with {
+    data: {
+      uploader_legend: true,
+      uploader_legend_text: '__legend__',
+      help_text: null,
+
+      varname: 'user_file',
+      registered_extra_field_varname: 'registered_files',
+
+      filetype: 'auto|pdf|img|svg|img+svg',
+      max_filesize: 'xx',
+      img_min_w: null,
+      img_min_h: null,
+      img_max_w: null,
+      img_max_h: null,
+      img_w: null,
+      img_h: null,
+      img_aspect_ratio: null
+    },
+
+    // NB se file singolo, racchiudere la var tra [] (es. [entity.file])
+    values: entity.file? [entity.file] : null
+
+    // file multipli
+    values: (entity.files and entity.files|length)? entity.files : null
+
+  } %}
+
+
+  ******************
+  TUTTI I PARAMETRI
+  ******************
+
+  {% include '@includes/file_uploader.html.twig' with {
+    id: null,
+    attrs: null,
+    viewer: '/viewer', // fac. -> path('inner_viewer')
+
+    data: {
+      disable_submit: true,
+      multiple: false,
+      required: false,
+      disabled: false,
+
+      wrapper_extra_class: null,
+      uploader_legend_class: null,
+
+      accept: null,
+      sortable: false,
+      sortable_varname: 'uploader_order',
+
+      varname: 'user_file',
+      delete_varname: 'elimina_file[]',
+      registered_extra_field_varname: 'registered_files',
+      upload_complete_callback: 'function_name',
+
+      uploader_legend: true,
+      uploader_legend_text: '__legend__',
+      help_text: null,
+
+      filetype: 'auto|pdf|img|svg|img+svg',
+      max_filesize: 'xx',
+      img_min_w: null,
+      img_min_h: null,
+      img_max_w: null,
+      img_max_h: null,
+      img_w: null,
+      img_h: null,
+      img_aspect_ratio: null
+    },
+
+    // NB se file singolo, racchiudere la var tra [] (es. [entity.file])
+    values: entity.file? [entity.file] : null
+
+    // file multipli
+    values: (entity.files and entity.files|length)? entity.files : null
+
+    // array di eventuali parametri da aggiungere al viewer es: ['ext=1', 'alpha=1']
+    viewer_extra_params: [],
+
+    ,extra_fields: [
+      {
+        value_key : 'field_key',
+        use_rel_id: true,
+        markup    : 'html_string'
+        std_markup: {
+          label: "label",
+          type : 'text|email|url|number|checkbox'
+          ,extra_class: null, // string
+          ,attrs: null // string
+        }
+      }
+    ]
+  } %}
+
+
+  in cui:
+    - id: uploader id (fac.)
+    - attrs: altri attributi (fac.)
+    - data: opzioni fileuploader
+    - values: array elementi preregistrati
+    - extra_fields: campi aggiuntivi
+        -> extra_fields.value_key           <== viene aggiunto anche a values
+        -> extra_fields.use_rel_id: true    <== per far usare ai campi extra il rel_id
+        -> markup: 'html string'            <== markup specifico
+        -> std_markup: { }                  <== alternativa a markup, campi predefiniti
+
+
+#}
+{% set minia_bb = (data.multiple is not defined or data.multiple == false)? '400x400' : '200x200' %}
+{# {% set viewer = viewer is defined ? viewer : '/viewer' %} #}
+{% set viewer = viewer is defined ? viewer : glob_vars.viewer %}
+
+{% set extra_fields = (extra_fields is defined and extra_fields is iterable and extra_fields|length)? extra_fields : null %}
+{% set  values = (values is defined and values is iterable and values|length)? values : null %}
+{% set viewer_extra_params = viewer_extra_params is defined ? '&' ~ viewer_extra_params|join('&') : '' %}
+
+{% set parsed_values = null %}
+{% if values|default() is not null and values|length %}
+  {% set parsed_values = [] %}
+  {% for row in values %}
+    {#
+      nel caso di tabelle relazionate, la tabella file corrisponde a row.file
+    #}
+
+    {% if row|default() %}
+      {% set dati_file = row.file is defined? row.file : row %}
+      {% set is_svg = dati_file.mime == 'image/svg+xml' %}
+
+    	{% set this_value = {
+        id    : row.id,
+        name  : dati_file.nome,
+        size  : dati_file.size,
+        url   : viewer ~ '/' ~ dati_file.id
+      } %}
+
+      {% if extra_fields %}
+        {% for extra in extra_fields %}
+          {# {% set this_value = this_value|merge({(extra.value_key): row[extra.value_key]}) %} #}
+          {% set this_value = this_value|merge({(extra.value_key): attribute(row, extra.value_key)}) %}
+        {% endfor %}
+      {% endif %}
+
+      {% if row.file is defined %}
+      	{% set this_value = this_value|merge({rel_id: row.id}) %}
+      {% endif %}
+
+      {% if data.filetype == 'img' or data.filetype == 'img+svg'%}
+      	{% set this_value = this_value|merge({
+          url   : viewer ~ '/' ~ dati_file.id ~ (not is_svg? '?bb=900x800' ~ viewer_extra_params : ''),
+          src   : viewer ~ '/' ~ dati_file.id ~  (not is_svg? '?bb=' ~ minia_bb ~ viewer_extra_params : ''),
+          wi    : dati_file.width,
+          he    : dati_file.height
+        }) %}
+      {% endif %}
+
+    	{% set parsed_values = parsed_values|merge([this_value]) %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% set parsed_extra_fields = null %}
+{% if extra_fields %}
+  {% set parsed_extra_fields = [] %}
+  {% for row in extra_fields %}
+    {% set this_extra_field = { value_key: row.value_key } %}
+
+    {% if row.use_rel_id is defined and row.use_rel_id == true %}
+      {% set this_extra_field = this_extra_field|merge({use_rel_id: true}) %}
+    {% endif %}
+
+    {% set this_markup = '' %}
+    {% if row.markup is defined %}
+      {% set this_markup = row.markup %}
+
+    {% else %} {# markup predefiniti #}
+      {% set this_markup %}
+        {% if row.std_markup.type|lower in ['text', 'url', 'number', 'email'] %}
+
+          <div class="form-group {%- if 'required' in  row.std_markup.attrs|default() %} required{% endif -%}">
+            <label for="{{ row.value_key }}-{{ '{{idx}}' }}">{{ row.std_markup.label }}</label>
+            <input type="{{ row.std_markup.type|lower }}" {{- ' ' -}}
+              class="form-control form-control-sm {{- row.std_markup.extra_class|default()? ' ' ~ row.std_markup.extra_class : '' -}}" {{- ' ' -}}
+              id="{{ row.value_key }}-{{ '{{idx}}' }}"  {{- ' ' -}}
+              value="{{ '{{val}}' }}"  {{- ' ' -}}
+              name="{{ '{{name}}' }}"
+              {{- row.std_markup.attrs|default()? ' ' ~ row.std_markup.attrs : '' -}}
+            >
+          </div>
+
+        {% elseif row.std_markup.type|lower == 'checkbox' %}
+
+          <div class="form-group">
+            <div class="form-check">
+              <input type="checkbox"  {{- ' ' -}}
+                class="form-check-input {{- row.std_markup.extra_class|default()? ' ' ~ row.std_markup.extra_class : '' -}}" {{- ' ' -}}
+                name="{{ '{{name}}' }}"  {{- ' ' -}}
+                value="1"  {{- ' ' -}}
+                id="{{ row.value_key }}-{{ '{{idx}}' }}"
+                {{- ' {{checked}} ' -}}
+                {{- row.std_markup.attrs|default()? ' ' ~ row.std_markup.attrs : '' -}}
+              >
+              <label class="form-check-label {%- if 'required' in  row.std_markup.attrs|default() %} required{% endif -%}" {{- ' ' -}}
+                for="{{ row.value_key }}-{{ '{{idx}}' }}" {{- ' ' -}}
+              >
+                {{- row.std_markup.label -}}
+              </label>
+            </div>
+          </div>
+
+        {% endif %}
+
+        {# TODO altri tipi #}
+
+      {% endset %}
+
+    {% endif %}
+    {% set this_extra_field = this_extra_field|merge({markup: this_markup|spaceless}) %}
+
+    {% set parsed_extra_fields = parsed_extra_fields|merge([this_extra_field]) %}
+
+  {% endfor %}
+{% endif %}
+
+<div {%- if id|default() %} id="{{ id }}"{% endif %}
+  {%- if attrs is defined and attrs %} {{ attrs|raw }}{%- endif -%}
+  {{- ' ' -}} data-file-uploader="{{ data|json_encode() }}"
+  {%- if parsed_values %} data-values="{{ parsed_values|json_encode() }}"{%- endif -%}
+  {%- if parsed_extra_fields %} data-extra_fields="{{ parsed_extra_fields|json_encode() }}"{%- endif -%}
+></div>

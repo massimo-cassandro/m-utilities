@@ -1,0 +1,43 @@
+// campi distributi su righe in modo tabellare
+// per macro aggiunta record dinamici
+
+//.macro-riga
+.macro-riga-label-alternate {
+
+  &:not(:first-child) {
+    label, legend {
+      display:none;
+    }
+    .form-check label {
+      display:inline-block
+    }
+  }
+  .form-group {
+    margin: 0;
+  }
+
+  // visualizza label nei breakpoints più piccoli
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-down($breakpoint) {
+
+      &.show-label-#{$breakpoint}   {
+        label,legend {
+          display:block;
+        }
+        .form-group {
+          margin-bottom: $form-group-margin-bottom;
+        }
+      }
+    }
+  }
+}
+
+.macro-riga-alternate {
+  padding:.4rem;
+
+  &:nth-child(even) {
+    background-color: $table-accent-bg;
+  }
+
+  @extend .macro-riga-label-alternate;
+}

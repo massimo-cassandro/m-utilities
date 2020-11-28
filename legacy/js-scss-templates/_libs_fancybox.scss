@@ -1,0 +1,21 @@
+@import '../../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox';
+
+/*
+.fancybox-content {
+  max-width:960px!important;
+}
+*/
+
+// correzione z-index per corretta visualizzazione con bootstrap
+
+// $zindex-dropdown:                   1000;
+// $zindex-sticky:                     1020;
+// $zindex-fixed:                      1030;
+// $zindex-modal-backdrop:             1040;
+// $zindex-modal:                      1050;
+// $zindex-popover:                    1060;
+// $zindex-tooltip:                    1070;
+
+.fancybox-container {
+  z-index: 1035!important;
+}

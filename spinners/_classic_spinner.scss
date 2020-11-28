@@ -1,0 +1,128 @@
+/**
+ * Ispirato da "(C)Leanest CSS spinner ever” di Lea Verou (http://lea.verou.me/2013/11/cleanest-css-spinner-ever/)
+ */
+ // vedi classic_spinner_demo.html per il markup richiesto
+
+//TODO
+// implementare interpolazione dei colori
+// http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass
+
+/*
+codekit import:
+@import 'componenti/spinners/_classic_spinner.scss';
+
+*/
+
+$classic_spinner-base-font-size: 16px !default;
+$classic_spinner-size: 5em !default;
+$classic_spinner-bar-height: 1.5em !default;
+$classic_spinner-bar-width: .4em !default;
+$classic_spinner-color1: #333 !default;
+$classic_spinner-color2: #525252 !default;
+$classic_spinner-color3: #717171 !default;
+$classic_spinner-color4: #919191 !default;
+$classic_spinner-color5: #b0b0b0 !default;
+$classic_spinner-color6: #cfcfcf !default;
+$classic_spinner-color7: #eee !default;
+
+$classic_spinner-outer-background: rgba(255,255,255, .6) !default;
+$classic_spinner-outer-padding: .4em !default;
+$classic_spinner-outer-border-radius: .4em !default;
+
+
+// versione in negativo
+$classic_spinner-negative-outer-background: #000 !default;
+
+
+
+@keyframes classic_spinner-spin {
+	to { transform: rotate(1turn); }
+}
+
+.classic_spinner-outer, .classic_spinner {
+	font-size: $classic_spinner-base-font-size;
+
+	&.small {
+		font-size: $classic_spinner-base-font-size / 2;
+	}
+
+	&.large {
+		font-size: $classic_spinner-base-font-size * 2;
+	}
+
+}
+
+
+
+.classic_spinner-outer {
+	padding: $classic_spinner-outer-padding;
+	background: $classic_spinner-outer-background;
+	border-radius: $classic_spinner-outer-border-radius;
+	display: inline-block;
+	&.negative {
+		background: $classic_spinner-negative-outer-background;
+	}
+
+	.classic_spinner {
+		display: block;
+	}
+}
+
+.classic_spinner {
+	position: relative;
+	display: inline-block;
+	width: $classic_spinner-size;
+	height: $classic_spinner-size;
+	margin: 0;
+	padding:0;
+	border-radius: .3em;
+	padding:0;
+	text-indent: -999em;
+	overflow: hidden;
+	animation: classic_spinner-spin 1s infinite steps(12);
+	background: transparent;
+
+	&:before,
+	&:after,
+	div:before,
+	div:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: ($classic_spinner-size  - $classic_spinner-bar-width)/2; /* (container width - part width)/2  */
+		width: $classic_spinner-bar-width;
+		height: $classic_spinner-bar-height;
+		background: $classic_spinner-color1;
+		box-shadow: 0 ($classic_spinner-size - $classic_spinner-bar-height) $classic_spinner-color7; /* container height - part height */
+		transform-origin: 50% ($classic_spinner-size/2); /* container height / 2 */
+	}
+
+	&::before {
+		background: $classic_spinner-color1;
+	}
+
+	&:after {
+		transform: rotate(-30deg);
+		background: $classic_spinner-color2;
+	}
+
+	> div:before {
+		transform: rotate(-60deg);
+		background:  $classic_spinner-color3;
+	}
+
+	> div:after {
+		transform: rotate(-90deg);
+		background:  $classic_spinner-color4;
+	}
+
+	> div > div:before {
+		transform: rotate(-120deg);
+		background:  $classic_spinner-color5;
+	}
+
+	> div > div:after {
+		transform: rotate(-150deg);
+		background:  $classic_spinner-color6;
+	}
+}

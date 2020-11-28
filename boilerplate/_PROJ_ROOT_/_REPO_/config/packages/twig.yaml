@@ -1,0 +1,17 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    form_themes:
+      - '_shared/bs4_form_layout.html.twig'
+    paths:
+      '%kernel.project_dir%/templates/_shared': includes
+      '%kernel.project_dir%/public/assets/email': email_includes
+    globals:
+      glob_vars:
+        vers:
+          public        : '1.0b1'
+          backoffice    : '1.0b1'
+          icone         : '1.0b1'
+
+        analytics_id: 'xxxxx'
+        # chiave_recaptcha_client: 'xxxxx'
+        # gmaps_api_key: 'xxxxxx'

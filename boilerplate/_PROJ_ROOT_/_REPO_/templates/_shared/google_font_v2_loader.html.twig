@@ -1,0 +1,38 @@
+{#
+v.2: support per nuovo loader google per v-fonts
+
+tag preload e caricamento google font
+da: https://googlefonts.3perf.com/
+
+la variabile fonts è un array che genera un tag link per ogni elemento
+usare solo se necessario differenziare i subset di due dont
+
+Gli elementi fonts devono essere già urlencoded
+
+{%- include '@includes/google_font_v2_loader.html.twig' with {
+  fonts: ['Barlow:ital,wght@0,400;0,700;1,400;1,700'],
+} -%}
+
+esempio con subset e v-fonts
+{%- include '@includes/google_font_v2_loader.html.twig' with {
+  fonts: [
+    'Fira+Sans:400,400i,700,700i',
+    'Fira+Sans+Extra+Condensed&amp;text=1234567890.%2C%E2%82%AC',
+    'Work+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700'
+  ]
+} -%}
+
+google font link con variable fonts
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+#}
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{% set font_url = '' %}
+{% for fnt in fonts %}
+  {% set font_url = font_url ~ (font_url != '' ? '&amp;' : '') ~ 'family=' ~ fnt %}
+{% endfor %}
+{% set font_url = 'https://fonts.googleapis.com/css2?' ~ font_url ~ '&amp;display=swap' %}
+<link rel="preload" href="{{ font_url|raw }}" as="style" crossorigin>
+<link href="{{ font_url|raw }}" rel="stylesheet">

@@ -1,0 +1,214 @@
+// classic spinner v. 2
+/*
+	Utilizzo
+	@import 'componenti/spinners/_classic_spinner2.scss';
+
+	markup richiesto:
+	<div class="classic_spinner">
+		<div>
+			<div>Caricamento in corso...</div>
+		</div>
+	</div>
+
+
+	Ispirato da
+	"(C)Leanest CSS spinner ever” di Lea Verou (http://lea.verou.me/2013/11/cleanest-css-spinner-ever/)
+*/
+$classic_spinner-color: #444 !default;
+$classic_spinner-negative-color: #fff !default;
+
+$classic_spinner-lg-size: 6rem !default;
+$classic_spinner-std-size: 4rem !default;
+$classic_spinner-sm-size: 1rem !default;
+
+
+@function spinner_bar_dim($spinner_size, $side: 'w') {
+    $size: 0;
+    @if $side == 'w' {
+        $size: $spinner_size / 15; // bar width
+    } @else {
+        $size: $spinner_size / 3.2; // bar height
+    }
+    //corrections for extra small sizes
+    @if unit($spinner_size) == 'rem' and $size < .1rem {
+        $size: .1rem;
+
+    // this may cause unpredictable results
+    } @else if unit($spinner_size) == 'em' and $size < .1em {
+        $size: .1rem;
+
+    } @else if unit($spinner_size) == 'px' and $size < 1px {
+        $size: 1px;
+    }
+
+    @return $size;
+}
+
+@mixin classic_spinner_bar($spinner_size, $spinner_color, $base_dim: true, $bg_color: true, $box_shadow: true) {
+
+    @if $base_dim {
+        left: ($spinner_size  - spinner_bar_dim($spinner_size, 'w'))/2; /* (container width - part width)/2  */
+        width: spinner_bar_dim($spinner_size, 'w');
+        height: spinner_bar_dim($spinner_size, 'h');
+        transform-origin: 50% ($spinner_size/2); /* container height / 2 */
+    }
+    @if $bg_color {
+        background: $spinner_color;
+    }
+    @if $box_shadow {
+        box-shadow: 0 ($spinner_size - spinner_bar_dim($spinner_size, 'h'))
+            rgba($spinner_color, .4); /* container height - part height */
+    }
+}
+
+
+
+@keyframes classic_spinner-spin {
+	to { transform: rotate(1turn); }
+}
+
+.classic_spinner {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding:0;
+    width: $classic_spinner-std-size;
+    height: $classic_spinner-std-size;
+    text-indent: -999em;
+    overflow: hidden;
+
+    animation: classic_spinner-spin 1s infinite steps(12);
+    background: transparent;
+
+   &::before,
+    &::after,
+    div::before,
+    div::after {
+        content: '';
+        position: absolute;
+        top: 0;
+
+        //left: ($classic_spinner-std-size  - $classic_spinner-bar-width)/2; /* (container width - part width)/2  */
+        //width: $classic_spinner-bar-width;
+        //height: $classic_spinner-bar-height;
+        //transform-origin: 50% ($classic_spinner-std-size/2); /* container height / 2 */
+        //background: $classic_spinner-color;
+        //box-shadow: 0 ($classic_spinner-std-size - spinner_bar($classic_spinner-std-size, 'h'))
+        //   rgba($classic_spinner-color, .4); /* container height - part height */
+
+        @include classic_spinner_bar($classic_spinner-std-size, $classic_spinner-color, true, true, true);
+
+        //mix-blend-mode: difference;
+    }
+
+    &.large {
+        width: $classic_spinner-lg-size;
+        height: $classic_spinner-lg-size;
+
+        &::before,
+        &::after,
+        div::before,
+        div::after {
+            @include classic_spinner_bar($classic_spinner-lg-size, $classic_spinner-color, true, false, true);
+        }
+    }
+
+    &.small {
+        width: $classic_spinner-sm-size;
+        height: $classic_spinner-sm-size;
+
+        &::before,
+        &::after,
+        div::before,
+        div::after {
+            @include classic_spinner_bar($classic_spinner-sm-size, $classic_spinner-color, true, false, true);
+        }
+    }
+
+
+
+    &::before {
+        background: $classic_spinner-color;
+    }
+
+    &::after {
+        transform: rotate(-30deg);
+        background: rgba($classic_spinner-color, .9);
+    }
+
+    > div::before {
+        transform: rotate(-60deg);
+        background:  rgba($classic_spinner-color, .8);
+    }
+
+    > div::after {
+        transform: rotate(-90deg);
+        background:  rgba($classic_spinner-color, .7);
+    }
+
+    > div > div::before {
+        transform: rotate(-120deg);
+        background:  rgba($classic_spinner-color, .6);
+    }
+
+    > div > div::after {
+        transform: rotate(-150deg);
+        background:  rgba($classic_spinner-color, .5);
+    }
+
+    &.negative {
+        &:before,
+        &:after,
+        div:before,
+        div:after {
+            @include classic_spinner_bar($classic_spinner-std-size, $classic_spinner-negative-color, false, true, true);
+        }
+
+        &.large {
+            &::before,
+            &::after,
+            div::before,
+            div::after {
+                @include classic_spinner_bar($classic_spinner-lg-size, $classic_spinner-negative-color, false, false, true);
+            }
+        }
+
+        &.small {
+            &::before,
+            &::after,
+            div::before,
+            div::after {
+                @include classic_spinner_bar($classic_spinner-sm-size, $classic_spinner-negative-color, false, false, true);
+            }
+        }
+
+        &::before {
+            background: $classic_spinner-negative-color;
+        }
+
+        &::after {
+            transform: rotate(-30deg);
+            background: rgba($classic_spinner-negative-color, .9);
+        }
+
+        > div::before {
+            transform: rotate(-60deg);
+            background:  rgba($classic_spinner-negative-color, .8);
+        }
+
+        > div::after {
+            transform: rotate(-90deg);
+            background:  rgba($classic_spinner-negative-color, .7);
+        }
+
+        > div > div::before {
+            transform: rotate(-120deg);
+            background:  rgba($classic_spinner-negative-color, .6);
+        }
+
+        > div > div::after {
+            transform: rotate(-150deg);
+            background:  rgba($classic_spinner-negative-color, .5);
+        }
+    }
+}

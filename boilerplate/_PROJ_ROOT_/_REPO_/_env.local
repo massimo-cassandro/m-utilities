@@ -1,0 +1,6 @@
+#RISORSE=http://xxxx.local:8888
+FILES_DIR=/Users/max/Sites/@lavoro/xxxx/files_repo/
+CACHE_DIR=/tmp/
+TMP_DIR=/tmp/
+APP_ENV=dev
+#APP_ENV=prod

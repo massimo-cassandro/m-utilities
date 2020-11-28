@@ -1,0 +1,85 @@
+$m-sorting-bg-color: theme-color(primary)!default;
+$m-sorting-border-color: theme-color(primary)!default;
+$m-sorting-color: color-yiq(theme-color(primary))!default;
+
+$m-sorting-dragover-color: color-yiq(theme-color(secondary))!default;
+$m-sorting-dragover-bg-color: theme-color(secondary)!default;
+$m-sorting-dragover-border-color: theme-color(secondary)!default;
+
+$m-sorting-insertion-border-width: 3px!default;
+$m-sorting-insertion-border: $m-sorting-insertion-border-width dashed #c00!default;
+
+ // elemento a cui si applicherà il sorting
+.m-sorting-item {
+  user-select: none;
+  transition: transform .3s linear;
+  padding:2px 0;
+
+  &.m-sorting {
+
+    // elemento in fase di trascinamento
+    &-sorting {
+      cursor: move;
+      background-color: $m-sorting-bg-color;
+      color: $m-sorting-color;
+      border-color: $m-sorting-border-color;
+
+      &:not(tr) {
+        transform: scale(.9);
+      }
+    }
+
+    &-dragover {
+      background-color: $m-sorting-dragover-bg-color;
+      color: $m-sorting-dragover-color;
+      border-color: $m-sorting-dragover-border-color;
+
+      &:not(tr) {
+        position: relative;
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          width:100%;
+          bottom:0;
+          left:0;
+
+          border: $m-sorting-insertion-border;
+        }
+      }
+    }
+  }
+
+} // end item
+
+tr {
+
+  &.m-sorting-item {
+    &:not(:last-child) {
+      border-bottom: $m-sorting-insertion-border-width solid transparent;
+    }
+
+    &.m-sorting {
+      &-sorting {
+        td {
+          background-color: $m-sorting-bg-color!important;
+          color: $m-sorting-color!important;
+          a {
+            color: $m-sorting-color!important;
+          }
+          svg {
+            fill: $m-sorting-color!important;
+          }
+        }
+      }
+
+      &-dragover {
+        border-bottom: $m-sorting-insertion-border;
+        td {
+          background-color: $m-sorting-dragover-bg-color!important;
+          color: $m-sorting-dragover-color!important;
+        }
+      }
+    }
+  }
+}

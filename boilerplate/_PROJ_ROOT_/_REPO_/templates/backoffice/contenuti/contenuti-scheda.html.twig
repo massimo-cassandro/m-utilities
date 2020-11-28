@@ -1,0 +1,509 @@
+{% set pagID = 'contenuti_scheda' %}
+{% set controller = pagID %}
+{% extends 'backoffice/_backoffice-tpl.html.twig' %}
+{% block title %}Scheda contenuto
+  {%- if entity.id -%}
+    {{- ' :: ' -}} #{{ entity.id }}
+    {{ entity.sezione.sezione }} / {{ entity.nome }}
+  {%- endif -%}
+{% endblock %}
+{% block head %}{% endblock %}
+{% block jsfiles_start %}{% endblock %}
+{% block jsfiles %}{% endblock %}
+
+{##}
+
+{% block body %}
+  <h1>
+    {%- if entity.id -%}
+      <small>Scheda contenuto</small><br>
+      <small>#{{ entity.id }}</small> {{ entity.sezione.sezione }} / {{ entity.nome }}
+    {%- else -%}
+      Scheda contenuto
+    {%- endif -%}
+  </h1>
+
+  {%- if entity.id and is_granted('ROLE_SUPER_ADMIN') -%}
+    <div class="alert alert-icon alert-info" role="alert">
+      <p>
+        Accesso a questo contenuto:<br>
+        <span class="text-monospace">contenuti.{{ entity.sezione.chiaveSezione }}.{{ entity.chiave }}
+          {%- if entity.tipo.id == 10 -%}.img_desktop / img_mobile{%- endif -%}
+        </span>
+      </p>
+      {%- if entity.tipo.id in [10,11] -%}
+        <p>Per ogni immagine è impostato un oggetto con
+        <span class="text-monospace">id, width, height, mime, size, dida</span></p>
+      {%- endif -%}
+
+      {%- if entity.tipo.id in [12] -%}
+        <p>Per ogni file è impostato un oggetto <code>file</code> con
+        <span class="text-monospace">id, mime, size</span></p>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  {{ form_start(form, {attr: {id: 'form_contenuti'}}) }}
+  {{ form_errors(form) }}
+
+    {%- if is_granted('ROLE_SUPER_ADMIN') -%}
+      <div class="box mb-4">
+        <fieldset class="my-0">
+          <legend>Config <button type="button" id="toggle-config" class="ml-4 btn btn-link p-0 small">Mostra/Nascondi</button></legend>
+          <div id="cfg-wrapper" {{- entity.id|default()? ' style="display:none"' : '' -}}>
+            <p>Salvare la scheda per applicare eventuali modifiche.</p>
+            <details class="boxed">
+              <summary>Info sui tipi di campo</summary>
+              <dl>
+                <dt>Textarea / CKEditor</dt>
+                <dd>
+                  <ul>
+                    <li>Parametro config <code>editor</code>:
+                      <ul>
+                        <li>se non presente o <em>false</em> &rarr; textarea</li>
+                        <li><em>true</em> &rarr; CKEditor completo</li>
+                        <li><em>lite</em> &rarr; versione ridotta senza immagini, tabelle, ecc...</li>
+                      </ul>
+                    </li><li>Parametro config <code>html</code>:
+                      <ul>
+                        <li>se non presente o <em>true</em> &rarr; mostra i suggerimenti html/li>
+                        <li>NB: se <code>config.editor</code> è <em>true</em> o <em>lite</em>, questo parametro viene ignorato</li>
+                      </ul>
+                    </li>
+
+                  </ul>
+                </dd>
+
+                <dt>Immagine singola</dt>
+                <dd>
+                  <ul>
+                    <li>Variabili: <code>imgDesktop</code> e <code>imgMobile</code></li>
+                    <li>Parametro config <code>dida</code>:
+                      <ul>
+                        <li>se non presente o <em>true</em> &rarr; campo didascalia presente ma non obbligatorio</li>
+                        <li><em>required</em> &rarr; campo didascalia presente e obbligatorio</li>
+                        <li><em>false</em> &rarr; campo didascalia non presente</li>
+                      </ul>
+                    </li>
+                    <li>Parametri config <code>desktop_img.required</code> e <code>mobile_img.required</code>:
+                      <ul>
+                        <li>Se non presenti:<br>
+                          <code>desktop_img.required</code> &rarr; default <em>true</em><br>
+                          <code>mobile_img.required</code> &rarr; default <em>false</em></li>
+                        <li>Se <em>false</em>: immagine non obbligatoria</li>
+                        <li>Se <em>true</em>: obbligatoria</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </dd>
+
+                <dt>Gallery</dt>
+                <dd>
+                  <ul>
+                    <li>Variabili: <code>gallery</code> per le immagini,
+                      <code>registered_files.dida</code> per la didascalia, se presente</li>
+                    <li>Parametro config <code>dida</code>: come per le immagini singole</li>
+                  </ul>
+                </dd>
+
+              </dl>
+            </details>
+            <div class="row">
+              <div class="col-sm-6 col-md-4 col-lg-3">
+                {{ form_row(form.sezione, {
+                  label: "Sezione",
+                  attr: {}
+                }) }}
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-3">
+                {{ form_row(form.nome, {
+                  label: "Nome",
+                  attr: {}
+                }) }}
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-3">
+                {{ form_row(form.tipo, {
+                  label: "Tipo",
+                  id: 'tipo',
+                  attr: {}
+                }) }}
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-3">
+                {{ form_row(form.chiave, {
+                  label: "Chiave",
+                  attr: {pattern: '[0-9A-Za-z_]*'},
+                  help: 'Solo lettere, numeri e underscore'
+                }) }}
+              </div>
+              <div class="col-lg-6">
+                {{ form_row(form.config, {
+                  id: 'config',
+                  label: "Config JSON",
+                  attr: {class: 'text-monospace autosize'},
+                  help: '<button type="button" class="add_cfg_tpl btn btn-link p-0 small">Inserisci template</button>' ~
+                    '<button data-cfg="required" type="button" class="add_cfg_tpl ml-4 btn btn-link p-0 small">Inserisci solo “required”</button>'
+                }) }}
+              </div>
+              <div class="col-lg-6">
+                {{ form_row(form.note, {
+                  label: "Info per i redattori",
+                  attr: {class: 'editor editor-lite'}
+                }) }}
+
+                {%- if entity.id|default() -%}
+                  <div class="form-group mt-4">
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="ignora-required">
+                      <label class="custom-control-label" for="ignora-required">
+                        Ignora required
+                      </label>
+                    </div>
+                    <div class="form-help-text">
+                      Consente di salvare la configurazione ignorando
+                      eventuali attributi required ai campi dei valori
+                    </div>
+                  </div>
+
+                  <div class="form-group mt-4">
+                    <button type="submit" class="btn btn-primary">Registra</button>
+                  </div>
+                {%- endif -%}
+
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    {%- endif -%}
+
+    <p class="text-right d-print-none"><a href="{{ path('admin_contenuti_elenco') }}">Torna all'elenco</a></p>
+
+    {%- if entity.id|default() -%}
+      <div class="contenuti-values">
+
+        {%- if entity.sezione.intro|default() or entity.note|default() or entity.sezione.id == 4 -%}
+          <div class="alert alert-icon alert-info" role="alert">
+            {%- if entity.sezione.intro|default() -%}
+              <div>{{ entity.sezione.intro|raw }}</div>
+            {%- endif -%}
+            {%- if entity.note|striptags|trim|default() -%}
+              <div>{{ entity.note|raw }}</div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+
+        {#
+          TIPO CAMPO:
+          --------------------------
+          1, text,
+          2, number,
+          3, date,
+          4, datetime,
+          5, email,
+          6, textarea,
+          7, checkbox,
+          8, url,
+          9, Video keyname S3,
+          10, img,
+          11, gallery
+        #}
+        {% set tipo = entity.tipo.id|default() %}
+        {% set config = entity.config|default({})|json_decode() %}
+
+        {% set class = config.class|default()|trim()? ' ' ~ config.class|trim() : '' %}
+
+        {% set attrs = '' %}
+        {% set attrs_array = config.attributes|default({}) %}
+
+        {%- if tipo == 2 and config.number|default() in ['euro', 'perc'] -%}
+          {% set attrs_array = attrs_array|merge({
+            step: 'any'
+          }) %}
+        {%- endif -%}
+        {%- for key, val in attrs_array -%}
+          {% set attrs = attrs ~ " #{key}=\"#{val}\"" %}
+        {%- endfor -%}
+
+        {%- for prop in config.properties|default({})  -%}
+          {% set attrs = attrs ~ " #{prop}" %}
+        {%- endfor -%}
+        {% set is_required = 'required' in config.properties|default([]) %}
+        {% set is_multiple = 'multiple' in config.properties|default([]) %}
+
+        {% set label_tag = '<label for="contenuto">' ~ entity.nome ~ '</label>' %}
+        {% set attrs = attrs ~
+          ' id="contenuto"' ~
+          ' name="value"'
+        %}
+
+        {# solo per img e gallery #}
+        {%- if config.dida is not defined -%}
+          {% set dida = true %}
+        {%- elseif config.dida is same as(false) or config.dida is same as('false') -%}
+          {% set dida = false %}
+        {%- else -%}
+          {% set dida = config.dida %}
+        {%- endif -%}
+
+        {# text #}
+        {%- if tipo in [1,2,3,5,8] -%}
+
+          {% set input_group_append = '' %}
+          {% set input_group_prepend = '' %}
+
+          {%- if config.number|default() == 'euro' -%}
+            {% set input_group_append = '€' %}
+          {%- elseif config.number|default() == 'perc' -%}
+            {% set input_group_append = '%' %}
+          {%- endif -%}
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group {{- is_required? ' required' : '' }}">
+                {{ label_tag|raw }}
+                {%- if input_group_append or input_group_prepend -%}
+                  <div class="input-group">
+                {%- endif -%}
+                <input class="form-control {{- class -}}"
+                  value="{{- entity.val -}}"
+                  {{- (attrs ~ ' ')|raw -}}
+                  type="{{ entity.tipo.inputType }}"
+                >
+                {%- if input_group_append -%}
+                  <div class="input-group-append">
+                    <span class="input-group-text">{{ input_group_append }}</span>
+                  </div>
+                {%- endif -%}
+                {%- if input_group_append or input_group_prepend -%}
+                  </div>
+                {%- endif -%}
+                {%- if tipo == 5 and is_multiple -%}
+                  <div class="form-help-text">Inserire uno o più indirizzi email separati da virgola</div>
+                {%- endif -%}
+                {%- if tipo == 8 -%}
+                  <div class="form-help-text">Inserire un indirizzo completo del protocollo “http://” o “https://”</div>
+                {%- endif -%}
+              </div>
+            </div>
+          </div> {# end .row #}
+
+        {# datetime #}
+        {%- elseif tipo == 4 -%}
+          <p>datetime: TODO</p>
+
+        {# textarea #}
+        {%- elseif tipo == 6 -%}
+
+          {% set is_testo_html = false %}
+
+          {%- if config.editor|default() is same as('lite') -%}
+            {% set class = class ~ ' editor editor-lite' %}
+          {%- elseif config.editor|default() is same as('xlite') -%}
+            {% set class = class ~ ' editor editor-xlite' %}
+          {%- elseif config.editor|default() is same as(true) or config.editor|default() is same as('true') -%}
+            {% set class = class ~ ' editor' %}
+          {%- elseif config.html|default() is same as(true) or config.html|default() is same as('true') -%}
+            {% set class = class ~ ' text-monospace autosize testo-html' %}
+            {% set is_testo_html = true %}
+          {%- else -%}
+            {% set class = class ~ ' autosize' %}
+          {%- endif -%}
+
+          <div class="row">
+            <div class="col-lg-10 col-xl-8">
+              <div class="form-group {{- is_required? ' required' : '' }}">
+                {{ label_tag|raw }}
+                <textarea class="form-control {{- class -}}" {{- attrs|raw  -}}>{{- entity.val -}}</textarea>
+                {%- if is_testo_html -%}
+                  <div class="form-help-text">
+                    Usa i tag html per grassetti (<code>&lt;strong&gt; ... &lt;/strong&gt;</code>),
+                    corsivi (<code>&lt;em&gt; ... &lt;/em&gt;</code>) o
+                    nuova riga (<code>&lt;br&gt;</code>), ecc.<br>
+                    Gli “a capo” senza il tag <code>&lt;br&gt;</code> vengono ignorati.
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+
+        {# checkbox #}
+        {%- elseif tipo == 7 -%}
+          <p>checkbox: TODO</p>
+
+        {# video S3 #}
+        {# {%- elseif tipo == 9 -%}
+          <div class="row">
+            <div class="col-md-8 col-lg-6">
+              <div class="form-group {{- is_required? ' required' : '' }}">
+                {{ label_tag|raw }}
+                <div class="input-group">
+                  <input class="form-control video-keyname {{- class -}}"
+                    pattern="[0-9A-Za-z\.\-_\/]*"
+                    value="{{- entity.val -}}"
+                    {{- (attrs ~ ' ')|raw  -}}
+                    type="text"
+                  >
+                  <div class="input-group-append">
+                    <button type="button" class="btn btn-secondary test-video">Test video</button>
+                  </div>
+                </div>
+                <div class="form-help-text">
+                  Inserisci il valore della chiave AWS S3 esattamente come riportata
+                  (vedi la pagina <a href="{{ path('info_aws') }}">“Info caricamento video”</a>).
+                </div>
+              </div>
+            </div>
+          </div> #}
+
+        {# img singola #}
+        {%- elseif tipo == 10 -%}
+
+          {% set  add_mobile_img = (config.mobile_img.use_mobile_img is not defined) or config.mobile_img.use_mobile_img == true %}
+
+          {% include '@includes/file_uploader.html.twig' with {
+            data: {
+              uploader_legend: true,
+              uploader_legend_text: entity.nome ~ (add_mobile_img? ' (versione per dispositivi desktop)' : ''),
+              required: config.desktop_img.required is defined? config.desktop_img.required : true
+
+            }|merge(config.desktop_img.file_uploader_data|default({}))|merge({
+              filetype: 'img',
+              varname: 'imgDesktop'
+            }),
+
+            values: entity.imgDesktop? [entity.imgDesktop] : null,
+            viewer_extra_params: ['ext=1', 'alpha=1']
+
+          } %}
+
+          {%- if add_mobile_img -%}
+
+            {% include '@includes/file_uploader.html.twig' with {
+              data: {
+                uploader_legend: true,
+                uploader_legend_text: entity.nome ~ ' (versione per dispositivi mobili)',
+                varname: 'imgMobile',
+                required: config.mobile_img.required is defined? config.mobile_img.required : false
+
+              }|merge(config.mobile_img.file_uploader_data|default({}))|merge({
+                filetype: 'img',
+                varname: 'imgMobile'
+              }),
+
+              values: entity.imgMobile? [entity.imgMobile] : null,
+              viewer_extra_params: ['ext=1', 'alpha=1']
+            } %}
+
+          {%- endif -%}
+
+          {%- if dida is same as(true) or dida is same as('required') -%}
+
+            <div class="row">
+              <div class="col-md-8 col-lg-6">
+                {{ form_row(form.imgDida, {
+                  label: "Didascalia / Descrizione",
+                  attr: {},
+                  required: dida is same as('required')? true : false
+                }) }}
+              </div>
+            </div> {# end .row #}
+          {%- endif -%}
+
+
+        {# gallery #}
+        {%- elseif tipo == 11 -%}
+
+          {%- if config.link is not defined -%}
+            {% set link = false %}
+          {%- elseif config.link is same as(false) or config.link is same as('false') -%}
+            {% set link = false %}
+          {%- else -%}
+            {% set link = config.link %}
+          {%- endif -%}
+
+          {% set cfg_extra_fields = [] %}
+
+          {%- if dida is not same as(false) -%}
+            {% set cfg_extra_fields = cfg_extra_fields|merge([
+              {
+                value_key : 'dida',
+                use_rel_id: true,
+                std_markup: {
+                  label: "Dida./descr.",
+                  type : 'text',
+                  attrs: dida is same as('required')? 'required' : null
+                }
+              }
+            ]) %}
+          {%- endif -%}
+
+          {%- if link is not same as(false) -%}
+            {% set cfg_extra_fields = cfg_extra_fields|merge([
+              {
+                value_key : 'link',
+                use_rel_id: true,
+                std_markup: {
+                  label: "Link",
+                  type : 'url',
+                  attrs: link is same as('required')? 'required' : null
+                }
+              }
+            ]) %}
+          {%- endif -%}
+
+          {% include '@includes/file_uploader.html.twig' with {
+
+            data: {
+              multiple: true,
+              required: false,
+              uploader_legend: true,
+              uploader_legend_text: entity.nome,
+
+            }|merge(config.file_uploader_data|default({}))|merge({
+              filetype: 'img',
+              varname: 'gallery',
+              registered_extra_field_varname: 'registered_files',
+            }),
+
+            values: (entity.gallery and entity.gallery|length)? entity.gallery : null,
+            viewer_extra_params: ['ext=1', 'alpha=1'],
+
+            extra_fields: cfg_extra_fields
+          } %}
+
+        {%- elseif tipo == 12 -%} {# file #}
+
+
+          {% include '@includes/file_uploader.html.twig' with {
+            data: {
+              uploader_legend: true,
+              uploader_legend_text: entity.nome,
+              required: false
+            }
+            |merge(config.file_uploader_data|default({}))
+            |merge({
+              varname: 'file',
+              multiple:false
+            }),
+
+            values: entity.file|default()? [entity.file] : null
+          } %}
+
+        {%- endif -%} {# end if tipo #}
+      </div>
+
+    {%- else -%}
+      <p class="form-edit-info">Salvare la scheda per visualizzare il form di editing del contenuto.</p>
+    {%- endif -%}
+
+    {% include '@includes/form_end_sf5.html.twig' with {show_delete: false } %}
+
+    {{ form_widget(form._token) }}
+    {{ form_end(form, {'render_rest': false}) }}
+
+  <p class="text-right d-print-none"><a href="{{ path('admin_contenuti_elenco') }}">Torna all’elenco</a></p>
+
+
+{% endblock body %}
+{% block last_content %}{% endblock last_content %}

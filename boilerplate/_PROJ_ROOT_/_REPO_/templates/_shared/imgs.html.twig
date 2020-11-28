@@ -1,0 +1,117 @@
+{#
+tag picture per immagini
+
+{% include '@includes/imgs.html.twig' with {
+  files: {
+    basesrc: 'xxxx',
+    fmt: ['webp', 'jpg'],
+    mq: {
+      xl: {w: 1200, h:800, pr: 2},
+      lg: {w: null, h:null} <== pr default 1
+      md: null <== equivale a omettere il brkpoint
+    }
+  },
+  baseurl: null, // fac., parte del percorso comune a tutti i file (con slash finale)
+                    (esempio: 'https://xxx.it/')
+  endname: null,  // fac., parte del percorso aggiunta in coda a tutti i file (prima dell'estensione)
+  endurl: null,  // fac., parte del percorso aggiunta in coda a tutti i file (dopo l'estensione)
+  alt: 'xxxx',
+  class: 'img-fluid', // classe tag img
+  lazyload: true, // facoltativo, default true
+  credits: 'stringa_html', // facoltativo
+  flag1x: false,    // se true, le immgini 1x devono avere `@1x` nel nome
+  add_width: false, // se true aggiunge il tag `width` al tag img (dimensione ultimo src)
+  add_height: false, // se true aggiunge il tag `height` al tag img (dimensione ultimo src)
+  img_attrs: null (eventuali attributi da aggiungere al tag img)
+} %}
+
+
+l'oggetto files contiene:
+  * `basesrc` : parte del nome comune a tutte le combinazioni di mq, formato ecc.
+                (esclusi, facoltativamente, baseurl and url)
+  * `fmt`     : array dei formati presenti (jpg, webp, png, ecc).
+                l'ultimo formato è quello di fallback
+  * `pr`      : pixel ratio, versioni 2x, 3x ecc. presenti (default 1)
+  * `mq`      : array dei breakpoint come definiti in glob_vars.mq
+                per ogni breakpoint vanno definiti
+                  - pr (pixel ratio) numero di verioni presenti (def. 1)
+                  - `w` & `h` : facoltativi, dimensioni dell'immagine (anti CLS)
+
+                I breakpoints vanno elencati dal più grande al più piccolo
+                per quelli non inseriti, o impostati a null non viene generato
+                il tag `source`
+
+il parametro `baseurl` (default: null), può corrispondere ad una stringa basename
+In questo caso il parametro `files` verrà generato automaticamente per tutti i breakpoint
+e per le immagini jpg e webp (che devono essere tutti presenti) anche con la densità 2x
+
+Le immagini devono avere questo naming:
+__baseurl__-md@2x.jpg
+__baseurl__-lg.webp ===> o __baseurl__-lg@1x.webp se `flag1x == true
+ecc.
+
+Richiede la definizione delle variabili media query nel template main
+
+
+NB: WIDTH & HEIGHT da implementare completamente (nei tag source?)
+
+#}
+{% set baseurl = (baseurl is defined and baseurl)? baseurl : '' %}
+{% set endname = (endname is defined and endname)? endname : '' %}
+{% set endurl = (endurl is defined and endurl)? endurl : '' %}
+{% set alt = alt is defined and alt ? alt : '' %}
+{% set class = class is defined and class ? class : '' %}
+{% set img_attrs = img_attrs is defined and img_attrs ? img_attrs : '' %}
+{% set lazyload = lazyload is defined ? lazyload : true %}
+{% set flag1x = flag1x is defined? flag1x : false %}
+{% set add_width = add_width is defined? add_width : false %}
+{% set add_height = add_height is defined? add_height : false %}
+
+
+<picture {%- if credits is defined and credits %} class="has-credits"{% endif %}>
+  {% for brk, brk_data in files.mq  %}
+    {% set last_brk = loop.last %}
+
+    {% if brk_data is not null %}
+
+      {% set max_density = brk_data.pr is defined? brk_data.pr : 1 %}
+
+      {% for fmt in files.fmt %}
+        {% set last_fmt = loop.last %}
+        {% set this_srcset = [] %}
+        {% for densita in 1..max_density %}
+          {% set this_srcset = this_srcset|merge([
+            baseurl ~ files.basesrc ~ '-' ~ brk ~
+            ((densita > 1 or flag1x)? '@' ~ densita ~ 'x' : '') ~ endname ~ '.' ~ fmt ~ endurl ~
+            (densita > 1? " #{densita}x" : '')
+          ]) %}
+        {% endfor %}
+
+        {% if (not last_brk) or (not last_fmt) %}
+          <source {{- lazyload? ' data-' : ' ' -}} srcset="{{ this_srcset|join(', ') }}"
+            {%- if fmt == 'webp' %} type="image/webp"{% endif -%}
+            {{- ' ' -}} media="{{ glob_vars.mq[brk] }}">
+        {% else %}
+          <img {{- lazyload? ' data-' : ' ' -}} src="{{ this_srcset[0] }}"
+            {%- if this_srcset|length > 1 %}
+              {{- lazyload? ' data-' : ' ' -}} srcset="{{- this_srcset|slice(1)|join(', ') -}}"
+            {%- endif -%}
+            {%- if lazyload %} loading="lazy"{% endif %}
+            {{- ' ' -}} alt="{{ alt }}"
+            {%- if class %} class="{{ class }}"{% endif %}
+            {%- if img_attrs %} {{ img_attrs|raw }}{% endif %}
+            {%- if add_width and brk_data.w is defined and brk_data.w %} width="{{ brk_data.w }}"{% endif %}
+            {%- if add_height and brk_data.h is defined and brk_data.h %} width="{{ brk_data.h }}"{% endif -%}
+          >
+        {% endif %}
+      {% endfor %}
+
+    {% endif %}
+  {% endfor %}
+  {% if credits|default() %}
+    <div class="img_credits">{{ credits|raw }}</div>
+  {% endif %}
+</picture>
+
+
+

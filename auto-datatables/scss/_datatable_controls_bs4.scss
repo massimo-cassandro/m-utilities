@@ -1,0 +1,62 @@
+//.datatable-wrapper {}
+
+// datatable controls
+.datatable-length, .datatable-filter {
+
+  label {
+    font-size: .85rem;
+    font-weight: normal;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items:center;
+
+    > div {
+      flex: 1 1 auto;
+    }
+    // allineamento prima parte del testo
+    > div:nth-child(1) {
+      flex: 0 0 6.5em;
+      text-align: right;
+    }
+  }
+
+}
+
+.datatable-length {
+  .dt-control {
+    padding: 0 1em;
+    flex: 0 0 7em;
+  }
+}
+.datatable-filter {
+  .dt-control {
+    padding-left:1em;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+
+  .datatable-length, .datatable-filter {
+
+    label {
+      > div {
+        flex: 0 1 auto;
+      }
+      >div:nth-child(1) {
+        text-align: left;
+        flex-basis: auto;
+      }
+    }
+  }
+
+  .datatable-filter {
+    label {
+      justify-content:flex-end;
+    }
+  }
+
+} // end media-breakpoint-up(sm)
+

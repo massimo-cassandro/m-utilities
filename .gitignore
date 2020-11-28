@@ -1,0 +1,17 @@
+*~
+*.mwb.bak
+*.sass-cache
+.dropbox
+node_modules
+bower_components/
+vendor
+.codekit-cache/
+package-lock.json
+
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db

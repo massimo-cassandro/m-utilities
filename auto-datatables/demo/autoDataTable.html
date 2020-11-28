@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="./datatable-demo.css" type="text/css" media="all">
+    <title>autoDataTable demo</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1>autoDataTable demo</h1>
+      <p>(NB: il json caricato è statico e la paginazione e altri indicatori non sono funzionanti).</p>
+
+      <p>Questa modalità è utilizzata tipicamente con strumenti server-side
+        che permettano al codifica JSON dei parametri, cosa che in questa demo è
+      stata effettuata manualmente.</p>
+
+      <p>Attributi data originali:</p>
+      <pre><code>
+        data-cdt_options="{
+          datatable_options : {
+            ajax: './demo_data.json',
+            order: [[1,'asc']]
+          }
+        }"
+
+        data-dt_columns="[
+          {
+            title      : '#',
+            data       : 'id',
+            className  : 'text-right'
+          },
+          {
+            title      : 'Nome',
+            data       : 'firstName'
+          },
+          {
+            title      : 'Cognome',
+            data       : 'lastName'
+          },
+          {
+            title      : 'Posizione',
+            data       : 'position'
+          },
+          {
+            title      : 'Sede',
+            data       : 'office'
+          }
+        ]"
+      </code></pre>
+
+      <div id="datatable_container"
+        data-cdt_options="{&quot;datatable_options&quot;:{&quot;ajax&quot;:&quot;./demo_data.json&quot;,&quot;order&quot;:[[1,&quot;asc&quot;]]}}"
+        data-dt_columns="[{&quot;title&quot;:&quot;#&quot;,&quot;data&quot;:&quot;id&quot;,&quot;className&quot;:&quot;text-right&quot;},{&quot;title&quot;:&quot;Nome&quot;,&quot;data&quot;:&quot;firstName&quot;},{&quot;title&quot;:&quot;Cognome&quot;,&quot;data&quot;:&quot;lastName&quot;},{&quot;title&quot;:&quot;Posizione&quot;,&quot;data&quot;:&quot;position&quot;},{&quot;title&quot;:&quot;Sede&quot;,&quot;data&quot;:&quot;office&quot;}]"></div>
+
+
+    </main>
+
+    <script src="./autoDataTable-demo-min.js"></script>
+  </body>
+</html>

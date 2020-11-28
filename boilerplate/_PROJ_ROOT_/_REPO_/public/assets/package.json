@@ -1,0 +1,20 @@
+{
+  "name": "xxxx",
+  "version": "1.0.0",
+  "description": "xxx xxxx / frontend",
+  "main": "/public",
+  "scripts": {
+    "build_icons": "cd icone && gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xxxx"
+  },
+  "author": "Massimo Cassandro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xxxx/issues"
+  },
+  "homepage": "https://github.com/xxxx#readme",
+  "dependencies": {}
+}
