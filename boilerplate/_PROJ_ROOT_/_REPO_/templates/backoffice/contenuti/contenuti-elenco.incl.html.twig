@@ -1,0 +1,132 @@
+{#
+  {% include 'backoffice/contenuti/contenuti-elenco.incl.html.twig' with {
+    azzera_filtri_btn_class: 'btn btn-outline-secondary'
+  } %}
+
+#}
+{% set azzera_filtri_btn_class = azzera_filtri_btn_class is defined? azzera_filtri_btn_class : 'btn btn-outline-secondary' %}
+<form action="{{ path('backoffice_contenuti_elenco_json') }}" id="f_ricerca" method="post" data-disable-submit="false" class="d-print-none">
+  <fieldset>
+    <legend>Filtra contenuti</legend>
+    <div class="row align-items-end">
+      <div class="col-sm-6 col-lg-4">
+        {{ form_row(form.sezione, {
+          id: 'filtro-sezione',
+          label: "Sezione/pagina"
+        }) }}
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        {{ form_row(form.tipo, {
+          id: 'filtro-tipo',
+          label: "Tipo contenuto"
+        }) }}
+      </div>
+
+      <div class="col-lg-4 d-sm-flex justify-content-between">
+        <div class="form-group text-center text-sm-left">
+          <button type="submit" class="btn btn-primary">Cerca</button>
+        </div>
+        <div class="form-group text-center text-sm-left mt-3 mt-sm-0">
+          <button type="button" class="contenuti-filter-reset {{ azzera_filtri_btn_class }}">Azzera filtri</button>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</form>
+
+{%- if is_granted('ROLE_SUPER_ADMIN') -%}
+  <p class="d-print-none text-right"><a href="{{ path('backoffice_contenuti_scheda') }}">Nuovo contenuto</a></p>
+{%- endif -%}
+
+<div class="dt_container"
+  data-cdt_options="{{ {
+    dtRender: {
+      bindToForm: 'f_ricerca',
+      formSubmitButton: 'submitButton'
+    },
+    datatable_options : {
+      order: [[1,'asc'],[2,'asc']],
+      pageLength: 25
+    }
+  }|json_encode|e('html_attr') }}"
+
+  data-dt_columns="{{ [
+    {
+      dtRender  : { type: 'id' }
+    },
+    {
+      title     : 'Sezione',
+      data      : 'sezione'
+    },
+    {
+      title     : 'Contenuto',
+      name      : 'nome',
+      dtRender  : {
+        type        : 'tpl',
+        sf_base_url : path('backoffice_contenuti_scheda', { id: null }),
+        tpl         : '<a href="[[sf_base_url]][[id]]">[[nome]]</a>'
+      }
+    },
+    {
+      title     : 'Tipo',
+      data      : 'tipo'
+    },
+    {
+      title     : 'Valore',
+      name      : 'val',
+      dtRender  : {
+        type        : 'tpl',
+        filter: {
+          'val': 'strips_truncate_100'
+        },
+        tpl         : '[[#img]]' ~
+                        '[[#imgVal]]<span class="icona icona-ok"></span>[[/imgVal]]' ~
+                        '[[^imgVal]]<span class="icona icona-off"></span>[[/imgVal]]' ~
+                      '[[/img]]' ~
+                      '[[^img]]' ~
+                      '[[& val]]'~
+                      '[[/img]]'
+      }
+    },
+    {
+      data      : 'imgVal',
+      visible   : false
+    },
+    {
+      title     : 'Variabile',
+      name      : 'chiave',
+      dtRender  : {
+        type        : 'tpl',
+        filter: {
+          'chiaveSezione': {
+            filter: 'replace',
+            flag: 'g',
+            regexp: '_',
+            replace: '_<wbr>'
+          },
+          'chiave': {
+            filter: 'replace',
+            flag: 'g',
+            regexp: '_',
+            replace: '_<wbr>'
+          }
+        },
+        tpl         : 'contenuti<wbr>.[[& chiaveSezione]]<wbr>.[[& chiave]]'
+      },
+      visible: is_granted('ROLE_SUPER_ADMIN')
+    },
+    {
+      title     : 'chiaveSezione',
+      data      : 'chiaveSezione',
+      visible   : false
+    }
+  ]|json_encode|e('html_attr') }}"></div>
+
+{#
+
+  '[[#val]][[& val]][[/val]]'
+#}
+
+{%- if is_granted('ROLE_SUPER_ADMIN') -%}
+  <p class="d-print-none"><a href="{{ path('backoffice_contenuti_scheda') }}">Nuovo contenuto</a></p>
+{%- endif -%}

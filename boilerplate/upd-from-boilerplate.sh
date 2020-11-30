@@ -3,7 +3,7 @@
 # cambiare nome se modificato per evitare che sia sovrascritto
 # cd "$(dirname "$0")"
 
-source upd-from-boilerplate-params.sh
+source $1
 
 ASSETS_DIR="$project_base_dir"/public/assets
 NODE_MOD_DIR="$ASSETS_DIR"/node_modules
@@ -53,15 +53,16 @@ else
 fi
 
 
-# contenuti
-FILE_FOLDER=contenuti
-SOURCE="$BOILERPLATE_REPO_DIR"/templates/backoffice/"$FILE_FOLDER"/
-TARGET=$TEMPLATES_DIR/backoffice/"$FILE_FOLDER"/
+# includes contenuti
+# vengono aggiornati solo gli includes
+SOURCE="$BOILERPLATE_REPO_DIR"/templates/backoffice/contenuti/
+TARGET=$TEMPLATES_DIR/backoffice/contenuti/
 if [ -d $TARGET ]; then
-  cp -a "$SOURCE". "$TARGET"
-  printf "* ${SUCCESS}${FILE_FOLDER} aggiornato${RESET}\n"
+  cp -a "$SOURCE"contenuti-elenco.incl.html.twig "$TARGET"
+  cp -a "$SOURCE"contenuti-scheda.incl.html.twig "$TARGET"
+  printf "* ${SUCCESS}includes contenuti aggiornati${RESET}\n"
 else
-  printf "* ${ERROR}No ${FILE_FOLDER}${RESET}\n"
+  printf "* ${ERROR}No includes contenuti${RESET}\n"
 fi
 
 #shared

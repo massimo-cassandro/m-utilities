@@ -941,12 +941,28 @@
 		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/contenuti/contenuti-elenco.html.twig",
 		"oF": 0
 		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/contenuti/contenuti-elenco.incl.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/contenuti/contenuti-elenco.incl.html.twig",
+		"oF": 0
+		},
 	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/contenuti/contenuti-scheda.html.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/contenuti/contenuti-scheda.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/contenuti/contenuti-scheda.incl.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/contenuti/contenuti-scheda.incl.html.twig",
 		"oF": 0
 		},
 	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/dashboard.html.twig": {
@@ -1044,6 +1060,14 @@
 		"oA": 0,
 		"oAP": "/boilerplate/_PROJ_ROOT_/_vscode/proj-v2.code-snippets",
 		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_vscode/tasks.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_vscode/tasks-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
 	"/boilerplate/_PROJ_ROOT_/_vscode/upd-from-boilerplate-params.sh": {
 		"cB": 0,
@@ -1256,6 +1280,14 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"/boilerplate/upd-from-boilerplate.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/upd-from-boilerplate.sh",
+		"oF": 0
 		},
 	"/bs4-utilities/_boxes.scss": {
 		"aP": 0,
