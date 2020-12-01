@@ -806,6 +806,39 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js/backoffice/contenuti_elenco.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js/backoffice/contenuti_elenco-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js/backoffice/contenuti_scheda.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js/backoffice/contenuti_scheda-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js/backoffice/default.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js/backoffice/default-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/npm setup.sh": {
 		"cB": 0,
 		"ft": 8192,

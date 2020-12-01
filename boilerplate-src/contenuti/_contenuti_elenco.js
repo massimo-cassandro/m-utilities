@@ -1,17 +1,14 @@
-import $ from 'jquery';
-import {autoDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/js/_autoDataTable';
+// datatable va importato nell'implementazione locale
 
+export const datatable_selector = '.dt_container';
 
-export default function () {
+export function contenuti_elenco(datatable_instance) {
 
+  document.querySelector('.contenuti-filter-reset').addEventListener('click', () => {
+    document.getElementbyId('filtro-tipo').selectedIndex = 0;
+    document.getElementbyId('filtro-sezione').selectedIndex = 0;
+    document.getElementbyId('f_ricerca').submit();
 
-  let dt = autoDataTable( $('.dt_container') );
-
-  $('.contenuti-filter-reset').click(function(){
-    $('#filtro-tipo').val('');
-    $('#filtro-sezione').val('');
-    $('#f_ricerca').submit();
-    dt.search('').draw();
-
+    datatable_instance.search('').draw();
   });
 }
