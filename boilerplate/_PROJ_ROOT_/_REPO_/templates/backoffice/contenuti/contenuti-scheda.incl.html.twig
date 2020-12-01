@@ -36,9 +36,9 @@
 
 {%- if is_granted('ROLE_SUPER_ADMIN') -%}
   <div class="box mb-4">
-    <fieldset class="my-0">
+    <fieldset id="cfg-fset">
       <legend>Config <button type="button" id="toggle-config" class="ml-4 btn btn-link p-0 small">Mostra/Nascondi</button></legend>
-      <div id="cfg-wrapper" {{- entity.id|default()? ' style="display:none"' : '' -}}>
+      <div id="cfg-wrapper" {{- entity.id|default()? ' style="display:none"' : '' -}} class="pt-4">
         <p>Salvare la scheda per applicare eventuali modifiche.</p>
         <details class="boxed">
           <summary>Info sui tipi di campo</summary>
@@ -129,7 +129,7 @@
               label: "Config JSON",
               attr: {class: 'text-monospace autosize'},
               help: '<button type="button" class="add_cfg_tpl btn btn-link p-0 small">Inserisci template</button>' ~
-                '<button data-cfg="required" type="button" class="add_cfg_tpl ml-4 btn btn-link p-0 small">Inserisci solo “required”</button>'
+                '<button type="button" class="add_cfg_tpl req_only ml-4 btn btn-link p-0 small">Inserisci solo “required”</button>'
             }) }}
           </div>
           <div class="col-lg-6">
@@ -164,7 +164,7 @@
   </div>
 {%- endif -%}
 
-<p class="text-right d-print-none"><a href="{{ path('admin_contenuti_elenco') }}">Torna all'elenco</a></p>
+<p class="text-right d-print-none"><a href="{{ path('backoffice_contenuti_elenco') }}">Torna all'elenco</a></p>
 
 {%- if entity.id|default() -%}
   <div class="contenuti-values">
@@ -490,5 +490,5 @@
 {{ form_widget(form._token) }}
 {{ form_end(form, {'render_rest': false}) }}
 
-<p class="text-right d-print-none"><a href="{{ path('admin_contenuti_elenco') }}">Torna all’elenco</a></p>
+<p class="text-right d-print-none"><a href="{{ path('backoffice_contenuti_elenco') }}">Torna all’elenco</a></p>
 

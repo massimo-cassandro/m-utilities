@@ -15,9 +15,8 @@ export default function (loader_options) {
 
   const editor_list = document.querySelectorAll('textarea.editor');
 
-  if(typeof window.mUtilities === 'undefined') { window.mUtilities = {};} // per compatibilità con le versioni precedenti, deprecato
 
-  let cke_opts = Object.assign({}, default_options, loader_options || {}, window.mUtilities.ckeditor || {});
+  let cke_opts = Object.assign({}, default_options, loader_options || {});
 
   if (editor_list.length) {
 

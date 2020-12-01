@@ -71,7 +71,7 @@ personalizzazioni:
 
   {%- if entity.id|default() and  show_edit_info -%}
     <div class="{%- if not edit_info_new_line %}col-md-6 mt-md-0 {% endif -%} form-edit-info text-center text-md-right mt-2">
-      <span class="mr-1">{% include '@includes/icone.html.twig' with { id: 'orologio', class: 'icona' } %}</span>
+      <span>{% include '@includes/icone.html.twig' with { id: 'orologio', class: 'icona' } %}</span>
       {{ umTimestamp|format_datetime('medium', 'none', locale=app.request.locale) }}
       <small>{{ umTimestamp|date('H:i') }}</small>
 

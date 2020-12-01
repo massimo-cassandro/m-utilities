@@ -639,139 +639,172 @@
 		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/imgs/.gitkeep",
 		"oF": 0
 		},
-	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---separate-files/backoffice/contenuti_elenco.js": {
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/backoffice-libs.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---separate-files/backoffice/contenuti_elenco-min.js",
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/backoffice-libs-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---separate-files/backoffice/contenuti_scheda.js": {
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/backoffice.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---separate-files/backoffice/contenuti_scheda-min.js",
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/backoffice-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---separate-files/backoffice/default.js": {
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/public-libs.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---separate-files/backoffice/default-min.js",
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/public-libs-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/backoffice-libs.js": {
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/public.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/backoffice-libs-min.js",
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/public-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/backoffice.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/backoffice-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/public-libs.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/public-libs-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/public.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/public-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-backoffice/.gitkeep": {
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/src-backoffice/.gitkeep": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-backoffice/.gitkeep",
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/src-backoffice/.gitkeep",
 		"oF": 0
 		},
-	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-backoffice/_datatable_config.js": {
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/src-backoffice/_datatable_config.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-backoffice/_datatable_config-min.js",
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/src-backoffice/_datatable_config-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-backoffice/_file_uploader.js": {
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/src-backoffice/_file_uploader.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-backoffice/_file_uploader-min.js",
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/src-backoffice/_file_uploader-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-backoffice/_utenti_scheda.js": {
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/src-backoffice/_utenti_scheda.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-backoffice/_utenti_scheda-min.js",
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/src-backoffice/_utenti_scheda-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-shared/.gitkeep": {
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/src-shared/.gitkeep": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src-shared/.gitkeep",
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/src-shared/.gitkeep",
 		"oF": 0
 		},
-	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src/.gitkeep": {
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/src/.gitkeep": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js---single-file/src/.gitkeep",
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js-OLD_VERSION/src/.gitkeep",
 		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js/backoffice/_src/_ckeditor.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js/backoffice/_src/_ckeditor-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js/backoffice/_src/_datatable.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js/backoffice/_src/_datatable-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js/backoffice/_src/_file_uploader.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js/backoffice/_src/_file_uploader-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js/backoffice/_src/_get_app_data.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js/backoffice/_src/_get_app_data-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js/backoffice/_src/_pwd_utilties.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js/backoffice/_src/_pwd_utilties-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js/backoffice/_src/_start.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/js/backoffice/_src/_start-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/npm setup.sh": {
 		"cB": 0,
@@ -1348,13 +1381,13 @@
 		"oF": 0
 		},
 	"/ckeditor-utilities/_m-ckeditor-form-check.js": {
-		"bF": 4,
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/ckeditor-utilities/_m-ckeditor-form-check-min.js",
-		"oF": 1,
+		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
@@ -1381,66 +1414,6 @@
 		"oF": 0,
 		"oS": 0,
 		"sct": 1
-		},
-	"/ckeditor-utilities/iife/m-ckeditor-form-check-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/ckeditor-utilities/iife/m-ckeditor-form-check-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/ckeditor-utilities/iife/m-ckeditor-form-check-min.js.map": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ckeditor-utilities/iife/m-ckeditor-form-check-min.js.map",
-		"oF": 0
-		},
-	"/ckeditor-utilities/iife/m-ckeditor-form-check.js": {
-		"bF": 4,
-		"ft": 64,
-		"ma": 1,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/ckeditor-utilities/iife/m-ckeditor-form-check-min.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 0
-		},
-	"/ckeditor-utilities/iife/m-ckeditor-loader-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/ckeditor-utilities/iife/m-ckeditor-loader-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/ckeditor-utilities/iife/m-ckeditor-loader-min.js.map": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ckeditor-utilities/iife/m-ckeditor-loader-min.js.map",
-		"oF": 0
-		},
-	"/ckeditor-utilities/iife/m-ckeditor-loader.js": {
-		"bF": 4,
-		"ft": 64,
-		"ma": 1,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/ckeditor-utilities/iife/m-ckeditor-loader-min.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 0
 		},
 	"/ckeditor-utilities/README.md": {
 		"cB": 0,
@@ -1663,6 +1636,17 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/js-utilities/_sf_macro-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js-utilities/_slide-up-down-toggle.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js-utilities/_slide-up-down-toggle-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
