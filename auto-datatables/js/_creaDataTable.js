@@ -18,7 +18,7 @@ import * as dt_config from './src/_config';
   Restituisce l'istanza del datatable generato
 */
 
-export function creaDataTable( $container, options = {}, bs4 = true ) {
+export function _creaDataTable( $container, options = {}, bs4 = true ) {
 
 
   window.jQuery = $;

@@ -1,5 +1,5 @@
 // import $ from 'jquery';
-import {creaDataTable} from '../js/_creaDataTable';
+import {_creaDataTable} from '../js/_creaDataTable';
 
 
 /*
@@ -11,7 +11,7 @@ import {creaDataTable} from '../js/_creaDataTable';
       "office": "Tokyo"
     },
 */
-creaDataTable(
+_creaDataTable(
   '#datatable_container', // oppure $('#datatable_container') oppure document.getElementById('datatable_container')
   {
     datatable_options: {

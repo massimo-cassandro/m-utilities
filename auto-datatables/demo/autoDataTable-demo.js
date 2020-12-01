@@ -1,5 +1,5 @@
 // import $ from 'jquery';
-import {autoDataTable} from '../js/_autoDataTable';
+import {_autoDataTable} from '../js/_autoDataTable';
 
 
 /*
@@ -11,5 +11,5 @@ import {autoDataTable} from '../js/_autoDataTable';
       "office": "Tokyo"
     },
 */
-autoDataTable('#datatable_container');
+_autoDataTable('#datatable_container');
 

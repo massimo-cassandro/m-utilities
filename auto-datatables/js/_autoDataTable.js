@@ -2,12 +2,12 @@
   autodatatable
   Crea un datatable leggendo gli attributi data assegnati ad un div
 
-  il contenitore deve avere la classe `dt_container` (assegnato dallo script)
-  e gli attributi:
+  il contenitore avrà la classe `dt_container` (assegnato dallo script)
+  e deve avere gli attributi:
 
     * `data-dt_columns`   → definizione delle colonne datatable
                             (vedi di seguito per info sulla struttura)
-    * `data-cdt_options`  → opzioni per creaDataTable (vedi),
+    * `data-cdt_options`  → opzioni per _creaDataTable (vedi),
         comprende tra gli altri:
 
           - `dtRender`          : parametri per autodatatable
@@ -27,11 +27,11 @@
 
   PARAMETRI
   *  $container è il div entro cui generare il datatable (è un oggetto jQuery)
-  * `options`: oggetto opzioni per creaDataTable (vedi)
+  * `options`: oggetto opzioni per _creaDataTable (vedi)
 */
 
 import $ from 'jquery';
-import {creaDataTable} from './_creaDataTable';
+import {_creaDataTable} from './_creaDataTable';
 
 import {mesi} from '../../js-utilities/_mesi_giorni_it';
 import {number_format} from '../../js-utilities/_number_format';
@@ -39,7 +39,7 @@ import {number_format} from '../../js-utilities/_number_format';
 import Mustache from 'mustache/mustache.mjs';
 import moment from 'moment';
 
-export  function autoDataTable( $container, cdt_options = {}, bs4 = true ) {
+export  function _autoDataTable( $container, cdt_options = {}, bs4 = true ) {
 
 
   if(!($container instanceof $)) {
@@ -525,7 +525,7 @@ export  function autoDataTable( $container, cdt_options = {}, bs4 = true ) {
 
   cdt_options.datatable_options.columns = table_columns;
 
-  this_datatable = creaDataTable($container, cdt_options, bs4);
+  this_datatable = _creaDataTable($container, cdt_options, bs4);
 
   if(_form !== null ) {
 

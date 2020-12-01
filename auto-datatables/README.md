@@ -8,16 +8,16 @@ Questo script è la riscrittura in ES6 del vecchio plugin jQuery [auto-datatable
 ## Moduli
 La procedura comprende due moduli:
 
-### creaDataTable
+### _creaDataTable
 
 Genera un datatable da un flusso JSON
 
 Richiede [DataTable](https://datatables.net/), e [jQuery](https://jquery.com/).
 
 
-### autoDataTable
+### _autoDataTable
 
-Crea un datatable leggendo gli attributi data assegnati ad un div e utilizzando **creaDataTable**.
+Crea un datatable leggendo gli attributi data assegnati ad un div e utilizzando **_creaDataTable**.
 
 L'utilità di questa funzione è il poter configurare un datatable interamente con attributi data.
 
@@ -43,7 +43,7 @@ npm i --save datatables.net-bs4
 npm i --save popper.js
 npm i --save bootstrap
 
-# SOLO SE SI UTILIZZA ANCHE autoDataTable
+# SOLO SE SI UTILIZZA ANCHE _autoDataTable
 npm i --save moment
 npm i --save mustache
 
@@ -55,23 +55,23 @@ npm i --save mustache
 
 ## Utilizzo
 
-### creaDataTable
+### _creaDataTable
 
 ```html
 <div id="dt_container"></div>
 ```
 
 ```js
-import {creaDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/js/_creaDataTable';
+import {_creaDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/js/_creaDataTable';
 
-creaDataTable( '#dt_container', options, true );
+_creaDataTable( '#dt_container', options, true );
 ```
 
 Il primo argomento della funzione può essere un selettore css (stringa), un elemento DOM o un oggetto jQuery.
 
 Vedi lo script e [demo/creaDataTable.html]() per altre info.
 
-### autoDataTable
+### _autoDataTable
 
 ```html
 <div id="datatable_container"
@@ -95,9 +95,9 @@ Opzione con form di ricerca:
 
 ```js
 import $ from 'jquery';
-import {autoDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/js/_autoDataTable';
+import {_autoDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/js/_autoDataTable';
 
-autoDataTable( $('#dt_container') );
+_autoDataTable( $('#dt_container') );
 ```
 
 Vedi lo script e [demo/autoDataTable.html]() per altre info.
@@ -105,7 +105,7 @@ Vedi lo script e [demo/autoDataTable.html]() per altre info.
 
 ## Modifiche rispetto alla versione precedente
 
-* `creaDataTable` non è più un plugin jQuery, ma un modulo ES6
+* `_creaDataTable` non è più un plugin jQuery, ma un modulo ES6
 * Sono state rimosse le opzioni:
     * `jQueryObj` (ora viene sempre restituita un'istanza DataTable)
     * `chainable`

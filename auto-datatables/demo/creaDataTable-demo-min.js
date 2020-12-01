@@ -26655,7 +26655,7 @@
 	  Restituisce l'istanza del datatable generato
 	*/
 
-	function creaDataTable( $container, options = {}, bs4 = true ) {
+	function _creaDataTable( $container, options = {}, bs4 = true ) {
 
 
 	  window.jQuery = jquery;
@@ -26772,7 +26772,7 @@
 	      "office": "Tokyo"
 	    },
 	*/
-	creaDataTable(
+	_creaDataTable(
 	  '#datatable_container', // oppure $('#datatable_container') oppure document.getElementById('datatable_container')
 	  {
 	    datatable_options: {
