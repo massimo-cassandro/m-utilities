@@ -39,8 +39,7 @@ import {number_format} from '../../js-utilities/_number_format';
 import Mustache from 'mustache/mustache.mjs';
 import moment from 'moment';
 
-export  function _autoDataTable( $container, cdt_options = {}, bs4 = true ) {
-
+export  function _autoDataTable( $container = '.dt_container', cdt_options = {}, bs4 = true ) {
 
   if(!($container instanceof $)) {
     $container = $($container);

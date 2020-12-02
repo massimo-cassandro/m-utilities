@@ -98,7 +98,7 @@ export function _creaDataTable( $container, options = {}, bs4 = true ) {
       options.datatable_options.aoColumns.length : options.datatable_options.columns.length;
 
 
-  $container.addClass(options.container_class)
+  $container.addClass((options.container_class + ' m-datatable').trim())
     .append(
       '<table id="' + options.table_id + '" class="' + options.table_class + '">' +
       (options.table_caption? '<caption>'+options.table_caption+'</caption>' : '') +
