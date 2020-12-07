@@ -1,9 +1,5 @@
-/* global mAlert */
-
-
 /*
-  inserire globalmente
-
+  riattivazione submit:
   import disableSubmitBtns from '@massimo-cassandro/m-utilities/js-utilities/_submit-disable-btns';
 
   // disable btn on submit
@@ -12,6 +8,8 @@
   TODO gestione validityState
 
 */
+
+import {mAlert} from '../mAlert-bs4/_mAlert';
 
 export  function submit_err(title, mes) {
 
