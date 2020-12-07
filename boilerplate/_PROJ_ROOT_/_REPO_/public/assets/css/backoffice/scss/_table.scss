@@ -1,0 +1,65 @@
+.table {
+
+  // @include media-breakpoint-up(lg) {
+  //   table-layout: fixed;
+  // }
+
+  th, td {
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "lnum","tnum";
+  }
+
+  th {
+    font-size:.85rem;
+    font-weight: $body-font-weight-bold;
+    &[scope=col] {
+      background-color: $grigio-4;
+      color: color-yiq($grigio-4);
+    }
+  }
+
+  td {
+    font-size:.9rem;
+
+    &.td-monospace {
+      @extend .text-monospace;
+    }
+  }
+
+  caption {
+    caption-side: top;
+  }
+
+  &:not(.table-borderless) {
+    border-bottom: $table-border-width solid $table-border-color;
+  }
+
+  // th, td {
+  //   padding: ($table-cell-padding / 2) $table-cell-padding;
+  //   //vertical-align: baseline;
+  // }
+
+  // th {
+  //   font-weight: 700;
+  // }
+
+  thead {
+    th {
+      border-bottom-width:3px;
+      //background-color: theme-color(extra-light);
+    }
+  }
+  tfoot, .tfoot {
+    font-weight: $body-font-weight-semibold;
+    border-top: 3px solid $table-border-color;
+
+    td {
+      background-color: $grigio-bg!important;
+      font-size:1.1em;
+    }
+  }
+}
+
+// .table-fixed {
+//   table-layout: fixed;
+// }

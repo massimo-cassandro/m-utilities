@@ -1,0 +1,93 @@
+$sf-label-color : currentColor;
+$sf-label-font-weight: $font-weight-bold;
+$sf-label-font-size: .9rem;
+$sf-form-font-family: $font-family-base;
+$sf-form-help-text-color: $gray-700;
+$sf-input-group-text-weight: $font-weight-normal;
+$sf-disabled-color: $gray-600;
+$sf-error-text-color: theme-color(danger);
+$sf-required-asterisk-color: $aviva-giallo;
+@import '@massimo-cassandro/symfony-bootstrap-form-theme/dist/scss/forms';
+@import '@massimo-cassandro/symfony-bootstrap-form-theme/dist/scss/forms-multiselect';
+
+label {
+  font-size:.9rem;
+  font-weight: $body-font-weight-semibold;
+  margin-bottom:.3rem;
+  .form-group & {
+    //@extend .text-truncate;
+    max-width:100%;
+  }
+}
+
+form {
+  margin:2rem 0 1rem;
+}
+
+fieldset:not(.form-group):not(.fupl-wrapper) {
+  margin:2rem 0 3rem;
+  border: 1px solid $grigio-3;
+  border-bottom-width: 4px;
+  padding: 3rem 1rem 1rem;
+  background-color: rgba($grigio-5, .5);
+  position: relative;
+  // border-radius:0 0 1rem 1rem;
+
+
+  legend:not(.fupl-legend) {
+    @extend .h4;
+    // border-bottom: 1px solid $border-color;
+    font-weight: $heading-font-weight-regular;
+    padding:.3rem;
+    margin-bottom:.3rem;
+    // color:$grigio-2;
+    background-color: $grigio-4;
+    color: color-yiq($grigio-4);
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    display: block;
+  }
+
+  fieldset:not(.fupl-wrapper) {
+    // margin-left:2rem;
+    border-left:none;
+    border-right:none;
+    border-radius:0;
+    legend:not(.fupl-legend) {
+      position: static;
+      border:none;
+      padding:.3rem;
+      background-color: rgba($grigio-1, .1);
+      font-size:.9rem;
+    }
+  }
+}
+
+
+.form-edit-info {
+  @extend .text-muted;
+  font-size:.85rem;
+
+  svg {
+    stroke:currentColor;
+    width: 1.2em;
+    height:1.2em;
+    stroke-width: 6px;
+  }
+}
+
+select option {
+  border-top:2px solid #c00;
+}
+
+.custom-select {
+  -moz-appearance:none;
+}
+
+.input-group-append, .input-group-prepend {
+  .btn {
+    border-color: $input-border-color;
+  }
+}

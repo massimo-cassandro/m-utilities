@@ -1,5 +1,6 @@
 import {_creaDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/js/_creaDataTable';
 import {_autoDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/js/_autoDataTable';
+import app_data from './_get_app_data';
 
 const datatable_setup = {
 
@@ -49,14 +50,14 @@ const datatable_setup = {
     off : '<span class="icona icona-off"></span>'
   },
 
-  id_visible_default: true,
+  id_visible_default: app_data.superAdmin,
 
   formats: {
     moment_datetime : 'D[&nbsp;]MMM[&nbsp;]YY[ <small>]HH:mm[</small>]',
     moment_date     : 'D[&nbsp;]MMM[&nbsp;]YY'
   },
 
-  //container_header: 'Risultato della ricerca', // se presente aggiunge un header prima della tabella
+  container_header: '', //'Risultato della ricerca', // se presente aggiunge un header prima della tabella
 
   //container_class: 'dt_container', // classe che viene assegnata al div che contiene la tabella
   //container_header_level: 2, // livello gerarchico dell'header (h2, h3, ecc...)

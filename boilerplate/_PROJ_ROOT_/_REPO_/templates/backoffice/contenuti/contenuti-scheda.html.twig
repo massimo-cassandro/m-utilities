@@ -1,5 +1,6 @@
-{% set pagID = 'contenuti_scheda' %}
-{% set controller = pagID %}
+{% set pagID = 'contenuti-scheda' %}
+{% set js_files = [asset("/assets/js/backoffice/dist/#{pagID}-min.js") ~ '?v=' ~ glob_vars.vers.backoffice] %}
+{% set fluid_container = false %}
 {% extends 'backoffice/_backoffice-tpl.html.twig' %}
 {% block title %}Scheda contenuto
   {%- if entity.id -%}
@@ -7,9 +8,8 @@
     {{ entity.sezione.sezione }} / {{ entity.nome }}
   {%- endif -%}
 {% endblock %}
-{% block head %}{% endblock %}
-{% block jsfiles_start %}{% endblock %}
-{% block jsfiles %}{% endblock %}
+{% block head %}{% endblock head %}
+{% block body_end %}{% endblock body_end %}
 
 {##}
 
