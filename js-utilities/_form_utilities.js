@@ -1,10 +1,10 @@
 /*
 
-  import {submitErr, disableSubmitBtns, throwErr} from '@massimo-cassandro/m-utilities/js-utilities/_submit-disable-btns';
+  import {submitErr, disableBtnsOnSubmit, throwErr} from '@massimo-cassandro/m-utilities/js-utilities/_submit-disable-btns';
 
 
   riattivazione submit:
-  disableSubmitBtns();
+  disableBtnsOnSubmit();
 
 */
 // submit err
@@ -26,7 +26,7 @@ export  function submitErr(title, mes) {
 
 
 // disable buttons on submit
-export function disableSubmitBtns() {
+export function disableBtnsOnSubmit() {
   document.querySelectorAll('form:not([data-disable-submit=false])').forEach( el => {
     el.addEventListener('submit', () => {
       el.querySelectorAll('[type=submit], [type=button]').forEach(el => {
