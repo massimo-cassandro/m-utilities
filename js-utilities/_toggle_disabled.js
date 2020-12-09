@@ -14,11 +14,20 @@ export default function (element, is_disabled) {
       .find('button').prop('disabled', is_disabled);
 
   } else {
-    element.setAttribute('disabled', is_disabled);
+    if(is_disabled) {
+      element.setAttribute('disabled', true);
+    } else {
+      element.removeAttribute('disabled');
+    }
+
     element.classList.toggle('disabled', is_disabled);
     element.closest('.form-group').classList.toggle('disabled', is_disabled);
     element.closest('.form-group').querySelectorAll('button').forEach(item => {
-      item.setAttribute('disabled', is_disabled);
+      if(is_disabled) {
+        item.setAttribute('disabled', is_disabled);
+      } else {
+        item.removeAttribute('disabled');
+      }
     });
   }
 

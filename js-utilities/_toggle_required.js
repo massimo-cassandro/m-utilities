@@ -12,7 +12,11 @@ export default function (field, is_required) {
       .closest('.form-group').toggleClass('required', is_required);
 
   } else {
-    field.setAttribute('required', is_required);
+    if(is_required) {
+      field.setAttribute('required', true);
+    } else {
+      field.removeAttribute('required');
+    }
     field.closest('.form-group').classList.toggle('required', is_required);
   }
 
