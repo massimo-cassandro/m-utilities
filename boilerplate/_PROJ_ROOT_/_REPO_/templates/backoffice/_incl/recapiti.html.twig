@@ -1,0 +1,70 @@
+{#
+
+{% include 'backoffice/_incl/recapiti.html.twig' with {
+  legend: 'Recapiti',
+  form_recapiti: form.recapiti
+} %}
+
+#}
+
+
+<fieldset class="macro-wrapper fset_recapiti">
+  <legend>{{ legend|default('Recapiti') }}</legend>
+
+  <p class="small">I recapiti contrassegnati come “principali” vengono utilizzati come riferimento
+  per tutte le operazioni automatiche eseguite dalla piattaforma (ad esempio, le circolari
+  vengono inviate solo all'email principale). Può esistere un solo recapito principale per ogni tipologia.</p>
+
+  {% macro recapiti(row, globals) %}
+    {# {% set __valore_campo__ = row.vars.value.__field__ %} #}
+    <div class="macro-riga"> {# macro-riga-alternate show-label-sm | py-1 border-bottom border-light #}
+      <div class="row">
+        <div class="col-sm-3">
+          {{ form_row(row.tipo, {
+            label: "Tipo",
+            attr: {class: 'rec-tipo'}
+          }) }}
+        </div>
+        <div class="col-sm-5 col-md-6">
+          {{ form_row(row.recapito, {
+            label: "Recapito",
+            attr: {}
+          }) }}
+        </div>
+        <div class="col-sm-2">
+          {{ form_row(row.principale, {
+            label: "Principale",
+            attr: {title: 'Recapito principale della tipologia indicata', class: 'rec-princ'},
+            params: {
+              top_label: true
+            }
+          }) }}
+        </div>
+        <div class="col-sm-2 col-md-1 align-self-end">
+          <div class="form-group text-right">
+            <button type="button" class="d-inline-flex btn btn-has-icon btn-danger macro-riga-del" title="Elimina questa riga">
+              {% include '@includes/icone.html.twig' with {
+                 id: 'cestino',
+                 class:'icona',
+                 svg_file: globals.glob_vars.icon_file
+               } %}
+            </button>
+          </div>
+        </div>
+      </div> {# end .row #}
+    </div> {# end .riga-macro #}
+  {% endmacro %}
+  {% import _self as m %}
+
+  <div class="my-3 macro-container" data-template="{{
+    m.recapiti(form_recapiti.vars.prototype, _context)|e('html_attr')
+  }}">
+    {% for row in form_recapiti %}
+      {{ m.recapiti(row, _context) }}
+    {% endfor %}
+  </div>
+
+  <div class="form-group mt-3 text-right">
+    <button type="button" class="btn btn-outline-secondary macro-riga-add">Aggiungi recapito</button>
+  </div>
+</fieldset>

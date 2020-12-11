@@ -1,0 +1,44 @@
+/*
+
+$del-icon-fill: none;
+$del-icon-stroke: currentColor;
+$del-icon-stroke-width: 6px;
+$alternate-bg-color: rgba($nero, .2);
+@import '@massimo-cassandro/m-utilities/boilerplate-src/std_macro/sf_macro';
+
+*/
+$del-icon-fill: currentColor!default;
+$del-icon-stroke: none!default;
+$del-icon-stroke-width: none!default;
+$alternate-bg-color: rgba($nero, .05)!default;
+
+.macro-wrapper {
+
+  .macro-riga {
+    padding:.5rem;
+    &:nth-child(even) {
+      background-color: $alternate-bg-color;
+    }
+
+    @include media-breakpoint-up(md) {
+      &:not(:first-child) {
+        label {
+          display:none;
+        }
+      }
+
+      .form-group {
+        margin:0;
+      }
+    } // end md
+  }
+
+  .macro-riga-del { // button
+    padding: $input-btn-padding-y;
+    svg {
+      fill:$del-icon-fill;
+      stroke:$del-icon-stroke;
+      stroke-width: $del-icon-stroke-width;
+    }
+  }
+}

@@ -82,6 +82,7 @@ SHARED_DIR_FILES=(
   imgs_viewer.html.twig
   imgs.html.twig
   meta.html.twig
+  recapiti.htm.twig
 )
 
 for i in "${SHARED_DIR_FILES[@]}"

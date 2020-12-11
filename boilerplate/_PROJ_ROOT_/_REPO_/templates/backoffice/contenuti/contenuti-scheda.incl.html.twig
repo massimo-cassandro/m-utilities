@@ -170,7 +170,7 @@
   <div class="contenuti-values">
 
     {%- if entity.sezione.intro|default() or entity.note|default() or entity.sezione.id == 4 -%}
-      <div class="alert alert-icon alert-info" role="alert">
+      <div class="mb-2 lead" role="alert">
         {%- if entity.sezione.intro|default() -%}
           <div>{{ entity.sezione.intro|raw }}</div>
         {%- endif -%}
