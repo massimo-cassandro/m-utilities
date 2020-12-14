@@ -361,6 +361,54 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/boilerplate-src/recapiti/_recapiti.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/boilerplate-src/recapiti/_recapiti-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate-src/select2_bs4/_select2.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/boilerplate-src/select2_bs4/_select2.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/boilerplate-src/std_macro/_sf_macro.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/boilerplate-src/std_macro/_sf_macro-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate-src/std_macro/_sf_macro.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/boilerplate-src/std_macro/_sf_macro.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
 	"/boilerplate/_PROJ_ROOT_/_editorconfig": {
 		"cB": 0,
 		"ft": 8192,
@@ -1218,6 +1266,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/contenuti/contenuti-scheda.html.twig",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/contenuti/contenuti-scheda.incl.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/contenuti/contenuti-scheda.incl.html.twig",
 		"oF": 0
 		},
 	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/dashboard.html.twig": {

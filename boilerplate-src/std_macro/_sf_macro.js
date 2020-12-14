@@ -58,6 +58,14 @@ export  function set_macro_listeners (context=document, add_callback = null, rem
 
   });
 
+
+  // aggiunta callback a righe preregistrate
+  if(add_callback && typeof add_callback === 'function' ) {
+    context.querySelectorAll('.macro-riga').forEach(riga => {
+      add_callback( riga.closest('.macro-container'), riga );
+    });
+  }
+
 }
 
 

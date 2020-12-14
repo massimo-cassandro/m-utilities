@@ -73,22 +73,19 @@ export default function () {
         break;
     }
 
-    console.log(tipo_value);
-    console.log(campo_recapito);
-
   };
 
   document.querySelectorAll('.fset_recapiti').forEach(fset_recapiti => {
 
     set_macro_listeners(fset_recapiti);
 
-    fset_recapiti.querySelector('.macro-wrapper').addEventListener('click', e => {
+    fset_recapiti.addEventListener('click', e => {
       if(e.target.classList.contains('rec-princ')) {
         check_recapito(e.target.closest('.macro-riga'));
       }
     });
 
-    fset_recapiti.querySelector('.macro-wrapper').addEventListener('change', e => {
+    fset_recapiti.addEventListener('change', e => {
       if(e.target.classList.contains('rec-tipo')) {
         check_recapito(e.target.closest('.macro-riga'));
       }

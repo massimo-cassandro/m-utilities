@@ -1,16 +1,48 @@
 import $ from 'jquery';
-import 'select2/dist/js/select2.full.js';
-import 'select2/dist/js/i18n/it.js';
+import select2 from 'select2';
+
+select2($); //Hook up select2 to jQuery
+// window.jQuery = $;
+// select2(jQuery);
+// import 'select2/dist/js/i18n/it.js';
 
 export const select2_defaults = {
   theme                : 'bootstrap4',
   width                : '100%',
-  language             : 'it',
-  debug                : false,
+  language             : {
+    errorLoading: function () {
+      return 'I risultati non possono essere caricati.'
+    },
+    inputTooLong: function (e) {
+      var n = e.input.length - e.maximum,
+        t = 'Devi rimuovere almeno ' + n + ' caratter';
+      return t += 1 !== n ? 'i' : 'e'
+    },
+    inputTooShort: function (e) {
+      return 'Inserisci ' + (e.minimum - e.input.length) + ' o più caratteri'
+    },
+    loadingMore: function () {
+      return 'Sto caricando i risultati...'
+    },
+    maximumSelected: function (e) {
+      var n = 'Puoi selezionare solo ' + e.maximum + ' element';
+      return 1 !== e.maximum ? n += 'i' : n += 'o', n
+    },
+    noResults: function () {
+      return 'Nessun risultato per la ricerca inserita'
+    },
+    searching: function () {
+      return 'Sto cercando...'
+    },
+    removeAllItems: function () {
+      return 'Rimuovi tutto'
+    }
+  },
+  debug: false,
   multiple: false,
   minimumInputLength   : 3,
   placeholder          : 'Clic per selezionare',
-  allowClear           : false, // mostra il pulsante di deselezione
+  allowClear           : true, // mostra il pulsante di deselezione
   //closeOnSelect        : false, // Force the dropdown to remain open after selection
   selectOnClose: true,
   ajax: {
