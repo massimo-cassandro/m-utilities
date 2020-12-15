@@ -110,6 +110,9 @@ export function set_select2(field, options = {}, default_opts = select2_defaults
   if(options.templateResult) {
     select2_options.templateResult = options.templateResult;
   }
+  if(options.templateSelection) {
+    select2_options.templateSelection = options.templateSelection;
+  }
 
   $(field).select2(select2_options);
 }

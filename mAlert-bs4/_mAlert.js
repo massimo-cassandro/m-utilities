@@ -8,7 +8,8 @@ import 'bootstrap/js/dist/modal';
 export function mAlert(params = {}) {
 
   const errorBtnLabel = function () {
-      var labels = ['Oh My God!', 'Mon Dieu!', 'Mein Gott!', 'Parbleu!', 'Mizzica!', 'Meu Deus!', 'Damn!', '¡Maldición!'];
+      var labels = ['Oh My God!', 'Mon Dieu!', 'Mein Gott!', 'Parbleu!',
+        'Mizzica!', 'Meu Deus!', 'Damn!', '¡Maldición!', '¡Sangre del diablo!'];
       return labels[Math.floor( Math.random() * labels.length )];
     },
     _defaults = {

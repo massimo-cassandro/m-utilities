@@ -6,8 +6,7 @@ $m-sorting-dragover-color: color-yiq(theme-color(secondary))!default;
 $m-sorting-dragover-bg-color: theme-color(secondary)!default;
 $m-sorting-dragover-border-color: theme-color(secondary)!default;
 
-$m-sorting-insertion-border-width: 3px!default;
-$m-sorting-insertion-border: $m-sorting-insertion-border-width dashed #c00!default;
+$m-sorting-insertion-border: 3px dashed #c00!default;
 
  // elemento a cui si applicherà il sorting
 .m-sorting-item {
@@ -55,9 +54,7 @@ $m-sorting-insertion-border: $m-sorting-insertion-border-width dashed #c00!defau
 tr {
 
   &.m-sorting-item {
-    &:not(:last-child) {
-      border-bottom: $m-sorting-insertion-border-width solid transparent;
-    }
+    position: relative;
 
     &.m-sorting {
       &-sorting {
@@ -74,7 +71,16 @@ tr {
       }
 
       &-dragover {
-        border-bottom: $m-sorting-insertion-border;
+        &::after {
+          content: '';
+          position: absolute;
+          display: block;
+          bottom:0;
+          left:0;
+          width:100%;
+          height: 1px;
+          border-bottom: $m-sorting-insertion-border;
+        }
         td {
           background-color: $m-sorting-dragover-bg-color!important;
           color: $m-sorting-dragover-color!important;
