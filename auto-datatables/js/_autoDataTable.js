@@ -38,8 +38,11 @@ import {number_format} from '../../js-utilities/_number_format';
 
 import Mustache from 'mustache/mustache.mjs';
 import moment from 'moment';
+import it from 'moment/locale/it'
 
 export  function _autoDataTable( $container = '.dt_container', cdt_options = {}, bs4 = true ) {
+
+  moment.locale('it', it)
 
   if(!($container instanceof $)) {
     $container = $($container);
