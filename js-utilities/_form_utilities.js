@@ -1,6 +1,6 @@
 /*
 
-  import {submitErr, disableBtnsOnSubmit, throwErr} from '@massimo-cassandro/m-utilities/js-utilities/_submit-disable-btns';
+  import {submitErr, disableBtnsOnSubmit, throwErr} from '@massimo-cassandro/m-utilities/js-utilities/_form_utilities';
 
 
   riattivazione submit:
@@ -12,7 +12,7 @@
 import {mAlert} from '../mAlert-bs4/_mAlert';
 export  function submitErr(title, mes) {
 
-  document.querySelectorAll('[type="submit"]').forEach(el => {
+  document.querySelectorAll('[type="submit"], [type=button]').forEach(el => {
     el.disabled = false;
   });
 

@@ -58,7 +58,7 @@ Per altre info su uploader e viewer, consultare il file `README-build-editor.md`
 
 Se definiti, gli attributi `data-` prevalgono sempre su quelli globali.
 
-Per info sulla configurazione degli script server-side, il css richiesto ecc, consulta i commenti all'interno dei vari file di test.
+Per info sulla configurazione degli script server-side, il css richiesto ecc, consulta i commenti all'interno dei vari file di [test](https://github.com/massimo-cassandro/m-utilities/tree/master/ckeditor/test).
 
 ## Altre funzionalità del loader
 

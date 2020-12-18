@@ -6,7 +6,12 @@ config.codekit3
 ehthumbs.db
 Icon?
 Thumbs.db
+
 /TODO
 /adobe-cc
+/archived
+/**/test/
+/**/demo/
+
 /.eslintignore
 /.gitattributes

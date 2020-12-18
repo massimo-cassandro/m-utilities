@@ -4,6 +4,8 @@ Generazione automatica di datatable a partire da un flusso JSON.
 
 Questo script è la riscrittura in ES6 del vecchio plugin jQuery [auto-datatables](../legacy/auto-datatables/README.md) presente in questo repository.
 
+Esempi nella [dir demo](https://github.com/massimo-cassandro/m-utilities/tree/master/auto-datatables/demo)
+
 
 ## Moduli
 La procedura comprende due moduli:
@@ -69,7 +71,7 @@ _creaDataTable( '#dt_container', options, true );
 
 Il primo argomento della funzione può essere un selettore css (stringa), un elemento DOM o un oggetto jQuery.
 
-Vedi lo script e [demo/creaDataTable.html]() per altre info.
+Vedi lo script e [https://github.com/massimo-cassandro/m-utilities/tree/master/auto-datatables/demo/creaDataTable.html]() per altre info.
 
 ### _autoDataTable
 
@@ -100,7 +102,7 @@ import {_autoDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/js/
 _autoDataTable( $('#dt_container') );
 ```
 
-Vedi lo script e [demo/autoDataTable.html]() per altre info.
+Vedi lo script e [https://github.com/massimo-cassandro/m-utilities/tree/master/auto-datatables/demo/autoDataTable.html]() per altre info.
 
 
 ## Modifiche rispetto alla versione precedente

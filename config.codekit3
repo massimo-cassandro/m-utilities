@@ -63,6 +63,28 @@
 		"oAP": "/build/adobe-cc",
 		"oF": 0
 		},
+	"/archived/js-utilities/_fontfaceobserver-gfonts-auto-loader.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/archived/js-utilities/_fontfaceobserver-gfonts-auto-loader-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/archived/js-utilities/_fontfaceobserver_loader.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/archived/js-utilities/_fontfaceobserver_loader-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/auto-datatables/demo/autoDataTable-demo-min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -368,6 +390,17 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/boilerplate-src/recapiti/_recapiti-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate-src/select2_bs4/_select2.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/boilerplate-src/select2_bs4/_select2-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -1793,28 +1826,6 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/js-utilities/_festivita-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/js-utilities/_fontfaceobserver-gfonts-auto-loader.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js-utilities/_fontfaceobserver-gfonts-auto-loader-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/js-utilities/_fontfaceobserver_loader.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js-utilities/_fontfaceobserver_loader-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0

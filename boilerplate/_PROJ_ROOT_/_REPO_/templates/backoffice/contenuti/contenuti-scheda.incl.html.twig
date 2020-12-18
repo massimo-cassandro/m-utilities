@@ -4,10 +4,9 @@
 
 <h1>
   {%- if entity.id -%}
-    <small>Scheda contenuto</small><br>
-    <small>#{{ entity.id }}</small> {{ entity.sezione.sezione }} / {{ entity.nome }}
+    <small><small>#{{ entity.id }}</small> {{ entity.sezione.sezione }}</small> <br>{{ entity.nome }}
   {%- else -%}
-    Scheda contenuto
+    Nuovo contenuto
   {%- endif -%}
 </h1>
 

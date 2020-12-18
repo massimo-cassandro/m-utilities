@@ -21,6 +21,7 @@ composer.phar
 
 ## ***
 /**/*.mwb.bak
+/**/*.mwb.beforefix
 /**/node_modules/
 /**/bower_components/
 /**/*.sass-cache
