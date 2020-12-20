@@ -1,4 +1,4 @@
-import {escapeHTML} from './_escapeHTML';
+import {escapeHTML} from '../js-utilities/_escapeHTML';
 
 /*
   import {img_viewer} from '@massimo-cassandro/m-utilities/js-utilities/_imgs_viewer';
@@ -45,9 +45,6 @@ import {escapeHTML} from './_escapeHTML';
 */
 export  function img_viewer(params) {
 
-  window.mUtilities = window.mUtilities || {};
-  window.mUtilities.viewer = window.mUtilities.viewer || '/viewer';
-
   const bs4_std_brkpts = {
     xs: '(max-width: 575px)',
     sm: '(min-width: 576px) and (max-width: 767px)',
@@ -63,7 +60,7 @@ export  function img_viewer(params) {
   };
 
   let default_params = {
-      viewer: window.mUtilities.viewer,
+      viewer: '/viewer',
       img: null,
       bbs: [],
       lazy: true,
