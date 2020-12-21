@@ -48,13 +48,40 @@ export function _creaDataTable( $container, options = {}, bs4 = true ) {
   options.table_id = 'cdt_' + ( $container.attr('id') ? $container.attr('id') : 'dom_' + $container.index());
   $container.html('');
 
+  // eliminazione parametri di ricerca salvati se la pagina di provenienza non
+  // inclusa nel parametro options.dtRender.storageAllowedReferrers
+  // NB: controllo eseguito solo se storageAllowedReferrers !== null e undefined (= tutte le pagine ammesse)
+  // per disabilitare il salvataggio usare l'opzione `stateSave = false`,
+  if(options.dtRender && options.dtRender.storageAllowedReferrers !== null &&
+      options.dtRender.storageAllowedReferrers !== undefined && document.referrer) {
+    let allowed_referrer = false;
+    options.dtRender.storageAllowedReferrers.forEach(item => {
+      if(new RegExp(item).test(document.referrer)) {
+        allowed_referrer = true;
+      }
+    });
+
+    if(!allowed_referrer) {
+
+      if(options.datatable_options.stateDuration === -1) {
+        sessionStorage.removeItem( 'DataTables_' + options.table_id);
+
+      } else {
+        localStorage.removeItem( 'DataTables_' + options.table_id );
+
+      }
+    }
+  }
+
+
   // salvataggio parametri form ricerca
   if(options.datatable_options.stateSave && options.dtRender && options.dtRender.bindToForm) {
-    let search_form_data = Object.fromEntries(
-      new FormData(document.getElementById(options.dtRender.bindToForm))
-    );
 
     options.datatable_options.stateSaveCallback = function(settings, data) {
+
+      let search_form_data = Object.fromEntries(
+        new FormData(document.getElementById(options.dtRender.bindToForm))
+      );
 
       data.search_form_data = JSON.parse(JSON.stringify(search_form_data));
 
@@ -64,10 +91,13 @@ export function _creaDataTable( $container, options = {}, bs4 = true ) {
       } else {
         localStorage.setItem( 'DataTables_' + settings.sInstance, JSON.stringify(data) );
       }
+
     };
 
     options.datatable_options.stateLoadCallback = function(settings) {
       let _storage;
+
+
 
       if(options.datatable_options.stateDuration === -1) {
         _storage = JSON.parse( sessionStorage.getItem( 'DataTables_' + settings.sInstance ) );
@@ -75,6 +105,7 @@ export function _creaDataTable( $container, options = {}, bs4 = true ) {
       } else {
         _storage = JSON.parse( localStorage.getItem( 'DataTables_' + settings.sInstance ) );
       }
+
       if(_storage && _storage.search_form_data) {
         let form = $('#' + options.dtRender.bindToForm);
         for( let i in _storage.search_form_data ) {
@@ -82,6 +113,8 @@ export function _creaDataTable( $container, options = {}, bs4 = true ) {
         }
 
         // form.submit();
+        settings.ajax = form.attr('action') + '?' + form.serialize();
+
       }
 
       return _storage;

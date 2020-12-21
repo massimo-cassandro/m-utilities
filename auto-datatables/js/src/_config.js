@@ -9,7 +9,7 @@ export const dt_config_base = {
   autoWidth             : false,
 
   stateSave           : true,
-  stateDuration       : 3600, //-1 = sessionStorage,
+  stateDuration       : -1, // = sessionStorage, // 3600 -> se val. in secondi, localstorage
 
   //caseInsensitive     : true, // default true
 
