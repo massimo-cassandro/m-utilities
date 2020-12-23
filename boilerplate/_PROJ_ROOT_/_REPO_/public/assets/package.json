@@ -4,7 +4,8 @@
   "description": "xxx xxxx / frontend",
   "main": "/public",
   "scripts": {
-    "build_icons": "cd icone && gulp"
+    "build_icons": "cd icone && gulp",
+    "update_externals_libs": "sh upd_external_libs.sh"
   },
   "repository": {
     "type": "git",

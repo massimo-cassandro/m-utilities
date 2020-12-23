@@ -189,9 +189,9 @@
       4, datetime,
       5, email,
       6, textarea,
-      7, checkbox,
+      7, select,
       8, url,
-      9, Video keyname S3,
+      9, Video keyname S3, //RIMOSSO
       10, img,
       11, gallery
     #}
@@ -314,9 +314,21 @@
         </div>
       </div>
 
-    {# checkbox #}
+    {# select #}
     {%- elseif tipo == 7 -%}
-      <p>checkbox: TODO</p>
+      <div class="row">
+        <div class="col-lg-10 col-xl-8">
+          <div class="form-group {{- is_required? ' required' : '' }}">
+            {{ label_tag|raw }}
+            <select class="form-control custom-select {{- class -}}"  {{- attrs|raw  -}}>
+              <option value=""></option>
+              {% for key, text in config.options|default() %}
+              <option value="{{ key }}" {% if key == entity.val|default('') %}selected{% endif %}>{{ text }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+      </div>
 
     {# video S3 #}
     {# {%- elseif tipo == 9 -%}

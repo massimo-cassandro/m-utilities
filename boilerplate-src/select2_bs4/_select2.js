@@ -11,31 +11,31 @@ export const select2_defaults = {
   width                : '100%',
   language             : {
     errorLoading: function () {
-      return 'I risultati non possono essere caricati.'
+      return 'I risultati non possono essere caricati.';
     },
     inputTooLong: function (e) {
       var n = e.input.length - e.maximum,
         t = 'Devi rimuovere almeno ' + n + ' caratter';
-      return t += 1 !== n ? 'i' : 'e'
+      return t += 1 !== n ? 'i' : 'e';
     },
     inputTooShort: function (e) {
-      return 'Inserisci ' + (e.minimum - e.input.length) + ' o più caratteri'
+      return 'Inserisci ' + (e.minimum - e.input.length) + ' o più caratteri';
     },
     loadingMore: function () {
-      return 'Sto caricando i risultati...'
+      return 'Sto caricando i risultati...';
     },
     maximumSelected: function (e) {
       var n = 'Puoi selezionare solo ' + e.maximum + ' element';
-      return 1 !== e.maximum ? n += 'i' : n += 'o', n
+      return 1 !== e.maximum ? n += 'i' : n += 'o', n;
     },
     noResults: function () {
-      return 'Nessun risultato per la ricerca inserita'
+      return 'Nessun risultato per la ricerca inserita';
     },
     searching: function () {
-      return 'Sto cercando...'
+      return 'Sto cercando...';
     },
     removeAllItems: function () {
-      return 'Rimuovi tutto'
+      return 'Rimuovi tutto';
     }
   },
   debug: false,
@@ -77,7 +77,6 @@ export const select2_defaults = {
 export function set_select2(field, options = {}, default_opts = select2_defaults) {
 
   /*
-
     funzione per inizializzare select2 su un campo
     può essere utilizzata anche come callback per un macro di aggiunta record
 
@@ -101,7 +100,7 @@ export function set_select2(field, options = {}, default_opts = select2_defaults
     }
   */
 
-  let select2_options = Object.assign({}, select2_defaults);
+  let select2_options = Object.assign({}, default_opts);
 
   select2_options.ajax.url = function (params) {
     return options.autocomplete_url + '/' + params.term;

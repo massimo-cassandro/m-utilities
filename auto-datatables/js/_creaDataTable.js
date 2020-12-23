@@ -20,11 +20,11 @@ import * as dt_config from './src/_config';
 
 export function _creaDataTable( $container, options = {}, bs4 = true ) {
 
-
-  window.jQuery = $;
+  if(!window.jQuery) {
+    window.jQuery = $;
+  }
   $.fn.dataTable = dt(window,$);
   $.fn.DataTable.ext = dt_bs4(window,$);
-
 
   if(!($container instanceof $)) {
     $container = $($container);

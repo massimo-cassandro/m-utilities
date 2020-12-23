@@ -10,7 +10,7 @@ export default function () {
 
   const config_field = document.getElementById('config'),
     cfg_tpl_common = {
-      class: 'class1 class2',
+      class: '',
       attributes: {
         maxlength: 24,
         minlength: 10,
@@ -25,6 +25,18 @@ export default function () {
     },
     cfg_tpl_textarea = { editor: 'true|lite|xlite', html: true },
     cfg_tpl_num = { number: 'euro|perc' },
+    cfg_tpl_select = {
+      class: '',
+      attributes: {},
+      properties: [
+        'required',
+        'multiple // non supportato'
+      ],
+      options: {
+        'val_1': 'text_1',
+        'val_2': 'text_2'
+      }
+    },
     cfg_tpl_img = {
       desktop_img: {
         file_uploader_data: {
@@ -164,6 +176,10 @@ export default function () {
 
           case 6: // textarea
             cfg_tpl = Object.assign(cfg_tpl, cfg_tpl_textarea);
+            break;
+
+          case 7: // select
+            cfg_tpl = Object.assign({}, cfg_tpl_select);
             break;
 
           case 10: // img

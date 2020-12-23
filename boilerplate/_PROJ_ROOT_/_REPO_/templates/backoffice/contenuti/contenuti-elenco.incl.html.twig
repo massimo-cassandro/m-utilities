@@ -42,7 +42,10 @@
   data-cdt_options="{{ {
     dtRender: {
       bindToForm: 'f_ricerca',
-      formSubmitButton: 'submitButton'
+      formSubmitButton: 'submitButton',
+      storageAllowedReferrers: [
+        path('backoffice_contenuti_scheda', { id: null })
+      ],
     },
     datatable_options : {
       order: [[1,'asc'],[2,'asc']],

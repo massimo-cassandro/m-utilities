@@ -16,6 +16,9 @@ export  function remove_overlay( container ) {
 
   container = container || document.body;
   let full_page = container === document.body;
-  container.querySelector(`.${full_page? 'page-overlay' : 'div-overlay'}`).remove();
+  let overlay = container.querySelector(`.${full_page? 'page-overlay' : 'div-overlay'}`);
+  if(overlay) {
+    overlay.remove();
+  }
 
 }
