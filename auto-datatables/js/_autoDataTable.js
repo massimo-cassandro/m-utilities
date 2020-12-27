@@ -35,14 +35,12 @@ import {_creaDataTable} from './_creaDataTable';
 
 import {mesi} from '../../js-utilities/_mesi_giorni_it';
 import {number_format} from '../../js-utilities/_number_format';
+import { dateStringToISO, formatDate, formatTime, formatDateTime } from '../../js-utilities/_date-utilities';
 
 import Mustache from 'mustache/mustache.mjs';
-import moment from 'moment';
-import it from 'moment/locale/it';
+import * as dt_config from './src/_config';
 
 export  function _autoDataTable( $container = '.dt_container', cdt_options = {}, bs4 = true ) {
-
-  moment.locale('it', it)
 
   if(!($container instanceof $)) {
     $container = $($container);
@@ -58,6 +56,7 @@ export  function _autoDataTable( $container = '.dt_container', cdt_options = {},
   // unite con quelle ricavate dagli attributi data del container
   // (queste ultime hanno la precedenza)
   cdt_options = $.extend( true,
+    dt_config.creaDataTable_default_options,
     cdt_options,
     _data.cdt_options
   );
@@ -207,7 +206,7 @@ export  function _autoDataTable( $container = '.dt_container', cdt_options = {},
 
                     case 'sf_date_isSameOrBeforeNow':
                       if(row[i] !== null) {
-                        row[i] = moment(row[i].date).isSameOrBefore(moment(),'day');
+                        row[i] = dateStringToISO(row[i].date) <= dateStringToISO();
                       } else {
                         row[i] = false;
                       }
@@ -215,7 +214,7 @@ export  function _autoDataTable( $container = '.dt_container', cdt_options = {},
 
                     case 'sf_date_isSameOrAfterNow':
                       if(row[i] !== null) {
-                        row[i] = moment(row[i].date).isSameOrAfter(moment(),'day');
+                        row[i] = dateStringToISO(row[i].date) >= dateStringToISO();
                       } else {
                         row[i] = false;
                       }
@@ -223,13 +222,14 @@ export  function _autoDataTable( $container = '.dt_container', cdt_options = {},
 
                     case 'sf_date':
                       if(row[i] !== null) {
-                        row[i] = moment(row[i].date).format(cdt_options.formats.moment_date);
+                        row[i] = '<span class="text-nowrap">' + formatDate(row[i].date, cdt_options.formats.date) + '</span>';
                       }
                       break;
 
                     case 'sf_datetime':
                       if(row[i] !== null) {
-                        row[i] = moment(row[i].date).format(cdt_options.formats.moment_datetime);
+                        row[i] = formatDateTime(row[i].date, cdt_options.formats.datetime);
+
                       } else {
                         row[i] = '&mdash;';
                       }
@@ -237,7 +237,7 @@ export  function _autoDataTable( $container = '.dt_container', cdt_options = {},
 
                     case 'sf_time':
                       if(row[i] !== null) {
-                        row[i] = moment(row[i].date).format('HH:mm');
+                        row[i] = formatTime(row[i].date, cdt_options.formats.time);
                       } else {
                         row[i] = '';
                       }
@@ -245,7 +245,7 @@ export  function _autoDataTable( $container = '.dt_container', cdt_options = {},
 
                     case 'date':
                       if(row[i] !== null) {
-                        row[i] = moment(row[i]).format(cdt_options.formats.moment_date);
+                        row[i] = '<span class="text-nowrap">' + formatDate(row[i], cdt_options.formats.date) + '</span>';
                       }
                       break;
 
@@ -374,12 +374,14 @@ export  function _autoDataTable( $container = '.dt_container', cdt_options = {},
 
         case 'sf_date':  // symfony date
           item.data = function (row) {
-            return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field].date).format(cdt_options.formats.moment_date) : '&mdash;';
+            return row[item.dtRender.field] !== null ?
+              '<span class="text-nowrap">' + formatDate(row[item.dtRender.field].date, cdt_options.formats.date) + '</span>'
+              : '&mdash;';
           };
           item.type = 'date';
           item.render = function ( data, type, row ) {
             if(type === 'sort') {
-              return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field].date).format('YYYY-MM-DD') : '';
+              return row[item.dtRender.field] !== null ? dateStringToISO(row[item.dtRender.field].date): '';
             } else {
               return data;
             }
@@ -389,12 +391,14 @@ export  function _autoDataTable( $container = '.dt_container', cdt_options = {},
 
         case 'sf_datetime':  // symfony datetime
           item.data = function (row) {
-            return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field].date).format(cdt_options.formats.moment_datetime) : '&mdash;';
+            return row[item.dtRender.field] !== null ?
+              formatDateTime(row[item.dtRender.field].date, cdt_options.formats.datetime)
+              : '&mdash;';
           };
           item.type = 'date';
           item.render = function ( data, type, row ) {
             if(type === 'sort') {
-              return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field].date).format('YYYY-MM-DD HH:mm') : '';
+              return row[item.dtRender.field] !== null ? dateStringToISO(row[item.dtRender.field].date, true) : '';
             } else {
               return data;
             }
@@ -404,11 +408,13 @@ export  function _autoDataTable( $container = '.dt_container', cdt_options = {},
 
         case 'date':  // stringa data
           item.data = function (row) {
-            return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field]).format(cdt_options.formats.moment_date) : '&mdash;';
+            return row[item.dtRender.field] !== null ?
+              '<span class="text-nowrap">' + formatDate(row[item.dtRender.field], cdt_options.formats.date) + '</span>'
+              : '&mdash;';
           };
           item.render = function ( data, type, row ) {
             if(type === 'sort') {
-              return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field]).format('YYYY-MM-DD') : '';
+              return row[item.dtRender.field] !== null ? dateStringToISO(row[item.dtRender.field]) : '';
             } else {
               return data;
             }
@@ -419,12 +425,14 @@ export  function _autoDataTable( $container = '.dt_container', cdt_options = {},
 
         case 'datetime':  // stringa datetime
           item.data = function (row) {
-            return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field]).format(cdt_options.formats.moment_datetime) : '&mdash;';
+            return row[item.dtRender.field] !== null ?
+              formatDateTime(row[item.dtRender.field], cdt_options.formats.datetime)
+              : '&mdash;';
           };
           item.type = 'date';
           item.render = function ( data, type, row ) {
             if(type === 'sort') {
-              return row[item.dtRender.field] !== null ? moment(row[item.dtRender.field]).format('YYYY-MM-DD HH:mm') : '';
+              return row[item.dtRender.field] !== null ? dateStringToISO(row[item.dtRender.field], true) : '';
             } else {
               return data;
             }

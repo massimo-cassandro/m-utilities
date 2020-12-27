@@ -1,0 +1,60 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    #favicons default
+    RewriteRule ^apple-touch-icon.png /assets/favicons/apple-touch-icon.png [L]
+    RewriteRule ^favicon.ico /assets/favicons/favicon.ico [L]
+</IfModule>
+
+
+<IfModule !mod_expires.c>
+    <IfModule mod_headers.c>
+        # 1 year
+        Header set Cache-Control 'public, max-age 31536000'
+    </IfModule>
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    AddType application/vnd.ms-fontobject .eot
+    AddType application/x-font-ttf .ttf
+    AddType application/x-font-opentype .otf
+    AddType application/x-font-woff .woff
+    AddType application/x-font-woff2 .woff2
+    AddType application/font-woff2 .woff2
+    AddType image/svg+xml .svg
+
+    ExpiresByType application/vnd.ms-fontobject "access 1 year"
+    ExpiresByType application/x-font-ttf "access 1 year"
+    ExpiresByType application/x-font-opentype "access 1 year"
+    ExpiresByType application/x-font-woff "access 1 year"
+    ExpiresByType application/font-woff2 "access 1 year"
+    ExpiresByType application/font-woff "access 1 year"
+    ExpiresByType application/font-ttf "access 1 year"
+    ExpiresByType application/font-otf "access 1 year"
+
+    ExpiresByType text/html "access 1 hour"
+    ExpiresByType text/css "access 14 days"
+    ExpiresByType text/x-javascript "access 3 weeks"
+    ExpiresByType application/javascript "access 1 month"
+    ExpiresByType application/x-javascript "access 1 month"
+
+    ExpiresByType image/svg+xml "access 2 months"
+    ExpiresByType image/gif "access 2 months"
+    ExpiresByType image/png "access 2 months"
+    ExpiresByType image/jpg "access 2 months"
+    ExpiresByType image/jpeg "access 2 months"
+    ExpiresByType image/gif "access 2 months"
+
+    ExpiresByType application/pdf "access 1 year"
+
+    ExpiresByType video/mp4 "access 1 year"
+    ExpiresByType video/webm "access 1 year"
+    ExpiresByType video/x-m4v "access 1 year"
+    ExpiresByType video/quicktime "access 1 year"
+    ExpiresByType audio/mpeg "access 1 year"
+    ExpiresByType audio/x-wav "access 1 year"
+
+    ExpiresByType image/x-icon "access 1 year"
+    ExpiresDefault "access 2 days"
+</IfModule>

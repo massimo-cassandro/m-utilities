@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Date Utilities test</title>
+  </head>
+  <body>
+    <h1>Date Utilities test</h1>
+    <div id="test"></div>
+
+    <script type="module">
+      import { isValidDate, minutesToHour, dateFromISO, dateStringToISO, formatDate, formatTime, formatDateTime } from '../js-utilities/_date-utilities.js';
+
+      const appendStr = (test, result, comment='') => {
+        document.getElementById('test').insertAdjacentHTML('beforeend',
+          `<p><strong>${test}</strong> &rarr; ${result} ${comment? ` <em>(${comment})</em>`: ''}</p>`
+        );
+      };
+
+      appendStr('isValidDate(\'2020-02-30\')', isValidDate('2020-02-30'));
+      appendStr('isValidDate(new Date())', isValidDate(new Date()));
+      appendStr('isValidDate(new Date(\'foo\'))', isValidDate(new Date('foo')));
+      appendStr('isValidDate(\'2020-3-16\')', isValidDate('2020-3-16'));
+
+      appendStr('minutesToHour(346)', minutesToHour(346));
+
+      appendStr('dateFromISO(\'2020-3-16\') ', dateFromISO('2020-3-16').toString(), 'Valori ad una cifra sono validi' );
+      appendStr('dateFromISO(\'2020-03-16\') ', dateFromISO('2020-03-16').toString() );
+      appendStr('dateFromISO(\'2020-03-16T10:32:45\') ', dateFromISO('2020-03-16T10:32:45').toString() );
+      appendStr('dateFromISO(\'2020-03-16 10:32:45\') ', dateFromISO('2020-03-16T10:32:45').toString(), 'Con o senza stringa `T` di separazione' );
+      appendStr('dateFromISO(\'2020-03-32\') ', dateFromISO('2020-03-32').toString() );
+
+      appendStr('dateStringToISO(\'2020-03-16T10:32:45\')', dateStringToISO('2020-03-16T10:32:45') );
+      appendStr('dateStringToISO(\'2020-03-16T10:32:45\', true)', dateStringToISO('2020-03-16T10:32:45', true) );
+
+      appendStr('formatDate()', formatDate() );
+      appendStr('formatDate(\'2020-03-16T10:30:45\') ', formatDate('2020-03-16T10:30:45') );
+      appendStr('formatDate(new Date(\'2020-03-16T10:30:45\')) ', formatDate(new Date('2020-03-16T10:30:45')) );
+      appendStr('formatDate(\'2020-03-32\')', formatDate('2020-03-32') );
+
+      appendStr('formatTime()', formatTime() );
+      appendStr('formatTime(\'2020-03-16T10:30:45\')', formatTime('2020-03-16T10:30:45') );
+      appendStr('formatTime(new Date(\'2020-03-16T10:30:45\'))', formatTime(new Date('2020-03-16T10:30:45')) );
+      appendStr('formatTime(\'2020-03-16T33:75:45\')', formatTime('2020-03-16T33:75:45') );
+
+      appendStr('formatDateTime()', formatDateTime() );
+      appendStr('formatDateTime(\'2020-03-16T33:75:45\', ...)',
+        formatDateTime(
+          '2020-03-16T17:45:45',
+          {
+            date: {
+              year: '2-digit',
+              month: '2-digit',
+              day: '2-digit'
+            },
+            time: {
+              hour12: false,
+              hour: '2-digit',
+              minute: '2-digit'
+            },
+            separator: ' &mdash; ',  // date-time separator
+            date_wrapper: '<strong></strong>',
+            time_wrapper: '<span style="color:red"></span>' // HTML string or null or ''
+          }
+        )
+      );
+    </script>
+  </body>
+</html>

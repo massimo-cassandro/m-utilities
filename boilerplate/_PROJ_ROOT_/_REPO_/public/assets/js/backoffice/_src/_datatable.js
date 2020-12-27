@@ -53,8 +53,37 @@ const datatable_setup = {
   id_visible_default: app_data.superAdmin,
 
   formats: {
-    moment_datetime : 'D[&nbsp;]MMM[&nbsp;]YY[ <small>]HH:mm[</small>]',
-    moment_date     : 'D[&nbsp;]MMM[&nbsp;]YY'
+    decimals_class: '',
+    euro_class: '',
+    // moment_datetime : 'D[&nbsp;]MMM[&nbsp;]YY[ <small>]HH:mm[</small>]',
+    // moment_date     : 'D[&nbsp;]MMM[&nbsp;]YY'
+
+    // opzioni per le funzione di formattazione data di _date_utilities.js
+    date: {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    },
+    time: {
+      hour12: false,
+      hour: '2-digit',
+      minute: '2-digit'
+    },
+    datetime: {
+      date: {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      },
+      time: {
+        hour12: false,
+        hour: '2-digit',
+        minute: '2-digit'
+      },
+      separator: ' ',  // date-time separator
+      date_wrapper: '<span class="text-nowrap"></span>', // HTML string or null or ''
+      time_wrapper: '<small></small>' // HTML string or null or ''
+    }
   },
 
   container_header: '', //'Risultato della ricerca', // se presente aggiunge un header prima della tabella
