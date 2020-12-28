@@ -1,5 +1,5 @@
 import {inputDateSupport} from '@massimo-cassandro/m-utilities/js-utilities/_input_date_support';
-import {date_utilities} from '@massimo-cassandro/m-utilities/js-utilities/_date-utilities';
+import { dateFromISO } from '@massimo-cassandro/m-utilities/js-utilities/_date-utilities';
 /*
   Se date non è supportato, la funzione aggiunge pattern e placeholder
 
@@ -20,7 +20,7 @@ export function inputDateRawFallback() {
 
       date_field.addEventListener('change', () => {
         let data = date_field.value,
-          data_valida = date_utilities.date_from_iso(data) !== false && date_regexp.test(data),
+          data_valida = dateFromISO(data) !== false && date_regexp.test(data),
           customValidity = 'È necessario inserire la data nel formato AAAA-MM-GG. '+
             'Mese e giorno devono essere di due cifre (es. 01, 02... 10, 11...)';
 

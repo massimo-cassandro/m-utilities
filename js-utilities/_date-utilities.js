@@ -74,11 +74,23 @@ export function dateFromISO(iso_str) {
 export function dateStringToISO(dateString = '', consider_time = false) {
   // restituisce la porzione della data da una stringa datetime ISO
   // aggiunge 'Z' alla stringa, se necessario, per evitare modifiche dovute alla timezone
-  if(dateString && !/Z$/.test(dateString)) {
-    dateString += 'Z';
+  try {
+
+    if(dateString && dateString.length > 10 && !/Z$/.test(dateString)) {
+      dateString += 'Z';
+    }
+
+    if(!isValidDate( dateString )) {
+      throw new Error( 'Invalid Date' );
+    }
+
+    let d = dateString? new Date(dateString) : new Date();
+    return d.toISOString().substr(0, consider_time? 16 : 10); // i secondi sono sempre ignorati
+
+  } catch (e) {
+    console.error(e); // eslint-disable-line
+    return false;
   }
-  let d = dateString? new Date(dateString) : new Date();
-  return d.toISOString().substr(0, consider_time? 16 : 10); // i secondi sono sempre ignorati
 }
 
 

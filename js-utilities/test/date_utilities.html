@@ -11,7 +11,7 @@
     <div id="test"></div>
 
     <script type="module">
-      import { isValidDate, minutesToHour, dateFromISO, dateStringToISO, formatDate, formatTime, formatDateTime } from '../js-utilities/_date-utilities.js';
+      import { isValidDate, minutesToHour, dateFromISO, dateStringToISO, formatDate, formatTime, formatDateTime } from '../_date-utilities.js';
 
       const appendStr = (test, result, comment='') => {
         document.getElementById('test').insertAdjacentHTML('beforeend',
@@ -32,6 +32,7 @@
       appendStr('dateFromISO(\'2020-03-16 10:32:45\') ', dateFromISO('2020-03-16T10:32:45').toString(), 'Con o senza stringa `T` di separazione' );
       appendStr('dateFromISO(\'2020-03-32\') ', dateFromISO('2020-03-32').toString() );
 
+      appendStr('dateStringToISO(\'2020-3-16\')', dateStringToISO('2020-3-16') );
       appendStr('dateStringToISO(\'2020-03-16T10:32:45\')', dateStringToISO('2020-03-16T10:32:45') );
       appendStr('dateStringToISO(\'2020-03-16T10:32:45\', true)', dateStringToISO('2020-03-16T10:32:45', true) );
 
