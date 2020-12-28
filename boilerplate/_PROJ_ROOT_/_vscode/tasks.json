@@ -4,30 +4,6 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Aggiorna elementi da boilerplate & m-utilities",
-      "type": "shell",
-      "command": "cd ${workspaceFolder:assets}; . node_modules/@massimo-cassandro/m-utilities/boilerplate/upd-from-boilerplate.sh ${workspaceFolder}/.vscode/upd-from-boilerplate-params.sh",
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared",
-        "clear": true,
-        "focus": true
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "compila icone",
-      "type": "shell",
-      "command": "cd ${workspaceFolder:assets} && npm run build_icons",
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared",
-        "clear": true,
-        "focus": true
-      },
-      "problemMatcher": []
-    },
-    {
       "label": "npm update",
       "type": "shell",
       "command": "cd ${workspaceFolder:assets}; npm update",

@@ -4,6 +4,7 @@
   "description": "xxx xxxx / frontend",
   "main": "/public",
   "scripts": {
+    "compile_all_js": "npx rollup --config",
     "build_icons": "cd icone && gulp",
     "update_externals_libs": "sh upd_external_libs.sh"
   },
