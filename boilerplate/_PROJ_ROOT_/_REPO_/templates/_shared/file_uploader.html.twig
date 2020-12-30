@@ -44,7 +44,7 @@
   {% include '@includes/file_uploader.html.twig' with {
     id: null,
     attrs: null,
-    viewer: '/viewer', // fac. -> path('inner_viewer')
+    viewer: path('inner_viewer'), // fac., default: path('inner_viewer')
 
     data: {
       disable_submit: true,
