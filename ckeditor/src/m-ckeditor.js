@@ -28,6 +28,7 @@ import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 //import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
@@ -62,6 +63,7 @@ ClassicEditor.builtinPlugins = [
   ImageStyle,
   ImageToolbar,
   ImageUpload,
+  ImageResize,
   Link,
   List,
   //MediaEmbed,

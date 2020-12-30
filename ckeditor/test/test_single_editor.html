@@ -68,33 +68,7 @@
 
 
   <script src="../node_modules/@ckeditor/ckeditor5-inspector/build/inspector.js"></script>
+  <script src="js/load_editor.js" type="module"></script>
 
-  <script>
-    // modalità deprecata mantenuta per compatibilità con implementazioni precedenti
-    window.mUtilities = {};
-    window.mUtilities.ckeditor = {
-      cke_url: '../ckeditor-dist/m-ckeditor-min.js',
-      upl_url: 'test_files/test_server_upload_response.php',
-      img_viewer: ''
-    };
-  </script>
-  <script src="../../ckeditor-utilities/iife/m-ckeditor-loader-min.js"></script>
-
-  <!-- <script src="../dist/m-ckeditor-min.js"></script>
-  <script>
-    ClassicEditor
-      .create( document.querySelector( '#editor1' ), {
-        toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
-      } )
-      .then( editor => {
-        window.editor = editor;
-      } )
-      .catch( err => {
-        console.error( err.stack );
-      } );
-  </script> -->
-
-  <script src="test.js"></script>
-  <script src="../../ckeditor-utilities/iife/m-ckeditor-form-check-min.js"></script>
 </body>
 </html>

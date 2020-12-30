@@ -16,13 +16,9 @@
     <p>Qualsiasi tipo di editor (standard, lite o xlite) può escludere gli headings.</p>
 
     <p>Per attivare l'editor lite, l'elemento deve avere le classi: <code>editor editor-lite</code>,
-    per leditor xlite: <code>editor editor-xlite</code>.<br>
+    per l'editor xlite: <code>editor editor-xlite</code>.<br>
     Per disattivare gli headings aggiungere anche la classe <code>editor-no-headings</code>.</p>
 
-    <div class="alert alert-info">
-      NB: in questa demo le immagini non sono inviate al server, ma sono codificate
-      in base64
-    </div>
 
     <form id="cke_test_form" action="test_files/server_side.php" method="post">
 
@@ -90,20 +86,6 @@
 
 
   <script src="../node_modules/@ckeditor/ckeditor5-inspector/build/inspector.js"></script>
-
-  <script type="module">
-    import CKEloader from '../../ckeditor-utilities/_m-ckeditor-loader.js';
-
-    CKEloader({
-      cke_url: '../ckeditor-dist/m-ckeditor-min.js',
-      upl_url: 'test_files/test_server_upload_response.php',
-      img_viewer: ''
-    });
-
-  </script>
-
-
-
-  <script src="test.js"></script> <!-- test utilities -->
+  <script src="js/load_editor.js" type="module"></script>
 </body>
 </html>

@@ -90,13 +90,13 @@ Vedi
 
 
 
-### `ckeditor.js`
+### `m-ckeditor.js`
 
 Modifiche principali:
 
 * L'inclusione dell'uploader basato su CKFinder è commentata, al suo posto è stato inserito un *adapter* personalizzato per le immagini (vedi più avanti)
 * Il linguaggio dell'interfaccia è cambiato in `it`
-* Altre modifiche ai plugins di default, alla toolbar ecc.
+* Altre modifiche ai plugins di default, alla toolbar ecc. (ImageResize, textAlignment, ... )
 * Il plugin oEmbed (media) è disattivato
 
 

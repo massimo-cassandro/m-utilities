@@ -85,6 +85,14 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/archived/twig_shared/fancybox_cdn.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/archived/twig_shared/fancybox_cdn.html.twig",
+		"oF": 0
+		},
 	"/auto-datatables/demo/autoDataTable-demo-min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -361,6 +369,28 @@
 		"oS": 0,
 		"sct": 1
 		},
+	"/boilerplate-src/_imgs_viewer.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/boilerplate-src/_imgs_viewer-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate-src/_print_icon.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/boilerplate-src/_print_icon-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/boilerplate-src/contenuti/_contenuti_elenco.js": {
 		"bF": 0,
 		"ft": 64,
@@ -480,6 +510,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/config/packages/twig.yaml",
+		"oF": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/_htaccess": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/_htaccess",
 		"oF": 0
 		},
 	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/_editorconfig": {
@@ -1117,6 +1155,25 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/rollup.config.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/rollup.config-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/upd_external_libs.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/public/assets/upd_external_libs.sh",
+		"oF": 0
+		},
 	"/boilerplate/_PROJ_ROOT_/_REPO_/public/robots.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -1147,14 +1204,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/analytics.html.twig",
-		"oF": 0
-		},
-	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/fancybox_cdn.html.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/fancybox_cdn.html.twig",
 		"oF": 0
 		},
 	"/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/favicons.html.twig": {
@@ -1625,14 +1674,6 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/boilerplate/upd-from-boilerplate.sh": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/boilerplate/upd-from-boilerplate.sh",
-		"oF": 0
-		},
 	"/bs4-utilities/_boxes.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1863,17 +1904,6 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/js-utilities/_imgs_viewer.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js-utilities/_imgs_viewer-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/js-utilities/_input_date_raw_fallback.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1936,17 +1966,6 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/js-utilities/_overlay-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/js-utilities/_print_icon.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js-utilities/_print_icon-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -2028,17 +2047,6 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/js-utilities/_url_utilities.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js-utilities/_url_utilities-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/js-utilities/_webp_support.js": {
 		"bF": 0,
 		"ft": 64,
@@ -2049,6 +2057,14 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/js-utilities/test/date_utilities.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/js-utilities/test/date_utilities.html",
+		"oF": 0
 		},
 	"/legacy/_check_bs4_mq.js": {
 		"bF": 0,
@@ -3133,17 +3149,6 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/node_modules/jquery/dist/jquery-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/node_modules/moment/./moment.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/node_modules/moment/./moment-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
