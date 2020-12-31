@@ -1,9 +1,19 @@
 summary {
-  font-family: $heading-font-family;
-  font-weight: $heading-font-weight-light!important;
+  font-family: $body-font-family;
+  font-weight: $body-font-weight-semibold!important;
   font-size: 1.2rem;
+
+  small {
+    font-weight: $body-font-weight-light;
+  }
 }
 details {
+
+  & + details {
+    margin-top:.5rem;
+    padding-top:.5rem;
+    border-top:1px solid $grigio-3;
+  }
 
   td & {
     margin:0;
@@ -13,18 +23,17 @@ details {
       font-size: 1rem;
       padding:0;
       margin:0;
-      font-weight: $heading-font-weight-bold!important;
     }
   }
 
-  &.boxed {
-    margin:1rem 0;
-    padding:.5rem;
+  // &.boxed {
+  //   margin:1rem 0;
+  //   padding:.5rem;
 
-    &[open] {
-      @extend .box;
-    }
-  }
+  //   &[open] {
+  //     @extend .box;
+  //   }
+  // }
 
   > dl, > div {
     margin:.5rem 0 0 2rem;
@@ -39,9 +48,9 @@ dt {
   padding-bottom:2px;
 }
 
-.alert code {
-  color: #c00;
-}
+// .alert code {
+//   color: #c00;
+// }
 
 
 h1, h2 {
@@ -50,3 +59,33 @@ h1, h2 {
     font-size: 70%;
   }
 }
+
+h3, h4, h5, h6,
+.h3, .h4, .h5, .h6 {
+  font-family: $body-font-family;
+  font-weight: $body-font-weight-semibold;
+}
+
+.font-weight-semibold {
+  font-weight: $body-font-weight-semibold;
+}
+
+// .text-justify {
+//   hyphens: auto;
+// }
+
+// Responsive justify
+// @each $breakpoint in map-keys($grid-breakpoints) {
+//   $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+//   .text#{$infix}-justify {
+//     @include media-breakpoint-up($breakpoint) {
+//       hyphens: auto;
+//       text-align: justify;
+//     }
+//   }
+// }
+
+// .font-size-medium {
+//   font-size:$medium-text-size;
+// }

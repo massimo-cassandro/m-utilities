@@ -57,6 +57,11 @@ $menu-font-weight-bold       : $body-font-weight-semibold;
 $monospace-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 $base-line-height: 1.45;
+$font-size-base:              1rem;
+$lead-font-size:              $font-size-base * 1.25;
+$lead-font-weight:            $body-font-weight-light;
+$small-font-size:             75%;
+$medium-text-size:            85%;
 
 // icone svg, sono usate per gli alert con icona e altro
 @import '../icone/icone_svg';

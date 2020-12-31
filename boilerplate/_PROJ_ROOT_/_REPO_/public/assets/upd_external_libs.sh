@@ -1,20 +1,22 @@
 #!/usr/bin/bash
 
-
-cp -v node_modules/jspdf/dist/jspdf.umd.min.js js/libs/
-# cp -v node_modules/jquery/dist/jquery.min.js js/libs/
-
-
 # https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
 ERROR='\033[1;35m'
 SUCCESS='\033[1;33m'
 RESET='\033[0m' # No Color
+
+
+printf "* ${SUCCESS}Librerie aggiuntive:${RESET}\n"
+cp -v node_modules/jspdf/dist/jspdf.umd.min.js js/libs/
+# cp -v node_modules/jquery/dist/jquery.min.js js/libs/
+
 
 # symfony form theme
 FILE_OR_FOLDER="bs4_form_layout.html.twig"
 SOURCE=node_modules/@massimo-cassandro/symfony-bootstrap-form-theme/dist/"$FILE_OR_FOLDER"
 TARGET=../../templates/_shared/"$FILE_OR_FOLDER"
 if [ -f "$TARGET" ]; then
+  printf "* ${SUCCESS}${FILE_OR_FOLDER}:${RESET}\n"
   cp -v "$SOURCE" "$TARGET"
 else
   printf "* ${ERROR}${FILE_OR_FOLDER} non presente${RESET}\n"
@@ -26,6 +28,7 @@ FILE_OR_FOLDER="layout-tools"
 SOURCE=node_modules/@massimo-cassandro/"$FILE_OR_FOLDER"/dist/
 TARGET="$FILE_OR_FOLDER"/
 if [ -d $TARGET ]; then
+  printf "* ${SUCCESS}${FILE_OR_FOLDER}:${RESET}\n"
   cp -v -R "$SOURCE". "$TARGET"
 else
   printf "* ${ERROR}${FILE_OR_FOLDER} non presente${RESET}\n"
@@ -37,6 +40,7 @@ FILE_OR_FOLDER=ckeditor
 SOURCE=node_modules/@massimo-cassandro/m-utilities/"$FILE_OR_FOLDER"/ckeditor-dist/
 TARGET=ckeditor/
 if [ -d $TARGET ]; then
+  printf "* ${SUCCESS}${FILE_OR_FOLDER}:${RESET}\n"
   cp -v -R "$SOURCE". "$TARGET"
 else
   printf "* ${ERROR}No ${FILE_OR_FOLDER}${RESET}\n"
@@ -48,6 +52,7 @@ fi
 SOURCE=./node_modules/@massimo-cassandro/m-utilities/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/contenuti
 TARGET=../../templates/backoffice/contenuti/
 if [ -d $TARGET ]; then
+  printf "* ${SUCCESS}includes contenuti:${RESET}\n"
   cp -v "$SOURCE"/contenuti-elenco.incl.html.twig "$TARGET"
   cp -v "$SOURCE"/contenuti-scheda.incl.html.twig "$TARGET"
 else
@@ -69,7 +74,7 @@ SHARED_DIR_FILES=(
   imgs_viewer.html.twig
   imgs.html.twig
   meta.html.twig
-  recapiti.htm.twig
+  recapiti.html.twig
 )
 
 for i in "${SHARED_DIR_FILES[@]}"
@@ -77,6 +82,7 @@ do
   SOURCE=./node_modules/@massimo-cassandro/m-utilities/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/"$i"
   TARGET=../../templates/_shared/"$i"
   if [ -f "$TARGET" ]; then
+    printf "* ${SUCCESS}${i}:${RESET}\n"
     cp -v "$SOURCE" "$TARGET"
 else
   printf "* ${ERROR}${i} non presente${RESET}\n"

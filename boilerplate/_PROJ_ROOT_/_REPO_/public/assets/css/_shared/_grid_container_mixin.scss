@@ -1,0 +1,25 @@
+@mixin six-elements-grid($gap: 4rem 2rem) {
+  display: block;
+  margin-top:2rem;
+  max-width: 100%;
+
+  @include media-breakpoint-up(sm) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: $gap;
+    grid-auto-flow: row;
+  }
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(2, minmax(330px, 1fr) );
+  }
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: repeat(3, minmax(290px, 1fr) );
+  }
+  @include media-breakpoint-up(xl) {
+    grid-template-columns: repeat(3, minmax(350px, 1fr) );
+  }
+}
+
+%six-elements-grid  {
+  @include six-elements-grid;
+}
