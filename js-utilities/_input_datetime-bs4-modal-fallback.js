@@ -1,5 +1,7 @@
 import {inputDateSupport, inputTimeSupport, inputDatetimeSupport} from '@massimo-cassandro/m-utilities/js-utilities/_input_date_support';
-
+import $ from 'jquery';
+import 'bootstrap/js/dist/util';
+import 'bootstrap/js/dist/modal';
 /*
   Datetime fallback utilizzando una finestra modal BS4
 
