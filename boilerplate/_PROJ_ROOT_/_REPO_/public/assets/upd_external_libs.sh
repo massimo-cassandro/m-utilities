@@ -64,8 +64,9 @@ SHARED_DIR_FILES=(
   analytics.html.twig
   file_uploader.html.twig
   favicons.html.twig
-  flash_messages_malert.html.twig
   flash_messages.html.twig
+  flash_messages_malert.html.twig
+  flash-messages-malert-bs4-js.html.twig
   form_end_sf4.html.twig
   form_end_sf5.html.twig
   google_font_loader.html.twig

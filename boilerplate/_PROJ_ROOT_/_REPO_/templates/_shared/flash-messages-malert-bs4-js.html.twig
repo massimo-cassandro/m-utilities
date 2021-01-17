@@ -1,0 +1,21 @@
+{#
+  // versione con js esterno invocato al bisogno
+  TODO multiple messages
+
+  {% include '@includes/flash-messages-malert-bs4-js.html.twig' with { vers: glob_vars.vers.backoffice } %}
+#}
+
+{% set flash_messages = app.flashes|default() %} {# necessario: i flash mesasge possono essere letti una volta sola (??) #}
+{%- if flash_messages|default() -%}
+
+  {% set mes_array = [] %}
+  {% for label, messages in flash_messages %}
+    {% for message in messages %}
+      {% set mes_array = mes_array|merge([{t: label, m:message}]) %}
+    {% endfor %}
+  {% endfor %}
+
+  <script src="{{ asset('assets/js/flash-message-min.js') }}{{ vers|default()? "?v=#{vers}" : '' }}" {{- ' ' -}}
+    data-m="{{ mes_array|json_encode()|e('html_attr') }}"
+    {%- if app.environment != 'prod' %} data-dev="1"{% endif -%}></script>
+{%- endif -%}

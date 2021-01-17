@@ -1,0 +1,92 @@
+{% extends '_shared/_main.html.twig' %}
+{% block tpl %}
+{# {% set js_files = js_files|default([])|merge([ asset('assets/js/backoffice/dist/backoffice-min.js') ~ '?v=' ~ glob_vars.vers.backoffice ]) %} #}
+{% set is_fancy = 'fancy' in app.request.query.all|keys  %}
+{% set fluid_container = is_fancy? true : (fluid_container is defined? fluid_container : false) %}
+{%- set main_template -%}
+<!DOCTYPE html>
+<html lang="it" {%- if app.environment != 'prod' %} class="dev"{% endif -%}>
+  <head>
+    <meta charset="utf-8">
+    {# {%- include '@includes/google_font_v2_loader.html.twig' with {
+      fonts: glob_vars.fonts
+    } -%} #}
+    {% include '@includes/favicons.html.twig' %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="noindex,nofollow">
+    {%- for js in js_files|default() -%}
+      <link rel="preload" href="{{ js }}" as="script">
+    {%- endfor -%}
+    <link rel="preload" href="{{ asset('/assets/css/backoffice/backoffice.css') }}?v={{ glob_vars.vers.backoffice }}" as="style">
+    <link rel="stylesheet" href="{{ asset('/assets/css/backoffice/backoffice.css') }}?v={{ glob_vars.vers.backoffice }}" type="text/css" media="all">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>
+      {%- block title %}{% endblock -%}
+      {{- ' | __SITE__' -}}
+      {{- app.environment != 'prod'? ' [' ~ app.environment|upper ~ ']' : '' -}}
+    </title>
+    {% block head %}{% endblock %}
+  </head>
+  <body
+    {# {%- if controller is defined and controller %} data-controller="{{ controller }}"{% endif -%} #}
+    {{- ' ' -}} data-icons="{{ glob_vars.icon_file }}" {{- ' ' -}}
+    {{- ' ' -}} data-viewer="{{ glob_vars.viewer }}" {{- ' ' -}}
+    {%- if app.request.baseUrl %} data-base-url="{{ app.request.baseUrl }}"{% endif -%}
+    {%- if is_granted('ROLE_SUPER_ADMIN') %} data-super-admin="true"{% endif -%}
+    {%- if app.environment != 'prod' %} data-dev="true"{% endif -%}
+    {%- if is_fancy %} class="fancy"{% endif -%}
+  >
+
+    <div class="content">
+      {%- if not is_fancy -%}
+        <header class="main-header">
+          {% include 'backoffice/_incl/backoffice-menu.html.twig' %}
+        </header>
+      {%- endif -%}
+      <main class="{{ fluid_container? 'container-fluid' : 'container-lg' }}">
+
+        {# {%- for state in ['danger', 'success', 'warning', 'info'] -%}
+          <div class="alert alert-dismissable alert-icon alert-flash alert-{{ state }}">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Chiudi">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            {{ state }}
+          </div>
+        {%- endfor -%} #}
+
+        {% block body %}{% endblock %}
+      </main> {# /main-content #}
+    </div>
+
+    <footer>
+      {% include '@includes/icone.html.twig' with { id: 'logo', class: 'icona icona-lg icona-filled' } %}
+      xxxxxx
+    </footer>
+
+
+    <div class="go2top d-md-none" role="button">
+      {% include '@includes/icone.html.twig' with { id: 'freccia', class:'r90', title: 'Torna a inizio pagina' } %}
+    </div>
+
+    {% if app.environment != 'prod' %}
+      <script src="{{ asset('/assets/layout-tools/layout_tools-min.js') }}"></script>
+    {% endif %}
+
+    {%- block body_end -%}{%- endblock body_end -%}
+    {%- for js in js_files|default() -%}
+      <script src="{{ js }}"></script>
+    {%- endfor -%}
+
+    {% include '@includes/flash-messages-malert-bs4-js.html.twig' with { vers: glob_vars.vers.backoffice } %}
+  </body>
+</html>
+{%- endset -%}
+{%- if app.environment == 'prod' -%}
+  {{ main_template|spaceless }}
+{%- else -%}
+  {{ main_template }}
+{%- endif -%}
+{% endblock tpl %}
