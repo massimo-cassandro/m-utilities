@@ -1,0 +1,77 @@
+$snackbar-std-background: #333!default;
+$snackbar-std-color: #fff!default;
+$snackbar-error-background: theme-color(danger)!default; // false per non generare questo stato
+$snackbar-error-color: color-yiq( theme-color(danger) )!default;
+$snackbar-warning-background: theme-color(warning)!default; // false per non generare questo stato
+$snackbar-warning-color: color-yiq( theme-color(warning) )!default;
+$snackbar-success-background: theme-color(success)!default; // false per non generare questo stato
+$snackbar-success-color: color-yiq( theme-color(success) )!default;
+
+
+.snackbars-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 5px;
+  width:100%;
+  @include media-breakpoint-up(sm) {
+    width:80%;
+  } // end sm
+  @include media-breakpoint-up(md) {
+    width:50%;
+  } // end md
+  @include media-breakpoint-up(lg) {
+    width:38rem;
+  } // end lg
+  @include media-breakpoint-up(xl) {} // end xl
+
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  padding:1rem;
+}
+.snackbar {
+  padding: 5px;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: .5rem;
+  background: $snackbar-std-background;
+  color:$snackbar-std-color;
+  font-size: .8rem;
+  width:100%;
+  box-shadow: 0 0 2px rgba(#000, .6);
+  animation: enter_snackbar .2s linear;
+
+  @keyframes enter_snackbar {
+    0% {
+      transform: translateY(200%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @if $snackbar-error-background {
+    &-error {
+      background-color: $snackbar-error-background;
+      color: $snackbar-error-color;
+    }
+  }
+  @if $snackbar-warning-background {
+    &-warning {
+      background-color: $snackbar-warning-background;
+      color: $snackbar-warning-color;
+    }
+  }
+  @if $snackbar-success-background {
+    &-success {
+      background-color: $snackbar-success-background;
+      color: $snackbar-success-color;
+    }
+  }
+}
