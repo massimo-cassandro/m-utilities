@@ -31,6 +31,7 @@ $snackbar-success-color: color-yiq( theme-color(success) )!default;
   bottom: 0;
   left: 0;
   padding:1rem;
+  z-index:1200;
 }
 .snackbar {
   padding: 5px;
