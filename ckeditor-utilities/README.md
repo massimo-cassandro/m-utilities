@@ -2,12 +2,12 @@
 
 Utilità per l'implementazione di CKEditor
 
-NB: dalla versione 1.25 di *m-utilities* i parametri per loader e form checker impostati tramite attributi *data-* non sono più supportati.
+> NB: dalla versione 1.25 di *m-utilities* i parametri per loader e form checker impostati tramite attributi *data-* non sono più supportati.
 
 
 ## Loader
 
-`_m-ckeditor-form-check.js` facilita l'attivazione di CKEditor su un textarea.
+CKEditor loader semplifica e automatizza l'attivazione di CKEditor su un textarea.
 
 Includere lo script e impostare le opzioni:
 
@@ -15,9 +15,9 @@ Includere lo script e impostare le opzioni:
 import CKEloader from '@massimo-cassandro/m-utilities/ckeditor-utilities/_m-ckeditor-loader.js'
 
  CKEloader({
-  cke_url: '../ckeditor-dist/m-ckeditor-min.js',
-  upl_url: 'test_files/test_server_upload_response.php',
-  img_viewer: '/viewer/'
+  cke_url   : '/path/to/m-ckeditor-min.js',
+  upl_url   : '/path/to/server_script',
+  img_viewer: '/viewer-url/'
 });
 ```
 
@@ -37,28 +37,93 @@ Il loader attiva automaticamente CKEditor a tutti i textarea con classe `editor`
 * la classe `editor-no-headings`, se aggiunta ad una qualsiasi delle impostazioni precedenti, elimina la gestione degli headings.
 
 
-## Form checker
+### Abilitazione elementi al caricamento di ckeditor
 
-`_m-ckeditor-form-check.js` permette di ottimizzare il contenuto di un textarea CKEditor eseguendo il trimming delle righe vuote e controllando eventuali editor con attributo `required`.
+Ad evitare che un textarea sia modificabile prima dell'attivazione di CKeditor (che su reti lente potrebbe avere un delay avvertibile), è sufficiente disabilitarlo e aggiungere l'attributo `data-enable="editor"`.
 
-Implementazione:
+```html
+<textarea class="editor" id="textarea1" data-enable="editor" disabled></textarea>
+```
 
-```js
-import CKEFormChecker from '@massimo-cassandro/m-utilities/ckeditor-utilities/_m-ckeditor-form-check.js'
+All'attivazione di CKEditor, il campo verrò automaticamente abilitato.
 
- CKEFormChecker({
+Oltre che sui textarea, questo metodo può essere applicato ad ogni elemento che necessiti di essere abilitato in questo modo.
+
+In aggiunta, se l'elemento in esame è all'interno di un `div.form-group`, l'eventuale classe `disabled` presente, viene eliminata.
+
+
+Per info sulla configurazione degli script server-side, il css richiesto ecc, consulta i commenti all'interno dei vari file di [test](https://github.com/massimo-cassandro/m-utilities/tree/master/ckeditor/test).
+
+
+
+## Altre funzionalità del loader
+
+Oltre a caricare lo script ckeditor, il loader esegue anche alcune altre operazioni:
+
+### Lista degli editor
+
+All'attivazione, tutte le istanze di ckeditor attivate vengono aggiunte all'oggetto `window.ckeditor_instances`, identificabili dall'id del textarea associato.
+
+In questo modo è possibile eseguire operazioni su ogni editor facendo riferimento a `window.ckeditor_instances.id`, dove `id` è l'id del textarea su cui è stato attivato ckeditor.
+
+### Controllo massima dimensione (KB) immagini
+
+Il caricamento delle immagini all'interno di un elemento CKEditor è limitato di default a 4MB. 
+
+Per variare questo valore, è sufficiente aggiungere al textarea l'attributo `data-cke-upl-max-size` che deve riportare il valore in byte della massima dimensione dell'immagine.
+
+Esempio, per limitare le immagini a 1 MB:
+
+```html
+<textarea class="editor" id="textarea1" data-cke-upl-max-size="1048576"></textarea>
+```
+
+
+## Utilità
+
+Oltre al loader, possono essere aggiunti al progetto:
+
+* `_m-ckeditor-form-check.js` che aggiunge dei controlli non presenti nativamente in CKEditor: campi required e trimming delle righe vuote
+* `_m-ckeditor.scss` supporto per le classi aggiunte da CKEditor (per la gestione di tabelle e immagini) con l'estensione di alcune classi di Bootstrap 4.
+
+In caso di textarea required non compilati, `_m-ckeditor-form-check.js`, al submit del form, produce un messaggio d'errore.
+
+Il messaggio è personalizzabile tramite i parametri `requiredErrorMes` e `alertUI`, sostituendo alle funzioni standard quelle più adatte al proprio progetto.
+
+`_m-ckeditor-form-check.js` inoltre, elimina le righe vuote (`<p>&nsbp;</p>`) all'inizio e alla fine del blocco HTML prodotto da CKEditor.
+
+
+### Esempio di implementazione di ckeditor e delle utilità
+
+```javascript
+
+import m_cke_loader from '@massimo-cassandro/m-utilities/ckeditor-utilities/_m-ckeditor-loader';
+import m_cke_form_check from '@massimo-cassandro/m-utilities/ckeditor-utilities/_m-ckeditor-form-check';
+
+(() => {
+
+  m_cke_loader({
+    cke_url: 'path/to/m-ckeditor-min.js',
+    upl_url: 'path/to/uploader',
+    img_viewer: 'path/to/viewer/',
+  });
+
+  m_cke_form_check({
     requiredErrorMes: requiredElement => {
-        return `L'elemento ${requiredElement} è obbligatorio`;
+      return `L'elemento ${requiredElement} è obbligatorio`;
     },
+
     alertUI: mes => {
-        alert(mes);
+      alert(mes);
     }
-});
+  });
+```
+
+```scss
+@import '@massimo-cassandro/m-utilities/ckeditor-utilities/m-ckeditor';
 ```
 
 In cui: 
 
 * `requiredErrorMes` è la funzione che restituisce la stringa del messaggio d'errore per i campi required. L'argomento è una stringa che permetta all'autente l'identificazione del campo (il contenuto del tag `label`, ad esempio)
 * `alertUI` è la funzione che richiama l'interfaccia di visualizzazione dell'errore (default `window.alert`)
-
-`_m-ckeditor-form-check.js` inoltre, elimina le righe vuote (`<p>&nsbp;</p>`) all'inizio e alla fine del blocco di testo.
