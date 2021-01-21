@@ -40,16 +40,19 @@ export function disableBtnsOnSubmit() {
 // throw err
 export function throwErr(field, mes) {
 
-  field.classList.add('is-invalid');
-  let form_group = field.closest('.form-group'),
-    label = form_group.querySelector('label');
-  if(form_group && label ) {
-    form_group.classList.add('is-invalid');
-    label.focus({preventScroll:false});
+  if(field) {
+    field.classList.add('is-invalid');
+    let form_group = field.closest('.form-group'),
+      label = form_group.querySelector('label');
+    if(form_group && label ) {
+      form_group.classList.add('is-invalid');
+      label.focus({preventScroll:false});
 
-  } else {
-    field.focus({preventScroll:false});
+    } else {
+      field.focus({preventScroll:false});
+    }
   }
+
   throw mes;
 }
 
