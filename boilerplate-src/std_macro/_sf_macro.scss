@@ -1,44 +1,108 @@
 /*
 
-$del-icon-fill: none;
-$del-icon-stroke: currentColor;
-$del-icon-stroke-width: 6px;
-$alternate-bg-color: rgba($nero, .2);
+$sf-macro-del-icon-fill: none;
+$sf-macro-del-icon-stroke: currentColor;
+$sf-macro-del-icon-stroke-width: 6px;
+$sf-macro-alternate-bg-color: rgba($nero, .05);
+$sf-macro-close-btn-border-radius: 50%;
+$sf-macro-close-btn-bg-color: #fff;
+$sf-macro-close-btn-border: 1px solid #ccc;
+$sf-macro-close-btn-color: #000;
+$sf-macro-close-btn-hover-bg-color: #000;
+$sf-macro-close-btn-hover-border-color: #000;
+$sf-macro-close-btn-hover-color: #fff;
 @import '@massimo-cassandro/m-utilities/boilerplate-src/std_macro/sf_macro';
 
 */
-$del-icon-fill: currentColor!default;
-$del-icon-stroke: none!default;
-$del-icon-stroke-width: none!default;
-$alternate-bg-color: rgba($nero, .05)!default;
+$sf-macro-del-icon-fill: currentColor!default;
+$sf-macro-del-icon-stroke: none!default;
+$sf-macro-del-icon-stroke-width: none!default;
+$sf-macro-alternate-bg-color: rgba($nero, .05)!default;
+$sf-macro-close-btn-border-radius: 50%!default;
+$sf-macro-close-btn-bg-color: #fff!default;
+$sf-macro-close-btn-border: 1px solid #ccc!default;
+$sf-macro-close-btn-color: #000!default;
+$sf-macro-close-btn-hover-bg-color: #000!default;
+$sf-macro-close-btn-hover-border-color: #000!default;
+$sf-macro-close-btn-hover-color: #fff!default;
 
 .macro-wrapper {
 
-  .macro-riga {
-    padding:.5rem;
-    &:nth-child(even) {
-      background-color: $alternate-bg-color;
+  @at-root .macro-riga {
+    padding:$form-group-margin-bottom/2 $form-group-margin-bottom/2 0;
+    position: relative;
+
+    .form-group {
+      margin-bottom:$form-group-margin-bottom/2;
     }
 
-    @include media-breakpoint-up(md) {
+    .macro-close-btn {
+      position: absolute;
+      top:-.5rem;
+      right:-.5rem;
+      width: 2rem;
+      height:2rem;
+
+      display: flex;
+      justify-content:center;
+      align-items:center;
+
+      border-radius:$sf-macro-close-btn-border-radius;
+      background-color: $sf-macro-close-btn-bg-color;
+      border: $sf-macro-close-btn-border;
+      .close {
+        color:  $sf-macro-close-btn-color;
+        opacity:1;
+      }
+
+      &:hover {
+        background-color: $sf-macro-close-btn-hover-bg-color;
+        border-color: $sf-macro-close-btn-hover-border-color;
+        .close {
+          color:  $sf-macro-close-btn-hover-color;
+          opacity:1;
+        }
+      }
+    }
+
+    &.macro-riga-border {
+      .macro-close-btn {
+        top:-.3rem
+      }
+      &:nth-child(odd) {
+        border:1px solid #ccc;
+        margin-bottom:$form-group-margin-bottom/2;
+      }
+    }
+    &:nth-child(even) {
+      background-color: $sf-macro-alternate-bg-color;
+    }
+
+    &:not(.show-label-down-xl) {
       &:not(:first-child) {
         label {
           display:none;
         }
       }
+    }
 
-      .form-group {
-        margin:0;
+    @each $brk in (sm, md, lg) {
+      &.show-label-down-#{$brk} {
+        @include media-breakpoint-down($brk) {
+          label {
+            display:inline-block!important;
+          }
+        } // end @media
       }
-    } // end md
-  }
+    } // end @each
+  } // end .macro-riga
 
   .macro-riga-del { // button
     padding: $input-btn-padding-y;
     svg {
-      fill:$del-icon-fill;
-      stroke:$del-icon-stroke;
-      stroke-width: $del-icon-stroke-width;
+      fill:$sf-macro-del-icon-fill;
+      stroke:$sf-macro-del-icon-stroke;
+      stroke-width: $sf-macro-del-icon-stroke-width;
     }
-  }
-}
+  } // end .macro-riga-del
+} // end .macro-wrapper

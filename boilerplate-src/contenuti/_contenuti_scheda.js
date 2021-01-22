@@ -23,7 +23,13 @@ export default function () {
         'multiple'
       ]
     },
-    cfg_tpl_textarea = { editor: 'true|lite|xlite', html: true },
+    cfg_tpl_textarea = {
+      class:'editor-no-headings',
+      attributes: {},
+      properties: ['required'],
+      editor: 'true|lite|xlite',
+      html: true
+    },
     cfg_tpl_num = { number: 'euro|perc' },
     cfg_tpl_select = {
       class: '',
