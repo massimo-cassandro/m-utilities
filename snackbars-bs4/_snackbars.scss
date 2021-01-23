@@ -9,23 +9,13 @@ $snackbar-success-color: color-yiq( theme-color(success) )!default;
 
 
 .snackbars-container {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 5px;
-  width:100%;
-  @include media-breakpoint-up(sm) {
-    width:80%;
-  } // end sm
-  @include media-breakpoint-up(md) {
-    width:50%;
-  } // end md
-  @include media-breakpoint-up(lg) {
-    width:38rem;
-  } // end lg
-  @include media-breakpoint-up(xl) {} // end xl
+
 
   position: sticky;
   bottom: 0;
@@ -34,7 +24,7 @@ $snackbar-success-color: color-yiq( theme-color(success) )!default;
   z-index:1200;
 }
 .snackbar {
-  padding: 5px;
+  padding: .5rem 1rem;
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -45,7 +35,8 @@ $snackbar-success-color: color-yiq( theme-color(success) )!default;
   color:$snackbar-std-color;
   font-size: .8rem;
   width:100%;
-  box-shadow: 0 0 2px rgba(#000, .6);
+  box-shadow: 0 0 8px rgba(#000, .6);
+  border-radius:$border-radius;
   animation: enter_snackbar .2s linear;
 
   @keyframes enter_snackbar {

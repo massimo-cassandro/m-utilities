@@ -1,0 +1,10 @@
+@import '../../node_modules/bs4/scss/bootstrap';
+@import '../snackbars';
+
+html, body, .container {
+  height:100%
+}
+body {
+  background-color: #efefef;
+  position: relative;
+}
