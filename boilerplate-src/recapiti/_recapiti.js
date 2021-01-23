@@ -4,7 +4,7 @@ import {mAlert} from '@massimo-cassandro/m-utilities/mAlert-bs4/_mAlert';
 export default function () {
 
   const check_recapito = (riga) => {
-    const macro_container  = riga.closest('.macro-container'),
+    const macro_container  = riga.closest('.sf-macro-container'),
       campo_princ = riga.querySelector('.rec-princ'),
       campo_tipo = riga.querySelector('.rec-tipo'),
       campo_recapito = riga.querySelector('.rec-recapito'),
@@ -15,7 +15,7 @@ export default function () {
     let righe = [];
     macro_container.querySelectorAll(`.rec-tipo option[value="${tipo_value}"]:checked`)
       .forEach(item => {
-        let r = item.closest('.macro-riga');
+        let r = item.closest('.sf-macro-riga');
         if( r.querySelector('.rec-princ:checked') ) {
           righe.push(r);
         }
@@ -81,20 +81,20 @@ export default function () {
 
     fset_recapiti.addEventListener('click', e => {
       if(e.target.classList.contains('rec-princ')) {
-        check_recapito(e.target.closest('.macro-riga'));
+        check_recapito(e.target.closest('.sf-macro-riga'));
       }
     });
 
     fset_recapiti.addEventListener('change', e => {
       if(e.target.classList.contains('rec-tipo')) {
-        check_recapito(e.target.closest('.macro-riga'));
+        check_recapito(e.target.closest('.sf-macro-riga'));
       }
     });
 
   });
 
   // start
-  document.querySelectorAll('.fset_recapiti .macro-riga').forEach(item => {
+  document.querySelectorAll('.fset_recapiti .sf-macro-riga').forEach(item => {
     check_recapito(item);
   });
 

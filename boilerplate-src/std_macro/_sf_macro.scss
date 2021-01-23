@@ -1,108 +1,118 @@
 /*
 
-$sf-macro-del-icon-fill: none;
-$sf-macro-del-icon-stroke: currentColor;
-$sf-macro-del-icon-stroke-width: 6px;
-$sf-macro-alternate-bg-color: rgba($nero, .05);
 $sf-macro-close-btn-border-radius: 50%;
-$sf-macro-close-btn-bg-color: #fff;
+$sf-macro-close-btn-width: 1.2rem;
+$sf-macro-close-btn-position-top:-.25rem;
+$sf-macro-close-btn-position-right:-.75rem;
+$sf-macro-close-btn-bg-color: $bianco;
 $sf-macro-close-btn-border: 1px solid #ccc;
-$sf-macro-close-btn-color: #000;
-$sf-macro-close-btn-hover-bg-color: #000;
-$sf-macro-close-btn-hover-border-color: #000;
-$sf-macro-close-btn-hover-color: #fff;
+$sf-macro-close-btn-color: $nero;
+$sf-macro-close-btn-hover-bg-color: $nero;
+$sf-macro-close-btn-hover-border-color: $nero;
+$sf-macro-close-btn-hover-color: $bianco;
+$sf-macro-apply-odd-rows-borders: true; // false = no border
+$sf-macro-riga-odd-border: 1px solid #ccc; // righe dispari
+$sf-macro-even-bg-color: rgba($nero, .05); // righe pari
 @import '@massimo-cassandro/m-utilities/boilerplate-src/std_macro/sf_macro';
 
 */
-$sf-macro-del-icon-fill: currentColor!default;
-$sf-macro-del-icon-stroke: none!default;
-$sf-macro-del-icon-stroke-width: none!default;
-$sf-macro-alternate-bg-color: rgba($nero, .05)!default;
+
 $sf-macro-close-btn-border-radius: 50%!default;
+$sf-macro-close-btn-width: 1.2rem!default;
+$sf-macro-close-btn-position-top:-.25rem!default;
+$sf-macro-close-btn-position-right:-.75rem!default;
 $sf-macro-close-btn-bg-color: #fff!default;
 $sf-macro-close-btn-border: 1px solid #ccc!default;
 $sf-macro-close-btn-color: #000!default;
 $sf-macro-close-btn-hover-bg-color: #000!default;
 $sf-macro-close-btn-hover-border-color: #000!default;
 $sf-macro-close-btn-hover-color: #fff!default;
+$sf-macro-apply-odd-rows-borders: true!default; // false = no border
+$sf-macro-riga-odd-border: 1px solid #ccc!default;
+$sf-macro-even-bg-color: rgba(#000, .05)!default;
 
-.macro-wrapper {
+.sf-macro-wrapper {
 
-  @at-root .macro-riga {
+  @at-root .sf-macro-riga {
     padding:$form-group-margin-bottom/2 $form-group-margin-bottom/2 0;
     position: relative;
+    border-radius: $border-radius;
 
     .form-group {
       margin-bottom:$form-group-margin-bottom/2;
     }
 
-    .macro-close-btn {
-      position: absolute;
-      top:-.5rem;
-      right:-.5rem;
-      width: 2rem;
-      height:2rem;
+    &:nth-child(even) {
+      background-color: $sf-macro-even-bg-color;
+    }
 
-      display: flex;
-      justify-content:center;
-      align-items:center;
+    @if $sf-macro-apply-odd-rows-borders {
+      margin-bottom: $form-group-margin-bottom/2;
 
-      border-radius:$sf-macro-close-btn-border-radius;
-      background-color: $sf-macro-close-btn-bg-color;
-      border: $sf-macro-close-btn-border;
+      &:nth-child(odd) {
+        border: $sf-macro-riga-odd-border;
+      }
+
+    } @else {
+      // questa classe forza il bordo delle righe dispari anche se
+      // $sf-macro-apply-odd-rows-borders è false
+      .sf-macro-riga-odd-borders & {
+        margin-bottom: $form-group-margin-bottom/2;
+        &:nth-child(odd) {
+          border:$sf-macro-riga-odd-border;
+
+        }
+      }
+    }
+  } // end .sf-macro-riga
+
+  // etichette campi righe successive alla priima
+  &:not(.sf-macro-show-label-down-xl) .sf-macro-riga {
+    &:not(:first-child) {
+      label {
+        display:none;
+      }
+    }
+  }
+
+  @each $brk in (xs, sm, md, lg) {
+    &.sf-macro-show-label-down-#{$brk} {
+      @include media-breakpoint-down($brk) {
+        label {
+          display:inline-block!important;
+        }
+      } // end @media
+    }
+  } // end @each
+
+  @at-root .sf-macro-close-btn {
+    position: absolute;
+    top:   $sf-macro-close-btn-position-top;
+    right: $sf-macro-close-btn-position-right;
+    width: $sf-macro-close-btn-width;
+    height:$sf-macro-close-btn-width;
+
+    display: flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:$sf-macro-close-btn-border-radius;
+    background-color: $sf-macro-close-btn-bg-color;
+    border: $sf-macro-close-btn-border;
+    .close {
+      color:  $sf-macro-close-btn-color;
+      opacity:1;
+      font-size:1rem;
+    }
+
+    &:hover {
+      background-color: $sf-macro-close-btn-hover-bg-color;
+      border-color: $sf-macro-close-btn-hover-border-color;
       .close {
-        color:  $sf-macro-close-btn-color;
+        color:  $sf-macro-close-btn-hover-color;
         opacity:1;
       }
-
-      &:hover {
-        background-color: $sf-macro-close-btn-hover-bg-color;
-        border-color: $sf-macro-close-btn-hover-border-color;
-        .close {
-          color:  $sf-macro-close-btn-hover-color;
-          opacity:1;
-        }
-      }
     }
+  }
 
-    &.macro-riga-border {
-      .macro-close-btn {
-        top:-.3rem
-      }
-      &:nth-child(odd) {
-        border:1px solid #ccc;
-        margin-bottom:$form-group-margin-bottom/2;
-      }
-    }
-    &:nth-child(even) {
-      background-color: $sf-macro-alternate-bg-color;
-    }
-
-    &:not(.show-label-down-xl) {
-      &:not(:first-child) {
-        label {
-          display:none;
-        }
-      }
-    }
-
-    @each $brk in (sm, md, lg) {
-      &.show-label-down-#{$brk} {
-        @include media-breakpoint-down($brk) {
-          label {
-            display:inline-block!important;
-          }
-        } // end @media
-      }
-    } // end @each
-  } // end .macro-riga
-
-  .macro-riga-del { // button
-    padding: $input-btn-padding-y;
-    svg {
-      fill:$sf-macro-del-icon-fill;
-      stroke:$sf-macro-del-icon-stroke;
-      stroke-width: $sf-macro-del-icon-stroke-width;
-    }
-  } // end .macro-riga-del
-} // end .macro-wrapper
+} // end .sf-macro-wrapper
