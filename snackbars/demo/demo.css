@@ -7190,6 +7190,7 @@ a.text-dark:hover, a.text-dark:focus {
   justify-content: flex-end;
   align-items: stretch;
   gap: 5px;
+  max-width: 100%;
   position: sticky;
   bottom: 0;
   left: 0;

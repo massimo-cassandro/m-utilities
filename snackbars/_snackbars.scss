@@ -15,7 +15,7 @@ $snackbar-success-color: color-yiq( theme-color(success) )!default;
   justify-content: flex-end;
   align-items: stretch;
   gap: 5px;
-
+  max-width:100%;
 
   position: sticky;
   bottom: 0;
