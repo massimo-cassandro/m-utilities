@@ -15,6 +15,7 @@ personalizzazioni:
   show_delete         : true, // default, mostra il cbox cancellato
   delete_field        : 'cancellato', // default, nome del campo
   delete_label        : "Elimina", // default
+  delete_id           : 'rec_cancellato', // facoltativo
   delete_class        : "", // default
   delete_label_class  : "", // default
   delete_help         : "", // default
@@ -40,7 +41,7 @@ personalizzazioni:
       label_attr:{}|merge(delete_label_class? {class: delete_label_class} : {}),
       attr: {class: 'trigger-no-validate' ~ (delete_class? ' ' ~ delete_class : '')},
       help: delete_help
-    }) }}
+    }|merge(delete_id|default() ? {id: delete_id} : {})) }}
   </div>
 {%- endif -%}
 

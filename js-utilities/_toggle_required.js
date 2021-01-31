@@ -17,7 +17,10 @@ export default function (field, is_required) {
     } else {
       field.removeAttribute('required');
     }
-    field.closest('.form-group').classList.toggle('required', is_required);
+    let form_group = field.closest('.form-group');
+    if(form_group) {
+      form_group.classList.toggle('required', is_required);
+    }
   }
 
 }

@@ -21,14 +21,17 @@ export default function (element, is_disabled) {
     }
 
     element.classList.toggle('disabled', is_disabled);
-    element.closest('.form-group').classList.toggle('disabled', is_disabled);
-    element.closest('.form-group').querySelectorAll('button').forEach(item => {
-      if(is_disabled) {
-        item.setAttribute('disabled', is_disabled);
-      } else {
-        item.removeAttribute('disabled');
-      }
-    });
+    let form_group = element.closest('.form-group');
+    if(form_group) {
+      form_group.classList.toggle('disabled', is_disabled);
+      form_group.querySelectorAll('button').forEach(item => {
+        if(is_disabled) {
+          item.setAttribute('disabled', is_disabled);
+        } else {
+          item.removeAttribute('disabled');
+        }
+      });
+    }
   }
 
 }
