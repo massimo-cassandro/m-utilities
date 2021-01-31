@@ -119,7 +119,6 @@ export function mAlert(params = {}) {
     },
 
     get_alert_btns = () => {
-
       if(!params.ok_btn_class) {
         params.ok_btn_class = 'btn-outline-primary';
       }
@@ -127,7 +126,9 @@ export function mAlert(params = {}) {
         params.ok_btn_text = 'OK';
       }
 
-      let btns = '';
+      let btns = `<button type="button" class="mAlert-ok btn ${params.type !== 'confirm'? 'btn-focus': ''} ${params.ok_btn_class}" data-dismiss="modal">
+        ${params.ok_btn_text}
+      </button>`;
 
       if(params.type === 'confirm') {
         if(!params.cancel_btn_text) {
@@ -137,15 +138,10 @@ export function mAlert(params = {}) {
           params.cancel_btn_class = 'btn-outline-primary';
         }
 
-        btns += `<button type="button" class="mAlert-cancel btn ${params.cancel_btn_class}" data-dismiss="modal">
+        btns += ` <button type="button" class="mAlert-cancel btn btn-focus ${params.cancel_btn_class}" data-dismiss="modal">
           ${params.cancel_btn_text}
         </button>`;
-
       }
-
-      btns += `<button type="button" class="mAlert-ok btn ${params.ok_btn_class}" data-dismiss="modal">
-        ${params.ok_btn_text}
-      </button>`;
 
       return btns;
     };
@@ -179,7 +175,7 @@ export function mAlert(params = {}) {
             </div>
             ${get_alert_text()}
           </div>
-          <div class="modal-footer justify-content-center">
+          <div class="modal-footer justify-content-${params.type === 'confirm'? 'between' : 'center'}">
             ${get_alert_btns()}
           </div>
         </div>
@@ -196,7 +192,8 @@ export function mAlert(params = {}) {
     })
       .on('shown.bs.modal', function () {
         let _modal = $(this);
-        $('.modal-footer button', _modal).eq(0).focus();
+
+        $('.modal-footer .btn-focus', _modal).eq(0).focus();
 
         if( params.timer ) {
           timeoutID = window.setTimeout( function() {
