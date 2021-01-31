@@ -49,6 +49,11 @@ export default function (m_sorting_container, m_sorting_elements_selector, callb
     el.setAttribute('draggable', 'true');
     el.classList.add('m-sorting-item');
 
+    // imposta draggable=false su eventuali elementi <a> o <img> posti all'interno
+    el.querySelectorAll('a, img').forEach(item => {
+      item.draggable = false;
+    });
+
     // trascinamento avviato
     el.addEventListener('dragstart', function(e) {
       resetAll();
