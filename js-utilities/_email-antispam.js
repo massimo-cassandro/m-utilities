@@ -14,7 +14,7 @@
  *                  mostrato l'indirizzo email (offuscato)
  */
 
-export  function obfuscate_email (email) {
+export  function obfuscate_email (email, hard = true) {
 
   const rand_string = () => {
     const chars='abcedefghjilmnopqestuvwxyz ABCEDEFGHJILMNOPQESTUVWXYZ 0123456789' +
@@ -32,20 +32,20 @@ export  function obfuscate_email (email) {
 
   let encoded_email = '';
   email.split('').forEach((char, idx) => {
-    if([2,5,6,79,10,13,15,20,22].indexOf(idx) !== -1) {
+    if(hard && [2,5,6,79,10,13,15,20,22].indexOf(idx) !== -1) {
       encoded_email += `<span style="display:none" aria-hidden="true">${rand_string()}</span>`;
     }
     if( char === '@') {
-      encoded_email += '<span>&commat;</span><wbr>';
+      encoded_email += hard?'<span>&commat;</span><wbr>' : '&commat;';
 
     } else if (char === '.') {
-      encoded_email += '<span>&#x0002E;</span>';
+      encoded_email += hard? '<span>&#x0002E;</span>' : '&#x0002E;';
 
     } else if (char === '-') {
-      encoded_email += '<span>&#x02010;</span><span></span>';
+      encoded_email += hard? '<span>&#x02010;</span><span></span>' : '&#x02010;';
 
     } else if (char === '_') {
-      encoded_email += '<span>&lowbar;</span><span></span>';
+      encoded_email += hard? '<span>&lowbar;</span><span></span>' : '&lowbar;';
 
     } else if(idx % 2 == 0) {
       encoded_email += `&#${email.charCodeAt(idx)};`;
@@ -88,6 +88,12 @@ export function email_antispam (options) {
       // el.innerHTML = `<a href="mailto:${email}" target="_blank" rel="noopener noreferrer">${content}</a>`;
 
       el.innerHTML = `<a href="#" target="_blank" rel="noopener noreferrer">${content}</a>`;
+      if(el.dataset.addMicrodata !== undefined) {
+
+        el.insertAdjacentHTML('beforeend',
+          `<meta itemprop="email" content="${obfuscate_email(email, false)}">`
+        );
+      }
       el.querySelector('a').addEventListener('click', (e) => {
         e.preventDefault();
         window.location.href = `mailto:${email}`;
