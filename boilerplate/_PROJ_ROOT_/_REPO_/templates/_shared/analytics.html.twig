@@ -1,5 +1,8 @@
 {#
-{% include '@includes/analytics.html.twig' with { analytics_purchase_obj = null } %}
+{% include '@includes/analytics.html.twig' with {
+  analytics_id: glob_vars.analytics_id, // default
+  analytics_purchase_obj: null
+} %}
 
 {% set analytics_purchase_obj  = pagamentoOK|default() and (not registrazioneAnalytics|default())? {
   transaction_id: entity.id,
@@ -26,13 +29,15 @@
   {% set analytics_purchase_json = null %}
 {%- endif -%}
 
+{% set analytics_id = analytics_id is defined? analytics_id : glob_vars.analytics_id %}
+
 {%- if app.environment == 'prod' -%}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{- glob_vars.analytics_id -}}"></script>
   <script>{{- '' -}}
     window.dataLayer = window.dataLayer || []; {{- '' -}}
     function gtag(){dataLayer.push(arguments);} {{- '' -}}
     gtag('js', new Date()); {{- '' -}}
-    gtag('config', '{{- glob_vars.analytics_id -}}'); {{- '' -}}
+    gtag('config', '{{- analytics_id -}}'); {{- '' -}}
 
     {%- if analytics_purchase_obj|default() -%}
       gtag('event', 'purchase', {{ analytics_purchase_json|raw }});
@@ -41,7 +46,7 @@
 {%- else -%}
   <script>
     console.groupCollapsed('Impostazioni analytics');
-    console.log("analytics_id: {{ glob_vars.analytics_id }}");
+    console.log("analytics_id: {{ analytics_id }}");
     {%- if analytics_purchase_obj|default() -%}
       console.log('purchase:');
       console.log({{ analytics_purchase_json|raw }});

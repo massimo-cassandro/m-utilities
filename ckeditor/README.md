@@ -27,6 +27,6 @@ Scopo principale del loader, vista la grande dimensione della build CKE, è di c
 * Url del viewer per le immagini (default `/viewer/`)
 
 
-Altri dettagli in `ckeditor-utilities/README.md`
+Per altre info su uploader e viewer, consultare [ckeditor-utilities/README.md](../ckeditor-utilities/README.md).
 
-Per altre info su uploader e viewer, consultare il file `README-build-editor.md`.
+Per info sulla compilazione di CKEditor: [README-build-editor.md](README-build-editor.md).
