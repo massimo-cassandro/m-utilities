@@ -29,8 +29,9 @@ const particelle = [
   'isola', 'isole'
 ];
 
-export function better_text(str) {
-
+// "abbellisce" un testo sistemando alcuni caratteri, spazi ecc.
+export function better_text(str, custom_words = []) {
+  // custom_words: array di definizioni specifiche da trattare nella forma riportata
   if(str) {
     str = str.trim();
 
@@ -72,24 +73,30 @@ export function better_text(str) {
     str = str.replace(re, function (match) {
       return match.replace(/ +/g, ' ');
     });
+    if(custom_words.length) {
+      custom_words.forEach(item => {
+        str = str.replace(new RegExp(`\\b${item}\\b`, 'gi'), item);
+      });
+    }
   } else {
     str = '';
   }
   return str;
 }
 
+// imposta un testo in cui ogni parola è miniuscola tranne la prima lettera
 export function title_case(str) {
 
   if(str) {
-    str = str.replace( /\w\S*/g, function(txt) {
+    str = str.replace( /\w\S*/g, function(word) {
 
       // numeri romani
-      if( /^[MDCLXVI]{3,}$/.test(txt.toUpperCase()) ) {
+      if( /^[MDCLXVI]{3,}$/.test(word.toUpperCase()) ) {
 
-        return txt.toUpperCase();
+        return word.toUpperCase();
 
-      } else if(txt.trim().length > 2) {
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      } else if(word.trim().length > 2) {
+        return word.charAt(0).toUpperCase() + word.substr(1).toLowerCase();
 
       } else {
 
@@ -99,8 +106,8 @@ export function title_case(str) {
         try {
 
           particelle.forEach(function (item) {
-            if( item.toLowerCase() === txt.toLowerCase()) {
-              txt = item;
+            if( item.toLowerCase() === word.toLowerCase()) {
+              word = item;
               throw breakException;
             }
           });
@@ -109,10 +116,19 @@ export function title_case(str) {
           if (e !== breakException) throw e;
         }
 
-        return txt;
+        return word;
       }
     }); // end replace
   } // end if
+
+  return str;
+} // end title_case
+
+// prima lettera maiuscola, il resto minuscolo
+export function sentence_case(str) {
+  if(str) {
+    return  str.charAt(0).toUpperCase() + str.substr(1).toLowerCase();
+  }
   return str;
 }
 
