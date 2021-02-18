@@ -39,7 +39,7 @@ export  function obfuscate_email (email, hard = true) {
       encoded_email += hard?'<span>&commat;</span><wbr>' : '&commat;';
 
     } else if (char === '.') {
-      encoded_email += hard? '<span>&#x0002E;</span>' : '&#x0002E;';
+      encoded_email += hard? '<span>&#x0002E;</span><wbr>' : '&#x0002E;';
 
     } else if (char === '-') {
       encoded_email += hard? '<span>&#x02010;</span><span></span>' : '&#x02010;';
