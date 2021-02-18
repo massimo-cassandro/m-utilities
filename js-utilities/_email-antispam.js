@@ -16,25 +16,25 @@
 
 export  function obfuscate_email (email, hard = true) {
 
-  const rand_string = () => {
-    const chars='abcedefghjilmnopqestuvwxyz ABCEDEFGHJILMNOPQESTUVWXYZ 0123456789' +
-      '\n\t“”"«»%$£&/()=?^*é§°çòàù+èùàò-_.:,;',
-      lunghezza = 4;
+  // const rand_string = () => {
+  //   const chars='abcedefghjilmnopqestuvwxyz ABCEDEFGHJILMNOPQESTUVWXYZ 0123456789' +
+  //     '\n\t“”"«»%$£&/()=?^*é§°çòàù+èùàò-_.:,;',
+  //     lunghezza = 4;
 
-    let str = '', i, pos;
+  //   let str = '', i, pos;
 
-    for( i = 0; i < lunghezza; i++ ) {
-      pos = Math.floor(Math.random() * chars.length);
-      str += chars.charAt(pos);
-    }
-    return str;
-  };
+  //   for( i = 0; i < lunghezza; i++ ) {
+  //     pos = Math.floor(Math.random() * chars.length);
+  //     str += chars.charAt(pos);
+  //   }
+  //   return str;
+  // };
 
   let encoded_email = '';
   email.split('').forEach((char, idx) => {
-    if(hard && [2,5,6,79,10,13,15,20,22].indexOf(idx) !== -1) {
-      encoded_email += `<span style="display:none" aria-hidden="true">${rand_string()}</span>`;
-    }
+    // if(hard && [2,5,6,79,10,13,15,20,22].indexOf(idx) !== -1) {
+    //   encoded_email += `<span style="display:none" aria-hidden="true">${rand_string()}</span>`;
+    // }
     if( char === '@') {
       encoded_email += hard?'<span>&commat;</span><wbr>' : '&commat;';
 
@@ -47,7 +47,7 @@ export  function obfuscate_email (email, hard = true) {
     } else if (char === '_') {
       encoded_email += hard? '<span>&lowbar;</span><span></span>' : '&lowbar;';
 
-    } else if(idx % 2 == 0) {
+    } else if(idx % 2 === 0) {
       encoded_email += `&#${email.charCodeAt(idx)};`;
 
     } else {
@@ -87,7 +87,9 @@ export function email_antispam (options) {
 
       // el.innerHTML = `<a href="mailto:${email}" target="_blank" rel="noopener noreferrer">${content}</a>`;
 
-      el.innerHTML = `<a href="#" target="_blank" rel="noopener noreferrer">${content}</a>`;
+      el.innerHTML = `<!--googleoff: index-->
+        <a href="#" target="_blank" rel="noopener noreferrer">${content}</a>
+        <!--googleon: index-->`;
       if(el.dataset.addMicrodata !== undefined) {
 
         el.insertAdjacentHTML('beforeend',
