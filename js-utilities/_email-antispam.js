@@ -87,9 +87,9 @@ export function email_antispam (options) {
 
       // el.innerHTML = `<a href="mailto:${email}" target="_blank" rel="noopener noreferrer">${content}</a>`;
 
-      el.innerHTML = `<!--googleoff: index-->
+      el.innerHTML = `<!--googleoff: all-->
         <a href="#" target="_blank" rel="noopener noreferrer">${content}</a>
-        <!--googleon: index-->`;
+        <!--googleon: all-->`;
       if(el.dataset.addMicrodata !== undefined) {
 
         el.insertAdjacentHTML('beforeend',
