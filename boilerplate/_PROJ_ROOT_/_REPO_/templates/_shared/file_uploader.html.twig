@@ -235,6 +235,7 @@
 <div {%- if id|default() %} id="{{ id }}"{% endif %}
   {%- if attrs is defined and attrs %} {{ attrs|raw }}{%- endif -%}
   {{- ' ' -}} data-file-uploader="{{ data|json_encode() }}"
+  {{- ' ' -}} class="file-uploader2"
   {%- if parsed_values %} data-values="{{ parsed_values|json_encode() }}"{%- endif -%}
   {%- if parsed_extra_fields %} data-extra_fields="{{ parsed_extra_fields|json_encode() }}"{%- endif -%}
 ></div>
