@@ -1,0 +1,16 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+
+  "rules": {
+    "selector-list-comma-newline-after": "always-multi-line",
+    "number-leading-zero": "never",
+    "max-nesting-depth": 2,
+    "function-parentheses-space-inside": "never-single-line",
+    "selector-no-qualifying-type": [
+      true,
+      {
+        "ignore": ["attribute"]
+      }
+    ]
+  }
+}
