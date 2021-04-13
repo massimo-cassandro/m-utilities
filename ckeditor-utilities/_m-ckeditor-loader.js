@@ -7,16 +7,15 @@
 export default function (loader_options) {
 
   const default_options = {
+    selector: 'editor',
     cke_url: '/assets/ckeditor-dist/m-ckeditor-min.js',
     upl_url: '/ckeditor/file-uploader',
     img_viewer: '/viewer/'  // (visualizzaione dei file da db, NB: con slash finale)
   };
 
-
-  const editor_list = document.querySelectorAll('textarea.editor');
-
-
   let cke_opts = Object.assign({}, default_options, loader_options || {});
+
+  const editor_list = document.querySelectorAll(`textarea.${cke_opts.selector}`);
 
   if (editor_list.length) {
 

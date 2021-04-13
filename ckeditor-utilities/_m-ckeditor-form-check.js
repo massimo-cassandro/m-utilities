@@ -8,6 +8,7 @@
 export default function (options) {
 
   const default_options = {
+    selector: 'editor',
     requiredErrorMes: requiredElement => {
       return `L'elemento ${requiredElement} è obbligatorio`;
     },
@@ -18,8 +19,8 @@ export default function (options) {
 
   let cke_opts = Object.assign({}, default_options, options || {}),
 
-    editor_textareas = document.querySelectorAll('textarea.editor'),
-    editors_required = document.querySelectorAll('textarea.editor[required]');
+    editor_textareas = document.querySelectorAll(`textarea.${cke_opts.selector}`),
+    editors_required = document.querySelectorAll(`textarea.${cke_opts.selector}[required]`);
 
 
   // CAMPI REQUIRED
