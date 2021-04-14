@@ -4,9 +4,10 @@
   "description": "xxx xxxx / frontend",
   "main": "/public",
   "scripts": {
-    "compile_all_js": "npx rollup --config",
+    "start sass": "node_modules/.bin/sass css/orario.scss css/orario.css --source-map --load-path=node_modules/ --style=expanded --watch",
+    "start rollup": "npx rollup --config --watch",
     "build_icons": "cd icone && gulp",
-    "update_externals_libs": "sh upd_external_libs.sh"
+    "update_externals_libs": "sh upd_twig_&_libs.sh"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,7 @@
     "url": "https://github.com/xxxx/issues"
   },
   "homepage": "https://github.com/xxxx#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {}
 }

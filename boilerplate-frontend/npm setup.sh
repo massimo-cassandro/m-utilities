@@ -43,9 +43,17 @@ npm i --save-dev --no-optional gulp-svgstore
 
 npm i --save-dev --no-optional js-beautify
 npm i --save-dev --no-optional prismjs
+
 npm i --save-dev --no-optional rollup
 npm i --save-dev --no-optional rollup-plugin-terser
 npm i --save-dev --no-optional rollup-plugin-sourcemaps
 npm i --save-dev --no-optional rollup-plugin-terser
 npm i --save-dev --no-optional @rollup/plugin-commonjs
 npm i --save-dev --no-optional @rollup/plugin-node-resolve
+npm i --save-dev --no-optional sass
+
+npm i --save-optional eslint
+npm i --save-optional eslint-config-standard
+npm i --save-optional stylelint
+npm i --save-optional stylelint-config-sass-guidelines
+npm i --save-optional stylelint-config-standard
