@@ -6,8 +6,8 @@ SUCCESS='\033[1;33m'
 RESET='\033[0m' # No Color
 
 
-printf "* ${SUCCESS}Librerie aggiuntive:${RESET}\n"
-cp -v node_modules/jspdf/dist/jspdf.umd.min.js js/libs/
+# printf "* ${SUCCESS}Librerie aggiuntive:${RESET}\n"
+# cp -v node_modules/jspdf/dist/jspdf.umd.min.js js/libs/
 # cp -v node_modules/jquery/dist/jquery.min.js js/libs/
 
 
@@ -49,7 +49,7 @@ fi
 
 # includes contenuti
 # vengono aggiornati solo gli includes
-SOURCE=./node_modules/@massimo-cassandro/m-utilities/boilerplate/_PROJ_ROOT_/_REPO_/templates/backoffice/contenuti
+SOURCE=./node_modules/@massimo-cassandro/m-utilities/boilerplate-twig/_PROJ_ROOT_/_REPO_/templates/backoffice/contenuti
 TARGET=../../templates/backoffice/contenuti/
 if [ -d $TARGET ]; then
   printf "* ${SUCCESS}includes contenuti:${RESET}\n"
@@ -80,7 +80,7 @@ SHARED_DIR_FILES=(
 
 for i in "${SHARED_DIR_FILES[@]}"
 do
-  SOURCE=./node_modules/@massimo-cassandro/m-utilities/boilerplate/_PROJ_ROOT_/_REPO_/templates/_shared/"$i"
+  SOURCE=./node_modules/@massimo-cassandro/m-utilities/boilerplate-twig/_PROJ_ROOT_/_REPO_/templates/_shared/"$i"
   TARGET=../../templates/_shared/"$i"
   if [ -f "$TARGET" ]; then
     printf "* ${SUCCESS}${i}:${RESET}\n"
