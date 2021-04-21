@@ -1,11 +1,20 @@
 {#
+  NB: questo file viene aggiornato da uno script
+  eventuali modifiche potrebbero essere sovrascritte
+#}
+{#
   {% include 'backoffice/contenuti/contenuti-elenco.incl.html.twig' with {
-    azzera_filtri_btn_class: 'btn btn-outline-secondary'
+    azzera_filtri_btn_class: 'btn btn-outline-secondary',
+    route_json: 'backoffice_contenuti_elenco_json',
+    route_scheda: 'backoffice_contenuti_scheda'
   } %}
 
 #}
 {% set azzera_filtri_btn_class = azzera_filtri_btn_class is defined? azzera_filtri_btn_class : 'btn btn-outline-secondary' %}
-<form action="{{ path('backoffice_contenuti_elenco_json') }}" id="f_ricerca" method="post" data-disable-submit="false" class="d-print-none">
+{% set route_json = route_json is defined? route_json : 'backoffice_contenuti_elenco_json' %}
+{% set route_scheda = route_scheda is defined? route_scheda : 'backoffice_contenuti_scheda' %}
+
+<form action="{{ path(route_json) }}" id="f_ricerca" method="post" data-disable-submit="false" class="d-print-none">
   <fieldset>
     <legend>Filtra contenuti</legend>
     <div class="row align-items-end">
@@ -35,7 +44,7 @@
 </form>
 
 {%- if is_granted('ROLE_SUPER_ADMIN') -%}
-  <p class="d-print-none text-right"><a href="{{ path('backoffice_contenuti_scheda') }}">Nuovo contenuto</a></p>
+  <p class="d-print-none text-right"><a href="{{ path(route_scheda) }}">Nuovo contenuto</a></p>
 {%- endif -%}
 
 <div class="dt_container"
@@ -44,7 +53,7 @@
       bindToForm: 'f_ricerca',
       formSubmitButton: 'submitButton',
       storageAllowedReferrers: [
-        path('backoffice_contenuti_scheda', { id: null })
+        path(route_scheda, { id: null })
       ],
     },
     datatable_options : {
@@ -66,7 +75,7 @@
       name      : 'nome',
       dtRender  : {
         type        : 'tpl',
-        sf_base_url : path('backoffice_contenuti_scheda', { id: null }),
+        sf_base_url : path(route_scheda, { id: null }),
         tpl         : '<a href="[[sf_base_url]][[id]]">[[nome]]</a>'
       }
     },
@@ -131,5 +140,5 @@
 #}
 
 {%- if is_granted('ROLE_SUPER_ADMIN') -%}
-  <p class="d-print-none"><a href="{{ path('backoffice_contenuti_scheda') }}">Nuovo contenuto</a></p>
+  <p class="d-print-none"><a href="{{ path(route_scheda) }}">Nuovo contenuto</a></p>
 {%- endif -%}

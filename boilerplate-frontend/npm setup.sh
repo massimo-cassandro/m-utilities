@@ -14,7 +14,7 @@ npm i --save --only=prod datatables.net-bs4
 
 npm i --save --only=prod moment
 npm i --save --only=prod mustache
-npm i --save --only=prod picturefill
+# npm i --save --only=prod picturefill
 npm i --save --only=prod vanilla-lazyload
 # npm i --save --only=prod svg4everybody
 # npm i --save --only=prod js-cookie
@@ -24,7 +24,7 @@ npm i --save --only=prod vanilla-lazyload
 npm i --save --only=prod @massimo-cassandro/js-file-uploader
 npm i --save --only=prod @massimo-cassandro/cookie-consent
 npm i --save --only=prod @massimo-cassandro/layout-tools
-npm i --save --only=prod @massimo-cassandro/m-sharing
+npm i --save --only=prod @massimo-cassandro/sharing-links
 npm i --save --only=prod @massimo-cassandro/m-utilities
 npm i --save --only=prod @massimo-cassandro/symfony-bootstrap-form-theme
 

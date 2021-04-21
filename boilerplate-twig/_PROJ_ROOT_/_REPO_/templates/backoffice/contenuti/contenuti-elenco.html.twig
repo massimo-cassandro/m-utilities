@@ -13,7 +13,9 @@
   <h1>{{- block('title') -}}</h1>
 
   {% include 'backoffice/contenuti/contenuti-elenco.incl.html.twig' with {
-    azzera_filtri_btn_class: 'btn btn-outline-secondary'
+    azzera_filtri_btn_class: 'btn btn-outline-secondary',
+    route_json: 'backoffice_contenuti_elenco_json',
+    route_scheda: 'backoffice_contenuti_scheda'
   } %}
 
 {% endblock body %}

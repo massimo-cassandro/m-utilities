@@ -1,6 +1,13 @@
 {#
-{% include 'backoffice/contenuti/contenuti-scheda.incl.html.twig' %}
+  NB: questo file viene aggiornato da uno script
+  eventuali modifiche potrebbero essere sovrascritte
 #}
+{#
+{% include 'backoffice/contenuti/contenuti-scheda.incl.html.twig' with {
+  route_elenco: 'backoffice_contenuti_elenco'
+} %}
+#}
+{% set route_elenco = route_elenco is defined? route_elenco : 'backoffice_contenuti_elenco' %}
 
 <h1>
   {%- if entity.id -%}
@@ -501,4 +508,4 @@
 {{ form_widget(form._token) }}
 {{ form_end(form, {'render_rest': false}) }}
 
-<p class="text-right d-print-none"><a href="{{ path('backoffice_contenuti_elenco') }}">Torna all’elenco</a></p>
+<p class="text-right d-print-none"><a href="{{ path(route_elenco) }}">Torna all’elenco</a></p>
