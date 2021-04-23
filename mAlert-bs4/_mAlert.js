@@ -126,7 +126,7 @@ export function mAlert(params = {}) {
         params.ok_btn_text = 'OK';
       }
 
-      let btns = `<button type="button" class="mAlert-ok btn ${params.type !== 'confirm'? 'btn-focus': ''} ${params.ok_btn_class}" data-dismiss="modal">
+      let btns = `<button type="button" class="mAlert-ok btn ${params.ok_btn_class}" data-dismiss="modal">
         ${params.ok_btn_text}
       </button>`;
 
@@ -138,7 +138,7 @@ export function mAlert(params = {}) {
           params.cancel_btn_class = 'btn-outline-primary';
         }
 
-        btns += ` <button type="button" class="mAlert-cancel btn btn-focus ${params.cancel_btn_class}" data-dismiss="modal">
+        btns += ` <button type="button" class="mAlert-cancel btn ${params.cancel_btn_class}" data-dismiss="modal">
           ${params.cancel_btn_text}
         </button>`;
       }
@@ -191,9 +191,16 @@ export function mAlert(params = {}) {
       show:true
     })
       .on('shown.bs.modal', function () {
-        let _modal = $(this);
+        let _modal = $(this),
+          btn_focus = $('.modal-footer .btn-focus', _modal).eq(0);
 
-        $('.modal-footer .btn-focus', _modal).eq(0).focus();
+        if(btn_focus.length) {
+          btn_focus.eq(0).focus();
+        } else if(params.type === 'confirm') {
+          $('.modal-footer .mAlert-cancel', _modal).focus();
+        } else {
+          $('.modal-footer .mAlert-ok', _modal).focus();
+        }
 
         if( params.timer ) {
           timeoutID = window.setTimeout( function() {

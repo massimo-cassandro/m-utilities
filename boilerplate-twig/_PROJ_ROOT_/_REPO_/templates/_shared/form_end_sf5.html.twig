@@ -67,8 +67,8 @@ personalizzazioni:
   </div>
 
   {% set show_edit_info = show_edit_info is defined ? show_edit_info : true %}
-  {% set umTimestamp = umTimestamp is defined? umTimestamp : entity.umTimestamp %}
-  {% set umUtente = umUtente is defined? umUtente : entity.umUtente %}
+  {% set umTimestamp = umTimestamp is defined? umTimestamp : entity.umTimestamp|default() %}
+  {% set umUtente = umUtente is defined? umUtente : entity.umUtente|default() %}
 
   {%- if entity.id|default() and  show_edit_info -%}
     <div class="{%- if not edit_info_new_line %}col-md-6 mt-md-0 {% endif -%} form-edit-info text-center text-md-right mt-2">

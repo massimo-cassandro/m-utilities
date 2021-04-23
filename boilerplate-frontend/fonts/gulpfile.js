@@ -2,7 +2,7 @@
 // genera include twig per il preload dei file woff2
 
 const target_file = '../../../templates/_shared/fonts-preload.incl.html.twig',
-  font_dirs = ['merriweather-sans', 'playfair-display'];
+  font_dirs = ['work-sans', 'zilla-slab'];
 
 var gulp = require('gulp')
   //,del = require('del')
@@ -18,7 +18,7 @@ gulp.task('default', function(cb) {
 
   font_dirs.forEach(dir => {
     fs.readdirSync(dir).filter(f => /\.woff2$/.test(f)).forEach(file => {
-      str += `<link rel="preload" href="{{ asset('/assets/fonts/${dir}/${file}') }}" as="font">\n`;
+      str += `<link rel="preload" href="{{ asset('/assets/fonts/${dir}/${file}') }}" as="font" type="font/woff2" crossorigin>\n`;
     });
   });
 

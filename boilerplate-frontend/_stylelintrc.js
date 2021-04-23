@@ -25,9 +25,9 @@ module.exports = {
     ],
     'function-parentheses-space-inside': 'never-single-line',
     'selector-no-qualifying-type': [
-      true,
+      false,
       {
-        'ignore': ['attribute']
+        ignore: ["attribute", "class", "id"]
       }
     ]
     /* ,
