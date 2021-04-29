@@ -42,7 +42,7 @@
 
 {%- if is_granted('ROLE_SUPER_ADMIN') -%}
   <div class="box mb-4">
-    <fieldset id="cfg-fset">
+    <fieldset id="cfg-fset" class="fset">
       <legend>Config <button type="button" id="toggle-config" class="ml-4 btn btn-link p-0 small">Mostra/Nascondi</button></legend>
       <div id="cfg-wrapper" {{- entity.id|default()? ' style="display:none"' : '' -}} class="pt-4">
         <p>Salvare la scheda per applicare eventuali modifiche.</p>
