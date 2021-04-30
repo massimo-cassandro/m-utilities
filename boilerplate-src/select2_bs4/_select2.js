@@ -84,7 +84,7 @@ export function set_select2(field, options = {}, default_opts = select2_defaults
 
     options:
     {
-      // url dell'automplete (senza slash finale), a cui sarà aggiunto /{term}
+      // url dell'autocomplete (senza slash finale), a cui sarà aggiunto /{term}
       // obbligatorio
       autocomplete_url: '',
 
