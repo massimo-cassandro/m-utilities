@@ -85,7 +85,9 @@ export function setFormElementValue(element, value) {
 
     // checkbox|radio →  true == selezionato, false == deselezionato
     } else if (element_type === 'checkbox' || element_type === 'radio') {
-      element.checked = value;
+      if(value) {
+        element.click();
+      }
 
     // ['textarea', 'text', 'date', 'email', 'number'].indexOf(element_type) !== -1
     } else {
