@@ -7,7 +7,10 @@ import m_cke_form_check from '../../../ckeditor-utilities/_m-ckeditor-form-check
   m_cke_loader({
     cke_url: '../ckeditor-dist/m-ckeditor-min.js', // relative to html file
     upl_url: 'test_files/test_server_upload_response.php', // relative to html file
-    img_viewer: ''
+    img_viewer: '',
+    link_auto_ext_target_blank: true,
+    link_download: true,
+    link_target_blank: true
   });
 
   m_cke_form_check({

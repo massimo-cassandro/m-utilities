@@ -10,7 +10,11 @@ export default function (loader_options) {
     selector: 'editor',
     cke_url: '/assets/ckeditor-dist/m-ckeditor-min.js',
     upl_url: '/ckeditor/file-uploader',
-    img_viewer: '/viewer/'  // (visualizzaione dei file da db, NB: con slash finale)
+    img_viewer: '/viewer/',  // (visualizzaione dei file da db, NB: con slash finale)
+
+    link_auto_ext_target_blank: true,
+    link_download: true,
+    link_target_blank: true
   };
 
   let cke_opts = Object.assign({}, default_options, loader_options || {});
@@ -135,11 +139,38 @@ export default function (loader_options) {
           options.toolbar = options.toolbar.slice(0, -1);
         }
 
+        // opzioni link
+        // https://ckeditor.com/docs/ckeditor5/latest/features/link.html
+        options.link = {
+
+          addTargetToExternalLinks: cke_opts.link_auto_ext_target_blank, // target _blank automatico per url esterni
+          decorators: {}
+        };
+
+        if(cke_opts.link_download) {
+          options.link.decorators.toggleDownloadable = {
+            mode: 'manual',
+            label: 'Download',
+            attributes: {
+              download: 'download'
+            }
+          };
+        }
+        if(cke_opts.link_target_blank) {
+          options.link.decorators.openInNewTab = {
+            mode: 'manual',
+            label: 'Apri in nuova finestra',
+            defaultValue: false,
+            attributes: {
+              target: '_blank',
+              rel: 'noopener noreferrer'
+            }
+          };
+        }
+
         // console.log(options);
 
         ClassicEditor.create(item, options)
-
-
 
         // .then( editor => {
         //   /* eslint-disable */

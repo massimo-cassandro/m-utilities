@@ -17,7 +17,10 @@ import CKEloader from '@massimo-cassandro/m-utilities/ckeditor-utilities/_m-cked
  CKEloader({
   cke_url   : '/path/to/m-ckeditor-min.js',
   upl_url   : '/path/to/server_script',
-  img_viewer: '/viewer-url/'
+  img_viewer: '/viewer-url/',
+  link_auto_ext_target_blank: true,
+  link_download: true,
+  link_target_blank: true
 });
 ```
 
@@ -26,6 +29,9 @@ In cui:
 * `cke_url` è l'url dello script CKEditor
 * `upl_url` è l'url dello script lato server per l'upload delle immagini (se richiesto)
 * `img_viewer` è l'url dell'applicazione per la visualizzazione delle immagini caricate (se richiesto)
+* `link_auto_ext_target_blank`:  se true (default) a tutti gli url esterni vengono automaticamente aggiunti gli attributi `target="_blank"` e `rel="noopener noreferrer"`
+* `link_download`: se true (default) viene visualizzata l'opzione per forzare il download del link
+* `link_target_blank`: se true (default) viene visualizzata l'opzione "Apri in nuova finestra" che imposta gli attributi `target="_blank"` e `rel="noopener noreferrer"`
 
 Il loader attiva automaticamente CKEditor a tutti i textarea con classe `editor`, applicando la toolbar definita nello script loader.
 
@@ -106,6 +112,9 @@ import m_cke_form_check from '@massimo-cassandro/m-utilities/ckeditor-utilities/
     cke_url: 'path/to/m-ckeditor-min.js',
     upl_url: 'path/to/uploader',
     img_viewer: 'path/to/viewer/',
+    link_auto_ext_target_blank: true,
+    link_download: true,
+    link_target_blank: true
   });
 
   m_cke_form_check({
