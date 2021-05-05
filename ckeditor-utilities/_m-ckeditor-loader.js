@@ -13,8 +13,8 @@ export default function (loader_options) {
     img_viewer: '/viewer/',  // (visualizzaione dei file da db, NB: con slash finale)
 
     link_auto_ext_target_blank: true,
-    link_download: true,
-    link_target_blank: true
+    link_download: false,
+    link_target_blank: false
   };
 
   let cke_opts = Object.assign({}, default_options, loader_options || {});

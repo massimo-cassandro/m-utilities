@@ -30,8 +30,8 @@ In cui:
 * `upl_url` è l'url dello script lato server per l'upload delle immagini (se richiesto)
 * `img_viewer` è l'url dell'applicazione per la visualizzazione delle immagini caricate (se richiesto)
 * `link_auto_ext_target_blank`:  se true (default) a tutti gli url esterni vengono automaticamente aggiunti gli attributi `target="_blank"` e `rel="noopener noreferrer"`
-* `link_download`: se true (default) viene visualizzata l'opzione per forzare il download del link
-* `link_target_blank`: se true (default) viene visualizzata l'opzione "Apri in nuova finestra" che imposta gli attributi `target="_blank"` e `rel="noopener noreferrer"`
+* `link_download`: se true (default false) viene visualizzata l'opzione per forzare il download del link
+* `link_target_blank`: se true (default false) viene visualizzata l'opzione "Apri in nuova finestra" che imposta gli attributi `target="_blank"` e `rel="noopener noreferrer"`
 
 Il loader attiva automaticamente CKEditor a tutti i textarea con classe `editor`, applicando la toolbar definita nello script loader.
 
