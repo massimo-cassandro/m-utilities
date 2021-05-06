@@ -6,7 +6,11 @@ export function cke_loader() {
   m_cke_loader({
     cke_url: '/assets/ckeditor/m-ckeditor-min.js',
     upl_url: '/ckeditor/file-uploader',
-    img_viewer: app_data.viewer + '/'
+    img_viewer: app_data.viewer + '/',
+
+    link_auto_ext_target_blank: false,
+    link_download: false,
+    link_target_blank: false
   });
 
   m_cke_form_check({

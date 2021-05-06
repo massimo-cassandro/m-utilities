@@ -12,7 +12,7 @@ export default function (loader_options) {
     upl_url: '/ckeditor/file-uploader',
     img_viewer: '/viewer/',  // (visualizzaione dei file da db, NB: con slash finale)
 
-    link_auto_ext_target_blank: true,
+    link_auto_ext_target_blank: false,
     link_download: false,
     link_target_blank: false
   };
