@@ -52,12 +52,11 @@ npm i --save-dev --no-optional @rollup/plugin-commonjs
 npm i --save-dev --no-optional @rollup/plugin-node-resolve
 npm i --save-dev --no-optional sass
 
-npm i --save-optional eslint
-npm i --save-optional eslint-config-standard
-npm i --save-optional stylelint
+npm i --save-dev --no-optional eslint
+npm i --save-dev --no-optional eslint-config-standard
+npm i --save-dev --no-optional stylelint
 # npm i --save-optional stylelint-config-sass-guidelines
-npm i --save-optional stylelint-config-standard
-npm i --save-optional stylelint-order
+# npm i --save-optional stylelint-config-standard
+npm i --save-dev --no-optional stylelint-config-twbs-bootstrap
 # npm i --save-optional stylelint-config-rational-order
-npm i --save-optional stylelint-config-concentric-order
-npm i --save-optional stylelint-scss
+# npm i --save-optional stylelint-config-concentric-order
