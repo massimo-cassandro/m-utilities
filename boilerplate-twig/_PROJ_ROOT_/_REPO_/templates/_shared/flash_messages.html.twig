@@ -35,8 +35,19 @@
 
 {% for label, messages in app.flashes %}
   {% for message in messages %}
-    <div class="alert alert-{{ label == 'error' ? 'danger' : (label == 'notice' ? 'danger' : label)}} alert-icon alert-flash">
-      {{ message|raw }}
-    </div>
+    {%- if glob_vars.fw is defined and glob_vars.fw == 'BS5' -%}
+
+      <div class="alert alert-dismissible alert-icon alert-flash alert-{{ label == 'error' ? 'danger' : (label == 'notice' ? 'danger' : label)}}">
+        {{ message|raw }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+    {%- else -%} {# BS4 #}
+
+      <div class="alert alert-{{ label == 'error' ? 'danger' : (label == 'notice' ? 'danger' : label)}} alert-icon alert-flash">
+        {{ message|raw }}
+      </div>
+
+    {%- endif -%}
   {% endfor %}
 {% endfor %}

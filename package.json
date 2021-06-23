@@ -1,6 +1,6 @@
 {
   "name": "@massimo-cassandro/m-utilities",
-  "version": "3.12.2",
+  "version": "3.13.0",
   "description": "My collection of front-end development snippets & utilities",
   "scripts": {},
   "repository": {
@@ -34,8 +34,10 @@
   },
   "homepage": "https://github.com/massimo-cassandro/m-utilities#readme",
   "devDependencies": {
+    "bootstrap": "^5.0.2",
     "bs4": "npm:bootstrap@^4.6.0",
     "datatables.net-bs4": "^1.10.22",
+    "datatables.net-bs5": "^1.10.25",
     "eslint": "^7.28.0",
     "jquery": "^3.5.1",
     "moment": "^2.29.1",
@@ -43,6 +45,5 @@
     "popper.js": "^1.16.1",
     "stylelint": "^13.13.1",
     "stylelint-config-twbs-bootstrap": "^2.2.0"
-  },
-  "dependencies": {}
+  }
 }

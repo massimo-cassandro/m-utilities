@@ -1,0 +1,37 @@
+// BS4
+@import 'bs4/scss/bootstrap';
+
+
+// personalizzazione datatables
+
+$datatable_responsive_border_color: #666;
+$datatable_head_border_color: currentColor;
+$datatable_active_sorting_color: currentColor;
+$datatable_active_sorting_bg: #ddd;
+$datatable_processing_padding: .4rem 0 .7rem;
+$datatable_processing_bg: linear-gradient(to right, rgba(#fff, 0) 0%, rgba(#fff, .9) 25%, rgba(#fff, .9) 75%, rgba(#fff, 0) 100%);
+//$sorting_arrow_size: false;
+
+
+@import '../../scss/datatable-vars';
+@import '../../scss/crea-datatable';
+@import '../../scss/datatable-processing';
+@import '../../scss/datatable-controls-bs';
+@import '../../scss/datatable-table-bs';
+@import '../../scss/datatable-sorting-bs';
+@import '../../scss/datatable-pagination-bs';
+@import '../../scss/datatables-classes';
+@import '../../scss/datatable-responsive';
+
+
+// datatable
+// @import 'datatables.net-bs4/css/dataTables.bootstrap4';
+
+// datatable responsive
+// @import '../../node_modules/datatables.net-responsive-bs4/css/responsive.bootstrap4';
+
+//fixed header
+// @import '../../node_modules/datatables.net-fixedheader-bs4/css/fixedHeader.bootstrap4';
+
+// rowreorder
+//@import '../../node_modules/datatables.net-rowreorder-bs4/css/rowReorder.bootstrap4';
