@@ -1,9 +1,9 @@
-{% set pagID = 'contenuti-elenco' %}
-{% set js_files = [asset("/assets/js/backoffice/dist/#{pagID}-min.js") ~ '?v=' ~ glob_vars.vers.backoffice] %}
+{% set pagID = 'contenuti_elenco' %}
+{% set controller = pagID %}
 {% set fluid_container = false %}
 {% extends 'backoffice/_backoffice-tpl.html.twig' %}
 
-{% block title %}Contenuti &amp; impostazioni{% endblock %}
+{% block title %}Contenuti del sito{% endblock %}
 {% block head %}{% endblock head %}
 {% block body_end %}{% endblock body_end %}
 
@@ -15,7 +15,8 @@
   {% include 'backoffice/contenuti/contenuti-elenco.incl.html.twig' with {
     azzera_filtri_btn_class: 'btn btn-outline-secondary',
     route_json: 'backoffice_contenuti_elenco_json',
-    route_scheda: 'backoffice_contenuti_scheda'
+    route_scheda: 'backoffice_contenuti_scheda',
+    fw: glob_vars.fw is defined? glob_vars.fw : 'bs4'
   } %}
 
 {% endblock body %}

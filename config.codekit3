@@ -9,17 +9,6 @@
   ],
   "creatorBuild" : "34127",
   "files" : {
-    "\/_stylelintrc.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/_stylelintrc-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
     "\/.editorconfig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -67,6 +56,17 @@
       "oA" : 0,
       "oAP" : "\/.npmignore",
       "oF" : 0
+    },
+    "\/.stylelintrc.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/.stylelintrc-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/adobe-cc" : {
       "ft" : 65536,
@@ -643,6 +643,17 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/boilerplate-frontend\/gulpfile_email.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/gulpfile_email-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/boilerplate-frontend\/icone\/.gitkeep" : {
       "cB" : 0,
       "ft" : 8192,
@@ -678,12 +689,82 @@
       "oAP" : "\/boilerplate-frontend\/icone\/icone-svg\/.gitkeep",
       "oF" : 0
     },
+    "\/boilerplate-frontend\/marchi\/_sizes.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/boilerplate-frontend\/marchi\/_sizes.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 1
+    },
+    "\/boilerplate-frontend\/marchi\/demo-marchi.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/marchi\/demo-marchi.html",
+      "oF" : 0
+    },
+    "\/boilerplate-frontend\/marchi\/gulpfile.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/marchi\/gulpfile-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/marchi\/icon_list_marchi.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/marchi\/icon_list_marchi-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/marchi\/marchi-svg\/.gitkeep" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/marchi\/marchi-svg\/.gitkeep",
+      "oF" : 0
+    },
+    "\/boilerplate-frontend\/marchi\/marchi.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/boilerplate-frontend\/marchi\/marchi.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/boilerplate-frontend\/npm setup.sh" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/boilerplate-frontend\/npm setup.sh",
+      "oF" : 0
+    },
+    "\/boilerplate-frontend\/npmrc.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/npmrc.txt",
       "oF" : 0
     },
     "\/boilerplate-frontend\/package.json" : {
@@ -1618,38 +1699,6 @@
       "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/_incl\/recapiti.html.twig",
       "oF" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-elenco.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-elenco.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-elenco.incl.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-elenco.incl.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-scheda.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-scheda.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-scheda.incl.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-scheda.incl.html.twig",
-      "oF" : 0
-    },
     "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/dashboard.html.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1797,139 +1846,20 @@
       "rFN" : 0,
       "uCM" : 0
     },
+    "\/boilerplate-twig\/contenuti.sql" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/contenuti.sql",
+      "oF" : 0
+    },
     "\/boilerplate-twig\/LICENSE" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/boilerplate-twig\/LICENSE",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/optional\/contenuti.sql" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/optional\/contenuti.sql",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/optional\/favicons\/Favicon Generator for all platforms- iOS, Android, PC-Mac....webloc" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/optional\/favicons\/Favicon Generator for all platforms- iOS, Android, PC-Mac....webloc",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/optional\/favicons\/gulpfile_favicon.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/optional\/favicons\/gulpfile_favicon-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/optional\/gulp_make_docs.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/optional\/gulp_make_docs-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/optional\/gulpfile_email.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/optional\/gulpfile_email-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/optional\/marchi\/_sizes.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/optional\/marchi\/_sizes.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/optional\/marchi\/demo-marchi.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/optional\/marchi\/demo-marchi.html",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/optional\/marchi\/gulpfile.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/optional\/marchi\/gulpfile-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/optional\/marchi\/icon_list_marchi.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/optional\/marchi\/icon_list_marchi-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/optional\/marchi\/marchi-svg\/.gitkeep" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/optional\/marchi\/marchi-svg\/.gitkeep",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/optional\/marchi\/marchi.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/boilerplate-twig\/optional\/marchi\/marchi.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
-    },
-    "\/boilerplate-twig\/optional\/npmignore.txt" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/optional\/npmignore.txt",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/optional\/npmrc.txt" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/optional\/npmrc.txt",
       "oF" : 0
     },
     "\/boilerplate-twig\/README.md" : {

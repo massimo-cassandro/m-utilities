@@ -6,13 +6,24 @@
   {% include 'backoffice/contenuti/contenuti-elenco.incl.html.twig' with {
     azzera_filtri_btn_class: 'btn btn-outline-secondary',
     route_json: 'backoffice_contenuti_elenco_json',
-    route_scheda: 'backoffice_contenuti_scheda'
+    route_scheda: 'backoffice_contenuti_scheda',
+    fw: 'bs4' / 'bs5'
   } %}
 
 #}
 {% set azzera_filtri_btn_class = azzera_filtri_btn_class is defined? azzera_filtri_btn_class : 'btn btn-outline-secondary' %}
 {% set route_json = route_json is defined? route_json : 'backoffice_contenuti_elenco_json' %}
 {% set route_scheda = route_scheda is defined? route_scheda : 'backoffice_contenuti_scheda' %}
+{% set fw = fw is defined? fw : 'bs4' %}
+
+{% set class_txt_left_suffix = 'left' %}
+{% set class_txt_right_suffix = 'right' %}
+{%- if fw == 'bs5' -%}
+  {% set class_txt_left_suffix = 'start' %}
+  {% set class_txt_right_suffix = 'end' %}
+{%- else -%}
+
+{%- endif -%}
 
 <form action="{{ path(route_json) }}" id="f_ricerca" method="post" data-disable-submit="false" class="d-print-none">
   <fieldset class="fset">
@@ -32,19 +43,20 @@
       </div>
 
       <div class="col-lg-4 d-sm-flex justify-content-between">
-        <div class="form-group text-center text-sm-left">
+        <div class="form-group text-center text-sm-{{ class_txt_left_suffix }}">
           <button type="submit" class="btn btn-primary">Cerca</button>
         </div>
-        <div class="form-group text-center text-sm-left mt-3 mt-sm-0">
+        <div class="form-group text-center text-sm-{{ class_txt_left_suffix }} mt-3 mt-sm-0">
           <button type="button" class="contenuti-filter-reset {{ azzera_filtri_btn_class }}">Azzera filtri</button>
         </div>
       </div>
+
     </div>
   </fieldset>
 </form>
 
 {%- if is_granted('ROLE_SUPER_ADMIN') -%}
-  <p class="d-print-none text-right"><a href="{{ path(route_scheda) }}">Nuovo contenuto</a></p>
+  <p class="d-print-none text-{{ class_txt_right_suffix }}"><a href="{{ path(route_scheda) }}">Nuovo contenuto</a></p>
 {%- endif -%}
 
 <div class="dt_container"

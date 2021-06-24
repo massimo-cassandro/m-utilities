@@ -15,7 +15,8 @@
 
 {% block body %}
   {% include 'backoffice/contenuti/contenuti-scheda.incl.html.twig' with {
-    route_elenco: 'backoffice_contenuti_elenco'
+    route_elenco: 'backoffice_contenuti_elenco',
+    fw: glob_vars.fw is defined? glob_vars.fw : 'bs4'
   } %}
 
 {% endblock body %}

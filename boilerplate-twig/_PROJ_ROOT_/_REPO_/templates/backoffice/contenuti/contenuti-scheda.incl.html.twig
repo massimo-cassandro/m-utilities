@@ -4,10 +4,12 @@
 #}
 {#
 {% include 'backoffice/contenuti/contenuti-scheda.incl.html.twig' with {
-  route_elenco: 'backoffice_contenuti_elenco'
+  route_elenco: 'backoffice_contenuti_elenco',
+  fw: 'bs4' / 'bs5'
 } %}
 #}
 {% set route_elenco = route_elenco is defined? route_elenco : 'backoffice_contenuti_elenco' %}
+{% set fw = fw is defined? fw : 'bs4' %}
 
 <h1>
   {%- if entity.id -%}
@@ -170,7 +172,7 @@
   </div>
 {%- endif -%}
 
-<p class="text-right d-print-none"><a href="{{ path(route_elenco) }}">Torna all'elenco</a></p>
+<p class="text-end d-print-none"><a href="{{ path(route_elenco) }}">Torna all'elenco</a></p>
 
 {%- if entity.id|default() -%}
   <div class="contenuti-values">
@@ -327,7 +329,7 @@
         <div class="col-lg-10 col-xl-8">
           <div class="form-group {{- is_required? ' required' : '' }}">
             {{ label_tag|raw }}
-            <select class="form-control custom-select {{- class -}}"  {{- attrs|raw  -}}>
+            <select class="form-control {{ fw == 'bs4'? 'custom-select' : 'form-select' }} {{- class -}}"  {{- attrs|raw  -}}>
               <option value=""></option>
               {% for key, text in config.options|default() %}
               <option value="{{ key }}" {% if key == entity.val|default('') %}selected{% endif %}>{{ text }}</option>
@@ -508,4 +510,4 @@
 {{ form_widget(form._token) }}
 {{ form_end(form, {'render_rest': false}) }}
 
-<p class="text-right d-print-none"><a href="{{ path(route_elenco) }}">Torna all’elenco</a></p>
+<p class="text-end d-print-none"><a href="{{ path(route_elenco) }}">Torna all’elenco</a></p>

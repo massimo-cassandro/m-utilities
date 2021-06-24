@@ -12,7 +12,7 @@ RESET='\033[0m' # No Color
 
 
 # symfony form theme
-FILE_OR_FOLDER="bs4_form_layout.html.twig"
+FILE_OR_FOLDER="bs4_form_layout.html.twig" # "bs5_form_layout.html.twig"
 SOURCE=node_modules/@massimo-cassandro/symfony-bootstrap-form-theme/dist/"$FILE_OR_FOLDER"
 TARGET=../../templates/_shared/"$FILE_OR_FOLDER"
 if [ -f "$TARGET" ]; then
