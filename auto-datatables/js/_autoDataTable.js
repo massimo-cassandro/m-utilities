@@ -38,7 +38,7 @@ import {number_format} from '../../js-utilities/_number_format';
 import { dateStringToISO, formatDate, formatTime, formatDateTime } from '../../js-utilities/_date-utilities';
 
 import Mustache from 'mustache/mustache.mjs';
-import * as dt_config from './src/_config';
+import creaDataTable_default_options from './src/_creaDatatable_defaults';
 
 export  function _autoDataTable( $container = '.dt_container', cdt_options = {}, bs4 = true ) {
 
@@ -62,7 +62,7 @@ export  function _autoDataTable( $container = '.dt_container', cdt_options = {},
       // unite con quelle ricavate dagli attributi data del container
       // (queste ultime hanno la precedenza)
       cdt_options = $.extend( true,
-        dt_config.creaDataTable_default_options,
+        creaDataTable_default_options,
         cdt_options,
         _data.cdt_options
       );

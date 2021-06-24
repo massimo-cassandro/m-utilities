@@ -2,7 +2,9 @@ import $ from 'jquery';
 import dt from 'datatables.net/js/jquery.dataTables';
 import dt_bs4 from 'datatables.net-bs4/js/dataTables.bootstrap4';
 
-import * as dt_config from './src/_config';
+import * as dt_config from './src/_config_base';
+import dt_config_bs4 from './src/_config-bs4';
+import creaDataTable_default_options from './src/_creaDatatable_defaults';
 
 /*
   creaDataTable
@@ -35,7 +37,7 @@ export function _creaDataTable( $container, options = {}, bs4 = true ) {
     $.extend( true, $.fn.dataTable.defaults,
 
       dt_config.dt_config_base,
-      dt_config.dt_config_bs4
+      dt_config_bs4
     );
     $.extend( $.fn.DataTable.ext.classes, dt_config.dt_classes );
 
@@ -43,7 +45,7 @@ export function _creaDataTable( $container, options = {}, bs4 = true ) {
     $.extend( true, $.fn.dataTable.defaults, dt_config.dt_config_base );
   }
 
-  options = $.extend(true, {}, dt_config.creaDataTable_default_options, options);
+  options = $.extend(true, {}, creaDataTable_default_options, options);
 
   options.table_id = 'cdt_' + ( $container.attr('id') ? $container.attr('id') : 'dom_' + $container.index());
   $container.html('');

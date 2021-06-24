@@ -34,9 +34,9 @@ npm i --save @fontsource/xxxxx
 
 
 # icone standard
-npm i --save-dev --no-optional gulp gulp-chmod gulp-rename gulp-svgmin gulp-svgstore
+npm i --save-dev --no-optional gulp@latest gulp-chmod gulp-rename gulp-svgmin gulp-svgstore
 
-npm i --save-dev --no-optional gulp
+npm i --save-dev --no-optional gulp@latest
 npm i --save-dev --no-optional gulp-chmod
 npm i --save-dev --no-optional gulp-rename
 npm i --save-dev --no-optional gulp-svgmin
@@ -55,7 +55,7 @@ npm i --save-dev --no-optional prismjs
 npm i --save-dev --no-optional rollup
 npm i --save-dev --no-optional rollup-plugin-terser
 npm i --save-dev --no-optional rollup-plugin-sourcemaps
-npm i --save-dev --no-optional @rollup/plugin-commonjs
+npm i --save-dev --no-optional @rollup/plugin-commonjs # necessario per jquery
 npm i --save-dev --no-optional @rollup/plugin-node-resolve
 npm i --save-dev --no-optional sass
 

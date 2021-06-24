@@ -341,13 +341,46 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/auto-datatables\/js\/src\/_config.js" : {
+    "\/auto-datatables\/js\/src\/_config_base.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/auto-datatables\/js\/src\/_config-min.js",
+      "oAP" : "\/auto-datatables\/js\/src\/_config_base-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/auto-datatables\/js\/src\/_config-bs4.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/auto-datatables\/js\/src\/_config-bs4-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/auto-datatables\/js\/src\/_config-bs5.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/auto-datatables\/js\/src\/_config-bs5-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/auto-datatables\/js\/src\/_creaDatatable_defaults.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/auto-datatables\/js\/src\/_creaDatatable_defaults-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0

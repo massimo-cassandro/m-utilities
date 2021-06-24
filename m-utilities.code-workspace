@@ -21,6 +21,11 @@
 			"**/*.mwb.bak": true,
 			"**/config.codekit3": true
 		},
-		"explorerExclude.backup": null
+		"explorerExclude.backup": null,
+		"favorites.resources": [
+			"node_modules/jquery",
+			"node_modules/bs4",
+			"node_modules/bootstrap"
+		]
 	}
 }

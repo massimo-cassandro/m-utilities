@@ -2,7 +2,10 @@ import $ from 'jquery';
 import dt from 'datatables.net/js/jquery.dataTables';
 import dt_bs5 from 'datatables.net-bs5/js/dataTables.bootstrap5';
 
-import * as dt_config from './src/_config';
+import * as dt_config from './src/_config_base';
+import dt_config_bs5 from './src/_config-bs5';
+import creaDataTable_default_options from './src/_creaDatatable_defaults';
+
 
 /*
   creaDataTable
@@ -33,12 +36,12 @@ export function _creaDataTable( $container, options = {}) {
   $.extend( true, $.fn.dataTable.defaults,
 
     dt_config.dt_config_base,
-    dt_config.dt_config_bs4
+    dt_config_bs5
   );
   $.extend( $.fn.DataTable.ext.classes, dt_config.dt_classes );
 
 
-  options = $.extend(true, {}, dt_config.creaDataTable_default_options, options);
+  options = $.extend(true, {}, creaDataTable_default_options, options);
 
   options.table_id = 'cdt_' + ( $container.attr('id') ? $container.attr('id') : 'dom_' + $container.index());
   $container.html('');
