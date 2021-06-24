@@ -1,3 +1,4 @@
+/* stylelint-disable */
 .m-datatable {
   thead {
     tr {
@@ -19,20 +20,20 @@
     background-image: none;
 
     @if $sorting_arrow_size {
-      padding:.5em 1.5em .5em .5em!important;
+      padding: .5em 1.5em .5em .5em !important;
 
       &::before, &::after {
-        content: '';
-        border-color:transparent;
-        display:block;
         position: absolute;
-        right:.4em;
-        border-width:$sorting_arrow_size;
-        width:0;
+        right:.4em !important;
+        display: block;
+        width: 0;
         height: 0;
+        content: '' !important;
+        border-color: transparent;
+        border-width: $sorting_arrow_size;
       }
     } @else {
-      padding:.5em
+      padding: .5em;
     }
   }
 
@@ -40,18 +41,17 @@
     .sorting,
     .sorting_asc {
       &::before {
+        top: 36%;
         border-style: none solid solid;
-        border-bottom-color:$datatable_sorting_arrows_color;
-        top:36%;
+        border-bottom-color: $datatable_sorting_arrows_color;
       }
     }
     .sorting,
     .sorting_desc {
-
       &::after {
+        bottom: 36%;
         border-style: solid solid none;
-        border-top-color:$datatable_sorting_arrows_color;
-        bottom:36%;
+        border-top-color: $datatable_sorting_arrows_color;
       }
     }
   }
@@ -74,12 +74,13 @@
     @if ($sorting_arrow_size and $datatable_active_sorting_color) {
 
       &:before {
-        border-bottom-color:$datatable_active_sorting_color;
+        border-bottom-color: $datatable_active_sorting_color;
       }
 
       &:after {
-        border-top-color:$datatable_active_sorting_color;
+        border-top-color: $datatable_active_sorting_color;
       }
     }
   }
 }
+/* stylelint-enable */

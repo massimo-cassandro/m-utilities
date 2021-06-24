@@ -7534,6 +7534,7 @@ textarea.form-control-lg {
 .m-datatable th, .m-datatable td {
   background-clip: padding-box; }
 
+/* stylelint-disable */
 .m-datatable thead tr th {
   position: relative; }
 
@@ -7544,7 +7545,7 @@ textarea.form-control-lg {
 .m-datatable .sorting_desc_disabled {
   cursor: pointer;
   background-image: none;
-  padding: 0.5em 1.5em 0.5em 0.5em !important; }
+  padding: .5em 1.5em .5em .5em !important; }
   .m-datatable .sorting::before, .m-datatable .sorting::after,
   .m-datatable .sorting_asc::before,
   .m-datatable .sorting_asc::after,
@@ -7554,26 +7555,26 @@ textarea.form-control-lg {
   .m-datatable .sorting_asc_disabled::after,
   .m-datatable .sorting_desc_disabled::before,
   .m-datatable .sorting_desc_disabled::after {
-    content: '';
-    border-color: transparent;
-    display: block;
     position: absolute;
-    right: .4em;
-    border-width: 4px;
+    right: .4em !important;
+    display: block;
     width: 0;
-    height: 0; }
+    height: 0;
+    content: '' !important;
+    border-color: transparent;
+    border-width: 4px; }
 
 .m-datatable .sorting::before,
 .m-datatable .sorting_asc::before {
+  top: 36%;
   border-style: none solid solid;
-  border-bottom-color: currentColor;
-  top: 36%; }
+  border-bottom-color: currentColor; }
 
 .m-datatable .sorting::after,
 .m-datatable .sorting_desc::after {
+  bottom: 36%;
   border-style: solid solid none;
-  border-top-color: currentColor;
-  bottom: 36%; }
+  border-top-color: currentColor; }
 
 .m-datatable .sorting_asc,
 .m-datatable .sorting_desc,
@@ -7590,6 +7591,7 @@ textarea.form-control-lg {
   .m-datatable .sorting:hover:after {
     border-top-color: currentColor; }
 
+/* stylelint-enable */
 .dataTables_paginate {
   display: flex;
   justify-content: flex-end; }
