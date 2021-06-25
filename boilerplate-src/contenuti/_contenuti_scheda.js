@@ -27,7 +27,7 @@ export default function () {
       class:'editor-no-headings',
       attributes: {},
       properties: ['required'],
-      editor: 'true|lite|xlite',
+      editor: 'true|lite|xlite|xxlite',
       html: true
     },
     cfg_tpl_num = { number: 'euro|perc' },

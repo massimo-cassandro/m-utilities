@@ -61,7 +61,7 @@
                   <ul>
                     <li>se non presente o <em>false</em> &rarr; textarea</li>
                     <li><em>true</em> &rarr; CKEditor completo</li>
-                    <li><em>lite</em> &rarr; versione ridotta senza immagini, tabelle, ecc...</li>
+                    <li><em>lite, xlite, xxlite</em> &rarr; versione ridotta senza immagini, tabelle, ecc...</li>
                   </ul>
                 </li><li>Parametro config <code>html</code>:
                   <ul>
@@ -146,7 +146,7 @@
           <div class="col-lg-6">
             {{ form_row(form.note, {
               label: "Info per i redattori",
-              attr: {class: 'editor editor-lite'}
+              attr: {class: 'editor editor-xxlite'}
             }) }}
 
             {%- if entity.id|default() -%}
@@ -300,6 +300,8 @@
         {% set class = class ~ ' editor editor-lite' %}
       {%- elseif config.editor|default() is same as('xlite') -%}
         {% set class = class ~ ' editor editor-xlite' %}
+      {%- elseif config.editor|default() is same as('xxlite') -%}
+        {% set class = class ~ ' editor editor-xxlite' %}
       {%- elseif config.editor|default() is same as(true) or config.editor|default() is same as('true') -%}
         {% set class = class ~ ' editor' %}
       {%- elseif config.html|default() is same as(true) or config.html|default() is same as('true') -%}
