@@ -5,11 +5,14 @@
 {#
 {% include 'backoffice/contenuti/contenuti-scheda.incl.html.twig' with {
   route_elenco: 'backoffice_contenuti_elenco',
-  fw: 'bs4' / 'bs5'
+  fw: 'bs4' / 'bs5',
+  form_end_incl: '@includes/form_end_sf5.html.twig'
 } %}
 #}
 {% set route_elenco = route_elenco is defined? route_elenco : 'backoffice_contenuti_elenco' %}
 {% set fw = fw is defined? fw : 'bs4' %}
+{% set form_end_incl = form_end_incl is defined? form_end_incl : '@includes/form_end_sf5.html.twig' %}
+
 
 <h1>
   {%- if entity.id -%}
@@ -46,7 +49,7 @@
   <div class="box mb-4">
     <fieldset id="cfg-fset" class="fset">
       <legend>Config <button type="button" id="toggle-config" class="ml-4 btn btn-link p-0 small">Mostra/Nascondi</button></legend>
-      <div id="cfg-wrapper" {{- entity.id|default()? ' style="display:none"' : '' -}} class="pt-4">
+      <div id="cfg-wrapper" {{- entity.id|default()? ' style="display:none"' : '' }} class="pt-4">
         <p>Salvare la scheda per applicare eventuali modifiche.</p>
         <details class="boxed">
           <summary>Info sui tipi di campo</summary>
@@ -505,7 +508,7 @@
   <p class="form-edit-info">Salvare la scheda per visualizzare il form di editing del contenuto.</p>
 {%- endif -%}
 
-{% include '@includes/form_end_sf5.html.twig' with {show_delete: false } %}
+{% include form_end_incl with {show_delete: false } %}
 
 {{ form_widget(form._token) }}
 {{ form_end(form, {'render_rest': false}) }}

@@ -1,5 +1,5 @@
-{% set pagID = 'contenuti-scheda' %}
-{% set js_files = [asset("/assets/js/backoffice/dist/#{pagID}-min.js") ~ '?v=' ~ glob_vars.vers.backoffice] %}
+{% set pagID = 'contenuti_scheda' %}
+{% set controller = pagID %}
 {% set fluid_container = false %}
 {% extends 'backoffice/_backoffice-tpl.html.twig' %}
 {% block title %}Scheda contenuto
@@ -17,6 +17,7 @@
   {% include 'backoffice/contenuti/contenuti-scheda.incl.html.twig' with {
     route_elenco: 'backoffice_contenuti_elenco',
     fw: glob_vars.fw is defined? glob_vars.fw : 'bs4'
+    form_end_incl: '@includes/form_end_studio-donofrio.html.twig',
   } %}
 
 {% endblock body %}

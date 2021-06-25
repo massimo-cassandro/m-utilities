@@ -92,6 +92,27 @@ export default function (loader_options) {
         'redo'
       ],
 
+      xxlite_toolbar = [
+        // 'heading',
+        // '|',
+        'bold',
+        'italic',
+        'link',
+        '|',
+        'alignment:left', 'alignment:center', 'alignment:right',
+        // '|',
+        // 'outdent', 'indent',
+        // '|',
+        // 'bulletedList',
+        // 'numberedList',
+        '|',
+        // 'imageUpload',
+        // 'blockQuote',
+        // 'insertTable',
+        'undo',
+        'redo'
+      ],
+
       img_plugins = ['mUploadAdapter', 'ImageUpload', 'Image', 'ImageToolbar', 'ImageStyle', 'ImageUpload', 'ImageCaption', 'ImageResize'],
       table_plugins = ['insertTable', 'Table', 'TableToolbar', 'TableProperties', 'TableCellProperties'],
       headings_plugins = ['Heading'];
@@ -123,6 +144,12 @@ export default function (loader_options) {
           options = {
             toolbar: xlite_toolbar,
             removePlugins: img_plugins.concat(table_plugins),
+          };
+        } else if(item.classList.contains('editor-xxlite')) {
+          options = {
+            toolbar: xxlite_toolbar,
+            removePlugins: img_plugins.concat(table_plugins, headings_plugins,
+              ['BlockQuote', 'List', 'Indent', 'IndentBlock']),
           };
         }
 
