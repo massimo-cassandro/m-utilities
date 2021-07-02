@@ -1715,6 +1715,22 @@
       "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-elenco.incl.html.twig",
       "oF" : 0
     },
+    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-scheda.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-scheda.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-scheda.incl.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-scheda.incl.html.twig",
+      "oF" : 0
+    },
     "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/dashboard.html.twig" : {
       "cB" : 0,
       "ft" : 8192,

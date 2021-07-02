@@ -24,21 +24,22 @@
 
 {%- if entity.id and is_granted('ROLE_SUPER_ADMIN') -%}
   <div class="alert alert-icon alert-info" role="alert">
-    <p>
-      Accesso a questo contenuto:<br>
-      <span class="text-monospace">contenuti.{{ entity.sezione.chiaveSezione }}.{{ entity.chiave }}
-        {%- if entity.tipo.id == 10 -%}.img_desktop / img_mobile{%- endif -%}
-      </span>
-    </p>
-    {%- if entity.tipo.id in [10,11] -%}
-      <p>Per ogni immagine è impostato un oggetto con
-      <span class="text-monospace">id, width, height, mime, size, dida</span></p>
-    {%- endif -%}
-
-    {%- if entity.tipo.id in [12] -%}
-      <p>Per ogni file è impostato un oggetto <code>file</code> con
-      <span class="text-monospace">id, mime, size</span></p>
-    {%- endif -%}
+    <div>
+      <p>
+        Accesso a questo contenuto:<br>
+        <span class="text-monospace">contenuti.{{ entity.sezione.chiaveSezione }}.{{ entity.chiave }}
+          {%- if entity.tipo.id == 10 -%}.img_desktop / img_mobile{%- endif -%}
+        </span>
+      </p>
+      {%- if entity.tipo.id in [10,11] -%}
+        <p>Per ogni immagine è impostato un oggetto con
+        <span class="text-monospace">id, width, height, mime, size, dida</span></p>
+      {%- endif -%}
+      {%- if entity.tipo.id in [12] -%}
+        <p>Per ogni file è impostato un oggetto <code>file</code> con
+        <span class="text-monospace">id, mime, size</span></p>
+      {%- endif -%}
+    </div>
   </div>
 {%- endif -%}
 
@@ -48,7 +49,7 @@
 {%- if is_granted('ROLE_SUPER_ADMIN') -%}
   <div class="box mb-4">
     <fieldset id="cfg-fset" class="fset">
-      <legend>Config <button type="button" id="toggle-config" class="ml-4 btn btn-link p-0 small">Mostra/Nascondi</button></legend>
+      <legend>Config <button type="button" id="toggle-config" class="ms-4 ml-4 btn btn-link p-0 small">Mostra/Nascondi</button></legend>
       <div id="cfg-wrapper" {{- entity.id|default()? ' style="display:none"' : '' }} class="pt-4">
         <p>Salvare la scheda per applicare eventuali modifiche.</p>
         <details class="boxed">
@@ -140,7 +141,7 @@
               label: "Config JSON",
               attr: {class: 'text-monospace autosize'},
               help: '<button type="button" class="add_cfg_tpl btn btn-link p-0 small">Inserisci template</button>' ~
-                '<button type="button" class="add_cfg_tpl req_only ml-4 btn btn-link p-0 small">Inserisci solo “required”</button>'
+                '<button type="button" class="add_cfg_tpl req_only ms-4 ml-4 btn btn-link p-0 small">Inserisci solo “required”</button>'
             }) }}
           </div>
           <div class="col-lg-6">

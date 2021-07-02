@@ -43,6 +43,7 @@
       "vars": "all",
       "args": "after-used",
       "ignoreRestSiblings": false
-    }]
+    }],
+    "import/no-anonymous-default-export": false
   }
 }
