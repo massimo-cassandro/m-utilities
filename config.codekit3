@@ -1913,7 +1913,7 @@
       "rFN" : 0,
       "uCM" : 0
     },
-    "\/bs4-utilities\/_boxes.scss" : {
+    "\/bootstrap-utilities\/_boxes.scss" : {
       "aP" : 0,
       "bl" : 0,
       "dP" : 10,
@@ -1921,13 +1921,13 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/bs4-utilities\/_boxes.css",
+      "oAP" : "\/bootstrap-utilities\/_boxes.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/bs4-utilities\/_bs4_alerts.scss" : {
+    "\/bootstrap-utilities\/_bs_alerts.scss" : {
       "aP" : 0,
       "bl" : 0,
       "dP" : 10,
@@ -1935,13 +1935,13 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/bs4-utilities\/_bs4_alerts.css",
+      "oAP" : "\/bootstrap-utilities\/_bs_alerts.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/bs4-utilities\/_bs4_responsive_columns.scss" : {
+    "\/bootstrap-utilities\/_bs_responsive_columns.scss" : {
       "aP" : 0,
       "bl" : 0,
       "dP" : 10,
@@ -1949,13 +1949,13 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/bs4-utilities\/_bs4_responsive_columns.css",
+      "oAP" : "\/bootstrap-utilities\/_bs_responsive_columns.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/bs4-utilities\/_forms-macro-alt-rows.scss" : {
+    "\/bootstrap-utilities\/_forms-macro-alt-rows.scss" : {
       "aP" : 0,
       "bl" : 0,
       "dP" : 10,
@@ -1963,7 +1963,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/bs4-utilities\/_forms-macro-alt-rows.css",
+      "oAP" : "\/bootstrap-utilities\/_forms-macro-alt-rows.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,

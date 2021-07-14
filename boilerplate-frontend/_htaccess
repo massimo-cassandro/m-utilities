@@ -16,13 +16,15 @@
 <IfModule !mod_expires.c>
     <IfModule mod_headers.c>
         # 1 year
-        Header set Cache-Control 'public, max-age 31536000'
+        Header set Cache-Control 'public, max-age=31536000'
     </IfModule>
 </IfModule>
 
 # https://httpd.apache.org/docs/2.4/mod/mod_expires.html
 <IfModule mod_expires.c>
     ExpiresActive On
+    ExpiresDefault "access 2 days"
+
     AddType application/vnd.ms-fontobject .eot
     AddType application/x-font-ttf .ttf
     AddType application/x-font-opentype .otf
@@ -52,6 +54,8 @@
     ExpiresByType image/jpg "access 2 months"
     ExpiresByType image/jpeg "access 2 months"
     ExpiresByType image/gif "access 2 months"
+    ExpiresByType image/webp "access 2 months"
+    ExpiresByType image/avif "access 2 months"
 
     ExpiresByType application/pdf "access 1 year"
 
@@ -63,10 +67,4 @@
     ExpiresByType audio/x-wav "access 1 year"
 
     ExpiresByType image/x-icon "access 1 year"
-    ExpiresDefault "access 2 days"
-</IfModule>
-<IfModule mod_headers.c>
-  Header set Cache-Control "no-cache, no-store, must-revalidate"
-  Header set Pragma "no-cache"
-  Header set Expires 0
 </IfModule>

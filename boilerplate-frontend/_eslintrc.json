@@ -44,6 +44,6 @@
       "args": "after-used",
       "ignoreRestSiblings": false
     }],
-    "import/no-anonymous-default-export": false
+    "import/no-anonymous-default-export": 0
   }
 }

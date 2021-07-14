@@ -1,6 +1,8 @@
 *~
 .DS_Store
 **/*.mwb.bak
+**/*.mwb.beforefix
+
 
 ## ***
 /**/node_modules/

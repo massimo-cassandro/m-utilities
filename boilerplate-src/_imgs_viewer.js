@@ -1,7 +1,7 @@
 import {escapeHTML} from '../js-utilities/_escapeHTML';
 
 /*
-  import {img_viewer} from '@massimo-cassandro/m-utilities/js-utilities/_imgs_viewer';
+  import {img_viewer} from '@massimo-cassandro/m-utilities/boilerplate-src/_imgs_viewer';
 
   img_viewer({
     viewer: window.mUtilities.viewer, // default /viewer
@@ -14,8 +14,10 @@ import {escapeHTML} from '../js-utilities/_escapeHTML';
     ],
     lazy: true,
     viewer_params: '', // eventuali parametri aggiunti per il viewer
+    img_fmt: [], // array dei formati di immagine prodotti dal viewer
     alt: '', // alt
-    class: ''
+    class: '',
+    fw: 'bs4' // bs4 (default) o bs5,
   });
 
 
@@ -39,7 +41,8 @@ import {escapeHTML} from '../js-utilities/_escapeHTML';
       {mq: null, bb: [546,480]}
     ];
 
-  mq può anche essere una delle chiavi di `bs4_std_brkpts`
+  mq può anche essere una delle chiavi di `bs4_std_brkpts` o `bs5_std_brkpts`
+  (in base al parametro `fw`)
 
   l'ultimo deve avere mq = null
 */
@@ -57,23 +60,34 @@ export  function img_viewer(params) {
     md_lg: '(min-width: 768px) and (max-width: 1199px)',
     md_xl: '(min-width: 768px)',
     lg_xl: '(min-width: 992px)'
+  },
+  bs5_std_brkpts = {...bs4_std_brkpts,
+    xl:  '(min-width: 1200px) and (max-width: 1399px)',
+    xxl: '(min-width: 1400px)',
+
+    md_xl:  '(min-width: 768px) and (max-width: 1399px)',
+    lg_xl:  '(min-width: 992px) and (max-width: 1399px)',
+    md_xxl: '(min-width: 768px)',
+    lg_xxl: '(min-width: 992px)',
+    xl_xxl: '(min-width: 1200px)'
   };
 
   let default_params = {
-      viewer: '/viewer',
-      img: null,
-      bbs: [],
-      lazy: true,
-      viewer_params: '', // eventuali parametri aggiunti per il viewer
-      alt: '', // alt
-      class: ''
+      viewer:        '/viewer',
+      img:           null,
+      bbs:           [],
+      lazy:          true,
+      viewer_params: '',          // eventuali parametri aggiunti per il viewer
+      alt:           '',          // alt
+      class:         '',
+      fw:            'bs4',
+
+      // formati immagine prodotti dal viewer
+      // in locale (mamp) non c'è webp (NB: nell'array va prima webp)
+      img_fmt: ['8888', '8890'].indexOf(window.location.port) !== -1 ? ['pjpeg'] : ['webp', 'pjpeg'],
     },
     p, // parametri elaborati
     base_src,
-
-    // formati immagine prodotti dal viewer
-    // in locale (mamp) non c'è webp (NB: nell'array va prima webp)
-    img_fmt = ['8888', '8890'].indexOf(window.location.port) !== -1 ? ['pjpeg'] : ['webp', 'pjpeg'],
 
     sources = '',
     lazy_data_prefix;
@@ -85,13 +99,13 @@ export  function img_viewer(params) {
   // elaborazione bbs e calcolo doppie densità (se l'immagine originale è abbastanza grande)
   p.bbs.forEach( item => {
 
-    // sostituzione parametro `mq` con il valore di bs4_std_brkpts
+    // sostituzione parametro `mq` con il valore di bs_std_brkpts
     // se la chiave corrisponde
     if( Object.keys(bs4_std_brkpts).indexOf(item.mq) !== -1 ) {
       item.mq = bs4_std_brkpts[item.mq];
     }
 
-    img_fmt.forEach( fmt => {
+    p.img_fmt.forEach( fmt => {
       let this_bb_wi = item.bb[0],
         this_bb_he = item.bb[1],
         this_base_src = base_src + `f=${fmt}&bb=`,
@@ -117,6 +131,7 @@ export  function img_viewer(params) {
         if(p.class) sources += ` class="${p.class}"`;
         sources += ` alt="${escapeHTML(p.alt)}">`;
       }
+
     }); // end forEach fmt
   }); // end forEach bbs
 
