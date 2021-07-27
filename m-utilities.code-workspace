@@ -8,20 +8,7 @@
 
     "preview-in-browser.domain": "http://mutilities.local:8888/",
 		"preview-in-browser.removeStartString": "~/Sites/m-utilities/",
-		"files.exclude": {
-			"**/.git": true,
-			"**/.svn": true,
-			"**/.hg": true,
-			"**/CVS": true,
-			"**/.DS_Store": true,
-			"**/*-lock.json": true,
-			"**/*.css.map": true,
-			"**/*.js.map": true,
-			"**/*.lock": true,
-			"**/*.mwb.bak": true,
-			"**/config.codekit3": true
-		},
-		"explorerExclude.backup": null,
+
 		"favorites.resources": [
 			"node_modules/jquery",
 			"node_modules/bs4",

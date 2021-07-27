@@ -45,10 +45,14 @@ Consulta il file [package.json](./package.json) per verificare la versione prese
 A questi moduli sono stati aggiunti: 
 
 * `ckeditor5-alignment` (vedi <https://ckeditor.com/docs/ckeditor5/latest/features/text-alignment.html>)
+* source editing (<https://ckeditor.com/docs/ckeditor5/latest/features/source-editing.html>)
 
 ```bash
 npm install --save @ckeditor/ckeditor5-alignment@latest
+npm install --save @ckeditor/ckeditor5-source-editing 
 ```
+
+
 
 Opzionali:
 
