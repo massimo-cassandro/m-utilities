@@ -57,6 +57,7 @@ npm i --save-dev --no-optional rollup-plugin-terser
 npm i --save-dev --no-optional rollup-plugin-sourcemaps
 npm i --save-dev --no-optional @rollup/plugin-commonjs # necessario per jquery
 npm i --save-dev --no-optional @rollup/plugin-node-resolve
+npm i --save-dev --no-optional rollup-plugin-filesize
 npm i --save-dev --no-optional sass
 
 npm i --save-dev --no-optional eslint
