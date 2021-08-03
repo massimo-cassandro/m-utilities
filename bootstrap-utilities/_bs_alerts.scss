@@ -1,21 +1,23 @@
-.alert {
-	h2 {
-		margin-top: 0;
-		//@extend .h3;
-		position: relative;
-		top:-5px;
-	}
+@use 'sass:math';
 
-	> p {
-  	&:last-child {
-    	margin-bottom: 0;
-  	}
-	}
+.alert {
+  h2 {
+    position: relative;
+    top: -5px;
+    margin-top: 0;
+    //@extend .h3;
+  }
+
+  > p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   .alert-link, a {
-  	&:not(.btn) {
-    	font-weight: $body-font-weight-semibold;
-    	text-decoration: underline;
+    &:not(.btn) {
+      font-weight: $body-font-weight-semibold;
+      text-decoration: underline;
     }
   }
 }
@@ -24,42 +26,44 @@
   @each $theme in danger, warning, info, success {
     @if map-has-key($theme-colors, $theme) {
       .alert-#{$theme} & {
-        color: darken(theme-color($theme), 10);
+        color: darken(map-get($theme-colors, $theme), 10);
       }
     }
   }
 }
 
 .alert-dismissible {
-  padding-right:3rem;
+  padding-right: 3rem;
 }
 
 
 .alert-icon {
-	position: relative;
-  padding-left: 4em;
+  position: relative;
   min-height: 3em;
+  padding-left: 4em;
 
-	&::before {
-		width: 2em;
-		height: 2em;
-		display: block;
-		position: absolute;
-		top: $alert-padding-y / 1.5;
-		left: $alert-padding-x / 1.5;
+  &::before {
+    position: absolute;
+    top: math.div($alert-padding-y, 1.5);
+    left: math.div($alert-padding-x, 1.5);
+    display: block;
+    width: 2em;
+    height: 2em;
   }
 
   @each $theme in danger, warning, info, success {
     @if map-has-key($theme-colors, $theme) and
       global-variable-exists('ui-icons') and
       map-has-key($ui-icons, $theme) {
-        &.alert-#{$theme} {
-          &::before {
-            content: svg_uri(
-              str-replace(map-get($ui-icons, $theme), '<svg', '<svg fill="#{theme-color($theme)}"')
+      &.alert-#{$theme} {
+        /* stylelint-disable-next-line max-nesting-depth */
+        &::before {
+          content:
+            svg_uri(
+              str-replace(map-get($ui-icons, $theme), '<svg', '<svg fill="#{map-get($theme-colors, $theme)}"')
             );
-          }
         }
+      }
     }
   }
 }

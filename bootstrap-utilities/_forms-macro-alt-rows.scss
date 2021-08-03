@@ -1,6 +1,9 @@
 // campi distributi su righe in modo tabellare
 // per macro aggiunta record dinamici
 
+$macro-riga-form-group-margin-bottom: 1rem !default;
+$macro-riga-alt-row-bg: $table-accent-bg !default;
+
 //.macro-riga
 .macro-riga-label-alternate {
 
@@ -25,7 +28,7 @@
           display:block;
         }
         .form-group {
-          margin-bottom: $form-group-margin-bottom;
+          margin-bottom: $macro-riga-form-group-margin-bottom;
         }
       }
     }
@@ -36,7 +39,7 @@
   padding:.4rem;
 
   &:nth-child(even) {
-    background-color: $table-accent-bg;
+    background-color: $macro-riga-alt-row-bg;
   }
 
   @extend .macro-riga-label-alternate;

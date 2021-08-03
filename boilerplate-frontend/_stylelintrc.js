@@ -13,6 +13,8 @@ module.exports = {
     "stylelint-config-twbs-bootstrap/scss"
   ],
 
+  "ignoreFiles": ["**/*.css", "**/node_modules/**/*.*", "**/vendor/**/*.*"],
+
   rules: {
     'selector-list-comma-newline-after': 'always-multi-line',
     'number-leading-zero': null,

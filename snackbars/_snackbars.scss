@@ -1,42 +1,43 @@
-$snackbar-std-background: #333!default;
-$snackbar-std-color: #fff!default;
-$snackbar-error-background: theme-color(danger)!default; // false per non generare questo stato
-$snackbar-error-color: color-yiq( theme-color(danger) )!default;
-$snackbar-warning-background: theme-color(warning)!default; // false per non generare questo stato
-$snackbar-warning-color: color-yiq( theme-color(warning) )!default;
-$snackbar-success-background: theme-color(success)!default; // false per non generare questo stato
-$snackbar-success-color: color-yiq( theme-color(success) )!default;
+$snackbar-std-background: #333 !default;
+$snackbar-std-color: #fff !default;
+$snackbar-error-background: #c00 !default; // false per non generare questo stato
+$snackbar-error-color: #fff !default;
+$snackbar-warning-background: #f90 !default; // false per non generare questo stato
+$snackbar-warning-color: #fff !default;
+$snackbar-success-background: #05930a !default; // false per non generare questo stato
+$snackbar-success-color: #fff !default;
 
 
 .snackbars-container {
-  display: inline-flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
-  align-items: stretch;
-  gap: 5px;
-  max-width:100%;
-
   position: sticky;
   bottom: 0;
   left: 0;
-  padding:1rem;
-  z-index:1200;
+  z-index: 1200;
+
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-end;
+  gap: 5px;
+  max-width: 100%;
+
+  padding: 1rem;
 }
 .snackbar {
-  padding: .5rem 1rem;
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-start;
   align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  padding: .5rem 1rem;
   gap: .5rem;
-  background: $snackbar-std-background;
-  color:$snackbar-std-color;
   font-size: .8rem;
-  width:100%;
+  color: $snackbar-std-color;
+  background: $snackbar-std-background;
+  border-radius: $border-radius;
   box-shadow: 0 0 8px rgba(#000, .6);
-  border-radius:$border-radius;
   animation: enter_snackbar .2s linear;
 
   @keyframes enter_snackbar {
@@ -50,20 +51,20 @@ $snackbar-success-color: color-yiq( theme-color(success) )!default;
 
   @if $snackbar-error-background {
     &-error {
-      background-color: $snackbar-error-background;
       color: $snackbar-error-color;
+      background-color: $snackbar-error-background;
     }
   }
   @if $snackbar-warning-background {
     &-warning {
-      background-color: $snackbar-warning-background;
       color: $snackbar-warning-color;
+      background-color: $snackbar-warning-background;
     }
   }
   @if $snackbar-success-background {
     &-success {
-      background-color: $snackbar-success-background;
       color: $snackbar-success-color;
+      background-color: $snackbar-success-background;
     }
   }
 }
