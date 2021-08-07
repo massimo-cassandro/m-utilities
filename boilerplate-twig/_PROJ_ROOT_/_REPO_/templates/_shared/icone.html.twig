@@ -41,7 +41,15 @@
   {% set titleUniqueId = 't-' ~ base_id %}
   {% set ariaIDs = ariaIDs|merge([titleUniqueId]) %}
 {%- endif -%}
+
+{% set class = 'icona' ~ (class is defined? ' ' ~ class : '')  %}
+
+{%- if id|length == 1 and id[0] ends with '-line' -%}
+  {% set class = class ~ ' line-icon' %}
+{%- endif -%}
+
 {% set svg_file = svg_file is defined? svg_file : glob_vars.icon_file %}
+
 <svg {{- class|default('')? (' class="' ~ class ~ '"')|raw : '' }} role="img"
   {%- if aria_hidden is defined and aria_hidden %} aria-hidden="true"{% endif -%}
   {%- if ariaIDs|length %} aria-labelledby="{{ ariaIDs|join(' ') }}"{% endif -%}>
@@ -52,7 +60,7 @@
   	<desc id="{{ descUniqueId }}">{{ desc }}</desc>
   {%- endif -%}
   {% for item in id %}
-    <use xlink:href="{{ svg_file }}#{{ item }}" class="{{ item }}"></use>
+    <use xlink:href="{{ svg_file }}#{{ item }}" class="{{ item ~ ((item ends with '-line' and id|length > 1)? ' line-icon' : '') }}"></use>
   {% endfor %}
 </svg>
 
