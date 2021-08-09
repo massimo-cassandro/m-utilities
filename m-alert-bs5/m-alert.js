@@ -4,7 +4,7 @@
 import Modal from 'bootstrap/js/dist/modal'; // needs commonjs rollup plugin
 
 
-export function mAlert(parameters = {}) {
+export default function mAlert(parameters = {}) {
 
   const errorBtnLabel = function () {
       var labels = ['Oh My God!', 'Mon Dieu!', 'Mein Gott!', 'Parbleu!',

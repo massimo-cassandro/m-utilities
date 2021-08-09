@@ -11,6 +11,7 @@ Thumbs.db
 /**/demo/
 .codekit-cache/
 /**/*.sketch
+/boilerplate-frontend
 
 
 config.codekit3

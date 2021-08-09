@@ -1,29 +1,6 @@
 /*
-
-  import {submitErr, disableBtnsOnSubmit, throwErr} from '@massimo-cassandro/m-utilities/js-utilities/_form_utilities';
-
-
-  riattivazione submit:
-  disableBtnsOnSubmit();
-
+  import {disableBtnsOnSubmit, throwErr} from '@massimo-cassandro/m-utilities/js-utilities/_form_utilities';
 */
-// submit err
-// TODO gestione validityState
-import {mAlert} from '../mAlert-bs4/_mAlert';
-export  function submitErr(title, mes) {
-
-  document.querySelectorAll('[type="submit"], [type=button]').forEach(el => {
-    el.disabled = false;
-  });
-
-  mAlert({
-    type  : 'error',
-    title : title,
-    mes   : mes || null
-  });
-  return false;
-}
-
 
 // disable buttons on submit
 export function disableBtnsOnSubmit() {

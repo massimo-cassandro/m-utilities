@@ -3,6 +3,8 @@ import sourcemaps from 'rollup-plugin-sourcemaps';
 import fs from 'fs';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+// import minifyHTML from 'rollup-plugin-minify-html-literals';
+// import filesize from 'rollup-plugin-filesize';
 
 const terserOptions = {
     compress: {
@@ -25,12 +27,12 @@ js_dirs.forEach(dir => {
       {
         // preserveEntrySignatures: false,
         input: `${dir}${file}`,
-        plugins: [sourcemaps(), resolve(), commonjs()],
+        plugins: [/* filesize(),  */sourcemaps(), resolve(), commonjs()],
         output: [{
           file: `${dir}dist/${file.replace('.js', '-min.js')}`,
           format: 'iife',
           sourcemap: true,
-          plugins: [terser(terserOptions)]
+          plugins: [/* minifyHTML(),  */terser(terserOptions)]
         }]
       }
     );
