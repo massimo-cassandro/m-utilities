@@ -1,7 +1,7 @@
 // basato sulla classe `CodiceFiscale` di Umberto Salsi <salsi@icosaedro.it>
 // http://www.icosaedro.it/cf-pi/index.html
 
-import {controllo_partita_iva} from './_controllo-partita-iva-IT';
+import {controllo_partita_iva} from './controllo-partita-iva-IT';
 
 export function controllo_codice_fiscale(cf) {
 

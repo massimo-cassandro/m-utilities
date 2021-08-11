@@ -1,4 +1,5 @@
 @use 'sass:math';
+$alerts-icons-stroke-width: null !default; // null: usa fill, altrimenti spessore traccia
 
 .alert {
   h2 {
@@ -55,14 +56,31 @@
     @if map-has-key($theme-colors, $theme) and
       global-variable-exists('ui-icons') and
       map-has-key($ui-icons, $theme) {
+
       &.alert-#{$theme} {
-        /* stylelint-disable-next-line max-nesting-depth */
+        /* stylelint-disable max-nesting-depth  */
         &::before {
-          content:
-            svg_uri(
-              str-replace(map-get($ui-icons, $theme), '<svg', '<svg fill="#{map-get($theme-colors, $theme)}"')
-            );
+          @if $alerts-icons-stroke-width == null {
+            content:
+              svg_uri(
+                str-replace(
+                  map-get($ui-icons, $theme),
+                  '<svg',
+                  '<svg fill="#{map-get($theme-colors, $theme)}" stroke="none"'
+                )
+              );
+          } @else {
+            content:
+              svg_uri(
+                str-replace(
+                  map-get($ui-icons, $theme),
+                  '<svg',
+                  '<svg stroke="#{map-get($theme-colors, $theme)}" stroke-width="#{$alerts-icons-stroke-width}" fill="none"'
+                )
+              );
+          }
         }
+        /* stylelint-enable max-nesting-depth  */
       }
     }
   }
