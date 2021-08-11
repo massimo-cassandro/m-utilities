@@ -33,7 +33,7 @@
 
 import {_creaDataTable} from './creaDataTable-bs5';
 
-import {mesi} from '../../js-utilities/mesi-giorni_it';
+import {mesi} from '../../js-utilities/mesi-giorni-it';
 import {number_format} from '../../js-utilities/number-format';
 import { dateStringToISO, formatDate, formatTime, formatDateTime } from '../../js-utilities/date-utilities';
 
