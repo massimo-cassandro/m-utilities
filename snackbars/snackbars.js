@@ -1,5 +1,5 @@
 // add a new snackbar
-// import { slideUp, slideDown } from '@massimo-cassandro/m-utilities/js-utilities/_slide-up-down-toggle';
+// import { slideUp, slideDown } from '@massimo-cassandro/m-utilities/js-utilities/slide-up-down-toggle';
 export function snackbar(message, status='std', icons_obj = null) {
 
   /*

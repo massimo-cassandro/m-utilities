@@ -1,6 +1,6 @@
-import start from './_src/_start';
-import {auto_datatable} from './_src/_datatable';
-import {datatable_selector, contenuti_elenco} from '@massimo-cassandro/m-utilities/boilerplate-src/contenuti/_contenuti_elenco';
+import start from './src/start';
+import {auto_datatable} from './src/datatable';
+import {datatable_selector, contenuti_elenco} from '@massimo-cassandro/m-utilities/boilerplate-src/contenuti/contenuti-elenco';
 
 (() => {
   start();

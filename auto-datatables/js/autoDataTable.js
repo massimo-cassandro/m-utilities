@@ -2,7 +2,7 @@
   autodatatable
   Crea un datatable leggendo gli attributi data assegnati ad un div
 
-  il contenitore avrà la classe `dt_container` (assegnato dallo script)
+  il contenitore avrà la classe `dt-container` (assegnato dallo script)
   e deve avere gli attributi:
 
     * `data-dt_columns`   → definizione delle colonne datatable
@@ -31,16 +31,16 @@
 */
 
 import $ from 'jquery';
-import {_creaDataTable} from './_creaDataTable';
+import {_creaDataTable} from './creaDataTable';
 
-import {mesi} from '../../js-utilities/_mesi_giorni_it';
-import {number_format} from '../../js-utilities/_number_format';
-import { dateStringToISO, formatDate, formatTime, formatDateTime } from '../../js-utilities/_date-utilities';
+import {mesi} from '../../js-utilities/mesi-giorni-it';
+import {number_format} from '../../js-utilities/number-format';
+import { dateStringToISO, formatDate, formatTime, formatDateTime } from '../../js-utilities/date-utilities';
 
 import Mustache from 'mustache/mustache.mjs';
-import creaDataTable_default_options from './src/_creaDatatable_defaults';
+import creaDataTable_default_options from './src/creaDatatable-defaults';
 
-export  function _autoDataTable( $container = '.dt_container', cdt_options = {}, bs4 = true ) {
+export  function _autoDataTable( $container = '.dt-container', cdt_options = {}, bs4 = true ) {
 
   if(!($container instanceof $)) {
     $container = $($container);

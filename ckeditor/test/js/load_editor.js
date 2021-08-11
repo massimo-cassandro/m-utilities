@@ -1,6 +1,6 @@
 import {cke_test_utilities} from './src/test_utilities.js';
-import m_cke_loader from '../../../ckeditor-utilities/_m-ckeditor-loader.js';
-import m_cke_form_check from '../../../ckeditor-utilities/_m-ckeditor-form-check.js';
+import m_cke_loader from '../../../ckeditor-utilities/m-ckeditor-loader.js';
+import m_cke_form_check from '../../../ckeditor-utilities/m-ckeditor-form-check.js';
 
 (() => {
 

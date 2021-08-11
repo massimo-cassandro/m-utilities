@@ -1,5 +1,5 @@
 // TODO multiple messages
-import {mAlert} from '@massimo-cassandro/m-utilities/mAlert-bs4/_mAlert';
+import {mAlert} from '@massimo-cassandro/m-utilities/mAlert-bs4/mAlert';
 
 export default function () {
 
@@ -15,7 +15,7 @@ export default function () {
       title = 'Operazione completata'
 
     } else if(type === 'warning') {
-      title = 'Attenzione!'
+      title = 'Attenzione!';
 
     } else {
       type = 'info';

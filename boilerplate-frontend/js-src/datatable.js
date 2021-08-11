@@ -1,5 +1,5 @@
-import {_creaDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/js/_creaDataTable-bs5-no-jq';
-import {_autoDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/js/_autoDataTable-bs5-no-jq';
+import {_creaDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/js/creaDataTable-bs5-no-jq';
+import {_autoDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/js/autoDataTable-bs5-no-jq';
 import app_data from '../../globali/get-app-data';
 
 const datatable_setup = {
@@ -88,7 +88,7 @@ const datatable_setup = {
 
     container_header: '', //'Risultato della ricerca', // se presente aggiunge un header prima della tabella
 
-    //container_class: 'dt_container', // classe che viene assegnata al div che contiene la tabella
+    //container_class: 'dt-container', // classe che viene assegnata al div che contiene la tabella
     //container_header_level: 2, // livello gerarchico dell'header (h2, h3, ecc...)
     // table_id: 'table_result',
     table_class: 'table table-striped table-bordered table-hover'

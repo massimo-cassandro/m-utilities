@@ -2,7 +2,7 @@
   autodatatable
   Crea un datatable leggendo gli attributi data assegnati ad un div
 
-  il contenitore avrà la classe `dt_container` (assegnato dallo script)
+  il contenitore avrà la classe `dt-container` (assegnato dallo script)
   e deve avere gli attributi:
 
     * `data-dt_columns`   → definizione delle colonne datatable
@@ -31,14 +31,14 @@
   * jquery_url: url jquery
 */
 
-import {_creaDataTable} from './_creaDataTable-bs5';
+import {_creaDataTable} from './creaDataTable-bs5';
 
-import {mesi} from '../../js-utilities/_mesi_giorni_it';
-import {number_format} from '../../js-utilities/_number_format';
-import { dateStringToISO, formatDate, formatTime, formatDateTime } from '../../js-utilities/_date-utilities';
+import {mesi} from '../../js-utilities/mesi-giorni_it';
+import {number_format} from '../../js-utilities/number-format';
+import { dateStringToISO, formatDate, formatTime, formatDateTime } from '../../js-utilities/date-utilities';
 
 import mustache from 'mustache/mustache.mjs';
-import creaDataTable_default_options from './src/_creaDatatable_defaults';
+import creaDataTable_default_options from './src/creaDatatable-defaults';
 
 function run_autoDataTable( $container, cdt_options ) {
 
@@ -567,7 +567,7 @@ function run_autoDataTable( $container, cdt_options ) {
   }
 }
 
-export  function _autoDataTable( $container = '.dt_container', cdt_options = {}, jquery_url='https://code.jquery.com/jquery-3.6.0.min.js' ) {
+export  function _autoDataTable( $container = '.dt-container', cdt_options = {}, jquery_url='https://code.jquery.com/jquery-3.6.0.min.js' ) {
 
   if(window.jQuery === undefined) {
 

@@ -1,7 +1,7 @@
-import {escapeHTML} from '../js-utilities/_escapeHTML';
+import {escapeHTML} from '../js-utilities/escapeHTML';
 
 /*
-  import {img_viewer} from '@massimo-cassandro/m-utilities/boilerplate-src/_imgs_viewer';
+  import {img_viewer} from '@massimo-cassandro/m-utilities/boilerplate-src/imgs_viewer';
 
   img_viewer({
     viewer: window.mUtilities.viewer, // default /viewer

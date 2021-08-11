@@ -1,6 +1,6 @@
 // datatable va importato nell'implementazione locale
 
-export const datatable_selector = '.dt_container';
+export const datatable_selector = '.dt-container';
 
 export function contenuti_elenco(datatable_instance) {
 

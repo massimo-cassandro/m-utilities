@@ -1,7 +1,7 @@
-import start from './_src/_start';
-import {cke_loader} from './_src/_ckeditor';
-import file_uploader from './_src/_file_uploader';
-import contenuti_scheda from '@massimo-cassandro/m-utilities/boilerplate-src/contenuti/_contenuti_scheda';
+import start from './src/start';
+import {cke_loader} from './src/ckeditor';
+import file_uploader from './src/file-uploader';
+import contenuti_scheda from '@massimo-cassandro/m-utilities/boilerplate-src/contenuti/contenuti-scheda';
 
 start();
 contenuti_scheda();

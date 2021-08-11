@@ -1,9 +1,10 @@
+import $ from 'jquery';
 import dt from 'datatables.net/js/jquery.dataTables';
 import dt_bs5 from 'datatables.net-bs5/js/dataTables.bootstrap5';
 
-import * as dt_config from './src/_config_base';
-import dt_config_bs5 from './src/_config-bs5';
-import creaDataTable_default_options from './src/_creaDatatable_defaults';
+import * as dt_config from './src/config-base';
+import dt_config_bs5 from './src/config-bs5';
+import creaDataTable_default_options from './src/creaDatatable-defaults';
 
 
 /*
@@ -19,9 +20,7 @@ import creaDataTable_default_options from './src/_creaDatatable_defaults';
   Restituisce l'istanza del datatable generato
 */
 
-
-
-function run_creaDataTable( $container, options) {
+export function _creaDataTable( $container, options = {}) {
 
   if(!window.jQuery) {
     window.jQuery = $;
@@ -153,19 +152,4 @@ function run_creaDataTable( $container, options) {
   // return dt;
 
   return $('#' + options.table_id ).DataTable(options.datatable_options);  // datatable istance
-}
-
-export function _creaDataTable( $container, options = {}, jquery_url='https://code.jquery.com/jquery-3.6.0.min.js') {
-  if(window.jQuery === undefined) {
-
-    let script = document.createElement('script');
-    script.onload = function() {
-      run_creaDataTable($container, options);
-    };
-    script.src = jquery_url;
-    document.head.appendChild(script);
-
-  } else {
-    run_creaDataTable($container, options);
-  }
 }

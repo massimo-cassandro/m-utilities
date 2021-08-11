@@ -1,4 +1,4 @@
-import start from './_src/_start';
+import start from './src/start';
 
 start();
 

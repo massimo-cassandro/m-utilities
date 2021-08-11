@@ -1,5 +1,5 @@
-import start from './_src/_start';
-import {auto_datatable} from './_src/_datatable';
+import start from './src/start';
+import {auto_datatable} from './src/datatable';
 
 (() => {
   start();

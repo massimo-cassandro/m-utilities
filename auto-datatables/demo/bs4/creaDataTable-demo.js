@@ -1,5 +1,5 @@
 // import $ from 'jquery';
-import {_creaDataTable} from '../js/_creaDataTable';
+import {_creaDataTable} from '../js/creaDataTable';
 
 
 /*

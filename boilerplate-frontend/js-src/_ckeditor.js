@@ -1,6 +1,6 @@
-import m_cke_loader from '@massimo-cassandro/m-utilities/ckeditor-utilities/_m-ckeditor-loader';
-import m_cke_form_check from '@massimo-cassandro/m-utilities/ckeditor-utilities/_m-ckeditor-form-check';
-import app_data from './_get_app_data';
+import m_cke_loader from '@massimo-cassandro/m-utilities/ckeditor-utilities/m-ckeditor-loader';
+import m_cke_form_check from '@massimo-cassandro/m-utilities/ckeditor-utilities/m-ckeditor-form-check';
+import app_data from './get_app_data';
 
 export function cke_loader() {
   m_cke_loader({

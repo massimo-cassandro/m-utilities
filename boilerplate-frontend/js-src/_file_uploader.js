@@ -1,7 +1,7 @@
-import fileUploader from '@massimo-cassandro/js-file-uploader/src/file_uploader';
-import check_uncompleted_uploads from '@massimo-cassandro/js-file-uploader/src-utilities/check_uncompleted_uploads';
-import check_required_uploader from '@massimo-cassandro/js-file-uploader/src-utilities/check_required_uploader';
-import app_data from './_get_app_data';
+import fileUploader from '@massimo-cassandro/js-file-uploader/js/file_uploader';
+import check_uncompleted_uploads from '@massimo-cassandro/js-file-uploader/js-utilities/check-uncompleted-uploads';
+import check_required_uploader from '@massimo-cassandro/js-file-uploader/js-utilities/check-required-uploader';
+import app_data from './get_app_data';
 
 // toast notification
 import $ from 'jquery';

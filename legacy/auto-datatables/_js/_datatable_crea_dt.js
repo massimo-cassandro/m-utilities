@@ -117,7 +117,7 @@
   autodatatable
   Crea un datatable leggendo gli attributi data assegnati ad un div
 
-  il contenitore deve avere la classe `dt_container` (assegnato dallo script) e gli attributi:
+  il contenitore deve avere la classe `dt-container` (assegnato dallo script) e gli attributi:
      `data-dt_columns`  definizione delle colonne datatable
      `data-cdt_options`   permette di modificare le altre opzioni di creaDataTable
   i valori di default delle opzioni creaDataTable vanno definite estendendo il default
@@ -166,7 +166,7 @@
         },
 
         //debug                   : false,
-        container_class           : 'dt_container', // classe che viene assegnata al div che contiene la tabella
+        container_class           : 'dt-container', // classe che viene assegnata al div che contiene la tabella
         container_header          : '', // se presente aggiunge un header prima della tabella
         container_header_level    : 2, // livello gerarchico dell'header (h2, h3, ecc...)
         table_class               : 'table table-striped table-bordered table-hover',
@@ -681,7 +681,7 @@
     },
 
     //debug                   : false,
-    container_class           : 'dt_container', // classe che viene assegnata al div che contiene la tabella
+    container_class           : 'dt-container', // classe che viene assegnata al div che contiene la tabella
     container_header          : '', // se presente aggiunge un header prima della tabella
     container_header_level    : 2, // livello gerarchico dell'header (h2, h3, ecc...)
     table_class               : 'table table-striped table-bordered table-hover',

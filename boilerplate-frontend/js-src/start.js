@@ -1,6 +1,6 @@
-import {isIE} from '@massimo-cassandro/m-utilities/js-utilities/_ie_check';
-import {inputDateSupport, inputTimeSupport} from '@massimo-cassandro/m-utilities/js-utilities/_input_date_support';
-import { slideUp } from '@massimo-cassandro/m-utilities/js-utilities/_slide-up-down-toggle';
+import {isIE} from '@massimo-cassandro/m-utilities/js-utilities/ie-check';
+import {inputDateSupport, inputTimeSupport} from '@massimo-cassandro/m-utilities/js-utilities/input-date-support';
+import { slideUp } from '@massimo-cassandro/m-utilities/js-utilities/slide-up-down-toggle';
 
 export default function start() {
 

@@ -1,4 +1,4 @@
-import {mAlert} from '../_mAlert';
+import {mAlert} from '../mAlert';
 import $ from 'jquery';
 
 (function() {

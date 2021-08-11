@@ -1,5 +1,5 @@
-import {set_macro_listeners} from '@massimo-cassandro/m-utilities/boilerplate-src/std_macro/_sf_macro';
-import {mAlert} from '@massimo-cassandro/m-utilities/mAlert-bs4/_mAlert';
+import {set_macro_listeners} from '@massimo-cassandro/m-utilities/boilerplate-src/std_macro/sf-macro';
+import {mAlert} from '@massimo-cassandro/m-utilities/mAlert-bs4/mAlert';
 
 export default function () {
 

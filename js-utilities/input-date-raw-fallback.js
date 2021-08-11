@@ -1,5 +1,5 @@
-import {inputDateSupport} from '@massimo-cassandro/m-utilities/js-utilities/_input_date_support';
-import { dateFromISO } from '@massimo-cassandro/m-utilities/js-utilities/_date-utilities';
+import {inputDateSupport} from '@massimo-cassandro/m-utilities/js-utilities/input-date-support';
+import { dateFromISO } from '@massimo-cassandro/m-utilities/js-utilities/date-utilities';
 /*
   Se date non è supportato, la funzione aggiunge pattern e placeholder
 

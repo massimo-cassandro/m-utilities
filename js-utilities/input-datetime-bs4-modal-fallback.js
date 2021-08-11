@@ -1,4 +1,4 @@
-import {inputDateSupport, inputTimeSupport, inputDatetimeSupport} from '@massimo-cassandro/m-utilities/js-utilities/_input_date_support';
+import {inputDateSupport, inputTimeSupport, inputDatetimeSupport} from '@massimo-cassandro/m-utilities/js-utilities/input-date-support';
 import $ from 'jquery';
 import 'bootstrap/js/dist/util';
 import 'bootstrap/js/dist/modal';

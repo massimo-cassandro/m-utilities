@@ -2,9 +2,9 @@ import $ from 'jquery';
 import dt from 'datatables.net/js/jquery.dataTables';
 import dt_bs4 from 'datatables.net-bs4/js/dataTables.bootstrap4';
 
-import * as dt_config from './src/_config_base';
-import dt_config_bs4 from './src/_config-bs4';
-import creaDataTable_default_options from './src/_creaDatatable_defaults';
+import * as dt_config from './src/config-base';
+import dt_config_bs4 from './src/config-bs4';
+import creaDataTable_default_options from './src/creaDatatable-defaults';
 
 /*
   creaDataTable

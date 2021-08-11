@@ -1,5 +1,5 @@
 /*
-  import {disableBtnsOnSubmit, throwErr} from '@massimo-cassandro/m-utilities/js-utilities/_form_utilities';
+  import {disableBtnsOnSubmit, throwErr} from '@massimo-cassandro/m-utilities/js-utilities/form-utilities';
 */
 
 // disable buttons on submit

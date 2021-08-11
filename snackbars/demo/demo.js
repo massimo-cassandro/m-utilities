@@ -1,5 +1,5 @@
-import { snackbar } from '../_snackbars';
-import { $ } from '../../js-utilities/_selector_utilities';
+import { snackbar } from '../snackbars';
+import { $ } from '../../js-utilities/selector-utilities';
 
 (() => {
   'use strict';

@@ -1,4 +1,4 @@
-import genera_pwd from '@massimo-cassandro/m-utilities/js-utilities/_genera_pwd';
+import genera_pwd from '@massimo-cassandro/m-utilities/js-utilities/genera_pwd';
 
 export default function () {
   'use strict';
