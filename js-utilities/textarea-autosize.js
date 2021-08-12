@@ -13,11 +13,10 @@
   Credits:
   https://github.com/javierjulio/textarea-autosize/
 */
-export default function () {
+export default function (context = document) {
 
   // select interested textareas
-  let textareas = document.querySelectorAll('textarea.autosize');
-  textareas.forEach(el => {
+  context.querySelectorAll('textarea.autosize').forEach(el => {
     let cstyle = window.getComputedStyle(el, null),
       v_borders  = parseInt(cstyle.getPropertyValue('border-top-width')) +
         parseInt(cstyle.getPropertyValue('border-bottom-width')) || 0;

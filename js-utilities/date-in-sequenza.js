@@ -1,4 +1,4 @@
-export default function () {
+export default function (context = document) {
   //date in sequenza
   /*
     l'attributo `data-min` in un campo data indica l'id del campo il cui valore
@@ -8,7 +8,8 @@ export default function () {
     Sulla data iniziale → data-max
     Sulla data finale   → data-min
   */
-  document.querySelectorAll('input[type="date"][data-min]').forEach(el => {
+
+  context.querySelectorAll('input[type="date"][data-min]').forEach(el => {
     let campo_correlato = document.querySelector('#' + el.dataset.min);
     el.setAttribute('min', campo_correlato.value);
     campo_correlato.addEventListener('change', () => {
@@ -16,7 +17,7 @@ export default function () {
     });
   });
 
-  document.querySelectorAll('input[type="date"][data-max]').forEach(el => {
+  context.querySelectorAll('input[type="date"][data-max]').forEach(el => {
     let campo_correlato = document.querySelector('#' + el.dataset.max);
     el.setAttribute('max', campo_correlato.value);
     campo_correlato.addEventListener('change', () => {

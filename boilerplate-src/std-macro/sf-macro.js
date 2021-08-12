@@ -40,17 +40,21 @@
 
 */
 
-export  function set_macro_listeners (
-  macro_wrapper=null,
-  add_callback = null,
-  remove_callback = null,
-  custom_del_btn = null
-) {
+export  function set_macro_listeners ( options ) {
+
+  const default_options = {
+    macro_wrappers:  document.querySelectorAll('.sf-macro-wrapper'),
+    add_callback:    null,
+    remove_callback: null,
+    add_del_btn:     true,
+    custom_del_btn:  null,
+    fw:              'bs4'
+  };
+
+  let opts = Object.assign( {}, default_options, options );
 
   /*
-    macro_wrapper   : fieldset contenitore del markup della macro
-                      se null, viene ricavato dal primo elemento con classe
-                      '.sf-macro-wrapper' nel documento
+    macro_wrappers  : fieldset contenitori del markup della macro
 
     add_callback    : eventuale callback eseguito all'aggiunta di una riga
                       (riceve come argomenti l'elemento '.sf-macro-container'
@@ -59,68 +63,82 @@ export  function set_macro_listeners (
     remove_callback : eventuale callback eseguito all'eliminazione di una riga
                       (riceve come argomento l'elemento '.sf-macro-container')
 
+    add_del_btn     : opzionale, se true aggiunge un bottone per la rimozione della riga
+                      può essere anche impostato anche aggiunge al fieldset wrapper
+                      l'attributo `data-no-close-btn="true"`
+
     custom_del_btn  : opzionale, markup personalizzato pulsante rimozione riga.
                       Deve avere la classe 'sf-macro-riga-del'
+
+    fw              : framework in uso, bs4 (default) o bs5
   */
+  opts.macro_wrappers.forEach(fset => {
 
-  macro_wrapper = macro_wrapper || document.querySelector('.sf-macro-wrapper');
+    const macro_container = fset.querySelector('.sf-macro-container'),
+      std_del_btn = {
+        bs4: `<div class="sf-macro-close-btn">
+            <button type="button" class="close sf-macro-riga-del" aria-label="Elimina riga">
+              <span aria-hidden="true">&times;</span>
+              <span class="sr-only">Elimina</span>
+            </button>
+          </div>`,
 
-  const macro_container = macro_wrapper.querySelector('.sf-macro-container'),
-    std_del_btn = `<div class="sf-macro-close-btn">
-      <button type="button" class="close sf-macro-riga-del">
-        <span aria-hidden="true">&times;</span>
-        <span class="sr-only">Elimina</span>
-      </button>
-    </div>`,
-    add_del_btn = (riga) => {
-      if(macro_wrapper.dataset.noCloseBtn === undefined
+        bs5: `<div class="sf-macro-close-btn">
+          <button type="button" class="btn-close sf-macro-riga-del" aria-label="Elimina riga">
+            <span class="visually-hidden">Elimina</span>
+          </button>
+        </div>`,
+      },
+      add_del_btn = (riga) => {
+        if(opts.add_del_btn && fset.dataset.noCloseBtn === undefined) {
+          riga.insertAdjacentHTML('beforeend',
+          opts.custom_del_btn? opts.custom_del_btn : std_del_btn[opts.fw]
+          );
+        }
+      };
+
+      // listener rimozione riga
+      fset.addEventListener('click', (e) => {
+
+      if(e.target.classList.contains('sf-macro-riga-del') ||
+        (e.target.closest('button') && e.target.closest('button').classList.contains('sf-macro-riga-del'))
       ) {
-        riga.insertAdjacentHTML('beforeend',
-          custom_del_btn? custom_del_btn : std_del_btn
-        );
+        e.target.closest('.sf-macro-riga').remove();
       }
-    };
+      if(opts.remove_callback && typeof opts.remove_callback === 'function' ) {
+        opts.remove_callback( macro_container );
+      }
+    }, true);
 
-    // listener rimozione riga
-  macro_wrapper.addEventListener('click', (e) => {
+    // aggiunta nuove righe
+    fset.querySelector('.sf-macro-riga-add').addEventListener('click', () => {
 
-    if(e.target.classList.contains('sf-macro-riga-del') ||
-      (e.target.closest('button') && e.target.closest('button').classList.contains('sf-macro-riga-del'))
-    ) {
-      e.target.closest('.sf-macro-riga').remove();
-    }
-    if(remove_callback && typeof remove_callback === 'function' ) {
-      remove_callback( macro_container );
-    }
-  }, true);
+      let macro_template   = macro_container.dataset.template,
+        indice_righe       = macro_container.querySelectorAll('.sf-macro-riga').length;
 
-  // aggiunta nuove righe
-  macro_wrapper.querySelector('.sf-macro-riga-add').addEventListener('click', () => {
+      macro_container.insertAdjacentHTML('beforeend',
+        macro_template.replace(/__indice\d?__/g, indice_righe++));
 
-    let macro_template     = macro_container.dataset.template,
-      indice_righe       = macro_container.querySelectorAll('.sf-macro-riga').length;
+      let nuova_riga = macro_container.querySelector('.sf-macro-riga:last-child');
+      add_del_btn(nuova_riga);
 
-    macro_container.insertAdjacentHTML('beforeend',
-      macro_template.replace(/__indice\d?__/g, indice_righe++));
+      if(opts.add_callback && typeof opts.add_callback === 'function' ) {
+        opts.add_callback( macro_container, nuova_riga);
+      }
+    }, false);
 
-    let nuova_riga = macro_container.querySelector('.sf-macro-riga:last-child');
-    add_del_btn(nuova_riga);
+    // righe preregistrate
+    macro_container.querySelectorAll('.sf-macro-riga').forEach(riga => {
 
-    if(add_callback && typeof add_callback === 'function' ) {
-      add_callback( macro_container, nuova_riga);
-    }
-  }, false);
+      // aggiunta callback
+      if(opts.add_callback && typeof opts.add_callback === 'function' ) {
+        opts.add_callback( macro_container, riga );
+      }
 
-  // righe preregistrate
-  macro_container.querySelectorAll('.sf-macro-riga').forEach(riga => {
+      // aggiunta pulsante rimozione riga
+      add_del_btn(riga);
 
-    // aggiunta callback
-    if(add_callback && typeof add_callback === 'function' ) {
-      add_callback( macro_container, riga );
-    }
+    });
 
-    // aggiunta pulsante rimozione riga
-    add_del_btn(riga);
-  });
-
+  }); // end foreach
 }
