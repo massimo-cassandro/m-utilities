@@ -1,4 +1,4 @@
-import {mAlert} from '../m-alert';
+import mAlert from '../m-alert';
 
 (() => {
 

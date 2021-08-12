@@ -6251,22 +6251,21 @@ progress {
   display: block;
   margin: 1rem auto 2rem;
 }
-.m-alert-mark .path {
+.m-alert-mark circle {
   stroke-dasharray: 1000;
   stroke-dashoffset: 0;
+  animation: line 0.9s ease-in-out;
 }
-.m-alert-mark .path.circle {
-  animation: dash 0.9s ease-in-out;
-}
-.m-alert-mark .path.line {
+.m-alert-mark path {
+  stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: dash 0.9s 0.35s ease-in-out forwards;
+  animation: line 0.9s 0.35s ease-in-out forwards;
 }
-.m-alert-mark .path.check {
+.m-alert-mark path.check {
   stroke-dashoffset: -100;
-  animation: dash-check 0.9s 0.35s ease-in-out forwards;
+  animation: check 0.9s 0.35s ease-in-out forwards;
 }
-@keyframes dash {
+@keyframes line {
   0% {
     stroke-dashoffset: 1000;
   }
@@ -6274,7 +6273,7 @@ progress {
     stroke-dashoffset: 0;
   }
 }
-@keyframes dash-check {
+@keyframes check {
   0% {
     stroke-dashoffset: -100;
   }

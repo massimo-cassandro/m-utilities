@@ -19,23 +19,23 @@ $m-alert-status-classes: (
     margin: 1rem auto 2rem;
   }
 
-  .path {
+  circle {
     stroke-dasharray: 1000;
     stroke-dashoffset: 0;
-    &.circle {
-      animation: dash .9s ease-in-out;
-    }
-    &.line {
-      stroke-dashoffset: 1000;
-      animation: dash .9s .35s ease-in-out forwards;
-    }
+    animation: line .9s ease-in-out;
+  }
+  path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: line .9s .35s ease-in-out forwards;
+
     &.check {
       stroke-dashoffset: -100;
-      animation: dash-check .9s .35s ease-in-out forwards;
+      animation: check .9s .35s ease-in-out forwards;
     }
   }
 
-  @keyframes dash {
+  @keyframes line {
     0% {
       stroke-dashoffset: 1000;
     }
@@ -44,7 +44,7 @@ $m-alert-status-classes: (
     }
   }
 
-  @keyframes dash-check {
+  @keyframes check {
     0% {
       stroke-dashoffset: -100;
     }

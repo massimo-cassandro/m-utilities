@@ -28,7 +28,7 @@ export default function mAlert(parameters = {}) {
     _defaults = {
 
       success: {
-        svg: '<path class="path check" d="M101.4 42L52.7 90.6 31 69.3"/>',
+        svg: '<path class="check" d="M101.4 42L52.7 90.6 31 69.3" />',
 
         title: 'Operazione completata',
         mes: null,
@@ -44,8 +44,8 @@ export default function mAlert(parameters = {}) {
       },
 
       error: {
-        svg: '<path class="path line" d="M35,39 L96.4,93.4">' +
-      '</path><path class="path line" d="M96.4,39 L35,93.2"></path>',
+        svg: '<path d="M35 39L96.4 93.4" />'+
+          '<path d="M96.4 39L35 93.2" />',
 
         title: 'Si è verificato un errore',
         mes: null,
@@ -61,7 +61,7 @@ export default function mAlert(parameters = {}) {
 
       },
       warning: {
-        svg: '<path class="path line" d="M66.6 26.1l-.2 59.263m0 13v6.975"/>',
+        svg: '<path d="M41.839 72.475v-37.2c0-3.852 3.143-6.975 7.02-6.975s7.02 3.123 7.02 6.975V65.5m0-30.225v-9.3c0-3.852 3.143-6.975 7.02-6.975s7.02 3.123 7.02 6.975V65.5m0-30.225c0-3.852 3.143-6.975 7.02-6.975 3.878 0 7.02 3.123 7.02 6.975V65.5m0-20.925c0-3.852 3.144-6.975 7.02-6.975 3.878 0 7.021 3.123 7.021 6.975V84.1C98 99.509 85.428 112 69.92 112h-9.36c-9.896-1.357-18.517-6.496-23.401-13.95L24.522 73.637c-2.584-3.53-1.799-8.475 1.755-11.043 3.555-2.568 8.531-1.788 11.116 1.743l4.212 8.138" />',
 
         title: 'Attenzione!',
         mes: null,
@@ -76,7 +76,7 @@ export default function mAlert(parameters = {}) {
         bs_modal_backdrop: 'static'
       },
       info: {
-        svg: '<path class="path line" d="M65.4 105.237V45.713m.2-12.738V26" />',
+        svg: '<path d="M74 105l-8.6.237V45.713L56 46m9.6-13.025V26" />',
 
         title: null,
         mes: null,
@@ -91,8 +91,7 @@ export default function mAlert(parameters = {}) {
         bs_modal_backdrop: true
       },
       confirm: {
-        svg: '<path class="path line" d="M66 105.816v-6.975"/>'+
-        '<path class="path line" d="M44 48a21.928 21.928 0 016.443-15.556A21.931 21.931 0 0166 26c12.15 0 22 9.85 22 22 0 6.14-2.668 11.543-6.573 15.683-6.514 6.91-15.363 4.47-15.363 16.065v7.935" />',
+        svg: '<path d="M44 48a21.928 21.928 0 0 1 6.443-15.556A21.931 21.931 0 0 1 66 26c12.15 0 22 9.85 22 22 0 6.14-2.668 11.543-6.573 15.683-6.514 6.91-15.363 4.47-15.363 16.065v7.935M66 105.816v-6.975" />',
 
         title: 'Confermi?',
         mes: null,
@@ -117,7 +116,7 @@ export default function mAlert(parameters = {}) {
 
       return `<svg height="132" width="132" xmlns="http://www.w3.org/2000/svg">
       <g fill="none" stroke-width="6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
-        <circle class="path circle" cx="66" cy="66" r="63"/>
+        <circle cx="66" cy="66" r="63"/>
         ${params.svg}
       </g>
     </svg>`;
@@ -128,7 +127,7 @@ export default function mAlert(parameters = {}) {
       let text =  '<div class="mt-3 text-center">';
 
       if( params.title ) {
-        text += `<div class="h2${params.title_class? ` text-${params.title_class}` : ''}">
+        text += `<div class="h2${params.title_class? ` ${params.title_class}` : ''}">
             ${params.title}
           </div>`;
       }
