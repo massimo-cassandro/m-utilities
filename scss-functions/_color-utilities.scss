@@ -1,19 +1,18 @@
 // https://lnikki.la/articles/sass-better-colour-based-on-brightness/
+
 /*
  * Calculates the sRGB luma of a colour.
  *
  * Math nicked from a great Thoughtbot article by Reda Lemeden:
  * http://robots.thoughtbot.com/closer-look-color-lightness
  */
-
+@use 'sass:math';
 @function luma($c) {
-  $-local-red: red(rgba($c, 1.0));
-  $-local-green: green(rgba($c, 1.0));
-  $-local-blue: blue(rgba($c, 1.0));
+  $local-red: red(rgba($c, 1));
+  $local-green: green(rgba($c, 1));
+  $local-blue: blue(rgba($c, 1));
 
-  @return (0.2126 * $-local-red  +
-           0.7152 * $-local-green +
-           0.0722 * $-local-blue) / 255;
+  @return math.div((.2126 * $local-red + .7152 * $local-green + .0722 * $local-blue), 255);
 }
 
 /*

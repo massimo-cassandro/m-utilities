@@ -3,27 +3,26 @@
 /// @param {Number} $number - Number to remove unit from
 /// @return {Number} - Unitless number
 @function strip-unit($number) {
-	@if type-of($number) == 'number' and not unitless($number) {
-		@return $number / ($number * 0 + 1);
-	}
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
 
-	@return $number;
+  @return $number;
 }
 
+@function px2rem($values, $base: null) { /* stylelint-disable-line */
 
-@function px2rem($values, $base: null) {
+  // $values = valore in px
 
-	// $values = valore in px
+  // If no base is defined, defer to the global font size
+  @if $base == null {
+    $base: $font-size-base;
+  }
 
-	// If no base is defined, defer to the global font size
-	@if $base == null {
-		$base: $font-size-base;
-	}
+  // Using rem as base allows correct scaling
+  @if unit($base) == 'rem' {
+    $base: strip-unit($base) * 16px;
+  }
 
-	// Using rem as base allows correct scaling
-	@if unit($base) == 'rem' {
-		$base: strip-unit($base) * 16px;
-	}
-
-	@return (strip-unit($values) / strip-unit($base)) * 1rem;
+  @return (strip-unit($values) / strip-unit($base)) * 1rem;
 }
