@@ -12,7 +12,7 @@ CKEditor loader semplifica e automatizza l'attivazione di CKEditor su un textare
 Includere lo script e impostare le opzioni:
 
 ```js
-import CKEloader from '@massimo-cassandro/m-utilities/ckeditor-utilities/_m-ckeditor-loader.js'
+import CKEloader from '@massimo-cassandro/m-utilities/ckeditor-utilities/m-ckeditor-loader.js'
 
  CKEloader({
   cke_url   : '/path/to/m-ckeditor-min.js',
@@ -89,7 +89,7 @@ Esempio, per limitare le immagini a 1 MB:
 
 Oltre al loader, possono essere aggiunti al progetto:
 
-* `_m-ckeditor-form-check.js` che aggiunge dei controlli non presenti nativamente in CKEditor: campi required e trimming delle righe vuote
+* `m-ckeditor-form-check.js` che aggiunge dei controlli non presenti nativamente in CKEditor: campi required e trimming delle righe vuote
 * `_m-ckeditor.scss` supporto per le classi aggiunte da CKEditor (per la gestione di tabelle e immagini) con l'estensione di alcune classi di Bootstrap 4.
 
 In caso di textarea required non compilati, `_m-ckeditor-form-check.js`, al submit del form, produce un messaggio d'errore.

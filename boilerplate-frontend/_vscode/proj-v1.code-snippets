@@ -19,9 +19,10 @@
   "tpl backoffice": {
     "prefix": ["twig", "tpl", "template"],
     "body": [
-      "{% set pagID = '${TM_FILENAME_BASE/\\.html$|(^|[-.])([^-.]+)/${1:+_}${2:/lowcase}/g}' %}",
-      "{# {% set js_files = [asset(\"/assets/js/backoffice/#{pagID}-min.js\")] %} #}",
-        "{% extends 'backoffice/_backoffice-tpl.html.twig' %}",
+      "{% set pagID = '${TM_FILENAME_BASE/\\.html$|(^|\\.)/${1:+-}${2:/lowcase}/g}' %}",
+      // "{% set pagID = '${TM_FILENAME_BASE/\\.html$|(^|[-.])([^-.]+)/${1:+_}${2:/lowcase}/g}' %}",
+      "{# {% set controller = pagID %} #}",
+      "{% extends 'backoffice/_backoffice-tpl.html.twig' %}",
       "{%- set titolo_pagina -%}",
       "  {%- if entity.id -%}",
       "    <small>xxx:</small> <br>{{ entity.nome }}",
@@ -30,8 +31,9 @@
       "  {%- endif -%}",
       "{%- endset -%}",
       "{% block title %}{{ titolo_pagina|striptags }}{% endblock %}",
-      "{% block head %}{% endblock head %}",
-      "{% block body_end %}{% endblock body_end %}",
+      "{% block head %}{% endblock %}",
+      "{% block jsfiles_start %}{% endblock %}",
+      "{% block jsfiles %}{% endblock %}",
       "",
       "{##}",
       "",
@@ -39,7 +41,8 @@
       "  <h1>{{ titolo_pagina }}</h1>",
       "  {# <h1>{{- block('title') -}}</h1> #}",
       "  $0",
-      "{% endblock body %}"
+      "{% endblock body %}",
+      "{% block last_content %}{% endblock last_content %}"
     ]
   },
 
@@ -47,8 +50,7 @@
     "prefix": ["twig", "tpl", "template"],
     "body": [
       "{% set pagID = '${TM_FILENAME_BASE/\\.html$|(^|[-.])([^-.]+)/${1:+_}${2:/lowcase}/g}' %}",
-      "{# {% set js_files = [asset(\"/assets/js/public/dist/#{pagID}-min.js\")] %} #}",
-      "{# {% set body_class = '' %} #}",
+      "{# {% set controller = pagID %} #}",
       "{% extends 'public-site/_public-tpl.html.twig' %}",
       "{% block title %}${TM_FILENAME}{% endblock title %}",
       "{% block head %}",
@@ -57,16 +59,20 @@
       "    og_title: block('title')",
       "  } -%}",
       "{% endblock head %}",
-      "{% block body_end %}{% endblock body_end %}",
+      "{% block jsfiles_start %}{% endblock jsfiles_start %}",
+      "{% block jsfiles %}{% endblock jsfiles %}",
       "",
       "{##}",
       "",
       "{% block content %}",
       "  <main class=\"container\">",
       "    <h1>${TM_FILENAME}</h1>",
-      "  </main>",
-      "{% endblock content %}"
+      "  </h1>",
+      "{% endblock content %}",
+      "",
+      "{% block last_content %}{% endblock last_content %}",
+      ""
     ]
   }
- 
+
 }
