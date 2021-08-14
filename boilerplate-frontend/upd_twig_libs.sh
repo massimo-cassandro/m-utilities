@@ -15,6 +15,7 @@ cp -v ./node_modules/jquery/dist/jquery.min.js ./"$TARGET_DIR"/public/libs/
 cp -R -v ./node_modules/@massimo-cassandro/layout-tools/dist/. ./"$TARGET_DIR"/public/libs/
 
 # symfony form theme
+# cp -v ./node_modules/@massimo-cassandro/symfony-bootstrap-form-theme/dist/bs4_form_layout.html.twig ./"$TARGET_DIR"/templates/_shared/
 cp -v ./node_modules/@massimo-cassandro/symfony-bootstrap-form-theme/dist/bs5_form_layout.html.twig ./"$TARGET_DIR"/templates/_shared/
 
 # ckeditor
@@ -22,7 +23,7 @@ cp -R -v ./node_modules/@massimo-cassandro/m-utilities/ckeditor/ckeditor-dist/. 
 
 # includes contenuti
 # vengono aggiornati solo gli includes
-SOURCE=./node_modules/@massimo-cassandro/m-utilities/boilerplate-twig/_PROJ_ROOT_/_REPO_/templates/backoffice/contenuti
+SOURCE=./node_modules/@massimo-cassandro/m-utilities/boilerplate-twig/_SYMFONY_/templates/backoffice/contenuti
 TARGET="$TARGET_DIR"/templates/backoffice/contenuti/
 cp -v "$SOURCE"/contenuti-elenco.incl.html.twig "$TARGET"
 cp -v "$SOURCE"/contenuti-scheda.incl.html.twig "$TARGET"
@@ -49,7 +50,7 @@ SHARED_DIR_FILES=(
 
 for i in "${SHARED_DIR_FILES[@]}"
 do
-  SOURCE=./node_modules/@massimo-cassandro/m-utilities/boilerplate-twig/_PROJ_ROOT_/_REPO_/templates/_shared/"$i"
+  SOURCE=./node_modules/@massimo-cassandro/m-utilities/boilerplate-twig/_SYMFONY_/templates/_shared/"$i"
   TARGET="$TARGET_DIR"/templates/_shared/"$i"
   if [ -f "$TARGET" ]; then
     printf "* ${SUCCESS}${i}:${RESET}\n"

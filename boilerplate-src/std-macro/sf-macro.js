@@ -38,6 +38,18 @@
     </div>
   </fieldset>
 
+  ===============
+  JS
+  ===============
+  set_macro_listeners({
+    macro_wrappers:  document.querySelectorAll('.sf-macro-wrapper'),
+    add_callback:    null,
+    remove_callback: null,
+    add_del_btn:     true,
+    custom_del_btn:  null,
+    fw:              app_data.fw
+  });
+
 */
 
 export  function set_macro_listeners ( options ) {
