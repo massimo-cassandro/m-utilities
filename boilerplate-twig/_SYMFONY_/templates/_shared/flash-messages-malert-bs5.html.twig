@@ -1,9 +1,28 @@
 {#
+
+  js & css: percorsi dei file js/css da caricare contestualmente all'attivazione
+  del messaggio
+  null (default) per non caricare nulla
+
+  {% include '@includes/flash_messages_malert.html.twig' with {
+    js: null,
+    css: null
+  }%}
+
   TODO multiple messages
 #}
 
 {% set flash_messages = app.flashes|default() %}
 {%- if flash_messages -%}
+  <!-- googleoff: all -->
+  {%- if js|default(null) -%}
+    <script src="{{ js }}"></script>
+  {%- endif -%}
+
+  {%- if css|default(null) -%}
+    <script>document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="{{ css }}">');</script>
+  {%- endif -%}
+
   {% set type = '' %}
   {% set title = '' %}
   {% set mes = '' %}
@@ -56,4 +75,5 @@
       ok_btn_text : 'OK'
     });
   </script>
+  <!-- googleon: all -->
 {%- endif -%}

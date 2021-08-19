@@ -100,7 +100,7 @@ const datatable_setup = {
   jq = '/libs/jquery.min.js';
 
 // container: oggetto DOM o stringa selettore
-export function crea_datatable(container, dt_columns, jq) {
+export function crea_datatable(container, dt_columns) {
   let dt_opts = Object.assign({}, datatable_setup.datatable_options, {columns: dt_columns});
   return _creaDataTable( container,
     Object.assign({}, datatable_setup, {datatable_options: dt_opts}),
