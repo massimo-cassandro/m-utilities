@@ -18,6 +18,7 @@ tag picture per immagini
   alt: 'xxxx',
   class: 'img-fluid', // classe tag img
   lazyload: true, // facoltativo, default true
+  async: true,        // facoltativo, default true,
   credits: 'stringa_html', // facoltativo
   flag1x: false,    // se true, le immgini 1x devono avere `@1x` nel nome
   add_width: false, // se true aggiunge il tag `width` al tag img (dimensione ultimo src)
@@ -63,6 +64,7 @@ NB: WIDTH & HEIGHT da implementare completamente (nei tag source?)
 {% set class = class is defined and class ? class : '' %}
 {% set img_attrs = img_attrs is defined and img_attrs ? img_attrs : '' %}
 {% set lazyload = lazyload is defined ? lazyload : true %}
+{% set async = async is defined ? async : true %}
 {% set flag1x = flag1x is defined? flag1x : false %}
 {% set add_width = add_width is defined? add_width : false %}
 {% set add_height = add_height is defined? add_height : false %}
@@ -97,6 +99,7 @@ NB: WIDTH & HEIGHT da implementare completamente (nei tag source?)
               {{- lazyload? ' data-' : ' ' -}} srcset="{{- this_srcset|slice(1)|join(', ') -}}"
             {%- endif -%}
             {%- if lazyload %} loading="lazy"{% endif %}
+            {%- if async %} decoding ="async"{% endif %}
             {{- ' ' -}} alt="{{ alt }}"
             {%- if class %} class="{{ class }}"{% endif %}
             {%- if img_attrs %} {{ img_attrs|raw }}{% endif %}

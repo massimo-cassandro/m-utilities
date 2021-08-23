@@ -17,6 +17,7 @@ import {escapeHTML} from '../js-utilities/escapeHTML';
     img_fmt: [], // array dei formati di immagine prodotti dal viewer
     alt: '', // alt
     class: '',
+    async: true,
     fw: 'bs4' // bs4 (default) o bs5,
   });
 
@@ -81,6 +82,7 @@ export  function img_viewer(params) {
       alt:           '',          // alt
       class:         '',
       fw:            'bs4',
+      async:         true,
 
       // formati immagine prodotti dal viewer
       // in locale (mamp) non c'è webp (NB: nell'array va prima webp)
@@ -129,6 +131,7 @@ export  function img_viewer(params) {
         if(doppia_densita) sources += ` ${lazy_data_prefix}srcset="${this_src}"`;
         if(p.lazy) sources += ' loading="lazy"';
         if(p.class) sources += ` class="${p.class}"`;
+        if(p.async) sources += ' decoding ="async"';
         sources += ` alt="${escapeHTML(p.alt)}">`;
       }
 

@@ -6,7 +6,7 @@ export  function overlay( container ) {
   container.insertAdjacentHTML('beforeend',
     `<div class="${full_page? 'page-overlay' : 'div-overlay'}">` +
       '<div class="spinner-border" role="status">' +
-        '<span class="sr-only">Caricamento...</span>' +
+        '<span class="sr-only visually-hidden">Caricamento...</span>' +
       '</div>' +
     '</div>'
   );

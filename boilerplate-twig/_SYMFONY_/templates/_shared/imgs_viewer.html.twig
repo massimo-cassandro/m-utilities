@@ -22,6 +22,7 @@
     add_default_sizes: false,   // default
     class: 'img-fluid',
     lazyload: true,        // facoltativo, default true,
+    async: true,        // facoltativo, default true,
     attrs: null,           // attributi extra facoltativi
     viewer: path('inner_viewer') ~ '/',      // <== default glob_vars.viewer
     viewer_extra_params: ['fd=1', 'ext=1', 'alpha=1'], // <== array di eventuali parametri da aggiungere al viewer, ignorato se svg
@@ -80,6 +81,7 @@
 
 {% set alt = alt is defined? alt : '' %}
 {% set lazyload = lazyload is defined? lazyload : true %}
+{% set async = async is defined? async : true %}
 {% set add_default_sizes = add_default_sizes is defined? add_default_sizes : false %}
 {% set class = class is defined ? class : '' %}
 {% set lqip = lqip is defined ? lqip : null %}
@@ -164,6 +166,7 @@
               {{- (lazyload and (not lqip))? ' data-' : ' ' -}} src="{{ lqip? lqip : srcset[0] }}"
               {{- lazyload? ' data-' : ' ' -}} srcset="{{ srcset|slice(1)|join(', ') }}"
               {%- if lazyload %} loading="lazy"{% endif %}
+              {%- if async %} decoding ="async"{% endif %}
               {{- ' ' -}} alt="{{ alt }}"
               {%- if class %} class="{{ class }}"{% endif %}
               {%- if add_default_sizes %} width="{{ img.width }}" height="{{ img.height }}"{% endif %}

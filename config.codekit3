@@ -96,6 +96,48 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/archived\/scss\/_font-loader.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/archived\/scss\/_font-loader.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 1
+    },
+    "\/archived\/scss\/_forms-macro-alt-rows.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/archived\/scss\/_forms-macro-alt-rows.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 1
+    },
+    "\/archived\/scss\/_min_max_fix.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/archived\/scss\/_min_max_fix.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 1
+    },
     "\/archived\/twig_shared\/fancybox_cdn.html.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -308,90 +350,112 @@
       "oO" : 0,
       "oS" : 1
     },
-    "\/auto-datatables\/js\/_autoDataTable-BS5.js" : {
+    "\/auto-datatables\/js\/autoDataTable-bs5-no-jq.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/auto-datatables\/js\/_autoDataTable-BS5-min.js",
+      "oA" : 0,
+      "oAP" : "\/auto-datatables\/js\/autoDataTable-bs5-no-jq-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/auto-datatables\/js\/_autoDataTable.js" : {
+    "\/auto-datatables\/js\/autoDataTable-bs5.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/auto-datatables\/js\/_autoDataTable-min.js",
+      "oAP" : "\/auto-datatables\/js\/autoDataTable-bs5-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/auto-datatables\/js\/_creaDataTable-BS5.js" : {
+    "\/auto-datatables\/js\/autoDataTable.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/auto-datatables\/js\/_creaDataTable-BS5-min.js",
+      "oAP" : "\/auto-datatables\/js\/autoDataTable-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/auto-datatables\/js\/_creaDataTable.js" : {
+    "\/auto-datatables\/js\/creaDataTable-bs5-no-jq.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/auto-datatables\/js\/_creaDataTable-min.js",
+      "oA" : 0,
+      "oAP" : "\/auto-datatables\/js\/creaDataTable-bs5-no-jq-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/auto-datatables\/js\/src\/_config_base.js" : {
+    "\/auto-datatables\/js\/creaDataTable-bs5.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/auto-datatables\/js\/src\/_config_base-min.js",
+      "oAP" : "\/auto-datatables\/js\/creaDataTable-bs5-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/auto-datatables\/js\/src\/_config-bs4.js" : {
+    "\/auto-datatables\/js\/creaDataTable.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/auto-datatables\/js\/src\/_config-bs4-min.js",
+      "oAP" : "\/auto-datatables\/js\/creaDataTable-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/auto-datatables\/js\/src\/_config-bs5.js" : {
+    "\/auto-datatables\/js\/src\/config-base.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/auto-datatables\/js\/src\/_config-bs5-min.js",
+      "oAP" : "\/auto-datatables\/js\/src\/config-base-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/auto-datatables\/js\/src\/_creaDatatable_defaults.js" : {
+    "\/auto-datatables\/js\/src\/config-bs4.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/auto-datatables\/js\/src\/_creaDatatable_defaults-min.js",
+      "oAP" : "\/auto-datatables\/js\/src\/config-bs4-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/auto-datatables\/js\/src\/config-bs5.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/auto-datatables\/js\/src\/config-bs5-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/auto-datatables\/js\/src\/creaDatatable-defaults.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/auto-datatables\/js\/src\/creaDatatable-defaults-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -608,6 +672,30 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/boilerplate-frontend\/_vscode\/proj-v1.code-snippets" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/_vscode\/proj-v1.code-snippets",
+      "oF" : 0
+    },
+    "\/boilerplate-frontend\/_vscode\/proj-v2.code-snippets" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/_vscode\/proj-v2.code-snippets",
+      "oF" : 0
+    },
+    "\/boilerplate-frontend\/_vscode\/tasks.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/boilerplate-frontend\/_vscode\/tasks-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
+    },
     "\/boilerplate-frontend\/assets_template.sketch" : {
       "cB" : 0,
       "ft" : 8192,
@@ -689,6 +777,182 @@
       "oAP" : "\/boilerplate-frontend\/icone\/icone-svg\/.gitkeep",
       "oF" : 0
     },
+    "\/boilerplate-frontend\/js-src\/backoffice\/contenuti-elenco.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/js-src\/backoffice\/contenuti-elenco-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/js-src\/backoffice\/contenuti-scheda.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/js-src\/backoffice\/contenuti-scheda-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/js-src\/backoffice\/dashboard.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/js-src\/backoffice\/dashboard-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/js-src\/backoffice\/utenti-elenco.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/js-src\/backoffice\/utenti-elenco-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/js-src\/ckeditor.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/js-src\/ckeditor-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/js-src\/datatable-bs4.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/js-src\/datatable-bs4-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/js-src\/datatable.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/js-src\/datatable-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/js-src\/default-dt.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/js-src\/default-dt-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/js-src\/default.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/js-src\/default-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/js-src\/file-uploader.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/js-src\/file-uploader-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/js-src\/flash-message.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/js-src\/flash-message-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/js-src\/flash-messages-umd.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/js-src\/flash-messages-umd-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/js-src\/get-app-data.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/boilerplate-frontend\/js-src\/get-app-data-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/js-src\/pwd_utilties.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/js-src\/pwd_utilties-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/js-src\/recapiti.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/js-src\/recapiti-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/js-src\/start.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/js-src\/start-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/boilerplate-frontend\/marchi\/_sizes.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -767,21 +1031,29 @@
       "oAP" : "\/boilerplate-frontend\/npmrc.txt",
       "oF" : 0
     },
-    "\/boilerplate-frontend\/package.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-frontend\/package-min.json",
-      "oF" : 0,
-      "oO" : 0,
-      "oS" : 1
+    "\/boilerplate-frontend\/package.json.template" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/package.json.template",
+      "oF" : 0
     },
-    "\/boilerplate-frontend\/rollup.config (dynamic).js" : {
+    "\/boilerplate-frontend\/proj.code-workspace" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/proj.code-workspace",
+      "oF" : 0
+    },
+    "\/boilerplate-frontend\/purgecss.config.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/boilerplate-frontend\/rollup.config (dynamic)-min.js",
+      "oAP" : "\/boilerplate-frontend\/purgecss.config-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -797,84 +1069,122 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/boilerplate-src\/_imgs_viewer.js" : {
+    "\/boilerplate-frontend\/run-sass.sh" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/run-sass.sh",
+      "oF" : 0
+    },
+    "\/boilerplate-frontend\/template-js-contenuti\/contenuti-elenco.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/template-js-contenuti\/contenuti-elenco-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/template-js-contenuti\/contenuti-scheda.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/template-js-contenuti\/contenuti-scheda-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-frontend\/upd_twig_libs.sh" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-frontend\/upd_twig_libs.sh",
+      "oF" : 0
+    },
+    "\/boilerplate-src\/contenuti\/contenuti-elenco.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-src\/contenuti\/contenuti-elenco-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-src\/contenuti\/contenuti-scheda-bs5.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-src\/contenuti\/contenuti-scheda-bs5-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-src\/contenuti\/contenuti-scheda.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-src\/contenuti\/contenuti-scheda-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-src\/flash-messages\/malert-bs4-flash-messages.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/boilerplate-src\/_imgs_viewer-min.js",
+      "oAP" : "\/boilerplate-src\/flash-messages\/malert-bs4-flash-messages-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/boilerplate-src\/_print_icon.js" : {
+    "\/boilerplate-src\/imgs-viewer.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-src\/imgs-viewer-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-src\/print-icon.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-src\/print-icon-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/boilerplate-src\/recapiti\/recapiti.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/boilerplate-src\/_print_icon-min.js",
+      "oAP" : "\/boilerplate-src\/recapiti\/recapiti-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/boilerplate-src\/contenuti\/_contenuti_elenco.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-src\/contenuti\/_contenuti_elenco-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-src\/contenuti\/_contenuti_scheda.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-src\/contenuti\/_contenuti_scheda-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-src\/flash-messages\/_malert-bs4-flash-messages.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-src\/flash-messages\/_malert-bs4-flash-messages-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-src\/recapiti\/_recapiti.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-src\/recapiti\/_recapiti-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-src\/select2_bs4\/_select2.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-src\/select2_bs4\/_select2-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-src\/select2_bs4\/_select2.scss" : {
+    "\/boilerplate-src\/select2-bs4\/_select2.scss" : {
       "aP" : 0,
       "bl" : 0,
       "dP" : 10,
@@ -882,24 +1192,24 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/boilerplate-src\/select2_bs4\/_select2.css",
+      "oAP" : "\/boilerplate-src\/select2-bs4\/_select2.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/boilerplate-src\/std_macro\/_sf_macro.js" : {
+    "\/boilerplate-src\/select2-bs4\/select2.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/boilerplate-src\/std_macro\/_sf_macro-min.js",
+      "oAP" : "\/boilerplate-src\/select2-bs4\/select2-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/boilerplate-src\/std_macro\/_sf_macro.scss" : {
+    "\/boilerplate-src\/std-macro\/_sf-macro.scss" : {
       "aP" : 0,
       "bl" : 0,
       "dP" : 10,
@@ -907,976 +1217,334 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/boilerplate-src\/std_macro\/_sf_macro.css",
+      "oAP" : "\/boilerplate-src\/std-macro\/_sf-macro.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_editorconfig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_editorconfig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/_editorconfig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/_editorconfig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/_env.local" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/_env.local",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/_gitignore" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/_gitignore",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/config\/packages\/twig.yaml" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/config\/packages\/twig.yaml",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/_htaccess" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/_htaccess",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/ckeditor\/.gitkeep" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/ckeditor\/.gitkeep",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/_shared\/_alerts.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/_shared\/_alerts.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/_shared\/_grid_container_mixin.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/_shared\/_grid_container_mixin.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/_shared\/_icone.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/_shared\/_icone.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/_shared\/_vars.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/_shared\/_vars.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/backoffice.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/backoffice.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_bootstrap-variables.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_bootstrap-variables.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_bootstrap.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_bootstrap.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_boxes.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_boxes.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_browser-alert.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_browser-alert.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_buttons.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_buttons.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_datatable.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_datatable.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_fileuploader.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_fileuploader.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_forms.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_forms.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_layout.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_layout.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_menu.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_menu.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_table.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_table.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_text.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/backoffice\/scss\/_text.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/public\/public.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/public\/public.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/public\/scss\/.gitkeep" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/css\/public\/scss\/.gitkeep",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/email\/_mail-vars.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/email\/_mail-vars.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/email\/mail-embed.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/email\/mail-embed.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/email\/mail-inline.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/email\/mail-inline.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/imgs\/.gitkeep" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/imgs\/.gitkeep",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/backoffice-libs.js" : {
+    "\/boilerplate-src\/std-macro\/sf-macro.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/backoffice-libs-min.js",
+      "oAP" : "\/boilerplate-src\/std-macro\/sf-macro-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/backoffice.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/backoffice-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/public-libs.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/public-libs-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/public.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/public-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/src-backoffice\/_datatable_config.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/src-backoffice\/_datatable_config-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/src-backoffice\/_file_uploader.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/src-backoffice\/_file_uploader-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/src-backoffice\/_utenti_scheda.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/src-backoffice\/_utenti_scheda-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/src-backoffice\/.gitkeep" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/src-backoffice\/.gitkeep",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/src-shared\/.gitkeep" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/src-shared\/.gitkeep",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/src\/.gitkeep" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js-OLD_VERSION\/src\/.gitkeep",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/contenuti-elenco.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/contenuti-elenco-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/contenuti-scheda.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/contenuti-scheda-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/dashboard.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/dashboard-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/default.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/default-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/src\/_ckeditor.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/src\/_ckeditor-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/src\/_datatable.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/src\/_datatable-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/src\/_file_uploader.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/src\/_file_uploader-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/src\/_get_app_data.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/src\/_get_app_data-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/src\/_pwd_utilties.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/src\/_pwd_utilties-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/src\/_recapiti.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/src\/_recapiti-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/src\/_start.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/src\/_start-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/utenti-elenco.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/backoffice\/utenti-elenco-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/flash-message.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/js\/flash-message-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/upd_twig_libs.sh" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/assets\/upd_twig_libs.sh",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/robots.txt" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/robots.txt",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/sitemap.xml" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/public\/sitemap.xml",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/_main.html.twig" : {
+    "\/boilerplate-twig\/_SYMFONY_\/_env.local" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/_main.html.twig",
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/_env.local",
       "oF" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/analytics.html.twig" : {
+    "\/boilerplate-twig\/_SYMFONY_\/config\/packages\/twig.yaml" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/analytics.html.twig",
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/config\/packages\/twig.yaml",
       "oF" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/favicons.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/favicons.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/file_uploader.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/file_uploader.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/flash_messages_malert.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/flash_messages_malert.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/flash_messages.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/flash_messages.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/flash-messages-malert-bs4-js.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/flash-messages-malert-bs4-js.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/form_end_sf4.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/form_end_sf4.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/form_end_sf5.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/form_end_sf5.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/google_font_loader.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/google_font_loader.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/google_font_v2_loader.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/google_font_v2_loader.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/icone.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/icone.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/imgs_viewer.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/imgs_viewer.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/imgs.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/imgs.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/meta.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/meta.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/recapiti.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/_shared\/recapiti.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/_backoffice-tpl-v1.html.twig" : {
+    "\/boilerplate-twig\/_SYMFONY_\/public\/_htaccess" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/_backoffice-tpl-v1.html.twig",
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/public\/_htaccess",
       "oF" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/_backoffice-tpl-v2.html.twig" : {
+    "\/boilerplate-twig\/_SYMFONY_\/public\/robots.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/public\/robots.txt",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/public\/sitemap.xml" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/public\/sitemap.xml",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/_main.html.twig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/_backoffice-tpl-v2.html.twig",
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/_main.html.twig",
       "oF" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/_incl\/recapiti.html.twig" : {
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/analytics.html.twig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/_incl\/recapiti.html.twig",
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/analytics.html.twig",
       "oF" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-elenco.html.twig" : {
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/favicons.html.twig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-elenco.html.twig",
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/favicons.html.twig",
       "oF" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-elenco.incl.html.twig" : {
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/file_uploader.html.twig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-elenco.incl.html.twig",
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/file_uploader.html.twig",
       "oF" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-scheda.html.twig" : {
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/flash-messages-malert-bs4-js.html.twig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-scheda.html.twig",
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/flash-messages-malert-bs4-js.html.twig",
       "oF" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-scheda.incl.html.twig" : {
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/flash-messages-malert-bs5.html.twig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/contenuti\/contenuti-scheda.incl.html.twig",
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/flash-messages-malert-bs5.html.twig",
       "oF" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/dashboard.html.twig" : {
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/flash-messages.html.twig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/dashboard.html.twig",
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/flash-messages.html.twig",
       "oF" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/utenti\/utenti-elenco.html.twig" : {
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/form_end_sf4.html.twig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/utenti\/utenti-elenco.html.twig",
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/form_end_sf4.html.twig",
       "oF" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/utenti\/utenti-scheda.html.twig" : {
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/form_end_sf5.html.twig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/backoffice\/utenti\/utenti-scheda.html.twig",
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/form_end_sf5.html.twig",
       "oF" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/email\/_email-tpl.html.twig" : {
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/google_font_loader.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/google_font_loader.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/google_font_v2_loader.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/google_font_v2_loader.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/icone.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/icone.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/imgs_viewer.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/imgs_viewer.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/imgs.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/imgs.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/meta.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/meta.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/recapiti.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/recapiti.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/_backoffice-tpl-v1.html.twig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/email\/_email-tpl.html.twig",
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/_backoffice-tpl-v1.html.twig",
       "oF" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/email\/attivazione-utente.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/email\/attivazione-utente.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/email\/richiesta-contatto.html.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/email\/richiesta-contatto.html.twig",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/public-site\/_public-tpl-v1.html.twig" : {
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/_backoffice-tpl-v2.html.twig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/public-site\/_public-tpl-v1.html.twig",
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/_backoffice-tpl-v2.html.twig",
       "oF" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/security\/_security-tpl.html.twig" : {
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/_incl\/recapiti.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/_incl\/recapiti.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/contenuti\/contenuti-elenco.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/contenuti\/contenuti-elenco.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/contenuti\/contenuti-elenco.incl.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/contenuti\/contenuti-elenco.incl.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/contenuti\/contenuti-scheda.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/contenuti\/contenuti-scheda.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/contenuti\/contenuti-scheda.incl.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/contenuti\/contenuti-scheda.incl.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/dashboard.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/dashboard.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/utenti\/utenti-elenco.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/utenti\/utenti-elenco.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/utenti\/utenti-scheda.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/backoffice\/utenti\/utenti-scheda.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/email\/_email-tpl.html.twig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/security\/_security-tpl.html.twig",
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/email\/_email-tpl.html.twig",
       "oF" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/security\/login.html.twig" : {
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/email\/attivazione-utente.html.twig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/security\/login.html.twig",
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/email\/attivazione-utente.html.twig",
       "oF" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/security\/recupero-pwd.html.twig" : {
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/email\/richiesta-contatto.html.twig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_REPO_\/templates\/security\/recupero-pwd.html.twig",
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/email\/richiesta-contatto.html.twig",
       "oF" : 0
     },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_vscode\/proj-v1.code-snippets" : {
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/public-site\/_public-tpl-v1.html.twig" : {
       "cB" : 0,
       "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_vscode\/proj-v1.code-snippets",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_vscode\/proj-v2.code-snippets" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_vscode\/proj-v2.code-snippets",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/_vscode\/tasks.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/_vscode\/tasks-min.json",
-      "oF" : 0,
-      "oO" : 0,
-      "oS" : 1
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/@files_repo\/.gitkeep" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/@files_repo\/.gitkeep",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/proj.code-workspace" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/proj.code-workspace",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/pwd\/.gitkeep" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/pwd\/.gitkeep",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/_PROJ_ROOT_\/SETUP checklist.md" : {
-      "cB" : 0,
-      "cS" : 0,
-      "eF" : 1,
-      "eL" : 1,
-      "ema" : 1,
-      "eSQ" : 1,
-      "ft" : 4096,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/boilerplate-twig\/_PROJ_ROOT_\/SETUP checklist.html",
-      "oF" : 0,
-      "oFM" : 0,
-      "oS" : 0,
-      "pHT" : 0,
-      "pME" : 1,
-      "rFN" : 0,
-      "uCM" : 0
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/public-site\/_public-tpl-v1.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/security\/_security-tpl.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/security\/_security-tpl.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/security\/login.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/security\/login.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/security\/recupero-pwd.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/security\/recupero-pwd.html.twig",
+      "oF" : 0
+    },
+    "\/boilerplate-twig\/@files_repo\/.gitkeep" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/@files_repo\/.gitkeep",
+      "oF" : 0
     },
     "\/boilerplate-twig\/contenuti.sql" : {
       "cB" : 0,
@@ -1884,14 +1552,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/boilerplate-twig\/contenuti.sql",
-      "oF" : 0
-    },
-    "\/boilerplate-twig\/LICENSE" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/boilerplate-twig\/LICENSE",
       "oF" : 0
     },
     "\/boilerplate-twig\/README.md" : {
@@ -1905,6 +1565,25 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/boilerplate-twig\/README.html",
+      "oF" : 0,
+      "oFM" : 0,
+      "oS" : 0,
+      "pHT" : 0,
+      "pME" : 1,
+      "rFN" : 0,
+      "uCM" : 0
+    },
+    "\/boilerplate-twig\/SETUP checklist.md" : {
+      "cB" : 0,
+      "cS" : 0,
+      "eF" : 1,
+      "eL" : 1,
+      "ema" : 1,
+      "eSQ" : 1,
+      "ft" : 4096,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/boilerplate-twig\/SETUP checklist.html",
       "oF" : 0,
       "oFM" : 0,
       "oS" : 0,
@@ -1927,7 +1606,7 @@
       "pg" : 0,
       "sct" : 1
     },
-    "\/bootstrap-utilities\/_bs_alerts.scss" : {
+    "\/bootstrap-utilities\/_bs-alerts.scss" : {
       "aP" : 0,
       "bl" : 0,
       "dP" : 10,
@@ -1935,13 +1614,13 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/bootstrap-utilities\/_bs_alerts.css",
+      "oAP" : "\/bootstrap-utilities\/_bs-alerts.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/bootstrap-utilities\/_bs_responsive_columns.scss" : {
+    "\/bootstrap-utilities\/_bs-responsive-columns.scss" : {
       "aP" : 0,
       "bl" : 0,
       "dP" : 10,
@@ -1949,21 +1628,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/bootstrap-utilities\/_bs_responsive_columns.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/bootstrap-utilities\/_forms-macro-alt-rows.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/bootstrap-utilities\/_forms-macro-alt-rows.css",
+      "oAP" : "\/bootstrap-utilities\/_bs-responsive-columns.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -1974,28 +1639,6 @@
       "oA" : 1,
       "oAP" : "\/ckeditor",
       "oF" : 0
-    },
-    "\/ckeditor-utilities\/_m-ckeditor-form-check.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/ckeditor-utilities\/_m-ckeditor-form-check-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/ckeditor-utilities\/_m-ckeditor-loader.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/ckeditor-utilities\/_m-ckeditor-loader-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
     },
     "\/ckeditor-utilities\/_m-ckeditor.scss" : {
       "aP" : 0,
@@ -2010,6 +1653,28 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
+    },
+    "\/ckeditor-utilities\/m-ckeditor-form-check.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/ckeditor-utilities\/m-ckeditor-form-check-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/ckeditor-utilities\/m-ckeditor-loader.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/ckeditor-utilities\/m-ckeditor-loader-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/ckeditor-utilities\/README.md" : {
       "cB" : 0,
@@ -2038,277 +1703,244 @@
       "oAP" : "\/favicon.ico",
       "oF" : 0
     },
-    "\/js-utilities\/_controllo-codice-fiscale-IT.js" : {
+    "\/js-utilities\/controllo-codice-fiscale-IT.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/js-utilities\/_controllo-codice-fiscale-IT-min.js",
+      "oAP" : "\/js-utilities\/controllo-codice-fiscale-IT-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_controllo-partita-iva-IT.js" : {
+    "\/js-utilities\/controllo-partita-iva-IT.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/js-utilities\/_controllo-partita-iva-IT-min.js",
+      "oAP" : "\/js-utilities\/controllo-partita-iva-IT-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_date_in_sequenza.js" : {
+    "\/js-utilities\/date-in-sequenza.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/js-utilities\/_date_in_sequenza-min.js",
+      "oA" : 0,
+      "oAP" : "\/js-utilities\/date-in-sequenza-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_date-utilities.js" : {
+    "\/js-utilities\/date-utilities.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/js-utilities\/_date-utilities-min.js",
+      "oAP" : "\/js-utilities\/date-utilities-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_email-antispam.js" : {
+    "\/js-utilities\/email-antispam.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/js-utilities\/_email-antispam-min.js",
+      "oAP" : "\/js-utilities\/email-antispam-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_escapeHTML.js" : {
+    "\/js-utilities\/escapeHTML.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/js-utilities\/_escapeHTML-min.js",
+      "oAP" : "\/js-utilities\/escapeHTML-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_festivita.js" : {
+    "\/js-utilities\/festivita.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/js-utilities\/_festivita-min.js",
+      "oAP" : "\/js-utilities\/festivita-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_form_utilities.js" : {
+    "\/js-utilities\/form-utilities.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/js-utilities\/_form_utilities-min.js",
+      "oAP" : "\/js-utilities\/form-utilities-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_genera_pwd.js" : {
+    "\/js-utilities\/genera-pwd.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/js-utilities\/_genera_pwd-min.js",
+      "oAP" : "\/js-utilities\/genera-pwd-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_ie_check.js" : {
+    "\/js-utilities\/ie-check.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/js-utilities\/_ie_check-min.js",
+      "oAP" : "\/js-utilities\/ie-check-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_input_date_raw_fallback.js" : {
+    "\/js-utilities\/input-date-raw-fallback.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/js-utilities\/_input_date_raw_fallback-min.js",
+      "oAP" : "\/js-utilities\/input-date-raw-fallback-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_input_date_support.js" : {
+    "\/js-utilities\/input-date-support.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/js-utilities\/_input_date_support-min.js",
+      "oAP" : "\/js-utilities\/input-date-support-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_input_datetime-bs4-modal-fallback.js" : {
+    "\/js-utilities\/input-datetime-bs4-modal-fallback.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/js-utilities\/_input_datetime-bs4-modal-fallback-min.js",
+      "oAP" : "\/js-utilities\/input-datetime-bs4-modal-fallback-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_mesi_giorni_it.js" : {
+    "\/js-utilities\/input-datetime-bs5-modal-fallback.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/js-utilities\/_mesi_giorni_it-min.js",
+      "oA" : 0,
+      "oAP" : "\/js-utilities\/input-datetime-bs5-modal-fallback-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_number_format.js" : {
+    "\/js-utilities\/mesi-giorni-it.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/js-utilities\/_number_format-min.js",
+      "oAP" : "\/js-utilities\/mesi-giorni-it-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_overlay.js" : {
+    "\/js-utilities\/number-format.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/js-utilities\/_overlay-min.js",
+      "oAP" : "\/js-utilities\/number-format-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_selector_utilities.js" : {
+    "\/js-utilities\/overlay.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/js-utilities\/_selector_utilities-min.js",
+      "oAP" : "\/js-utilities\/overlay-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_slide-up-down-toggle.js" : {
+    "\/js-utilities\/selector-utilities.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/js-utilities\/_slide-up-down-toggle-min.js",
+      "oAP" : "\/js-utilities\/selector-utilities-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_svg4everybody.js" : {
+    "\/js-utilities\/slide-up-down-toggle.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/js-utilities\/_svg4everybody-min.js",
+      "oAP" : "\/js-utilities\/slide-up-down-toggle-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_text_utilities.js" : {
+    "\/js-utilities\/submit-error-bs4.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/js-utilities\/_text_utilities-min.js",
+      "oA" : 0,
+      "oAP" : "\/js-utilities\/submit-error-bs4-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_textarea-autosize.js" : {
+    "\/js-utilities\/submit-error-bs5.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/js-utilities\/_textarea-autosize-min.js",
+      "oA" : 0,
+      "oAP" : "\/js-utilities\/submit-error-bs5-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/js-utilities\/_toggle_disabled.js" : {
+    "\/js-utilities\/svg4everybody.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/js-utilities\/_toggle_disabled-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/js-utilities\/_toggle_required.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/js-utilities\/_toggle_required-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/js-utilities\/_truncate_string.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/js-utilities\/_truncate_string-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/js-utilities\/_webp_support.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/js-utilities\/_webp_support-min.js",
+      "oAP" : "\/js-utilities\/svg4everybody-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -2320,6 +1952,72 @@
       "oA" : 0,
       "oAP" : "\/js-utilities\/test\/date_utilities.html",
       "oF" : 0
+    },
+    "\/js-utilities\/text-utilities.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/js-utilities\/text-utilities-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/js-utilities\/textarea-autosize.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/js-utilities\/textarea-autosize-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/js-utilities\/toggle-disabled.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/js-utilities\/toggle-disabled-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/js-utilities\/toggle-required.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/js-utilities\/toggle-required-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/js-utilities\/truncate-string.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/js-utilities\/truncate-string-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/js-utilities\/webp-support.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/js-utilities\/webp-support-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/legacy\/_check_bs4_mq.js" : {
       "bF" : 0,
@@ -3085,16 +2783,187 @@
       "oAP" : "\/LICENSE",
       "oF" : 0
     },
-    "\/m-sorting\/_m-sorting.js" : {
+    "\/m-alert-bs5\/_m-alert.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/m-alert-bs5\/_m-alert.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 1
+    },
+    "\/m-alert-bs5\/demo\/index.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/m-alert-bs5\/demo\/index.html",
+      "oF" : 0
+    },
+    "\/m-alert-bs5\/demo\/m-alert-bs5-demo.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/m-alert-bs5\/demo\/m-alert-bs5-demo-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/m-alert-bs5\/demo\/m-alert-bs5-demo.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/m-alert-bs5\/demo\/m-alert-bs5-demo.css.map",
+      "oF" : 0
+    },
+    "\/m-alert-bs5\/demo\/m-alert-bs5-demo.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/m-alert-bs5\/demo\/m-alert-bs5-demo-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/m-alert-bs5\/demo\/m-alert-bs5-demo.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/m-alert-bs5\/demo\/m-alert-bs5-demo.min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/m-alert-bs5\/demo\/m-alert-bs5-demo.min.js.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/m-alert-bs5\/demo\/m-alert-bs5-demo.min.js.map",
+      "oF" : 0
+    },
+    "\/m-alert-bs5\/demo\/m-alert-bs5-demo.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/m-alert-bs5\/demo\/m-alert-bs5-demo.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 1
+    },
+    "\/m-alert-bs5\/demo\/package.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/m-alert-bs5\/demo\/package-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
+    },
+    "\/m-alert-bs5\/m-alert.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/m-sorting\/_m-sorting-min.js",
+      "oAP" : "\/m-alert-bs5\/m-alert-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/m-alert-bs5\/marks.sketch" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/m-alert-bs5\/marks.sketch",
+      "oF" : 0
+    },
+    "\/m-alert-bs5\/README.md" : {
+      "cB" : 0,
+      "cS" : 0,
+      "eF" : 1,
+      "eL" : 1,
+      "ema" : 1,
+      "eSQ" : 1,
+      "ft" : 4096,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/m-alert-bs5\/README.html",
+      "oF" : 0,
+      "oFM" : 0,
+      "oS" : 0,
+      "pHT" : 0,
+      "pME" : 1,
+      "rFN" : 0,
+      "uCM" : 0
+    },
+    "\/m-alert-bs5\/svg\/confirm.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/m-alert-bs5\/svg\/confirm.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/m-alert-bs5\/svg\/error.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/m-alert-bs5\/svg\/error.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/m-alert-bs5\/svg\/info.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/m-alert-bs5\/svg\/info.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/m-alert-bs5\/svg\/success.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/m-alert-bs5\/svg\/success.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/m-alert-bs5\/svg\/warning.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/m-alert-bs5\/svg\/warning.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
     },
     "\/m-sorting\/_m-sorting.scss" : {
       "aP" : 0,
@@ -3109,6 +2978,17 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
+    },
+    "\/m-sorting\/m-sorting.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/m-sorting\/m-sorting-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/m-utilities.code-workspace" : {
       "cB" : 0,
@@ -3282,123 +3162,24 @@
       "oAP" : "\/node_modules",
       "oF" : 0
     },
-    "\/node_modules\/..\/node_modules\/bootstrap\/js\/dist\/alert.js" : {
+    "\/node_modules\/@rollup\/plugin-node-resolve\/.\/dist\/es\/index.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/node_modules\/..\/node_modules\/bootstrap\/js\/dist\/alert-min.js",
+      "oAP" : "\/node_modules\/@rollup\/plugin-node-resolve\/.\/dist\/es\/index-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/node_modules\/..\/node_modules\/bootstrap\/js\/dist\/dropdown.js" : {
+    "\/node_modules\/@rollup\/pluginutils\/.\/dist\/es\/index.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/node_modules\/..\/node_modules\/bootstrap\/js\/dist\/dropdown-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/node_modules\/..\/node_modules\/bootstrap\/js\/dist\/modal.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/node_modules\/..\/node_modules\/bootstrap\/js\/dist\/modal-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/node_modules\/..\/node_modules\/bootstrap\/js\/dist\/toast.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/node_modules\/..\/node_modules\/bootstrap\/js\/dist\/toast-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/node_modules\/..\/node_modules\/datatables.net-bs4\/js\/dataTables.bootstrap4.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/node_modules\/..\/node_modules\/datatables.net-bs4\/js\/dataTables.bootstrap4-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/node_modules\/..\/node_modules\/datatables.net\/js\/jquery.dataTables.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/node_modules\/..\/node_modules\/datatables.net\/js\/jquery.dataTables-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/node_modules\/..\/node_modules\/jquery\/dist\/jquery.min.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/node_modules\/..\/node_modules\/jquery\/dist\/jquery.min-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/node_modules\/..\/node_modules\/moment\/locale\/it.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/node_modules\/..\/node_modules\/moment\/locale\/it-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/node_modules\/..\/node_modules\/moment\/min\/moment.min.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/node_modules\/..\/node_modules\/moment\/min\/moment.min-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/node_modules\/..\/node_modules\/mustache\/mustache.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/node_modules\/..\/node_modules\/mustache\/mustache-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/node_modules\/..\/node_modules\/popper.js\/dist\/umd\/popper.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/node_modules\/..\/node_modules\/popper.js\/dist\/umd\/popper-min.js",
+      "oAP" : "\/node_modules\/@rollup\/pluginutils\/.\/dist\/es\/index-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -4635,6 +4416,17 @@
       "pg" : 0,
       "sct" : 1
     },
+    "\/node_modules\/deepmerge\/dist\/cjs.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/node_modules\/deepmerge\/dist\/cjs-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/node_modules\/jquery\/dist\/jquery.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -4653,6 +4445,50 @@
       "oA" : 1,
       "oAP" : "\/node_modules\/mustache\/mustache.mjs",
       "oF" : 0
+    },
+    "\/node_modules\/picomatch\/index.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/node_modules\/picomatch\/index-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/node_modules\/resolve\/index.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/node_modules\/resolve\/index-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/node_modules\/rollup-plugin-sourcemaps\/.\/dist\/index.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/node_modules\/rollup-plugin-sourcemaps\/.\/dist\/index-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/node_modules\/rollup-plugin-terser\/rollup-plugin-terser.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/node_modules\/rollup-plugin-terser\/rollup-plugin-terser-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/package-lock.json" : {
       "ft" : 524288,
@@ -4689,7 +4525,7 @@
       "rFN" : 0,
       "uCM" : 0
     },
-    "\/scss-functions\/_color_utilities.scss" : {
+    "\/scss-functions\/_color-utilities.scss" : {
       "aP" : 0,
       "bl" : 0,
       "dP" : 10,
@@ -4697,13 +4533,13 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/scss-functions\/_color_utilities.css",
+      "oAP" : "\/scss-functions\/_color-utilities.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/scss-functions\/_map_deep_get.scss" : {
+    "\/scss-functions\/_map-deep-get.scss" : {
       "aP" : 0,
       "bl" : 0,
       "dP" : 10,
@@ -4711,21 +4547,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/scss-functions\/_map_deep_get.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/scss-functions\/_min_max_fix.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/scss-functions\/_min_max_fix.css",
+      "oAP" : "\/scss-functions\/_map-deep-get.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -4745,7 +4567,7 @@
       "pg" : 0,
       "sct" : 1
     },
-    "\/scss-functions\/_str_replace.scss" : {
+    "\/scss-functions\/_str-replace.scss" : {
       "aP" : 0,
       "bl" : 0,
       "dP" : 10,
@@ -4753,13 +4575,13 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/scss-functions\/_str_replace.css",
+      "oAP" : "\/scss-functions\/_str-replace.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/scss-functions\/_svg_uri.scss" : {
+    "\/scss-functions\/_svg-uri.scss" : {
       "aP" : 0,
       "bl" : 0,
       "dP" : 10,
@@ -4767,13 +4589,13 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/scss-functions\/_svg_uri.css",
+      "oAP" : "\/scss-functions\/_svg-uri.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/scss-functions\/_type_checking.scss" : {
+    "\/scss-functions\/_type-checking.scss" : {
       "aP" : 0,
       "bl" : 0,
       "dP" : 10,
@@ -4781,7 +4603,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/scss-functions\/_type_checking.css",
+      "oAP" : "\/scss-functions\/_type-checking.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -4824,20 +4646,6 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/scss-utilities\/_euro.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/scss-utilities\/_font_loader.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/scss-utilities\/_font_loader.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -4898,17 +4706,6 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
-    },
-    "\/snackbars\/_snackbars.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/snackbars\/_snackbars-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
     },
     "\/snackbars\/_snackbars.scss" : {
       "aP" : 0,
@@ -4979,6 +4776,17 @@
       "oA" : 0,
       "oAP" : "\/snackbars\/demo\/index.html",
       "oF" : 0
+    },
+    "\/snackbars\/snackbars.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/snackbars\/snackbars-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/spinners\/_basic_spinner.scss" : {
       "aP" : 0,
