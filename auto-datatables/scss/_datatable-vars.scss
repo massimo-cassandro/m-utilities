@@ -7,7 +7,8 @@ $datatable_processing_padding: 0!default;
 $datatable_processing_bg: linear-gradient(to right, rgba($bianco, 0) 0%, rgba($bianco, .9) 25%, rgba($bianco, .9) 75%, rgba($bianco, 0) 100%) !default;
 
 $sorting_arrow_size: 4px !default; //  false per eliminare la freccia
-
+$sorting-arrow-cell-padding: .5em 1.5em .5em .5em !default; // padding applicato se presemte la freccia di ordinamento
+$sorting-arrow-bottom: false !default; // false per ignorare la regola bottom
 
 /*
   STRUTTURA del markup costruito da datatable e creaDatatable

@@ -20,7 +20,7 @@
     background-image: none;
 
     @if $sorting_arrow_size {
-      padding: .5em 1.5em .5em .5em !important;
+      padding: $sorting-arrow-cell-padding !important;
 
       &::before, &::after {
         position: absolute;
@@ -31,7 +31,12 @@
         content: '' !important;
         border-color: transparent;
         border-width: $sorting_arrow_size;
+
+        @if $sorting-arrow-bottom != false {
+          bottom: $sorting-arrow-bottom !important;
+        }
       }
+
     } @else {
       padding: .5em;
     }
