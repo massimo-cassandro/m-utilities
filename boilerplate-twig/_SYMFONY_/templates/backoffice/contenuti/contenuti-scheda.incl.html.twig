@@ -6,12 +6,14 @@
 {% include 'backoffice/contenuti/contenuti-scheda.incl.html.twig' with {
   route_elenco: 'backoffice_contenuti_elenco',
   fw: 'bs4' / 'bs5',
-  form_end_incl: '@includes/form_end_sf5.html.twig'
+  form_end_incl: '@includes/form_end_sf5.html.twig',
+  config_box_class: 'mb-4'                    <== classe container form config
 } %}
 #}
 {% set route_elenco = route_elenco is defined? route_elenco : 'backoffice_contenuti_elenco' %}
 {% set fw = fw is defined? fw : 'bs4' %}
 {% set form_end_incl = form_end_incl is defined? form_end_incl : '@includes/form_end_sf5.html.twig' %}
+{% set config_box_class = config_box_class is defined? config_box_class : 'mb-4' %}
 
 
 <h1>
@@ -47,7 +49,7 @@
 {{ form_errors(form) }}
 
 {%- if is_granted('ROLE_SUPER_ADMIN') -%}
-  <div class="box mb-4">
+  <div {{- config_box_class? " class=\"#{config_box_class}\""|raw : '' }}>
     <fieldset id="cfg-fset" class="fset">
       <legend>Config <button type="button" id="toggle-config" class="ms-4 ml-4 btn btn-link p-0 small">Mostra/Nascondi</button></legend>
       <div id="cfg-wrapper" {{- entity.id|default()? ' style="display:none"' : '' }} class="pt-4">
@@ -147,7 +149,7 @@
           <div class="col-lg-6">
             {{ form_row(form.note, {
               label: "Info per i redattori",
-              attr: {class: 'editor editor-xxlite'}
+              attr: {class: 'editor'}
             }) }}
 
             {%- if entity.id|default() -%}

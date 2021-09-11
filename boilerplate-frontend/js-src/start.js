@@ -72,6 +72,18 @@ export default function start() {
     }, 4000);
   }
 
+  // navigazione scheda / elenco
+  let nav_main = document.querySelector('.inner-nav-main');
+  if(nav_main) {
+    nav_main.classList.add('text-right', 'd-print-none');
+    let nav = nav_main.innerHTML;
+
+    document.querySelectorAll('.inner-nav').forEach(item => {
+      item.innerHTML=nav;
+      item.classList.add('text-right', 'd-print-none');
+    });
+  }
+
   //page is loaded
   document.documentElement.classList.add('page-is-loaded');
 }
