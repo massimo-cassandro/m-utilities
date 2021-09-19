@@ -7,23 +7,25 @@ Chiusura form standard
 personalizzazioni:
 
 {% include '@includes/form_end_std.html.twig' with {
-  submit_button_id    : '__id__', //default ''
-  submit_text         : 'Registra'
-  show_submit         : true, //default
-  submit_name         : '__name__', // default ''
+  submit_button_id     : '__id__',     //default ''
+  submit_text          : 'Registra'
+  show_submit          : true,         //default
+  submit_name          : '__name__',   // default ''
 
-  show_delete         : true, // default, mostra il cbox cancellato
-  delete_field        : 'cancellato', // default, nome del campo
-  delete_label        : "Elimina", // default
-  delete_id           : 'rec_cancellato', // facoltativo
-  delete_class        : "", // default
-  delete_label_class  : "", // default
-  delete_help         : "", // default
+  show_delete          : true,               // default, mostra il cbox cancellato
+  delete_field         : 'cancellato',       // default, nome del campo
+  delete_label         : "Elimina",          // default
+  delete_id            : 'rec_cancellato',   // facoltativo
+  delete_class         : "",                 // default
+  delete_label_class   : "",                 // default
+  delete_help          : "",                 // default
 
-  show_edit_info      : true, //default
-  edit_info_new_line  : false,
-  umTimestamp         : entity.umTimestamp,   //default
-  umUtente            : entity.umUtente, //default
+  show_edit_info       : true,               //default
+  edit_info_icon       : 'orologio-line',    // default, false per non mostrare l'icona
+  edit_info_icon_class : 'icona me-1',       // default
+  edit_info_new_line   : false,
+  umTimestamp          : entity.umTimestamp, //default
+  umUtente             : entity.umUtente,    //default
 } %}
 
 #}
@@ -69,10 +71,15 @@ personalizzazioni:
   {% set show_edit_info = show_edit_info is defined ? show_edit_info : true %}
   {% set umTimestamp = umTimestamp is defined? umTimestamp : entity.umTimestamp|default() %}
   {% set umUtente = umUtente is defined? umUtente : entity.umUtente|default() %}
+  {% set edit_info_icon = edit_info_icon is defined? edit_info_icon : 'orologio-line' %}
+  {% set edit_info_icon_class = edit_info_icon_class is defined? edit_info_icon_class : 'icona me-2' %}
 
   {%- if entity.id|default() and  show_edit_info -%}
     <div class="{%- if not edit_info_new_line %}col-md-6 mt-md-0 {% endif -%} form-edit-info text-center text-md-end mt-2">
-      <span>{% include '@includes/icone.html.twig' with { id: 'orologio', class: 'icona' } %}</span>
+
+      {%- if edit_info_icon|default() -%}
+        <span>{% include '@includes/icone.html.twig' with { id: edit_info_icon, class: edit_info_icon_class } %}</span>
+      {%- endif -%}
       {{ umTimestamp|format_datetime('medium', 'none', locale=app.request.locale) }}
       <small>{{ umTimestamp|date('H:i') }}</small>
 
