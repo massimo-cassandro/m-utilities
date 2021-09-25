@@ -42,7 +42,7 @@
   {% set ariaIDs = ariaIDs|merge([titleUniqueId]) %}
 {%- endif -%}
 
-{% set class = class is defined? ' ' ~ class : ''  %}
+{% set class = class is defined? class : ''  %}
 
 {%- if id|length == 1 and id[0] ends with '-line' -%}
   {% set class = class ~ ' line-icon' %}

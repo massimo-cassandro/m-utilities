@@ -1370,6 +1370,14 @@
       "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/icone.html.twig",
       "oF" : 0
     },
+    "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/imgs_viewer_WORK.html.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/imgs_viewer_WORK.html.twig",
+      "oF" : 0
+    },
     "\/boilerplate-twig\/_SYMFONY_\/templates\/_shared\/imgs_viewer.html.twig" : {
       "cB" : 0,
       "ft" : 8192,
