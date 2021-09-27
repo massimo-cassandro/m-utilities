@@ -48,9 +48,11 @@ export default function (options) {
         let editor = ckeditor_instances[item.id],
           cke_data = editor.getData();
         cke_data = cke_data
-          .replace(/^((<p>&nbsp;<\/p>)*)/i, '') // righe vuote all'inizio
-          .replace(/((<p>&nbsp;<\/p>)*)$/i, '') // righe vuote alla fine
-          .replace(/( *(&nbsp;)*<\/p>)$/i, ''); // spazi vuoti alla fine dei tag p
+          .replace(/^((<p(.*?)>( |&nbsp;)*<\/p>)*)/i, '') // righe vuote all'inizio
+          .replace(/((<p(.*?)>( |&nbsp;)*<\/p>)*)$/i, '') // righe vuote alla fine
+          // .replace(/(<p(.*?)>( |&nbsp;)*<\/p>){2,}/i, '<p>&nbsp;</p>') // righe vuote consecutive
+          .replace(/(<p(.*?)>( |&nbsp;)*<\/p>)+/i, '') // righe vuote
+          .replace(/(( |&nbsp;)*<\/p>)$/ig, '</p>'); // spazi vuoti alla fine dei tag p
 
         // https://ckeditor.com/docs/ckeditor5/latest/api/module_editor-classic_classiceditor-ClassicEditor.html#function-setData
         editor.setData( cke_data.trim() );
