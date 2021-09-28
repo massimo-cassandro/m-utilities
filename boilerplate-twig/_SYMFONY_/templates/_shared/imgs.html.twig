@@ -92,7 +92,7 @@ NB: WIDTH & HEIGHT da implementare completamente (nei tag source?)
         {% if (not last_brk) or (not last_fmt) %}
           <source {{- lazyload? ' data-' : ' ' -}} srcset="{{ this_srcset|join(', ') }}"
             {%- if fmt == 'webp' %} type="image/webp"{% endif -%}
-            {{- ' ' -}} media="{{ glob_vars.mq[brk] }}">
+            {{- ' ' -}} media="{{ glob_vars.mq|merge(glob_vars.special_mq)[brk] }}">
         {% else %}
           <img {{- lazyload? ' data-' : ' ' -}} src="{{ this_srcset[0] }}"
             {%- if this_srcset|length > 1 %}
