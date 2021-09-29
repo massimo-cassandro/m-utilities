@@ -1,0 +1,14 @@
+.border {
+  border-style: solid;
+  border-width: 1px;
+
+  @each $shade in $color-shades {
+    &-#{$shade} {
+      border-color: var(--color-neutral-#{$shade});
+    }
+  }
+}
+
+.border-radius {
+  border-radius: $border-radius;
+}

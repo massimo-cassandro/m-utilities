@@ -1,0 +1,69 @@
+// margin & padding utilities
+$sides: (x, y, xy, top, right, bottom, left);
+$space-unit: .25rem;
+$spacings: (auto, 0, 1, 2, 4, 8); //multipli di $space-unit
+$properties: (margin, padding);
+
+/* stylelint-disable */
+@each $side in $sides {
+
+  $side-prefix: if($side == xy, '', str-slice($side, 1, 1));
+
+
+  @each $prop in $properties {
+    $prop-prefix: str-slice($prop, 1, 1);
+
+    @each $val in $spacings {
+      .#{$prop-prefix}#{$side-prefix}-#{$val} {
+
+        $this-prop: (#{$prop}-#{$side});
+
+        @if $side == x {
+          $this-prop: (#{$prop}-left, #{$prop}-right);
+
+        } @else if $side == y {
+          $this-prop: (#{$prop}-top, #{$prop}-bottom);
+
+        } @else if $side == xy {
+          $this-prop: ($prop);
+        }
+
+        @each $p in $this-prop {
+          @if $val == auto {
+            #{$p}: auto !important;
+          } @else if $val > 0 {
+            #{$p}: $val * $space-unit !important;
+          } @else {
+            #{$p}: $val !important;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+// widths and heighs
+
+.w-auto {
+  width: auto !important;
+}
+.h-auto {
+  height: auto !important;
+}
+
+/* stylelint-enable */
+
+// text align
+/* stylelint-disable declaration-no-important */
+@each $align in (left, right, center) {
+  .text-#{$align} {
+    text-align: $align !important;
+  }
+  .text-md-#{$align} {
+    @include media-breakpoint-up(md) {
+      text-align: $align !important;
+    }
+  }
+}
+/* stylelint-enable declaration-no-important */

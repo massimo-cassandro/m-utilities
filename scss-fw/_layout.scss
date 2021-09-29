@@ -1,0 +1,36 @@
+html, body, .content {
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.main-header {
+  padding: 1rem 0;
+  background-color: var(--color-neutral-xlight);
+  border-bottom: 1px solid var(--color-neutral-light);
+
+  h1 {
+    margin: 0;
+    font-size: 3.8rem;
+    line-height: .5;
+    text-transform: lowercase;
+    @extend %font-wght-xxlight;
+  }
+}
+footer {
+  padding: 1rem 0;
+  margin-top: auto;
+  font-size: 70%;
+  color: var(--color-neutral-dark);
+  background-color: var(--color-neutral-xlight);
+  border-top: 1px solid var(--color-neutral-light);
+}
+
+main {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}

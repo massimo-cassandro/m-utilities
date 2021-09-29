@@ -1,0 +1,101 @@
+// =>> COLORS
+$color-primary: #0458a2 !default;
+// $color-secondary:   #90856e;
+$color-text:    #424242 !default;
+$color-text-bg: #fff !default;
+$grey-xxlight:  #f4f6f6 !default;
+$grey-xlight:   #e7ecee !default;
+$grey-light:    #d9dddf !default;
+$grey-medium:   #78909c !default;
+$grey-dark:     #455a64 !default;
+$text-muted:    #bdbdbd !default;
+$color-alert:   #8e7616 !default;
+
+// $primary-yiq: color-yiq($color-primary, $color-text, $color-text-bg);
+$color-links:       $color-primary !default;
+$color-links-hover: darken($color-links, 15) !default;
+$links-border:      darken($color-links, 10) !default;
+// $secondary-yiq: color-yiq($color-secondary, $color-text, $color-text-bg);
+
+// shades of neutral color, used for backgrounds, borders, etc.
+// all of them must have a related item in `$colors` map (neutral-...)
+$color-shades: (xxlight, xlight, light, medium, dark) !default;
+
+$colors: (
+  primary:               $color-primary,
+  // primary-yiq:           $primary-yiq,
+  // secondary:             $color-secondary,
+  // secondary-yiq:         $secondary-yiq,
+  neutral-xxlight:       $grey-xxlight,
+  neutral-xlight:        $grey-xlight,
+  neutral-light:         $grey-light,
+  neutral-medium:        $grey-medium,
+  neutral-dark:          $grey-dark,
+  text:                  $color-text,
+  text-bg:               $color-text-bg,
+  links:                 $color-links,
+  links-border:          $links-border,
+  links-yiq:             color-yiq($color-links, $color-text, $color-text-bg),
+  links-hover:           $color-links-hover,
+  links-hover-yiq:       color-yiq($color-links-hover, $color-text, $color-text-bg),
+  text-muted:            $text-muted,
+  inpt-btn-border:       $grey-medium,
+  inpt-btn-border-focus: $links-border,
+  color-alert:           $color-alert,
+  color-alert-bg:        lighten($color-alert, 50%)
+) !default;
+
+// =>> BREAKPOINTS
+
+$breakpoints: (
+  sm: 0,
+  md: 640px,
+  lg: 1024px,
+  xl: 1440px
+) !default;
+
+//=>> FONTS
+
+// https://fonts.google.com/specimen/Libre+Franklin
+
+$wghts: (
+  xxlight:  100, // not in non-variable set (uses fallback: https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#fallback_weights)
+  xlight:   200, // not in non-variable
+  light:    300,
+  regular:  400,
+  semibold: 550, // not in non-variable set
+  bold:     700
+) !default;
+
+// $body-font-family:            var(--font-family);
+$body-font-weight-light:    map-get($wghts, light) !default;
+$body-font-weight-regular:  map-get($wghts, regular) !default;
+$body-font-weight-semibold: map-get($wghts, semibold) !default;
+$body-font-weight-bold:     map-get($wghts, bold) !default;
+
+// $heading-font-family:         $body-font-family !default;
+$heading-font-weight-light:   map-get($wghts, xlight) !default;
+$heading-font-weight-regular: map-get($wghts, xlight) !default;
+$heading-font-weight-bold:    map-get($wghts, light) !default;
+
+$line-height:      1.45 !default;
+$root-font-size:   16px !default;
+$font-size-base:   1rem !default;
+$font-size-big:    $font-size-base * 1.25 !default;
+$font-size-medium: 85% !default;
+$font-size-small:  75% !default;
+$font-size-xsmall: 65% !default;
+
+
+// =>> MISC
+$border-radius:   .4rem !default;
+$form-control-bg: map-get($colors, text-bg) !default;
+$form-control-x-padding: .6rem !default;
+$form-control-y-padding: .5rem !default;
+$btn-x-padding: $form-control-x-padding * 2 !default;
+$btn-y-padding: $form-control-y-padding * 1.5 !default;
+
+// =>> PLACEHOLDERS
+%focus {
+  box-shadow: 0 0 6px 2px rgba(map-get($colors, links), .7) !default;
+}

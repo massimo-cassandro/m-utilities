@@ -1,0 +1,138 @@
+
+
+label, .label {
+  display: block;
+  padding: 0;
+  margin-bottom: .1rem;
+  font-size: .9rem;
+  text-align: left;
+
+  @extend %font-wght-semibold;
+}
+
+// form {}
+
+// da bootstrap 5
+.form-control{
+  $line-height: 1.2;
+
+  display: block;
+  width: 100%;
+  padding: $form-control-y-padding $form-control-x-padding;
+  line-height: $line-height;
+  // color: $text-color;
+  background-color: $form-control-bg;
+  background-clip: padding-box;
+  border: 1px solid var(--color-inpt-btn-border);
+  border-radius: $border-radius;
+  appearance: none; // Fix appearance for date inputs in Safari
+
+  &:focus {
+    border-color: var(--color-inpt-btn-border-focus);
+    outline: 0;
+    @extend %focus;
+  }
+
+  // Placeholder
+  &::placeholder {
+    color: var(--color-neutral-light);
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &:disabled,
+  &[readonly] {
+    font-style: italic;
+    color: var(--color-neutral-light);
+    background-color: var(--color-neutral-medium);
+    border-color: var(--color-neutral-light);
+    opacity: 1;
+  }
+  .disabled {
+    label {
+      font-style: italic;
+      color: var(--color-neutral-light);
+    }
+  }
+
+  &.autosize { //textarea
+    height: 2.6em; // 42px
+    min-height: 2.6em;
+  }
+}
+
+
+// https://github.com/twbs/bootstrap/blob/main/scss/forms/_form-select.scss
+select.form-control {
+  padding: $form-control-y-padding ($form-control-x-padding * 4) $form-control-y-padding $form-control-x-padding;
+  background-image: svg-uri('<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16"><path fill="none" stroke="#{$color-text}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 5L8 11 14 5"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right $form-control-x-padding center;
+  background-size: 16px 16px;
+}
+
+// checkbox & radio
+.form-check { // label
+  position: relative;
+  padding-left: 1.25em;
+
+  & input {
+    position: absolute;
+    top: 3px;
+    left: 0;
+  }
+}
+
+// https://github.com/twbs/bootstrap/blob/main/scss/forms/_input-group.scss
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  width: 100%;
+
+  > .form-control {
+    position: relative; // For focus state's z-index
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0; // https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size
+  }
+
+  > .btn {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: $form-control-x-padding;
+    padding-left: $form-control-x-padding;
+  }
+
+  // borders
+  > * {
+    &:focus {
+      z-index: 3;
+    }
+    &:not(:last-child) {
+      border-right: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &:not(:first-child) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+
+.form-help {
+  @extend .s-small;
+  margin-top: .3rem;
+  color: var(--color-neutral-medium);
+}

@@ -1,0 +1,5 @@
+@each $shade in $color-shades {
+  .bg-#{$shade} {
+    background-color: var(--color-neutral-#{$shade});
+  }
+}

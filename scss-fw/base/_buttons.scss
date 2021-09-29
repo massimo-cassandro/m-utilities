@@ -1,0 +1,82 @@
+.btn {
+  padding: ($btn-y-padding * .9) $btn-x-padding $btn-y-padding;
+  line-height: 1;
+  color: var(--color-links-yiq);
+  text-align: center;
+  background-color: var(--color-links);
+  border: 1px solid var(--color-links-border);
+  border-radius: $border-radius;
+
+  &:hover, &:active {
+    color: var(--color-links-hover-yiq);
+    background-color: var(--color-links-hover);
+  }
+
+  &.btn-outline {
+    color: var(--color-links);
+    background-color: var(--color-text-bg);
+    border-color: var(--color-inpt-btn-border);
+
+    &:hover, &:active {
+      color: var(--color-links-yiq);
+      background-color: var(--color-links);
+      border-color: var(--color-links-border);
+    }
+  }
+
+  &.btn-sm {
+    padding: .3rem .5rem .4rem;
+    padding: ($btn-y-padding * .45) ($btn-x-padding * .5) ($btn-y-padding * .5);
+    font-size: .85rem;
+  }
+
+  &:focus {
+    @extend %focus;
+  }
+
+  &.disabled, &:disabled {
+    font-style: italic;
+    color: var(--color-neutral-medium);
+    pointer-events: none;
+    cursor: default;
+    background-color: var(--color-neutral-light);
+    border-color: var(--color-neutral-medium);
+    transform: skewX(-2deg);
+  }
+}
+
+// gruppo .btn
+.btn-grp {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  > .btn {
+    display: block;
+    width: 100%;
+
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+  }
+
+  // @include media-breakpoint-up(md) {
+  //   flex-direction: row;
+  //   justify-content: space-between;
+
+  //   &-md-row-reverse {
+  //     @include media-breakpoint-up(md) {
+  //       flex-direction: row-reverse;
+  //     } // end md
+  //   }
+
+  //   > .btn {
+  //     display: inline;
+  //     width: auto;
+  //     margin: 0;
+  //   }
+  // }
+}

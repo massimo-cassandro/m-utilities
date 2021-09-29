@@ -1,0 +1,94 @@
+// https://fontsource.org/docs/sass/mixins
+// https://fontsource.org/docs/variable-fonts
+
+
+@use '@fontsource/work-sans/scss/mixins' as font-mixins;
+
+$font-family: 'Work Sans';
+$variable-font-family: 'Work SansVariable';
+$generic-font-family: sans-serif;
+
+$font-id: font-mixins.$fontId; //'work-sans';
+$font-dir: font-mixins.$fontDir; // from mixin
+$font-display: swap;
+
+$non-variable-weights: (
+  map-get($wghts, light),
+  map-get($wghts, regular),
+  map-get($wghts, bold)
+);
+$variable-weights: 100 900;
+$styles: (normal, italic);
+$subset: 'latin';
+
+$variable-type: 'wghtOnly';
+
+// ==================================
+// NON-VARIABLE FONTS (.woff only)
+// ==================================
+
+@each $w in $non-variable-weights {
+  @each $s in $styles {
+    @font-face {
+      font-family: '#{$font-family}';
+      font-style: $s;
+      font-display: $font-display;
+      font-weight: $w;
+      src: url('#{$font-dir}/#{$font-id}-#{$subset}-#{$w}-#{$s}.woff') format('woff');
+      unicode-range: #{map-get(font-mixins.$unicodeMap, $subset)};
+    }
+    // @include fontFaceCustom(
+    //   $fontName: $font-family,
+    //   $weight: $w,
+    //   $style: $s,
+    //   $display: swap,
+    //   $woff2Path: '#{$fontDir}/#{$fontId}-#{$subset}-#{$w}-#{$s}.woff2',
+    //   $woffPath: '#{$fontDir}/#{$fontId}-#{$subset}-#{$w}-#{$s}.woff',
+    //   $unicodeRange: true,
+    //   $unicodeRangeValues: map-get($unicodeMap, $subset)
+    // );
+  }
+}
+
+:root {
+  --font-family: '#{$font-family}', #{$generic-font-family};
+}
+body {
+  font-weight: $body-font-weight-regular;
+}
+
+// ==================================
+// VARIABLE FONT
+// ==================================
+// file name sample: work-sans-latin-variable-wghtOnly-italic.woff2
+
+@each $s in $styles {
+  @include font-mixins.fontFaceVariableCustom(
+    $fontName: $variable-font-family,
+    $fontId: $font-id,
+    $style: $s,
+    $display: $font-display,
+    $weight: $variable-weights,
+    $woff2Path: '#{$font-dir}/#{$font-id}-#{$subset}-variable-#{$variable-type}-#{$s}.woff2',
+    $unicodeRange: true,
+    $unicodeRangeValues: #{map-get(font-mixins.$unicodeMap, $subset)}
+  );
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    --font-family: '#{$variable-font-family}', #{$generic-font-family};
+  }
+  body {
+    font-variation-settings: 'wght' $body-font-weight-regular;
+  }
+}
+
+
+@each $wght, $val in $wghts {
+
+  %font-wght-#{$wght} {
+    font-weight: #{$val};
+    font-variation-settings: 'wght' #{$val};
+  }
+}

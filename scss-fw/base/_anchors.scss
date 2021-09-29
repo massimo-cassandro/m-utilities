@@ -1,0 +1,10 @@
+
+// anchors
+a {
+  color: var(--color-links);
+  text-decoration: underline;
+  @extend %font-wght-semibold;
+  &:hover, &:focus {
+    color: var(--color-links-hover);
+  }
+}

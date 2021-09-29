@@ -1,0 +1,19 @@
+@media print {
+
+  .print-none {
+    display: none;
+  }
+
+  @page {
+    size: a4 portrait;
+    margin: 1cm;
+  }
+
+  html {
+    font-size: 12pt;
+  }
+  body {
+    color: #000;
+    background-color: #fff;
+  }
+}

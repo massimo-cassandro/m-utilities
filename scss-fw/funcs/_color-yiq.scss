@@ -1,0 +1,17 @@
+// https://codepen.io/FabricioAnciaes/pen/grEJzE
+
+@function yiq($color) {
+  $red: red($color);
+  $green: green($color);
+  $blue: blue($color);
+
+  @return (( $red * .299 ) + ( $green * .587 ) + ( $blue * .114 ));
+}
+
+@function color-yiq($background, $dark: map-get($colors, text), $light: map-get($colors, text-bg)) {
+  @if yiq($background) >= 128 {
+    @return $dark;
+  } @else {
+    @return $light;
+  }
+}

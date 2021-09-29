@@ -1,0 +1,88 @@
+/*
+  GRID:
+  sm: 1 column
+  md: 2 columns
+  lg: 4 columns
+  xl: 4 columns
+
+
+  |            |            |            |             |
+  +------------+            |            |             |
+  |   col-1    |            |            |             |
+  +------------+            |            |             |
+  |            |            |            |             |
+  +-------------------------+            |             |
+  |         col-2           |            |             |
+  +-------------------------+            |             |
+  |            |            |            |             |
+  +--------------------------------------+             |
+  |               col-3                  |             |
+  +--------------------------------------+             |
+  |            |            |            |             |
+  +----------------------------------------------------+
+  |                       col-4                        |
+  +----------------------------------------------------+
+  |            |            |            |             |
+
+
+  columns widths against container:
+  +-------+------+------+------+------+
+  |       |  sm  |  md  |  lg  |  xl  |
+  +-------+------+------+------+------+
+  | col-1 | 100% |  50% |  25% |  25% |
+  +-------+------+------+------+------+
+  | col-2 | 100% | 100% |  50% |  50% |
+  +-------+------+------+------+------+
+  | col-3 | 100% | 100% |  75%  | 75% |
+  +-------+------+------+------+------+
+  | col-4 | 100% | 100% | 100% | 100% |
+  +-------+------+------+------+------+
+
+*/
+
+@use 'sass:math';
+
+.flexgrid {
+  $gap: 2rem;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start; // multiline container
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: $gap;
+
+  > .col-1, .col-2, .col-3, .col-4 {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  @function flexgrid-width($cols, $totcols) {
+    // @return calc((100% - (#{$gap} * #{$totcols - 1})) / #{$totcols / $cols});
+    @return calc((100% - #{$gap * ($totcols - 1)}) * #{math.div($cols, $totcols)});
+  }
+
+  @mixin flexgrid-col($cols, $totcols, $flex-grow: 0) {
+    flex: #{$flex-grow} 1 flexgrid-width($cols, $totcols);
+    width: flexgrid-width($cols, $totcols);
+  }
+
+  @include media-breakpoint-up(md) {
+    > .col-1 {
+      @include flexgrid-col(1, 2);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    > .col-1 {
+      @include flexgrid-col(1, 4);
+    }
+    > .col-2 {
+      @include flexgrid-col(2, 4);
+    }
+    > .col-3 {
+      @include flexgrid-col(3, 4);
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin: 0 auto;
+
+  @each $brk, $val in $breakpoints {
+    @if $val != 0 {
+      @include media-breakpoint-up($brk) {
+        width: $val;
+      } // end md
+    }
+  }
+}

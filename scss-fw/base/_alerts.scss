@@ -1,0 +1,11 @@
+.alert {
+  padding: .1rem .1rem .2rem;
+  margin: 1rem 0;
+  color: var(--color-color-alert);
+  text-align: center;
+  background-color: var(--color-color-alert-bg);
+  // border: 1px solid var(--color-color-alert-border);
+  // border-radius: $border-radius;
+
+  @extend %font-wght-semibold;
+}

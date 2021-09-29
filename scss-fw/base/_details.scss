@@ -1,0 +1,37 @@
+details {
+  border-color: var(--color-neutral-light);
+  border-style: solid none;
+  border-width: 1px;
+
+  > summary {
+    padding: 2px 4px;
+    list-style: none;
+
+    &::before {
+      display: inline-block;
+      width: 1rem;
+      margin-right: .2rem;
+      content: '\25B6';
+    }
+  }
+  &[open] {
+    @extend .bg-xxlight;
+
+    > summary {
+      margin-bottom: 1rem;
+      @extend .bg-light;
+      &::before {
+        content: '\25BC';
+      }
+    }
+
+    > .details-content {
+      padding: .6rem;
+
+    }
+  }
+}
+summary {
+  @extend %font-wght-semibold;
+  @extend .s-medium;
+}
