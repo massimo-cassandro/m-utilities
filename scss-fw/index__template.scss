@@ -1,0 +1,37 @@
+@import 'css-reset-and-normalize/scss/reset-and-normalize';
+@import 'css-reset-and-normalize/scss/button-reset';
+@import 'css-reset-and-normalize/scss/link-reset';
+
+@import '@massimo-cassandro/m-utilities/scss-functions/svg-uri';
+
+@import '@massimo-cassandro/m-utilities/scss-fw/funcs/color-yiq';
+@import '@massimo-cassandro/m-utilities/scss-fw/funcs/media-queries';
+
+@import './vars'; // personalizzare
+
+@import '@massimo-cassandro/m-utilities/scss-fw/base/root';
+@import '@massimo-cassandro/m-utilities/scss-fw/base/base';
+@import '@massimo-cassandro/m-utilities/scss-fw/base/typography';
+@import '@massimo-cassandro/m-utilities/scss-fw/base/borders';
+@import '@massimo-cassandro/m-utilities/scss-fw/base/backgrounds';
+@import '@massimo-cassandro/m-utilities/scss-fw/base/alerts';
+@import '@massimo-cassandro/m-utilities/scss-fw/base/anchors';
+@import '@massimo-cassandro/m-utilities/scss-fw/base/details';
+@import '@massimo-cassandro/m-utilities/scss-fw/base/flex';
+@import '@massimo-cassandro/m-utilities/scss-fw/base/container';
+@import '@massimo-cassandro/m-utilities/scss-fw/base/flexgrid';
+@import '@massimo-cassandro/m-utilities/scss-fw/base/buttons';
+@import '@massimo-cassandro/m-utilities/scss-fw/base/forms';
+// @import '@massimo-cassandro/m-utilities/scss-fw/base/box';
+// @import '@massimo-cassandro/m-utilities/scss-fw/base/transforms';
+@import '@massimo-cassandro/m-utilities/scss-fw/base/utilities';
+@import '@massimo-cassandro/m-utilities/scss-fw/base/sr-only';
+
+@import '@massimo-cassandro/m-utilities/scss-fw/base/dark-theme';
+
+@import '@massimo-cassandro/m-utilities/scss-fw/base/print';
+
+
+// non importare direttamente, ma usare come template
+@import './fonts';
+@import './layout';

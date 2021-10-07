@@ -138,10 +138,10 @@ Esempio OUTPUT
 
           {# calcolo w e h da fattore proporzionale #}
           {%- if params.wr is defined and params.h|default(null) is not null -%}
-            {% set params = params|merge({w: (params.h * params.wr)|round(0, 'floor')}) %}
+            {% set params = params|merge({w: (params.h * params.wr)|round(0, 'ceil')}) %}
           {%- endif -%}
           {%- if params.hr is defined and params.w|default(null) is not null -%}
-            {% set params = params|merge({h: (params.w * params.hr)|round(0, 'floor')}) %}
+            {% set params = params|merge({h: (params.w * params.hr)|round(0, 'ceil')}) %}
           {%- endif -%}
 
           {%- for formato in (local? ['default'] : ['webp', 'default']) -%}

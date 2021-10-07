@@ -1,14 +1,14 @@
 // https://fontsource.org/docs/sass/mixins
 // https://fontsource.org/docs/variable-fonts
+// https://fonts.google.com/specimen/Archivo
 
+@use '@fontsource/archivo/scss/mixins' as font-mixins;
 
-@use '@fontsource/work-sans/scss/mixins' as font-mixins;
-
-$font-family: 'Work Sans';
-$variable-font-family: 'Work SansVariable';
+$font-family: 'Archivo';
+$variable-font-family: 'ArchivoVariable';
 $generic-font-family: sans-serif;
 
-$font-id: font-mixins.$fontId; //'work-sans';
+$font-id: font-mixins.$fontId;
 $font-dir: font-mixins.$fontDir; // from mixin
 $font-display: swap;
 
@@ -22,6 +22,7 @@ $styles: (normal, italic);
 $subset: 'latin';
 
 $variable-type: 'wghtOnly';
+$stretch: 62% 125%; // false if not needed
 
 // ==================================
 // NON-VARIABLE FONTS (.woff only)
@@ -63,16 +64,28 @@ body {
 // file name sample: work-sans-latin-variable-wghtOnly-italic.woff2
 
 @each $s in $styles {
-  @include font-mixins.fontFaceVariableCustom(
-    $fontName: $variable-font-family,
-    $fontId: $font-id,
-    $style: $s,
-    $display: $font-display,
-    $weight: $variable-weights,
-    $woff2Path: '#{$font-dir}/#{$font-id}-#{$subset}-variable-#{$variable-type}-#{$s}.woff2',
-    $unicodeRange: true,
-    $unicodeRangeValues: #{map-get(font-mixins.$unicodeMap, $subset)}
-  );
+  // @include font-mixins.fontFaceVariableCustom(
+  //   $fontName: $variable-font-family,
+  //   $fontId: $font-id,
+  //   $style: $s,
+  //   $display: $font-display,
+  //   $weight: $variable-weights,
+  //   $woff2Path: '#{$font-dir}/#{$font-id}-#{$subset}-variable-#{$variable-type}-#{$s}.woff2',
+  //   $unicodeRange: true,
+  //   $unicodeRangeValues: #{map-get(font-mixins.$unicodeMap, $subset)}
+  // );
+
+  @font-face {
+    font-family: #{$variable-font-family};
+    font-style: $s;
+    font-display: $font-display;
+    font-weight: $variable-weights;
+    @if $stretch != false {
+      font-stretch: $stretch;
+    }
+    src: url('#{$font-dir}/#{$font-id}-#{$subset}-variable-#{$variable-type}-#{$s}.woff2') format('woff2');
+    unicode-range: map-get(font-mixins.$unicodeMap, $subset);
+  }
 }
 
 @supports (font-variation-settings: normal) {

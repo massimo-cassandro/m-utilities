@@ -13,7 +13,7 @@
     $device-type: screen;
   }
 
-  @if $brk == sm {
+  @if $brk == xs {
     @content;
 
   } @else {
