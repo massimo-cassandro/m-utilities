@@ -46,13 +46,20 @@ export default function (options) {
       // trimming
       editor_textareas.forEach(item => {
         let editor = ckeditor_instances[item.id],
-          cke_data = editor.getData();
+          cke_data = editor.getData(),
+          extra_cleaning = item.classList.contains('editor-cleaner');
+
         cke_data = cke_data
-          .replace(/^((<p(.*?)>( |&nbsp;)*<\/p>)*)/i, '') // righe vuote all'inizio
-          .replace(/((<p(.*?)>( |&nbsp;)*<\/p>)*)$/i, '') // righe vuote alla fine
-          // .replace(/(<p(.*?)>( |&nbsp;)*<\/p>){2,}/i, '<p>&nbsp;</p>') // righe vuote consecutive
-          .replace(/(<p(.*?)>( |&nbsp;)*<\/p>)+/i, '') // righe vuote
-          .replace(/(( |&nbsp;)*<\/p>)$/ig, '</p>'); // spazi vuoti alla fine dei tag p
+          .trim()
+          .replace(/^((<p(.*?)>(\s|&nbsp;)*<\/p>)*)/ig, '') // righe vuote all'inizio
+          .replace(/((<p(.*?)>(\s|&nbsp;)*<\/p>)*)$/ig, ''); // righe vuote alla fine
+
+        if(extra_cleaning) {
+          cke_data = cke_data
+            .replace(/(<p(.*?)>(\s|&nbsp;)*<\/p>)+/i, '') // righe vuote
+            .replace(/((\s|&nbsp;)+<\/p>)$/ig, '</p>') // spazi vuoti alla fine dei tag p
+            .replace(/(<h\d>)<strong>(.*?)<\/strong>(<\/h\d>) /ig, '$1$2$3'); // strong dentro gli header
+        }
 
         // https://ckeditor.com/docs/ckeditor5/latest/api/module_editor-classic_classiceditor-ClassicEditor.html#function-setData
         editor.setData( cke_data.trim() );

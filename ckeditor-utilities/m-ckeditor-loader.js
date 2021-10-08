@@ -14,7 +14,11 @@ export default function (loader_options) {
 
     link_auto_ext_target_blank: false,
     link_download: false,
-    link_target_blank: false
+    link_target_blank: false,
+
+    // abilita una pulizia molto accentuata del codice generato
+    // (eseguita dal modulo form-check)
+    extra_cleaning: false
   };
 
   let cke_opts = Object.assign({}, default_options, loader_options || {});
@@ -193,6 +197,9 @@ export default function (loader_options) {
               rel: 'noopener noreferrer'
             }
           };
+        }
+        if(cke_opts.extra_cleaning) {
+          item.dataset.contains('editor-cleaner');
         }
 
         // console.log(options);

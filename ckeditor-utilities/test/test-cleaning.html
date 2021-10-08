@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Test clean text</title>
+    <style>
+      .wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2rem;
+      }
+      .box {
+        flex: 1 1 50%;
+        padding: 1rem;
+        border: 1px solid #ccc;
+      }
+      p {
+        background-color: #efefef;
+      }
+      h2, h3, h4 {
+        font-weight: 400;
+        background-color: #ace2e4;
+      }
+      strong {
+        color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <div id="source" class="box">
+        <p>&nbsp;</p><p style="color: #f00;">&nbsp;</p>
+        <p>inizio</p>
+        <p>Dignissimos molestias reprehenderit voluptas <strong>dolor laudantium</strong> numquam sed et eaque. Dolores esse
+          provident. Quia est corporis veniam voluptas mollitia consequatur saepe sed aut. Necessitatibus occaecati eum vitae.
+          Expedita et cumque tempora.</p>
+        <p>&nbsp;</p><p style="color: #f00;">&nbsp;</p>
+        <p>Facere aliquid quas est quis vitae odio. Illum aut vero fugiat. Sed velit est sit rerum consectetur qui aut debitis
+          eum. Velit explicabo natus aut id quidem est esse. Unde assumenda qui maiores quia aut facere ad fugit. Qui dolor
+          quaerat et.</p>
+        <h2>Unde assumenda qui maiores quia aut facere</h2>
+        <p>Veniam voluptas quo corporis atque <strong>quia dolor hic itaque</strong>. Quia sit omnis quidem impedit corporis et.
+          Quia ad ea nihil nulla est numquam. Rem eum a quos est at.</p>
+        <p class="aaaa">&nbsp;</p>
+        <h3><strong>Aut sint voluptatibus.</strong></h3>
+        <p>Adipisci a consequatur aut quas magnam neque saepe eaque. Sed et <strong>molestiae</strong>. Commodi totam ut qui
+          nobis voluptatem veniam deserunt laborum. Aut magnam quibusdam cumque placeat aut odio. Alias nesciunt ipsum ratione.
+          Occaecati aspernatur porro dolorum iste alias voluptas.</p>
+        <h4>Illum aut vero fugiat</h4>
+        <p>Quia modi sapiente aliquid. Ullam in porro quaerat magni <strong>voluptatibus</strong> quia a eum id. Qui repellendus
+          et. Tenetur eligendi sunt nemo magnam quas illo.</p>
+        <h3>Occaecati aspernatur porro&nbsp;</h3>
+        <p>Omnis animi voluptatum. Sunt ad et voluptates. Aut sint voluptatibus.</p>
+        <p>A ab nulla ut et placeat incidunt sit. Voluptatibus repellat quos sapiente unde eius. Et eum voluptatem eaque dolore
+          nihil hic. Dolorum maiores laboriosam.</p>
+        <p>fine</p>
+        <p>&nbsp;</p>
+      </div>
+      <div id="target" class="box"></div>
+    </div>
+
+    <script>
+      let text = document.getElementById('source').innerHTML;
+
+      text = text
+        .trim()
+        .replace(/^((<p(.*?)>(\s|&nbsp;)*<\/p>)*)/ig, '') // righe vuote all'inizio
+        .replace(/((<p(.*?)>(\s|&nbsp;)*<\/p>)*)$/ig, ''); // righe vuote alla fine
+
+      text = text
+        .replace(/(<p(.*?)>(\s|&nbsp;)*<\/p>)+/ig, '') // righe vuote
+        .replace(/((\s|&nbsp;)+<\/p>)$/ig, '</p>') // spazi vuoti alla fine dei tag p
+        .replace(/(<h\d.*?>)\s*<strong>\s*(.*?)\s*<\/strong>\s*(<\/h\d>)/ig, '$1$2$3'); // strong dentro gli header
+
+      document.getElementById('target').innerHTML = text;
+
+    </script>
+
+  </body>
+</html>

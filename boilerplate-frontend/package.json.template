@@ -4,7 +4,7 @@
   "description": "xxx xxxx / frontend",
   "main": "/public",
   "scripts": {
-    "sass": "node_modules/.bin/sass css/orario.scss css/orario.css --source-map --load-path=node_modules/ --style=expanded --watch",
+    "sass": "npx sass css/orario.scss css/orario.css --source-map --load-path=node_modules/ --style=expanded --watch",
     "rollup": "npx rollup --config --watch",
     "build_icons": "cd icone && gulp",
     "update_externals_libs": "sh upd_twig_libs.sh"

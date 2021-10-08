@@ -7,7 +7,7 @@
       "uuidString" : "991010E9-FF8C-468F-8FFE-D2E604494AA0"
     }
   ],
-  "creatorBuild" : "34127",
+  "creatorBuild" : "34214",
   "files" : {
     "\/.editorconfig" : {
       "cB" : 0,
@@ -99,6 +99,7 @@
     "\/archived\/scss\/_font-loader.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -113,6 +114,7 @@
     "\/archived\/scss\/_forms-macro-alt-rows.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -127,6 +129,7 @@
     "\/archived\/scss\/_min_max_fix.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -237,6 +240,7 @@
     "\/auto-datatables\/demo\/bs4\/datatable-demo.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -331,6 +335,7 @@
     "\/auto-datatables\/demo\/bs5\/datatable-demo.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -482,6 +487,7 @@
     "\/auto-datatables\/scss\/_crea-datatable.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -496,6 +502,7 @@
     "\/auto-datatables\/scss\/_datatable-controls-bs.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -510,6 +517,7 @@
     "\/auto-datatables\/scss\/_datatable-pagination-bs.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -524,6 +532,7 @@
     "\/auto-datatables\/scss\/_datatable-processing.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -538,6 +547,7 @@
     "\/auto-datatables\/scss\/_datatable-responsive.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -552,6 +562,7 @@
     "\/auto-datatables\/scss\/_datatable-sorting-bs.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -566,6 +577,7 @@
     "\/auto-datatables\/scss\/_datatable-table-bs.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -580,6 +592,7 @@
     "\/auto-datatables\/scss\/_datatable-vars.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -594,6 +607,7 @@
     "\/auto-datatables\/scss\/_datatables-classes.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -956,6 +970,7 @@
     "\/boilerplate-frontend\/marchi\/_sizes.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1184,20 +1199,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/boilerplate-src\/select2-bs4\/_select2.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/boilerplate-src\/select2-bs4\/_select2.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
     "\/boilerplate-src\/select2-bs4\/select2.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -1212,6 +1213,7 @@
     "\/boilerplate-src\/std-macro\/_sf-macro.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1603,6 +1605,7 @@
     "\/bootstrap-utilities\/_boxes.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1617,6 +1620,7 @@
     "\/bootstrap-utilities\/_bs-alerts.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1631,6 +1635,7 @@
     "\/bootstrap-utilities\/_bs-responsive-columns.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1651,6 +1656,7 @@
     "\/ckeditor-utilities\/_m-ckeditor.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2082,6 +2088,7 @@
     "\/legacy\/_font_loader.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2162,6 +2169,7 @@
     "\/legacy\/auto-datatables\/_scss\/_creaDatatable.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2176,6 +2184,7 @@
     "\/legacy\/auto-datatables\/_scss\/_datatable_controls_bs4.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2190,6 +2199,7 @@
     "\/legacy\/auto-datatables\/_scss\/_datatable_paging_bs4.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2204,6 +2214,7 @@
     "\/legacy\/auto-datatables\/_scss\/_datatable_processing.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2218,6 +2229,7 @@
     "\/legacy\/auto-datatables\/_scss\/_datatable_responsive.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2232,6 +2244,7 @@
     "\/legacy\/auto-datatables\/_scss\/_datatable_sorting_bs4.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2246,6 +2259,7 @@
     "\/legacy\/auto-datatables\/_scss\/_datatable_table_bs4.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2260,6 +2274,7 @@
     "\/legacy\/auto-datatables\/_scss\/_datatable_vars.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2274,6 +2289,7 @@
     "\/legacy\/auto-datatables\/_scss\/_datatables_classes.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2318,6 +2334,7 @@
     "\/legacy\/js-scss-templates\/_ckeditor.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2343,6 +2360,7 @@
     "\/legacy\/js-scss-templates\/_icone.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2368,6 +2386,7 @@
     "\/legacy\/js-scss-templates\/_libs_datatable.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2382,6 +2401,7 @@
     "\/legacy\/js-scss-templates\/_libs_fancybox.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2407,6 +2427,7 @@
     "\/legacy\/js-scss-templates\/_overlay.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2550,6 +2571,7 @@
     "\/legacy\/mAccordion-bs4\/_mAccordion_bs4.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2564,6 +2586,7 @@
     "\/legacy\/mAccordion-bs4\/_mAccordion_wrapper_bs4.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2619,6 +2642,7 @@
     "\/legacy\/mAlert-bs4\/_mAlert.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2653,6 +2677,7 @@
     "\/legacy\/mAlert-bs4\/demo\/mAlert-demo.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2755,6 +2780,7 @@
     "\/legacy\/prismjs\/_prism.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2769,6 +2795,7 @@
     "\/legacy\/select2\/_select2-bootstrap4.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2802,6 +2829,7 @@
     "\/m-alert-bs5\/_m-alert.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2874,6 +2902,7 @@
     "\/m-alert-bs5\/demo\/m-alert-bs5-demo.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2984,6 +3013,7 @@
     "\/m-sorting\/_m-sorting.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3028,6 +3058,7 @@
     "\/mAlert-bs4\/_mAlert.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3084,6 +3115,7 @@
     "\/mAlert-bs4\/demo\/mAlert-demo.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3203,6 +3235,7 @@
     "\/node_modules\/bs4\/scss\/_alert.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3217,6 +3250,7 @@
     "\/node_modules\/bs4\/scss\/_badge.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3231,6 +3265,7 @@
     "\/node_modules\/bs4\/scss\/_breadcrumb.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3245,6 +3280,7 @@
     "\/node_modules\/bs4\/scss\/_button-group.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3259,6 +3295,7 @@
     "\/node_modules\/bs4\/scss\/_buttons.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3273,6 +3310,7 @@
     "\/node_modules\/bs4\/scss\/_card.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3287,6 +3325,7 @@
     "\/node_modules\/bs4\/scss\/_carousel.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3301,6 +3340,7 @@
     "\/node_modules\/bs4\/scss\/_close.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3315,6 +3355,7 @@
     "\/node_modules\/bs4\/scss\/_code.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3329,6 +3370,7 @@
     "\/node_modules\/bs4\/scss\/_custom-forms.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3343,6 +3385,7 @@
     "\/node_modules\/bs4\/scss\/_dropdown.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3357,6 +3400,7 @@
     "\/node_modules\/bs4\/scss\/_forms.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3371,6 +3415,7 @@
     "\/node_modules\/bs4\/scss\/_functions.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3385,6 +3430,7 @@
     "\/node_modules\/bs4\/scss\/_grid.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3399,6 +3445,7 @@
     "\/node_modules\/bs4\/scss\/_images.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3413,6 +3460,7 @@
     "\/node_modules\/bs4\/scss\/_input-group.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3427,6 +3475,7 @@
     "\/node_modules\/bs4\/scss\/_jumbotron.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3441,6 +3490,7 @@
     "\/node_modules\/bs4\/scss\/_list-group.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3455,6 +3505,7 @@
     "\/node_modules\/bs4\/scss\/_media.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3469,6 +3520,7 @@
     "\/node_modules\/bs4\/scss\/_mixins.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3483,6 +3535,7 @@
     "\/node_modules\/bs4\/scss\/_modal.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3497,6 +3550,7 @@
     "\/node_modules\/bs4\/scss\/_nav.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3511,6 +3565,7 @@
     "\/node_modules\/bs4\/scss\/_navbar.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3525,6 +3580,7 @@
     "\/node_modules\/bs4\/scss\/_pagination.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3539,6 +3595,7 @@
     "\/node_modules\/bs4\/scss\/_popover.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3553,6 +3610,7 @@
     "\/node_modules\/bs4\/scss\/_print.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3567,6 +3625,7 @@
     "\/node_modules\/bs4\/scss\/_progress.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3581,6 +3640,7 @@
     "\/node_modules\/bs4\/scss\/_reboot.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3595,6 +3655,7 @@
     "\/node_modules\/bs4\/scss\/_root.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3609,6 +3670,7 @@
     "\/node_modules\/bs4\/scss\/_spinners.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3623,6 +3685,7 @@
     "\/node_modules\/bs4\/scss\/_tables.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3637,6 +3700,7 @@
     "\/node_modules\/bs4\/scss\/_toasts.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3651,6 +3715,7 @@
     "\/node_modules\/bs4\/scss\/_tooltip.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3665,6 +3730,7 @@
     "\/node_modules\/bs4\/scss\/_transitions.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3679,6 +3745,7 @@
     "\/node_modules\/bs4\/scss\/_type.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3693,6 +3760,7 @@
     "\/node_modules\/bs4\/scss\/_utilities.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3707,6 +3775,7 @@
     "\/node_modules\/bs4\/scss\/_variables.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3721,6 +3790,7 @@
     "\/node_modules\/bs4\/scss\/bootstrap.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3735,6 +3805,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_alert.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3749,6 +3820,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_background-variant.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3763,6 +3835,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_badge.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3777,6 +3850,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_border-radius.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3791,6 +3865,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_box-shadow.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3805,6 +3880,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_breakpoints.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3819,6 +3895,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_buttons.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3833,6 +3910,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_caret.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3847,6 +3925,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_clearfix.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3861,6 +3940,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_deprecate.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3875,6 +3955,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_float.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3889,6 +3970,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_forms.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3903,6 +3985,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_gradients.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3917,6 +4000,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_grid-framework.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3931,6 +4015,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_grid.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3945,6 +4030,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_hover.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3959,6 +4045,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_image.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3973,6 +4060,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_list-group.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3987,6 +4075,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_lists.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4001,6 +4090,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_nav-divider.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4015,6 +4105,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_pagination.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4029,6 +4120,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_reset-text.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4043,6 +4135,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_resize.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4057,6 +4150,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_screen-reader.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4071,6 +4165,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_size.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4085,6 +4180,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_table-row.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4099,6 +4195,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_text-emphasis.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4113,6 +4210,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_text-hide.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4127,6 +4225,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_text-truncate.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4141,6 +4240,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_transition.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4155,6 +4255,7 @@
     "\/node_modules\/bs4\/scss\/mixins\/_visibility.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4169,6 +4270,7 @@
     "\/node_modules\/bs4\/scss\/utilities\/_align.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4183,6 +4285,7 @@
     "\/node_modules\/bs4\/scss\/utilities\/_background.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4197,6 +4300,7 @@
     "\/node_modules\/bs4\/scss\/utilities\/_borders.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4211,6 +4315,7 @@
     "\/node_modules\/bs4\/scss\/utilities\/_clearfix.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4225,6 +4330,7 @@
     "\/node_modules\/bs4\/scss\/utilities\/_display.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4239,6 +4345,7 @@
     "\/node_modules\/bs4\/scss\/utilities\/_embed.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4253,6 +4360,7 @@
     "\/node_modules\/bs4\/scss\/utilities\/_flex.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4267,6 +4375,7 @@
     "\/node_modules\/bs4\/scss\/utilities\/_float.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4281,6 +4390,7 @@
     "\/node_modules\/bs4\/scss\/utilities\/_interactions.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4295,6 +4405,7 @@
     "\/node_modules\/bs4\/scss\/utilities\/_overflow.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4309,6 +4420,7 @@
     "\/node_modules\/bs4\/scss\/utilities\/_position.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4323,6 +4435,7 @@
     "\/node_modules\/bs4\/scss\/utilities\/_screenreaders.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4337,6 +4450,7 @@
     "\/node_modules\/bs4\/scss\/utilities\/_shadows.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4351,6 +4465,7 @@
     "\/node_modules\/bs4\/scss\/utilities\/_sizing.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4365,6 +4480,7 @@
     "\/node_modules\/bs4\/scss\/utilities\/_spacing.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4379,6 +4495,7 @@
     "\/node_modules\/bs4\/scss\/utilities\/_stretched-link.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4393,6 +4510,7 @@
     "\/node_modules\/bs4\/scss\/utilities\/_text.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4407,6 +4525,7 @@
     "\/node_modules\/bs4\/scss\/utilities\/_visibility.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4421,6 +4540,7 @@
     "\/node_modules\/bs4\/scss\/vendor\/_rfs.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4544,6 +4664,7 @@
     "\/scss-functions\/_color-utilities.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4558,6 +4679,7 @@
     "\/scss-functions\/_map-deep-get.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4572,6 +4694,7 @@
     "\/scss-functions\/_px2rem.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4586,6 +4709,7 @@
     "\/scss-functions\/_str-replace.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4600,6 +4724,7 @@
     "\/scss-functions\/_svg-uri.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4614,6 +4739,7 @@
     "\/scss-functions\/_type-checking.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4628,6 +4754,7 @@
     "\/scss-fw\/_fonts__template.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4642,6 +4769,7 @@
     "\/scss-fw\/_layout__template.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4656,6 +4784,7 @@
     "\/scss-fw\/_vars.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4670,6 +4799,7 @@
     "\/scss-fw\/base\/_alerts.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4684,6 +4814,7 @@
     "\/scss-fw\/base\/_anchors.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4698,6 +4829,7 @@
     "\/scss-fw\/base\/_backgrounds.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4712,6 +4844,7 @@
     "\/scss-fw\/base\/_base.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4726,6 +4859,7 @@
     "\/scss-fw\/base\/_borders.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4740,6 +4874,7 @@
     "\/scss-fw\/base\/_box.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4754,6 +4889,7 @@
     "\/scss-fw\/base\/_buttons.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4768,6 +4904,7 @@
     "\/scss-fw\/base\/_container.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4782,6 +4919,7 @@
     "\/scss-fw\/base\/_dark-theme.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4796,6 +4934,7 @@
     "\/scss-fw\/base\/_details.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4810,6 +4949,7 @@
     "\/scss-fw\/base\/_flex.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4824,6 +4964,7 @@
     "\/scss-fw\/base\/_flexgrid.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4838,6 +4979,7 @@
     "\/scss-fw\/base\/_forms.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4852,6 +4994,7 @@
     "\/scss-fw\/base\/_print.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4866,6 +5009,7 @@
     "\/scss-fw\/base\/_root.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4880,6 +5024,7 @@
     "\/scss-fw\/base\/_sr-only.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4894,6 +5039,7 @@
     "\/scss-fw\/base\/_transforms.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4908,6 +5054,7 @@
     "\/scss-fw\/base\/_typography.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4922,6 +5069,7 @@
     "\/scss-fw\/base\/_utilities.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4936,6 +5084,7 @@
     "\/scss-fw\/funcs\/_color-yiq.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4950,6 +5099,7 @@
     "\/scss-fw\/funcs\/_media-queries.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4964,6 +5114,7 @@
     "\/scss-fw\/index__template.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4978,6 +5129,7 @@
     "\/scss-utilities\/_counters.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -4992,6 +5144,7 @@
     "\/scss-utilities\/_decimali.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -5006,6 +5159,7 @@
     "\/scss-utilities\/_euro.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -5020,6 +5174,7 @@
     "\/scss-utilities\/_font-weights.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -5034,6 +5189,7 @@
     "\/scss-utilities\/_nums.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -5048,6 +5204,7 @@
     "\/scss-utilities\/_overlay.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -5062,6 +5219,7 @@
     "\/scss-utilities\/_perc.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -5076,6 +5234,7 @@
     "\/snackbars\/_snackbars.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -5124,6 +5283,7 @@
     "\/snackbars\/demo\/demo.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -5157,6 +5317,7 @@
     "\/spinners\/_basic_spinner.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -5171,6 +5332,7 @@
     "\/spinners\/_cerchio_quadrato.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -5185,6 +5347,7 @@
     "\/spinners\/_circle_spinner.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -5199,6 +5362,7 @@
     "\/spinners\/_classic_spinner.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -5213,6 +5377,7 @@
     "\/spinners\/_classic_spinner2.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -5227,6 +5392,7 @@
     "\/spinners\/_rettangoli.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -5241,6 +5407,7 @@
     "\/spinners\/_three.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -5438,6 +5605,7 @@
     "\/TODO\/m-gallery\/_m-gallery.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -6396,7 +6564,8 @@
         "optionString" : ""
       },
       "no-multi-assign" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'ignoreNonDeclaration': false}"
       },
       "no-multi-spaces" : {
         "active" : 0,
@@ -6519,7 +6688,8 @@
         "active" : 0
       },
       "no-sequences" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'allowInParentheses': true}"
       },
       "no-setter-return" : {
         "active" : 1
@@ -6883,354 +7053,6 @@
     "gitIgnoreBuildFolder" : 1,
     "hideConfigFile" : 0,
     "jsCheckerReservedNamesString" : "",
-    "jsHintFlags2" : {
-      "asi" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "bitwise" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "boss" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "browser" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "browserify" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "camelcase" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "couch" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "curly" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "debug" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "devel" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "dojo" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "elision" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "eqeqeq" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "eqnull" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "es3" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "esnext" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "evil" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "expr" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "forin" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "freeze" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "funcscope" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "futurehostile" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "globalstrict" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "immed" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "indent" : {
-        "active" : 0,
-        "flagValue" : 4
-      },
-      "iterator" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "jasmine" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "jquery" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "lastsemic" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "latedef" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "laxbreak" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "laxcomma" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "loopfunc" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "maxcomplexity" : {
-        "active" : 0,
-        "flagValue" : 10
-      },
-      "maxdepth" : {
-        "active" : 0,
-        "flagValue" : 3
-      },
-      "maxlen" : {
-        "active" : 0,
-        "flagValue" : 150
-      },
-      "maxparams" : {
-        "active" : 0,
-        "flagValue" : 3
-      },
-      "maxstatements" : {
-        "active" : 0,
-        "flagValue" : 4
-      },
-      "mocha" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "mootools" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "moz" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "multistr" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "newcap" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "noarg" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "nocomma" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "node" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "noempty" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "nonbsp" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "nonew" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "nonstandard" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "notypeof" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "noyield" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "onecase" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "phantom" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "plusplus" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "proto" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "prototypejs" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "qunit" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "regexp" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "rhino" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "scripturl" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "shadow" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "shelljs" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "singleGroups" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "strict" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "sub" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "supernew" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "typed" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "undef" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "unused" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "varstmt" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "withstmt" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "worker" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "wsh" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "yui" : {
-        "active" : 0,
-        "flagValue" : -1
-      }
-    },
-    "jsLintFlags2" : {
-      "bitwise" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "browser" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "couch" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "devel" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "es6" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "eval" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "for" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "maxlen" : {
-        "active" : 0,
-        "flagValue" : 150
-      },
-      "node" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "this" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "white" : {
-        "active" : 0,
-        "flagValue" : -1
-      }
-    },
     "languageDefaultsCOFFEE" : {
       "autoOutputAction" : 0,
       "autoOutputPathFilenamePattern" : "*.js",
@@ -7539,6 +7361,7 @@
     "tsEmitBOM" : 0,
     "tsEmitDecoratorMetadata" : 0,
     "tsESModuleInterop" : 0,
+    "tsExactOptionalPropertyTypes" : 0,
     "tsForceConsistentCasingInFileNames" : 0,
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
@@ -7547,6 +7370,7 @@
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,
+    "tsNoImplicitOverride" : 0,
     "tsNoImplicitReturns" : 0,
     "tsNoImplicitThis" : 0,
     "tsNoImplicitUseStrict" : 0,
@@ -7567,6 +7391,7 @@
     "tsStripInternal" : 0,
     "tsSuppressExcessPropertyErrors" : 0,
     "tsSuppressImplicitAnyIndexErrors" : 0,
+    "tsUseUnknownInCatchVariables" : 0,
     "uglifyDefinesString" : "",
     "uglifyFlags2" : {
       "arguments" : {
