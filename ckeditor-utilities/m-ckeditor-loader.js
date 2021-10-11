@@ -199,7 +199,7 @@ export default function (loader_options) {
           };
         }
         if(cke_opts.extra_cleaning) {
-          item.dataset.contains('editor-cleaner');
+          item.classList.add('editor-cleaner');
         }
 
         // console.log(options);

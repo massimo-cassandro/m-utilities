@@ -70,11 +70,11 @@
 
       text = text
         .trim()
-        .replace(/^((<p(.*?)>(\s|&nbsp;)*<\/p>)*)/ig, '') // righe vuote all'inizio
-        .replace(/((<p(.*?)>(\s|&nbsp;)*<\/p>)*)$/ig, ''); // righe vuote alla fine
+        .replace(/^((<p(.*?)>((\s|&nbsp;)*?)<\/p>)*)/ig, '') // righe vuote all'inizio
+        .replace(/((<p(.*?)>((\s|&nbsp;)*?)<\/p>)*)$/ig, ''); // righe vuote alla fine
 
       text = text
-        .replace(/(<p(.*?)>(\s|&nbsp;)*<\/p>)+/ig, '') // righe vuote
+        .replace(/(<p(.*?)>((\s|&nbsp;)*?)<\/p>)+/ig, '') // righe vuote
         .replace(/((\s|&nbsp;)+<\/p>)$/ig, '</p>') // spazi vuoti alla fine dei tag p
         .replace(/(<h\d.*?>)\s*<strong>\s*(.*?)\s*<\/strong>\s*(<\/h\d>)/ig, '$1$2$3'); // strong dentro gli header
 
