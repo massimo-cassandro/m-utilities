@@ -44,6 +44,22 @@ import mAlert from '../m-alert';
     });
   });
 
+  document.querySelector('.demo-warning-2').addEventListener('click', () => {
+    mAlert({
+      type: 'warning',
+      mes: demo_mes,
+      multi_lang_label: true
+    });
+  });
+
+  document.querySelector('.demo-error-2').addEventListener('click', () => {
+    mAlert({
+      type: 'error',
+      mes: demo_mes,
+      multi_lang_label: true
+    });
+  });
+
   document.querySelector('.demo-confirm').addEventListener('click', () => {
     mAlert({
       type: 'confirm',

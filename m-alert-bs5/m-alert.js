@@ -49,7 +49,8 @@ export default function mAlert(parameters = {}) {
 
         title: 'Si è verificato un errore',
         mes: null,
-        ok_btn_text: errorBtnLabel(),
+        ok_btn_text: 'OK',
+        multi_lang_label: false,
 
         bs_status_class: 'danger',
         title_class: 'text-danger',
@@ -65,7 +66,8 @@ export default function mAlert(parameters = {}) {
 
         title: 'Attenzione!',
         mes: null,
-        ok_btn_text: errorBtnLabel(),
+        ok_btn_text: 'OK',
+        multi_lang_label: false,
 
         bs_status_class: 'warning',
         title_class: null,
@@ -161,6 +163,10 @@ export default function mAlert(parameters = {}) {
   parameters.type = parameters.type.toLowerCase();
 
   const params = Object.assign({}, _defaults[parameters.type], parameters);
+
+  if( ['error', 'warning'].indexOf(parameters.type) !== -1 && params.multi_lang_label ) {
+    params.ok_btn_text = errorBtnLabel();
+  }
 
   if(params.callback && typeof params.callback !== 'function') {
     console.error('`params.callback` non corretto!') // eslint-disable-line
