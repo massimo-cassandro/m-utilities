@@ -1,10 +1,9 @@
 import dt from 'datatables.net/js/jquery.dataTables';
-import dt_bs5 from 'datatables.net-bs5/js/dataTables.bootstrap5';
+import dt_bs4 from 'datatables.net-bs4/js/dataTables.bootstrap4';
 
 import * as dt_config from './src/config-base';
-import dt_config_bs5 from './src/config-bs5';
+import dt_config_bs4 from './src/config-bs4';
 import creaDataTable_default_options from './src/creaDatatable-defaults';
-
 
 /*
   creaDataTable
@@ -15,33 +14,35 @@ import creaDataTable_default_options from './src/creaDatatable-defaults';
   * options è un oggetto che contiene i parametri necessari per la configurazione
       tra cui `datatable_options`, un oggetto con le impostazioni richieste da DataTable.
       Se non impostato, viene utilizzato il default incluso nel file `_config.js`
+  * bs4: true (default) se la tabella deve essere generata con utilizzabdo Bootstrap 4
 
   Restituisce l'istanza del datatable generato
 */
 
-
-
-function run_creaDataTable( $container, options) {
+function run_creaDataTable($container, options = {}, bs4 = true ) {
 
   if(!window.$) {
     window.$ = window.jQuery;
   }
-
   $.fn.dataTable = dt(window,$);
-  $.fn.DataTable.ext = dt_bs5(window,$);
+  $.fn.DataTable.ext = dt_bs4(window,$);
 
   if(!($container instanceof $)) {
     $container = $($container);
   }
 
   // configurazione default datatable
-  $.extend( true, $.fn.dataTable.defaults,
+  if(bs4) {
+    $.extend( true, $.fn.dataTable.defaults,
 
-    dt_config.dt_config_base,
-    dt_config_bs5
-  );
-  $.extend( $.fn.DataTable.ext.classes, dt_config.dt_classes );
+      dt_config.dt_config_base,
+      dt_config_bs4
+    );
+    $.extend( $.fn.DataTable.ext.classes, dt_config.dt_classes );
 
+  } else {
+    $.extend( true, $.fn.dataTable.defaults, dt_config.dt_config_base );
+  }
 
   options = $.extend(true, {}, creaDataTable_default_options, options);
 
@@ -156,17 +157,18 @@ function run_creaDataTable( $container, options) {
   return $('#' + options.table_id ).DataTable(options.datatable_options);  // datatable istance
 }
 
+
 export function _creaDataTable( $container, options = {}, jquery_url='https://code.jquery.com/jquery-3.6.0.min.js') {
   if(window.jQuery === undefined) {
 
     let script = document.createElement('script');
     script.onload = function() {
-      run_creaDataTable($container, options);
+      run_creaDataTable($container, options, true);
     };
     script.src = jquery_url;
     document.head.appendChild(script);
 
   } else {
-    run_creaDataTable($container, options);
+    run_creaDataTable($container, options, true);
   }
 }

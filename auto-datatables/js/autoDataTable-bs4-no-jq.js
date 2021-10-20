@@ -31,16 +31,16 @@
   * jquery_url: url jquery
 */
 
-import {_creaDataTable} from './creaDataTable-bs5-no-jq';
+import {_creaDataTable} from './creaDataTable-bs4-no-jq';
 
 import {mesi} from '../../js-utilities/mesi-giorni-it';
 import {number_format} from '../../js-utilities/number-format';
 import { dateStringToISO, formatDate, formatTime, formatDateTime } from '../../js-utilities/date-utilities';
 
-import mustache from 'mustache/mustache.mjs';
+import Mustache from 'mustache/mustache.mjs';
 import creaDataTable_default_options from './src/creaDatatable-defaults';
 
-function run_autoDataTable( $container, cdt_options ) {
+function run_autoDataTable( $container = '.dt-container', cdt_options = {}, bs4 = true ) {
 
   if(!($container instanceof $)) {
     $container = $($container);
@@ -265,7 +265,7 @@ function run_autoDataTable( $container, cdt_options ) {
                         /*
                           elabora la stringa fornita, separandola usando la stringa `separator`
                           crea per ogni elemento una stringa definita dal
-                          template mustache `tpl`
+                          template Mustache `tpl`
                           e restituisce una stringa concantenata secondo il parametro `glue`
                           richiede la definizione dei parametri dt_render:
                             - separator
@@ -300,10 +300,10 @@ function run_autoDataTable( $container, cdt_options ) {
                         */
                         case 'split':
                           if(row[i]) {
-                            mustache.parse(filter_params.tpl);
+                            Mustache.parse(filter_params.tpl);
                             row[i] = row[i].split(filter_params.separator).map(item => {
                               item = item.trim();
-                              return mustache.render(filter_params.tpl, {'split_item': item}, {}, ['[[', ']]']);
+                              return Mustache.render(filter_params.tpl, {'split_item': item}, {}, ['[[', ']]']);
                             })
                               .join(filter_params.glue);
                           }
@@ -371,9 +371,9 @@ function run_autoDataTable( $container, cdt_options ) {
                   }
                 } // end if item.dtRender.filter
 
-                mustache.parse(item.dtRender.tpl);
+                Mustache.parse(item.dtRender.tpl);
                 row.sf_base_url = item.dtRender.sf_base_url || null;
-                return mustache.render(item.dtRender.tpl, row, {}, ['[[', ']]']);
+                return Mustache.render(item.dtRender.tpl, row, {}, ['[[', ']]']);
               };
               break;
               // END case 'tpl'
@@ -541,7 +541,7 @@ function run_autoDataTable( $container, cdt_options ) {
 
       cdt_options.datatable_options.columns = table_columns;
 
-      this_datatable = _creaDataTable(_this_container, cdt_options);
+      this_datatable = _creaDataTable(_this_container, cdt_options, bs4);
 
       if(_form !== null ) {
 
@@ -567,18 +567,19 @@ function run_autoDataTable( $container, cdt_options ) {
   }
 }
 
+
 export  function _autoDataTable( $container = '.dt-container', cdt_options = {}, jquery_url='https://code.jquery.com/jquery-3.6.0.min.js' ) {
 
   if(window.jQuery === undefined) {
 
     let script = document.createElement('script');
     script.onload = function() {
-      run_autoDataTable($container, cdt_options);
+      run_autoDataTable($container, cdt_options, true);
     };
     script.src = jquery_url;
     document.head.appendChild(script);
 
   } else {
-    run_autoDataTable($container, cdt_options);
+    run_autoDataTable($container, cdt_options, true);
   }
 }

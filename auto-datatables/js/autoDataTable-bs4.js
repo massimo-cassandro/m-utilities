@@ -31,7 +31,7 @@
 */
 
 import $ from 'jquery';
-import {_creaDataTable} from './creaDataTable';
+import {_creaDataTable} from './creaDataTable-bs4';
 
 import {mesi} from '../../js-utilities/mesi-giorni-it';
 import {number_format} from '../../js-utilities/number-format';
