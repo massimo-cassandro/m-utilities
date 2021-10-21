@@ -545,7 +545,7 @@ $s2bs-form-control-transition: border-color ease-in-out .15s, box-shadow ease-in
       .select2-search__field {
         background: transparent;
         padding: 0; //$s2bs-padding-base-vertical $s2bs-padding-base-horizontal;
-        height: $s2bs-input-height-base - 2;
+        height: $s2bs-input-height-base;
         line-height: $s2bs-line-height;
         margin-top: 0;
         min-width: 5em;

@@ -4,7 +4,7 @@ export default function (m_sorting_container, m_sorting_elements_selector, callb
     m_sorting_container: html dom element
     m_sorting_elements_selector: selettore degli elementi da ordinare
                         (se null, vengono presi i figli di m_sorting_container)
-    callback
+    callback  <== invocato con l'elemento target come argomento
 
 
     References:
@@ -135,7 +135,7 @@ export default function (m_sorting_container, m_sorting_elements_selector, callb
       resetAll();
 
       if(callback && typeof callback === 'function') {
-        callback();
+        callback(el);
       }
 
     }, false);
