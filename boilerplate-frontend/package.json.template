@@ -20,10 +20,15 @@
   },
   "homepage": "https://github.com/xxxx#readme",
   "dependencies": {},
+  "stylelint": {
+    "extends": "@massimo-cassandro/m-utilities/stylelint/scss"
+  },
   "devDependencies": {
     "eslint": "^7.24.0",
     "eslint-config-standard": "^16.0.2",
-    "stylelint": "^13.12.0",
-    "stylelint-config-twbs-bootstrap": "^2.2.0"
+    "stylelint": "^14.0.0",
+    "stylelint-config-recommended-scss": "^5.0.0",
+    "stylelint-config-standard": "^23.0.0",
+    "stylelint-order": "^5.0.0"
   }
 }

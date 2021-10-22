@@ -16,12 +16,14 @@ module.exports = {
     'value-list-comma-newline-after': 'always-multi-line',
     'value-list-comma-space-after': 'always-single-line',
     // 'declaration-block-semicolon-newline-before': 'always-multi-line',
+    'color-function-notation': 'legacy',
     'max-nesting-depth': [
       3,
       {
         ignore: ['pseudo-classes']
       }
     ],
+    'scss/at-extend-no-missing-placeholder': null,
     'scss/at-import-no-partial-leading-underscore': null,
     'function-parentheses-space-inside': 'never-single-line',
     'selector-no-qualifying-type': [
