@@ -62,12 +62,15 @@ npm i --save-dev --no-optional rollup-plugin-filesize # https://github.com/ritz0
 
 npm i --save-dev --no-optional sass
 
-npm i --save-dev --no-optional eslint
 npm i --save-dev --no-optional stylelint
-npm i --save-dev --no-optional stylelint-config-twbs-bootstrap
-npm i --save-dev --no-optional eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-config-standard
+# npm i --save-dev stylelint-config-standard
+# npm i --save-dev stylelint-config-recommended
+# https://github.com/stylelint-scss
+npm install --save-dev stylelint-config-recommended-scss stylelint-config-standard stylelint-order
 
-# npm i --save-optional stylelint-config-sass-guidelines
-# npm i --save-optional stylelint-config-standard
-# npm i --save-optional stylelint-config-rational-order
-# npm i --save-optional stylelint-config-concentric-order
+# https://github.com/twbs/stylelint-config-twbs-bootstrap
+# npm i --save-dev --no-optional stylelint-config-twbs-bootstrap
+
+
+npm i --save-dev --no-optional eslint
+npm i --save-dev --no-optional eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-config-standard

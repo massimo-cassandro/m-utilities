@@ -1,19 +1,12 @@
-/*
-  https://stylelint.io/user-guide/configure
-  https://github.com/kristerkari/stylelint-scss
-  https://github.com/chaucerbao/stylelint-config-concentric-order
-  https://github.com/twbs/stylelint-config-twbs-bootstrap
-*/
+/* eslint-env node */
+'use strict';
 
 module.exports = {
   extends: [
-    // 'stylelint-config-standard',
-    // 'stylelint-config-rational-order'
-    //'stylelint-config-concentric-order'
-    "stylelint-config-twbs-bootstrap/scss"
+    '../base/scss.js'
   ],
 
-  "ignoreFiles": ["**/*.css", "**/node_modules/**/*.*", "**/vendor/**/*.*"],
+  'ignoreFiles': ['**/*.css', '**/node_modules/**/*.*', '**/vendor/**/*.*'],
 
   rules: {
     'selector-list-comma-newline-after': 'always-multi-line',
@@ -34,16 +27,8 @@ module.exports = {
     'selector-no-qualifying-type': [
       false,
       {
-        ignore: ["attribute", "class", "id"]
+        ignore: ['attribute', 'class', 'id']
       }
     ]
-    /* ,
-    "plugin/rational-order": [
-      true,
-      {
-        "border-in-box-model": false,
-        "empty-line-between-groups": true
-      }
-    ] */
   }
 };
