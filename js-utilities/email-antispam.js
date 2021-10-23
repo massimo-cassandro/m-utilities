@@ -31,6 +31,7 @@ export  function obfuscate_email (email, hard = true) {
   // };
 
   let encoded_email = '';
+
   email.split('').forEach((char, idx) => {
     // if(hard && [2,5,6,79,10,13,15,20,22].indexOf(idx) !== -1) {
     //   encoded_email += `<span style="display:none" aria-hidden="true">${rand_string()}</span>`;
