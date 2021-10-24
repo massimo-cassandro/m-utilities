@@ -1,6 +1,6 @@
 {
   "name": "@massimo-cassandro/m-utilities",
-  "version": "4.9.0",
+  "version": "4.10.0",
   "description": "My collection of front-end development snippets & utilities",
   "scripts": {},
   "repository": {
@@ -34,10 +34,10 @@
   },
   "homepage": "https://github.com/massimo-cassandro/m-utilities#readme",
   "stylelint": {
-    "extends": "./stylelint/scss"
+    "extends": "./lint/stylelint/scss"
   },
   "eslintConfig": {
-    "extends": "./eslint"
+    "extends": "./lint/eslint"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^20.0.0",

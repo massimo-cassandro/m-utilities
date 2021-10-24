@@ -1,0 +1,39 @@
+.lt-img-info-wrapper {
+  position: relative;
+  display: inline-block;
+  min-height: 1.2rem;
+  padding: 6px;
+  margin: 2px;
+  font-size: small;
+  color: $lt-color;
+  background: $lt-notice;
+  border: 1px $lt-color solid;
+  border-radius: 4px;
+  box-shadow: 0 0 4px #000;
+
+  summary {
+    font-size: 110%;
+    white-space: nowrap;
+  }
+
+  &[open] {
+    background: $lt-bg;
+  }
+
+  table {
+    width: 100%;
+    border-top: 1px solid $lt-color;
+    th, td {
+      padding: 2px 4px;
+      text-align: left;
+      white-space: nowrap;
+      vertical-align: top;
+    }
+    th {
+      font-weight: bold;
+    }
+    tr:not(:last-child) {
+      border-bottom: 1px dotted $lt-color;
+    }
+  }
+}

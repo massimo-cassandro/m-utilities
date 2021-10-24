@@ -1,0 +1,13 @@
+{
+  "name": "@massimo-cassandro/layout-tools",
+  "version": "4.1.0",
+  "description": "Layout development Utilities",
+  "main": "js/layout_tools.js",
+  "scripts": {
+    "rollup": "npx rollup --config --watch",
+    "sass": "node_modules/.bin/sass scss/layout-tools.scss dist/layout-tools.css --load-path=node_modules/ --style=compressed --watch",
+    "upd_version_var": "node upd_version.js && npx rollup --config"
+  },
+  "author": "Massimo Cassandro",
+  "license": "MIT"
+}
