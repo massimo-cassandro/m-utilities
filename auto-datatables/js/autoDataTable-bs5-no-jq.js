@@ -40,7 +40,7 @@ import { dateStringToISO, formatDate, formatTime, formatDateTime } from '../../j
 import mustache from 'mustache/mustache.mjs';
 import creaDataTable_default_options from './src/creaDatatable-defaults';
 
-function run_autoDataTable( $container, cdt_options ) {
+function run_autoDataTable( $container, cdt_options, jquery_url) {
 
   if(!($container instanceof $)) {
     $container = $($container);
@@ -541,7 +541,7 @@ function run_autoDataTable( $container, cdt_options ) {
 
       cdt_options.datatable_options.columns = table_columns;
 
-      this_datatable = _creaDataTable(_this_container, cdt_options);
+      this_datatable = _creaDataTable(_this_container, cdt_options, jquery_url);
 
       if(_form !== null ) {
 
@@ -569,16 +569,26 @@ function run_autoDataTable( $container, cdt_options ) {
 
 export  function _autoDataTable( $container = '.dt-container', cdt_options = {}, jquery_url='https://code.jquery.com/jquery-3.6.0.min.js' ) {
 
-  if(window.jQuery === undefined) {
+  if(window.jQuery === undefined && !document.head.querySelector(`script[src="${jquery_url}"]`)) {
 
     let script = document.createElement('script');
     script.onload = function() {
-      run_autoDataTable($container, cdt_options);
+      run_autoDataTable($container, cdt_options, jquery_url);
     };
     script.src = jquery_url;
+    script.async = false;
     document.head.appendChild(script);
 
+  } else if(window.jQuery === undefined) { // script presente ma jquery ancora in caricamento
+
+    const intervalID = setInterval(() => {
+      if(window.jQuery !== undefined ) {
+        clearInterval(intervalID);
+        run_autoDataTable($container, cdt_options, jquery_url);
+      }
+    }, 200);
+
   } else {
-    run_autoDataTable($container, cdt_options);
+    run_autoDataTable($container, cdt_options, jquery_url);
   }
 }

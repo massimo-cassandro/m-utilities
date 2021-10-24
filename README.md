@@ -19,4 +19,5 @@ Consult the [repository](https://github.com/massimo-cassandro/m-utilities) for t
 ## breaking changes
 
 ### v3.x → v4.x
+* naming standardization: many filenames have been changed 
 * `submitErr` function is now exported from a new file (`submit-error-bs4`, or `submit-error-bs5`) and not from `_form_utilities.js`. The function is now exported as default

@@ -12,7 +12,7 @@ printf "* ${SUCCESS}Librerie aggiuntive:${RESET}\n"
 rm ./esa-3-sf/public/libs/*.* # pulizia
 # cp -v node_modules/jspdf/dist/jspdf.umd.min.js ./"$TARGET_DIR"/public/libs/
 cp -v ./node_modules/jquery/dist/jquery.min.js ./"$TARGET_DIR"/public/libs/
-cp -R -v ./node_modules/@massimo-cassandro/layout-tools/dist/. ./"$TARGET_DIR"/public/libs/
+cp -R -v ./node_modules/@massimo-cassandro/m-utilities/layout-tools/dist/. ./"$TARGET_DIR"/public/libs/
 
 # symfony form theme
 # cp -v ./node_modules/@massimo-cassandro/symfony-bootstrap-form-theme/dist/bs4_form_layout.html.twig ./"$TARGET_DIR"/templates/_shared/

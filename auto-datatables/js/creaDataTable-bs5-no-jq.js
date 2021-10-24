@@ -157,14 +157,25 @@ function run_creaDataTable( $container, options) {
 }
 
 export function _creaDataTable( $container, options = {}, jquery_url='https://code.jquery.com/jquery-3.6.0.min.js') {
-  if(window.jQuery === undefined) {
+
+  if(window.jQuery === undefined && !document.head.querySelector(`script[src="${jquery_url}"]`)) {
 
     let script = document.createElement('script');
     script.onload = function() {
       run_creaDataTable($container, options);
     };
     script.src = jquery_url;
+    script.async = false;
     document.head.appendChild(script);
+
+  } else if(window.jQuery === undefined) { // script presente ma jquery ancora in caricamento
+
+    const intervalID = setInterval(() => {
+      if(window.jQuery !== undefined ) {
+        clearInterval(intervalID);
+        run_creaDataTable($container, options);
+      }
+    }, 200);
 
   } else {
     run_creaDataTable($container, options);

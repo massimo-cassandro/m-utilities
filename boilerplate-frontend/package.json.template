@@ -4,6 +4,7 @@
   "description": "xxx xxxx / frontend",
   "license": "UNLICENSED | MIT",
   "author": "Massimo Cassandro",
+  "contributors": ["xxxx"],
 
   "private": true, <=====
 
@@ -50,7 +51,11 @@
   },
    "eslintConfig": {
     "extends": "@massimo-cassandro/m-utilities/lint/eslint",
-    "ignorePatterns": ["**/dist/**/*.js"],
+    "ignorePatterns": [
+      "**/dist/**/*.js",
+      "**/node_modules/**/*.*",
+      "**/vendor/**/*.*"
+    ],
     "rules": {}
   },
   "dependencies": {},
