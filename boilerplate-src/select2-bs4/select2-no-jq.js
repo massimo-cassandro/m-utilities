@@ -1,4 +1,5 @@
 import select2 from 'select2';
+import jquery_loader from '../../js-utilities/jquery-ondemand-loader';
 
 export const select2_defaults = {
   theme                : 'bootstrap4',
@@ -116,27 +117,6 @@ export function set_select2(field, options = {}, jquery_url='https://code.jquery
     $(field).select2(select2_options);
   }
 
-  if(window.jQuery === undefined && !document.head.querySelector(`script[src="${jquery_url}"]`)) {
-
-    let script = document.createElement('script');
-    script.onload = function() {
-      run();
-    };
-    script.src = jquery_url;
-    script.async = false;
-    document.head.appendChild(script);
-
-  } else if(window.jQuery === undefined) { // script presente ma jquery ancora in caricamento
-
-    const intervalID = setInterval(() => {
-      if(window.jQuery !== undefined ) {
-        clearInterval(intervalID);
-        run();
-      }
-    }, 200);
-
-  } else {
-    run();
-  }
+  jquery_loader(jquery_url, run);
 }
 

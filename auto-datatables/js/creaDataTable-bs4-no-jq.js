@@ -5,6 +5,8 @@ import * as dt_config from './src/config-base';
 import dt_config_bs4 from './src/config-bs4';
 import creaDataTable_default_options from './src/creaDatatable-defaults';
 
+import jquery_loader from '../../js-utilities/jquery-ondemand-loader';
+
 /*
   creaDataTable
   Genera un datatable da un flusso JSON
@@ -19,168 +21,145 @@ import creaDataTable_default_options from './src/creaDatatable-defaults';
   Restituisce l'istanza del datatable generato
 */
 
-function run_creaDataTable($container, options = {}, bs4 = true ) {
+export function _creaDataTable( $container, options = {}, jquery_url='https://code.jquery.com/jquery-3.6.0.min.js', bs4 = true ) {
 
-  if(!window.$) {
-    window.$ = window.jQuery;
-  }
-  $.fn.dataTable = dt(window,$);
-  $.fn.DataTable.ext = dt_bs4(window,$);
+  function run() {
 
-  if(!($container instanceof $)) {
-    $container = $($container);
-  }
+    if(!window.$) {
+      window.$ = window.jQuery;
+    }
+    $.fn.dataTable = dt(window,$);
+    $.fn.DataTable.ext = dt_bs4(window,$);
 
-  // configurazione default datatable
-  if(bs4) {
-    $.extend( true, $.fn.dataTable.defaults,
+    if(!($container instanceof $)) {
+      $container = $($container);
+    }
 
-      dt_config.dt_config_base,
-      dt_config_bs4
-    );
-    $.extend( $.fn.DataTable.ext.classes, dt_config.dt_classes );
+    // configurazione default datatable
+    if(bs4) {
+      $.extend( true, $.fn.dataTable.defaults,
 
-  } else {
-    $.extend( true, $.fn.dataTable.defaults, dt_config.dt_config_base );
-  }
+        dt_config.dt_config_base,
+        dt_config_bs4
+      );
+      $.extend( $.fn.DataTable.ext.classes, dt_config.dt_classes );
 
-  options = $.extend(true, {}, creaDataTable_default_options, options);
+    } else {
+      $.extend( true, $.fn.dataTable.defaults, dt_config.dt_config_base );
+    }
 
-  options.table_id = 'cdt_' + ( $container.attr('id') ? $container.attr('id') : 'dom_' + $container.index());
-  $container.html('');
+    options = $.extend(true, {}, creaDataTable_default_options, options);
 
-  // eliminazione parametri di ricerca salvati se la pagina di provenienza non
-  // inclusa nel parametro options.dtRender.storageAllowedReferrers
-  // NB: controllo eseguito solo se storageAllowedReferrers !== null e undefined (= tutte le pagine ammesse)
-  // per disabilitare il salvataggio usare l'opzione `stateSave = false`,
-  if(options.dtRender && options.dtRender.storageAllowedReferrers !== null &&
-      options.dtRender.storageAllowedReferrers !== undefined && document.referrer) {
-    let allowed_referrer = false;
-    options.dtRender.storageAllowedReferrers.forEach(item => {
-      if(new RegExp(item).test(document.referrer)) {
-        allowed_referrer = true;
-      }
-    });
+    options.table_id = 'cdt_' + ( $container.attr('id') ? $container.attr('id') : 'dom_' + $container.index());
+    $container.html('');
 
-    if(!allowed_referrer) {
+    // eliminazione parametri di ricerca salvati se la pagina di provenienza non
+    // inclusa nel parametro options.dtRender.storageAllowedReferrers
+    // NB: controllo eseguito solo se storageAllowedReferrers !== null e undefined (= tutte le pagine ammesse)
+    // per disabilitare il salvataggio usare l'opzione `stateSave = false`,
+    if(options.dtRender && options.dtRender.storageAllowedReferrers !== null &&
+        options.dtRender.storageAllowedReferrers !== undefined && document.referrer) {
+      let allowed_referrer = false;
+      options.dtRender.storageAllowedReferrers.forEach(item => {
+        if(new RegExp(item).test(document.referrer)) {
+          allowed_referrer = true;
+        }
+      });
 
-      if(options.datatable_options.stateDuration === -1) {
-        sessionStorage.removeItem( 'DataTables_' + options.table_id);
+      if(!allowed_referrer) {
 
-      } else {
-        localStorage.removeItem( 'DataTables_' + options.table_id );
+        if(options.datatable_options.stateDuration === -1) {
+          sessionStorage.removeItem( 'DataTables_' + options.table_id);
 
+        } else {
+          localStorage.removeItem( 'DataTables_' + options.table_id );
+
+        }
       }
     }
-  }
 
 
-  // salvataggio parametri form ricerca
-  if(options.datatable_options.stateSave && options.dtRender && options.dtRender.bindToForm) {
+    // salvataggio parametri form ricerca
+    if(options.datatable_options.stateSave && options.dtRender && options.dtRender.bindToForm) {
 
-    options.datatable_options.stateSaveCallback = function(settings, data) {
+      options.datatable_options.stateSaveCallback = function(settings, data) {
 
-      let search_form_data = Object.fromEntries(
-        new FormData(document.getElementById(options.dtRender.bindToForm))
-      );
+        let search_form_data = Object.fromEntries(
+          new FormData(document.getElementById(options.dtRender.bindToForm))
+        );
 
-      data.search_form_data = JSON.parse(JSON.stringify(search_form_data));
+        data.search_form_data = JSON.parse(JSON.stringify(search_form_data));
 
-      if(options.datatable_options.stateDuration === -1) {
-        sessionStorage.setItem( 'DataTables_' + settings.sInstance, JSON.stringify(data) );
+        if(options.datatable_options.stateDuration === -1) {
+          sessionStorage.setItem( 'DataTables_' + settings.sInstance, JSON.stringify(data) );
 
-      } else {
-        localStorage.setItem( 'DataTables_' + settings.sInstance, JSON.stringify(data) );
-      }
-
-    };
-
-    options.datatable_options.stateLoadCallback = function(settings) {
-      let _storage;
-
-
-
-      if(options.datatable_options.stateDuration === -1) {
-        _storage = JSON.parse( sessionStorage.getItem( 'DataTables_' + settings.sInstance ) );
-
-      } else {
-        _storage = JSON.parse( localStorage.getItem( 'DataTables_' + settings.sInstance ) );
-      }
-
-      if(_storage && _storage.search_form_data) {
-        let form = $('#' + options.dtRender.bindToForm);
-        for( let i in _storage.search_form_data ) {
-          $(`[name="${i}"]`, form).val(_storage.search_form_data[i]);
+        } else {
+          localStorage.setItem( 'DataTables_' + settings.sInstance, JSON.stringify(data) );
         }
 
-        // form.submit();
-        settings.ajax = form.attr('action') + '?' + form.serialize();
+      };
 
-      }
-
-      return _storage;
-    };
-
-  } // end salvataggio parametri form ricerca
-
-  if(options.container_header) {
-    $container.html('<h' + options.container_header_level + '>' + options.container_header + '</h' + options.container_header_level + '>');
-  }
-
-  let table_cells_length =
-    (!options.datatable_options.columns && options.datatable_options.aoColumns) ?
-      options.datatable_options.aoColumns.length : options.datatable_options.columns.length;
+      options.datatable_options.stateLoadCallback = function(settings) {
+        let _storage;
 
 
-  $container.addClass((options.container_class + ' m-datatable').trim())
-    .append(
-      '<table id="' + options.table_id + '" class="' + options.table_class + '">' +
-      (options.table_caption? '<caption>'+options.table_caption+'</caption>' : '') +
-      '<thead><tr>' + new Array(table_cells_length + 1).join('<th scope="col"></th>') + '</tr></thead>'+
-      (options.table_footer? '<tfoot><tr>' + new Array(table_cells_length + 1).join('<td></td>') + '</tr></tfoot>' : '') +
-      '</table>' +
-      (options.extra_info? '<p class="text-muted small">' + options.extra_info + '</p>': '')
-    );
 
-  if( options.legacy ) { $.fn.dataTable.ext.legacy.ajax = true; }
+        if(options.datatable_options.stateDuration === -1) {
+          _storage = JSON.parse( sessionStorage.getItem( 'DataTables_' + settings.sInstance ) );
 
-  $container.data('table_id', options.table_id);
+        } else {
+          _storage = JSON.parse( localStorage.getItem( 'DataTables_' + settings.sInstance ) );
+        }
 
-  // let dt;
-  // if(options.jQueryObj) {
-  //   dt = $('#' + options.table_id ).dataTable(options.datatable_options);   // jQuery obj
-  // } else {
-  //   dt = $('#' + options.table_id ).DataTable(options.datatable_options);  // datatable istance
-  // }
-  // return dt;
+        if(_storage && _storage.search_form_data) {
+          let form = $('#' + options.dtRender.bindToForm);
+          for( let i in _storage.search_form_data ) {
+            $(`[name="${i}"]`, form).val(_storage.search_form_data[i]);
+          }
 
-  return $('#' + options.table_id ).DataTable(options.datatable_options);  // datatable istance
-}
+          // form.submit();
+          settings.ajax = form.attr('action') + '?' + form.serialize();
 
+        }
 
-export function _creaDataTable( $container, options = {}, jquery_url='https://code.jquery.com/jquery-3.6.0.min.js') {
+        return _storage;
+      };
 
-  if(window.jQuery === undefined && !document.head.querySelector(`script[src="${jquery_url}"]`)) {
+    } // end salvataggio parametri form ricerca
 
-    let script = document.createElement('script');
-    script.onload = function() {
-      run_creaDataTable($container, options, true);
-    };
-    script.src = jquery_url;
-    script.async = false;
-    document.head.appendChild(script);
+    if(options.container_header) {
+      $container.html('<h' + options.container_header_level + '>' + options.container_header + '</h' + options.container_header_level + '>');
+    }
 
-  } else if(window.jQuery === undefined) { // script presente ma jquery ancora in caricamento
-
-    const intervalID = setInterval(() => {
-      if(window.jQuery !== undefined ) {
-        clearInterval(intervalID);
-        run_creaDataTable($container, options, true);
-      }
-    }, 200);
+    let table_cells_length =
+      (!options.datatable_options.columns && options.datatable_options.aoColumns) ?
+        options.datatable_options.aoColumns.length : options.datatable_options.columns.length;
 
 
-  } else {
-    run_creaDataTable($container, options, true);
-  }
+    $container.addClass((options.container_class + ' m-datatable').trim())
+      .append(
+        '<table id="' + options.table_id + '" class="' + options.table_class + '">' +
+        (options.table_caption? '<caption>'+options.table_caption+'</caption>' : '') +
+        '<thead><tr>' + new Array(table_cells_length + 1).join('<th scope="col"></th>') + '</tr></thead>'+
+        (options.table_footer? '<tfoot><tr>' + new Array(table_cells_length + 1).join('<td></td>') + '</tr></tfoot>' : '') +
+        '</table>' +
+        (options.extra_info? '<p class="text-muted small">' + options.extra_info + '</p>': '')
+      );
+
+    if( options.legacy ) { $.fn.dataTable.ext.legacy.ajax = true; }
+
+    $container.data('table_id', options.table_id);
+
+    // let dt;
+    // if(options.jQueryObj) {
+    //   dt = $('#' + options.table_id ).dataTable(options.datatable_options);   // jQuery obj
+    // } else {
+    //   dt = $('#' + options.table_id ).DataTable(options.datatable_options);  // datatable istance
+    // }
+    // return dt;
+
+    return $('#' + options.table_id ).DataTable(options.datatable_options);  // datatable istance
+  } // end run
+
+  jquery_loader(jquery_url, run);
 }
