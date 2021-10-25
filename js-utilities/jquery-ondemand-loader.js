@@ -4,9 +4,9 @@ export default function (jquery_url='https://code.jquery.com/jquery-3.6.0.min.js
     if(callback === undefined || typeof callback !== 'function') {
       throw 'Errore callback';
     }
-    if(!jquery_url || typeof jquery_url !== 'string') {
-      throw 'Errore jQuery url';
-    }
+    // if(!jquery_url || typeof jquery_url !== 'string') {
+    //   throw 'Errore jQuery url';
+    // }
 
     if(window.jQuery === undefined && !document.head.querySelector('.jq')) {
 
