@@ -1,0 +1,61 @@
+/*
+<div class="accordion-outer-wrapper">
+
+  <div class="accordion-wrapper open">
+    <h2 class="accordion-title">Inizialmente aperto</h2>
+    <div class="accordion-content"> ... </div>
+  </div>
+
+  div class="accordion-wrapper">
+    <h2 class="accordion-title">Inizialmente chiuso</h2>
+    <div class="accordion-content"> ... </div>
+  </div>
+
+</div>
+*/
+
+$m-accordion-border: 1px solid #ccc !default;
+$m-accordion-title-font-weight: 700 !default;
+$m-accordion-title-color: inherit !default;
+$m-accordion-title-bg-color: #ddd !default;
+$m-accordion-title-hover-color: #fff !default;
+$m-accordion-title-hover-bg-color: #333 !default;
+.accordion-outer-wrapper {
+  overflow: hidden;
+  border: $m-accordion-border;
+  border-radius: .3rem;
+}
+.accordion-wrapper {
+  position: relative;
+
+  &:first-child {
+    .accordion-title {
+      border-top: none;
+    }
+  }
+
+  &.open {
+    .accordion-title {
+      border-bottom: $m-accordion-border;
+    }
+  }
+}
+.accordion-title {
+  padding: .6rem 1rem;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: $m-accordion-title-font-weight;
+  line-height: 1;
+  color: $m-accordion-title-color;
+  cursor: pointer;
+  background-color: $m-accordion-title-bg-color;
+  border-top: $m-accordion-border;
+
+  &:hover {
+    color: $m-accordion-title-hover-color;
+    background-color: $m-accordion-title-hover-bg-color;
+  }
+}
+.accordion-content {
+  padding: 1rem;
+}
