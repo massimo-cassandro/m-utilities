@@ -111,3 +111,7 @@ export function crea_datatable(container, dt_columns) {
 export function auto_datatable(container) {
   return _autoDataTable( container, datatable_setup, jq);
 }
+
+export function dt_reload(dt_element) {
+  $(dt_element).DataTable().ajax.reload();
+}

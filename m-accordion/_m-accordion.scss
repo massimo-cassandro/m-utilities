@@ -20,6 +20,7 @@ $m-accordion-title-color: inherit !default;
 $m-accordion-title-bg-color: #ddd !default;
 $m-accordion-title-hover-color: #fff !default;
 $m-accordion-title-hover-bg-color: #333 !default;
+
 .accordion-outer-wrapper {
   overflow: hidden;
   border: $m-accordion-border;
@@ -57,5 +58,6 @@ $m-accordion-title-hover-bg-color: #333 !default;
   }
 }
 .accordion-content {
+  position: relative;
   padding: 1rem;
 }

@@ -1,6 +1,6 @@
 import {slideToggle} from '../js-utilities/slide-up-down-toggle';
 
-export default function (callback) {
+export default function (callback, content_minHeigth = null) {
 
   // elementi chiusi
   document.querySelectorAll('.accordion-wrapper:not(.open)').forEach(item => {
@@ -19,7 +19,7 @@ export default function (callback) {
       // degli elementi
 
       let originally_open = accordion_wrapper.classList.contains('open');
-      console.log(originally_open);
+
       if(!originally_open) {
         accordion_wrapper.classList.add('open');
       }
@@ -29,7 +29,7 @@ export default function (callback) {
           accordion_wrapper.classList.remove('open');
         }
         if(callback) {
-          callback();
+          callback(accordion_wrapper);
         }
       });
     }, false);

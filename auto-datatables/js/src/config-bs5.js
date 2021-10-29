@@ -5,7 +5,7 @@ const dt_config_bs5 = {
     // table + processing
     //"<'position-relative'tr>" +
     // table + processing
-    '<\'position-relative\'<\'table-responsive-md\'t>r>' +
+    '<\'table-responsive-md\'t>r' +
     // info + paginazione
     '<\'row mt-2 d-print-none\'<\'col-sm-5 col-md-6 small\'i><\'col-sm-7 col-md-6\'p>>',
 
