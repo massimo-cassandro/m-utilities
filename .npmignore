@@ -14,8 +14,10 @@ todo.md
 .codekit-cache/
 /**/*.sketch
 /boilerplate-frontend
-*WORK.*
+-WIP
 *.weblock
+/_WIP
+
 
 
 config.codekit3

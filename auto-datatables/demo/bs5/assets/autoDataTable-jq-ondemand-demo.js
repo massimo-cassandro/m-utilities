@@ -1,6 +1,4 @@
-// import $ from 'jquery';
-import {_autoDataTable} from '../../js/autoDataTable-bs4';
-
+import {_autoDataTable} from '../../../js/autoDataTable-bs5-jq-ondemand';
 
 /*
   {

@@ -21,6 +21,8 @@ export default [
     plugins: [
       sourcemaps(),
       node_resolve(),
+      terser(terserOptions)
+      // minifyHTML(),
       // commonjs(),
       // filesize(),
       // injectProcessEnv({
@@ -31,21 +33,19 @@ export default [
       {
         file: 'js/javascript-sandbox.min.js',
         format: 'iife',
-        sourcemap: true,
-        plugins: [/* minifyHTML(),  */terser(terserOptions)]
+        sourcemap: true
       }
     ]
   },
   {
     input: 'js/prism.js',
-    plugins: [sourcemaps(), resolve()],
+    plugins: [sourcemaps(), resolve(), terser(terserOptions) /*, minifyHTML(),  */],
     output: [
       {
         file: 'js/prism.min.js',
         format: 'iife',
         name: 'Prism',
-        sourcemap: false,
-        plugins: [/* minifyHTML(),  */terser(terserOptions)]
+        sourcemap: false
       }
     ]
   }
@@ -73,6 +73,7 @@ export default [
 //     sourcemaps(),
 //     node_resolve(),
 //     commonjs(),
+//     plugins: [terser(terserOptions)],
 //     filesize(),
 //     injectProcessEnv({
 //       NODE_ENV: 'production'
@@ -83,7 +84,6 @@ export default [
 //     format: 'umd',
 //     sourcemap: true,
 //     name: 'mAlert',
-//     plugins: [terser(terserOptions)]
 //   }
 // }
 // ];
@@ -104,17 +104,17 @@ export default [
 //           sourcemaps(),
 //           node_resolve(),
 //           commonjs(),
+//           plugins: [terser(terserOptions)],
 //           filesize(),
 //           injectProcessEnv({
 //             NODE_ENV: 'production'
-//           })
+//           }),
 //         ],
 //         output: [{
 //           file: `${target_base_dir}/${dir}/${file.replace('.js', '-min.js')}`,
 //           format: 'iife',
 //           sourcemap: true,
 //           name: dir + '_' + file.replace('.js', '').replace(/-/g, '_'), // ?????
-//           plugins: [terser(terserOptions)]
 //         }]
 //       }
 //     );

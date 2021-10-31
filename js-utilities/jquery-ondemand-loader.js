@@ -12,7 +12,8 @@ export default function (jquery_url='https://code.jquery.com/jquery-3.6.0.min.js
 
       let script = document.createElement('script');
       script.onload = function() {
-        callback();
+
+        return callback();
       };
       script.src = jquery_url;
       script.async = false;
@@ -24,12 +25,12 @@ export default function (jquery_url='https://code.jquery.com/jquery-3.6.0.min.js
       const intervalID = setInterval(() => {
         if(window.jQuery !== undefined ) {
           clearInterval(intervalID);
-          callback();
+          return callback();
         }
       }, 200);
 
     } else {
-      callback();
+      return callback();
     }
 
   } catch(e) { //throw error

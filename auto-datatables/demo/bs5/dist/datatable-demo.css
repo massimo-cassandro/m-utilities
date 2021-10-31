@@ -11163,6 +11163,7 @@ textarea.form-control-lg {
 
 */
 .m-datatable {
+  position: relative;
   margin-top: 1em;
   margin-bottom: 1em;
 }

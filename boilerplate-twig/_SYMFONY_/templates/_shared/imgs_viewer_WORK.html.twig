@@ -1,0 +1,204 @@
+// TODO aggiungere hr e wr
+
+
+{#
+  TAG PICTURE PER IMMAGINI DA VIEWER
+  v. 4
+  ===================================
+
+  Se preload = true, restituisce un oggetto composto da:
+    {
+      img: ==> tag picture, img, source, ...
+      preload: ==> tag link preload, ...
+    }
+
+
+  {%- include '@includes/imgs_viewer.html.twig' with {
+    img: img_obj,
+    alt: 'xxxx',
+    sizes: {                             <== ignorato se svg
+      xl: {w: 1440, h: xxx, img: null},
+      lg: {w: 1199, h: xxx, img: null},
+      md: {w:  991, h: xxx, img: null},
+      sm: {w:  767, h: xxx, img: null},
+      xs: {w:  575, h: xxx, img: null},
+      lg_xl
+      md_xl
+      md_lg
+      xs_sm
+      all
+    },
+    lqip: null,                              // low quality img placeholder, ignorato se svg
+    add_default_sizes: false,                // default
+    class: 'img-fluid',
+    lazyload: true,                          // facoltativo, default true,
+    async: true,                             // facoltativo, default true,
+    preload: false,                          // facoltativo, default false, attiva il preload
+    attrs: null,                             // attributi extra facoltativi
+    viewer: path('inner_viewer') ~ '/',      // <== default glob_vars.viewer
+    viewer_extra_params: ['fd=1', 'ext=1', 'alpha=1'], // <== array di eventuali parametri da aggiungere al viewer, ignorato se svg
+    densita_max: 2,                          // <== default, ignorato se svg
+    test: app.environment != 'prod',         // <== default
+    local: app.request.port in [8888, 8890], // <== default
+    mediaqueries : globals.glob_vars.mq      // array mediaqueries, per macro o impostazioni particolari, ignorato se svg
+  } -%}
+
+
+  dove:
+    img = {             <== oggetto file std
+      id     : 123,
+      width  : 1000,
+      height : 900,
+      mime   : 'image/jpeg'
+    }
+
+    sizes = {                  <== array breakpoint -> bounding box (NB: da xl a xs)
+      xl : {w: 1000, h: null},  <== equivale a `bb=1000x`
+      lg : {},                  <== equivale a utilizzare l'img di default
+      md : {w: null, h: null},  <== equivale a omettere il parametro bb
+      sm : false,               <== il breakpoint viene saltato, equivale a ometterlo del tutto
+      xs : {w: 700, h: null, img: img_obj} <== img specifica per questo breakpoint in sostituzione di quella base
+
+      all: {w: 700, h: null, img: img_obj} <== omette l'attributo media (non scrive il tag source)
+                                               se presente, non aggiungere altri brekpoiints
+    }
+
+    add_default_sizes: se true al tag img vengono aggiunte width e height (dimensioni
+                       del file originale). Per non avere distorsioni dell'immagine
+                       è necessario che sia presente una sola dimensione (tipicamente la base)
+                       per tutti i brk (o che siano calcolate con lo stesso aspect-ratio)
+
+
+
+Esempio OUTPUT
+==========================
+<picture>
+  <source type="image/webp" srcset="img-xl.webp" media="(min-width: 1200px)">
+  <source srcset="img-xl.jpg" media="(min-width: 1200px)">
+
+  <source type="image/webp" srcset="img-lg.webp" media="(min-width: 992px) and (max-width: 1199px)">
+  <source srcset="img-lg.jpg" media="(min-width: 992px) and (max-width: 1199px)">
+
+  <source type="image/webp" srcset="img-md.webp" media="(min-width: 768px) and (max-width: 991px)">
+  <source srcset="img-md.jpg" media="(min-width: 768px) and (max-width: 991px)">
+
+  <source type="image/webp" srcset="img-sm.webp" media="(min-width: 576px) and (max-width: 767px)">
+  <source srcset="img-sm.jpg" media="(min-width: 576px) and (max-width: 767px)">
+
+  <source type="image/webp" srcset="img-xs.webp">
+  <img src="img-xs.jpg" alt="Testata Luci" class="img-fluid d-block object-fix-cover">
+</picture>
+#}
+
+{% set alt = alt is defined? alt : '' %}
+{% set lazyload = lazyload is defined? lazyload : true %}
+{% set async = async is defined? async : true %}
+{% set preload = preload is defined? preload : false %}
+{% set add_default_sizes = add_default_sizes is defined? add_default_sizes : false %}
+{% set class = class is defined ? class : '' %}
+{% set lqip = lqip is defined ? lqip : null %}
+{% set densita_max = densita_max is defined ? densita_max : 2 %}
+{% set viewer = viewer is defined ? viewer : glob_vars.viewer %}
+{% set viewer = viewer|last != '/'? viewer ~ '/' : viewer %}
+
+{% set local = local is defined ? local : app.request.port in [8888, 8890] %}
+{% set test = local or (test is defined ? test : app.environment != 'prod') %}
+{% set viewer_extra_params = (viewer_extra_params is defined and viewer_extra_params)? viewer_extra_params : [] %}
+
+{%- if lazyload and not ('lazyload' in class) -%}
+	{% set class = class ~ ' lazyload' %}
+{%- endif -%}
+
+{% set mediaqueries = mediaqueries is defined? mediaqueries : glob_vars.mq|merge(glob_vars.special_mq) %}
+
+{%- if not preload %}
+  <picture>
+
+    {%- if img.mime|default() == 'image/svg+xml' -%}
+      <img
+        {{- lazyload? ' data-' : ' ' -}} src="{{ viewer ~ img.id|default() }}"
+        {%- if lazyload %} loading="lazy"{% endif %}
+        {{- ' ' -}} alt="{{ alt }}"
+        {%- if add_default_sizes %} width="{{ img.width }}" height="{{ img.height }}"{% endif %}
+        {%- if class %} class="{{ class }}"{% endif %}
+        {%- if attrs|default() %} {{ attrs|raw }}{% endif %} alt="{{ alt }}">
+
+    {%- else  -%}
+
+      {%- for breakpoint, params in sizes|default({}) -%}
+
+        {%- if params != false -%}
+          {% set this_img = params.img is defined and params.img is not null ? params.img : img %}
+          {% set img_base_url = viewer ~ this_img.id|default() %}
+          {% set last_breakpoint = loop.last %}
+
+          {%- for formato in (local? ['default'] : ['webp', 'default']) -%}
+            {%- set f_param = [] -%}
+
+            {%- if formato == 'webp' and not ('webp' in this_img.mime|default()) -%}
+              {%- set f_param = ['f=webp'] -%}
+
+            {%- elseif formato == 'default' and ('webp' in this_img.mime|default()) -%}
+              {%- set f_param = ['f=pjpeg'] -%}
+
+            {%- endif -%}
+
+            {% set srcset = [] %}
+
+            {% for densita in 1..densita_max  %}
+              {%- if not (breakpoint in ['xl','lg','md', 'md_xl', 'md_lg', 'lg_xl'] and densita == 3 ) -%}
+
+                {% set this_width =  (params.w is defined and params.w is not null)?  params.w * densita : null %}
+                {% set this_height = (params.h is defined and params.h is not null)?  params.h * densita : null %}
+
+                {% if densita == 1 or (this_width and this_img.width|default() >= this_width) or (this_height and this_img.height|default() >= this_height) %}
+                  {%- set this_size_params = [] -%}
+
+                  {%- if this_width is not null or this_height is not null  -%}
+                    {%- set this_size_params = this_size_params|merge([
+                      'bb=' ~ (this_width? this_width : '') ~ 'x' ~ (this_height? this_height : '')
+                    ]) -%}
+                  {%- endif -%}
+
+                  {# {%- if this_width is not null and this_height is not null  -%}
+                    {%- set this_size_params = this_size_params|merge(['fd=1']) -%}
+                  {%- endif -%} #}
+
+                  {%- set tot_params = []|merge(viewer_extra_params)|merge(this_size_params)|merge(f_param) -%}
+                  {% set std_img = img_base_url ~ (tot_params|length? '?' ~ tot_params|join('&') : '') %}
+
+                  {% set srcset = srcset|merge([std_img ~ (densita > 1 ? " #{densita}x" : '')]) %}
+                {% endif %} {# end densita == 1 or (this_width and this_width >= this_img.width ... #}
+
+              {%- endif -%}
+            {%- endfor -%} {# end for densita #}
+
+            {%- if (breakpoint == 'all' or last_breakpoint) and formato == 'default' -%}
+
+              <img
+                {{- (lazyload and (not lqip))? ' data-' : ' ' -}} src="{{ lqip? lqip : srcset[0] }}"
+                {{- lazyload? ' data-' : ' ' -}} srcset="{{ srcset|slice(1)|join(', ') }}"
+                {%- if lazyload %} loading="lazy"{% endif %}
+                {%- if async %} decoding ="async"{% endif %}
+                {{- ' ' -}} alt="{{ alt }}"
+                {%- if class %} class="{{ class }}"{% endif %}
+                {%- if add_default_sizes %} width="{{ img.width }}" height="{{ img.height }}"{% endif %}
+                {%- if test %} data-brkp="{{ breakpoint }}"{% endif -%}
+                {%- if attrs|default() %} {{ attrs|raw }}{% endif -%}>
+
+            {%- else -%}
+
+              <source
+                {{- lazyload? ' data-' : ' ' -}} srcset="{{ srcset|join(', ') }}"
+                {%- if formato == 'webp' %} type="image/webp"{% endif -%}
+                {%- if breakpoint != 'all' %} media="{{ mediaqueries[breakpoint] }}"{% endif -%}
+                {%- if test %} data-brkp="{{ breakpoint }}"{% endif %}>
+
+            {%- endif -%}
+
+          {%- endfor -%} {# end for formato #}
+        {%- endif -%}
+      {%- endfor -%} {# end for breakpoint #}
+    {%- endif -%} {# end if svg #}
+  </picture>
+{% endif -%} {# end if not preload #}

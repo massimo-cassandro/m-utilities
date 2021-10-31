@@ -1,5 +1,5 @@
-import {_creaDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/js/creaDataTable-bs5-no-jq';
-import {_autoDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/js/autoDataTable-bs5-no-jq';
+import {_creaDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/js/creaDataTable-bs5-jq-ondemand';
+import {_autoDataTable} from '@massimo-cassandro/m-utilities/auto-datatables/js/autoDataTable-bs5-jq-ondemand';
 import app_data from '../../globali/get-app-data';
 
 const datatable_setup = {
@@ -113,5 +113,10 @@ export function auto_datatable(container) {
 }
 
 export function dt_reload(dt_element) {
-  $(dt_element).DataTable().ajax.reload();
+
+  if(!(dt_element instanceof $)) {
+    dt_element = $(dt_element);
+  }
+  dt_element.DataTable().ajax.reload();
+
 }

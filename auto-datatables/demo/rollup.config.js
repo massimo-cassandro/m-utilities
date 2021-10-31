@@ -1,5 +1,5 @@
-import { terser } from 'rollup-plugin-terser';
-// import sourcemaps from 'rollup-plugin-sourcemaps';
+// import { terser } from 'rollup-plugin-terser';
+import sourcemaps from 'rollup-plugin-sourcemaps';
 import node_resolve from '@rollup/plugin-node-resolve';
 // import fs from 'fs'; // per config dinamico
 import commonjs from '@rollup/plugin-commonjs'; // per importazione file umd
@@ -10,71 +10,45 @@ import commonjs from '@rollup/plugin-commonjs'; // per importazione file umd
 
 
 const terserOptions = {
-  compress: {
-    passes: 2
-  }
-};
+    compress: {
+      passes: 2
+    }
+  },
+  files = [
+    './bs5/assets/autoDataTable-demo.js',
+    './bs5/assets/autoDataTable-jq-ondemand-demo.js',
+    './bs5/assets/creaDataTable-demo.js',
+    './bs5/assets/creaDataTable-jq-ondemand-demo.js',
 
-export default [
-  {
-    input: './bs5/autoDataTable-demo.js',
-    plugins: [
-      node_resolve(),
-      commonjs(),
-    ],
-    output: [
-      {
-        file: './bs5/autoDataTable-demo-min.js',
-        format: 'iife',
-        sourcemap: false,
-        plugins: [terser(terserOptions)]
-      }
-    ]
-  },
-  {
-    input: './bs5/creaDataTable-demo.js',
-    plugins: [
-      node_resolve(),
-      commonjs(),
-    ],
-    output: [
-      {
-        file: './bs5/creaDataTable-demo-min.js',
-        format: 'iife',
-        sourcemap: false,
-        plugins: [terser(terserOptions)]
-      }
-    ]
-  },
-  {
-    input: './bs4/autoDataTable-demo.js',
-    plugins: [
-      node_resolve(),
-      commonjs(),
-    ],
-    output: [
-      {
-        file: './bs4/autoDataTable-demo-min.js',
-        format: 'iife',
-        sourcemap: false,
-        plugins: [terser(terserOptions)]
-      }
-    ]
-  },
-  {
-    input: './bs4/creaDataTable-demo.js',
-    plugins: [
-      node_resolve(),
-      commonjs(),
-    ],
-    output: [
-      {
-        file: './bs4/creaDataTable-demo-min.js',
-        format: 'iife',
-        sourcemap: false,
-        plugins: [terser(terserOptions)]
-      }
-    ]
-  }
+    './bs4/assets/autoDataTable-demo.js',
+    './bs4/assets/autoDataTable-jq-ondemand-demo.js',
+    './bs4/assets/creaDataTable-demo.js',
+    './bs4/assets/creaDataTable-jq-ondemand-demo.js'
+  ];
 
-];
+let config = [];
+
+files.forEach(file => {
+
+  config.push(
+    {
+      // preserveEntrySignatures: false,
+      input: file,
+      plugins: [
+        node_resolve(),
+        commonjs(),
+        // terser(terserOptions),
+        sourcemaps()
+      ],
+      output: [{
+        file: file.replace('/assets/', '/dist/').replace('.js', '-min.js'),
+        format: 'iife',
+        sourcemap: true,
+        // plugins: [terser(terserOptions)]
+      }]
+    }
+  );
+
+});
+
+export default config;

@@ -1,5 +1,5 @@
 // import $ from 'jquery';
-import {_autoDataTable} from '../../js/autoDataTable-bs5-no-jq.js';
+import {_autoDataTable} from '../../../js/autoDataTable-bs4-jq-ondemand';
 
 
 /*
