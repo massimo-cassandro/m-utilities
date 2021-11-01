@@ -7,16 +7,30 @@ $snackbar-warning-color: #fff !default;
 $snackbar-success-background: #05930a !default; // false per non generare questo stato
 $snackbar-success-color: #fff !default;
 
+$snackbar-display: inline-flex !default;
+$snackbar-position: 'bottomLeft' !default; // bottomLeft bottomRight
+
 
 .snackbars-container {
   position: sticky;
-  bottom: 0;
-  left: 0;
   z-index: 1200;
 
-  display: inline-flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  @if $snackbar-position == 'bottomLeft'{
+    bottom: 0;
+    left: 0;
+  } @else if $snackbar-position == 'bottomRight'{
+    bottom: 0;
+    left: 100%;
+    // } @else if $snackbar-position == 'topLeft'{
+    //   top: 0;
+    //   left: 0;
+    // } @else if $snackbar-position == 'topRight'{
+    //   top: 0;
+    //   left: 100%;
+  }
+
+  display: $snackbar-display;
+  flex-flow: column nowrap;
   align-items: stretch;
   justify-content: flex-end;
   gap: 5px;
@@ -26,8 +40,7 @@ $snackbar-success-color: #fff !default;
 }
 .snackbar {
   display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
@@ -38,9 +51,9 @@ $snackbar-success-color: #fff !default;
   background: $snackbar-std-background;
   border-radius: $border-radius;
   box-shadow: 0 0 8px rgba(#000, .6);
-  animation: enter_snackbar .2s linear;
+  animation: enter-snackbar .2s linear;
 
-  @keyframes enter_snackbar {
+  @keyframes enter-snackbar {
     0% {
       transform: translateY(200%);
     }

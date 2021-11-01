@@ -48,5 +48,5 @@ export function snackbar(message, status='std', icons_obj = null) {
     if(!container.querySelectorAll('.snackbar')) {
       container.remove();
     }
-  }, 5000);
+  }, 500000);
 }
