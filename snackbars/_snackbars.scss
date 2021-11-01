@@ -13,7 +13,7 @@ $snackbar-position: 'bottomLeft' !default; // bottomLeft bottomRight
 
 .snackbars-container {
   position: sticky;
-  z-index: 1200;
+  z-index: 999992;
 
   @if $snackbar-position == 'bottomLeft'{
     bottom: 0;
