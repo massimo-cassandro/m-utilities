@@ -1,6 +1,6 @@
 import {slideToggle} from '../js-utilities/slide-up-down-toggle';
 
-export default function (callback, content_minHeigth = null) {
+export default function (callback, precallback) {
 
   // elementi chiusi
   document.querySelectorAll('.accordion-wrapper:not(.open)').forEach(item => {
@@ -13,6 +13,12 @@ export default function (callback, content_minHeigth = null) {
       accordion_content = accordion_wrapper.querySelector('.accordion-content');
 
     item.addEventListener('click', () => {
+
+      // il precallback è incocato prima dell'esecuzione dello slide
+      if(precallback) {
+        precallback(accordion_wrapper);
+      }
+
       // la classe open è aggiunta prima dell'effetto se l'accordion è chiuso,
       // o rimossa dopo l'effetto se l'accordion era aperto
       // in questo modo le regole css sono applicate compatibilmente con la visibilità
