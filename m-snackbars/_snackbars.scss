@@ -1,3 +1,6 @@
+@use 'sass:map';
+@use '../scss-utilities/m-utilities-variables' as mVariables;
+
 $snackbar-std-background: #333 !default;
 $snackbar-std-color: #fff !default;
 $snackbar-error-background: #c00 !default; // false per non generare questo stato
@@ -13,7 +16,7 @@ $snackbar-position: 'bottomLeft' !default; // bottomLeft bottomRight
 
 .snackbars-container {
   position: sticky;
-  z-index: 999992;
+  z-index: map.get(mVariables.$m-utilities-z-index, snackbars);
 
   @if $snackbar-position == 'bottomLeft'{
     bottom: 0;

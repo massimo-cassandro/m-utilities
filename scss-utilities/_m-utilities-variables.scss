@@ -1,0 +1,22 @@
+// variabili condivise dalle varie applicazioni in m-utilities
+
+
+/*
+BS Z-index master list
+------------------------------------
+$zindex-dropdown:                   1000;
+$zindex-sticky:                     1020;
+$zindex-fixed:                      1030;
+$zindex-modal-backdrop:             1040;
+$zindex-offcanvas:                  1050;
+$zindex-modal:                      1060;
+$zindex-popover:                    1070;
+$zindex-tooltip:                    1080;
+*/
+
+// NB aumentare in modo che siano tutte posizionate sopra BS
+// quando sarà disponibile il nuovo mAlert
+$m-utilities-z-index: (
+  overlay: 1035,
+  snackbars: 1036
+);
