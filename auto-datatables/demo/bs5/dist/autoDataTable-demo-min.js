@@ -28315,7 +28315,19 @@
 	      "office": "Tokyo"
 	    },
 	*/
-	_autoDataTable('#datatable_container');
+	_autoDataTable('#datatable_container', {
+	  datatable_options:{
+	    createdRow: function( row, data, dataIndex, cells ) {
+	      // if ( data[4] == "A" ) {
+	      //   $(row).addClass( 'important' );
+	      // }
+	      console.log(row);
+	      console.log(data);
+	      console.log(dataIndex);
+	      console.log(cells);
+	    }
+	  }
+	});
 
 })();
 //# sourceMappingURL=autoDataTable-demo-min.js.map
