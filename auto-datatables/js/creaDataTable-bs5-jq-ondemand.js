@@ -1,7 +1,7 @@
 import dt_bs from 'datatables.net-bs5/js/dataTables.bootstrap5';
 import dt_config_bs from './src/config-bs5';
 
-import cdt from './src/creaDatatTable-src';
+import cdt from './src/creaDataTable-src';
 
 import jquery_loader from '../../js-utilities/jquery-ondemand-loader';
 

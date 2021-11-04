@@ -2,7 +2,7 @@ import $ from 'jquery';
 import dt_bs from 'datatables.net-bs5/js/dataTables.bootstrap5';
 import dt_config_bs from './src/config-bs5';
 
-import cdt from './src/creaDatatTable-src';
+import cdt from './src/creaDataTable-src';
 
 export function _creaDataTable( $container, options = {}) {
   if(!window.jQuery) {
