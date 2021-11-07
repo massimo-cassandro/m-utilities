@@ -1,3 +1,17 @@
+// inizializza i parametri degli elementi su cui agire con il Drag&Drop
+// da utilizzare nel caso si aggiungano elementi al set iniziale
+// dopo aver avviato la funzione
+export function initSortingElement(el) {
+  el.setAttribute('draggable', 'true');
+  el.classList.add('m-sorting-item');
+
+  // imposta draggable=false su eventuali elementi <a> o <img> posti all'interno
+  el.querySelectorAll('a, img').forEach(item => {
+    item.draggable = false;
+  });
+}
+
+
 export default function (m_sorting_container, m_sorting_elements_selector, callback)  {
 
   /*
@@ -16,9 +30,8 @@ export default function (m_sorting_container, m_sorting_elements_selector, callb
     * https://www.nngroup.com/articles/drag-drop/
   */
 
-
-
-  let dragged_element = null, m_sorting_elements = [];
+  let dragged_element = null,
+    m_sorting_elements = [];
 
   if(m_sorting_container) {
     if(m_sorting_elements_selector) {
@@ -45,100 +58,118 @@ export default function (m_sorting_container, m_sorting_elements_selector, callb
     // e.dataTransfer.clearData();
   };
 
-  m_sorting_elements.forEach(el => {
-    el.setAttribute('draggable', 'true');
-    el.classList.add('m-sorting-item');
+  // m_sorting_container.classList.add('m-sorting-wrapper');
 
-    // imposta draggable=false su eventuali elementi <a> o <img> posti all'interno
-    el.querySelectorAll('a, img').forEach(item => {
-      item.draggable = false;
+  m_sorting_elements.forEach((el, idx) => {
+    initSortingElement(el);
+  });
+
+
+  // recupera l'elemento a cui delegare l'handler
+  const getSortingItem = eventTarget => {
+
+    let target;
+
+    if(eventTarget.classList.contains('m-sorting-item')) {
+      target = eventTarget;
+
+    } else {
+      target = eventTarget.closest('.m-sorting-item'); // elemento o null
+    }
+
+    return target;
+  }
+
+  // trascinamento avviato
+  m_sorting_container.addEventListener('dragstart', function(e) {
+
+    resetAll();
+    dragged_element = getSortingItem(e.target);
+
+    e.dataTransfer.setData('text/plain', 'm-sorting');
+    e.dataTransfer.effectAllowed = 'move';
+
+    dragged_element.classList.add('m-sorting-sorting');
+
+  }, false);
+
+  // inizio posizionamento sopra un altro elemento
+  m_sorting_container.addEventListener('dragenter', function(e) {
+    e.preventDefault();
+
+    const target_element = getSortingItem(e.target);
+
+    m_sorting_container.querySelectorAll('.m-sorting-dragover').forEach(item => {
+      item.classList.remove('m-sorting-dragover');
     });
 
-    // trascinamento avviato
-    el.addEventListener('dragstart', function(e) {
-      resetAll();
-      dragged_element = e.target; // === this
+    target_element.classList.add('m-sorting-dragover');
+
+  }, false);
+
+  // posizionamento sopra un altro elemento
+  m_sorting_container.addEventListener('dragover', function(e) {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'move';
+
+    const target_element = getSortingItem(e.target);
+
+    if( target_element !== dragged_element ) {
+      target_element.classList.add('m-sorting-dragover');
+    }
+
+  }, false);
+
+  // uscita posizionamento sopra un altro elemento
+  m_sorting_container.addEventListener('dragleave', function(e) {
+    const target_element = getSortingItem(e.target);
+    target_element.classList.remove('m-sorting-dragover');
+  }, false);
 
 
-      e.dataTransfer.setData('text/plain', 'm-sorting');
-      e.dataTransfer.effectAllowed = 'move';
+  m_sorting_container.addEventListener('drop', function(e) {
+    e.preventDefault();
+    const target_element = getSortingItem(e.target);
 
-      this.classList.add('m-sorting-sorting');
+    if(dragged_element) {
 
-    }, false);
+      if( target_element.nextElementSibling ) {
+        m_sorting_container.insertBefore(dragged_element, target_element.nextElementSibling);
 
-    // inizio posizionamento sopra un altro elemento
-    el.addEventListener('dragenter', function(e) {
-      e.preventDefault();
-
-      dragged_element.parentNode.querySelectorAll('.m-sorting-dragover').forEach(item => {
-        item.classList.remove('m-sorting-dragover');
-      });
-
-      if( this !== dragged_element ) {
-        this.classList.add('m-sorting-dragover');
+      // se si tratta dell'ultimo elemento si mette alla fine
+      } else {
+        m_sorting_container.insertAdjacentElement('beforeend', dragged_element);
       }
 
-    }, false);
+      /*
+      // POSIZIONAMENTO SOPRA IL DROP ELEMENT
+      // se si tratta dell'ultimo elemento si mette alla fine
+      if (!target_element.nextElementSibling ) {
+        m_sorting_container.insertAdjacentElement('beforeend', dragged_element);
 
-    // posizionamento sopra un altro elemento
-    // e.target è l'elemento
-    el.addEventListener('dragover', function(e) {
-      e.preventDefault();
-      e.dataTransfer.dropEffect = 'move';
-      if( this !== dragged_element ) {
-        this.classList.add('m-sorting-dragover');
+      // altrimenti si mette sopra l'elemento selezionato
+      } else {
+        m_sorting_container.insertBefore(dragged_element, target_element); //this.nextElementSibling);
+
       }
+      */
+    }
+    resetAll();
 
-    }, false);
+    return false;
 
-    // uscita posizionamento sopra un altro elemento
-    // e.target è l'elemento
-    el.addEventListener('dragleave', function() {
-      this.classList.remove('m-sorting-dragover');
-    }, false);
+  }, false);
 
-    // drop e.target è l'elemento
-    el.addEventListener('drop', function(e) {
-      e.preventDefault();
+  // trascinamento terminato
+  m_sorting_container.addEventListener('dragend', function(e) {
 
-      if(dragged_element) {
+    resetAll();
+    const target_element = getSortingItem(e.target);
 
-        if( this.nextElementSibling ) {
-          this.parentNode.insertBefore(dragged_element, this.nextElementSibling);
+    if(callback && typeof callback === 'function') {
+      callback(target_element);
+    }
 
-        // se si tratta dell'ultimo elemento si mette alla fine
-        } else {
-          this.parentNode.insertAdjacentElement('beforeend', dragged_element);
-        }
+  }, false);
 
-        /* if(this.previousElementSibling === dragged_element && this.nextElementSibling ) {
-          this.parentNode.insertBefore(dragged_element, this.nextElementSibling);
-
-        } else if( this.nextElementSibling ) {
-          this.parentNode.insertBefore(dragged_element, this);
-
-        // se si tratta dell'ultimo elemento si mette alla fine
-        } else {
-          this.parentNode.insertAdjacentElement('beforeend', dragged_element);
-        } */
-      }
-      resetAll();
-
-      return false;
-
-    }, false);
-
-    // trascinamento terminato
-    el.addEventListener('dragend', function() {
-
-      resetAll();
-
-      if(callback && typeof callback === 'function') {
-        callback(el);
-      }
-
-    }, false);
-
-  });
 }

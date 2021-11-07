@@ -1,0 +1,56 @@
+/*
+$m-autocomplete-color: #333;
+$m-autocomplete-bg: #fff;
+$m-autocomplete-border: #ddd;
+$m-autocomplete-box-shadow-color: #111;
+$m-autocomplete-focus-color: #fff;
+$m-autocomplete-focus-bg: #036;
+$m-autocomplete-active-color: #fff;
+$m-autocomplete-active-bg: #03294f;
+
+@import '@massimo-cassandro/m-utilities/m-autocomplete';
+*/
+
+$m-autocomplete-color: #333 !default;
+$m-autocomplete-bg: #fff !default;
+$m-autocomplete-border: #ddd !default;
+$m-autocomplete-box-shadow-color: #111 !default;
+$m-autocomplete-focus-color: #fff !default;
+$m-autocomplete-focus-bg: #036 !default;
+$m-autocomplete-active-color: #fff !default;
+$m-autocomplete-active-bg: #03294f !default;
+
+[data-popper-reference-hidden] {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.m-autocomplete {
+  display: block;
+  width: 100%;
+  color: $m-autocomplete-color;
+  background-color: $m-autocomplete-bg;
+  border: 1px solid $m-autocomplete-border;
+  // border-radius: 0 0 .4rem .4rem;
+  box-shadow:
+    0 8px 24px rgba($m-autocomplete-box-shadow-color, .1),
+    0 16px 56px rgba($m-autocomplete-box-shadow-color, .1),
+    0 24px 80px rgba($m-autocomplete-box-shadow-color, .1);
+
+  > div {
+    padding: .3rem .5rem;
+    cursor: pointer;
+    &:not(:last-child) {
+      border-bottom: 1px solid $m-autocomplete-border;
+    }
+
+    &:hover, &:focus &.selected {
+      color: $m-autocomplete-focus-color;
+      background-color: $m-autocomplete-focus-bg;
+    }
+    &:active {
+      color: $m-autocomplete-active-color;
+      background-color: $m-autocomplete-active-bg;
+    }
+  }
+}
