@@ -75,6 +75,9 @@ $sf-macro-margin-bottom: .5rem !default;
       label {
         display: none;
       }
+      .align-middle {
+        align-self: center;
+      }
     }
   }
 

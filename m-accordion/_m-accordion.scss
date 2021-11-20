@@ -6,9 +6,14 @@
     <div class="accordion-content"> ... </div>
   </div>
 
-  div class="accordion-wrapper">
+  <div class="accordion-wrapper">
     <h2 class="accordion-title">Inizialmente chiuso</h2>
-    <div class="accordion-content"> ... </div>
+    <div class="accordion-content">
+
+    <!-- accordion nidificato -->
+      <div class="accordion-outer-wrapper accordion-inner"> ... </div>
+
+    </div>
   </div>
 
 </div>
@@ -20,6 +25,14 @@ $m-accordion-title-color: inherit !default;
 $m-accordion-title-bg-color: #ddd !default;
 $m-accordion-title-hover-color: #fff !default;
 $m-accordion-title-hover-bg-color: #333 !default;
+$m-accordion-title-font-weight: 700 !default;
+
+$m-accordion-inner: false !default; // true per aggiungere il css accordion-inner
+$m-accordion-inner-title-font-weight: 700 !default;
+$m-accordion-inner-title-color: inherit !default;
+$m-accordion-inner-title-bg-color: #cdcdcd !default;
+$m-accordion-inner-title-hover-color: #fff !default;
+$m-accordion-inner-title-hover-bg-color: #333 !default;
 
 .accordion-outer-wrapper {
   overflow: hidden;
@@ -30,13 +43,13 @@ $m-accordion-title-hover-bg-color: #333 !default;
   position: relative;
 
   &:first-child {
-    .accordion-title {
+    > .accordion-title {
       border-top: none;
     }
   }
 
   &.open {
-    .accordion-title {
+    > .accordion-title {
       border-bottom: $m-accordion-border;
     }
   }
@@ -60,4 +73,29 @@ $m-accordion-title-hover-bg-color: #333 !default;
 .accordion-content {
   position: relative;
   padding: 1rem;
+}
+
+@if $m-accordion-inner {
+
+  .accordion-inner {
+
+    &, > .accordion-title, > .accordion-wrapper {
+      border: none;
+      border-radius: 0;
+    }
+
+    > .accordion-title {
+      padding: .4rem .5rem;
+      margin: 0 0 .5rem;
+      font-size: 1rem;
+      font-weight: $m-accordion-inner-title-font-weight;
+      color: $m-accordion-inner-title-color;
+      background-color: $m-accordion-inner-title-bg-color;
+
+      &:hover {
+        color: $m-accordion-inner-title-hover-color;
+        background-color: $m-accordion-inner-title-hover-bg-color;
+      }
+    }
+  }
 }
