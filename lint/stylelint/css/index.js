@@ -11,7 +11,7 @@ module.exports = {
   'ignoreFiles': ['**/node_modules/**/*.*', '**/vendor/**/*.*'],
 
   'rules': {
-
+    'alpha-value-notation': 'number',
     'at-rule-empty-line-before': null,
     'at-rule-name-space-after': 'always',
     'at-rule-no-vendor-prefix': true,
@@ -290,6 +290,14 @@ module.exports = {
     ],
     'selector-no-vendor-prefix': true,
     'shorthand-property-no-redundant-values': true,
+    // 'shorthand-property-no-redundant-values': [
+    //   true,
+    //   {
+    //     ignoreShorthands: [
+    //       '/^grid-/'
+    //     ]​
+    //   }
+    // ],
     'string-quotes': 'single', // 'double'
 
     'unicode-bom': 'never',

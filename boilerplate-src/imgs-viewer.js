@@ -4,7 +4,7 @@ import {escapeHTML} from '../js-utilities/escapeHTML';
   import {img_viewer} from '@massimo-cassandro/m-utilities/boilerplate-src/imgs-viewer';
 
   img_viewer({
-    viewer: window.mUtilities.viewer, // default /viewer
+    viewer: '/viewer', // default
     img: __img_obj__,
     bbs: [
       {mq: '(min-width: 1199px)', bb:[255,255]},
@@ -14,7 +14,7 @@ import {escapeHTML} from '../js-utilities/escapeHTML';
     ],
     lazy: true,
     viewer_params: '', // eventuali parametri aggiunti per il viewer
-    img_fmt: [], // array dei formati di immagine prodotti dal viewer
+    img_fmt: ['webp', 'jpeg'], // array dei formati di immagine prodotti dal viewer
     alt: '', // alt
     class: '',
     async: true,
