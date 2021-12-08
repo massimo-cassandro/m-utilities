@@ -1,5 +1,5 @@
 // TODO multiple messages
-import {mAlert} from '@massimo-cassandro/m-utilities/mAlert-bs4/mAlert';
+import {mAlert} from '../../mAlert-bs4/_mAlert';
 
 export default function () {
 
