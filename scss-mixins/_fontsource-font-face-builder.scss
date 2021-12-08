@@ -1,0 +1,105 @@
+// https://fontsource.org/docs/sass/mixins
+// https://fontsource.org/docs/variable-fonts
+
+@use 'sass:map';
+
+@mixin fontsource-font-face-builder(
+  $font-family,
+  $variable-font-family,
+  $generic-font-family,
+  $font-id,
+  $font-dir,
+  $font-display,
+  $non-variable-weights,
+  $variable-weights,
+  $styles,
+  $subset,
+  $variable-type,
+  $unicodeMap,
+  $body-font-face: false,
+  $body-regular-weight: null
+) {
+
+
+  // ==================================
+  // NON-VARIABLE FONTS (.woff only)
+  // ==================================
+  // file name sample: #{$font-id}-latin-400-normal.woff
+
+  @each $w in $non-variable-weights {
+    @each $s in $styles {
+      @font-face {
+        font-family: '#{$font-family}';
+        font-style: $s;
+        font-display: $font-display;
+        font-weight: $w;
+        src: url('#{$font-dir}/#{$font-id}-#{$subset}-#{$w}-#{$s}.woff') format('woff');
+        unicode-range: #{map.get($unicodeMap, $subset)};
+      }
+      // @include fontFaceCustom(
+      //   $fontName: $font-family,
+      //   $weight: $w,
+      //   $style: $s,
+      //   $display: swap,
+      //   $woff2Path: '#{$fontDir}/#{$fontId}-#{$subset}-#{$w}-#{$s}.woff2',
+      //   $woffPath: '#{$fontDir}/#{$fontId}-#{$subset}-#{$w}-#{$s}.woff',
+      //   $unicodeRange: true,
+      //   $unicodeRangeValues: map-get($unicodeMap, $subset)
+      // );
+    }
+  }
+  @if $body-font-face {
+    :root {
+      --font-family: '#{$font-family}', #{$generic-font-family};
+    }
+    @if $body-regular-weight {
+      body {
+        font-weight: $body-regular-weight;
+      }
+    }
+
+  } @else {
+    :root {
+      --heading-font-family: '#{$font-family}', #{$generic-font-family};
+    }
+  }
+
+  // ==================================
+  // VARIABLE FONT
+  // ==================================
+  // file name sample: #{$font-id}-latin-variable-wghtOnly-italic.woff2
+
+  @each $s in $styles {
+
+    @font-face {
+      font-family: '#{$variable-font-family}';
+      font-style: $s;
+      font-display: $font-display;
+      font-weight: $variable-weights;
+      @if $variable-type == 'full' {
+        font-stretch: $stretch;
+      }
+      src: url('#{$font-dir}/#{$font-id}-#{$subset}-variable-#{$variable-type}-#{$s}.woff2') format('woff2');
+      unicode-range: #{map.get($unicodeMap, $subset)};
+    }
+  }
+
+  @supports (font-variation-settings: normal) {
+    @if $body-font-face {
+      :root {
+        --font-family: '#{$variable-font-family}', #{$generic-font-family};
+      }
+      @if $body-regular-weight {
+        body {
+          font-variation-settings: 'wght' #{$body-regular-weight};
+        }
+      }
+
+    } @else {
+      :root {
+        --heading-font-family: '#{$variable-font-family}', #{$generic-font-family};
+      }
+    }
+  }
+
+}

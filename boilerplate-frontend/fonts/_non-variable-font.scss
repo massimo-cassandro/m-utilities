@@ -1,0 +1,76 @@
+// https://fontsource.org/docs/sass/mixins
+// https://fontsource.org/docs/variable-fonts
+
+@use 'sass:map';
+
+@use '@fontsource/barlow-condensed/scss/mixins' as fontsource-mixins;
+
+
+$brk-font-weights: (
+  light:    200,
+  regular:  400,
+  bold:     500
+);
+
+// stili presenti per ogni peso
+$brk-font-styles: (
+  light:   (normal, italic),
+  regular: (normal),
+  bold:    (normal)
+);
+
+// @each $wght, $val in $font-weights {
+
+//   %font-wght-#{$wght} {
+//     font-weight: #{$val};
+//     // font-variation-settings: 'wght' #{$val};
+//   }
+// }
+
+$brk-font-face-family: 'Barlow Condensed';
+$brk-generic-font-face-family: sans-serif;
+$brk-font-face-display: swap;
+$brk-font-face-subset: 'latin';
+$brk-font-face-files-dir: '/fonts';
+
+
+// ==================================
+// NON-VARIABLE FONTS
+// ==================================
+
+@each $weight-key, $w in $brk-font-weights {
+
+  @each $s in map.get($brk-font-styles, $weight-key) {
+    // @font-face {
+    //   font-family: '#{$font-face-family}';
+    //   font-style: $s;
+    //   font-display: $font-face-display;
+    //   font-weight: $weight-value;
+    //   src: url('#{$font-face-files-dir}/#{fontsource-mixins.$fontId}-#{$font-face-subset}-#{$weight-value}-#{$s}.woff') format('woff');
+    //   unicode-range: #{map-get(fontsource-mixins.$unicodeMap, $font-face-subset)};
+    // }
+    @include fontsource-mixins.fontFaceCustom(
+      $fontName: $brk-font-face-family,
+      $weight: $w,
+      $style: $s,
+      $display: $brk-font-face-display,
+      $woff2Path: '#{$brk-font-face-files-dir}/#{fontsource-mixins.$fontId}-#{$brk-font-face-subset}-#{$w}-#{$s}.woff2',
+      $woffPath: '#{$brk-font-face-files-dir}/#{fontsource-mixins.$fontId}-#{$brk-font-face-subset}-#{$w}-#{$s}.woff',
+      $unicodeRange: true,
+      $unicodeRangeValues: map-get(fontsource-mixins.$unicodeMap, $brk-font-face-subset)
+    );
+  }
+}
+
+// :root {
+//   --font-family: '#{$font-face-family}', #{$generic-font-face-family};
+// }
+// body {
+//   font-weight: $body-font-weight-regular;
+// }
+
+
+// // correzione spaziatura
+// p, li, td, dd {
+//   letter-spacing: 0.005em;
+// }
