@@ -5,7 +5,7 @@
 */
 // submit err
 // TODO gestione validityState
-import {mAlert} from '../mAlert-bs4/mAlert';
+import {mAlert} from '../mAlert-bs4/_mAlert';
 export default function submitErr(title, mes) {
 
   document.querySelectorAll('[type="submit"], [type=button]').forEach(el => {
