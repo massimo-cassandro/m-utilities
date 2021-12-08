@@ -1,6 +1,6 @@
 import * as slide from '@massimo-cassandro/m-utilities/js-utilities/slide-up-down-toggle';
 import autosize from '@massimo-cassandro/m-utilities/js-utilities/textarea-autosize';
-import {mAlert} from '@massimo-cassandro/m-utilities/mAlert-bs4/mAlert';
+import {mAlert} from '@massimo-cassandro/m-utilities/mAlert-bs4/_mAlert';
 
 // ckeditor e fileUploader vanno caricati nell'implementazione locale
 

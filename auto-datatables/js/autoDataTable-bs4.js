@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import {_creaDataTable} from './creaDataTable-bs5';
+import {_creaDataTable} from './creaDataTable-bs4';
 import autoDT from './src/autoDataTable-src';
 
 export  function _autoDataTable( $container = '.dt-container', cdt_options = {} ) {
