@@ -1,17 +1,21 @@
 {#
-{% include '@includes/favicons.html.twig' with { dir: 'assets/favicons/' } %}
+{% include '@includes/favicons.html.twig' with {
+  dir: 'favicons/',
+  v:   null
+} %}
 
 NB dir con slash finale
 #}
 
-{% set dir = dir is defined? dir : 'assets/favicons/'  %}
+{% set dir = dir is defined? dir : 'asset/favicons/'  %}
+{% set v = (v is defined and v)? "?_=#{v}" : ''  %}
 
 {# SVG favicons #}
 <meta name="theme-color" content="#ffffff">
-<link rel="icon" href="{{ asset( dir ~ 'favicon.svg') }}">
-<link rel="mask-icon" href="{{ asset( dir ~ 'mask-icon.svg') }}" color="#000000">
-<link rel="apple-touch-icon" href="{{ asset( dir ~ 'apple-touch-icon.png') }}">
-<link rel="manifest" href="{{ asset( dir ~ 'manifest.json') }}">
+<link rel="icon" href="{{ asset( dir ~ 'favicon.svg') }}{{ v }}">
+<link rel="mask-icon" href="{{ asset( dir ~ 'mask-icon.svg') }}{{ v }}" color="#000000">
+<link rel="apple-touch-icon" href="{{ asset( dir ~ 'apple-touch-icon.png') }}{{ v }}">
+<link rel="manifest" href="{{ asset( dir ~ 'manifest.json') }}{{ v }}">
 
 {#
   In .htaccess:

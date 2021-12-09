@@ -1,0 +1,123 @@
+@use 'sass:map';
+
+// colori
+
+$nero:   #000;
+$bianco: #fff;
+
+$allianz-blu: #203c6f;
+
+$grigio-1:  #3d3749;
+$grigio-2:  #80858a;
+$grigio-3:  #bebfc1;
+$grigio-4:  #dcdbdb;
+$grigio-5:  #f0f0f0;
+$grigio-bg: #f9f9f9;
+
+$ui-info:    #1886dd;
+$ui-error:   #b71c1c;
+$ui-warning: #fd6317;
+$ui-success: #2e9329;
+
+$primary:    $allianz-blu;
+$secondary:  #211a22;
+$light:      #cad4e3;
+$link-color: #0067a5;
+$text-color: #333;
+$text-muted: $grigio-2;
+$giallo:    #fbd020;
+
+// $giallo: #fc0;
+// $rosso: #c00;
+
+
+// *******************
+// Font
+// *******************
+
+$font-weights: (
+  light:    300,
+  regular:  400,
+  semibold: 600,
+  bold:     700
+);
+
+@each $wght, $val in $font-weights {
+  %font-weight-#{$wght} {
+    font-weight: #{$val};
+    font-variation-settings: 'wght' #{$val};
+  }
+}
+
+
+$font-face-family: 'Merriweather Sans';
+$generic-font-face-family: sans-serif;
+$variable-font-family: 'Merriweather SansVariable';
+$font-face-styles: (normal, italic);
+
+// per configurazione BS
+$body-font-family:          var(--font-family);
+$body-font-weight-light:    map.get($font-weights, light);
+$body-font-weight-regular:  map.get($font-weights, regular);
+$body-font-weight-semibold: map.get($font-weights, semibold);
+$body-font-weight-bold:     map.get($font-weights, bold);
+
+
+$headings-font-weights: (
+  // light:    300,
+  regular:  400,
+  // semibold: 600,
+  // bold:     700
+);
+
+@each $wght, $val in $headings-font-weights {
+  %heading-font-weight-#{$wght} {
+    font-weight: #{$val};
+    font-variation-settings: 'wght' #{$val};
+  }
+}
+
+// heading font
+
+$headings-font-face-family: 'Playfair Display';
+$headings-generic-font-face-family: serif;
+$headings-variable-font-family: 'Playfair DisplayVariable';
+$headings-font-face-styles: (normal);
+
+// per configurazione BS
+$headings-font-family:          var(--headings-font-family);
+$headings-font-weight-light:    map.get($headings-font-weights, regular);
+$headings-font-weight-regular:  map.get($headings-font-weights, regular);
+$headings-font-weight-semibold: map.get($headings-font-weights, regular);
+$headings-font-weight-bold:     map.get($headings-font-weights, regular);
+
+$monospace-font-family: 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+
+
+$menu-font-family:         $body-font-family;
+$menu-font-weight-regular: $body-font-weight-regular;
+$menu-font-weight-bold:    $body-font-weight-semibold;
+
+$base-line-height:       1.5;
+$x-line-height:          2;
+$headings-x-line-height: 1.4;
+
+$font-size-base:              1rem;
+$lead-font-size:              $font-size-base * 1.25;
+$lead-font-weight:            $body-font-weight-light;
+$small-font-size:             75%;
+$medium-text-size:            85%;
+
+// icone svg, sono usate per gli alert con icona e altro
+@import '../../icone/icone_svg';
+$ui-icons: (
+  warning: $icon-ui-warning,
+  danger:  $icon-ui-warning,
+  info:    $icon-ui-info,
+  success: $icon-ui-success,
+  off:     $icon-ui-error,
+  on:      $icon-ui-success,
+  check:   $icon-ui-check
+);
+
+$max-content-width: 58rem; //95ch;

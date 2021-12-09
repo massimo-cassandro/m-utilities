@@ -60,7 +60,7 @@
 
   } @else {
     :root {
-      --heading-font-family: '#{$font-family}', #{$generic-font-family};
+      --headings-font-family: '#{$font-family}', #{$generic-font-family};
     }
   }
 
