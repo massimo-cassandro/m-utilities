@@ -7,7 +7,7 @@ module.exports = {
     'es6': true
   },
   'extends': 'eslint:recommended',
-
+  "ignorePatterns": ["**/node_modules/*.js", "**/vendor/*.js", "**/*-min.js", "**/*.min.js"],
   'parserOptions': {
     'ecmaVersion': 2021,
     'sourceType': 'module'

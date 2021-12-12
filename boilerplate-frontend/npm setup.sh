@@ -62,6 +62,9 @@ npm i --save-dev --no-optional rollup-plugin-filesize # https://github.com/ritz0
 
 npm i --save-dev --no-optional sass
 
+
+# GIÀ INCLUSI IN m-utilities:
+
 npm i --save-dev --no-optional stylelint
 # npm i --save-dev stylelint-config-standard
 # npm i --save-dev stylelint-config-recommended

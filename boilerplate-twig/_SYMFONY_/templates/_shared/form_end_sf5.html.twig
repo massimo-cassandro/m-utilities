@@ -55,7 +55,7 @@ personalizzazioni:
 {% set submit_class = submit_class is defined? submit_class : '' %}
 
 {%- if not edit_info_new_line %}<div class="row">{% endif -%}
-  <div class="{%- if not edit_info_new_line %}col-md-6 {% endif -%} text-center text-md-start">
+  <div class="{%- if not edit_info_new_line %}col-md-6 {% endif -%} text-center text-md-start text-md-left">
     {%- if show_submit -%}
       <div class="form-group">
         <button type="submit"
@@ -75,7 +75,7 @@ personalizzazioni:
   {% set edit_info_icon_class = edit_info_icon_class is defined? edit_info_icon_class : 'icona me-2' %}
 
   {%- if entity.id|default() and  show_edit_info -%}
-    <div class="{%- if not edit_info_new_line %}col-md-6 mt-md-0 {% endif -%} form-edit-info text-center text-md-end mt-2">
+    <div class="{%- if not edit_info_new_line %}col-md-6 mt-md-0 {% endif -%} form-edit-info text-center text-md-end text-md-right mt-2">
 
       {%- if edit_info_icon|default() -%}
         <span>{% include '@includes/icone.html.twig' with { id: edit_info_icon, class: edit_info_icon_class } %}</span>

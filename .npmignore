@@ -18,16 +18,9 @@ todo.md
 *.weblock
 /_WIP
 
-
-
 config.codekit3
 *.code-workspace
 .editorconfig
-.eslintignore
-.eslintrc.*
-.eslintignore
-.stylelintrc.*
-.stylelintignore
 favicon.ico
 .gitattributes
 .gitignore

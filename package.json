@@ -1,6 +1,6 @@
 {
   "name": "@massimo-cassandro/m-utilities",
-  "version": "4.16.1",
+  "version": "4.16.5",
   "description": "My collection of front-end development snippets & utilities",
   "scripts": {},
   "repository": {
@@ -33,12 +33,6 @@
     "url": "https://github.com/massimo-cassandro/m-utilities/issues"
   },
   "homepage": "https://github.com/massimo-cassandro/m-utilities#readme",
-  "stylelint": {
-    "extends": "./lint/stylelint/scss"
-  },
-  "eslintConfig": {
-    "extends": "./lint/eslint"
-  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
@@ -57,10 +51,11 @@
     "sass": "^1.37.5"
   },
   "dependencies": {
-    "eslint": "^8.1.0",
-    "stylelint": "^14.0.0",
-    "stylelint-config-recommended-scss": "^5.0.0",
+    "eslint": "^8.4.1",
+    "stylelint": "^14.1.0",
+    "stylelint-config-recommended-scss": "^5.0.2",
     "stylelint-config-standard": "^23.0.0",
+    "stylelint-config-twbs-bootstrap": "^3.0.0-beta1",
     "stylelint-order": "^5.0.0"
   }
 }

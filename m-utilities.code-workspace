@@ -10,9 +10,42 @@
 		"preview-in-browser.removeStartString": "~/Sites/m-utilities/",
 
 		"favorites.resources": [
-			"node_modules/jquery",
-			"node_modules/bs4",
-			"node_modules/bootstrap"
+			{
+				"filePath": "node_modules/jquery",
+				"group": "Default"
+			},
+			{
+				"filePath": "node_modules/bs4",
+				"group": "Default"
+			},
+			{
+				"filePath": "node_modules/bootstrap",
+				"group": "Default"
+			},
+			{
+				"filePath": "node_modules/stylelint-config-twbs-bootstrap",
+				"group": "Default"
+			},
+			{
+				"filePath": "node_modules/stylelint-config-standard-scss",
+				"group": "Default"
+			},
+			{
+				"filePath": "node_modules/stylelint-config-standard",
+				"group": "Default"
+			},
+			{
+				"filePath": "node_modules/stylelint-config-recommended-scss",
+				"group": "Default"
+			},
+			{
+				"filePath": "node_modules/stylelint-config-recommended",
+				"group": "Default"
+			},
+			{
+				"filePath": "node_modules/stylelint-scss",
+				"group": "Default"
+			}
 		]
 	}
 }

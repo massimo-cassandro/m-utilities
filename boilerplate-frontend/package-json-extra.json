@@ -1,12 +1,11 @@
 {
-  "name": "xxxx",
-  "version": "1.0.0",
-  "description": "xxx xxxx / frontend",
+
   "license": "UNLICENSED | MIT",
   "author": "Massimo Cassandro",
   "contributors": ["xxxx"],
 
-  "private": true, <=====
+  "type":"module",
+  "private": true,
 
   "main": "/public",
 
@@ -50,7 +49,7 @@
     "rules": {}
   },
    "eslintConfig": {
-    "extends": "@massimo-cassandro/m-utilities/lint/eslint",
+    "extends": "./node_modules//@massimo-cassandro/.eslintrc.js",
     "ignorePatterns": [
       "**/dist/**/*.js",
       "**/node_modules/**/*.*",
