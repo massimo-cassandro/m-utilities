@@ -12,12 +12,12 @@ module.exports = {
   'ignoreFiles': ['**/node_modules/**/*.*', '**/vendor/**/*.*'],
 
   'rules': {
-    'alpha-value-notation': 'number',
+    'alpha-value-notation': null,
     'at-rule-no-vendor-prefix': true,
-    
+
     // 'color-function-notation': 'legacy',
     'font-family-name-quotes': 'always-where-recommended',
-    
+
     'function-parentheses-space-inside': 'never-single-line',
     'function-url-no-scheme-relative': true,
     'function-url-quotes': 'always',
@@ -60,7 +60,7 @@ module.exports = {
     'value-list-comma-space-after': 'always-single-line', //'always',
     'value-no-vendor-prefix': true
 
-    // 'order/properties-order': [ 
+    // 'order/properties-order': [
     //   'position',
     //   'top',
     //   'right',

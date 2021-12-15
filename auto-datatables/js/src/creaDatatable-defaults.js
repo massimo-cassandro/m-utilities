@@ -8,6 +8,8 @@ const creaDataTable_default_options = {
   },
 
   id_visible_default: true,
+  align_right_class: 'text-right',
+  align_left_class: 'text-left',
 
 
   formats: {

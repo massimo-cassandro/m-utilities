@@ -128,7 +128,7 @@ export default function autoDT( $container = '.dt-container', cdt_options = {}, 
                 title       : '#',
                 data        : 'id',
                 name        : 'id',
-                className   : 'text-right text-muted',
+                className   : `${cdt_options.align_right_class} text-muted`,
                 type        : 'num',
                 visible     : cdt_options.id_visible_default
               };
@@ -389,7 +389,7 @@ export default function autoDT( $container = '.dt-container', cdt_options = {}, 
                   return data;
                 }
               };
-              item.className = item.className || 'text-right';
+              item.className = item.className || cdt_options.align_right_class;
               break;
 
             case 'sf_datetime':  // symfony datetime
@@ -406,7 +406,7 @@ export default function autoDT( $container = '.dt-container', cdt_options = {}, 
                   return data;
                 }
               };
-              item.className = item.className || 'text-right';
+              item.className = item.className || cdt_options.align_right_class;
               break;
 
             case 'date':  // stringa data
@@ -423,7 +423,7 @@ export default function autoDT( $container = '.dt-container', cdt_options = {}, 
                 }
               };
               item.type = 'date';
-              item.className = item.className || 'text-right';
+              item.className = item.className || cdt_options.align_right_class;
               break;
 
             case 'datetime':  // stringa datetime
@@ -440,7 +440,7 @@ export default function autoDT( $container = '.dt-container', cdt_options = {}, 
                   return data;
                 }
               };
-              item.className = item.className || 'text-right';
+              item.className = item.className || cdt_options.align_right_class;
               break;
 
             case 'num':
@@ -459,7 +459,7 @@ export default function autoDT( $container = '.dt-container', cdt_options = {}, 
                   return data;
                 }
               };
-              item.className = item.className || 'text-right';
+              item.className = item.className || cdt_options.align_right_class;
 
               break;
 
@@ -481,7 +481,7 @@ export default function autoDT( $container = '.dt-container', cdt_options = {}, 
                   return data;
                 }
               };
-              item.className = item.className || 'text-right';
+              item.className = item.className || cdt_options.align_right_class;
               item.type = 'num'; // 'num-fmt'
               break;
 

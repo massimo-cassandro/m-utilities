@@ -4,6 +4,8 @@
     tr {
       th {
         position: relative;
+
+
       }
     }
   }
@@ -31,33 +33,21 @@
         content: '' !important;
         border-color: transparent;
         border-width: $sorting_arrow_size;
+      }
 
-        @if $sorting-arrow-bottom != false {
-          bottom: $sorting-arrow-bottom !important;
-        }
+      &::before {
+        border-style: none solid solid;
+        border-bottom-color: $datatable_sorting_arrows_color;
+        bottom: calc(#{$sorting-arrow-bottom } + 1px + #{$sorting_arrow_size}) !important;
+      }
+      &::after {
+        border-style: solid solid none;
+        border-top-color: $datatable_sorting_arrows_color;
+        bottom: calc(#{$sorting-arrow-bottom} - #{$sorting_arrow_size}) !important;
       }
 
     } @else {
-      padding: .5em;
-    }
-  }
-
-  @if $sorting_arrow_size {
-    .sorting,
-    .sorting_asc {
-      &::before {
-        top: 36%;
-        border-style: none solid solid;
-        border-bottom-color: $datatable_sorting_arrows_color;
-      }
-    }
-    .sorting,
-    .sorting_desc {
-      &::after {
-        bottom: 36%;
-        border-style: solid solid none;
-        border-top-color: $datatable_sorting_arrows_color;
-      }
+      padding: $sorting-arrow-cell-base-padding;
     }
   }
 
