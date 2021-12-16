@@ -1,7 +1,7 @@
 import {escapeHTML} from '../js-utilities/escapeHTML';
 
 /*
-  import {img_viewer} from '@massimo-cassandro/m-utilities/boilerplate-src/imgs-viewer';
+  import {img_viewer} from '@massimo-cassandro/m-utilities/boilerplate-twig-src/imgs-viewer';
 
   img_viewer({
     viewer: '/viewer', // default
@@ -45,24 +45,26 @@ import {escapeHTML} from '../js-utilities/escapeHTML';
   mq può anche essere una delle chiavi di `bs4_std_brkpts` o `bs5_std_brkpts`
   (in base al parametro `fw`)
 
-  l'ultimo deve avere mq = null
+  l'ultimo deve avere mq = null o 'xs'
 */
 export  function img_viewer(params) {
 
-  const bs4_std_brkpts = {
-    xs: '(max-width: 575px)',
-    sm: '(min-width: 576px) and (max-width: 767px)',
-    md: '(min-width: 768px) and (max-width: 991px)',
-    lg: '(min-width: 992px) and (max-width: 1199px)',
-    xl: '(min-width: 1200px)',
+  let bs_std_brkpts = {
+    bs4: {
+      xs: '(max-width: 575px)',
+      sm: '(min-width: 576px) and (max-width: 767px)',
+      md: '(min-width: 768px) and (max-width: 991px)',
+      lg: '(min-width: 992px) and (max-width: 1199px)',
+      xl: '(min-width: 1200px)',
 
-    xs_sm: '(max-width: 767px)',
-    xs_md: '(max-width: 991px)',
-    md_lg: '(min-width: 768px) and (max-width: 1199px)',
-    md_xl: '(min-width: 768px)',
-    lg_xl: '(min-width: 992px)'
-  },
-  bs5_std_brkpts = {...bs4_std_brkpts,
+      xs_sm: '(max-width: 767px)',
+      xs_md: '(max-width: 991px)',
+      md_lg: '(min-width: 768px) and (max-width: 1199px)',
+      md_xl: '(min-width: 768px)',
+      lg_xl: '(min-width: 992px)'
+    }
+  };
+  bs_std_brkpts.bs5 = {...bs_std_brkpts.bs4,
     xl:  '(min-width: 1200px) and (max-width: 1399px)',
     xxl: '(min-width: 1400px)',
 
@@ -101,18 +103,25 @@ export  function img_viewer(params) {
   // elaborazione bbs e calcolo doppie densità (se l'immagine originale è abbastanza grande)
   p.bbs.forEach( item => {
 
+    let last_item = (item.mq === null || item.mq === 'xs');
+
     // sostituzione parametro `mq` con il valore di bs_std_brkpts
     // se la chiave corrisponde
-    if( Object.keys(bs4_std_brkpts).indexOf(item.mq) !== -1 ) {
-      item.mq = bs4_std_brkpts[item.mq];
+    if( p.fw && Object.keys(bs_std_brkpts[p.fw]).indexOf(item.mq) !== -1 ) {
+      item.mq = bs_std_brkpts[p.fw][item.mq];
     }
 
     p.img_fmt.forEach( fmt => {
-      let this_bb_wi = item.bb[0],
-        this_bb_he = item.bb[1],
+
+      if(fmt === 'webp') {
+        last_item = false;
+      }
+      let this_bb_wi = item.bb[0]?? '',
+        this_bb_he = item.bb[1]?? '',
         this_base_src = base_src + `f=${fmt}&bb=`,
         this_src = '',
-        doppia_densita = +p.img.width >= (this_bb_wi * 2) && +p.img.heigth >= (this_bb_he * 2);
+        doppia_densita = (!this_bb_wi || +p.img.width >= (this_bb_wi * 2)) &&
+          (!this_bb_he || +p.img.heigth >= (this_bb_he * 2));
 
       this_src = this_base_src + this_bb_wi + 'x' + this_bb_he;
 
@@ -120,19 +129,21 @@ export  function img_viewer(params) {
         this_src += ' 1x, ' + this_base_src + (this_bb_wi * 2) + 'x' + (this_bb_he * 2) + ' 2x';
       }
 
-      if(item.mq !== null || fmt === 'webp') {
-        sources += `<source ${lazy_data_prefix}srcset="${this_src}"`;
-        if(item.mq) sources += ` media="${item.mq}"`;
-        if(fmt === 'webp') sources += ' type="image/webp"';
-        sources += '>';
+      if(last_item) {
 
-      } else {
         sources += `<img ${lazy_data_prefix}src="${this_base_src}${this_bb_wi}x${this_bb_he}"`;
         if(doppia_densita) sources += ` ${lazy_data_prefix}srcset="${this_src}"`;
         if(p.lazy) sources += ' loading="lazy"';
         if(p.class) sources += ` class="${p.class}"`;
         if(p.async) sources += ' decoding ="async"';
         sources += ` alt="${escapeHTML(p.alt)}">`;
+
+      } else {
+        sources += `<source ${lazy_data_prefix}srcset="${this_src}"`;
+        if(item.mq) sources += ` media="${item.mq}"`;
+        if(fmt === 'webp') sources += ' type="image/webp"';
+        sources += '>';
+
       }
 
     }); // end forEach fmt
