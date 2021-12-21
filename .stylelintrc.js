@@ -19,6 +19,19 @@ module.exports = {
   'rules': {
     'alpha-value-notation': null,
     'at-rule-no-vendor-prefix': true,
+    'at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: [
+          'tailwind',
+          'apply',
+          'layer',
+          'variants',
+          'responsive',
+          'screen',
+        ],
+      },
+    ],
 
     // 'color-function-notation': 'legacy',
     'font-family-name-quotes': 'always-where-recommended',
@@ -296,6 +309,7 @@ module.exports = {
           null,
           {
             'ignoreInsideAtRules': [
+              'extend',
               'if',
               'mixin'
             ]

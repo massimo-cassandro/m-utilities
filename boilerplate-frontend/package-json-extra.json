@@ -47,7 +47,7 @@
     "rules": {}
   },
    "eslintConfig": {
-    "extends": "./node_modules/@massimo-cassandro/.eslintrc.js",
+    "extends": "./node_modules/@massimo-cassandro/m-utilities/.eslintrc.js",
     "ignorePatterns": [],
     "rules": {}
   },
