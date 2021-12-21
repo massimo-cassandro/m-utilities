@@ -9,7 +9,12 @@ module.exports = {
   // 'plugins': [
   //   'stylelint-order'
   // ],
-  'ignoreFiles': ['**/node_modules/**/*.*', '**/vendor/**/*.*'],
+  'ignoreFiles': [
+    '**/node_modules/**/*.*',
+    '**/vendor/**/*.*',
+    '**/build/**/*.*',
+    '**/dist/**/*.*'
+  ],
 
   'rules': {
     'alpha-value-notation': null,

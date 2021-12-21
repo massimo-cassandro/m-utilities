@@ -40,21 +40,15 @@
     "> 3% in IT"
   ],
   "stylelint": {
-    "extends": "@massimo-cassandro/m-utilities/lint/stylelint/scss",
+    "extends": "@massimo-cassandro/m-utilities/.stylelintrc.js",
     "ignoreFiles": [
-      "**/*.css",
-      "**/node_modules/**/*.*",
-      "**/vendor/**/*.*"
+      "**/*.css"
     ],
     "rules": {}
   },
    "eslintConfig": {
-    "extends": "./node_modules//@massimo-cassandro/.eslintrc.js",
-    "ignorePatterns": [
-      "**/dist/**/*.js",
-      "**/node_modules/**/*.*",
-      "**/vendor/**/*.*"
-    ],
+    "extends": "./node_modules/@massimo-cassandro/.eslintrc.js",
+    "ignorePatterns": [],
     "rules": {}
   },
   "dependencies": {},
