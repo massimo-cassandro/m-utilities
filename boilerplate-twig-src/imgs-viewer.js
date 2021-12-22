@@ -1,5 +1,7 @@
 import {escapeHTML} from '../js-utilities/escapeHTML';
 
+// TODO completare come include twig
+
 /*
   import {img_viewer} from '@massimo-cassandro/m-utilities/boilerplate-twig-src/imgs-viewer';
 
@@ -113,9 +115,6 @@ export  function img_viewer(params) {
 
     p.img_fmt.forEach( fmt => {
 
-      if(fmt === 'webp') {
-        last_item = false;
-      }
       let this_bb_wi = item.bb[0]?? '',
         this_bb_he = item.bb[1]?? '',
         this_base_src = base_src + `f=${fmt}&bb=`,
@@ -126,10 +125,10 @@ export  function img_viewer(params) {
       this_src = this_base_src + this_bb_wi + 'x' + this_bb_he;
 
       if(doppia_densita) {
-        this_src += ' 1x, ' + this_base_src + (this_bb_wi * 2) + 'x' + (this_bb_he * 2) + ' 2x';
+        this_src += ' 1x, ' + this_base_src + (this_bb_wi? this_bb_wi * 2 : '') + 'x' + (this_bb_he? this_bb_he * 2 : '') + ' 2x';
       }
 
-      if(last_item) {
+      if(last_item && fmt !== 'webp') {
 
         sources += `<img ${lazy_data_prefix}src="${this_base_src}${this_bb_wi}x${this_bb_he}"`;
         if(doppia_densita) sources += ` ${lazy_data_prefix}srcset="${this_src}"`;

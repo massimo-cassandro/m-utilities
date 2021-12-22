@@ -13,6 +13,8 @@ todo.md
 /**/demo/
 .codekit-cache/
 /**/*.sketch
+/**/*.ai
+/**/*.psd
 /boilerplate-frontend
 -WIP
 *.weblock
