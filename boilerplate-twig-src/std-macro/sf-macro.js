@@ -42,7 +42,7 @@
   JS
   ===============
   set_macro_listeners({
-    macro_wrappers:  document.querySelectorAll('.sf-macro-wrapper'),
+    macro_wrapper:   document.querySelectorAll('.sf-macro-wrapper'),
     add_callback:    null,
     remove_callback: null,
     add_del_btn:     true,
@@ -55,7 +55,7 @@
 export  function set_macro_listeners ( options ) {
 
   const default_options = {
-    macro_wrappers:  document.querySelectorAll('.sf-macro-wrapper'),
+    macro_wrapper:  document.querySelector('.sf-macro-wrapper'),
     add_callback:    null,
     remove_callback: null,
     add_del_btn:     true,
@@ -66,7 +66,7 @@ export  function set_macro_listeners ( options ) {
   let opts = Object.assign( {}, default_options, options );
 
   /*
-    macro_wrappers  : fieldset contenitori del markup della macro
+    macro_wrapper   : fieldset contenitore del markup della macro
 
     add_callback    : eventuale callback eseguito all'aggiunta di una riga
                       (riceve come argomenti l'elemento '.sf-macro-container'
@@ -84,73 +84,72 @@ export  function set_macro_listeners ( options ) {
 
     fw              : framework in uso, bs4 (default) o bs5
   */
-  opts.macro_wrappers.forEach(fset => {
 
-    const macro_container = fset.querySelector('.sf-macro-container'),
-      std_del_btn = {
-        bs4: `<div class="sf-macro-close-btn">
-            <button type="button" class="close sf-macro-riga-del" aria-label="Elimina riga">
-              <span aria-hidden="true">&times;</span>
-              <span class="sr-only">Elimina</span>
-            </button>
-          </div>`,
 
-        bs5: `<div class="sf-macro-close-btn">
-          <button type="button" class="btn-close sf-macro-riga-del" aria-label="Elimina riga">
-            <span class="visually-hidden">Elimina</span>
+  const macro_container = opts.macro_wrapper.querySelector('.sf-macro-container'),
+    std_del_btn = {
+      bs4: `<div class="sf-macro-close-btn">
+          <button type="button" class="close sf-macro-riga-del" aria-label="Elimina riga">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Elimina</span>
           </button>
         </div>`,
-      },
-      add_del_btn = (riga) => {
-        if(opts.add_del_btn && fset.dataset.noCloseBtn === undefined) {
-          riga.insertAdjacentHTML('beforeend',
-          opts.custom_del_btn? opts.custom_del_btn : std_del_btn[opts.fw]
-          );
-        }
-      };
 
-      // listener rimozione riga
-      fset.addEventListener('click', (e) => {
-
-      if(e.target.classList.contains('sf-macro-riga-del') ||
-        (e.target.closest('button') && e.target.closest('button').classList.contains('sf-macro-riga-del'))
-      ) {
-        e.target.closest('.sf-macro-riga').remove();
+      bs5: `<div class="sf-macro-close-btn">
+        <button type="button" class="btn-close sf-macro-riga-del" aria-label="Elimina riga">
+          <span class="visually-hidden">Elimina</span>
+        </button>
+      </div>`,
+    },
+    add_del_btn = (riga) => {
+      if(opts.add_del_btn && opts.macro_wrapper.dataset.noCloseBtn === undefined) {
+        riga.insertAdjacentHTML('beforeend',
+        opts.custom_del_btn? opts.custom_del_btn : std_del_btn[opts.fw]
+        );
       }
-      if(opts.remove_callback && typeof opts.remove_callback === 'function' ) {
-        opts.remove_callback( macro_container );
-      }
-    }, true);
+    };
 
-    // aggiunta nuove righe
-    fset.querySelector('.sf-macro-riga-add').addEventListener('click', () => {
+    // listener rimozione riga
+    opts.macro_wrapper.addEventListener('click', (e) => {
 
-      let macro_template   = macro_container.dataset.template,
-        indice_righe       = macro_container.querySelectorAll('.sf-macro-riga').length;
+    if(e.target.classList.contains('sf-macro-riga-del') ||
+      (e.target.closest('button') && e.target.closest('button').classList.contains('sf-macro-riga-del'))
+    ) {
+      e.target.closest('.sf-macro-riga').remove();
+    }
+    if(opts.remove_callback && typeof opts.remove_callback === 'function' ) {
+      opts.remove_callback( macro_container );
+    }
+  }, true);
 
-      macro_container.insertAdjacentHTML('beforeend',
-        macro_template.replace(/__indice\d?__/g, indice_righe++));
+  // aggiunta nuove righe
+  opts.macro_wrapper.querySelector('.sf-macro-riga-add').addEventListener('click', () => {
 
-      let nuova_riga = macro_container.querySelector('.sf-macro-riga:last-child');
-      add_del_btn(nuova_riga);
+    let macro_template   = macro_container.dataset.template,
+      indice_righe       = macro_container.querySelectorAll('.sf-macro-riga').length;
 
-      if(opts.add_callback && typeof opts.add_callback === 'function' ) {
-        opts.add_callback( macro_container, nuova_riga);
-      }
-    }, false);
+    macro_container.insertAdjacentHTML('beforeend',
+      macro_template.replace(/__indice\d?__/g, indice_righe++));
 
-    // righe preregistrate
-    macro_container.querySelectorAll('.sf-macro-riga').forEach(riga => {
+    let nuova_riga = macro_container.querySelector('.sf-macro-riga:last-child');
+    add_del_btn(nuova_riga);
 
-      // aggiunta callback
-      if(opts.add_callback && typeof opts.add_callback === 'function' ) {
-        opts.add_callback( macro_container, riga );
-      }
+    if(opts.add_callback && typeof opts.add_callback === 'function' ) {
+      opts.add_callback( macro_container, nuova_riga);
+    }
+  }, false);
 
-      // aggiunta pulsante rimozione riga
-      add_del_btn(riga);
+  // righe preregistrate
+  macro_container.querySelectorAll('.sf-macro-riga').forEach(riga => {
 
-    });
+    // aggiunta callback
+    if(opts.add_callback && typeof opts.add_callback === 'function' ) {
+      opts.add_callback( macro_container, riga );
+    }
 
-  }); // end foreach
+    // aggiunta pulsante rimozione riga
+    add_del_btn(riga);
+
+  });
+
 }

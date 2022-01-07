@@ -77,7 +77,7 @@ export default function () {
 
   document.querySelectorAll('.fset_recapiti').forEach(fset_recapiti => {
 
-    set_macro_listeners(fset_recapiti);
+    set_macro_listeners({macro_wrapper: fset_recapiti});
 
     fset_recapiti.addEventListener('click', e => {
       if(e.target.classList.contains('rec-princ')) {

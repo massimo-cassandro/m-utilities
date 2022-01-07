@@ -4,6 +4,17 @@
 **/*.mwb.beforefix
 
 
-## ***
+## front-end
 /**/node_modules/
+/**/bower_components/
 *.sass-cache
+/@files-repo
+/@db-backup
+/pswd
+/**/.vscode/
+*.code-workspace
+*.sketch
+*.ai
+*.psd
+/progetto
+*TODO*.md
