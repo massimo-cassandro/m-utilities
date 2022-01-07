@@ -301,7 +301,29 @@ module.exports = {
         'scss/at-import-partial-extension': 'never',
         'scss/at-mixin-named-arguments': null,
         'scss/at-mixin-parentheses-space-before': 'never',
-        'scss/at-rule-no-unknown': true,
+        // 'scss/at-rule-no-unknown': true,
+        'scss/at-rule-no-unknown': [
+          true,
+          {
+            ignoreAtRules: [
+              'extend',
+              'include',
+              'if',
+              'else',
+              'mixin',
+              'function',
+              'at-root',
+              'use',
+              'forward',
+              'each',
+              'while',
+              'for',
+              'error',
+              'warn',
+              'debug'
+            ]
+          }
+        ],
         'scss/dollar-variable-colon-space-before': 'never',
         'scss/dollar-variable-no-missing-interpolation': true,
         'scss/dollar-variable-pattern': '^[a-z][a-z-\\d]*$',
