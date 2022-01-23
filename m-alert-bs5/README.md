@@ -76,6 +76,33 @@ mAlert({
 
 ### Confirm su form submit
 
+
+```js
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    mAlert({
+        type           : 'confirm',
+        title          : 'Confirm submit?',
+        mes            : null,
+        callback       : function(result) {
+            return result;
+        }
+    })
+    .then(function(result) {
+        if(result) {
+            form.submit();
+        } else {
+            ...
+        }
+    });
+});
+
+```
+
+
+Con jQuery:
+
 ```js
 $('form').on('submit', function(e) {
     e.preventDefault();

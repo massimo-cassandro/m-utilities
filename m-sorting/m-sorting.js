@@ -60,7 +60,7 @@ export default function (m_sorting_container, m_sorting_elements_selector, callb
 
   // m_sorting_container.classList.add('m-sorting-wrapper');
 
-  m_sorting_elements.forEach((el, idx) => {
+  m_sorting_elements.forEach((el) => {
     initSortingElement(el);
   });
 
@@ -78,7 +78,7 @@ export default function (m_sorting_container, m_sorting_elements_selector, callb
     }
 
     return target;
-  }
+  };
 
   // trascinamento avviato
   m_sorting_container.addEventListener('dragstart', function(e) {

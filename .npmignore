@@ -19,6 +19,7 @@ todo.md
 -WIP
 *.weblock
 /_WIP
+TODO.md
 
 config.codekit3
 *.code-workspace

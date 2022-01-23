@@ -23,17 +23,42 @@ module.exports = {
       true,
       {
         ignoreAtRules: [
+          // tailwind
           'tailwind',
           'apply',
           'layer',
           'variants',
           'responsive',
           'screen',
+
+          // sass
+          'extend',
+          'include',
+          'if',
+          'else',
+          'mixin',
+          'function',
+          'at-root',
+          'use',
+          'forward',
+          'each',
+          'while',
+          'for',
+          'error',
+          'warn',
+          'debug'
         ],
       },
     ],
 
     // 'color-function-notation': 'legacy',
+    'comment-empty-line-before': [
+      'always',
+      {
+        except: ['first-nested'],
+        ignore: ['after-comment', 'stylelint-commands']
+      }
+    ],
     'font-family-name-quotes': 'always-where-recommended',
 
     'function-parentheses-space-inside': 'never-single-line',
