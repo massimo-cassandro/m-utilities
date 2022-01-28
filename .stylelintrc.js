@@ -61,6 +61,7 @@ module.exports = {
     ],
     'font-family-name-quotes': 'always-where-recommended',
 
+    'function-max-empty-lines': 1,
     'function-parentheses-space-inside': 'never-single-line',
     'function-url-no-scheme-relative': true,
     'function-url-quotes': 'always',
@@ -101,6 +102,7 @@ module.exports = {
 
     'value-list-comma-newline-after': 'always-multi-line', //'never-multi-line',
     'value-list-comma-space-after': 'always-single-line', //'always',
+    'value-list-max-empty-lines': 1,
     'value-no-vendor-prefix': true
 
     // 'order/properties-order': [

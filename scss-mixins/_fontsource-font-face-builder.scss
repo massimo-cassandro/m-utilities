@@ -6,7 +6,6 @@
 @mixin fontsource-font-face-builder(
   $font-family,
   $variable-font-family,
-  $generic-font-family,
   $font-id,
   $font-dir,
   $font-display,
@@ -15,10 +14,8 @@
   $styles,
   $subset,
   $variable-type,
-  $unicodeMap,
-  $body-font-face: false,
-  $body-regular-weight: null
-) {
+  $unicodeMap
+){
 
 
   // ==================================
@@ -31,9 +28,9 @@
       @font-face {
         font-family: '#{$font-family}';
         font-style: $s;
-        font-display: $font-display;
         font-weight: $w;
         src: url('#{$font-dir}/#{$font-id}-#{$subset}-#{$w}-#{$s}.woff') format('woff');
+        font-display: $font-display;
         unicode-range: #{map.get($unicodeMap, $subset)};
       }
       // @include fontFaceCustom(
@@ -48,21 +45,7 @@
       // );
     }
   }
-  @if $body-font-face {
-    :root {
-      --font-family: '#{$font-family}', #{$generic-font-family};
-    }
-    @if $body-regular-weight {
-      body {
-        font-weight: $body-regular-weight;
-      }
-    }
 
-  } @else {
-    :root {
-      --headings-font-family: '#{$font-family}', #{$generic-font-family};
-    }
-  }
 
   // ==================================
   // VARIABLE FONT
@@ -70,35 +53,19 @@
   // file name sample: #{$font-id}-latin-variable-wghtOnly-italic.woff2
 
   @each $s in $styles {
-
+    $font-path: '#{$font-dir}/#{$font-id}-#{$subset}-variable-#{$variable-type}-#{$s}.woff2';
     @font-face {
       font-family: '#{$variable-font-family}';
       font-style: $s;
-      font-display: $font-display;
       font-weight: $variable-weights;
+      src: url($font-path) format('woff2 supports variations'),
+        url($font-path) format('woff2-variations');
+      font-display: $font-display;
+
       @if $variable-type == 'full' {
         font-stretch: $stretch;
       }
-      src: url('#{$font-dir}/#{$font-id}-#{$subset}-variable-#{$variable-type}-#{$s}.woff2') format('woff2');
       unicode-range: #{map.get($unicodeMap, $subset)};
-    }
-  }
-
-  @supports (font-variation-settings: normal) {
-    @if $body-font-face {
-      :root {
-        --font-family: '#{$variable-font-family}', #{$generic-font-family};
-      }
-      @if $body-regular-weight {
-        body {
-          font-variation-settings: 'wght' #{$body-regular-weight};
-        }
-      }
-
-    } @else {
-      :root {
-        --heading-font-family: '#{$variable-font-family}', #{$generic-font-family};
-      }
     }
   }
 
