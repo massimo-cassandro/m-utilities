@@ -1,5 +1,5 @@
 test
 *.*
 !dist/*.{css,js,map}
-!js/*.js
+!js/**/*.js
 !scss/*.scss

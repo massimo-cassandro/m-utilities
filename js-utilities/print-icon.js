@@ -32,7 +32,7 @@ export function print_icon(params) {
     params.svg_class = `${params.svg_class} line-icon`.trim();
   }
 
-  let base_id = params.id.join('') + Date.now(),
+  let base_id = params.id.join('') + Number(Math.round(Math.random() * Date.now())).toString(36),
     aria_ids = [],
     descr_unique_id = null,
     descr = '';

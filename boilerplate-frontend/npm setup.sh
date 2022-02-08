@@ -55,8 +55,8 @@ npm i --save-dev --no-optional prismjs
 npm i --save-dev --no-optional rollup
 npm i --save-dev --no-optional rollup-plugin-terser
 npm i --save-dev --no-optional rollup-plugin-sourcemaps
-npm i --save-dev --no-optional @rollup/plugin-commonjs # necessario per jquery
 npm i --save-dev --no-optional @rollup/plugin-node-resolve
+npm i --save-dev --no-optional @rollup/plugin-commonjs # necessario per jquery
 npm i --save-dev --no-optional rollup-plugin-minify-html-literals # https://github.com/asyncLiz/rollup-plugin-minify-html-literals
 npm i --save-dev --no-optional rollup-plugin-filesize # https://github.com/ritz078/rollup-plugin-filesize#readme
 

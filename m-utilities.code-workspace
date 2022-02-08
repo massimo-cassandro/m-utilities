@@ -46,6 +46,7 @@
 				"filePath": "node_modules/stylelint-scss",
 				"group": "Default"
 			}
-		]
+		],
+		"liveServer.settings.port": 5501
 	}
 }

@@ -69,8 +69,9 @@ module.exports = {
     'max-nesting-depth': [
       3,
       {
-        ignore: ['pseudo-classes'],
-        ignoreAtRules: [/media/, /include/]
+        ignore: ['pseudo-classes', 'blockless-at-rules'],
+        ignoreAtRules: [/media/, /include/],
+        ignorePseudoClasses: ['before', 'after']
       }
     ],
     // 'media-feature-name-no-vendor-prefix': true,
