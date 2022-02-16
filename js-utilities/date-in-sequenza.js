@@ -9,19 +9,24 @@ export default function (context = document) {
     Sulla data finale   → data-min
   */
 
-  context.querySelectorAll('input[type="date"][data-min]').forEach(el => {
-    let campo_correlato = document.querySelector('#' + el.dataset.min);
-    el.setAttribute('min', campo_correlato.value);
-    campo_correlato.addEventListener('change', () => {
-      el.setAttribute('min', campo_correlato.value);
+ // data iniziale
+ context.querySelectorAll('input[type="date"][data-max]').forEach(el => {
+   let campo_correlato = document.querySelector('#' + el.dataset.max);
+   el.setAttribute('max', campo_correlato.value);
+   campo_correlato.addEventListener('change', () => {
+     el.setAttribute('max', campo_correlato.value);
     });
   });
 
-  context.querySelectorAll('input[type="date"][data-max]').forEach(el => {
-    let campo_correlato = document.querySelector('#' + el.dataset.max);
-    el.setAttribute('max', campo_correlato.value);
+  // data finale
+  context.querySelectorAll('input[type="date"][data-min]').forEach(el => {
+    let campo_correlato = document.querySelector('#' + el.dataset.min);
+
+    if(campo_correlato.value) { // nel caso fosse presente un'attributo min preimpostato e non fosse ancora impostato il valore iniziale
+      el.setAttribute('min', campo_correlato.value);
+    }
     campo_correlato.addEventListener('change', () => {
-      el.setAttribute('max', campo_correlato.value);
+      el.setAttribute('min', campo_correlato.value);
     });
   });
 
