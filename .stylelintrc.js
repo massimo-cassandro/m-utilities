@@ -100,7 +100,12 @@ module.exports = {
     // ],
     'string-quotes': 'single', // 'double'
 
-
+    'value-keyword-case': [
+      "lower",
+      {
+        ignoreKeywords: ['currentColor']
+      }
+    ],
     'value-list-comma-newline-after': 'always-multi-line', //'never-multi-line',
     'value-list-comma-space-after': 'always-single-line', //'always',
     'value-list-max-empty-lines': 1,
