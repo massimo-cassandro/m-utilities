@@ -10,7 +10,7 @@ export default function (context = document) {
   */
 
  // data iniziale
- context.querySelectorAll('input[type="date"][data-max]').forEach(el => {
+ context.querySelectorAll('input[type="date"][data-max], input[type="datetime-local"][data-max]').forEach(el => {
    let campo_correlato = document.querySelector('#' + el.dataset.max);
    el.setAttribute('max', campo_correlato.value);
    campo_correlato.addEventListener('change', () => {
@@ -19,7 +19,7 @@ export default function (context = document) {
   });
 
   // data finale
-  context.querySelectorAll('input[type="date"][data-min]').forEach(el => {
+  context.querySelectorAll('input[type="date"][data-min], input[type="datetime-local"][data-min]').forEach(el => {
     let campo_correlato = document.querySelector('#' + el.dataset.min);
 
     if(campo_correlato.value) { // nel caso fosse presente un'attributo min preimpostato e non fosse ancora impostato il valore iniziale
