@@ -1,6 +1,19 @@
 // versione originale:
 // https://w3bits.com/javascript-slidetoggle/
 
+export function disposeSliding(target) {
+  target.style.removeProperty('display');
+  target.style.removeProperty('height');
+  target.style.removeProperty('padding-top');
+  target.style.removeProperty('padding-bottom');
+  target.style.removeProperty('margin-top');
+  target.style.removeProperty('margin-bottom');
+  target.style.removeProperty('overflow');
+  target.style.removeProperty('transition-duration');
+  target.style.removeProperty('transition-property');
+  target.style.removeProperty('box-sizing');
+}
+
 export function slideUp(target, duration=500, callback = null) {
   target.style.transitionProperty = 'height, margin, padding';
   target.style.transitionDuration = duration + 'ms';
@@ -71,6 +84,7 @@ export function slideDown(target, duration=500, callback = null) {
 }
 
 export function slideToggle(target, duration = 500, callback=null) {
+
   if (window.getComputedStyle(target).display === 'none') {
     return slideDown(target, duration, callback);
   } else {
