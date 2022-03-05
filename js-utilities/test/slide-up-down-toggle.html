@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Slide-up-toggle test</title>
+  </head>
+  <body>
+    <h1>Slide-up-toggle test</h1>
+
+    <p><button type="button" id="btn">Toggle</button></p>
+    <div id="test-toggle">
+      <div style="padding: 1rem; background-color: #ddd">
+        <p style="margin-top:0">Quis animi est et. Rerum officiis sequi quo molestiae et fugiat. Porro id ea sint maxime quod consequuntur ipsam accusamus repellat. Dolor ut quia neque minus aut officiis ad. Aperiam consequatur voluptates veritatis et quae assumenda.</p>
+        <p>Dolore porro praesentium sit recusandae nesciunt vel nihil et. Reiciendis nobis praesentium velit similique possimus voluptas praesentium. Corrupti error et nam velit. Suscipit expedita necessitatibus vel eum facere. Voluptatem nesciunt ad molestias natus quisquam sequi reprehenderit vel consequuntur.</p>
+        <p>Sunt voluptatem temporibus qui ipsum. Consequatur incidunt et eos odio quia quo. Beatae iste aut. Eaque neque ut excepturi quisquam delectus. Ut iste ullam eveniet nostrum. Quas quis et ad id occaecati et blanditiis.</p>
+        <p>Quia magnam iusto earum laboriosam. Et aspernatur ipsum quis expedita similique sunt eos. Veniam voluptate fuga quia labore minus. Exercitationem vel corrupti totam voluptatem aut deserunt.</p>
+        <p style="margin-bottom:0">Eum voluptas libero totam numquam velit. Qui quasi earum. Non dolor voluptates nesciunt facilis laboriosam. Voluptas dolores distinctio quos dolor debitis voluptas.</p>
+      </div>
+    </div>
+
+    <div style="padding: 1rem 0">Lorem ipsum</div>
+
+    <script type="module">
+      import { slideToggle } from '../slide-up-down-toggle.js';
+
+      document.getElementById('btn').addEventListener('click', () => {
+        slideToggle(document.getElementById('test-toggle'));
+      }, false);
+
+    </script>
+  </body>
+</html>
