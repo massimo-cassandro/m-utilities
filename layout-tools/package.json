@@ -1,6 +1,6 @@
 {
   "name": "@massimo-cassandro/layout-tools",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "description": "Layout development Utilities",
   "main": "js/layout_tools.js",
   "scripts": {

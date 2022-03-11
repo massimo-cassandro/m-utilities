@@ -29,8 +29,8 @@ export default function () {
   lt.wrapper.innerHTML = `<div class="lt-inner-wrapper">
       <div class="lt-content">
         <div>
-          <button class="lt-hide-show-btn">Hide</button>
-          <button class="lt-remove-btn">Remove</button>
+          <button type="button" class="lt-hide-show-btn">Hide</button>
+          <button type="button" class="lt-remove-btn">Remove</button>
         </div>
       </div>
       <div class="lt-brkpt">&#x2732;</div>
