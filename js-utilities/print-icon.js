@@ -17,7 +17,7 @@ export function print_icon(params) {
     icon_file   : '/imgs/icone.svg', // app_data.icons
     title       : '',
     descr       : '',
-    aria_hidden : false // forzata su false se descr o title sono definiti
+    aria_hidden : false, // forzata su false se descr o title sono definiti
   };
 
   params = {...default_params, ...params};
@@ -26,12 +26,17 @@ export function print_icon(params) {
     params.id = [params.id];
   }
 
-  // se c'è una sola icona di tipo line, la classe `line-icon` viene aggiunta direttamente
-  // all'elemento svg
-  if(/-line$/.test(params.id) && params.id.length === 1) {
-    params.svg_class = `${params.svg_class} line-icon`.trim();
-  }
+  // se c'è una sola icona di tipo line o fill, la classe `line-icon` o `fill-icon`
+  // viene aggiunta direttamente all'elemento svg
+  if(params.id.length === 1) {
 
+    if(/-line$/.test(params.id)) {
+      params.svg_class = `${params.svg_class} line-icon`.trim();
+
+    } else if (/-fill$/.test(params.id)) {
+      params.svg_class = `${params.svg_class} fill-icon`.trim();
+    }
+  }
   let base_id = params.id.join('') + Number(Math.round(Math.random() * Date.now())).toString(36),
     aria_ids = [],
     descr_unique_id = null,
@@ -69,7 +74,23 @@ export function print_icon(params) {
   return `<svg ${svg_attrs.join(' ')}>
     ${title}${descr}
     ${params.id.map(id => {
-    let line_icon_class = (params.id.length > 1 && /-line$/.test(id))? ' line-icon' : '';
-    return `<use xlink:href="${params.icon_file}#${id}" class="${id}${line_icon_class}"></use>`;
+    let use_class = '';
+
+    // se si tratta di un'icona composta, ad pgni elelemtno use viene aggiunta
+    // una classe corrispondente all'id e, se necessario, una tra `line-icon` e `fill-icon`
+    if(params.id.length > 1) {
+
+      use_class = id;
+
+      if(/-line$/.test(id)) {
+        use_class += ' line-icon';
+
+      } else if (/-fill$/.test(id)) {
+        use_class += ' fill-icon';
+      }
+    }
+    use_class = use_class? ` class="${use_class}"` : '';
+
+    return `<use xlink:href="${params.icon_file}#${id}"${use_class}"></use>`;
   }).join('')}</svg>`;
 }
