@@ -74,23 +74,23 @@ export function print_icon(params) {
   return `<svg ${svg_attrs.join(' ')}>
     ${title}${descr}
     ${params.id.map(id => {
-    let use_class = '';
+      let use_class = '';
 
-    // se si tratta di un'icona composta, ad pgni elelemtno use viene aggiunta
-    // una classe corrispondente all'id e, se necessario, una tra `line-icon` e `fill-icon`
-    if(params.id.length > 1) {
+      // se si tratta di un'icona composta, ad pgni elelemtno use viene aggiunta
+      // una classe corrispondente all'id e, se necessario, una tra `line-icon` e `fill-icon`
+      if(params.id.length > 1) {
 
-      use_class = id;
+        use_class = id;
 
-      if(/-line$/.test(id)) {
-        use_class += ' line-icon';
+        if(/-line$/i.test(id)) {
+          use_class += ' line-icon';
 
-      } else if (/-fill$/.test(id)) {
-        use_class += ' fill-icon';
+        } else if (/-fill$/i.test(id)) {
+          use_class += ' fill-icon';
+        }
       }
-    }
-    use_class = use_class? ` class="${use_class}"` : '';
+      use_class = use_class? ` class="${use_class}"` : '';
 
-    return `<use xlink:href="${params.icon_file}#${id}"${use_class}"></use>`;
-  }).join('')}</svg>`;
+      return `<use xlink:href="${params.icon_file}#${id}"${use_class}></use>`;
+    }).join('')}</svg>`;
 }
