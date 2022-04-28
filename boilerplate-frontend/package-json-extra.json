@@ -40,14 +40,14 @@
     "> 3% in IT"
   ],
   "stylelint": {
-    "extends": "@massimo-cassandro/m-utilities/.stylelintrc.js",
+    "extends": "@massimo-cassandro/linters-config/stylelintrc.js",
     "ignoreFiles": [
       "**/*.css"
     ],
     "rules": {}
   },
    "eslintConfig": {
-    "extends": "./node_modules/@massimo-cassandro/m-utilities/.eslintrc.js",
+    "extends": "./node_modules/@massimo-cassandro/linters-config/eslintrc.js",
     "ignorePatterns": [],
     "rules": {}
   },

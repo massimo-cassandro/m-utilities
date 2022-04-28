@@ -5,8 +5,8 @@
   .counter {
 
     &::before {
-      counter-increment: step;
       content: counter(step) '.';
+      counter-increment: step;
     }
   }
 

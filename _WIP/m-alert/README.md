@@ -9,3 +9,4 @@ Modal alert implementing the `<dialog>` element.
 * <https://markdotto.com/2022/03/16/dialog-element>
 * <https://tympanus.net/codrops/2021/10/06/how-to-implement-and-style-the-dialog-element>
 * <https://ishadeed.com/article/prevent-scroll-chaining-overscroll-behavior>
+* <https://web.dev/building-a-dialog-component/>

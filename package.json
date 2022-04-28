@@ -1,6 +1,6 @@
 {
   "name": "@massimo-cassandro/m-utilities",
-  "version": "4.20.4",
+  "version": "5.0.0",
   "description": "My collection of front-end development snippets & utilities",
   "scripts": {},
   "repository": {
@@ -33,7 +33,20 @@
     "url": "https://github.com/massimo-cassandro/m-utilities/issues"
   },
   "homepage": "https://github.com/massimo-cassandro/m-utilities#readme",
+  "stylelint": {
+    "extends": "@massimo-cassandro/linters-config/stylelintrc.js",
+    "ignoreFiles": [
+      "**/*.css"
+    ],
+    "rules": {}
+  },
+   "eslintConfig": {
+    "extends": "./node_modules/@massimo-cassandro/linters-config/eslintrc.js",
+    "ignorePatterns": [],
+    "rules": {}
+  },
   "devDependencies": {
+    "@massimo-cassandro/linters-config": "^1.0.0",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "bootstrap": "^5.1.0",
@@ -49,13 +62,5 @@
     "rollup-plugin-sourcemaps": "^0.6.3",
     "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.37.5"
-  },
-  "dependencies": {
-    "eslint": "^8.4.1",
-    "stylelint": "^14.1.0",
-    "stylelint-config-recommended-scss": "^5.0.2",
-    "stylelint-config-standard": "^23.0.0",
-    "stylelint-config-twbs-bootstrap": "^3.0.0",
-    "stylelint-order": "^5.0.0"
   }
 }
