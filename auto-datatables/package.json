@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.1.0",
+    "datatables.net-bs4": "^1.10.22",
+    "datatables.net-bs5": "^1.10.25",
+    "jquery": "^3.5.1",
+    "moment": "^2.29.1",
+    "mustache": "^4.0.1"
+  }
+}

@@ -3,9 +3,6 @@
   "version": "2.3.0",
   "description": "Custom CKEditor 5 build",
   "main": "./src/m-ckeditor.js",
-  "scripts": {
-    "build-cke": "npx webpack"
-  },
   "author": "Massimo Cassandro",
   "license": "ISC",
   "private": true,
