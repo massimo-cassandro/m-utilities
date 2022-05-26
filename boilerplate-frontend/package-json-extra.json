@@ -22,9 +22,9 @@
   "scripts": {
     "rollup": "npx rollup --config ./frontend-src/rollup.config.js --watch",
     "sass": "npx sass css/xxx.scss css/xxx.css --source-map --load-path=node_modules/ --style=expanded --watch",
-    "sass": "./frontend-src/run-sass.sh",
+    "sass-script": "./frontend-src/run-sass.sh",
     "build_icons": "cd frontend-src/icone && gulp",
-    "upd_fonts": "cd frontend-src/fonts && gulp",
+    "upd-fonts": "cd frontend-src/fonts && gulp",
     "upd_twig_e_libs": "sh ./frontend-src/upd_libs.sh",
     "clean_css": "rm -rf xxxx/public/css/",
     "clean_js": "rm -rf xxx/public/js/",

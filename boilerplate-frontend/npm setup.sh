@@ -22,6 +22,7 @@ npm i --save --only=prod vanilla-lazyload
 # npm i --save jspdf
 # npm i --save pdfobject
 
+npm i --save --only=prod @massimo-cassandro/linters-config
 npm i --save --only=prod @massimo-cassandro/js-file-uploader
 npm i --save --only=prod @massimo-cassandro/cookie-consent
 npm i --save --only=prod @massimo-cassandro/layout-tools
@@ -61,6 +62,8 @@ npm i --save-dev --no-optional rollup-plugin-minify-html-literals # https://gith
 npm i --save-dev --no-optional rollup-plugin-filesize # https://github.com/ritz078/rollup-plugin-filesize#readme
 
 npm i --save-dev --no-optional sass
+
+npm i --save-dev --no-optional  @fullhuman/postcss-purgecss autoprefixer postcss postcss-cli postcss-csso
 
 
 # GIÀ INCLUSI IN m-utilities:

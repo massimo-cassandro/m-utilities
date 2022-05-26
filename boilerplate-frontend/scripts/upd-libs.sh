@@ -5,11 +5,11 @@ ERROR='\033[1;35m'
 SUCCESS='\033[1;33m'
 RESET='\033[0m' # No Color
 
-TARGET_DIR=esa-3-sf # relativo a package.json
+TARGET_DIR=_project_root_ # relativo a package.json
 
 
 printf "* ${SUCCESS}Librerie aggiuntive:${RESET}\n"
-rm ./esa-3-sf/public/libs/*.* # pulizia
+rm ./_project_root_/public/libs/*.* # pulizia
 # cp -v node_modules/jspdf/dist/jspdf.umd.min.js ./"$TARGET_DIR"/public/libs/
 cp -v ./node_modules/jquery/dist/jquery.min.js ./"$TARGET_DIR"/public/libs/
 cp -R -v ./node_modules/@massimo-cassandro/m-utilities/layout-tools/dist/. ./"$TARGET_DIR"/public/libs/
