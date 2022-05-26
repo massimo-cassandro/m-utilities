@@ -34,5 +34,5 @@ google font link con variable fonts
   {% set font_url = font_url ~ (font_url != '' ? '&amp;' : '') ~ 'family=' ~ fnt %}
 {% endfor %}
 {% set font_url = 'https://fonts.googleapis.com/css2?' ~ font_url ~ '&amp;display=swap' %}
-<link rel="preload" href="{{ font_url|raw }}" as="style" crossorigin>
+{# <link rel="preload" href="{{ font_url|raw }}" as="style" crossorigin> #}
 <link href="{{ font_url|raw }}" rel="stylesheet">
