@@ -8,6 +8,7 @@ const sources = [
     './AppBundle/Resources/public/css/ada.css'
   ],
   snippet_file = './.vscode/ada.code-snippets',
+  result_test_file = './front-end/scss/TEST-custom-properties-list.css', // null per disattivare questa opzione
   snippet_key = 'ADA Custom properties',
   icon_list_key = 'ADA Icon list',
   custom_var_prefix = 'ada-';
@@ -17,12 +18,25 @@ let custom_properties = [];
 sources.forEach(css_file => {
   let css_content = fs.readFileSync(css_file).toString();
 
-  const regex = new RegExp(`--${custom_var_prefix}[a-zA-Z0-9._-]*?: ?(.*?);`, 'gi'),
+  const regex = new RegExp(`--${custom_var_prefix}[a-zA-Z0-9._-]*?: ?(.*?)[;}]`, 'gi'),
     this_cust_props = css_content.match(regex);
 
   custom_properties = custom_properties.concat(this_cust_props);
 });
 
+// eliminazione `}` finale
+custom_properties = custom_properties.map(item => item.replace(/}$/, ';'));
+
+if(result_test_file) {
+  let custom_properties_file_content = [...new Set(custom_properties)];
+  custom_properties_file_content.sort();
+
+  fs.writeFileSync(result_test_file,
+    '.custom-properties {\n\n' +
+    custom_properties_file_content.map(item => `  ${item}`).join('\n') +
+    '\n\n}'
+  );
+}
 
 custom_properties = custom_properties.map(item => item.split(':')[0].trim());
 custom_properties.sort();

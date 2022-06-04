@@ -1,8 +1,12 @@
 {
   "name": "@massimo-cassandro/m-utilities",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "My collection of front-end development snippets & utilities",
-  "scripts": {},
+  "scripts": {
+    "npm update": "npm update",
+    "upd vers + npm publish": "node update-version.mjs && npm publish",
+    "upd vers": "node update-version.mjs"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/massimo-cassandro/m-utilities.git#main"
@@ -40,7 +44,7 @@
     ],
     "rules": {}
   },
-   "eslintConfig": {
+  "eslintConfig": {
     "extends": "./node_modules/@massimo-cassandro/linters-config/eslintrc.js",
     "ignorePatterns": [],
     "rules": {}
