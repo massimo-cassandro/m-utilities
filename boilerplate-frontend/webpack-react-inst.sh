@@ -7,8 +7,8 @@ npm i --save-dev  webpack webpack-cli webpack-dev-server \
 #react
 
 npm i --save-dev react react-dom \
-  classnames prop-types dotenv \
-  # react-html-comment \
+  classnames prop-types dotenv-webpack \
+  react-html-comment \
   styled-components \
   eslint-config-react-app
 

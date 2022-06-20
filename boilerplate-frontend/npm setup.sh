@@ -35,13 +35,14 @@ npm i --save @fontsource/xxxxx
 
 
 # icone standard
-npm i --save-dev --no-optional gulp@latest gulp-chmod gulp-rename gulp-svgmin gulp-svgstore
+npm i --save-dev --no-optional gulp@latest gulp-dom gulp-rename gulp-svgmin gulp-svgstore
 
 npm i --save-dev --no-optional gulp@latest
-npm i --save-dev --no-optional gulp-chmod
+# npm i --save-dev --no-optional gulp-chmod
 npm i --save-dev --no-optional gulp-rename
 npm i --save-dev --no-optional gulp-svgmin
 npm i --save-dev --no-optional gulp-svgstore
+npm i --save-dev --no-optional gulp-dom
 # npm i --save-dev --no-optional fs
 
 npm i --save-dev --no-optional gulp-concat

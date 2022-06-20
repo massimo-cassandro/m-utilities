@@ -16,6 +16,7 @@
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uniqid from '@massimo-cassandro/m-utilities/js-utilities/unique-id';
+import getAppData from '../../front-end/js/src/get-app-data';
 
 /*
   import Icona from 'icone';
@@ -31,7 +32,7 @@ import uniqid from '@massimo-cassandro/m-utilities/js-utilities/unique-id';
 */
 
 function Icona(props) {
-  const app_data = getAppData();
+  const app_data =  getAppData();
 
   let icon_id;
   if(Array.isArray(props.id)) {
@@ -100,7 +101,7 @@ function Icona(props) {
         }
 
         return (
-          <use xlinkHref={`${process.env.ICON_FILE}?v=${process.env.APP_VERSION}#${id}`} className={useClassNames.length? classnames(useClassNames) : null} key={id}></use>
+          <use xlinkHref={`${app_data.icon_file}#${id}`} className={useClassNames.length? classnames(useClassNames) : null} key={id}></use>
         );
       })}
     </svg>

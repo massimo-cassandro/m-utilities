@@ -95,20 +95,21 @@ export default function () {
       }
     };
 
+  if(config_field) {
+    const cfg_wrapper = document.getElementById('cfg-wrapper'),
+      cfg_fset = document.getElementById('cfg-fset');
 
-  const cfg_wrapper = document.getElementById('cfg-wrapper'),
-    cfg_fset = document.getElementById('cfg-fset');
-
-  document.getElementById('toggle-config').addEventListener('click', () => {
-    slide.slideToggle(cfg_wrapper, 500, () => {
-      config_field.dispatchEvent(new Event('input'));
-      if(cfg_fset.classList.contains('open')) {
-        cfg_fset.classList.remove('open');
-      } else {
-        cfg_fset.classList.add('open');
-      }
-    });
-  }, false);
+    document.getElementById('toggle-config').addEventListener('click', () => {
+      slide.slideToggle(cfg_wrapper, 500, () => {
+        config_field.dispatchEvent(new Event('input'));
+        if(cfg_fset.classList.contains('open')) {
+          cfg_fset.classList.remove('open');
+        } else {
+          cfg_fset.classList.add('open');
+        }
+      });
+    }, false);
+  }
 
   const ignora_req_btn = document.getElementById('ignora-required');
   if(ignora_req_btn) {
