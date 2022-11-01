@@ -4,8 +4,8 @@
   "description": "My collection of front-end development snippets & utilities",
   "scripts": {
     "npm update": "npm update",
-    "upd vers + npm publish": "node update-version.mjs && npm publish",
-    "upd vers": "node update-version.mjs"
+    "upd vers + npm publish": "node ./node_modules/@massimo-cassandro/dev-utils/src/update-version.mjs && npm publish",
+    "upd vers": "node ./node_modules/@massimo-cassandro/dev-utils/src/update-version.mjs"
   },
   "repository": {
     "type": "git",
@@ -50,6 +50,7 @@
     "rules": {}
   },
   "devDependencies": {
+    "@massimo-cassandro/dev-utils": "^1.0.1",
     "@massimo-cassandro/linters-config": "^1.0.0",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.2.1",

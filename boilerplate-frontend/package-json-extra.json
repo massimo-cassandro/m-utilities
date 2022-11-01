@@ -30,7 +30,7 @@
     "clean_js": "rm -rf xxx/public/js/",
     "postcss": "sh ./frontend-src/postcss/run-postcss.sh",
     "npm_upd": "npm update",
-    "npm_upd_@max": "npm update @massimo-cassandro/m-utilities @massimo-cassandro/js-file-uploader @massimo-cassandro/symfony-bootstrap-form-theme @massimo-cassandro/sharing-links @massimo-cassandro/cookie-consent"
+    "npm_upd_@max": "npm update @massimo-cassandro/m-utilities @massimo-cassandro/js-file-uploader @massimo-cassandro/symfony-bootstrap-form-theme @massimo-cassandro/sharing-links @massimo-cassandro/linters-config @massimo-cassandro/dev-utils"
   },
   "browserslist": [
     "last 2 version",
@@ -40,14 +40,14 @@
     "> 3% in IT"
   ],
   "stylelint": {
-    "extends": "@massimo-cassandro/linters-config/stylelintrc.js",
+    "extends": ["@massimo-cassandro/linters-config/stylelintrc.js"],
     "ignoreFiles": [
       "**/*.css"
     ],
     "rules": {}
   },
    "eslintConfig": {
-    "extends": "./node_modules/@massimo-cassandro/linters-config/eslintrc.js",
+    "extends": ["./node_modules/@massimo-cassandro/linters-config/eslintrc.js"],
     "ignorePatterns": [],
     "rules": {}
   },

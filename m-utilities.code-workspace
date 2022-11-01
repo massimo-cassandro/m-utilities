@@ -5,48 +5,12 @@
 		}
 	],
 	"settings": {
-
-    "preview-in-browser.domain": "http://mutilities.local:8888/",
 		"preview-in-browser.removeStartString": "~/Sites/m-utilities/",
-
 		"favorites.resources": [
 			{
-				"filePath": "node_modules/jquery",
-				"group": "Default"
-			},
-			{
-				"filePath": "node_modules/bs4",
-				"group": "Default"
-			},
-			{
-				"filePath": "node_modules/bootstrap",
-				"group": "Default"
-			},
-			{
-				"filePath": "node_modules/stylelint-config-twbs-bootstrap",
-				"group": "Default"
-			},
-			{
-				"filePath": "node_modules/stylelint-config-standard-scss",
-				"group": "Default"
-			},
-			{
-				"filePath": "node_modules/stylelint-config-standard",
-				"group": "Default"
-			},
-			{
-				"filePath": "node_modules/stylelint-config-recommended-scss",
-				"group": "Default"
-			},
-			{
-				"filePath": "node_modules/stylelint-config-recommended",
-				"group": "Default"
-			},
-			{
-				"filePath": "node_modules/stylelint-scss",
+				"filePath": "node_modules/@massimo-cassandro",
 				"group": "Default"
 			}
-		],
-		"liveServer.settings.port": 5501
+		]
 	}
 }

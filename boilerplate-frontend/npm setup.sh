@@ -22,13 +22,14 @@ npm i --save --only=prod vanilla-lazyload
 # npm i --save jspdf
 # npm i --save pdfobject
 
-npm i --save --only=prod @massimo-cassandro/linters-config
-npm i --save --only=prod @massimo-cassandro/js-file-uploader
-npm i --save --only=prod @massimo-cassandro/cookie-consent
-npm i --save --only=prod @massimo-cassandro/layout-tools
-npm i --save --only=prod @massimo-cassandro/sharing-links
-npm i --save --only=prod @massimo-cassandro/m-utilities
-npm i --save --only=prod @massimo-cassandro/symfony-bootstrap-form-theme
+npm i --save @massimo-cassandro/js-file-uploader
+npm i --save @massimo-cassandro/cookie-consent
+npm i --save @massimo-cassandro/sharing-links
+npm i --save @massimo-cassandro/m-utilities
+npm i --save @massimo-cassandro/symfony-bootstrap-form-theme
+npm i --save-dev @massimo-cassandro/linters-config
+npm i --save-dev @massimo-cassandro/dev-utils
+npm i --save-dev @massimo-cassandro/layout-tools
 
 # https://github.com/fontsource/fontsource
 npm i --save @fontsource/xxxxx
@@ -65,19 +66,3 @@ npm i --save-dev --no-optional rollup-plugin-filesize # https://github.com/ritz0
 npm i --save-dev --no-optional sass
 
 npm i --save-dev --no-optional  @fullhuman/postcss-purgecss autoprefixer postcss postcss-cli postcss-csso
-
-
-# GIÀ INCLUSI IN m-utilities:
-
-npm i --save-dev --no-optional stylelint
-# npm i --save-dev stylelint-config-standard
-# npm i --save-dev stylelint-config-recommended
-# https://github.com/stylelint-scss
-npm install --save-dev stylelint-config-recommended-scss stylelint-config-standard stylelint-order
-
-# https://github.com/twbs/stylelint-config-twbs-bootstrap
-# npm i --save-dev --no-optional stylelint-config-twbs-bootstrap
-
-
-npm i --save-dev --no-optional eslint
-npm i --save-dev --no-optional eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-config-standard
