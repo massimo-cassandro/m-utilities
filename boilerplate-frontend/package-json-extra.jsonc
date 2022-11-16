@@ -29,7 +29,11 @@
     "clean_css": "rm -rf xxxx/public/css/",
     "clean_js": "rm -rf xxx/public/js/",
     "postcss": "sh ./frontend-src/postcss/run-postcss.sh",
-    "npm_upd": "npm update",
+    "upd patch vers": "node ./node_modules/@massimo-cassandro/dev-utils/src/update-version.mjs --patch-only",
+    "npm publish": "npm publish",
+    "upd vers": "node ./node_modules/@massimo-cassandro/dev-utils/src/update-version.mjs",
+    "local server (esm demo)": "python3 -m http.server",
+    "npm update": "npm update",
     "npm_upd_@max": "npm update @massimo-cassandro/m-utilities @massimo-cassandro/js-file-uploader @massimo-cassandro/symfony-bootstrap-form-theme @massimo-cassandro/sharing-links @massimo-cassandro/linters-config @massimo-cassandro/dev-utils"
   },
   "browserslist": [
@@ -47,7 +51,10 @@
     "rules": {}
   },
    "eslintConfig": {
-    "extends": ["./node_modules/@massimo-cassandro/linters-config/eslintrc.js"],
+    "extends": [
+      // "react-app",
+      "./node_modules/@massimo-cassandro/linters-config/eslintrc.js"
+    ],
     "ignorePatterns": [],
     "rules": {}
   },
