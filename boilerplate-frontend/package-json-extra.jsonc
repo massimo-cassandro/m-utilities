@@ -29,9 +29,9 @@
     "clean_css": "rm -rf xxxx/public/css/",
     "clean_js": "rm -rf xxx/public/js/",
     "postcss": "sh ./frontend-src/postcss/run-postcss.sh",
-    "upd patch vers": "node ./node_modules/@massimo-cassandro/dev-utils/src/update-version.mjs --patch-only",
-    "npm publish": "npm publish",
+    "upd patch vers": "node ./node_modules/@massimo-cassandro/dev-utils/src/update-version.mjs --patch-only --no-descr-prompt",
     "upd vers": "node ./node_modules/@massimo-cassandro/dev-utils/src/update-version.mjs",
+    "npm publish": "npm publish",
     "local server (esm demo)": "python3 -m http.server",
     "npm update": "npm update",
     "npm_upd_@max": "npm update @massimo-cassandro/m-utilities @massimo-cassandro/js-file-uploader @massimo-cassandro/symfony-bootstrap-form-theme @massimo-cassandro/sharing-links @massimo-cassandro/linters-config @massimo-cassandro/dev-utils"

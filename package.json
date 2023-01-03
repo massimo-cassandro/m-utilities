@@ -1,10 +1,10 @@
 {
   "name": "@massimo-cassandro/m-utilities",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "description": "My collection of front-end development snippets & utilities",
   "scripts": {
     "npm update": "npm update",
-    "upd vers + npm publish": "node ./node_modules/@massimo-cassandro/dev-utils/src/update-version.mjs && npm publish",
+    "upd patch vers + npm publish": "node ./node_modules/@massimo-cassandro/dev-utils/src/update-version.mjs --patch-only && npm publish",
     "upd vers": "node ./node_modules/@massimo-cassandro/dev-utils/src/update-version.mjs"
   },
   "repository": {
@@ -50,7 +50,7 @@
     "rules": {}
   },
   "devDependencies": {
-    "@massimo-cassandro/dev-utils": "^1.0.1",
+    "@massimo-cassandro/dev-utils": "^1.3.0",
     "@massimo-cassandro/linters-config": "^1.0.0",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.2.1",
