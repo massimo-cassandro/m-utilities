@@ -1,5 +1,4 @@
 import { terser } from 'rollup-plugin-terser';
-import sourcemaps from 'rollup-plugin-sourcemaps';
 import node_resolve from '@rollup/plugin-node-resolve';
 // import fs from 'fs'; // per config dinamico
 // import commonjs from '@rollup/plugin-commonjs'; // per importazione file umd
@@ -19,7 +18,6 @@ export default [
   {
     input: 'js/javascript-sandbox.js',
     plugins: [
-      sourcemaps(),
       node_resolve(),
       terser(terserOptions)
       // minifyHTML(),
