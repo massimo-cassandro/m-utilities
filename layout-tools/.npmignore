@@ -1,5 +1,0 @@
-test
-*.*
-!dist/*.{css,js,map}
-!js/**/*.js
-!scss/*.scss

@@ -48,6 +48,11 @@ export function better_text(str, custom_words = []) {
     //   return match.replace(/&/g, '\u0026').replace(/ +/g, '\u00A0');
     // });
 
+    // numeri romani
+    // if( /^[MDCLXVI]{3,}$/.test(word.toUpperCase()) ) {
+    //   return word.toUpperCase();
+    // }
+
     // virgolette
     str = str.replace(/(^| )"/g, '$1\u201C') // virgolette doppie in apertura
       //.replace(/"($| |[,\.:;\!\?])/g, '\u201D$1') // virgolette doppie in chiusura
@@ -84,42 +89,15 @@ export function better_text(str, custom_words = []) {
   return str;
 }
 
-// imposta un testo in cui ogni parola è miniuscola tranne la prima lettera
+// imposta un testo in cui ogni parola è minuscola tranne la prima lettera
 export function title_case(str) {
 
-  if(str) {
-    str = str.replace( /\w\S*/g, function(word) {
-
-      // numeri romani
-      if( /^[MDCLXVI]{3,}$/.test(word.toUpperCase()) ) {
-
-        return word.toUpperCase();
-
-      } else if(word.trim().length > 2) {
-        return word.charAt(0).toUpperCase() + word.substr(1).toLowerCase();
-
-      } else {
-
-
-        var breakException = {};
-
-        try {
-
-          particelle.forEach(function (item) {
-            if( item.toLowerCase() === word.toLowerCase()) {
-              word = item;
-              throw breakException;
-            }
-          });
-
-        } catch (e) {
-          if (e !== breakException) throw e;
-        }
-
-        return word;
-      }
-    }); // end replace
-  } // end if
+  str?.replace(/\b(.)\B(.*?)\b/gi, (match, p1, p2) => {
+    return p1.toUpperCase() + p2.toLowerCase();
+  })
+    .replace(/(?<=')(.)/g, (match, p1) => { //caratteri preceduti da virgolette singole
+      return p1.toUpperCase();
+    });
 
   return str;
 } // end title_case
