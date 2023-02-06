@@ -92,12 +92,16 @@ export function better_text(str, custom_words = []) {
 // imposta un testo in cui ogni parola è minuscola tranne la prima lettera
 export function title_case(str) {
 
-  str?.replace(/\b(.)\B(.*?)\b/gi, (match, p1, p2) => {
-    return p1.toUpperCase() + p2.toLowerCase();
-  })
-    .replace(/(?<=')(.)/g, (match, p1) => { //caratteri preceduti da virgolette singole
-      return p1.toUpperCase();
-    });
+  if(str) {
+
+    str = str.replace(/\b(.)\B(.*?)\b/gi, (match, p1, p2) => {
+      return p1.toUpperCase() + p2.toLowerCase();
+    })
+      .replace(/(?<=')(.)/g, (match, p1) => { //caratteri preceduti da virgolette singole
+        return p1.toUpperCase();
+      });
+  }
+
 
   return str;
 } // end title_case
