@@ -1,6 +1,6 @@
 {
   "name": "@massimo-cassandro/m-utilities",
-  "version": "5.2.2",
+  "version": "5.2.3",
   "description": "My collection of front-end development snippets & utilities",
   "scripts": {
     "npm update": "npm update",
