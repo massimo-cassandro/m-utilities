@@ -1,14 +1,7 @@
 {#
   TAG PICTURE PER IMMAGINI DA VIEWER
-  v. 4
+  v. 4.1
   ===================================
-
-  Se preload = true, restituisce un oggetto composto da:
-    {
-      img: ==> tag picture, img, source, ...
-      preload: ==> tag link preload, ...
-    }
-
 
   {%- include '@includes/imgs_viewer.html.twig' with {
     img: img_obj,
@@ -29,9 +22,9 @@
     lqip: null,                              // low quality img placeholder, ignorato se svg
     add_default_sizes: false,                // default
     class: 'img-fluid',
-    lazyload: true,                          // facoltativo, default true,
+    lazyload: true,                          // facoltativo, default true (ignorato se native_lazyload = true),
+    native_lazyload: true,                   // facoltativo, default true,
     async: true,                             // facoltativo, default true,
-    preload: false,                          // facoltativo, default false, attiva il preload
     attrs: null,                             // attributi extra facoltativi
     viewer: path('inner_viewer') ~ '/',      // <== default glob_vars.viewer
     viewer_extra_params: ['fd=1', 'ext=1', 'alpha=1'], // <== array di eventuali parametri da aggiungere al viewer, ignorato se svg
@@ -95,9 +88,9 @@ Esempio OUTPUT
 #}
 
 {% set alt = alt is defined? alt : '' %}
-{% set lazyload = lazyload is defined? lazyload : true %}
+{% set native_lazyload = native_lazyload is defined? native_lazyload : true %}
+{% set lazyload = native_lazyload? false : (lazyload is defined? lazyload : true) %}
 {% set async = async is defined? async : true %}
-{% set preload = preload is defined? preload : false %}
 {% set add_default_sizes = add_default_sizes is defined? add_default_sizes : false %}
 {% set class = class is defined ? class : '' %}
 {% set lqip = lqip is defined ? lqip : null %}
@@ -121,7 +114,7 @@ Esempio OUTPUT
     {%- if img.mime|default() == 'image/svg+xml' -%}
       <img
         {{- lazyload? ' data-' : ' ' -}} src="{{ viewer ~ img.id|default() }}"
-        {%- if lazyload %} loading="lazy"{% endif %}
+        {%- if lazyload or native_lazyload %} loading="lazy"{% endif %}
         {{- ' ' -}} alt="{{ alt }}"
         {%- if add_default_sizes %} width="{{ img.width }}" height="{{ img.height }}"{% endif %}
         {%- if class %} class="{{ class }}"{% endif %}
@@ -190,7 +183,7 @@ Esempio OUTPUT
               <img
                 {{- (lazyload and (not lqip))? ' data-' : ' ' -}} src="{{ lqip? lqip : srcset[0] }}"
                 {{- lazyload? ' data-' : ' ' -}} srcset="{{ srcset|slice(1)|join(', ') }}"
-                {%- if lazyload %} loading="lazy"{% endif %}
+                {%- if lazyload or native_lazyload %} loading="lazy"{% endif %}
                 {%- if async %} decoding ="async"{% endif %}
                 {{- ' ' -}} alt="{{ alt }}"
                 {%- if class %} class="{{ class }}"{% endif %}
